@@ -1,0 +1,52 @@
+Este Log esta creado para el registro de errores, informacion y debug de el software
+
+Fecha de creacion: 30/05/2014 04:35:42 a.m.
+
+
+****************************************************************************************************************************************
+
+
+
+Excepcion => Error en el metodo Accelerate ya que excedio el limie de velocidad Fecha: 30/05/2014 04:35:42 a.m.
+, Informacion de Excepcion:
+Member name: Void Accelerate(Int32)
+ Class defining member: ExampleExcepcion.Car
+Member type: Method
+Message: Zippy has overheated!
+Source: ExampleExcepcion
+Stack:    en ExampleExcepcion.Car.Accelerate(Int32 delta) en c:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\Car.cs:línea 45
+   en ExampleExcepcion.Program.Main(String[] args) en c:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\Program.cs:línea 20
+
+Excepcion => Error en el metodo Accelerate ya que excedio el limie de velocidad Fecha: 30/05/2014 04:36:33 a.m.
+, Informacion de Excepcion:
+Member name: Void Accelerate(Int32)
+ Class defining member: ExampleExcepcion.Car
+Member type: Method
+Message: Zippy has overheated!
+Source: ExampleExcepcion
+Stack:    en ExampleExcepcion.Car.Accelerate(Int32 delta) en c:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\Car.cs:línea 45
+   en ExampleExcepcion.Program.Main(String[] args) en c:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\Program.cs:línea 20
+
+Excepcion => Error en el metodo Accelerate ya que excedio el limie de velocidad Fecha: 30/05/2014 04:39:11 a.m.
+, Informacion de Excepcion:
+Member name: Void Accelerate(Int32)
+ Class defining member: ExampleExcepcion.Car
+Member type: Method
+Message: Zippy has overheated!
+Source: ExampleExcepcion
+Stack:    en ExampleExcepcion.Car.Accelerate(Int32 delta) en c:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\Car.cs:línea 45
+   en ExampleExcepcion.Program.Main(String[] args) en c:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\Program.cs:línea 20
+
+Excepcion => Error en el metodo Accelerate ya que excedio el limie de velocidad Fecha: 30/05/2014 04:46:32 a.m.
+, Informacion de Excepcion:
+Member name: Void Accelerate(Int32)
+ Class defining member: ExampleExcepcion.Car
+Member type: Method
+Message: Zippy has overheated!
+Source: ExampleExcepcion
+Stack:    en ExampleExcepcion.Car.Accelerate(Int32 delta) en c:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\Car.cs:línea 45
+   en ExampleExcepcion.Program.Main(String[] args) en c:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\Program.cs:línea 20
+
+Data.Key: TimeStampData.Value: The car exploded at 30/05/2014 04:46:32 a.m.
+
+Data.Key: CauseData.Value: You have a lead foot.

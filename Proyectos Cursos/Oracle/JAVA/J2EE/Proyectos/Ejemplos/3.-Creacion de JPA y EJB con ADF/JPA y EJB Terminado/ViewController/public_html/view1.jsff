@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:inputText value="#{bindings.p_sal.inputValue}" label="Salary > " required="#{bindings.p_sal.hints.mandatory}"
+                  columns="#{bindings.p_sal.hints.displayWidth}" maximumLength="#{bindings.p_sal.hints.precision}"
+                  shortDesc="#{bindings.p_sal.hints.tooltip}" id="it1">
+      <f:validator binding="#{bindings.p_sal.validator}"/>
+    </af:inputText>
+    <af:commandButton actionListener="#{bindings.getEmployeesFindBySal.execute}" text="Find"
+                      disabled="#{!bindings.getEmployeesFindBySal.enabled}" id="cb1" action="find">
+      <af:setActionListener from="#{bindings.getEmployeesFindBySal_p_sal}" to="#{pageFlowScope.sal}"/>
+    </af:commandButton>
+  </af:panelFormLayout>
+</ui:composition>

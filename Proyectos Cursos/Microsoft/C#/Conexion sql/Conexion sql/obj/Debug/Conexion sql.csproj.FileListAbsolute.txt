@@ -1,0 +1,34 @@
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\bin\Debug\Conexion sql.exe.config
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\bin\Debug\Conexion sql.exe
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\bin\Debug\Conexion sql.pdb
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\obj\Debug\Conexion sql.csprojResolveAssemblyReference.cache
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\obj\Debug\Conexion_sql.Form1.resources
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\obj\Debug\Conexion_sql.Properties.Resources.resources
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\obj\Debug\Conexion sql.csproj.GenerateResource.Cache
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\obj\Debug\Conexion sql.exe
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\obj\Debug\Conexion sql.pdb
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\bin\Debug\EntityFramework.dll
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\bin\Debug\EntityFramework.xml
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\obj\Debug\Conexion_sql.Form2.resources
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\obj\Debug\Conexion_sql.Form3.resources
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\obj\Debug\Conexion_sql.Form4.resources
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\obj\Debug\Conexion_sql.Form5.resources
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Conexion sql\bin\Debug\Registro.sdf
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\bin\Debug\Conexion sql.exe.config
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\obj\Debug\Conexion sql.exe
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\obj\Debug\Conexion sql.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\bin\Debug\Conexion sql.exe.config
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\obj\Debug\Conexion sql.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\obj\Debug\Conexion sql.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\bin\Debug\Conexion sql.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\bin\Debug\Conexion sql.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\bin\Debug\EntityFramework.dll
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\bin\Debug\EntityFramework.xml
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\obj\Debug\Conexion sql.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\obj\Debug\Conexion_sql.Form1.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\obj\Debug\Conexion_sql.Form2.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\obj\Debug\Conexion_sql.Form3.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\obj\Debug\Conexion_sql.Form4.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\obj\Debug\Conexion_sql.Form5.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\obj\Debug\Conexion_sql.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\Conexion sql\Conexion sql\obj\Debug\Conexion sql.csproj.GenerateResource.Cache

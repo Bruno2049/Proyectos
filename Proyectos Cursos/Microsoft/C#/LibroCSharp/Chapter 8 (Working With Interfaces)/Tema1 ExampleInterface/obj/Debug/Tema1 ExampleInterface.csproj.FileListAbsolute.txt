@@ -1,0 +1,12 @@
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema1 ExampleInterface\bin\Debug\Tema1 ExampleInterface.exe.config
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema1 ExampleInterface\bin\Debug\Tema1 ExampleInterface.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema1 ExampleInterface\bin\Debug\Tema1 ExampleInterface.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema1 ExampleInterface\obj\Debug\Tema1 ExampleInterface.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema1 ExampleInterface\obj\Debug\Tema1 ExampleInterface.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema1 ExampleInterface\obj\Debug\Tema1 ExampleInterface.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema1 ExampleInterface\bin\Debug\Tema1 ExampleInterface.exe.config
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema1 ExampleInterface\obj\Debug\Tema1 ExampleInterface.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema1 ExampleInterface\obj\Debug\Tema1 ExampleInterface.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema1 ExampleInterface\bin\Debug\Tema1 ExampleInterface.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema1 ExampleInterface\bin\Debug\Tema1 ExampleInterface.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema1 ExampleInterface\obj\Debug\Tema1 ExampleInterface.csprojResolveAssemblyReference.cache

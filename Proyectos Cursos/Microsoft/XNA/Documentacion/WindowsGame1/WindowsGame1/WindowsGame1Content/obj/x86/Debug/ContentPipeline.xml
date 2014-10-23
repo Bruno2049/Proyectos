@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>battleship.png</Source>
+      <Name>battleship</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Lord Sith Shin Akuma\Documents\Desarrollo de juegos\Proyectos\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\battleship.xnb</Output>
+      <Time>0001-01-01T00:00:00</Time>
+    </Item>
+    <Item>
+      <Source>weapons.png</Source>
+      <Name>weapons</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Lord Sith Shin Akuma\Documents\Desarrollo de juegos\Proyectos\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\weapons.xnb</Output>
+      <Time>0001-01-01T00:00:00</Time>
+    </Item>
+    <Item>
+      <Source>spaceBackgr.jpg</Source>
+      <Name>spaceBackgr</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Lord Sith Shin Akuma\Documents\Desarrollo de juegos\Proyectos\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\spaceBackgr.xnb</Output>
+      <Time>0001-01-01T00:00:00</Time>
+    </Item>
+    <Item>
+      <Source>EnemigoBasico.png</Source>
+      <Name>EnemigoBasico</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Lord Sith Shin Akuma\Documents\Desarrollo de juegos\Proyectos\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\EnemigoBasico.xnb</Output>
+      <Time>0001-01-01T00:00:00</Time>
+    </Item>
+    <BuildSuccessful>false</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Lord Sith Shin Akuma\Documents\Desarrollo de juegos\Proyectos\WindowsGame1\WindowsGame1\WindowsGame1Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Lord Sith Shin Akuma\Documents\Desarrollo de juegos\Proyectos\WindowsGame1\WindowsGame1\WindowsGame1\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Lord Sith Shin Akuma\Documents\Desarrollo de juegos\Proyectos\WindowsGame1\WindowsGame1\WindowsGame1Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Lord Sith Shin Akuma\Documents\Desarrollo de juegos\Proyectos\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2011-03-17T14:22:06.2507503-06:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

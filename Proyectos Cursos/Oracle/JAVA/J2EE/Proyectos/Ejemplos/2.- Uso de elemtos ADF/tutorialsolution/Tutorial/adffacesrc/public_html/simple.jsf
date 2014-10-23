@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+    <af:decorativeBox id="pt_db1" theme="light">
+        <f:facet name="center">
+            <af:facetRef facetName="center"/>
+        </f:facet>
+        <f:facet name="top">
+            <af:panelGroupLayout id="pt_pgl1" layout="horizontal">
+                <af:image source="images/brandingImage.gif" id="pt_i1"/>
+                <af:spacer width="100" height="10" id="pt_s1"/>
+                <af:outputText id="pt_ot1" value="#{attrs.title}" inlineStyle="color:Aqua; font-size:large;"/>
+            </af:panelGroupLayout>
+        </f:facet>
+    </af:decorativeBox>
+    <af:xmlContent>
+        <afc:component>
+            <afc:display-name>simple</afc:display-name>
+            <afc:facet>
+                <afc:facet-name>center</afc:facet-name>
+            </afc:facet>
+            <afc:attribute>
+                <afc:attribute-name>title</afc:attribute-name>
+                <afc:attribute-class>java.lang.String</afc:attribute-class>
+                <afc:default-value>Default Title</afc:default-value>
+            </afc:attribute>
+        </afc:component>
+    </af:xmlContent>
+</af:pageTemplateDef>

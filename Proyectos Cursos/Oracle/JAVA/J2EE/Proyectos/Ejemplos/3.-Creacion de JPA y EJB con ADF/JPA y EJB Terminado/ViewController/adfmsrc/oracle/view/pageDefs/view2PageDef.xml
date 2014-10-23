@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.58.88" id="view2PageDef"
+                Package="oracle.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <methodIterator Binds="getEmployeesFindBySal.result" DataControl="HRFacadeLocal" RangeSize="25"
+                    BeanClass="oracle.model.Employees" id="getEmployeesFindBySalIterator"/>
+    <searchRegion Binds="getEmployeesFindBySalIterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="EmployeesQuery"/>
+  </executables>
+  <bindings>
+    <methodAction id="getEmployeesFindBySal" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="getEmployeesFindBySal" IsViewObjectMethod="false" DataControl="HRFacadeLocal"
+                  InstanceName="data.HRFacadeLocal.dataProvider"
+                  ReturnName="data.HRFacadeLocal.methodResults.getEmployeesFindBySal_HRFacadeLocal_dataProvider_getEmployeesFindBySal_result">
+      <NamedData NDName="p_sal" NDValue="#{pageFlowScope.sal}" NDType="java.math.BigDecimal"/>
+    </methodAction>
+    <tree IterBinding="getEmployeesFindBySalIterator" id="Employees">
+      <nodeDefinition DefName="oracle.model.Employees" Name="Employees0">
+        <AttrNames>
+          <Item Value="commissionPct"/>
+          <Item Value="email"/>
+          <Item Value="employeeId"/>
+          <Item Value="firstName"/>
+          <Item Value="jobId"/>
+          <Item Value="lastName"/>
+          <Item Value="phoneNumber"/>
+          <Item Value="salary"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

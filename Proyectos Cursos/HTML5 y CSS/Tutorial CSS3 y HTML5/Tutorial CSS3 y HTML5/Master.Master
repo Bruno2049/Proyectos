@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="Tutorial_CSS3_y_HTML5.Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div>
+            <div id="Head">
+                <div id="ContentHead">
+                     <div id="Bar">                        
+                    </div>                    
+                    <div id="Logo">
+                        <img src="Images/Logo.jpg" alt="Ultradent" />
+                        <h1>Maquetacion y Contenido en Asp.Net</h1>
+                        <h2>Usando MasterPage</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="Principal">
+                <div id="LeftColumn">
+                    <asp:ContentPlaceHolder ID="ContextMenu" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="CenterColumn">
+                    <asp:ContentPlaceHolder ID="PrincipalContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="RightColumn">
+                </div>
+            </div>
+            <div id="Footer">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

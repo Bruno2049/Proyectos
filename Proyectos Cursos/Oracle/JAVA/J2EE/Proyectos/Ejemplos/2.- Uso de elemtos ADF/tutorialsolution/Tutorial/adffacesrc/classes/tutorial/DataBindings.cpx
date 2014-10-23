@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.59.88" id="DataBindings"
+             SeparateXMLFiles="false" Package="tutorial" ClientType="Generic">
+  <pageMap>
+    <page path="/untitled1.jsf" usageId="tutorial_untitled1PageDef"/>
+    <page path="/untitled2.jsf" usageId="tutorial_untitled2PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="tutorial_untitled1PageDef" path="tutorial.pageDefs.untitled1PageDef"/>
+    <page id="tutorial_untitled2PageDef" path="tutorial.pageDefs.untitled2PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="StoreProducts" path="tutorial.StoreProducts"/>
+  </dataControlUsages>
+</Application>

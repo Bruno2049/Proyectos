@@ -1,0 +1,12 @@
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\Tema2 CustomException\bin\Debug\Tema2 CustomException.exe.config
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\Tema2 CustomException\bin\Debug\Tema2 CustomException.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\Tema2 CustomException\bin\Debug\Tema2 CustomException.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\Tema2 CustomException\obj\Debug\Tema2 CustomException.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\Tema2 CustomException\obj\Debug\Tema2 CustomException.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\Tema2 CustomException\obj\Debug\Tema2 CustomException.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\Tema2 CustomException\bin\Debug\Tema2 CustomException.exe.config
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\Tema2 CustomException\bin\Debug\Tema2 CustomException.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\Tema2 CustomException\bin\Debug\Tema2 CustomException.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\Tema2 CustomException\obj\Debug\Tema2 CustomException.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\Tema2 CustomException\obj\Debug\Tema2 CustomException.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\Tema2 CustomException\obj\Debug\Tema2 CustomException.pdb

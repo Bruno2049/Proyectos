@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.61.83" id="indexPageDef"
+                Package="tutorial.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="StoreProducts" id="StoreProductsIterator"
+              ChangeEventPolicy="ppr"/>
+    <accessorIterator MasterBinding="StoreProductsIterator" Binds="products" RangeSize="25" DataControl="StoreProducts"
+                      BeanClass="tutorial.model.Product" id="productsIterator" ChangeEventPolicy="ppr"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="productsIterator" id="products">
+      <nodeDefinition DefName="tutorial.model.Product" Name="products0">
+        <AttrNames>
+          <Item Value="name"/>
+          <Item Value="category"/>
+          <Item Value="cost"/>
+          <Item Value="manufactured"/>
+          <Item Value="image"/>
+          <Item Value="rating"/>
+          <Item Value="description"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="productsIterator" id="name">
+      <AttrNames>
+        <Item Value="name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="productsIterator" id="category">
+      <AttrNames>
+        <Item Value="category"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="productsIterator" id="cost">
+      <AttrNames>
+        <Item Value="cost"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="productsIterator" id="manufactured">
+      <AttrNames>
+        <Item Value="manufactured"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="productsIterator" id="image">
+      <AttrNames>
+        <Item Value="image"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="productsIterator" id="rating">
+      <AttrNames>
+        <Item Value="rating"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="productsIterator" id="description">
+      <AttrNames>
+        <Item Value="description"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="productsIterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="productsIterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="productsIterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="productsIterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+  </bindings>
+</pageDefinition>

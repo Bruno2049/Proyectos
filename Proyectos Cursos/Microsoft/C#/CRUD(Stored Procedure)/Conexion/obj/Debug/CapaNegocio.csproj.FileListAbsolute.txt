@@ -1,0 +1,5 @@
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\Conexion\bin\Debug\Conexion.dll
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\Conexion\bin\Debug\Conexion.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\Conexion\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\Conexion\obj\Debug\Conexion.dll
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\Conexion\obj\Debug\Conexion.pdb

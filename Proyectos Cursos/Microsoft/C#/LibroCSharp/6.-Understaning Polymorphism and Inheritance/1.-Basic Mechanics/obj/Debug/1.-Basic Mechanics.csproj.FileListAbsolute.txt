@@ -1,0 +1,43 @@
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.exe.config
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.exe
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.pdb
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.csprojResolveAssemblyReference.cache
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\_1._Basic_Mechanics.Properties.Resources.resources
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.csproj.GenerateResource.Cache
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.exe
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.pdb
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C Sharp\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.exe.config
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C Sharp\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.exe
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C Sharp\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.exe.config
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.csprojResolveAssemblyReference.cache
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\_1._Basic_Mechanics.Properties.Resources.resources
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.csproj.GenerateResource.Cache
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.exe.config
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.pdb
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.csprojResolveAssemblyReference.cache
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\_1._Basic_Mechanics.Properties.Resources.resources
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.csproj.GenerateResource.Cache
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.exe.config
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\_1._Basic_Mechanics.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.exe.config
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\bin\Debug\1.-Basic Mechanics.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\_1._Basic_Mechanics.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\1.-Basic Mechanics\obj\Debug\1.-Basic Mechanics.pdb

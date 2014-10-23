@@ -1,0 +1,40 @@
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.exe.config
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.exe
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.pdb
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\_3._Arrays.Properties.Resources.resources
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.csproj.GenerateResource.Cache
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.exe
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.pdb
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.exe.CodeAnalysisLog.xml
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.exe.lastcodeanalysissucceeded
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.exe.config
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.pdb
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\_3._Arrays.Properties.Resources.resources
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.csproj.GenerateResource.Cache
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.exe.config
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.csprojResolveAssemblyReference.cache
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\_3._Arrays.Properties.Resources.resources
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.csproj.GenerateResource.Cache
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.exe.config
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\_3._Arrays.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.exe.config
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Debug\3.-Arrays.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\_3._Arrays.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Debug\3.-Arrays.pdb

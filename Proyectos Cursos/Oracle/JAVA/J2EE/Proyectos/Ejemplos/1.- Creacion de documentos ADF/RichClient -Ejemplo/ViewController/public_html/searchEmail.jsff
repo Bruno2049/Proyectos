@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:inputText value="#{bindings.p_email.inputValue}" label="Email" required="#{bindings.p_email.hints.mandatory}"
+                  columns="#{bindings.p_email.hints.displayWidth}" maximumLength="#{bindings.p_email.hints.precision}"
+                  shortDesc="#{bindings.p_email.hints.tooltip}" id="it1">
+      <f:validator binding="#{bindings.p_email.validator}"/>
+    </af:inputText>
+    <af:commandButton actionListener="#{bindings.ExecuteWithParams.execute}" text="Find Details"
+                      disabled="#{!bindings.ExecuteWithParams.enabled}" id="cb1"/>
+    <af:panelFormLayout id="pfl2">
+      <af:panelLabelAndMessage label="#{bindings.FirstName.hints.label}" id="plam1">
+        <af:outputText value="#{bindings.FirstName.inputValue}" id="ot1"/>
+      </af:panelLabelAndMessage>
+      <af:panelLabelAndMessage label="#{bindings.LastName.hints.label}" id="plam2">
+        <af:outputText value="#{bindings.LastName.inputValue}" id="ot2"/>
+      </af:panelLabelAndMessage>
+    </af:panelFormLayout>
+  </af:panelFormLayout>
+</ui:composition>

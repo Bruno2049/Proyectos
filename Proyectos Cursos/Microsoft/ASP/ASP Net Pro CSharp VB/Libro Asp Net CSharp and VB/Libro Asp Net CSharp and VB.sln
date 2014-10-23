@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visual Basic", "Visual Basic", "{C41710EB-6ABD-4455-B11D-4F26A81FBF96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C Sharp", "C Sharp", "{1E9DA97E-053D-4DEC-A989-55CAF8360442}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Capitulo 4", "Capitulo 4", "{8F15467F-B2CA-45A6-B73F-83FEF3B1ADF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server Controls", "C Sharp\Capitulo 4\Server Controls\Server Controls.csproj", "{9013CE7A-5348-4CE7-BC74-900C4A0A4BAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Capitulo 5", "Capitulo 5", "{7A328E74-593D-47EC-B6FA-F3105608BE20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotkey Funtionality", "C Sharp\Capitulo 5\Hotkey Funtionality\Hotkey Funtionality.csproj", "{4E31DDD9-C8C7-4EB2-B71B-26BA18F70295}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9013CE7A-5348-4CE7-BC74-900C4A0A4BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9013CE7A-5348-4CE7-BC74-900C4A0A4BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9013CE7A-5348-4CE7-BC74-900C4A0A4BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9013CE7A-5348-4CE7-BC74-900C4A0A4BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E31DDD9-C8C7-4EB2-B71B-26BA18F70295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E31DDD9-C8C7-4EB2-B71B-26BA18F70295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E31DDD9-C8C7-4EB2-B71B-26BA18F70295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E31DDD9-C8C7-4EB2-B71B-26BA18F70295}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8F15467F-B2CA-45A6-B73F-83FEF3B1ADF1} = {1E9DA97E-053D-4DEC-A989-55CAF8360442}
+		{7A328E74-593D-47EC-B6FA-F3105608BE20} = {1E9DA97E-053D-4DEC-A989-55CAF8360442}
+		{9013CE7A-5348-4CE7-BC74-900C4A0A4BAA} = {8F15467F-B2CA-45A6-B73F-83FEF3B1ADF1}
+		{4E31DDD9-C8C7-4EB2-B71B-26BA18F70295} = {7A328E74-593D-47EC-B6FA-F3105608BE20}
+	EndGlobalSection
+EndGlobal

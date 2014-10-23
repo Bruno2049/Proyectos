@@ -1,0 +1,16 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>MyBasePage.aspx</DefaultName>
+    <Name>MyBasePage</Name>
+    <Description>Used in the Planet Wrox site to create pages that are based on a central BasePage and a Master Page.</Description>
+    <ProjectType>Web</ProjectType>
+    <ProjectSubType>CSharp</ProjectSubType>
+    <SortOrder>10</SortOrder>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem TargetFileName="$fileinputname$.aspx" ReplaceParameters="true">Temporary.aspx</ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$.aspx.cs" ReplaceParameters="true">Temporary.aspx.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,5 @@
+C:\Desarrollo\Proyectos\Microsoft\ASP\ASP Net Pro CSharp VB\Libro Asp Net CSharp and VB\C Sharp\Capitulo 5\Hotkey Funtionality\bin\Hotkey Funtionality.dll
+C:\Desarrollo\Proyectos\Microsoft\ASP\ASP Net Pro CSharp VB\Libro Asp Net CSharp and VB\C Sharp\Capitulo 5\Hotkey Funtionality\bin\Hotkey Funtionality.pdb
+C:\Desarrollo\Proyectos\Microsoft\ASP\ASP Net Pro CSharp VB\Libro Asp Net CSharp and VB\C Sharp\Capitulo 5\Hotkey Funtionality\obj\Debug\Hotkey Funtionality.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\ASP\ASP Net Pro CSharp VB\Libro Asp Net CSharp and VB\C Sharp\Capitulo 5\Hotkey Funtionality\obj\Debug\Hotkey Funtionality.dll
+C:\Desarrollo\Proyectos\Microsoft\ASP\ASP Net Pro CSharp VB\Libro Asp Net CSharp and VB\C Sharp\Capitulo 5\Hotkey Funtionality\obj\Debug\Hotkey Funtionality.pdb

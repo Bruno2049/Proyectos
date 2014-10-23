@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="11.1.2.61.83" id="DataControls"
+                    Package="tutorial">
+  <AdapterDataControl id="StoreProducts" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="true"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true" Definition="tutorial.model.StoreProducts"
+                      BeanClass="tutorial.model.StoreProducts" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="tutorial.model.Product"/>
+      <TypeInfo FullName="tutorial.model.StoreProducts"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="tutorial.model.StoreProducts" xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

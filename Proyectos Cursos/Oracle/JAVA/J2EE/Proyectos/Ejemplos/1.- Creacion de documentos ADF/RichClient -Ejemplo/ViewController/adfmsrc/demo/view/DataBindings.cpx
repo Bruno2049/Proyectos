@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.59.47" id="DataBindings"
+             SeparateXMLFiles="false" Package="demo.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/DeptEmpPage.jsf" usageId="demo_view_DeptEmpPagePageDef"/>
+    <page path="/query.jsf" usageId="demo_view_queryPageDef"/>
+    <page path="/searchEmail.jsff" usageId="demo_view_searchEmailPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="demo_view_DeptEmpPagePageDef" path="demo.view.pageDefs.DeptEmpPagePageDef"/>
+    <page id="demo_view_queryPageDef" path="demo.view.pageDefs.queryPageDef"/>
+    <page id="demo_view_searchEmailPageDef" path="demo.view.pageDefs.searchEmailPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="demo.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,11 @@
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\CRUD(Stored Procedure)\bin\Debug\CRUD(Stored Procedure).exe.config
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\CRUD(Stored Procedure)\bin\Debug\CRUD(Stored Procedure).exe
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\CRUD(Stored Procedure)\bin\Debug\CRUD(Stored Procedure).pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\CRUD(Stored Procedure)\obj\Debug\CRUD(Stored Procedure).csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\CRUD(Stored Procedure)\obj\Debug\CRUD_Stored_Procedure_.FRM_Principal.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\CRUD(Stored Procedure)\obj\Debug\CRUD_Stored_Procedure_.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\CRUD(Stored Procedure)\obj\Debug\CRUD(Stored Procedure).csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\CRUD(Stored Procedure)\obj\Debug\CRUD(Stored Procedure).exe
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\CRUD(Stored Procedure)\obj\Debug\CRUD(Stored Procedure).pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\CRUD(Stored Procedure)\bin\Debug\Conexion.dll
+C:\Desarrollo\Proyectos\Microsoft\C#\CRUD(Stored Procedure)\CRUD(Stored Procedure)\bin\Debug\Conexion.pdb

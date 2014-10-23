@@ -1,0 +1,25 @@
+﻿<Page x:Class="Properties_and_Events_in_XAML.SimpleProperties"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+	Title="SimpleProperties">
+
+    <Grid>
+
+        <TextBox Name="txtQuestion"
+VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+FontFamily="Verdana" FontSize="24" Foreground="Green" >
+        </TextBox>
+        <Button Name="cmdAnswer" 
+VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+FontFamily="Verdana" FontSize="24" Foreground="Green" >
+        </Button>
+        <TextBox Name="txtAnswer" 
+VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+FontFamily="Verdana" FontSize="24" Foreground="Green" >
+        </TextBox>
+
+    </Grid>
+</Page>

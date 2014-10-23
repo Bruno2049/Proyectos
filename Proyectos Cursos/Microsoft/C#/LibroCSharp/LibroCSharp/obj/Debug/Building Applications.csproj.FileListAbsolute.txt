@@ -1,0 +1,8 @@
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\LibroCSharp\bin\Debug\LibroCSharp.exe.config
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\LibroCSharp\bin\Debug\LibroCSharp.exe
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\LibroCSharp\bin\Debug\LibroCSharp.pdb
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\LibroCSharp\obj\Debug\Building Applications.csprojResolveAssemblyReference.cache
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\LibroCSharp\obj\Debug\LibroCSharp.Properties.Resources.resources
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\LibroCSharp\obj\Debug\Building Applications.csproj.GenerateResource.Cache
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\LibroCSharp\obj\Debug\LibroCSharp.exe
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\LibroCSharp\obj\Debug\LibroCSharp.pdb

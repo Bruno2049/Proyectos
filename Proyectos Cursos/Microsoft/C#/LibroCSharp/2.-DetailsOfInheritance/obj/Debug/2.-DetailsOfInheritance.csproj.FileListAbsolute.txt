@@ -1,0 +1,32 @@
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\bin\Debug\2.-DetailsOfInheritance.exe.config
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\bin\Debug\2.-DetailsOfInheritance.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\bin\Debug\2.-DetailsOfInheritance.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.csprojResolveAssemblyReference.cache
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\_2._DetailsOfInheritance.Properties.Resources.resources
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.csproj.GenerateResource.Cache
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.pdb
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\bin\Debug\2.-DetailsOfInheritance.exe.config
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.pdb
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\bin\Debug\2.-DetailsOfInheritance.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\bin\Debug\2.-DetailsOfInheritance.pdb
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.csprojResolveAssemblyReference.cache
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\_2._DetailsOfInheritance.Properties.Resources.resources
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\bin\Debug\2.-DetailsOfInheritance.exe.config
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\bin\Debug\2.-DetailsOfInheritance.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\bin\Debug\2.-DetailsOfInheritance.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\_2._DetailsOfInheritance.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\bin\Debug\2.-DetailsOfInheritance.exe.config
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\bin\Debug\2.-DetailsOfInheritance.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\bin\Debug\2.-DetailsOfInheritance.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\_2._DetailsOfInheritance.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\2.-DetailsOfInheritance\obj\Debug\2.-DetailsOfInheritance.pdb

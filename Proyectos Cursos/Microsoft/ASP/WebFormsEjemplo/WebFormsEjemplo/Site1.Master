@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebFormsEjemplo.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Proyecto de prueba</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="Tema/css/style.css" />
+    <script type="text/javascript" src="Tema/js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <div id="main">
+        <header>
+            <div id="logo">
+                <div id="logo_text">
+                    <h2>Simple. Contemporary. Website Template.</h2>
+                </div>
+            </div>
+            <nav>
+                <div id="menu_container">
+                    <ul class="sf-menu" id="nav">
+                        <li><a href="Inicio.aspx">Inicio</a></li>
+                        <li><a href="Registro.aspx">Registro de Proyectos</a></li>
+                        <li><a href="Reporte.aspx">Reporte</a></li>
+                        <li><a href="#">Example Drop Down</a>
+                            <ul>
+                                <li><a href="#">Drop Down One</a></li>
+                                <li><a href="#">Drop Down Two</a>
+                                    <ul>
+                                        <li><a href="#">Sub Drop Down One</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Drop Down Three</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Site1.Master">Contactanos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="site_content">
+            <div id="sidebar_container">
+                <div class="sidebar">
+                    <h3>Latest News</h3>
+                    <h4>New Website Launched</h4>
+                    <h5>January 1st, 2012</h5>
+                    <p>2012 sees the redesign of our website. Take a look around and let us know what you think.<br />
+                        <a href="#">Read more</a></p>
+                </div>
+                <div class="sidebar">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#">First Link</a></li>
+                        <li><a href="#">Another Link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <h1>Texto de Bienvenida
+                </h1>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <footer>
+            <p>Copyright &copy; ></p>
+        </footer>
+    </div>
+    <p>&nbsp;</p>
+    <!-- javascript at the bottom for fast page loading -->
+    <script type="text/javascript" src="Tema/js/jquery.js"></script>
+    <script type="text/javascript" src="Tema/js/jquery.easing-sooper.js"></script>
+    <script type="text/javascript" src="Tema/js/jquery.sooperfish.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('ul.sf-menu').sooperfish();
+        });
+    </script>
+    </form>
+</body>
+</html>
+

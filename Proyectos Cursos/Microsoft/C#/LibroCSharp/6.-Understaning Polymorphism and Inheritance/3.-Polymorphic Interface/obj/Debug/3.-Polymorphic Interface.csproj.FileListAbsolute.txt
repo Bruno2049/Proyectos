@@ -1,0 +1,32 @@
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\bin\Debug\3.-Polymorphic Interface.exe.config
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\bin\Debug\3.-Polymorphic Interface.exe.config
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\bin\Debug\3.-Polymorphic Interface.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\bin\Debug\3.-Polymorphic Interface.pdb
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.csprojResolveAssemblyReference.cache
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\_3._Polymorphic_Interface.Properties.Resources.resources
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.csproj.GenerateResource.Cache
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\bin\Debug\3.-Polymorphic Interface.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\bin\Debug\3.-Polymorphic Interface.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.csprojResolveAssemblyReference.cache
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\_3._Polymorphic_Interface.Properties.Resources.resources
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\bin\Debug\3.-Polymorphic Interface.exe.config
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\bin\Debug\3.-Polymorphic Interface.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\bin\Debug\3.-Polymorphic Interface.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\_3._Polymorphic_Interface.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\bin\Debug\3.-Polymorphic Interface.exe.config
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\bin\Debug\3.-Polymorphic Interface.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\bin\Debug\3.-Polymorphic Interface.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\_3._Polymorphic_Interface.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\6.-Understaning Polymorphism and Inheritance\3.-Polymorphic Interface\obj\Debug\3.-Polymorphic Interface.pdb

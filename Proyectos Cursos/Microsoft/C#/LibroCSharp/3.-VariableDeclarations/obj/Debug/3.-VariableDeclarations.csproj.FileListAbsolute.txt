@@ -1,0 +1,49 @@
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe.config
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.pdb
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.csprojResolveAssemblyReference.cache
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\3.-VariableDeclarations\obj\Debug\_3._VariableDeclarations.Properties.Resources.resources
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.csproj.GenerateResource.Cache
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.exe
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.pdb
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe.config
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.pdb
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\_3._VariableDeclarations.Properties.Resources.resources
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.csproj.GenerateResource.Cache
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.exe
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.pdb
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe.CodeAnalysisLog.xml
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe.lastcodeanalysissucceeded
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe.config
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.pdb
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.csprojResolveAssemblyReference.cache
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\_3._VariableDeclarations.Properties.Resources.resources
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.csproj.GenerateResource.Cache
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe.config
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.csprojResolveAssemblyReference.cache
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\_3._VariableDeclarations.Properties.Resources.resources
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.csproj.GenerateResource.Cache
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe.config
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\_3._VariableDeclarations.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe.config
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\bin\Debug\3.-VariableDeclarations.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\_3._VariableDeclarations.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\3.-VariableDeclarations\obj\Debug\3.-VariableDeclarations.pdb

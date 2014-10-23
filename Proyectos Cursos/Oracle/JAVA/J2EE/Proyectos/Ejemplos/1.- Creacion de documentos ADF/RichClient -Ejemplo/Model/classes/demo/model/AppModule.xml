@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="11.1.2.59.47"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="DepartmentsView1"
+    ViewObjectName="demo.model.DepartmentsView"/>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="demo.model.EmployeesView"/>
+  <ViewUsage
+    Name="JobsView1"
+    ViewObjectName="demo.model.JobsView"/>
+  <ViewUsage
+    Name="DepartmentsView2"
+    ViewObjectName="demo.model.DepartmentsView"/>
+  <ViewUsage
+    Name="EmployeesView2"
+    ViewObjectName="demo.model.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView3"
+    ViewObjectName="demo.model.EmployeesView"/>
+  <ViewUsage
+    Name="EmpDetails1"
+    ViewObjectName="demo.model.EmpDetails"/>
+  <ViewUsage
+    Name="EmpByEmail1"
+    ViewObjectName="demo.model.EmpByEmail"/>
+  <ViewLinkUsage
+    Name="DeptMgrFkLink1"
+    ViewLinkObjectName="demo.model.DeptMgrFkLink"
+    SrcViewUsageName="demo.model.AppModule.EmployeesView1"
+    DstViewUsageName="demo.model.AppModule.DepartmentsView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="demo.model.EmpManagerFkLink"
+    SrcViewUsageName="demo.model.AppModule.EmployeesView1"
+    DstViewUsageName="demo.model.AppModule.EmployeesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpDeptFkLink1"
+    ViewLinkObjectName="demo.model.EmpDeptFkLink"
+    SrcViewUsageName="demo.model.AppModule.DepartmentsView1"
+    DstViewUsageName="demo.model.AppModule.EmployeesView3"
+    Reversed="false"/>
+</AppModule>

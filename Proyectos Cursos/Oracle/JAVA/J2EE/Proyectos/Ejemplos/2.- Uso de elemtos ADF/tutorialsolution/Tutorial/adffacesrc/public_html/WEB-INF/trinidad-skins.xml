@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<skins xmlns="http://myfaces.apache.org/trinidad/skin">
+    <skin>
+        <id>princess.desktop</id>
+        <family>princess</family>
+        <render-kit-id>org.apache.myfaces.trinidad.desktop</render-kit-id>
+        <style-sheet-name>skins/princess/princess.css</style-sheet-name>       
+        <extends>blafplus-rich.desktop</extends>
+    </skin>
+</skins>

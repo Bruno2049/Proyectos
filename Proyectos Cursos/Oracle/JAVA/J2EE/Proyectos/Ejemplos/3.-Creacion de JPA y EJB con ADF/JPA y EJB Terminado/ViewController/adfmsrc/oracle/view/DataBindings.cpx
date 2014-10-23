@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.58.99" id="DataBindings"
+             SeparateXMLFiles="false" Package="oracle.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/mainHR.jsf" usageId="oracle_view_mainHRPageDef"/>
+    <page path="/view1.jsff" usageId="oracle_view_view1PageDef"/>
+    <page path="/view2.jsff" usageId="oracle_view_view2PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="oracle_view_mainHRPageDef" path="oracle.view.pageDefs.mainHRPageDef"/>
+    <page id="oracle_view_view1PageDef" path="oracle.view.pageDefs.view1PageDef"/>
+    <page id="oracle_view_view2PageDef" path="oracle.view.pageDefs.view2PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="HRFacadeLocal" path="oracle.model.HRFacadeLocal"/>
+  </dataControlUsages>
+</Application>

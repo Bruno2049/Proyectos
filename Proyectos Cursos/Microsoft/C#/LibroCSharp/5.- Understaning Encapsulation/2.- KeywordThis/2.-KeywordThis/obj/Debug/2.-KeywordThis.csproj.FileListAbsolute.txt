@@ -1,0 +1,40 @@
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.exe.config
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.exe
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.pdb
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\_2._KeywordThis.Properties.Resources.resources
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.csproj.GenerateResource.Cache
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.exe
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.pdb
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.exe.CodeAnalysisLog.xml
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.exe.lastcodeanalysissucceeded
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.exe.config
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.pdb
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\_2._KeywordThis.Properties.Resources.resources
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.csproj.GenerateResource.Cache
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.exe.config
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.csprojResolveAssemblyReference.cache
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\_2._KeywordThis.Properties.Resources.resources
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.csproj.GenerateResource.Cache
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.exe.config
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\_2._KeywordThis.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.exe.config
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\bin\Debug\2.-KeywordThis.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\_2._KeywordThis.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\2.- KeywordThis\2.-KeywordThis\obj\Debug\2.-KeywordThis.pdb

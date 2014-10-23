@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="index.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:pageTemplate viewId="/Templete.jspx" id="pt1">
+                    <f:facet name="Centro">
+                        <af:panelSplitter id="ps1" splitterPosition="219">
+                            <f:facet name="first">
+                                <af:panelAccordion id="pa1">
+                                    <af:showDetailItem text="Carrito de Compras" id="sdi1">
+                                        <af:outputText value="No ha seleccionado ningun objeto" id="ot8">
+                                            <af:attributeDropTarget attribute="value"/>
+                                        </af:outputText>
+                                    </af:showDetailItem>
+                                    <af:showDetailItem text="Descripcion" id="sdi2"/>
+                                </af:panelAccordion>
+                            </f:facet>
+                            <f:facet name="second">
+                                <af:panelSplitter id="ps2" orientation="vertical" splitterPosition="149">
+                                    <f:facet name="first">
+                                        <af:panelGroupLayout layout="scroll" id="pgl4">
+                                            <af:panelGroupLayout id="pgl3" inlineStyle="height:30px; width:720px;">
+                                                <af:commandButton text="Elemento PopUp" id="cb6">
+                                                    <af:showPopupBehavior popupId="p2" triggerType="action"/>
+                                                </af:commandButton>
+                                                <af:popup childCreation="deferred" autoCancel="disabled" id="p2">
+                                                    <af:dialog id="d3" type="ok">
+                                                        <f:facet name="buttonBar"/>
+                                                        <af:carousel currentItemKey="#{bindings.products1.treeModel.rootCurrencyRowKey}"
+                                                                     value="#{bindings.products.treeModel}" var="item"
+                                                                     id="c8">
+                                                            <f:facet name="nodeStamp">
+                                                                <af:carouselItem id="ci1">
+                                                                    <af:image source="#{item.image}" id="i2"/>
+                                                                </af:carouselItem>
+                                                            </f:facet>
+                                                        </af:carousel>
+                                                    </af:dialog>
+                                                </af:popup>
+                                            </af:panelGroupLayout>
+                                            <af:panelCollection id="pc1" inlineStyle="width:738px;">
+                                                <f:facet name="menus">
+                                                    <af:menu text="Mis Opciones" id="m2" detachable="false">
+                                                        <af:commandMenuItem text="Exportar a Excel" id="cmi1">
+                                                            <af:exportCollectionActionListener type="excelHTML"
+                                                                                               exportedId="t1"/>
+                                                        </af:commandMenuItem>
+                                                        <af:commandMenuItem text="Muestra del especial" id="cmi2">
+                                                            <af:showPopupBehavior popupId=":::p1"/>
+                                                        </af:commandMenuItem>
+                                                        <af:commandMenuItem text="Imprimir Pagina" id="cmi3">
+                                                            <af:showPrintablePageBehavior/>
+                                                        </af:commandMenuItem>
+                                                    </af:menu>
+                                                </f:facet>
+                                                <f:facet name="toolbar"/>
+                                                <f:facet name="statusbar"/>
+                                                <af:table value="#{bindings.products.collectionModel}" var="row"
+                                                          rows="#{bindings.products.rangeSize}"
+                                                          emptyText="#{bindings.products.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                          fetchSize="#{bindings.products.rangeSize}"
+                                                          rowBandingInterval="0"
+                                                          selectedRowKeys="#{bindings.products.collectionModel.selectedRow}"
+                                                          selectionListener="#{bindings.products.collectionModel.makeCurrent}"
+                                                          rowSelection="single" id="t1" editingMode="clickToEdit"
+                                                          partialTriggers=":::cb1 :::cb2 :::cb3 :::cb4">
+                                                    <af:column sortProperty="#{bindings.products.hints.name.name}"
+                                                               sortable="false"
+                                                               headerText="#{bindings.products.hints.name.label}"
+                                                               id="c1">
+                                                        <af:outputText value="#{row.name}" id="ot1"/>
+                                                    </af:column>
+                                                    <af:column sortProperty="#{bindings.products.hints.category.name}"
+                                                               sortable="false"
+                                                               headerText="#{bindings.products.hints.category.label}"
+                                                               id="c2">
+                                                        <af:outputText value="#{row.category}" id="ot2"/>
+                                                    </af:column>
+                                                    <af:column sortProperty="#{bindings.products.hints.cost.name}"
+                                                               sortable="false"
+                                                               headerText="#{bindings.products.hints.cost.label}"
+                                                               id="c3">
+                                                        <af:outputText value="#{row.cost}" id="ot3"/>
+                                                    </af:column>
+                                                    <af:column sortProperty="#{bindings.products.hints.manufactured.name}"
+                                                               sortable="false"
+                                                               headerText="#{bindings.products.hints.manufactured.label}"
+                                                               id="c4">
+                                                        <af:outputText value="#{row.manufactured}" id="ot4">
+                                                            <af:convertDateTime pattern="#{bindings.products.hints.manufactured.format}"/>
+                                                        </af:outputText>
+                                                    </af:column>
+                                                    <af:column sortProperty="#{bindings.products.hints.image.name}"
+                                                               sortable="false"
+                                                               headerText="#{bindings.products.hints.image.label}"
+                                                               id="c5">
+                                                        <af:outputText value="#{row.image}" id="ot5"/>
+                                                    </af:column>
+                                                    <af:column sortProperty="#{bindings.products.hints.rating.name}"
+                                                               sortable="false"
+                                                               headerText="#{bindings.products.hints.rating.label}"
+                                                               id="c6">
+                                                        <af:outputText value="#{row.rating}" id="ot6"/>
+                                                    </af:column>
+                                                    <af:column sortProperty="#{bindings.products.hints.description.name}"
+                                                               sortable="false"
+                                                               headerText="#{bindings.products.hints.description.label}"
+                                                               id="c7">
+                                                        <af:outputText value="#{row.description}" id="ot7"/>
+                                                    </af:column>
+                                                </af:table>
+                                            </af:panelCollection>
+                                        </af:panelGroupLayout>
+                                    </f:facet>
+                                    <f:facet name="second">
+                                        <af:panelTabbed id="pt2">
+                                            <af:showDetailItem text="Detalles del producto" id="sdi3">
+                                                <af:panelFormLayout id="pfl1" inlineStyle="height:270px;"
+                                                                    partialTriggers="pc1:t1">
+                                                    <af:inputText value="#{bindings.name.inputValue}"
+                                                                  label="#{bindings.name.hints.label}"
+                                                                  required="#{bindings.name.hints.mandatory}"
+                                                                  columns="#{bindings.name.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.name.hints.precision}"
+                                                                  shortDesc="#{bindings.name.hints.tooltip}" id="it1">
+                                                        <f:validator binding="#{bindings.name.validator}"/>
+                                                        <af:attributeDragSource attribute="value"/>
+                                                    </af:inputText>
+                                                    <af:inputText value="#{bindings.category.inputValue}"
+                                                                  label="#{bindings.category.hints.label}"
+                                                                  required="#{bindings.category.hints.mandatory}"
+                                                                  columns="#{bindings.category.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.category.hints.precision}"
+                                                                  shortDesc="#{bindings.category.hints.tooltip}"
+                                                                  id="it2">
+                                                        <f:validator binding="#{bindings.category.validator}"/>
+                                                    </af:inputText>
+                                                    <af:inputNumberSpinbox value="#{bindings.cost.inputValue}"
+                                                                           label="#{bindings.cost.hints.label}"
+                                                                           required="#{bindings.cost.hints.mandatory}"
+                                                                           columns="#{bindings.cost.hints.displayWidth}"
+                                                                           shortDesc="#{bindings.cost.hints.tooltip}"
+                                                                           id="it3">
+                                                        <f:validator binding="#{bindings.cost.validator}"/>
+                                                    </af:inputNumberSpinbox>
+                                                    <af:inputDate value="#{bindings.manufactured.inputValue}"
+                                                                  label="#{bindings.manufactured.hints.label}"
+                                                                  required="#{bindings.manufactured.hints.mandatory}"
+                                                                  columns="#{bindings.manufactured.hints.displayWidth}"
+                                                                  shortDesc="#{bindings.manufactured.hints.tooltip}"
+                                                                  id="id1">
+                                                        <f:validator binding="#{bindings.manufactured.validator}"/>
+                                                        <af:convertDateTime pattern="#{bindings.manufactured.format}"/>
+                                                    </af:inputDate>
+                                                    <af:image shortDesc="#{bindings.image.hints.tooltip}" id="it4"
+                                                              source="#{bindings.image.inputValue}"/>
+                                                    <af:inputNumberSlider value="#{bindings.rating.inputValue}"
+                                                                          label="#{bindings.rating.hints.label}"
+                                                                          required="#{bindings.rating.hints.mandatory}"
+                                                                          shortDesc="#{bindings.rating.hints.tooltip}"
+                                                                          id="it5">
+                                                        <f:validator binding="#{bindings.rating.validator}"/>
+                                                    </af:inputNumberSlider>
+                                                    <af:inputText value="#{bindings.description.inputValue}"
+                                                                  label="#{bindings.description.hints.label}"
+                                                                  required="#{bindings.description.hints.mandatory}"
+                                                                  columns="#{bindings.description.hints.displayWidth}"
+                                                                  maximumLength="#{bindings.description.hints.precision}"
+                                                                  shortDesc="#{bindings.description.hints.tooltip}"
+                                                                  id="it6" rows="4" dimensionsFrom="auto">
+                                                        <f:validator binding="#{bindings.description.validator}"/>
+                                                    </af:inputText>
+                                                    <f:facet name="footer">
+                                                        <af:panelGroupLayout layout="vertical" id="pgl1">
+                                                            <af:panelGroupLayout layout="horizontal" id="pgl2">
+                                                                <f:facet name="separator">
+                                                                    <af:spacer width="10" height="1" id="s1"/>
+                                                                </f:facet>
+                                                                <af:commandButton actionListener="#{bindings.First.execute}"
+                                                                                  text="First"
+                                                                                  disabled="#{!bindings.First.enabled}"
+                                                                                  partialSubmit="true" id="cb1"/>
+                                                                <af:commandButton actionListener="#{bindings.Previous.execute}"
+                                                                                  text="Previous"
+                                                                                  disabled="#{!bindings.Previous.enabled}"
+                                                                                  partialSubmit="true" id="cb2"/>
+                                                                <af:commandButton actionListener="#{bindings.Next.execute}"
+                                                                                  text="Next"
+                                                                                  disabled="#{!bindings.Next.enabled}"
+                                                                                  partialSubmit="true" id="cb3"/>
+                                                                <af:commandButton actionListener="#{bindings.Last.execute}"
+                                                                                  text="Last"
+                                                                                  disabled="#{!bindings.Last.enabled}"
+                                                                                  partialSubmit="true" id="cb4"/>
+                                                            </af:panelGroupLayout>
+                                                            <af:commandButton text="Submit" id="cb5"/>
+                                                        </af:panelGroupLayout>
+                                                    </f:facet>
+                                                </af:panelFormLayout>
+                                            </af:showDetailItem>
+                                            <af:showDetailItem text="Rating" id="sdi4">
+                                                <dvt:gauge id="gauge1" gaugeType="DIAL"
+                                                           value="#{bindings.rating.inputValue}" maxValue="10.0"
+                                                           shortDesc="rating gauge">
+                                                    <dvt:gaugeBackground>
+                                                        <dvt:specialEffects/>
+                                                    </dvt:gaugeBackground>
+                                                    <dvt:thresholdSet>
+                                                        <dvt:threshold thresholdMaxValue="3.3" fillColor="#ff2121"/>
+                                                        <dvt:threshold thresholdMaxValue="6.66" fillColor="#e7e700"/>
+                                                        <dvt:threshold thresholdMaxValue="10.0" fillColor="#00d600"/>
+                                                    </dvt:thresholdSet>
+                                                    <dvt:gaugeFrame/>
+                                                    <dvt:indicator/>
+                                                    <dvt:indicatorBase/>
+                                                    <dvt:gaugePlotArea/>
+                                                    <dvt:tickLabel/>
+                                                    <dvt:tickMark/>
+                                                    <dvt:topLabel/>
+                                                    <dvt:bottomLabel/>
+                                                    <dvt:metricLabel position="LP_WITH_BOTTOM_LABEL"/>
+                                                </dvt:gauge>
+                                            </af:showDetailItem>
+                                        </af:panelTabbed>
+                                    </f:facet>
+                                </af:panelSplitter>
+                            </f:facet>
+                        </af:panelSplitter>
+                    </f:facet>
+                </af:pageTemplate>
+                <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+                    <af:dialog id="d2">
+                        <af:image source="/images/Hello.gif" id="i1"/>
+                    </af:dialog>
+                </af:popup>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

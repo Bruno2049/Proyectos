@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<orion-application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/orion-application-10_0.xsd">
+    <web-module id="Tutorial-adffacesrc-webapp" path="file:/C:/Temp/tut2/Tutorial/adffacesrc/public_html/"/>
+    <library path="C:\Temp\tut2\Tutorial\.adf">jdev-generated</library>
+    <log>
+        <file path="Tutorial-oc4j-app.log"/>
+    </log>
+    <data-sources path="Tutorial-data-sources.xml"/>
+</orion-application>

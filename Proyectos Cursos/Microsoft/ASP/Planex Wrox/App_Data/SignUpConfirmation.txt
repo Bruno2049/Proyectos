@@ -1,0 +1,12 @@
+﻿Hi <% UserName %>,
+
+Thank you for signing up for a new account at www.PlanetWrox.com.
+
+To log in to the site, use the following details:
+
+User name: <% UserName %>
+Your password: <% Password %>
+
+We look forward to your contributions.
+
+The Planet Wrox Team

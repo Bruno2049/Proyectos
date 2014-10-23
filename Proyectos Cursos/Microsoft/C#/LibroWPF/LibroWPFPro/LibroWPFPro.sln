@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parte_1", "Parte_1", "{DDA4C7F0-8738-4623-BEC0-C2EE5300EEBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parte_2", "Parte_2", "{0CB41289-AF87-4321-9291-E39C0F7FC566}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parte_3", "Parte_3", "{6765549A-C439-484D-8787-BC814C936642}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parte_4", "Parte_4", "{2E010344-1204-4D71-91FD-C7D5A8E6B213}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parte_5", "Parte_5", "{62BE17A2-4034-4FD3-A257-33BF2650B922}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parte_6", "Parte_6", "{4C85F1B0-EF22-4241-8925-340B16BD4748}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parte_7", "Parte_7", "{14C49732-E900-4639-9DDB-CE1AA4776D49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parte_8", "Parte_8", "{F9540640-616C-46B5-8D09-E2E1735F3BF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Capitulo_3", "Capitulo_3", "{743FFEE5-8673-4580-A049-6F3271DA1AD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Properties and Events in XAML", "Parte_2\Capitulo_3\Properties and Events in XAML\Properties and Events in XAML.csproj", "{4AACC580-EA20-4F1D-8F49-C31A9ADF35ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AACC580-EA20-4F1D-8F49-C31A9ADF35ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AACC580-EA20-4F1D-8F49-C31A9ADF35ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AACC580-EA20-4F1D-8F49-C31A9ADF35ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AACC580-EA20-4F1D-8F49-C31A9ADF35ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{743FFEE5-8673-4580-A049-6F3271DA1AD9} = {DDA4C7F0-8738-4623-BEC0-C2EE5300EEBF}
+		{4AACC580-EA20-4F1D-8F49-C31A9ADF35ED} = {743FFEE5-8673-4580-A049-6F3271DA1AD9}
+	EndGlobalSection
+EndGlobal

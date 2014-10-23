@@ -1,0 +1,7 @@
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Sesion\bin\Debug\Sesion.dll
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Sesion\bin\Debug\Sesion.pdb
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Sesion\bin\Debug\Dominio.dll
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Sesion\bin\Debug\Dominio.pdb
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Sesion\obj\Debug\Sesion.csprojResolveAssemblyReference.cache
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Sesion\obj\Debug\Sesion.dll
+C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\Conexion sql\Sesion\obj\Debug\Sesion.pdb

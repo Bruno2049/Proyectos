@@ -1,0 +1,16 @@
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\WebFormsEjemplo.dll
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\WebFormsEjemplo.pdb
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\Newtonsoft.Json.dll
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\System.Net.Http.Formatting.dll
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\System.Web.Http.dll
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\System.Web.Http.WebHost.dll
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\Newtonsoft.Json.xml
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\System.Net.Http.Formatting.xml
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\System.Web.Http.xml
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\System.Web.Http.WebHost.xml
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\es\System.Web.Http.resources.dll
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\obj\Debug\WebFormsEjemplo.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\obj\Debug\WebFormsEjemplo.dll
+C:\Desarrollo\Proyectos\Microsoft\ASP\WebFormsEjemplo\WebFormsEjemplo\obj\Debug\WebFormsEjemplo.pdb

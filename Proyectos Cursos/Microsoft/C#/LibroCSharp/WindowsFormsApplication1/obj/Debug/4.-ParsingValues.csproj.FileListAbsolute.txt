@@ -1,0 +1,41 @@
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\4.-ParsingValues.csproj.GenerateResource.Cache
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.CodeAnalysisLog.xml
+C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.lastcodeanalysissucceeded
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\4.-ParsingValues.csprojResolveAssemblyReference.cache
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\4.-ParsingValues.csproj.GenerateResource.Cache
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Sith Lord StarKiller\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\4.-ParsingValues.csprojResolveAssemblyReference.cache
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\4.-ParsingValues.csproj.GenerateResource.Cache
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\ecruz\Documents\Desarrollo\EstebanCruzLagunes\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\4.-ParsingValues.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\4.-ParsingValues.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\4.-ParsingValues.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\4.-ParsingValues.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

@@ -1,0 +1,455 @@
+/* Enable themes for specific components */
+af|document,
+af|decorativeBox,
+af|navigationPane-tabs,
+af|panelTabbed,
+af|panelSplitter {
+  -tr-enable-themes: true;
+}
+
+af|document[theme="dark"] {
+  background-image: none;
+  background-color: #D9A0D0;
+}
+
+/* style for a branding bar container (e.g. on an af:panelBorderLayout or horizontal
+   af:panelGroupLayout) */
+.AFBrandingBar {
+  border-bottom: 1px solid purple;
+}
+
+/* style for a container (e.g. an af:panelGroupLayout) for items inside of the branding bar
+   container */
+.AFBrandingBarItem {
+  height: 1.5em;
+}
+@accessibility-profile large-fonts {
+  .AFBrandingBarItem {
+    height: 2em;
+  }
+}
+
+/* style for a decorative branding logo (e.g. on an af:spacer) placed inside of a in the branding
+   bar item wrapper */
+.AFBrandingBarLogo {
+  width: 119px;
+  height: 1.5em;
+  background-image: url('/afr/logo-oracle-red.png');
+}
+@accessibility-profile large-fonts {
+  .AFBrandingBarLogo {
+    height: 2em;
+  }
+}
+
+/* style for branding page title text (e.g. on an af:outputText) placed inside of a branding bar
+   item wrapper */
+.AFBrandingBarTitle {
+  color: #7B3F85;
+  font-size: 18px;
+  padding-top: 0px;
+}
+@accessibility-profile large-fonts {
+  .AFBrandingBarTitle {
+    font-size: large;
+  }
+}
+
+/* style for supporting padding of navigationPane buttons when in a branding bar so that it can line
+   up vertically */
+.AFBrandingBar af|navigationPane-buttons {
+  padding-top: 0.2em;
+}
+
+/* style for supporting padding of the status indicator when in a branding bar so that it can line
+   up vertically */
+.AFBrandingBar af|statusIndicator {
+  padding: 0.3em;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+af|decorativeBox::center[theme="dark"],
+af|decorativeBox::start[theme="dark"],
+af|decorativeBox::end[theme="dark"],
+af|decorativeBox::bottom[theme="dark"],
+af|decorativeBox::center[theme="medium"],
+af|decorativeBox::start[theme="medium"],
+af|decorativeBox::end[theme="medium"],
+af|decorativeBox::bottom[theme="medium"] {
+  background-color:#7B3F85;
+  color: white;
+}
+af|decorativeBox::center[theme="light"],
+af|decorativeBox::start[theme="light"],
+af|decorativeBox::end[theme="light"],
+af|decorativeBox::bottom[theme="light"] {
+  background-color: #A368A5;
+  color: purple;
+}
+
+.AFDefaultFontFamily:alias {
+  font-family: "Blackadder ITC", "Monotype Corsiva", "Apple Chancery", "Snell Roundhand", fantasy;
+}
+
+.AFDefaultFont:alias {
+  font-size: large;
+  color: #800080;
+}
+
+.AFDefaultBoldFont:alias {
+  color: #800080;
+  font-size: x-large;
+}
+
+.AFButtonBackgroundHover:alias,
+.AFButtonBackground:alias {
+  background-color: #7B3F85;
+  border-color: purple;
+  color: white;
+}
+
+.AFButtonForegroundDisabled:alias {
+  color: gray;
+}
+
+af|column::column-header-cell {
+  background-color: #D9A0D0;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+af|menuBar,
+af|toolbar::body,
+af|toolbox::body {
+  background-color: #7B3F85;
+  border-style: dotted;
+  border-width: 2px;
+  border-color: #D9A0D0;
+}
+
+af|commandToolbarButton:disabled::text {
+  color: lightGrey;
+}
+
+af|toolbar,
+af|commandToolbarButton::text,
+af|menu::bar-item-text,
+af|menu::bar-item-text:hover,
+af|menu::bar-item-text:visited,
+af|menu::bar-item-text:active {
+  color: white;
+}
+
+af|panelSplitter::pane {
+  border-color: #7B3F85;
+  border-style: dashed;
+}
+
+/* splitter overrides */
+af|panelSplitter::pane[theme="dark"],
+af|panelSplitter::pane[theme="medium"],
+af|panelSplitter::pane[theme="light"] {
+  border-color: transparent;
+}
+
+af|statusIndicator {
+  font-size: small;
+  line-height: 18px;
+}
+
+af|navigationPane-buttons,
+af|navigationPane-buttons::link {
+  font-size: small;
+}
+
+/* tab-start and tab-end do not render anything in the princess skin */
+af|navigationPane-tabs::tab-start,
+af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-start,
+af|navigationPane-tabs::tab-end,
+af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-end,
+af|panelTabbed::tab-start,
+af|panelTabbed::tab:selected af|panelTabbed::tab-start,
+af|panelTabbed::tab-end,
+af|panelTabbed::tab:selected af|panelTabbed::tab-end {
+  border-width: 0px;
+  width: 0px;
+}
+
+/* unselected tabs */
+af|navigationPane-tabs::tab-content,
+af|panelTabbed::tab-content {
+  background-color: #CFDFF9;
+  border-left: 1px solid purple;
+  border-right: 1px solid purple;
+  padding: 0px 10px;
+}
+af|navigationPane-tabs::tab-content,
+af|panelTabbed::header af|panelTabbed::tab-content {
+  border-top: 1px solid purple;
+}
+af|panelTabbed::footer af|panelTabbed::tab-content {
+  border-bottom: 1px solid purple;
+}
+
+/* rounded tabs */
+@agent gecko {
+  af|navigationPane-tabs::tab-content,
+  af|panelTabbed::header af|panelTabbed::tab-content {
+    -moz-border-radius-topleft: 1em;
+    -moz-border-radius-topright: 1em;
+  }
+  af|panelTabbed::footer af|panelTabbed::tab-content {
+    -moz-border-radius-bottomleft: 1em;
+    -moz-border-radius-bottomright: 1em;
+  }
+}
+@agent webkit {
+  af|navigationPane-tabs::tab-content,
+  af|panelTabbed::header af|panelTabbed::tab-content {
+    -webkit-border-top-left-radius: 1em;
+    -webkit-border-top-right-radius: 1em;
+  }
+  af|panelTabbed::footer af|panelTabbed::tab-content {
+    -webkit-border-bottom-left-radius: 1em;
+    -webkit-border-bottom-right-radius: 1em;
+  }
+}
+
+/* selected tabs */
+af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-content,
+af|panelTabbed::tab:selected af|panelTabbed::tab-content {
+  background-color: white;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-content,
+af|panelTabbed::header af|panelTabbed::tab:selected af|panelTabbed::tab-content {
+  border-top: 1px solid black;
+}
+af|panelTabbed::footer af|panelTabbed::tab:selected af|panelTabbed::tab-content {
+  border-bottom: 1px solid black;
+}
+af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-content[theme="medium"],
+af|panelTabbed::tab:selected af|panelTabbed::tab-content[theme="medium"] {
+  background-color: #7B3F85;
+}
+af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-content[theme="light"],
+af|panelTabbed::tab:selected af|panelTabbed::tab-content[theme="light"] {
+  background-color: #A368A5;
+}
+af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-link,
+af|panelTabbed::tab:selected af|panelTabbed::tab-text-link,
+af|navigationPane-tabs::tab:hover:selected af|navigationPane-tabs::tab-link,
+af|panelTabbed::tab:hover:selected af|panelTabbed::tab-text-link {
+  color: #364696;
+}
+af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-link[theme="medium"],
+af|panelTabbed::tab:selected af|panelTabbed::tab-text-link[theme="medium"],
+af|navigationPane-tabs::tab:hover:selected af|navigationPane-tabs::tab-link[theme="medium"],
+af|panelTabbed::tab:hover:selected af|panelTabbed::tab-text-link[theme="medium"],
+af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-link[theme="light"],
+af|panelTabbed::tab:selected af|panelTabbed::tab-text-link[theme="light"],
+af|navigationPane-tabs::tab:hover:selected af|navigationPane-tabs::tab-link[theme="light"],
+af|panelTabbed::tab:hover:selected af|panelTabbed::tab-text-link[theme="light"] {
+  color: #CFDFF9;
+}
+
+/* hovered tabs */
+af|navigationPane-tabs::tab-content:hover,
+af|panelTabbed::tab-content:hover {
+  background-color: #364696;
+}
+af|navigationPane-tabs::tab:disabled af|navigationPane-tabs::tab-content,
+af|panelTabbed::tab:disabled af|panelTabbed::tab-content {
+  background-color: #CFDFF9;
+}
+
+/* Extra leading "af|foo" here to guarantee specificity over the generic "A" definitions. */
+af|navigationPane-tabs af|navigationPane-tabs::tab-link,
+af|panelTabbed af|panelTabbed::tab-text-link {
+  color: purple;
+  font-size: medium;
+}
+
+/* hovered tab text colors */
+af|navigationPane-tabs::tab:hover af|navigationPane-tabs::tab-link,
+af|panelTabbed::tab:hover af|panelTabbed::tab-text-link {
+  color: #CFDFF9;
+}
+af|navigationPane-tabs::tab:disabled:hover af|navigationPane-tabs::tab-link,
+af|panelTabbed::tab:disabled:hover af|panelTabbed::tab-text-link {
+  color: gray;
+}
+
+/* Since the bold font has built-in font size information in princess, we need to specially account
+   for it here.  Generally, it is not good to bundle size properties in aliases that are intended
+   to be only for coloring or other specific style such as font-weight because you will have to
+   override undesired side effects like this. */
+af|navigationPane-tabs::tab:selected af|navigationPane-tabs::tab-link,
+af|panelTabbed::tab:selected af|panelTabbed::tab-text-link {
+  font-size: medium;
+}
+
+/* Heights for the tabs: */
+af|navigationPane-tabs {
+  -tr-tab-bar-height: 3em; /* height of tab bars (used in page template managed-beans) */
+}
+af|panelTabbed {
+  -tr-tab-bar-height: 3em; /* height of tab bars that do have tabs */
+}
+af|navigationPane-tabs::tab-start,
+af|navigationPane-tabs::tab-end,
+af|navigationPane-tabs::tab-content,
+af|panelTabbed::tab-start,
+af|panelTabbed::tab-end,
+af|panelTabbed::tab-content {
+  line-height: 2.75em;
+}
+
+af|navigationPane-list::bullet {
+  background-image: none;
+}
+
+af|navigationPane-list::link {
+  color: purple;
+  text-align: center;
+}
+
+af|panelFormLayout,
+af|panelFormLayout::label-cell,
+af|panelFormLayout::content-cell,
+af|panelLabelAndMessage,
+af|panelLabelAndMessage::label,
+af|panelLabelAndMessage::content-cell,
+.AFLabelTextForeground:alias {
+  color: purple;
+  font-size: large;
+}
+
+.AFTextForeground:alias {
+  font-size: large;
+  color: #D9A0D0;
+}
+
+af|table {
+  border-style: dashed;
+}
+
+af|popup,
+af|panelBox::table {
+  border-color: #D9A0D0;
+  border-style: dotted;
+  border-width: 4px;
+}
+
+af|panelBox::content:core:default,
+af|panelBox::content:core:light,
+af|panelBox::content:core:medium,
+af|panelBox::content:core:dark,
+af|panelBox::content:highlight:default,
+af|panelBox::content:highlight:light,
+af|panelBox::content:highlight:medium,
+af|panelBox::content:highlight:dark {
+  background-color:#CFDFF9;
+  border: none;
+}
+
+af|panelBox::header-center:core:default,
+af|panelBox::header-center:core:light,
+af|panelBox::header-center:core:medium,
+af|panelBox::header-center:core:dark,
+af|panelBox::header-center:highlight:default,
+af|panelBox::header-center:highlight:light,
+af|panelBox::header-center:highlight:medium,
+af|panelBox::header-center:highlight:dark {
+  background-color: #D9A0D0;
+  border: none;
+  font-size: x-large;
+  text-align: center;
+}
+
+af|panelBox::header-start:core:default,
+af|panelBox::header-start:core:light,
+af|panelBox::header-start:core:medium,
+af|panelBox::header-start:core:dark,
+af|panelBox::header-start:highlight:default,
+af|panelBox::header-start:highlight:light,
+af|panelBox::header-start:highlight:medium,
+af|panelBox::header-start:highlight:dark {
+  background-color: #D9A0D0;
+  border: none;
+}
+
+af|panelBox::header-end:core:default,
+af|panelBox::header-end:core:light,
+af|panelBox::header-end:core:medium,
+af|panelBox::header-end:core:dark,
+af|panelBox::header-end:highlight:default,
+af|panelBox::header-end:highlight:light,
+af|panelBox::header-end:highlight:medium,
+af|panelBox::header-end:highlight:dark {
+  background-color: #D9A0D0;
+  border: none;
+}
+
+af|panelAccordion {
+  -tr-header-height: 36;
+}
+
+af|panelAccordion::header-title,
+af|panelAccordion::header-toolbar,
+af|panelAccordion::header-disclose {
+  background-image: none;
+  background-color: #D9A0D0;
+  color: purple;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+af|panelAccordion::header-title,
+af|panelAccordion::header-title af|commandLink,
+af|panelAccordion::header-title af|commandLink:active,
+af|panelAccordion::header-title af|commandLink:hover,
+af|panelAccordion::header-title af|commandLink:visited,
+af|panelAccordion::header-title af|goLink,
+af|panelAccordion::header-title af|goLink:active,
+af|panelAccordion::header-title af|goLink:hover,
+af|panelAccordion::header-title af|goLink:visited {
+  color: purple;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+af|panelAccordion::header-start,
+af|panelAccordion::header-start-sizer {
+  background-image: none;
+  background-color: #D9A0D0;
+  border: 0px;
+}
+
+af|panelAccordion::header-end,
+af|panelAccordion::header-end-sizer {
+  background-color: #D9A0D0;
+  background-image: none;
+  border: 0px;
+}
+
+af|panelAccordion::body-content {
+  background-color: #CFDFF9;
+  overflow: hidden;
+  width: auto;
+  border-left: 4px dotted #D9A0D0;
+  border-right: 4px dotted #D9A0D0;
+  border-bottom: 4px dotted #D9A0D0;
+  border-top: 4px dotted #D9A0D0;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+}
+
+af|tree::node-stamp-text {
+  background-color: #CFDFF9;
+  border-width: 0px;
+  color: purple;
+}

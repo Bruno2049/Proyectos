@@ -1,0 +1,95 @@
+07/09/17 14:28:06.842 11.1.1.0.0 Started
+07/09/17 14:28:19.873 Tutorial-adffacesrc-webapp: 11.1.1.0.0 Started
+07/09/17 14:32:17.607 Tutorial-adffacesrc-webapp: 11.1.1.0.0 Stopped
+07/09/17 14:32:24.404 11.1.1.0.0 Started
+07/09/17 14:32:36.248 Tutorial-adffacesrc-webapp: 11.1.1.0.0 Started
+07/09/17 14:42:30.389 11.1.1.0.0 Started
+07/09/17 14:42:43.373 Tutorial-adffacesrc-webapp: 11.1.1.0.0 Started
+07/09/17 14:44:05.810 Tutorial-adffacesrc-webapp: 11.1.1.0.0 Stopped
+07/09/17 14:44:12.545 11.1.1.0.0 Started
+07/09/17 14:44:24.889 Tutorial-adffacesrc-webapp: 11.1.1.0.0 Started
+07/09/17 14:45:02.998 Tutorial-adffacesrc-webapp: 11.1.1.0.0 Stopped
+07/09/17 14:45:09.576 11.1.1.0.0 Started
+07/09/17 14:45:21.264 Tutorial-adffacesrc-webapp: 11.1.1.0.0 Started
+07/09/17 14:51:05.560 Tutorial-adffacesrc-webapp: Servlet error
+07/09/17 14:51:05.560 Tutorial-adffacesrc-webapp: Servlet error
+07/09/17 14:51:05.560 Tutorial-adffacesrc-webapp: Servlet error
+java.lang.NumberFormatException: For input string: "1414EE2214"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Long.parseLong(Long.java:412)
+	at java.lang.Long.parseLong(Long.java:461)
+	at java.text.DigitList.getLong(DigitList.java:167)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:1271)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:1692)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1124)
+	at java.text.DateFormat.parse(DateFormat.java:333)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.EvermindHttpServletRequest.getDateHeader(EvermindHttpServletRequest.java:1474)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.EvermindHttpServletRequest.getDateHeader(EvermindHttpServletRequest.java:1282)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.apache.myfaces.trinidad.webapp.ResourceServlet.service(ResourceServlet.java:148)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.ServletRequestDispatcher.invoke(ServletRequestDispatcher.java:703)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.ServletRequestDispatcher.forwardInternal(ServletRequestDispatcher.java:362)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.doDispatchRequest(HttpRequestHandler.java:915)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.doProcessRequest(HttpRequestHandler.java:821)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.processRequest(HttpRequestHandler.java:626)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.processRequest(HttpRequestHandler.java:599)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.serveOneRequest(HttpRequestHandler.java:383)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.run(HttpRequestHandler.java:161)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.run(HttpRequestHandler.java:142)
+	at oracle.oc4j.network.ServerSocketReadHandler$ClientRunnable.run(ServerSocketReadHandler.java:275)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:595)
+java.lang.NumberFormatException: For input string: "1414EE22"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1224)
+	at java.lang.Double.parseDouble(Double.java:482)
+	at java.text.DigitList.getDouble(DigitList.java:141)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:1276)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:1692)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1124)
+	at java.text.DateFormat.parse(DateFormat.java:333)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.EvermindHttpServletRequest.getDateHeader(EvermindHttpServletRequest.java:1474)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.EvermindHttpServletRequest.getDateHeader(EvermindHttpServletRequest.java:1282)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.apache.myfaces.trinidad.webapp.ResourceServlet.service(ResourceServlet.java:148)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.ServletRequestDispatcher.invoke(ServletRequestDispatcher.java:703)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.ServletRequestDispatcher.forwardInternal(ServletRequestDispatcher.java:362)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.doDispatchRequest(HttpRequestHandler.java:915)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.doProcessRequest(HttpRequestHandler.java:821)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.processRequest(HttpRequestHandler.java:626)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.processRequest(HttpRequestHandler.java:599)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.serveOneRequest(HttpRequestHandler.java:383)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.run(HttpRequestHandler.java:161)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.run(HttpRequestHandler.java:142)
+	at oracle.oc4j.network.ServerSocketReadHandler$ClientRunnable.run(ServerSocketReadHandler.java:275)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:595)
+java.lang.NumberFormatException: For input string: "1414EE2214"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1224)
+	at java.lang.Double.parseDouble(Double.java:482)
+	at java.text.DigitList.getDouble(DigitList.java:141)
+	at java.text.DecimalFormat.parse(DecimalFormat.java:1276)
+	at java.text.SimpleDateFormat.subParse(SimpleDateFormat.java:1692)
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1124)
+	at java.text.DateFormat.parse(DateFormat.java:333)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.EvermindHttpServletRequest.getDateHeader(EvermindHttpServletRequest.java:1474)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.EvermindHttpServletRequest.getDateHeader(EvermindHttpServletRequest.java:1282)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:709)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.apache.myfaces.trinidad.webapp.ResourceServlet.service(ResourceServlet.java:148)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.ServletRequestDispatcher.invoke(ServletRequestDispatcher.java:703)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.ServletRequestDispatcher.forwardInternal(ServletRequestDispatcher.java:362)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.doDispatchRequest(HttpRequestHandler.java:915)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.doProcessRequest(HttpRequestHandler.java:821)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.processRequest(HttpRequestHandler.java:626)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.processRequest(HttpRequestHandler.java:599)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.serveOneRequest(HttpRequestHandler.java:383)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.run(HttpRequestHandler.java:161)
+	at com.evermind[Oracle Containers for J2EE 10g (11.1.1.0.0) ].server.http.HttpRequestHandler.run(HttpRequestHandler.java:142)
+	at oracle.oc4j.network.ServerSocketReadHandler$ClientRunnable.run(ServerSocketReadHandler.java:275)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:650)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:675)
+	at java.lang.Thread.run(Thread.java:595)
