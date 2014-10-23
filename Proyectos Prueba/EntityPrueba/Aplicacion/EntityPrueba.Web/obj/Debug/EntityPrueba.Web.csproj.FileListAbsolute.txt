@@ -1,0 +1,167 @@
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\EntityPrueba.Web.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\EntityPrueba.Web.pdb
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\Antlr3.Runtime.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\DotNetOpenAuth.AspNet.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\DotNetOpenAuth.Core.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\DotNetOpenAuth.OAuth.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\DotNetOpenAuth.OpenId.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\EntityFramework.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\EntityPrueba.Entidad.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\EntityPrueba.LogicaNegocios.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\Newtonsoft.Json.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Net.Http.Formatting.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.Helpers.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.Http.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.Http.WebHost.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.Mvc.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.Optimization.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.Razor.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.WebPages.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.WebPages.Razor.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\WebGrease.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\WebMatrix.Data.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\WebMatrix.WebData.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\EntityPrueba.Entidad.pdb
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\EntityPrueba.LogicaNegocios.pdb
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\EntityFramework.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\Newtonsoft.Json.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Net.Http.Formatting.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.Helpers.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.Http.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.Http.WebHost.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.Mvc.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.Razor.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.WebPages.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\System.Web.WebPages.Razor.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\WebMatrix.Data.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\WebMatrix.WebData.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\DotNetOpenAuth.AspNet.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\DotNetOpenAuth.Core.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\DotNetOpenAuth.OAuth.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\DotNetOpenAuth.OpenId.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\obj\Debug\EntityPrueba.Web.csprojResolveAssemblyReference.cache
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\obj\Debug\EntityPrueba.Web.dll
+C:\Esteban\Proyectos\EntityPrueba\EntityPrueba.Web\obj\Debug\EntityPrueba.Web.pdb
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.Web.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.Web.pdb
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Antlr3.Runtime.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.AspNet.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.Core.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OAuth.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OpenId.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityFramework.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.Entidad.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.LogicaNegocios.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Newtonsoft.Json.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Net.Http.Formatting.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Helpers.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Http.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Http.WebHost.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Mvc.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Optimization.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Razor.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.WebPages.Deployment.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.WebPages.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.WebPages.Razor.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\WebGrease.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\WebMatrix.Data.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\WebMatrix.WebData.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.Entidad.pdb
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.LogicaNegocios.pdb
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityFramework.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Newtonsoft.Json.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Net.Http.Formatting.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Helpers.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Http.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Http.WebHost.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Mvc.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Razor.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.WebPages.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.WebPages.Deployment.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.WebPages.Razor.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\WebMatrix.Data.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\WebMatrix.WebData.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.AspNet.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.Core.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OAuth.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OpenId.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\obj\Debug\EntityPrueba.Web.csprojResolveAssemblyReference.cache
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\obj\Debug\EntityPrueba.Web.dll
+E:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\obj\Debug\EntityPrueba.Web.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.Web.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.Web.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Antlr3.Runtime.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.AspNet.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.Core.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OAuth.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OpenId.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityFramework.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.Entidad.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.LogicaNegocios.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Newtonsoft.Json.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Net.Http.Formatting.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Helpers.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Http.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Http.WebHost.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Mvc.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Optimization.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Razor.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.WebPages.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.WebPages.Razor.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\WebGrease.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\WebMatrix.Data.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\WebMatrix.WebData.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.Entidad.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.LogicaNegocios.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityFramework.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Newtonsoft.Json.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Net.Http.Formatting.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Helpers.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Http.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Http.WebHost.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Mvc.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.Razor.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.WebPages.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\System.Web.WebPages.Razor.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\WebMatrix.Data.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\WebMatrix.WebData.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.AspNet.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.Core.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OAuth.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OpenId.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\obj\Debug\EntityPrueba.Web.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\obj\Debug\EntityPrueba.Web.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\obj\Debug\EntityPrueba.Web.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityFramework.SqlServer.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityFramework.SqlServer.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.AcesoDatos.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\EntityPrueba\Aplicacion\EntityPrueba.Web\bin\EntityPrueba.AcesoDatos.pdb

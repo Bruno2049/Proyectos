@@ -1,0 +1,23 @@
+﻿<Window x:Class="School.Vista.SchoolAplication"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="300" Width="500" Loaded="Window_Loaded_1" >
+    <Grid>
+        <Menu  Height="32" VerticalAlignment="Top" Name="Menu">
+            <MenuItem Header="Menu" >
+                <MenuItem Header="Add Student" Name="MI_AddStudent" Click="MI_AddStudent_Click_1"/>
+                <MenuItem Header="Add Class" />
+                <Separator/>
+                <MenuItem Header="Exit" Name="MI_Exit" Click="MI_Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Edit Student"/>
+                <MenuItem Header="Edit Class" />
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Header="View Student" Name="ViewStudents" Click="ViewStudents_Click"/>
+                <MenuItem Header="View Class"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>

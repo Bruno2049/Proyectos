@@ -1,0 +1,8 @@
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.AccesoDatos\bin\Debug\School.AccesoDatos.dll
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.AccesoDatos\bin\Debug\School.AccesoDatos.pdb
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.AccesoDatos\obj\Debug\School.AccesoDatos.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.AccesoDatos\obj\Debug\School.AccesoDatos.dll
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.AccesoDatos\obj\Debug\School.AccesoDatos.pdb
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.AccesoDatos\bin\Debug\School.AccesoDatos.dll.config
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.AccesoDatos\bin\Debug\EntityFramework.dll
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.AccesoDatos\bin\Debug\EntityFramework.xml

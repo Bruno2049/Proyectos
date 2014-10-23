@@ -1,0 +1,9 @@
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.LogicaNegocios\bin\Debug\School.LogicaNegocios.dll
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.LogicaNegocios\bin\Debug\School.LogicaNegocios.pdb
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.LogicaNegocios\obj\Debug\School.LogicaNegocios.dll
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.LogicaNegocios\obj\Debug\School.LogicaNegocios.pdb
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.LogicaNegocios\bin\Debug\School.AccesoDatos.dll
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.LogicaNegocios\bin\Debug\School.Entidades.dll
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.LogicaNegocios\bin\Debug\School.AccesoDatos.pdb
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.LogicaNegocios\bin\Debug\School.Entidades.pdb
+C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.LogicaNegocios\obj\Debug\School.LogicaNegocios.csprojResolveAssemblyReference.cache

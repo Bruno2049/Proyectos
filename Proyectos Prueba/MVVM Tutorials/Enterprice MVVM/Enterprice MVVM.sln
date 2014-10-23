@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enterprice MVVM.DesktopClient", "Enterprice MVVM.DesktopClient\Enterprice MVVM.DesktopClient.csproj", "{01A917DB-50CC-4BD2-A69C-85C6BD8D1C3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enterprice MVVM.Windows", "Enterprice MVVM.Windows\Enterprice MVVM.Windows.csproj", "{65A40ADD-9608-4C22-B2A7-F9855795FFD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enterprice MVVM.Test", "Enterprice MVVM.Test\Enterprice MVVM.Test.csproj", "{492E9847-4CEC-41EA-9DD5-8BD5ECDC3AF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01A917DB-50CC-4BD2-A69C-85C6BD8D1C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A917DB-50CC-4BD2-A69C-85C6BD8D1C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A917DB-50CC-4BD2-A69C-85C6BD8D1C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A917DB-50CC-4BD2-A69C-85C6BD8D1C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65A40ADD-9608-4C22-B2A7-F9855795FFD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65A40ADD-9608-4C22-B2A7-F9855795FFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A40ADD-9608-4C22-B2A7-F9855795FFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65A40ADD-9608-4C22-B2A7-F9855795FFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{492E9847-4CEC-41EA-9DD5-8BD5ECDC3AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{492E9847-4CEC-41EA-9DD5-8BD5ECDC3AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{492E9847-4CEC-41EA-9DD5-8BD5ECDC3AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{492E9847-4CEC-41EA-9DD5-8BD5ECDC3AF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

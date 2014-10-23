@@ -1,0 +1,10 @@
+﻿<Window x:Class="MVVM_DCOM.Views.CustomerInfoView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CustomerInfoView" Height="200" Width="450">
+    <DockPanel LastChildFill="True">
+        <Label DockPanel.Dock="Top" FontSize="48" FontFamily="Mistral" Foreground="#696969">Saved!</Label>
+        <Rectangle DockPanel.Dock="Bottom" Height="64" Fill="#ECECEC" ></Rectangle>
+        <Label DockPanel.Dock="Top" Content="{Binding Info,FallbackValue='Your data was saved.' }" VerticalAlignment="Bottom"/>
+    </DockPanel>
+</Window>

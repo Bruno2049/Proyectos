@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2efca23cb89e49b9bd1e597190c30e59" Name="Diagrama1">
+        <EntityTypeShape EntityType="EntityPruebaModel.US_CAT_ESTATUS_USUARIO" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityPruebaModel.US_CAT_NIVEL_USUARIO" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityPruebaModel.US_CAT_TIPO_USUARIO" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityPruebaModel.US_HISTORIAL" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityPruebaModel.US_LOG_REGISTRO" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityPruebaModel.US_USUARIOS" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <AssociationConnector Association="EntityPruebaModel.FK_US_CAT_E_REFERENCE_US_LOG_R" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityPruebaModel.FK_US_USUAR_REFERENCE_US_CAT_E" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityPruebaModel.FK_US_CAT_N_REFERENCE_US_LOG_R" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityPruebaModel.FK_US_USUAR_REFERENCE_US_CAT_N" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityPruebaModel.FK_US_CAT_T_REFERENCE_US_LOG_R" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityPruebaModel.FK_US_USUAR_REFERENCE_US_CAT_T" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityPruebaModel.FK_US_HISTO_REFERENCE_US_LOG_R" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityPruebaModel.FK_US_USUAR_REFERENCE_US_HISTO" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityPruebaModel.FK_US_USUAR_REFERENCE_US_LOG_R" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

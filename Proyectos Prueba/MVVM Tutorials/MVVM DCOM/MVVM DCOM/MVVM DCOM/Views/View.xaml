@@ -1,0 +1,30 @@
+﻿<Window x:Class="MVVM_DCOM.Views.View"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MVVM_DCOM.ViewModels"
+        Title="View" Height="300" Width="300">
+    <Window.Resources>
+        <local:ViewModel x:Key="DataContext"/>
+    </Window.Resources>
+    
+    <StackPanel DataContext="{StaticResource DataContext}" Margin="16">
+        <TextBox Name="CustomerName">
+            <TextBox.Text>
+                <Binding Path="Model.CustomerName" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged" />
+            </TextBox.Text>
+            
+            
+        </TextBox>
+        <Label>
+            <Label.Name>AdornerSite</Label.Name>
+            <Label.FontWeight>Bold</Label.FontWeight>
+            <Label.Foreground>Red</Label.Foreground>
+            <Label.Content>
+                <Binding>
+                    <Binding.ElementName>CustomerName</Binding.ElementName>
+                    <Binding.Path>(Validation.Errors).CurrentItem.ErrorContent</Binding.Path>
+                </Binding>
+            </Label.Content>
+        </Label>
+    </StackPanel>
+</Window>
