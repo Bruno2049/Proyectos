@@ -1,0 +1,140 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="Restaurant.ProductWindow"
+	x:Name="Window"
+	xmlns:local="clr-namespace:Restaurant"
+	Title=""
+	Width="700" Height="500" 
+    Style="{DynamicResource ProductsMoalWindowStyle}"
+    FontFamily="Arial" FontSize="11" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" Background="{x:Null}"
+     MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" RenderTransformOrigin="0.5,0.5">
+	<Window.Resources>
+		<!--Strat of my defined codes -->
+
+		<Storyboard x:Key="StoryboardEnterance">
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="{x:Null}" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+				<SplineDoubleKeyFrame KeyTime="00:00:00" Value="510" KeySpline="1,0,0,1"/>
+				<SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-30" KeySpline="1,0,0,1"/>
+				<SplineDoubleKeyFrame KeyTime="00:00:00.8000000" Value="0" KeySpline="0,0,0,1"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+
+        <Storyboard x:Key="StoryboardUnitFadeIn">
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="UnitsPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="UnitsPane" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="GroupsPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ProductsPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ProductsTreePane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        
+        <Storyboard x:Key="StoryboardGroupFadeIn">
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="GroupsPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="GroupsPane" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="UnitsPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ProductsPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ProductsTreePane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        
+        <Storyboard x:Key="StoryboardProductFadeIn">
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ProductsPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ProductsPane" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="UnitsPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="GroupsPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ProductsTreePane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="StoryboardProductTreeFadeIn">
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="ProductsTreePane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ProductsTreePane" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="UnitsPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="GroupsPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ProductsPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+	<Window.RenderTransform>
+		<TransformGroup>
+			<ScaleTransform ScaleX="1" ScaleY="1"/>
+			<SkewTransform AngleX="0" AngleY="0"/>
+			<RotateTransform Angle="0"/>
+			<TranslateTransform X="0" Y="0"/>
+		</TransformGroup>
+	</Window.RenderTransform>
+	<Window.Triggers>
+		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+			<BeginStoryboard Storyboard="{StaticResource StoryboardEnterance}"/>
+		</EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="TabButtonUnit">
+            <BeginStoryboard Storyboard="{StaticResource StoryboardUnitFadeIn}" x:Name="StoryboardUnitFadeIn_BeginStoryboard"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="TabButtonGroup">
+            <BeginStoryboard Storyboard="{StaticResource StoryboardGroupFadeIn}" x:Name="StoryboardGroupFadeIn_BeginStoryboard"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="TabButtonProduct">
+            <BeginStoryboard Storyboard="{StaticResource StoryboardProductFadeIn}" x:Name="StoryboardProductFadeIn_BeginStoryboard"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="TabButtonProductTree">
+            <BeginStoryboard Storyboard="{StaticResource StoryboardProductTreeFadeIn}" x:Name="StoryboardProductTreeFadeIn_BeginStoryboard"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Window.CommandBindings>
+        <CommandBinding Command="Close"
+        Executed="CloseCommand_Executed"/>
+    </Window.CommandBindings>
+
+	<Grid >
+		<Button HorizontalAlignment="Left" Margin="-1,-36,0,0" VerticalAlignment="Top" Width="120" Height="36" Content="Unit" Style="{DynamicResource TabButtonStyle}" Foreground="#FFFFFFFF" x:Name="TabButtonUnit" Click="TabButtonUnit_Click" />
+		<Button Foreground="#FFFFFFFF" Margin="121,-36,0,0" Style="{DynamicResource TabButtonStyle}" VerticalAlignment="Top" Height="36" Content="Group" HorizontalAlignment="Left" Width="120" x:Name="TabButtonGroup" Click="TabButtonGroup_Click" />
+		<Button Foreground="#FFFFFFFF" Margin="243,-36,335,0" Style="{DynamicResource TabButtonStyle}" VerticalAlignment="Top" Height="36" Content="Product" Width="120" x:Name="TabButtonProduct"  Click="TabButtonProduct_Click"/>
+		<Button Foreground="#FFFFFFFF" HorizontalAlignment="Right" Margin="0,-36,213,0" Style="{DynamicResource TabButtonStyle}" VerticalAlignment="Top" Width="120" Height="36" Content="Product Tree" x:Name="TabButtonProductTree" Click="TabButtonProductTree_Click"/>
+        <local:UnitsUserControl x:Name="UnitsPane" Visibility="Visible"/>
+        <local:GroupsUserControl x:Name="GroupsPane" Visibility="Collapsed"/>
+        <local:ProductsUserControl x:Name="ProductsPane" Visibility="Collapsed"/>
+        <local:ProductTreeUserControl x:Name="ProductsTreePane" Visibility="Collapsed"/>
+    </Grid>
+</Window>

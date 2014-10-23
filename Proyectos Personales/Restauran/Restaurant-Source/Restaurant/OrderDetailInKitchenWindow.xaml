@@ -1,0 +1,128 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="Restaurant.OrderDetailInKitchenWindow"
+	x:Name="Window"
+	Title="Window1"
+    xmlns:RestaurantClasses="clr-namespace:Restaurant.Classes"
+	Width="800" Height="600" MouseLeftButtonDown="Window_MouseLeftButtonDown" Background="{x:Null}" Foreground="#FFFFFFFF" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" xmlns:Restaurant="clr-namespace:Restaurant" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" Loaded="Window_Loaded" xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" Closing="Window_Closing">
+
+    <Window.Resources>
+        <Storyboard x:Key="StoryboardEntrance">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="{x:Null}" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.095"/>
+                <SplineDoubleKeyFrame KeySpline="1,0,0.512,1" KeyTime="00:00:00.3000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        
+        <RestaurantClasses:OrderItemEditStateConverter x:Key="EditStateConverter"/>
+
+        <!-- ProductName column -->
+        <DataTemplate x:Key="ProductNameColumnTemplate">
+            <TextBlock Height="20"  FontFamily="Arial" FontSize="14"  Text="{Binding Path=ProductName}" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+		</DataTemplate>
+        
+        <DataTemplate x:Key="UnitNameColumnTemplate">
+            <TextBlock Height="20" FontFamily="Arial" FontSize="14"  Text="{Binding Path=UnitName}" HorizontalAlignment="Stretch"  VerticalAlignment="Center"/>
+		</DataTemplate>
+        
+        <DataTemplate x:Key="AmountColumnTemplate">
+            <TextBlock Height="20"  FontFamily="Arial" FontSize="16"  Text="{Binding Path=Amount}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+		</DataTemplate>
+        
+        <DataTemplate x:Key="NotEditableColumnTemplate">
+            <Border>
+                <CheckBox x:Name="CheckBoxNotEditableState" Tag="{Binding}" Width="14" Height="14" IsChecked="{Binding Path=NotEditable}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Checked="CheckBoxNotEditableState_Checked" Unchecked="CheckBoxNotEditableState_Unchecked"/>
+            </Border>
+		</DataTemplate>
+        
+        <!-- State column -->
+        <DataTemplate x:Key="EditStateColumnTemplate">
+            <Image HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Width="32" Height="32" Source="{Binding Path=EditState, Converter={StaticResource EditStateConverter}, Mode=Default}"/>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="EditAmountColumnTemplate">
+            <TextBlock Height="20"  FontFamily="Arial" FontSize="16"  Text="{Binding Path=EditAmount}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+		</DataTemplate>
+
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource StoryboardEntrance}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid x:Name="LayoutRoot">
+        <Rectangle Margin="0,0,0,0" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" RadiusX="400" RadiusY="100" Stroke="#E5B0B0B0" StrokeThickness="1.5" x:Name="rectOuter">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="1.191,-0.1" StartPoint="0.029,0.942">
+                    <GradientStop Color="#E5202020" Offset="0.08"/>
+                    <GradientStop Color="#E5202020" Offset="0.763"/>
+                    <GradientStop Color="#E53F3F3F" Offset="0.174"/>
+                    <GradientStop Color="#E5202020" Offset="0.29"/>
+                    <GradientStop Color="#E54F4F4F" Offset="0.621"/>
+                    <GradientStop Color="#E5272727" Offset="0.531"/>
+                    <GradientStop Color="#E5202020" Offset="0.513"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Margin="3,3,3,3" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" RadiusX="400" RadiusY="100" Stroke="#9CB0B0B0" StrokeThickness="1.5" x:Name="rectInner"/>
+
+        <Path HorizontalAlignment="Left" Margin="196.905,21,0,0" VerticalAlignment="Top" Width="200" Height="31.75" Fill="{x:Null}" Stretch="Fill" Stroke="#9CFAFFB0" StrokeThickness="1.5" Data="M381,33 C381,33 383.25,54.25 322.25,41.25 261.25,28.25 269.25034,63.249858 269.25034,63.249858" d:LayoutOverrides="HorizontalAlignment"/>
+        <Path Margin="398.905,21,201.095,0" VerticalAlignment="Top" Height="31.75" Fill="{x:Null}" Stretch="Fill" Stroke="#9CF9FDB8" StrokeThickness="1.5" Data="M381,33 C381,33 383.25,54.25 322.25,41.25 261.25,28.25 269.25034,63.249858 269.25034,63.249858" RenderTransformOrigin="0.5,0.5">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1" ScaleY="1"/>
+                    <SkewTransform AngleX="0" AngleY="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <TextBlock Height="Auto" x:Name="textBlock2" VerticalAlignment="Top" Text="Table No" Margin="0,48,177.97,0" HorizontalAlignment="Right" Width="Auto" Foreground="#D7FBFFBB" d:LayoutOverrides="Width" />
+		<TextBlock Height="Auto" x:Name="textBlock1" VerticalAlignment="Top" Text="Order No" Margin="173,48,0,0" Foreground="#D7FBFFBB" Width="Auto" HorizontalAlignment="Left" /><TextBlock Height="Auto" x:Name="txbWindowTitle" VerticalAlignment="Top" Text="Order Detail" HorizontalAlignment="Center" Margin="0,6,0,0" Width="Auto" Foreground="#D7FBFFB0" FontFamily="Arial" FontSize="14" />
+        <Border Margin="123,60,0,0" VerticalAlignment="Top" Height="35" BorderBrush="#6EFBFB96" BorderThickness="1.5,0,1.5,0" CornerRadius="0,20,0,20" Width="150" HorizontalAlignment="Left" x:Name="borderOrderNo">
+            <TextBlock Height="21" x:Name="txbOrderNo" Text="Not specified" Foreground="#FFFFFFFF" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" FontSize="16" />
+		</Border>
+        <Border HorizontalAlignment="Right" Margin="0,60,126,0" VerticalAlignment="Top" Width="150" Height="35" BorderBrush="#6EFBFB96" BorderThickness="1.5,0,1.5,0" CornerRadius="0,20,0,20" x:Name="borderTableNo"  Background="#00000000">
+            <TextBlock Height="21" x:Name="txbTableNo" Foreground="#FFFFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" FontFamily="Arial" FontSize="16" Text="Not specified" />
+		</Border>
+        <Grid Margin="10,97,10,95" x:Name="MainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        <Border Grid.Column="0"  CornerRadius="6,6,6,6" BorderThickness="1,1,1,1" BorderBrush="#7FFFFFFF" Width="Auto" x:Name="borderOrder" AllowDrop="False" >
+            <Grid Width="Auto">
+                <Restaurant:SortableListView   Margin="6,6,6,0" Height="401.96"
+			Background="{x:Null}"  BorderBrush="{x:Null}"
+			ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"
+			VirtualizingStackPanel.IsVirtualizing="True" ScrollViewer.CanContentScroll="True"
+			SelectionMode="Single"  IsSynchronizedWithCurrentItem="True"
+			ItemContainerStyle="{DynamicResource RestaurantEditListViewItemStyle}"
+			Style="{DynamicResource RestaurantEditListViewStyle}" IsEnabled="True"  HorizontalAlignment="Stretch" VerticalAlignment="Top" x:Name="OrderGridView">
+			<Restaurant:SortableListView.View >
+				<GridView AllowsColumnReorder="False" >
+                    
+					<GridViewColumn Width="4" HeaderContainerStyle="{DynamicResource FirstColumnGridViewColumnHeader}" CellTemplate="{StaticResource EmptyColumnTemplate}"/>
+                    <GridViewColumn HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}" Header="Not Editable" CellTemplate="{StaticResource NotEditableColumnTemplate}"  Width="100"   />
+					<GridViewColumn Header="Product Name" CellTemplate="{StaticResource ProductNameColumnTemplate}"  Width="350"  HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}" />
+					<GridViewColumn Header="Unit" CellTemplate="{StaticResource UnitNameColumnTemplate}"  Width="85"  HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}" />
+					<GridViewColumn Header="Amount" CellTemplate="{StaticResource AmountColumnTemplate}"  Width="90"  HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}" />
+                    <GridViewColumn Header="" CellTemplate="{StaticResource EditStateColumnTemplate}"  Width="50"  HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}" />
+                    <GridViewColumn Header="" CellTemplate="{StaticResource EditAmountColumnTemplate}"  Width="50"  HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}" />
+					<GridViewColumn Width="4" HeaderContainerStyle="{DynamicResource LastColumnGridViewColumnHeader}" CellTemplate="{StaticResource EmptyColumnTemplate}"/>
+				</GridView>
+			</Restaurant:SortableListView.View>
+		</Restaurant:SortableListView>
+            </Grid>
+		</Border>
+            </Grid>
+        <Button Style="{DynamicResource BlueButtonStyle}" Content="Close" Foreground="#FFFFFFFF" HorizontalAlignment="Center" Margin="0,0,0,36" VerticalAlignment="Bottom" Width="100" Height="30" IsCancel="True" x:Name="btnCancel"/>
+        <Button Style="{DynamicResource BlueButtonStyle}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="100" Height="30" Margin="0,0,237,36" ToolTip="Print Again" x:Name="btnPrint" Click="btnPrint_Click">
+        	<Image Source="Images\printer.ico" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <Button Style="{DynamicResource BlueButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Height="30" Margin="237,0,0,36" ToolTip="Ready To Serve" x:Name="btnReadyToServe" Click="btnReadyToServe_Click">
+        	<Image Source="Images\Ready.ico" Stretch="Uniform"/>
+        </Button>
+	</Grid>
+</Window>

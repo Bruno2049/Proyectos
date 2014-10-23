@@ -1,0 +1,26 @@
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\Universidad.AplicacionAdministrativa.exe.config
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\Universidad.AplicacionAdministrativa.exe
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\Universidad.AplicacionAdministrativa.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\obj\Debug\Universidad.AplicacionAdministrativa.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\obj\Debug\Universidad.AplicacionAdministrativa.Properties.Resources.resources
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\obj\Debug\Universidad.AplicacionAdministrativa.csproj.GenerateResource.Cache
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\obj\Debug\Universidad.AplicacionAdministrativa.exe
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\obj\Debug\Universidad.AplicacionAdministrativa.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Codigo Fuente\Universidad.AplicacionAdministrativa\bin\Debug\Universidad.AplicacionAdministrativa.exe.config
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Codigo Fuente\Universidad.AplicacionAdministrativa\obj\Debug\Universidad.AplicacionAdministrativa.exe
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Codigo Fuente\Universidad.AplicacionAdministrativa\obj\Debug\Universidad.AplicacionAdministrativa.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\Universidad.Entidades.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\Universidad.Entidades.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\Universidad.Controlador.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\Universidad.Controlador.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\Universidad.AplicacionAdministrativa.exe.manifest
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\Universidad.AplicacionAdministrativa.application
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\obj\Debug\Universidad.AplicacionAdministrativa.exe.manifest
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\obj\Debug\Universidad.AplicacionAdministrativa.application
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\Newtonsoft.Json.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\Newtonsoft.Json.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\obj\Debug\Universidad.AplicacionAdministrativa.Vistas.Sistema.GestionCatalogos.resources
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\obj\Debug\Universidad.AplicacionAdministrativa.FORM_Login.resources
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\obj\Debug\Universidad.AplicacionAdministrativa.Vistas.Inicio.resources
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\EntityFramework.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.AplicacionAdministrativa\bin\Debug\EntityFramework.xml

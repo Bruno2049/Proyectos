@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Restaurant.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionStr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=ali-notebook\MSSQL2005;Initial Catalog=Restaurant;User ID=sa;Password=sapass;Connection Timeout=20</Value>
+    </Setting>
+    <Setting Name="RefreshInterval" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">15000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

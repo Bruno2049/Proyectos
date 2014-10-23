@@ -1,0 +1,158 @@
+﻿<UserControl x:Class="Restaurant.KitchenOrdersListUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:myClasses="clr-namespace:Restaurant.Classes"
+    xmlns:local="clr-namespace:Restaurant" Height="428" Loaded="UserControl_Loaded" FontFamily="Arial" FontSize="11">
+    <UserControl.Resources>
+        <myClasses:StateConverter x:Key="StateConvertor"/>
+        
+        <myClasses:PrintStateConverter x:Key="PrintStateConverter"/>
+        
+        <!-- State column -->
+        <DataTemplate x:Key="StateColumnTemplate">
+            <Image Width="32" Height="32" Source="{Binding Path=State, Converter={StaticResource StateConvertor}, Mode=Default}"/>
+        </DataTemplate>
+
+        <!-- Show Detail button column -->
+        <DataTemplate x:Key="ShowDetailsColumnTemplate">
+            <Button Width="100" Style="{DynamicResource BlueButtonStyle}" Tag="{Binding}" x:Name="btnShowDetail" Click="btnShowDetail_Click" FontSize="12" FontFamily="Arial" Height="26" Content="Show Details" Foreground="White" />
+        </DataTemplate>
+        
+        <!--PrintStateColumnTemplate-->
+        <DataTemplate x:Key="PrintStateColumnTemplate">
+            <Button ToolTip="Print" Visibility="{Binding Path=PrintState, Converter={StaticResource PrintStateConverter}, Mode=Default}" Width="32" Style="{DynamicResource BlueButtonStyle}" Tag="{Binding}" x:Name="btnPrint" Click="btnPrint_Click"  Height="32" Foreground="White" >
+                <Image Source="/Images/printer.ico" Width="18" Height="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+        </DataTemplate>
+        
+        <DrawingBrush x:Key="ChromeBrush" Viewbox="0,0,621.375,420.825" ViewboxUnits="Absolute">
+            <DrawingBrush.Drawing>
+                <ImageDrawing Rect="0,0,621.375,420.825">
+                    <ImageDrawing.ImageSource>
+                        <BitmapImage CacheOption="OnLoad" CreateOptions="IgnoreImageCache" UriSource="/Images/Textures/chrome.jpg"/>
+                    </ImageDrawing.ImageSource>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+        
+        <DrawingBrush x:Key="WoodBrush" Viewbox="0,0,621.375,420.825" ViewboxUnits="Absolute">
+            <DrawingBrush.Drawing>
+                <ImageDrawing Rect="0,0,621.375,420.825">
+                    <ImageDrawing.ImageSource>
+                        <BitmapImage CacheOption="OnLoad" CreateOptions="IgnoreImageCache" UriSource="/Images/Textures/wood.jpg"/>
+                    </ImageDrawing.ImageSource>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+
+        <DrawingBrush x:Key="GlassBrush" Viewbox="0,0,621.375,420.825" ViewboxUnits="Absolute">
+            <DrawingBrush.Drawing>
+                <ImageDrawing Rect="0,0,621.375,420.825">
+                    <ImageDrawing.ImageSource>
+                        <BitmapImage CacheOption="OnLoad" CreateOptions="IgnoreImageCache" UriSource="/Images/Textures/woodGold.jpg"/>
+                    </ImageDrawing.ImageSource>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Margin="5,5,5,0" CornerRadius="8,8,8,8" Background="{DynamicResource PanelGradientBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,1">
+            <Grid Width="Auto" Height="Auto">
+                <TextBlock HorizontalAlignment="Left" Margin="20,0,0,0" Width="Auto" Text="Search:" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Arial"/>
+                <local:FilterTextUserControl HorizontalAlignment="Left" Margin="65,0,0,0" Width="150" Text=""  VerticalAlignment="Center" x:Name="FilterTextBox"/>
+                <Button HorizontalAlignment="Right" Margin="0,0,4,0" x:Name="btnRefresh" Style="{DynamicResource RefreshButtonStyle}" ToolTip="Click to refresh the list" Width="24" Content="Button" Click="btnRefresh_Click" VerticalAlignment="Center" Height="24"/>
+            </Grid>
+        </Border>
+        <Viewbox Grid.Row="1" Margin="0,0,0,0" Stretch="Fill" Opacity="1" OpacityMask="#FF000000" Height="220" Width="300">
+            <Grid Width="347.092" Height="257.354">
+                <Path Margin="55,0,89.029,-4.223" Opacity="0.445" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="{x:Null}" Data="M403,243 L374,232 C374,232 354,262 213,253 L190,270.00052 C190,270.00052 316,271.00053 353,359.00173 L383,353.00166 373,325.00127 C373,325.00127 317,268.00019 403,243 z" Height="129.577" VerticalAlignment="Bottom">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            <SkewTransform AngleX="1.653" AngleY="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="-1.971" Y="0"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#823C3C3C" Offset="1"/>
+                            <GradientStop Color="#CC000000" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Path Width="27" Height="7.808" Fill="{DynamicResource GlassBrush}" Stretch="Fill" Stroke="{x:Null}" Data="M358,257 C358,257 365.5,254.5 384,262 383,266 381,260 373,262 z" HorizontalAlignment="Right" Margin="0,0,88.977,119.595" VerticalAlignment="Bottom"/>
+                <Path Width="50.217" Height="51.503" Fill="{DynamicResource GlassBrush}" Stretch="Fill" Stroke="{x:Null}" Data="M338.5,308 C338.5,308 333.5,278.5 376,261.5 376,261.5 386.00011,261 386.50011,264.5 384.49969,269.99996 347.4997,279.00019 340.99963,300.00005 334.49956,320.99991 338.5,308 338.5,308 z" HorizontalAlignment="Right" Margin="0,0,86.477,71.025" VerticalAlignment="Bottom"/>
+                <Path Fill="{DynamicResource WoodBrush}" Stretch="Fill" Stroke="{x:Null}" Data="M288.68325,210.30846 L287.35432,268.18371 C287.35432,268.18371 299.62587,277.13923 315.71149,268.01813 L315.38009,267.18856 314.05343,209.97475 z" Margin="160.469,83.325,157.265,110.888"/>
+                <Ellipse Height="71.51" Stroke="#FF898989" Margin="5.233,12.224,5.233,0" VerticalAlignment="Top">
+                    <Ellipse.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF7A7A7A" Offset="0.371"/>
+                            <GradientStop Color="#FFD0D0D0" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Stroke="#FFA0A0A8" Height="60.465" Margin="0,0.002,0,0" VerticalAlignment="Top">
+                    <Ellipse.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF474747" Offset="0.469"/>
+                            <GradientStop Color="#FFF0F0F0" Offset="0.808"/>
+                            <GradientStop Color="#FFA9A7A7" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Height="50" Fill="{DynamicResource WoodBrush}" Stroke="#FFABABB3" Margin="15.697,0,15.116,0" VerticalAlignment="Top"/>
+                <Path Width="39.023" Height="40.753" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="{x:Null}" Data="M338.25,380.5 C337.25002,383.74942 344.75,384.25 347.5,379.5 L348.25,378.50014 C348.25,378.50014 357,384.49933 360.5,376.75035 360.5,376.75035 366.75,379.99993 368.5,374.50067 370.25,369.00141 363,356.5031 363,356.5031 L357.99971,348.75416 330.75011,354.50337 C330.75011,354.50337 339.24998,377.25058 338.25,380.5 z" HorizontalAlignment="Right" Margin="0,0,104.454,0" VerticalAlignment="Bottom" Fill="{DynamicResource GlassBrush}">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1.0003003085009568" ScaleY="0.999553567634405"/>
+                            <SkewTransform AngleX="4.0790000000000077" AngleY="0"/>
+                            <RotateTransform Angle="1.4039999999999997"/>
+                            <TranslateTransform X="-0.947" Y="0.46"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Fill="{DynamicResource GlassBrush}" Height="93" Stretch="Fill" Stroke="{x:Null}" Data="M356,344 L327.5,349 C327.5,349 309.5,289.5 195,284.5 L202.5,276 C202.5,276 326,281.5 357.5,257 L374.5,262.5 C374.5,262.5 306,288 356,344 z" Margin="68.115,0,98.477,34.003" VerticalAlignment="Bottom"/>
+                <Path Width="31" Height="20.66" Fill="{DynamicResource GlassBrush}" Stretch="Fill" Stroke="{x:Null}" Data="M195.5,284 L202.5,275.5 C202.5,275.5 185,272.5 172.5,292.5 172.5,292.5 176.5,282.99989 195.5,284 z" HorizontalAlignment="Left" Margin="45.115,0,0,87.503" VerticalAlignment="Bottom"/>
+                <Path Height="97.013" Fill="{DynamicResource GlassBrush}" Stretch="Fill" Stroke="{x:Null}" Data="M337,380.5 C337,380.5 315,294 172,293 172,293 179,285 186,284.5 L194,284.5 C194,284.5 313.5,281.5 334.5,367.5 L338.5,378.00001 z" Margin="45.115,0,134.477,2.003" VerticalAlignment="Bottom"/>
+                <Ellipse Height="25.146" Fill="{DynamicResource WoodBrush}" Stroke="#FF828282" Margin="146.694,0,142.504,81.742" VerticalAlignment="Bottom"/>
+                <Path Height="25.671" Fill="{DynamicResource ChromeBrush}" Stretch="Fill" Stroke="{x:Null}" Data="M287.02924,265.85965 L285.35988,266.52889 285.35988,284.95709 C285.35988,284.95709 299.68996,294.61027 317.52988,284.66487 L317.52988,266.82168 315.7755,264.48155 315.48304,267.4071 C315.48304,267.4071 303.19967,277.64499 287.11431,267.4071 z" Margin="159.475,0,156.265,93.85" VerticalAlignment="Bottom"/>
+            </Grid>
+        </Viewbox>
+        <local:SortableListView Grid.Column="1" Grid.Row="1" x:Name="OrdersGridView" Margin="0,5,0,0" Height="Auto"
+                                 Background="{x:Null}"  BorderBrush="{x:Null}"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"
+            VirtualizingStackPanel.IsVirtualizing="True" ScrollViewer.CanContentScroll="True"
+            SelectionMode="Single" IsSynchronizedWithCurrentItem="True"
+                           ItemContainerStyle="{DynamicResource RestaurantEditListViewItemStyle}"
+                           Style="{DynamicResource RestaurantEditListViewStyle}" IsEnabled="True" >
+            <local:SortableListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <Border BorderThickness="0,0,0,1" SnapsToDevicePixels="True" BorderBrush="#4DFFFFFF"/>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </local:SortableListView.GroupStyle>
+            <local:SortableListView.View >
+                <GridView AllowsColumnReorder="False" >
+                    <GridViewColumn Width="4" HeaderContainerStyle="{DynamicResource FirstColumnGridViewColumnHeader}" CellTemplate="{StaticResource EmptyColumnTemplate}"/>
+                    <local:SortListViewColumn CellTemplate="{StaticResource StateColumnTemplate}" Header="State" SortProperty="State" Width="60"  SortStyle="RestaurantDataGridViewColumnHeader" HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}"/>
+                    <local:SortListViewColumn Header="Table No" DisplayMemberBinding="{Binding Path=TableNo}" SortProperty="TableNo" Width="90" SortStyle="RestaurantDataGridViewColumnHeader" HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}"/>
+                    <local:SortListViewColumn Header="Order No" DisplayMemberBinding="{Binding Path=OrderNo}" SortProperty="OrderNo" Width="100" SortStyle="RestaurantDataGridViewColumnHeader" HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}"/>
+                    <local:SortListViewColumn Header="Action Time" DisplayMemberBinding="{Binding Path=ActionTime}" SortProperty="ActionTime" Width="90" SortStyle="RestaurantDataGridViewColumnHeader" HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}"/>
+                    <local:SortListViewColumn Header="Waiter" DisplayMemberBinding="{Binding Path=Waiter}" SortProperty="Waiter" Width="130" SortStyle="RestaurantDataGridViewColumnHeader" HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}"/>
+                    <local:SortListViewColumn CellTemplate="{StaticResource ShowDetailsColumnTemplate}" Header=""  SortProperty="ShowDetail" Width="120" SortStyle="RestaurantDataGridViewColumnHeader" HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}"/>
+                    <local:SortListViewColumn CellTemplate="{StaticResource PrintStateColumnTemplate}" Header=""  SortProperty="PrintState" Width="50" SortStyle="RestaurantDataGridViewColumnHeader" HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}"/>
+                    <GridViewColumn Width="4" HeaderContainerStyle="{DynamicResource LastColumnGridViewColumnHeader}" CellTemplate="{StaticResource EmptyColumnTemplate}"/>
+                </GridView>
+            </local:SortableListView.View>
+        </local:SortableListView>
+    </Grid>
+</UserControl>

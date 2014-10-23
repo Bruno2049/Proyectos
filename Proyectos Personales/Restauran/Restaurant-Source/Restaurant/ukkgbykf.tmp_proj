@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5774D232-746A-4942-9895-33DE144E16E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Restaurant</RootNamespace>
+    <AssemblyName>Restaurant</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationIcon>Restaurant.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ProductWindow.xaml.cs">
+      <DependentUpon>ProductWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TablesWindow.xaml.cs">
+      <DependentUpon>TablesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GroupsUserControl.xaml.cs">
+      <DependentUpon>GroupsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProductsUserControl.xaml.cs">
+      <DependentUpon>ProductsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UnitsUserControl.xaml.cs">
+      <DependentUpon>UnitsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersWindow.xaml.cs">
+      <DependentUpon>UsersWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewOrderWindow.xaml.cs">
+      <DependentUpon>NewOrderWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangePasswordWindow.xaml.cs">
+      <DependentUpon>ChangePasswordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DatabaseClass.cs" />
+    <Compile Include="Classes\GlobalClass.cs" />
+    <Compile Include="Classes\OrderItemEditStateConverter.cs" />
+    <Compile Include="Classes\OrderStateConverter.cs" />
+    <Compile Include="Classes\SortListViewColumn.cs" />
+    <Compile Include="Classes\SortableListView.cs" />
+    <Compile Include="Classes\StateConverter.cs" />
+    <Compile Include="Classes\TableClass.cs" />
+    <Compile Include="ConfigWindow.xaml.cs">
+      <DependentUpon>ConfigWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetailInKitchenWindow.xaml.cs">
+      <DependentUpon>OrderDetailInKitchenWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ErrorMessages.settings</DependentUpon>
+    </Compile>
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsWindow.xaml.cs">
+      <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartWindow.xaml.cs">
+      <DependentUpon>StartWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CashierOrdersListUserControl.xaml.cs">
+      <DependentUpon>CashierOrdersListUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FilterTextUserControl.xaml.cs">
+      <DependentUpon>FilterTextUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProductAvailabilityUserControl.xaml.cs">
+      <DependentUpon>ProductAvailabilityUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\KitchenOrdersListUserControl.xaml.cs">
+      <DependentUpon>KitchenOrdersListUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProductTreeUserControl.xaml.cs">
+      <DependentUpon>ProductTreeUserControl.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ErrorMessages.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RestaurantClassDiagram.cd" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dlls\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="Dlls\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="Dlls\Microsoft.Practices.ObjectBuilder.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ReferencePath Include="Dlls\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <ReferencePath Include="Dlls\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <ReferencePath Include="Dlls\Microsoft.Practices.ObjectBuilder.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.Aero.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.DataSetExtensions.dll" />
+    <ReferencePath Include="C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll" />
+    <ReferencePath Include="C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll" />
+    <ReferencePath Include="C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll" />
+    <ReferencePath Include="C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.5\System.Xml.Linq.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll" />
+    <ReferencePath Include="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\ProductWindow.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\TablesWindow.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\UserControls\GroupsUserControl.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\UserControls\ProductsUserControl.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\UserControls\UnitsUserControl.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\UsersWindow.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\NewOrderWindow.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\ChangePasswordWindow.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\ConfigWindow.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\OrderDetailInKitchenWindow.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\LoginWindow.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\MainWindow.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\SettingsWindow.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\StartWindow.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\UserControls\CashierOrdersListUserControl.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\UserControls\FilterTextUserControl.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\UserControls\ProductAvailabilityUserControl.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\UserControls\KitchenOrdersListUserControl.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\UserControls\ProductTreeUserControl.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\App.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\Restaurant_Content.g.cs" />
+    <Compile Include="F:\My Projects\My Projects\Restaurant\4\Restaurant\Restaurant\obj\Debug\GeneratedInternalTypeHelper.g.cs" />
+  </ItemGroup>
+</Project>

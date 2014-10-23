@@ -1,0 +1,13 @@
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\bin\Universidad.ServidorReportes.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\bin\Universidad.ServidorReportes.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\bin\Universidad.Controlador.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\bin\Universidad.Entidades.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\bin\Universidad.Controlador.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\bin\Universidad.Entidades.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\obj\Debug\Universidad.ServidorReportes.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\obj\Debug\Universidad.ServidorReportes.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\obj\Debug\Universidad.ServidorReportes.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\bin\Newtonsoft.Json.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\bin\EntityFramework.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\bin\Newtonsoft.Json.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorReportes\bin\EntityFramework.xml

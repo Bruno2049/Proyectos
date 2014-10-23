@@ -1,0 +1,79 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:My="clr-namespace:Restaurant"
+	mc:Ignorable="d"
+	x:Class="Restaurant.GroupsUserControl"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Foreground="#FFFFFFFF" Height="Auto" Width="Auto" FontFamily="Arial" FontSize="11">
+
+    <Grid Margin="0,0,0,0" x:Name="ContentGrid" Background="{x:Null}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="484*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130"  />
+            <RowDefinition  Height="*" />
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Style="{DynamicResource BlueButtonStyle}" IsDefault="False" x:Name="btnNew" TabIndex="140" HorizontalAlignment="Center" Width="100" Foreground="White" FontFamily="Arial" FontSize="10" Height="26" FontWeight="Normal" Content="New Group" Margin="0,23,0,0" VerticalAlignment="Top" d:LayoutOverrides="Height" IsCancel="False" Click="btnNew_Click" />
+
+        <Button Style="{DynamicResource BlueButtonStyle}" Grid.Row="1" Grid.Column="0" x:Name="btnEdit" TabIndex="140" HorizontalAlignment="Center" Width="100" Foreground="White" FontSize="10" Height="26" Content="Edit Group" Margin="0,0,0,0" d:LayoutOverrides="Height" VerticalAlignment="Top" Click="btnEdit_Click"/>
+        <Button Style="{DynamicResource BlueButtonStyle}" Grid.Row="1" Grid.Column="0" x:Name="btnDelete" TabIndex="140" HorizontalAlignment="Center" Width="100" Foreground="White" FontSize="10" Height="26" Content="Delete Group" Margin="0,30,0,0" d:LayoutOverrides="Height" VerticalAlignment="Top" Click="btnDelete_Click"/>
+
+
+        <Grid Grid.Column="1" Grid.Row="0" Width="Auto" Margin="0,0,0,0">
+            <Border x:Name="BorderAddEdit"  IsEnabled="False" Margin="8,20,8,4" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,1" CornerRadius="5,5,5,5" Background="{x:Null}" RenderTransformOrigin="0.5,0.5">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Grid Width="Auto" Height="Auto" Margin="0,0,0,0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="15" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0" x:Name="txbBorderTitle" d:IsStaticText="True"  Foreground="#FFFFFFFF" Text="" TextAlignment="Left" Margin="5,2,0,0" />
+                    <TextBlock Grid.Column="0" Grid.Row="1" Margin="0,0,0,0" x:Name="txbGroupName" Text="Group Name:" Foreground="#FFFFFFFF" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                <TextBox Grid.Column="1" Grid.Row="1" Margin="4,0,0,0" x:Name="txtGroupName" Width="200" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Left" MaxLength="50" />
+                                <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Button Style="{DynamicResource BlueButtonStyle}" x:Name="btnSave" Foreground="White" FontSize="10" Content="Save" Height="26"  Width="72" Margin="0,0,10,0" Click="btnSave_Click" />
+                                <Button Style="{DynamicResource BlueButtonStyle}" x:Name="btnCancel" Foreground="White" FontSize="10" Content="Cancel" Height="26"   Width="72" Click="btnCancel_Click" />
+                        </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <My:SortableListView Grid.Column="1" Grid.Row="1" x:Name="GroupsGridView" Height="Auto" Margin="5,2,6,2"
+                            Background="{x:Null}" BorderBrush="{x:Null}"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"
+            VirtualizingStackPanel.IsVirtualizing="True" ScrollViewer.CanContentScroll="True"
+            SelectionMode="Single" IsSynchronizedWithCurrentItem="True"
+                           ItemContainerStyle="{DynamicResource RestaurantListViewItemStyleSmall}"
+                           Style="{DynamicResource RestaurantEditListViewStyle}">
+            <My:SortableListView.View >
+                <GridView AllowsColumnReorder="False">
+                    <GridViewColumn Width="4"
+                  HeaderContainerStyle="{DynamicResource FirstColumnGridViewColumnHeader}"
+                  CellTemplate="{StaticResource EmptyColumnTemplate}" />
+                    <My:SortListViewColumn Header="Group ID" DisplayMemberBinding="{Binding Path=GroupID}" SortProperty="GroupID" Width="150"  SortStyle="RestaurantDataGridViewColumnHeader" HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}"/>
+                    <My:SortListViewColumn Header="Group Name" DisplayMemberBinding="{Binding Path=GroupName}" SortProperty="GroupName" Width="250"  SortStyle="RestaurantDataGridViewColumnHeader" HeaderContainerStyle="{DynamicResource RestaurantDataGridViewColumnHeader}"/>
+                    <GridViewColumn Width="4"
+                  HeaderContainerStyle="{DynamicResource LastColumnGridViewColumnHeader}"
+                  CellTemplate="{StaticResource EmptyColumnTemplate}" />
+                </GridView>
+            </My:SortableListView.View>
+        </My:SortableListView>
+    </Grid>
+</UserControl>

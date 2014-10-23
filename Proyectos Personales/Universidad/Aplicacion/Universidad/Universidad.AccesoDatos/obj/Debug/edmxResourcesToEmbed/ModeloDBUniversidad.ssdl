@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UniversidadModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="UniversidadModelStoreContainer">
+    <EntitySet Name="DB_LOG_REGISTROS" EntityType="UniversidadModel.Store.DB_LOG_REGISTROS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DIR_CAT_CODIGO_POSTAL" EntityType="UniversidadModel.Store.DIR_CAT_CODIGO_POSTAL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DIR_CAT_DELG_MUNICIPIO" EntityType="UniversidadModel.Store.DIR_CAT_DELG_MUNICIPIO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DIR_CAT_ESTADO" EntityType="UniversidadModel.Store.DIR_CAT_ESTADO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DIR_DIRECCIONES" EntityType="UniversidadModel.Store.DIR_DIRECCIONES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PER_CAT_NACIONALIDAD" EntityType="UniversidadModel.Store.PER_CAT_NACIONALIDAD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PER_CAT_TELEFONOS" EntityType="UniversidadModel.Store.PER_CAT_TELEFONOS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PER_CAT_TIPO_PERSONA" EntityType="UniversidadModel.Store.PER_CAT_TIPO_PERSONA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PER_PERSONAS" EntityType="UniversidadModel.Store.PER_PERSONAS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="US_CAT_ESTATUS_USUARIO" EntityType="UniversidadModel.Store.US_CAT_ESTATUS_USUARIO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="US_CAT_NIVEL_USUARIO" EntityType="UniversidadModel.Store.US_CAT_NIVEL_USUARIO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="US_CAT_TIPO_USUARIO" EntityType="UniversidadModel.Store.US_CAT_TIPO_USUARIO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="US_HISTORIAL" EntityType="UniversidadModel.Store.US_HISTORIAL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="US_USUARIOS" EntityType="UniversidadModel.Store.US_USUARIOS" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="Reference_10" Association="UniversidadModel.Store.Reference_10">
+      <End Role="US_CAT_TIPO_USUARIO" EntitySet="US_CAT_TIPO_USUARIO" />
+      <End Role="US_USUARIOS" EntitySet="US_USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_11" Association="UniversidadModel.Store.Reference_11">
+      <End Role="US_CAT_ESTATUS_USUARIO" EntitySet="US_CAT_ESTATUS_USUARIO" />
+      <End Role="US_USUARIOS" EntitySet="US_USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_12" Association="UniversidadModel.Store.Reference_12">
+      <End Role="US_CAT_NIVEL_USUARIO" EntitySet="US_CAT_NIVEL_USUARIO" />
+      <End Role="US_USUARIOS" EntitySet="US_USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_13" Association="UniversidadModel.Store.Reference_13">
+      <End Role="US_HISTORIAL" EntitySet="US_HISTORIAL" />
+      <End Role="US_USUARIOS" EntitySet="US_USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_14" Association="UniversidadModel.Store.Reference_14">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="US_USUARIOS" EntitySet="US_USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_15" Association="UniversidadModel.Store.Reference_15">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="US_CAT_TIPO_USUARIO" EntitySet="US_CAT_TIPO_USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_16" Association="UniversidadModel.Store.Reference_16">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="US_CAT_ESTATUS_USUARIO" EntitySet="US_CAT_ESTATUS_USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_17" Association="UniversidadModel.Store.Reference_17">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="US_CAT_NIVEL_USUARIO" EntitySet="US_CAT_NIVEL_USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_18" Association="UniversidadModel.Store.Reference_18">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="US_HISTORIAL" EntitySet="US_HISTORIAL" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_19" Association="UniversidadModel.Store.Reference_19">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="PER_CAT_NACIONALIDAD" EntitySet="PER_CAT_NACIONALIDAD" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_20" Association="UniversidadModel.Store.Reference_20">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="PER_CAT_TELEFONOS" EntitySet="PER_CAT_TELEFONOS" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_21" Association="UniversidadModel.Store.Reference_21">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="DIR_DIRECCIONES" EntitySet="DIR_DIRECCIONES" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_22" Association="UniversidadModel.Store.Reference_22">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="DIR_CAT_ESTADO" EntitySet="DIR_CAT_ESTADO" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_23" Association="UniversidadModel.Store.Reference_23">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="DIR_CAT_CODIGO_POSTAL" EntitySet="DIR_CAT_CODIGO_POSTAL" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_24" Association="UniversidadModel.Store.Reference_24">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="DIR_CAT_DELG_MUNICIPIO" EntitySet="DIR_CAT_DELG_MUNICIPIO" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_26" Association="UniversidadModel.Store.Reference_26">
+      <End Role="DIR_CAT_ESTADO" EntitySet="DIR_CAT_ESTADO" />
+      <End Role="DIR_CAT_CODIGO_POSTAL" EntitySet="DIR_CAT_CODIGO_POSTAL" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_27" Association="UniversidadModel.Store.Reference_27">
+      <End Role="DIR_CAT_ESTADO" EntitySet="DIR_CAT_ESTADO" />
+      <End Role="DIR_CAT_DELG_MUNICIPIO" EntitySet="DIR_CAT_DELG_MUNICIPIO" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_28" Association="UniversidadModel.Store.Reference_28">
+      <End Role="DIR_CAT_ESTADO" EntitySet="DIR_CAT_ESTADO" />
+      <End Role="DIR_DIRECCIONES" EntitySet="DIR_DIRECCIONES" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_29" Association="UniversidadModel.Store.Reference_29">
+      <End Role="DIR_CAT_DELG_MUNICIPIO" EntitySet="DIR_CAT_DELG_MUNICIPIO" />
+      <End Role="DIR_CAT_CODIGO_POSTAL" EntitySet="DIR_CAT_CODIGO_POSTAL" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_30" Association="UniversidadModel.Store.Reference_30">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="PER_CAT_TIPO_PERSONA" EntitySet="PER_CAT_TIPO_PERSONA" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_31" Association="UniversidadModel.Store.Reference_31">
+      <End Role="DIR_CAT_DELG_MUNICIPIO" EntitySet="DIR_CAT_DELG_MUNICIPIO" />
+      <End Role="DIR_DIRECCIONES" EntitySet="DIR_DIRECCIONES" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_32" Association="UniversidadModel.Store.Reference_32">
+      <End Role="DIR_CAT_CODIGO_POSTAL" EntitySet="DIR_CAT_CODIGO_POSTAL" />
+      <End Role="DIR_DIRECCIONES" EntitySet="DIR_DIRECCIONES" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_33" Association="UniversidadModel.Store.Reference_33">
+      <End Role="PER_CAT_TIPO_PERSONA" EntitySet="PER_CAT_TIPO_PERSONA" />
+      <End Role="PER_PERSONAS" EntitySet="PER_PERSONAS" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_34" Association="UniversidadModel.Store.Reference_34">
+      <End Role="US_USUARIOS" EntitySet="US_USUARIOS" />
+      <End Role="PER_PERSONAS" EntitySet="PER_PERSONAS" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_6" Association="UniversidadModel.Store.Reference_6">
+      <End Role="DIR_DIRECCIONES" EntitySet="DIR_DIRECCIONES" />
+      <End Role="PER_PERSONAS" EntitySet="PER_PERSONAS" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_7" Association="UniversidadModel.Store.Reference_7">
+      <End Role="DB_LOG_REGISTROS" EntitySet="DB_LOG_REGISTROS" />
+      <End Role="PER_PERSONAS" EntitySet="PER_PERSONAS" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_8" Association="UniversidadModel.Store.Reference_8">
+      <End Role="PER_CAT_NACIONALIDAD" EntitySet="PER_CAT_NACIONALIDAD" />
+      <End Role="PER_PERSONAS" EntitySet="PER_PERSONAS" />
+    </AssociationSet>
+    <AssociationSet Name="Reference_9" Association="UniversidadModel.Store.Reference_9">
+      <End Role="PER_CAT_TELEFONOS" EntitySet="PER_CAT_TELEFONOS" />
+      <End Role="PER_PERSONAS" EntitySet="PER_PERSONAS" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DB_LOG_REGISTROS">
+    <Key>
+      <PropertyRef Name="ID_LOG_REGISTRO" />
+    </Key>
+    <Property Name="ID_LOG_REGISTRO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ADICIONADO_POR" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="FECHA_REGISTRO" Type="datetime" Nullable="false" />
+    <Property Name="MODIFICADO_POR" Type="varchar" MaxLength="30" />
+    <Property Name="FECHA_MODIFICACION" Type="datetime" />
+    <Property Name="ES_BORRADO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DIR_CAT_CODIGO_POSTAL">
+    <Key>
+      <PropertyRef Name="ID_CP" />
+    </Key>
+    <Property Name="ID_CP" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="ID_ESTADO" Type="int" />
+    <Property Name="ID_DELG_MUNICIPIO" Type="int" />
+    <Property Name="CODIGO_POSTAL" Type="int" />
+    <Property Name="NOMBRE_COLONIA" Type="varchar" MaxLength="50" />
+    <Property Name="TIPO_COLONIA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DIR_CAT_DELG_MUNICIPIO">
+    <Key>
+      <PropertyRef Name="ID_DELG_MUNICIPIO" />
+    </Key>
+    <Property Name="ID_DELG_MUNICIPIO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="ID_ESTADO" Type="int" />
+    <Property Name="NOMBRE_DELG_MUNICIPIO" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DIR_CAT_ESTADO">
+    <Key>
+      <PropertyRef Name="ID_ESTADO" />
+    </Key>
+    <Property Name="ID_ESTADO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="NOMBRE_ESTADO" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DIR_DIRECCIONES">
+    <Key>
+      <PropertyRef Name="ID_DIRECCION" />
+    </Key>
+    <Property Name="ID_DIRECCION" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="ID_ESTADO" Type="int" />
+    <Property Name="ID_DELG_MUNICIPIO" Type="int" />
+    <Property Name="ID_CP" Type="int" />
+    <Property Name="CALLE" Type="varchar" MaxLength="100" />
+    <Property Name="NO_EXT" Type="int" />
+    <Property Name="NO_INT" Type="int" />
+    <Property Name="REFERENCIAS" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="PER_CAT_NACIONALIDAD">
+    <Key>
+      <PropertyRef Name="CVE_NACIONALIDAD" />
+    </Key>
+    <Property Name="CVE_NACIONALIDAD" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="NOMBRE_PAIS" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PER_CAT_TELEFONOS">
+    <Key>
+      <PropertyRef Name="ID_TELEFONOS" />
+    </Key>
+    <Property Name="ID_TELEFONOS" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="TELEFONO_FIJO_DOMICILIO" Type="varchar" MaxLength="20" />
+    <Property Name="TELEFONO_FIJO_TRABAJO" Type="varchar" MaxLength="20" />
+    <Property Name="TELEFONO_CELULAR_DOMICILIO" Type="varchar" MaxLength="20" />
+    <Property Name="TELEFONO_CELULAR_TRABAJO" Type="varchar" MaxLength="20" />
+    <Property Name="FAX" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PER_CAT_TIPO_PERSONA">
+    <Key>
+      <PropertyRef Name="ID_TIPO_PERSONA" />
+    </Key>
+    <Property Name="ID_TIPO_PERSONA" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="TIPO_PERSONA" Type="varchar" MaxLength="50" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PER_PERSONAS">
+    <Key>
+      <PropertyRef Name="ID_PERSONA" />
+      <PropertyRef Name="ID_PER_LINKID" />
+    </Key>
+    <Property Name="ID_PERSONA" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_PER_LINKID" Type="int" Nullable="false" />
+    <Property Name="ID_DIRECCION" Type="int" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="CVE_NACIONALIDAD" Type="int" />
+    <Property Name="ID_TELEFONOS" Type="int" />
+    <Property Name="ID_TIPO_PERSONA" Type="int" />
+    <Property Name="ID_USUARIO" Type="int" />
+    <Property Name="NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="A_PATERNO" Type="varchar" MaxLength="50" />
+    <Property Name="A_MATERNO" Type="varchar" MaxLength="50" />
+    <Property Name="NOMBRE_COMPLETO" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FECHA_NAC" Type="datetime" Nullable="false" />
+    <Property Name="SEXO" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CURP" Type="varchar" MaxLength="30" />
+    <Property Name="RFC" Type="varchar" MaxLength="30" />
+    <Property Name="IMSS" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="US_CAT_ESTATUS_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_ESTATUS_USUARIOS" />
+    </Key>
+    <Property Name="ID_ESTATUS_USUARIOS" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="ESTATUS_USUARIO" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="US_CAT_NIVEL_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_NIVEL_USUARIO" />
+    </Key>
+    <Property Name="ID_NIVEL_USUARIO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="NIVEL_USUARIO" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="US_CAT_TIPO_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_TIPO_USUARIO" />
+    </Key>
+    <Property Name="ID_TIPO_USUARIO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="TIPO_USUARIO" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="US_HISTORIAL">
+    <Key>
+      <PropertyRef Name="ID_HISTORIAL" />
+    </Key>
+    <Property Name="ID_HISTORIAL" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="FECHA_ULTIMA_CESION" Type="datetime" />
+    <Property Name="FECHA_CAMBIOCONTRASENA_ULTIMO" Type="datetime" />
+    <Property Name="ULTIMA_CONTRASENA" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="US_USUARIOS">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_TIPO_USUARIO" Type="int" />
+    <Property Name="ID_ESTATUS_USUARIOS" Type="int" />
+    <Property Name="ID_NIVEL_USUARIO" Type="int" />
+    <Property Name="ID_HISTORIAL" Type="int" />
+    <Property Name="ID_LOG_REGISTRO" Type="int" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="50" />
+    <Property Name="CONTRASENA" Type="varchar" MaxLength="30" />
+    <Property Name="NOMBRE_COMPLETO" Type="varchar" MaxLength="50" />
+    <Property Name="CORREO_ELECTRONICO" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="Reference_10">
+    <End Role="US_CAT_TIPO_USUARIO" Type="UniversidadModel.Store.US_CAT_TIPO_USUARIO" Multiplicity="0..1" />
+    <End Role="US_USUARIOS" Type="UniversidadModel.Store.US_USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="US_CAT_TIPO_USUARIO">
+        <PropertyRef Name="ID_TIPO_USUARIO" />
+      </Principal>
+      <Dependent Role="US_USUARIOS">
+        <PropertyRef Name="ID_TIPO_USUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_11">
+    <End Role="US_CAT_ESTATUS_USUARIO" Type="UniversidadModel.Store.US_CAT_ESTATUS_USUARIO" Multiplicity="0..1" />
+    <End Role="US_USUARIOS" Type="UniversidadModel.Store.US_USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="US_CAT_ESTATUS_USUARIO">
+        <PropertyRef Name="ID_ESTATUS_USUARIOS" />
+      </Principal>
+      <Dependent Role="US_USUARIOS">
+        <PropertyRef Name="ID_ESTATUS_USUARIOS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_12">
+    <End Role="US_CAT_NIVEL_USUARIO" Type="UniversidadModel.Store.US_CAT_NIVEL_USUARIO" Multiplicity="0..1" />
+    <End Role="US_USUARIOS" Type="UniversidadModel.Store.US_USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="US_CAT_NIVEL_USUARIO">
+        <PropertyRef Name="ID_NIVEL_USUARIO" />
+      </Principal>
+      <Dependent Role="US_USUARIOS">
+        <PropertyRef Name="ID_NIVEL_USUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_13">
+    <End Role="US_HISTORIAL" Type="UniversidadModel.Store.US_HISTORIAL" Multiplicity="0..1" />
+    <End Role="US_USUARIOS" Type="UniversidadModel.Store.US_USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="US_HISTORIAL">
+        <PropertyRef Name="ID_HISTORIAL" />
+      </Principal>
+      <Dependent Role="US_USUARIOS">
+        <PropertyRef Name="ID_HISTORIAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_14">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="US_USUARIOS" Type="UniversidadModel.Store.US_USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="US_USUARIOS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_15">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="US_CAT_TIPO_USUARIO" Type="UniversidadModel.Store.US_CAT_TIPO_USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="US_CAT_TIPO_USUARIO">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_16">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="US_CAT_ESTATUS_USUARIO" Type="UniversidadModel.Store.US_CAT_ESTATUS_USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="US_CAT_ESTATUS_USUARIO">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_17">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="US_CAT_NIVEL_USUARIO" Type="UniversidadModel.Store.US_CAT_NIVEL_USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="US_CAT_NIVEL_USUARIO">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_18">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="US_HISTORIAL" Type="UniversidadModel.Store.US_HISTORIAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="US_HISTORIAL">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_19">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="PER_CAT_NACIONALIDAD" Type="UniversidadModel.Store.PER_CAT_NACIONALIDAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="PER_CAT_NACIONALIDAD">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_20">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="PER_CAT_TELEFONOS" Type="UniversidadModel.Store.PER_CAT_TELEFONOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="PER_CAT_TELEFONOS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_21">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="DIR_DIRECCIONES" Type="UniversidadModel.Store.DIR_DIRECCIONES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="DIR_DIRECCIONES">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_22">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="DIR_CAT_ESTADO" Type="UniversidadModel.Store.DIR_CAT_ESTADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="DIR_CAT_ESTADO">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_23">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="DIR_CAT_CODIGO_POSTAL" Type="UniversidadModel.Store.DIR_CAT_CODIGO_POSTAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="DIR_CAT_CODIGO_POSTAL">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_24">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="DIR_CAT_DELG_MUNICIPIO" Type="UniversidadModel.Store.DIR_CAT_DELG_MUNICIPIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="DIR_CAT_DELG_MUNICIPIO">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_26">
+    <End Role="DIR_CAT_ESTADO" Type="UniversidadModel.Store.DIR_CAT_ESTADO" Multiplicity="0..1" />
+    <End Role="DIR_CAT_CODIGO_POSTAL" Type="UniversidadModel.Store.DIR_CAT_CODIGO_POSTAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIR_CAT_ESTADO">
+        <PropertyRef Name="ID_ESTADO" />
+      </Principal>
+      <Dependent Role="DIR_CAT_CODIGO_POSTAL">
+        <PropertyRef Name="ID_ESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_27">
+    <End Role="DIR_CAT_ESTADO" Type="UniversidadModel.Store.DIR_CAT_ESTADO" Multiplicity="0..1" />
+    <End Role="DIR_CAT_DELG_MUNICIPIO" Type="UniversidadModel.Store.DIR_CAT_DELG_MUNICIPIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIR_CAT_ESTADO">
+        <PropertyRef Name="ID_ESTADO" />
+      </Principal>
+      <Dependent Role="DIR_CAT_DELG_MUNICIPIO">
+        <PropertyRef Name="ID_ESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_28">
+    <End Role="DIR_CAT_ESTADO" Type="UniversidadModel.Store.DIR_CAT_ESTADO" Multiplicity="0..1" />
+    <End Role="DIR_DIRECCIONES" Type="UniversidadModel.Store.DIR_DIRECCIONES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIR_CAT_ESTADO">
+        <PropertyRef Name="ID_ESTADO" />
+      </Principal>
+      <Dependent Role="DIR_DIRECCIONES">
+        <PropertyRef Name="ID_ESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_29">
+    <End Role="DIR_CAT_DELG_MUNICIPIO" Type="UniversidadModel.Store.DIR_CAT_DELG_MUNICIPIO" Multiplicity="0..1" />
+    <End Role="DIR_CAT_CODIGO_POSTAL" Type="UniversidadModel.Store.DIR_CAT_CODIGO_POSTAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIR_CAT_DELG_MUNICIPIO">
+        <PropertyRef Name="ID_DELG_MUNICIPIO" />
+      </Principal>
+      <Dependent Role="DIR_CAT_CODIGO_POSTAL">
+        <PropertyRef Name="ID_DELG_MUNICIPIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_30">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="PER_CAT_TIPO_PERSONA" Type="UniversidadModel.Store.PER_CAT_TIPO_PERSONA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="PER_CAT_TIPO_PERSONA">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_31">
+    <End Role="DIR_CAT_DELG_MUNICIPIO" Type="UniversidadModel.Store.DIR_CAT_DELG_MUNICIPIO" Multiplicity="0..1" />
+    <End Role="DIR_DIRECCIONES" Type="UniversidadModel.Store.DIR_DIRECCIONES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIR_CAT_DELG_MUNICIPIO">
+        <PropertyRef Name="ID_DELG_MUNICIPIO" />
+      </Principal>
+      <Dependent Role="DIR_DIRECCIONES">
+        <PropertyRef Name="ID_DELG_MUNICIPIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_32">
+    <End Role="DIR_CAT_CODIGO_POSTAL" Type="UniversidadModel.Store.DIR_CAT_CODIGO_POSTAL" Multiplicity="0..1" />
+    <End Role="DIR_DIRECCIONES" Type="UniversidadModel.Store.DIR_DIRECCIONES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIR_CAT_CODIGO_POSTAL">
+        <PropertyRef Name="ID_CP" />
+      </Principal>
+      <Dependent Role="DIR_DIRECCIONES">
+        <PropertyRef Name="ID_CP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_33">
+    <End Role="PER_CAT_TIPO_PERSONA" Type="UniversidadModel.Store.PER_CAT_TIPO_PERSONA" Multiplicity="0..1" />
+    <End Role="PER_PERSONAS" Type="UniversidadModel.Store.PER_PERSONAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER_CAT_TIPO_PERSONA">
+        <PropertyRef Name="ID_TIPO_PERSONA" />
+      </Principal>
+      <Dependent Role="PER_PERSONAS">
+        <PropertyRef Name="ID_TIPO_PERSONA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_34">
+    <End Role="US_USUARIOS" Type="UniversidadModel.Store.US_USUARIOS" Multiplicity="0..1" />
+    <End Role="PER_PERSONAS" Type="UniversidadModel.Store.PER_PERSONAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="US_USUARIOS">
+        <PropertyRef Name="ID_USUARIO" />
+      </Principal>
+      <Dependent Role="PER_PERSONAS">
+        <PropertyRef Name="ID_USUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_6">
+    <End Role="DIR_DIRECCIONES" Type="UniversidadModel.Store.DIR_DIRECCIONES" Multiplicity="0..1" />
+    <End Role="PER_PERSONAS" Type="UniversidadModel.Store.PER_PERSONAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIR_DIRECCIONES">
+        <PropertyRef Name="ID_DIRECCION" />
+      </Principal>
+      <Dependent Role="PER_PERSONAS">
+        <PropertyRef Name="ID_DIRECCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_7">
+    <End Role="DB_LOG_REGISTROS" Type="UniversidadModel.Store.DB_LOG_REGISTROS" Multiplicity="0..1" />
+    <End Role="PER_PERSONAS" Type="UniversidadModel.Store.PER_PERSONAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DB_LOG_REGISTROS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Principal>
+      <Dependent Role="PER_PERSONAS">
+        <PropertyRef Name="ID_LOG_REGISTRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_8">
+    <End Role="PER_CAT_NACIONALIDAD" Type="UniversidadModel.Store.PER_CAT_NACIONALIDAD" Multiplicity="0..1" />
+    <End Role="PER_PERSONAS" Type="UniversidadModel.Store.PER_PERSONAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER_CAT_NACIONALIDAD">
+        <PropertyRef Name="CVE_NACIONALIDAD" />
+      </Principal>
+      <Dependent Role="PER_PERSONAS">
+        <PropertyRef Name="CVE_NACIONALIDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Reference_9">
+    <End Role="PER_CAT_TELEFONOS" Type="UniversidadModel.Store.PER_CAT_TELEFONOS" Multiplicity="0..1" />
+    <End Role="PER_PERSONAS" Type="UniversidadModel.Store.PER_PERSONAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER_CAT_TELEFONOS">
+        <PropertyRef Name="ID_TELEFONOS" />
+      </Principal>
+      <Dependent Role="PER_PERSONAS">
+        <PropertyRef Name="ID_TELEFONOS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

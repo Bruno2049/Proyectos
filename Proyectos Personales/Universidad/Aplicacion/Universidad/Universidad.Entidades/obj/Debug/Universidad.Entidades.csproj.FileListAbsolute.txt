@@ -1,0 +1,10 @@
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.Entidades\bin\Debug\Universidad.Entidades.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.Entidades\bin\Debug\Universidad.Entidades.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.Entidades\obj\Debug\Universidad.Entidades.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.Entidades\obj\Debug\Universidad.Entidades.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.Entidades\obj\Debug\Universidad.Entidades.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.Entidades\bin\Debug\EntityFramework.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.Entidades\bin\Debug\EntityFramework.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.Entidades\bin\Debug\Universidad.Entidades.dll.config
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.Entidades\bin\Debug\EntityFramework.SqlServer.xml

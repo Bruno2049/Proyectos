@@ -1,0 +1,17 @@
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\Universidad.ServidorInterno.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\Universidad.ServidorInterno.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\obj\Debug\Universidad.ServidorInterno.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\obj\Debug\Universidad.ServidorInterno.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\obj\Debug\Universidad.ServidorInterno.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\Universidad.Entidades.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\Universidad.LogicaNegocios.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\Universidad.AccesoDatos.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\EntityFramework.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\EntityFramework.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\Newtonsoft.Json.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\Newtonsoft.Json.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\EntityFramework.SqlServer.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\EntityFramework.SqlServer.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\Universidad.Entidades.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\Universidad.LogicaNegocios.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.ServidorInterno\bin\Universidad.AccesoDatos.pdb

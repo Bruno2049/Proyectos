@@ -1,0 +1,135 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Restaurant" GeneratedClassName="ErrorMessages">
+  <Profiles />
+  <Settings>
+    <Setting Name="NoConnection" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Connection Failed.</Value>
+    </Setting>
+    <Setting Name="UnhandledException" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Error.</Value>
+    </Setting>
+    <Setting Name="RepeatedRecord" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">This {0} already exists. Please, try another one.</Value>
+    </Setting>
+    <Setting Name="EditedSuccessfully" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Edited successfully.</Value>
+    </Setting>
+    <Setting Name="PermissionNotChoosed" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Permission is not selected.</Value>
+    </Setting>
+    <Setting Name="UserNameEmpty" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">User Name is mandatory.</Value>
+    </Setting>
+    <Setting Name="UserFullNameEmpty" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Full Name is mandatory.</Value>
+    </Setting>
+    <Setting Name="RecordCreatedSuccessfully" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">{0} created successfully.</Value>
+    </Setting>
+    <Setting Name="ConflictPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Password and confirm password are not the same.</Value>
+    </Setting>
+    <Setting Name="PasswordEmpty" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Password can not be less than three character length.</Value>
+    </Setting>
+    <Setting Name="NoRowSelected" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No row is selected.</Value>
+    </Setting>
+    <Setting Name="ConfirmDelete" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Are you sure you want to delete the record?</Value>
+    </Setting>
+    <Setting Name="ConfirmResetPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Are you sure you want to reset the password to 123?</Value>
+    </Setting>
+    <Setting Name="ResetPassSucceed" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Password reset successfully.</Value>
+    </Setting>
+    <Setting Name="UserNotValid" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">User name or password is not valid.</Value>
+    </Setting>
+    <Setting Name="WaiterIsNotPermited" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Waiter can not login to this application.</Value>
+    </Setting>
+    <Setting Name="ItemCanNotBeDeleted" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">This {0} can not be deleted because it is used.</Value>
+    </Setting>
+    <Setting Name="TableNoEmpty" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TableNo is mandatory.</Value>
+    </Setting>
+    <Setting Name="TableCapacityEmpty" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Capacity is mandatory.</Value>
+    </Setting>
+    <Setting Name="UnitNameEmpty" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Unit is mandatory.</Value>
+    </Setting>
+    <Setting Name="FieldEmpty" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">{0} is mandatory.</Value>
+    </Setting>
+    <Setting Name="OrderCreatedSuccessfully" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">This order successfully saved with the OrderNo: {0}</Value>
+    </Setting>
+    <Setting Name="NoOrderDetail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Order is empty.</Value>
+    </Setting>
+    <Setting Name="SomeOrderItemsNotAvailable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Some order items are not available anymore.\n Please try again.</Value>
+    </Setting>
+    <Setting Name="OrderIsLock" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Order No : {0} is locked by another user. Please try again later.</Value>
+    </Setting>
+    <Setting Name="OrderIsReady" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Order No : {0} is now in Ready To Serve state.</Value>
+    </Setting>
+    <Setting Name="ConnectionTestFailed" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Connection test failed!</Value>
+    </Setting>
+    <Setting Name="ConnectionTestSucceed" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Connection test Succeed!</Value>
+    </Setting>
+    <Setting Name="CurrentPasswordNotCorrect" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Current Password is not correct.</Value>
+    </Setting>
+    <Setting Name="ConfirmChangePassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Are you sure you want to change the password?</Value>
+    </Setting>
+    <Setting Name="ActionSucceed" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">{0} Succeed!</Value>
+    </Setting>
+    <Setting Name="OrderIsNotAvailable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Order No : {0} is not available anymore.</Value>
+    </Setting>
+    <Setting Name="OrderItemIsNotEditable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">This item can not be {0} because it is uneditable.</Value>
+    </Setting>
+    <Setting Name="ProductIsNotAvailable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">{0} is not available anymore.</Value>
+    </Setting>
+    <Setting Name="OrderEditedSuccessfully" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">OrderNo: {0} Edited successfully.</Value>
+    </Setting>
+    <Setting Name="OrderNoIsNotCompleteToCheckOut" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Order {0} is not complete to Check Out.</Value>
+    </Setting>
+    <Setting Name="OrderNotServedYet" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Order {0} is not served yet. Do you want to continue the process of Check out?</Value>
+    </Setting>
+    <Setting Name="CustomerNameNotEntered" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Customer name is empty. Do you want to continue the process of Check out?</Value>
+    </Setting>
+    <Setting Name="OrderCheckOutSucceed" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Checked out succeed for OrderNo: {0}</Value>
+    </Setting>
+    <Setting Name="OrderCheckOutFailed" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Checked out Failed for OrderNo: {0}</Value>
+    </Setting>
+    <Setting Name="OrderStateChanged" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Order state {0} has changed. Please try again.</Value>
+    </Setting>
+    <Setting Name="OrderCancelSucceed" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">OrderNo: {0} successfully Canceled.</Value>
+    </Setting>
+    <Setting Name="OrderCancelFailed" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Cancel order failed for OrderNo: {0}</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

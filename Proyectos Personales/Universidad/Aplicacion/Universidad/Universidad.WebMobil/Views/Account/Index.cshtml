@@ -1,0 +1,19 @@
+﻿@model Universidad.WebMobil.Models.LoginModel
+
+@{
+    ViewBag.Title = "Su cuenta";
+}
+
+@section Header {
+    @Html.ActionLink("Back", "Index", "Home", null, new { data_icon = "arrow-l", data_rel = "back" })
+    <h1>@ViewBag.Title</h1>
+}
+
+<p>
+    Ha iniciado sesión como <strong>@User.Identity.Name</strong>.
+</p>
+
+<ul data-role="listview" data-inset="true">
+    <li>@Html.ActionLink("Cambiar contraseña", "ChangePassword")</li>
+    <li>@Html.ActionLink("Cerrar sesión", "LogOff")</li>
+</ul>

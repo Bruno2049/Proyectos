@@ -1,0 +1,14 @@
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\bin\Debug\Universidad.LogicaNegocios.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\bin\Debug\Universidad.LogicaNegocios.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\obj\Debug\Universidad.LogicaNegocios.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\obj\Debug\Universidad.LogicaNegocios.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\obj\Debug\Universidad.LogicaNegocios.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\bin\Debug\Universidad.AccesoDatos.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\bin\Debug\Universidad.Entidades.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\bin\Debug\EntityFramework.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\bin\Debug\Universidad.AccesoDatos.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\bin\Debug\Universidad.Entidades.pdb
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\bin\Debug\EntityFramework.xml
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\bin\Debug\Universidad.LogicaNegocios.dll.config
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Desarrollo\Proyectos\Proyectos Personales\Universidad\Aplicacion\Universidad\Universidad.LogicaNegocios\bin\Debug\EntityFramework.SqlServer.xml

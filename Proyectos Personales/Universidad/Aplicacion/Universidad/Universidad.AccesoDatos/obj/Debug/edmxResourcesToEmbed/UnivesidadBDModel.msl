@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UniversidadDBModelStoreContainer" CdmEntityContainer="UniversidadBDEntities">
+    <EntitySetMapping Name="ALU_ALUMNOS">
+      <EntityTypeMapping TypeName="UniversidadDBModel.ALU_ALUMNOS">
+        <MappingFragment StoreEntitySet="ALU_ALUMNOS">
+          <ScalarProperty Name="ID_PLAN_CARRERA" ColumnName="ID_PLAN_CARRERA" />
+          <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+          <ScalarProperty Name="ID_DEPORTES" ColumnName="ID_DEPORTES" />
+          <ScalarProperty Name="ID_ACTIVIDADES_EC" ColumnName="ID_ACTIVIDADES_EC" />
+          <ScalarProperty Name="ID_ALUMNO" ColumnName="ID_ALUMNO" />
+          <ScalarProperty Name="ID_PER_LINKID" ColumnName="ID_PER_LINKID" />
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ALU_HORARIO">
+      <EntityTypeMapping TypeName="UniversidadDBModel.ALU_HORARIO">
+        <MappingFragment StoreEntitySet="ALU_HORARIO">
+          <ScalarProperty Name="ID_MATERIO_8" ColumnName="ID_MATERIO_8" />
+          <ScalarProperty Name="ID_MATERIA_7" ColumnName="ID_MATERIA_7" />
+          <ScalarProperty Name="ID_MATERIA_6" ColumnName="ID_MATERIA_6" />
+          <ScalarProperty Name="ID_MATERIA_5" ColumnName="ID_MATERIA_5" />
+          <ScalarProperty Name="ID_MATERIA_4" ColumnName="ID_MATERIA_4" />
+          <ScalarProperty Name="ID_MATERIA_3" ColumnName="ID_MATERIA_3" />
+          <ScalarProperty Name="ID_MATERIA_2" ColumnName="ID_MATERIA_2" />
+          <ScalarProperty Name="ID_HORARIO" ColumnName="ID_HORARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ALU_KARDEX">
+      <EntityTypeMapping TypeName="UniversidadDBModel.ALU_KARDEX">
+        <MappingFragment StoreEntitySet="ALU_KARDEX">
+          <ScalarProperty Name="ID_KARDEX" ColumnName="ID_KARDEX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAR_CAT_CARRERAS">
+      <EntityTypeMapping TypeName="UniversidadDBModel.CAR_CAT_CARRERAS">
+        <MappingFragment StoreEntitySet="CAR_CAT_CARRERAS">
+          <ScalarProperty Name="NOMBRE_CARRERA" ColumnName="NOMBRE_CARRERA" />
+          <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLA_CAT_HORAS">
+      <EntityTypeMapping TypeName="UniversidadDBModel.CLA_CAT_HORAS">
+        <MappingFragment StoreEntitySet="CLA_CAT_HORAS">
+          <ScalarProperty Name="COLUMN_2" ColumnName="COLUMN_2" />
+          <ScalarProperty Name="ID_HORAS" ColumnName="ID_HORAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLA_CLASES">
+      <EntityTypeMapping TypeName="UniversidadDBModel.CLA_CLASES">
+        <MappingFragment StoreEntitySet="CLA_CLASES">
+          <ScalarProperty Name="NO_VACANTES" ColumnName="NO_VACANTES" />
+          <ScalarProperty Name="ID_HORARIO_CLASE" ColumnName="ID_HORARIO_CLASE" />
+          <ScalarProperty Name="ID_PROFESOR" ColumnName="ID_PROFESOR" />
+          <ScalarProperty Name="ID_PER_LINKID" ColumnName="ID_PER_LINKID" />
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+          <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+          <ScalarProperty Name="ID_MATERIA" ColumnName="ID_MATERIA" />
+          <ScalarProperty Name="ID_CLASE" ColumnName="ID_CLASE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLA_HOR_CLASES">
+      <EntityTypeMapping TypeName="UniversidadDBModel.CLA_HOR_CLASES">
+        <MappingFragment StoreEntitySet="CLA_HOR_CLASES">
+          <ScalarProperty Name="S_LUNES" ColumnName="S_LUNES" />
+          <ScalarProperty Name="H_LUNES" ColumnName="H_LUNES" />
+          <ScalarProperty Name="ID_HORARIO_CLASE" ColumnName="ID_HORARIO_CLASE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIR_CAT_CODIGO_POSTAL">
+      <EntityTypeMapping TypeName="UniversidadDBModel.DIR_CAT_CODIGO_POSTAL">
+        <MappingFragment StoreEntitySet="DIR_CAT_CODIGO_POSTAL">
+          <ScalarProperty Name="TIPO_COLONIA" ColumnName="TIPO_COLONIA" />
+          <ScalarProperty Name="NOMBRE_COLONIA" ColumnName="NOMBRE_COLONIA" />
+          <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
+          <ScalarProperty Name="ID_DELG_MUNICIPIO" ColumnName="ID_DELG_MUNICIPIO" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="ID_CP" ColumnName="ID_CP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIR_CAT_DELG_MUNICIPIO">
+      <EntityTypeMapping TypeName="UniversidadDBModel.DIR_CAT_DELG_MUNICIPIO">
+        <MappingFragment StoreEntitySet="DIR_CAT_DELG_MUNICIPIO">
+          <ScalarProperty Name="NOMBRE_DELG_MUNICIPIO" ColumnName="NOMBRE_DELG_MUNICIPIO" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="ID_DELG_MUNICIPIO" ColumnName="ID_DELG_MUNICIPIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIR_CAT_ESTADO">
+      <EntityTypeMapping TypeName="UniversidadDBModel.DIR_CAT_ESTADO">
+        <MappingFragment StoreEntitySet="DIR_CAT_ESTADO">
+          <ScalarProperty Name="NOMBRE_ESTADO" ColumnName="NOMBRE_ESTADO" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIR_DIRECCIONES">
+      <EntityTypeMapping TypeName="UniversidadDBModel.DIR_DIRECCIONES">
+        <MappingFragment StoreEntitySet="DIR_DIRECCIONES">
+          <ScalarProperty Name="REFERENCIAS" ColumnName="REFERENCIAS" />
+          <ScalarProperty Name="NO_INT" ColumnName="NO_INT" />
+          <ScalarProperty Name="NO_EXT" ColumnName="NO_EXT" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="ID_CP" ColumnName="ID_CP" />
+          <ScalarProperty Name="ID_DELG_MUNICIPIO" ColumnName="ID_DELG_MUNICIPIO" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAT_CAT_MATERIAS">
+      <EntityTypeMapping TypeName="UniversidadDBModel.MAT_CAT_MATERIAS">
+        <MappingFragment StoreEntitySet="MAT_CAT_MATERIAS">
+          <ScalarProperty Name="NOMBRE_MATERIA" ColumnName="NOMBRE_MATERIA" />
+          <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+          <ScalarProperty Name="ID_MATERIA" ColumnName="ID_MATERIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PER_CAT_NACIONALIDAD">
+      <EntityTypeMapping TypeName="UniversidadDBModel.PER_CAT_NACIONALIDAD">
+        <MappingFragment StoreEntitySet="PER_CAT_NACIONALIDAD">
+          <ScalarProperty Name="NOMBRE_PAIS" ColumnName="NOMBRE_PAIS" />
+          <ScalarProperty Name="CVE_NACIONALIDAD" ColumnName="CVE_NACIONALIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PER_CAT_TELEFONOS">
+      <EntityTypeMapping TypeName="UniversidadDBModel.PER_CAT_TELEFONOS">
+        <MappingFragment StoreEntitySet="PER_CAT_TELEFONOS">
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="TELEFONO_CELULAR_TRABAJO" ColumnName="TELEFONO_CELULAR_TRABAJO" />
+          <ScalarProperty Name="TELEFONO_CELULAR_PERSONAL" ColumnName="TELEFONO_CELULAR_PERSONAL" />
+          <ScalarProperty Name="TELEFONO_FIJO_TRABAJO" ColumnName="TELEFONO_FIJO_TRABAJO" />
+          <ScalarProperty Name="TELEFONO_FIJO_DOMICILIO" ColumnName="TELEFONO_FIJO_DOMICILIO" />
+          <ScalarProperty Name="ID_TELEFONOS" ColumnName="ID_TELEFONOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PER_CAT_TIPO_PERSONA">
+      <EntityTypeMapping TypeName="UniversidadDBModel.PER_CAT_TIPO_PERSONA">
+        <MappingFragment StoreEntitySet="PER_CAT_TIPO_PERSONA">
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="TIPO_PERSONA" ColumnName="TIPO_PERSONA" />
+          <ScalarProperty Name="ID_TIPO_PERSONA" ColumnName="ID_TIPO_PERSONA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PER_MEDIOS_ELECTRONICOS">
+      <EntityTypeMapping TypeName="UniversidadDBModel.PER_MEDIOS_ELECTRONICOS">
+        <MappingFragment StoreEntitySet="PER_MEDIOS_ELECTRONICOS">
+          <ScalarProperty Name="TWITTER" ColumnName="TWITTER" />
+          <ScalarProperty Name="FACEBOOK" ColumnName="FACEBOOK" />
+          <ScalarProperty Name="CORREO_ELECTRONICO_PERSONAL" ColumnName="CORREO_ELECTRONICO_PERSONAL" />
+          <ScalarProperty Name="CORREO_ELECTRONICO_UNIVERSIDAD" ColumnName="CORREO_ELECTRONICO_UNIVERSIDAD" />
+          <ScalarProperty Name="ID_MEDIOS_ELECTRONICOS" ColumnName="ID_MEDIOS_ELECTRONICOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PER_PERSONAS">
+      <EntityTypeMapping TypeName="UniversidadDBModel.PER_PERSONAS">
+        <MappingFragment StoreEntitySet="PER_PERSONAS">
+          <ScalarProperty Name="IMSS" ColumnName="IMSS" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="FECHA_NAC" ColumnName="FECHA_NAC" />
+          <ScalarProperty Name="NOMBRE_COMPLETO" ColumnName="NOMBRE_COMPLETO" />
+          <ScalarProperty Name="A_MATERNO" ColumnName="A_MATERNO" />
+          <ScalarProperty Name="A_PATERNO" ColumnName="A_PATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ID_MEDIOS_ELECTRONICOS" ColumnName="ID_MEDIOS_ELECTRONICOS" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="ID_TIPO_PERSONA" ColumnName="ID_TIPO_PERSONA" />
+          <ScalarProperty Name="ID_TELEFONOS" ColumnName="ID_TELEFONOS" />
+          <ScalarProperty Name="CVE_NACIONALIDAD" ColumnName="CVE_NACIONALIDAD" />
+          <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+          <ScalarProperty Name="ID_PER_LINKID" ColumnName="ID_PER_LINKID" />
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRO_PROFESORES">
+      <EntityTypeMapping TypeName="UniversidadDBModel.PRO_PROFESORES">
+        <MappingFragment StoreEntitySet="PRO_PROFESORES">
+          <ScalarProperty Name="ID_PROFESOR" ColumnName="ID_PROFESOR" />
+          <ScalarProperty Name="ID_PER_LINKID" ColumnName="ID_PER_LINKID" />
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIS_AADM_MENUS">
+      <EntityTypeMapping TypeName="UniversidadDBModel.SIS_AADM_MENUS">
+        <MappingFragment StoreEntitySet="SIS_AADM_MENUS">
+          <ScalarProperty Name="CONTENIDO" ColumnName="CONTENIDO" />
+          <ScalarProperty Name="MODULO" ColumnName="MODULO" />
+          <ScalarProperty Name="ID_MENU_PADRE" ColumnName="ID_MENU_PADRE" />
+          <ScalarProperty Name="ID_MENU" ColumnName="ID_MENU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_CAT_ESTATUS_USUARIO">
+      <EntityTypeMapping TypeName="UniversidadDBModel.US_CAT_ESTATUS_USUARIO">
+        <MappingFragment StoreEntitySet="US_CAT_ESTATUS_USUARIO">
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ESTATUS_USUARIO" ColumnName="ESTATUS_USUARIO" />
+          <ScalarProperty Name="ID_ESTATUS_USUARIOS" ColumnName="ID_ESTATUS_USUARIOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_CAT_NIVEL_USUARIO">
+      <EntityTypeMapping TypeName="UniversidadDBModel.US_CAT_NIVEL_USUARIO">
+        <MappingFragment StoreEntitySet="US_CAT_NIVEL_USUARIO">
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NIVEL_USUARIO" ColumnName="NIVEL_USUARIO" />
+          <ScalarProperty Name="ID_NIVEL_USUARIO" ColumnName="ID_NIVEL_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_CAT_TIPO_USUARIO">
+      <EntityTypeMapping TypeName="UniversidadDBModel.US_CAT_TIPO_USUARIO">
+        <MappingFragment StoreEntitySet="US_CAT_TIPO_USUARIO">
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="TIPO_USUARIO" ColumnName="TIPO_USUARIO" />
+          <ScalarProperty Name="ID_TIPO_USUARIO" ColumnName="ID_TIPO_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_HISTORIAL">
+      <EntityTypeMapping TypeName="UniversidadDBModel.US_HISTORIAL">
+        <MappingFragment StoreEntitySet="US_HISTORIAL">
+          <ScalarProperty Name="ULTIMA_CONTRASENA" ColumnName="ULTIMA_CONTRASENA" />
+          <ScalarProperty Name="FECHA_CAMBIOCONTRASENA_ULTIMO" ColumnName="FECHA_CAMBIOCONTRASENA_ULTIMO" />
+          <ScalarProperty Name="FECHA_ULTIMA_CESION" ColumnName="FECHA_ULTIMA_CESION" />
+          <ScalarProperty Name="ID_HISTORIAL" ColumnName="ID_HISTORIAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="US_USUARIOS">
+      <EntityTypeMapping TypeName="UniversidadDBModel.US_USUARIOS">
+        <MappingFragment StoreEntitySet="US_USUARIOS">
+          <ScalarProperty Name="NOMBRE_COMPLETO" ColumnName="NOMBRE_COMPLETO" />
+          <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="ID_PER_LINKID" ColumnName="ID_PER_LINKID" />
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+          <ScalarProperty Name="ID_HISTORIAL" ColumnName="ID_HISTORIAL" />
+          <ScalarProperty Name="ID_NIVEL_USUARIO" ColumnName="ID_NIVEL_USUARIO" />
+          <ScalarProperty Name="ID_ESTATUS_USUARIOS" ColumnName="ID_ESTATUS_USUARIOS" />
+          <ScalarProperty Name="ID_TIPO_USUARIO" ColumnName="ID_TIPO_USUARIO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

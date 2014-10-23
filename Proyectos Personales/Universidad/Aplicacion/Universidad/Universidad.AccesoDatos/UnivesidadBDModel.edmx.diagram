@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="96e82a77051243e1b056ac555370c7d0" Name="Diagrama1" ZoomLevel="100">
+        <EntityTypeShape EntityType="UniversidadDBModel.ALU_ALUMNOS" Width="1.5" PointX="1.6575685318827484" PointY="27.927809683572413" />
+        <EntityTypeShape EntityType="UniversidadDBModel.ALU_HORARIO" Width="1.5" PointX="10.282763856594805" PointY="28.937299875978987" />
+        <EntityTypeShape EntityType="UniversidadDBModel.ALU_KARDEX" Width="1.5" PointX="5.8543449555776759" PointY="15.878074951413122" />
+        <EntityTypeShape EntityType="UniversidadDBModel.CAR_CAT_CARRERAS" Width="1.5" PointX="4.2775008735607845" PointY="18.167674847956594" />
+        <EntityTypeShape EntityType="UniversidadDBModel.CLA_CAT_HORAS" Width="1.5" PointX="3.5693775040886262" PointY="27.401964289789071" />
+        <EntityTypeShape EntityType="UniversidadDBModel.CLA_CLASES" Width="1.5" PointX="8.4492929449534486" PointY="26.491261554179371" />
+        <EntityTypeShape EntityType="UniversidadDBModel.CLA_HOR_CLASES" Width="1.5" PointX="3.5635102668607188" PointY="5.03784753616799" />
+        <EntityTypeShape EntityType="UniversidadDBModel.DIR_CAT_CODIGO_POSTAL" Width="1.5" PointX="1.6889375027683273" PointY="18.03997965997084" />
+        <EntityTypeShape EntityType="UniversidadDBModel.DIR_CAT_DELG_MUNICIPIO" Width="1.5" PointX="2.5520907931738028" PointY="26.959189397729556" />
+        <EntityTypeShape EntityType="UniversidadDBModel.DIR_CAT_ESTADO" Width="1.5" PointX="9.2158421749322876" PointY="22.273419137240118" />
+        <EntityTypeShape EntityType="UniversidadDBModel.DIR_DIRECCIONES" Width="1.5" PointX="0.48814909927926453" PointY="26.7547520970715" />
+        <EntityTypeShape EntityType="UniversidadDBModel.MAT_CAT_MATERIAS" Width="1.5" PointX="9.9523608786763447" PointY="13.16620296852952" />
+        <EntityTypeShape EntityType="UniversidadDBModel.PER_CAT_NACIONALIDAD" Width="1.5" PointX="5.3530973667991795" PointY="15.75712584692851" />
+        <EntityTypeShape EntityType="UniversidadDBModel.PER_CAT_TELEFONOS" Width="1.5" PointX="6.4392944976870421" PointY="24.857097488295796" />
+        <EntityTypeShape EntityType="UniversidadDBModel.PER_CAT_TIPO_PERSONA" Width="1.5" PointX="1.5588702194201156" PointY="26.824263480875764" />
+        <EntityTypeShape EntityType="UniversidadDBModel.PER_MEDIOS_ELECTRONICOS" Width="1.5" PointX="10.75092303880999" PointY="15.182708702600891" />
+        <EntityTypeShape EntityType="UniversidadDBModel.PER_PERSONAS" Width="1.5" PointX="4.9732047212185364" PointY="23.840150725022028" />
+        <EntityTypeShape EntityType="UniversidadDBModel.PRO_PROFESORES" Width="1.5" PointX="4.6372271686034408" PointY="13.919332123323963" />
+        <EntityTypeShape EntityType="UniversidadDBModel.SIS_AADM_MENUS" Width="1.5" PointX="4.8500660252059191" PointY="8.6021364520313846" />
+        <EntityTypeShape EntityType="UniversidadDBModel.US_CAT_ESTATUS_USUARIO" Width="1.5" PointX="7.0327180042083928" PointY="14.672488651551534" />
+        <EntityTypeShape EntityType="UniversidadDBModel.US_CAT_NIVEL_USUARIO" Width="1.5" PointX="7.6417134830922411" PointY="19.484187924994242" />
+        <EntityTypeShape EntityType="UniversidadDBModel.US_CAT_TIPO_USUARIO" Width="1.5" PointX="3.367517085451408" PointY="9.4338554187835459" />
+        <EntityTypeShape EntityType="UniversidadDBModel.US_HISTORIAL" Width="1.5" PointX="0.72963147830666575" PointY="10.522973542345209" />
+        <EntityTypeShape EntityType="UniversidadDBModel.US_USUARIOS" Width="1.5" PointX="11.224593584995994" PointY="20.166018242093742" />
+        <AssociationConnector Association="UniversidadDBModel.FK_CLA_CLAS_REFERENCE_CAR_CAT_" />
+        <AssociationConnector Association="UniversidadDBModel.FK_MAT_CAT__REFERENCE_CAR_CAT_" />
+        <AssociationConnector Association="UniversidadDBModel.FK_CLA_CLAS_REFERENCE_CLA_HOR_" />
+        <AssociationConnector Association="UniversidadDBModel.FK_CLA_CLAS_REFERENCE_MAT_CAT_" />
+        <AssociationConnector Association="UniversidadDBModel.FK_CLA_CLAS_REFERENCE_PRO_PROF" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_26" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_29" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_32" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_27" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_31" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_28" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_6" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_8" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_9" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_33" />
+        <AssociationConnector Association="UniversidadDBModel.FK_PER_PERS_REFERENCE_PER_MEDI" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_34" />
+        <AssociationConnector Association="UniversidadDBModel.FK_SIS_AADM_REFERENCE_SIS_AADM" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_11" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_12" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_10" />
+        <AssociationConnector Association="UniversidadDBModel.Reference_13" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

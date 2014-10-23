@@ -1,0 +1,222 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89E92839-704E-45C2-842B-65CD7304E778}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Waiter</RootNamespace>
+    <AssemblyName>Waiter</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>4118C335-430C-497f-BE48-11C3316B135E</PlatformID>
+    <OSVersion>5.1</OSVersion>
+    <DeployDirSuffix>Waiter</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 5.0 Pocket PC SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>Images\Waiter.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Windowsce.Forms" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=3.0.3600.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\DatabaseClass.cs" />
+    <Compile Include="Classes\GlobalClass.cs" />
+    <Compile Include="Classes\MessagesListClass.cs" />
+    <Compile Include="frmTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTables.designer.cs">
+      <DependentUpon>frmTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmActiveOrdersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActiveOrdersList.Designer.cs">
+      <DependentUpon>frmActiveOrdersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguration.designer.cs">
+      <DependentUpon>frmConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewOrder.designer.cs">
+      <DependentUpon>frmNewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProducts.designer.cs">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmTables.resx">
+      <DependentUpon>frmTables.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActiveOrdersList.resx">
+      <DependentUpon>frmActiveOrdersList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguration.resx">
+      <DependentUpon>frmConfiguration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewOrder.resx">
+      <DependentUpon>frmNewOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProducts.resx">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AddDown.jpg" />
+    <None Include="Images\AddProductDown.jpg" />
+    <None Include="Images\AddProductUp.jpg" />
+    <None Include="Images\AddUp.jpg" />
+    <None Include="Images\BackDown.jpg" />
+    <None Include="Images\BackUp.jpg" />
+    <None Include="Images\CancelDown.jpg" />
+    <None Include="Images\CancelUp.jpg" />
+    <None Include="Images\DanLogo.ico" />
+    <None Include="Images\DanLogo.jpg" />
+    <None Include="Images\DownLeftCorner.jpg" />
+    <None Include="Images\DownRightCorner.jpg" />
+    <None Include="Images\DownTile.jpg" />
+    <None Include="Images\EditDown.jpg" />
+    <None Include="Images\EditUp.jpg" />
+    <None Include="Images\keyboardNormal.jpg" />
+    <None Include="Images\keyboardPressed.jpg" />
+    <None Include="Images\LeftTile.jpg" />
+    <None Include="Images\LoginDown.jpg" />
+    <None Include="Images\LoginUp.jpg" />
+    <None Include="Images\NewDown.jpg" />
+    <None Include="Images\NewUp.jpg" />
+    <None Include="Images\RefreshDown.jpg" />
+    <None Include="Images\RefreshUp.jpg" />
+    <None Include="Images\RightTile.jpg" />
+    <None Include="Images\SaveDown.jpg" />
+    <None Include="Images\SaveUp.jpg" />
+    <None Include="Images\SubtractDown.jpg" />
+    <None Include="Images\SubtractUp.jpg" />
+    <None Include="Images\TestDown.jpg" />
+    <None Include="Images\TestUp.jpg" />
+    <None Include="Images\UpLeftCorner.jpg" />
+    <None Include="Images\UpRightCorner.jpg" />
+    <None Include="Images\UpTile.jpg" />
+    <None Include="Images\DeleteDown.jpg" />
+    <None Include="Images\DeleteUp.jpg" />
+    <None Include="Images\AddToOrderDown.jpg" />
+    <None Include="Images\AddToOrderUp.jpg" />
+    <None Include="Images\AddToOrderAndExitDown.jpg" />
+    <None Include="Images\AddToOrderAndExitUp.jpg" />
+    <None Include="Images\AddDisable.jpg" />
+    <None Include="Images\DeleteDisable.jpg" />
+    <Content Include="Images\edit.ico" />
+    <None Include="Images\Empty.ico" />
+    <Content Include="Images\New.ico" />
+    <None Include="Images\OKDown.jpg" />
+    <None Include="Images\OKUp.jpg" />
+    <None Include="Images\Occupied.ico" />
+    <Content Include="Images\Ready.ico" />
+    <None Include="Images\ServedDown.jpg" />
+    <None Include="Images\ServedUp.jpg" />
+    <None Include="Images\SelectTableDown.jpg" />
+    <None Include="Images\SelectTableUp.jpg" />
+    <None Include="Images\UnEditable.ico" />
+    <None Include="Images\SubtractDisable.jpg" />
+    <Content Include="Images\Waiter.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

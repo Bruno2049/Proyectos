@@ -1,0 +1,249 @@
+﻿<Window x:Class="Restaurant.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Restaurant"
+    Background="{DynamicResource MainBackgroundBrush}"
+    Title="Restaurant" Height="768" Width="1024" 
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        mc:Ignorable="d" Foreground="#FFFFFFFF" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Storyboard x:Key="ExpandingStoryboard">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="LeftPane" Storyboard.TargetProperty="(FrameworkElement.Width)">
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="300" KeySpline="0.681,0,0,1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="LeftPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="LeftPane" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0.1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.7" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="1" KeySpline="0.705,0,0,1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="btnExpand" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="btnContract" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="LeftPane" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                <SplineThicknessKeyFrame KeyTime="00:00:00" Value="0,0,0,10"/>
+                <SplineThicknessKeyFrame KeyTime="00:00:01" Value="0,0,0,10"/>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="ContractingStoryboard">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="LeftPane" Storyboard.TargetProperty="(FrameworkElement.Width)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="300" KeySpline="0,0,1,1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0" KeySpline="0.602,0,0,1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="LeftPane" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="LeftPane" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.3" Value="0.5"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:0.5" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0" KeySpline="0.705,0,0,1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="btnContract" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="btnExpand" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="LeftPane" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                <SplineThicknessKeyFrame KeyTime="00:00:00" Value="0,0,0,10"/>
+                <SplineThicknessKeyFrame KeyTime="00:00:01" Value="0,0,0,10"/>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+        
+        <Storyboard x:Key="Storyboard1">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" RepeatBehavior="Forever">
+                <SplineDoubleKeyFrame KeyTime="00:00:04" Value="0" KeySpline="0,1,1,1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:08" Value="-720" KeySpline="0,0,1,1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:09" Value="-765" KeySpline="0,0.024,0.48,1"/>
+                <SplineDoubleKeyFrame KeySpline="0,0.284,0,1" KeyTime="00:00:22" Value="2160"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="StoryboardFadeOut">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="{x:Null}" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.1500000" Value="0.4"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="StoryboardFadeIn">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="{x:Null}" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.4"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.1500000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        
+    </Window.Resources>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="btnExpand">
+            <BeginStoryboard Storyboard="{StaticResource ExpandingStoryboard}" x:Name="ExpandingStoryboard_BeginStoryboard"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="btnContract">
+            <BeginStoryboard Storyboard="{StaticResource ContractingStoryboard}" x:Name="ContractingStoryboard_BeginStoryboard1"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <DockPanel>
+        <!-- Header Area-->
+        <Border Height="50" DockPanel.Dock="Top" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,0,1" x:Name="HeaderBorder" Padding="10,0,10,0" >
+            <DockPanel x:Name="Header" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock xml:space="preserve" Opacity="1" FontFamily="Segoe" FontSize="24" FontStretch="Normal" FontWeight="Light" TextWrapping="Wrap" Foreground="{DynamicResource HeaderFontColor}" VerticalAlignment="Bottom" Margin="0,0,0,5"><Run Foreground="#FFCFD3DA" Text="Restaurant"/></TextBlock>
+                    <Grid>
+                        <Ellipse Margin="10,2,0,0" Width="44" Height="44" Stroke="{x:Null}"  Opacity="1" x:Name="yellowcircle">
+                            <Ellipse.Fill>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#00FFFFFF" Offset="1"/>
+                                    <GradientStop Color="#FFFFFFFF" Offset="0.696"/>
+                                </RadialGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Viewbox Stretch="Fill" x:Name="RestaurantLogo" Margin="10,2,0,0" Width="38" Height="38">
+                            <Grid Width="368" Height="368">
+                                <Ellipse Stroke="{x:Null}" RenderTransformOrigin="0.5,0.5">
+                                    <Ellipse.Fill>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" >
+                                            <GradientStop Color="#FF000F29" Offset="0.536"/>
+                                            <GradientStop Color="#FFD9DEE8" Offset="1"/>
+                                            <GradientStop Color="#FFD2DAE8" Offset="0"/>
+                                        </LinearGradientBrush>
+                                    </Ellipse.Fill>
+                                    <Ellipse.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                            <SkewTransform AngleX="0" AngleY="0"/>
+                                            <RotateTransform Angle="45"/>
+                                            <TranslateTransform X="0" Y="0"/>
+                                        </TransformGroup>
+                                    </Ellipse.RenderTransform>
+                                </Ellipse>
+                                <Ellipse Margin="7,8,7,6" Stroke="{x:Null}" Fill="#FF4A5790">
+
+                                </Ellipse>
+                                <Path Margin="7,8,7,93" Opacity="0.1" Stretch="Fill" Stroke="{x:Null}" Data="M354,177 C354.00026,185.00027 276.7544,267 179,267 81.245599,267 0,186.00027 0,177 0,79.245599 79.245599,0 177,0 274.7544,0 353.99677,79.245599 354,177 z">
+                                    <Path.Fill>
+                                        <RadialGradientBrush>
+                                            <GradientStop Color="#68FCFCFC" Offset="0"/>
+                                            <GradientStop Color="#9CF8FCF8" Offset="1"/>
+                                        </RadialGradientBrush>
+                                    </Path.Fill>
+                                </Path>
+                                <Rectangle Fill="#FFFFFFFF" HorizontalAlignment="Left" Margin="109,166,0,46" Width="19" Stroke="{x:Null}" RadiusX="2" RadiusY="2"/>
+                                <Rectangle Fill="#FFFFFFFF" Stroke="{x:Null}" Margin="172,171,173,41" RadiusX="2" RadiusY="2"/>
+                                <Rectangle Fill="#FFFFFFFF" Stroke="{x:Null}" HorizontalAlignment="Right" Margin="0,166,113,46" Width="19" Opacity="1" RadiusX="2" RadiusY="2"/>
+                                <Ellipse Fill="#FFFFFFFF" HorizontalAlignment="Right" Margin="0,75,96,0" VerticalAlignment="Top" Width="53" Height="88" Opacity="1" Stroke="{x:Null}"/>
+                                <Border Margin="165,43,171,0" VerticalAlignment="Top" Height="125" Background="#FFFFFFFF" CornerRadius="5,2,0,5"/>
+                                <Border Height="21" Background="#FFFFFFFF" CornerRadius="0,0,15,15" HorizontalAlignment="Left" Margin="91,142,0,0" VerticalAlignment="Top" Width="54"/>
+                                <Rectangle   HorizontalAlignment="Left" Margin="91,93,0,0" VerticalAlignment="Top" Width="6" Height="51" Fill="#FFFFFFFF" Stroke="{x:Null}" RadiusX="2" RadiusY="2"/>
+                                <Rectangle   Width="4" Height="51" Fill="#FFFFFFFF" Stroke="{x:Null}" HorizontalAlignment="Left" Margin="109,93,0,0" VerticalAlignment="Top" RadiusX="2" RadiusY="2"/>
+                                <Rectangle   Width="4" Height="51" Fill="#FFFFFFFF" Stroke="{x:Null}" HorizontalAlignment="Left" Margin="123,93,0,0" VerticalAlignment="Top" RadiusX="2" RadiusY="2"/>
+                                <Rectangle   Width="6" Height="51" Fill="#FFFFFFFF" Stroke="{x:Null}" HorizontalAlignment="Left" Margin="139,93,0,0" VerticalAlignment="Top" RadiusX="2" RadiusY="2"/>
+                            </Grid>
+                        </Viewbox>
+                    </Grid>
+                </StackPanel>
+                <StackPanel MouseDown="Dan_Clicked" HorizontalAlignment="Right" Margin="0,0,0,7" x:Name="DanLogo" Width="36" Height="36" DockPanel.Dock="Right" VerticalAlignment="Bottom" Cursor="Hand">
+                    <Grid Width="36" Height="36">
+                        <Image Margin="0,0,0,0" Source="/Images/DAN_Background.ico" Stretch="Fill" RenderTransformOrigin="0.5,0.5" x:Name="image">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                    <SkewTransform AngleX="0" AngleY="0"/>
+                                    <RotateTransform Angle="0"/>
+                                    <TranslateTransform X="0" Y="0"/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Path Fill="#FFFFFFFF" Stretch="Fill" Margin="7.803,13.564,6.695,14.192" RenderTransformOrigin="0.5,0.5" Data="M0.80273438,4.7631645 L3.9023438,4.7631645 C5.2617188,4.7631645 6.3261719,5.0717583 7.0957031,5.6889458 C8.0097656,6.427227 8.4667969,7.4291801 8.4667969,8.6948051 C8.4667969,9.9057426 8.0761719,10.894024 7.2949219,11.659649 C6.5136719,12.425274 5.5078125,12.808086 4.2773438,12.808086 C4.1328125,12.808086 3.8964844,12.800274 3.5683594,12.784649 L3.5683594,10.43504 L3.9492188,10.43504 C5.3359375,10.43504 6.0292969,9.8549614 6.0292969,8.6948051 C6.0292969,7.6049614 5.3476563,7.0600395 3.984375,7.0600395 L3.1816406,7.0600395 L3.1816406,12.761211 L0.80273438,12.761211 z M12.492318,4.5639458 C13.429818,4.5639458 14.123178,4.8110161 14.572396,5.3051567 C15.021615,5.7992973 15.246224,6.5619926 15.246224,7.5932426 L15.246224,12.761211 L12.867318,12.761211 L12.867318,7.7514458 C12.867318,7.4389458 12.830209,7.2221489 12.75599,7.1010551 C12.681771,6.9799614 12.548959,6.9194145 12.357553,6.9194145 C11.986459,6.9194145 11.800912,7.1967583 11.800912,7.7514458 L11.800912,8.7475395 L12.486459,8.7475395 L12.486459,10.856915 L11.800912,10.856915 L11.800912,12.761211 L9.4220057,12.761211 L9.4220057,7.6752739 C9.4220057,6.6908989 9.6905603,5.9262505 10.22767,5.3813286 C10.764779,4.8364067 11.519662,4.5639458 12.492318,4.5639458 z M19.516146,4.5639458 C20.418489,4.5639458 21.108919,4.8295708 21.587435,5.3608208 C22.06595,5.8920708 22.305208,6.6557426 22.305208,7.6518364 L22.305208,12.761211 L19.926302,12.761211 L19.926302,7.6518364 C19.926302,7.1635551 19.752474,6.9194145 19.404818,6.9194145 C19.06888,6.9194145 18.900911,7.1635551 18.900911,7.6518364 L18.900911,12.761211 L16.522005,12.761211 L16.522005,7.5698051 C16.522005,6.6596489 16.794466,5.9311333 17.339388,5.3842583 C17.88431,4.8373833 18.609896,4.5639458 19.516146,4.5639458 z">
+                        	<Path.RenderTransform>
+                        		<TransformGroup>
+                        			<ScaleTransform ScaleX="1" ScaleY="1"/>
+                        			<SkewTransform AngleX="0" AngleY="0"/>
+                        			<RotateTransform Angle="0"/>
+                        			<TranslateTransform X="0" Y="0"/>
+                        		</TransformGroup>
+                        	</Path.RenderTransform>
+                        </Path>
+				</Grid>
+                </StackPanel>
+
+            </DockPanel>
+        </Border>
+
+        <!-- Menu Area -->
+        <Border x:Name="MenuBorder" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="0,5,0,5">
+            <Menu VerticalAlignment="Bottom" Margin="5,0,0,0" Style="{DynamicResource MenuStyle}">
+                <MenuItem Visibility="Collapsed" Header="_Management" x:Name="ManagementMenu" Style="{DynamicResource MenuItemStyle}" Foreground="#FFE6E6E6" >
+                    <MenuItem Visibility="Collapsed" Header="_Users" x:Name="UsersMenuItem"  Click="UsersMenuItem_Click" />
+                    <MenuItem Visibility="Collapsed" Header="_Units" x:Name="UnitsMenuItem"  Click="ProductsMenuItem_Click"/>
+                    <MenuItem Visibility="Collapsed" Header="_Groups" x:Name="GroupsMenuItem"  Click="ProductsMenuItem_Click"/>
+                    <MenuItem Visibility="Collapsed" Header="_Products" x:Name="ProductsMenuItem" Click="ProductsMenuItem_Click"/>
+                    <MenuItem Visibility="Collapsed" Header="_Tables" x:Name="TablesMenuItem" Click="TablesMenuItem_Click"/>
+                </MenuItem>
+                <MenuItem Visibility="Collapsed" Header="_Orders" x:Name="OrderMenu" Style="{DynamicResource MenuItemStyle}" Foreground="#FFE6E6E6">
+                    <MenuItem Visibility="Collapsed" Header="_New Order" x:Name="NewOrderMenuItem"  Click="NewOrderMenuItem_Click"/>
+                </MenuItem>
+                <MenuItem Visibility="Collapsed" Header="_Tools"  Style="{DynamicResource MenuItemStyle}" Foreground="#FFE6E6E6" x:Name="ToolsMenu">
+                	<MenuItem Visibility="Collapsed"  Header="_Settings" x:Name="SettingsMenuItem" Click="SettingsMenuItem_Click"/>
+                    <MenuItem Visibility="Collapsed"  Header="_Change Password" x:Name="ChangePasswordMenuItem" Click="ChangePasswordMenuItem_Click"/>
+                </MenuItem>
+                <MenuItem Visibility="Collapsed" Header="_Reports"  Style="{DynamicResource MenuItemStyle}" Foreground="#FFE6E6E6" x:Name="ReportsMenu">
+                    <MenuItem Visibility="Collapsed" Header="Sell Reoport" x:Name="SellReportMenuItem" Click="SellReportMenuItem_Click"/>
+                    <MenuItem Visibility="Collapsed" Header="Product Popularity Report" x:Name="ProductPopularityReportMenuItem" Click="ProductPopularityReportMenuItem_Click"/>
+                </MenuItem>
+                <MenuItem Header="_Help"  Style="{DynamicResource MenuItemStyle}" Foreground="#FFE6E6E6" x:Name="HelpMenu" Width="62.757" Height="23.96">
+                	<MenuItem Header="About" x:Name="AboutMenuItem" Click="AboutMenuItem_Click"  />
+                </MenuItem>
+            </Menu>
+        </Border>
+
+        <Grid x:Name="MainGrid" DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- Small Area -->
+            <Grid x:Name="LeftPane" Grid.Column="0"  Width="0" Margin="0,0,0,10" Visibility="Visible">
+                <Border x:Name="LeftBorder" Background="{DynamicResource MainGradientBrush}" Style="{DynamicResource BorderStyle}"  >
+                    <Grid x:Name="gridSmallArea">
+                        <!--<local:ProductAvailabilityUserControl x:Name="ProductAvailability" Width="Auto" Height="Auto" Visibility="Collapsed"/>
+                        <local:TablesStatusUserControl x:Name="TablesStatus" Width="Auto" Height="Auto" Visibility="Collapsed"/>-->
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Button FontSize="14"   Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="10" Height="50" FlowDirection="LeftToRight" x:Name="btnExpand" Content="&gt;" />
+                <Button FontSize="14"  Content="&lt;" FlowDirection="LeftToRight" x:Name="btnContract" VerticalAlignment="Center" HorizontalAlignment="Center" Width="10" Height="50" Visibility="Hidden" />
+            </Grid>
+
+            <!-- Main Area -->
+            <Grid  x:Name="MainPane" Grid.Column="2" Margin="0,0,10,10" >
+                <Border  x:Name="MainBorder" Background="{DynamicResource MainGradientBrush}" Style="{DynamicResource BorderStyle}" >   
+                    <Grid x:Name="gridMainArea">
+                        <!--<local:KitchenOrdersListUserControl x:Name="KitchenOrdersList" Width="Auto" Height="Auto" Visibility="Collapsed"/>
+                        <local:CashierOrdersListUserControl x:Name="CashierOrdersList" Width="Auto" Height="Auto" Visibility="Collapsed"/>-->
+                    </Grid>
+                </Border>
+            </Grid>
+
+            
+        </Grid>
+    </DockPanel>
+</Window>
