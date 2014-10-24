@@ -1,1 +1,0 @@
-C:\Desarrollo\Proyectos\Proyectos Cursos\Microsoft\C#\LibroCSharp\Chapter 8 (Working With Interfaces)\Tema2 CustomInterface\Tema2 CustomInterface\bin\Debug\Tema2 CustomInterface.exe.config
