@@ -1,8 +1,0 @@
-C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.Entidades\bin\Debug\School.Entidades.dll
-C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.Entidades\bin\Debug\School.Entidades.pdb
-C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.Entidades\obj\Debug\School.Entidades.dll
-C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.Entidades\obj\Debug\School.Entidades.pdb
-C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.Entidades\bin\Debug\School.Entidades.dll.config
-C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.Entidades\bin\Debug\EntityFramework.dll
-C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.Entidades\bin\Debug\EntityFramework.xml
-C:\Desarrollo\Proyectos\Proyectos Prueba\School\Aplicacion\School\School.Entidades\obj\Debug\School.Entidades.csprojResolveAssemblyReference.cache

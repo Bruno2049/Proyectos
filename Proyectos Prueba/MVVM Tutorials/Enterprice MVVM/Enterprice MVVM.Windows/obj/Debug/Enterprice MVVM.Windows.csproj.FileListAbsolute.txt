@@ -1,5 +1,0 @@
-C:\Desarrollo\Proyectos\Proyectos Prueba\MVVM Tutorials\Enterprice MVVM\Enterprice MVVM.Windows\bin\Debug\Enterprice MVVM.Windows.dll
-C:\Desarrollo\Proyectos\Proyectos Prueba\MVVM Tutorials\Enterprice MVVM\Enterprice MVVM.Windows\bin\Debug\Enterprice MVVM.Windows.pdb
-C:\Desarrollo\Proyectos\Proyectos Prueba\MVVM Tutorials\Enterprice MVVM\Enterprice MVVM.Windows\obj\Debug\Enterprice MVVM.Windows.csprojResolveAssemblyReference.cache
-C:\Desarrollo\Proyectos\Proyectos Prueba\MVVM Tutorials\Enterprice MVVM\Enterprice MVVM.Windows\obj\Debug\Enterprice MVVM.Windows.dll
-C:\Desarrollo\Proyectos\Proyectos Prueba\MVVM Tutorials\Enterprice MVVM\Enterprice MVVM.Windows\obj\Debug\Enterprice MVVM.Windows.pdb
