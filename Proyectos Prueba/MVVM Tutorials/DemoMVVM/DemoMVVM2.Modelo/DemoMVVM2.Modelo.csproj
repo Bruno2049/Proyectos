@@ -49,7 +49,6 @@
     <Compile Include="CabeceraFactura.cs">
       <DependentUpon>ModeloEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="DetalleFactura.cs">
       <DependentUpon>ModeloEntities.tt</DependentUpon>
     </Compile>
