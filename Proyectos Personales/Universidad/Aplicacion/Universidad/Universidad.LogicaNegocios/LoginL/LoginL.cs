@@ -8,6 +8,7 @@ namespace Universidad.LogicaNegocios.LoginL
     {
         #region Propiedades de la clase
 
+// ReSharper disable once InconsistentNaming
         protected static readonly LoginL _classInstance = new LoginL();
 
         public static LoginL ClassInstance
@@ -15,21 +16,17 @@ namespace Universidad.LogicaNegocios.LoginL
             get { return _classInstance; }
         }
 
-        public LoginL()
-        {
-        }
-
         #endregion
 
         #region Login Administrativos
 
-        public US_USUARIOS LoginAdminitradorUsuarios(string Usuario, string Contrasena)
+        public US_USUARIOS LoginAdminitradorUsuarios(string usuario, string contrasena)
         {
-            var Login = new US_USUARIOS();
+            US_USUARIOS Login;
             
-            Login = LoginA.ClassInstance.LoginAdministrador(Usuario, Contrasena);
+            Login = LoginA.ClassInstance.LoginAdministrador(usuario, contrasena);
 
-            return Login ?? null;
+            return Login;
         }
 
         #endregion
