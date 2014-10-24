@@ -24,5 +24,10 @@ namespace ReproductorMusica
         {
             InitializeComponent();
         }
+
+        public void Play(Object sender, RoutedEventArgs args)
+        {
+            MediaElementPlayer.Play();
+        }
     }
 }
