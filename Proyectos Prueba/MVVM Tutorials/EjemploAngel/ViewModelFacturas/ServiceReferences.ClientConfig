@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_ICabeceraService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:14050/Cabecera.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_ICabeceraService" contract="ServicioFacturas.ICabeceraService"
+                name="BasicHttpBinding_ICabeceraService" />
+        </client>
+    </system.serviceModel>
+</configuration>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EjemploAngelFacturaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="EjemploAngelFacturaModelStoreContainer">
+          <EntitySet Name="CabeceraFactura" EntityType="EjemploAngelFacturaModel.Store.CabeceraFactura" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DetalleFactura" EntityType="EjemploAngelFacturaModel.Store.DetalleFactura" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_DetalleFactura_CabeceraFactura" Association="EjemploAngelFacturaModel.Store.FK_DetalleFactura_CabeceraFactura">
+            <End Role="CabeceraFactura" EntitySet="CabeceraFactura" />
+            <End Role="DetalleFactura" EntitySet="DetalleFactura" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CabeceraFactura">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCliente" Type="varchar" MaxLength="50" />
+          <Property Name="FechaEmision" Type="datetime" />
+          <Property Name="Total" Type="decimal" Scale="3" />
+        </EntityType>
+        <EntityType Name="DetalleFactura">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdCabecera" Type="int" />
+          <Property Name="NombreProducto" Type="varchar" MaxLength="50" />
+          <Property Name="Cantidad" Type="int" />
+          <Property Name="Precio" Type="decimal" Scale="3" />
+        </EntityType>
+        <Association Name="FK_DetalleFactura_CabeceraFactura">
+          <End Role="CabeceraFactura" Type="EjemploAngelFacturaModel.Store.CabeceraFactura" Multiplicity="0..1" />
+          <End Role="DetalleFactura" Type="EjemploAngelFacturaModel.Store.DetalleFactura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CabeceraFactura">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DetalleFactura">
+              <PropertyRef Name="IdCabecera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EjemploAngelFacturaModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EjemploAngelFacturaEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="CabeceraFactura" EntityType="EjemploAngelFacturaModel.CabeceraFactura" />
+          <EntitySet Name="DetalleFactura" EntityType="EjemploAngelFacturaModel.DetalleFactura" />
+          <AssociationSet Name="FK_DetalleFactura_CabeceraFactura" Association="EjemploAngelFacturaModel.FK_DetalleFactura_CabeceraFactura">
+            <End Role="CabeceraFactura" EntitySet="CabeceraFactura" />
+            <End Role="DetalleFactura" EntitySet="DetalleFactura" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CabeceraFactura">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCliente" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FechaEmision" Type="DateTime" Precision="3" />
+          <Property Name="Total" Type="Decimal" Precision="18" Scale="3" />
+          <NavigationProperty Name="DetalleFactura" Relationship="EjemploAngelFacturaModel.FK_DetalleFactura_CabeceraFactura" FromRole="CabeceraFactura" ToRole="DetalleFactura" />
+        </EntityType>
+        <EntityType Name="DetalleFactura">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCabecera" Type="Int32" />
+          <Property Name="NombreProducto" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Cantidad" Type="Int32" />
+          <Property Name="Precio" Type="Decimal" Precision="18" Scale="3" />
+          <NavigationProperty Name="CabeceraFactura" Relationship="EjemploAngelFacturaModel.FK_DetalleFactura_CabeceraFactura" FromRole="DetalleFactura" ToRole="CabeceraFactura" />
+        </EntityType>
+        <Association Name="FK_DetalleFactura_CabeceraFactura">
+          <End Role="CabeceraFactura" Type="EjemploAngelFacturaModel.CabeceraFactura" Multiplicity="0..1" />
+          <End Role="DetalleFactura" Type="EjemploAngelFacturaModel.DetalleFactura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CabeceraFactura">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DetalleFactura">
+              <PropertyRef Name="IdCabecera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EjemploAngelFacturaModelStoreContainer" CdmEntityContainer="EjemploAngelFacturaEntities">
+          <EntitySetMapping Name="CabeceraFactura">
+            <EntityTypeMapping TypeName="EjemploAngelFacturaModel.CabeceraFactura">
+              <MappingFragment StoreEntitySet="CabeceraFactura">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetalleFactura">
+            <EntityTypeMapping TypeName="EjemploAngelFacturaModel.DetalleFactura">
+              <MappingFragment StoreEntitySet="DetalleFactura">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdCabecera" ColumnName="IdCabecera" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

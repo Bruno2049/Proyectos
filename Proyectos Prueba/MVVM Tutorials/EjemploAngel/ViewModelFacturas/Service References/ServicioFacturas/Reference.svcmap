@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b70e0d2b-e645-4a7a-9cbb-d5bc801920cf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:14050/Cabecera.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Cabecera.disco" MetadataType="Disco" ID="c42ec0e5-bfa2-4991-b841-a0edf36e4985" SourceId="1" SourceUrl="http://localhost:14050/Cabecera.svc?disco" />
+    <MetadataFile FileName="Cabecera.xsd" MetadataType="Schema" ID="8750c1ca-5648-43aa-88da-30290954d93a" SourceId="1" SourceUrl="http://localhost:14050/Cabecera.svc?xsd=xsd1" />
+    <MetadataFile FileName="Cabecera1.xsd" MetadataType="Schema" ID="568d22f9-d77f-475d-9ef4-6fa120374371" SourceId="1" SourceUrl="http://localhost:14050/Cabecera.svc?xsd=xsd0" />
+    <MetadataFile FileName="Cabecera2.xsd" MetadataType="Schema" ID="3227ea2b-2022-4807-848e-c206d735c1ce" SourceId="1" SourceUrl="http://localhost:14050/Cabecera.svc?xsd=xsd2" />
+    <MetadataFile FileName="Cabecera.wsdl" MetadataType="Wsdl" ID="4d15fc04-36b4-4c38-8e02-129460f2d999" SourceId="1" SourceUrl="http://localhost:14050/Cabecera.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
