@@ -3,5 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid Name="grid1">
+        <Grid Name="Botones">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Column="0" Grid.Row="0" Background="#FF93ABEE">
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,50,20,10">Simmple Properties</Label>
+                <Button Name="btnSimpleProperties" Content="Ver" Margin="20,10,20,20" Click="BtnSimpleProperties_OnClick"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

@@ -24,5 +24,11 @@ namespace Properties_and_Events_in_XAML
         {
             InitializeComponent();
         }
+
+        private void BtnSimpleProperties_OnClick(object sender, RoutedEventArgs e)
+        {
+            var simpleProperties = new SimpleProperties();
+            simpleProperties.InitializeComponent();
+        }
     }
 }

@@ -16,9 +16,7 @@ FontFamily="Verdana" FontSize="24" Foreground="Green" >
 VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
 FontFamily="Verdana" FontSize="24" Foreground="Green" >
         </Button>
-        <TextBox Name="txtAnswer" 
-VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-FontFamily="Verdana" FontSize="24" Foreground="Green" >
+        <TextBox Name="txtAnswer" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="Verdana" FontSize="24" Foreground="Green" >
         </TextBox>
 
     </Grid>
