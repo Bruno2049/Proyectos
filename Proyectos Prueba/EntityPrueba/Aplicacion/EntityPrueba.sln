@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityPrueba.LogicaNegocios
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityPrueba.Entidad", "EntityPrueba.Entidad\EntityPrueba.Entidad.csproj", "{23EDE2BA-F58B-4F3F-BF15-696EF1C6ACE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityPrueba.Prueba", "EntityPrueba.Prueba\EntityPrueba.Prueba.csproj", "{1FEF7DCA-01DD-4F94-BC50-B7E55BA7C25D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityPrueba.Web", "EntityPrueba.Web\EntityPrueba.Web.csproj", "{D4918E64-B594-4408-8B9F-37ED45410FAD}"
 EndProject
 Global
@@ -29,10 +27,6 @@ Global
 		{23EDE2BA-F58B-4F3F-BF15-696EF1C6ACE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23EDE2BA-F58B-4F3F-BF15-696EF1C6ACE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23EDE2BA-F58B-4F3F-BF15-696EF1C6ACE6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1FEF7DCA-01DD-4F94-BC50-B7E55BA7C25D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1FEF7DCA-01DD-4F94-BC50-B7E55BA7C25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1FEF7DCA-01DD-4F94-BC50-B7E55BA7C25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1FEF7DCA-01DD-4F94-BC50-B7E55BA7C25D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D4918E64-B594-4408-8B9F-37ED45410FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4918E64-B594-4408-8B9F-37ED45410FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4918E64-B594-4408-8B9F-37ED45410FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU

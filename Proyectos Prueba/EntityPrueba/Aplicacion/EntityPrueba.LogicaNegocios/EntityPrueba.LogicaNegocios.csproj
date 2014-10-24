@@ -37,12 +37,6 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="EntityPrueba.AcesoDatos">
-      <HintPath>..\EntityPrueba.AcesoDatos\bin\Debug\EntityPrueba.AcesoDatos.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityPrueba.Entidad">
-      <HintPath>..\EntityPrueba.Entidad\bin\Debug\EntityPrueba.Entidad.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -69,7 +63,16 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\EntityPrueba.AcesoDatos\EntityPrueba.AcesoDatos.csproj">
+      <Project>{25966b97-c97a-40ee-88d1-7778b38dd8a8}</Project>
+      <Name>EntityPrueba.AcesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityPrueba.Entidad\EntityPrueba.Entidad.csproj">
+      <Project>{23ede2ba-f58b-4f3f-bf15-696ef1c6ace6}</Project>
+      <Name>EntityPrueba.Entidad</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
