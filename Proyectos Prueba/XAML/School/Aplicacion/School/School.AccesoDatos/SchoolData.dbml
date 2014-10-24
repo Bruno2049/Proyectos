@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SchoolSystem" Class="SchoolDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=STARKILLER;Initial Catalog=SchoolSystem;Persist Security Info=True;User ID=sa" SettingsObjectName="School.AccesoDatos.Properties.Settings" SettingsPropertyName="SchoolSystemConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.REGISTRATION" Member="REGISTRATION">
+    <Type Name="REGISTRATION">
+      <Column Name="REGISTRATIONID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SUBJECTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STUDENTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GRADE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="STUDENT_REGISTRATION" Member="STUDENT" ThisKey="STUDENTID" OtherKey="STUDENTID" Type="STUDENT" IsForeignKey="true" />
+      <Association Name="SUBJECT_REGISTRATION" Member="SUBJECT" ThisKey="SUBJECTID" OtherKey="SUBJECTID" Type="SUBJECT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STUDENT" Member="STUDENT">
+    <Type Name="STUDENT">
+      <Column Name="STUDENTID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FIRSTNAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LASTNAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GENDER" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="GPA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="STUDENT_REGISTRATION" Member="REGISTRATION" ThisKey="STUDENTID" OtherKey="STUDENTID" Type="REGISTRATION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SUBJECT" Member="SUBJECT">
+    <Type Name="SUBJECT">
+      <Column Name="SUBJECTID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SUBJECTNAME" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SUBJECTDESCRIPTION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SUBJECTCREDITS" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="SUBJECT_REGISTRATION" Member="REGISTRATION" ThisKey="SUBJECTID" OtherKey="SUBJECTID" Type="REGISTRATION" />
+    </Type>
+  </Table>
+</Database>
