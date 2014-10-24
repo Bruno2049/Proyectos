@@ -1,4 +1,0 @@
-C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\Cansola2\bin\Debug\Cansola2.exe.config
-C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\Cansola2\obj\Debug\Cansola2.csprojResolveAssemblyReference.cache
-C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\Cansola2\obj\Debug\Cansola2.Properties.Resources.resources
-C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\Cansola2\obj\Debug\Cansola2.csproj.GenerateResource.Cache

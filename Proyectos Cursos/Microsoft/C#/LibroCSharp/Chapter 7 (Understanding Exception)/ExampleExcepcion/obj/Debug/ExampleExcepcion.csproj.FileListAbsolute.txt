@@ -1,6 +1,0 @@
-C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\bin\Debug\ExampleExcepcion.exe.config
-C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\bin\Debug\ExampleExcepcion.exe
-C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\bin\Debug\ExampleExcepcion.pdb
-C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\obj\Debug\ExampleExcepcion.csprojResolveAssemblyReference.cache
-C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\obj\Debug\ExampleExcepcion.exe
-C:\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\Chapter 7 (Understanding Exception)\ExampleExcepcion\obj\Debug\ExampleExcepcion.pdb

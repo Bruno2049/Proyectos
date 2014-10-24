@@ -1,8 +1,0 @@
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Release\3.-Arrays.exe.config
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Release\3.-Arrays.exe
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\bin\Release\3.-Arrays.pdb
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Release\3.-Arrays.csprojResolveAssemblyReference.cache
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Release\_3._Arrays.Properties.Resources.resources
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Release\3.-Arrays.csproj.GenerateResource.Cache
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Release\3.-Arrays.exe
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\3.-Arrays\obj\Release\3.-Arrays.pdb

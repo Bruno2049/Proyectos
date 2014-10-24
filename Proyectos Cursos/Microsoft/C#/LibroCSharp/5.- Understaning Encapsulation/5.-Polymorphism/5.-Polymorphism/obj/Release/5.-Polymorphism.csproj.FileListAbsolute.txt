@@ -1,7 +1,0 @@
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\5.-Polymorphism\5.-Polymorphism\bin\Release\5.-Polymorphism.exe.config
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\5.-Polymorphism\5.-Polymorphism\bin\Release\5.-Polymorphism.exe
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\5.-Polymorphism\5.-Polymorphism\bin\Release\5.-Polymorphism.pdb
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\5.-Polymorphism\5.-Polymorphism\obj\Release\_5._Polymorphism.Properties.Resources.resources
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\5.-Polymorphism\5.-Polymorphism\obj\Release\5.-Polymorphism.csproj.GenerateResource.Cache
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\5.-Polymorphism\5.-Polymorphism\obj\Release\5.-Polymorphism.exe
-C:\Users\ecruz\Documents\Desarrollo\Proyectos\Microsoft\C#\LibroCSharp\5.- Understaning Encapsulation\5.-Polymorphism\5.-Polymorphism\obj\Release\5.-Polymorphism.pdb

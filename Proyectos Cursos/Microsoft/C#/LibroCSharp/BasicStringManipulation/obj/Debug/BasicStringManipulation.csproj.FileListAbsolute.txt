@@ -1,8 +1,0 @@
-C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\BasicStringManipulation\bin\Debug\BasicStringManipulation.exe.config
-C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\BasicStringManipulation\bin\Debug\BasicStringManipulation.exe
-C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\BasicStringManipulation\bin\Debug\BasicStringManipulation.pdb
-C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\BasicStringManipulation\obj\Debug\BasicStringManipulation.csprojResolveAssemblyReference.cache
-C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\BasicStringManipulation\obj\Debug\BasicStringManipulation.Properties.Resources.resources
-C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\BasicStringManipulation\obj\Debug\BasicStringManipulation.csproj.GenerateResource.Cache
-C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\BasicStringManipulation\obj\Debug\BasicStringManipulation.exe
-C:\Users\Sith Lord StarKiller\Documents\Cursos\Curso C#\Proyectos\Tutorial\Capitulo 1\LibroCSharp\BasicStringManipulation\obj\Debug\BasicStringManipulation.pdb
