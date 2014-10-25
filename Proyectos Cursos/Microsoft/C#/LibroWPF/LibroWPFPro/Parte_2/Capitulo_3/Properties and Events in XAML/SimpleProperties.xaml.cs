@@ -18,11 +18,20 @@ namespace Properties_and_Events_in_XAML
     /// <summary>
     /// Lógica de interacción para SimpleProperties.xaml
     /// </summary>
-    public partial class SimpleProperties : Page
+    public partial class SimpleProperties : Window
     {
         public SimpleProperties()
         {
             InitializeComponent();
+        }
+
+        private void cmdAnswer_Click(object sender, RoutedEventArgs e)
+        {
+            //this.Cursor = Cursors.Wait;
+            //System.Threading.Thread.Sleep(TimeSpan.FromSeconds(3));
+            //AnswerGenerator generator = new AnswerGenerator();
+            //txtAnswer.Text = generator.GetRandomAnswer(txtQuestion.Text);
+            //this.Cursor = null;
         }
     }
 }

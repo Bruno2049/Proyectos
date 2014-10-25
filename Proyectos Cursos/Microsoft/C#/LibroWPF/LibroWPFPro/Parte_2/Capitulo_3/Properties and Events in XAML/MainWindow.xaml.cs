@@ -20,6 +20,8 @@ namespace Properties_and_Events_in_XAML
     /// </summary>
     public partial class MainWindow : Window
     {
+        private SimpleProperties simpleProperties = new SimpleProperties();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,8 +29,8 @@ namespace Properties_and_Events_in_XAML
 
         private void BtnSimpleProperties_OnClick(object sender, RoutedEventArgs e)
         {
-            var simpleProperties = new SimpleProperties();
-            simpleProperties.InitializeComponent();
+            simpleProperties = new SimpleProperties();
+            simpleProperties.Show();
         }
     }
 }
