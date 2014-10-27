@@ -26,8 +26,8 @@ namespace Universidad.AplicacionAdministrativa
         {
             try
             {
-                var usuario = TXB_Usuario.Text;
-                var contrasena = TXB_Contrasena.Text;
+                var usuario = "ecruzlagunes";//TXB_Usuario.Text;
+                var contrasena = "1234";//TXB_Contrasena.Text;
 
                 _login = SVC_LoginAdministrativos.ClassInstance.LoginAdministrativos(usuario, contrasena);
 

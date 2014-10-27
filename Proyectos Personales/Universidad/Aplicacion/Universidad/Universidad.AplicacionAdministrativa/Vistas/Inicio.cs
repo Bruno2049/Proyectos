@@ -15,6 +15,24 @@ namespace Universidad.AplicacionAdministrativa.Vistas
             _padre = padre;
             _usuario = usuario;
             InitializeComponent();
+            CargarArbol(); 
+        }
+
+        private void CargarArbol()
+        {
+            TreeNode nodo;
+            nodo = TRV_Menu.Nodes.Add("Catalogos");
+
+            TRV_Menu.Nodes[0].Nodes.Add("Net-informations.com");
+            TRV_Menu.Nodes[0].Nodes[0].Nodes.Add("CLR");
+
+            TRV_Menu.Nodes[0].Nodes.Add("Vb.net-informations.com");
+            TRV_Menu.Nodes[0].Nodes[1].Nodes.Add("String Tutorial");
+            TRV_Menu.Nodes[0].Nodes[1].Nodes.Add("Excel Tutorial");
+
+            TRV_Menu.Nodes[0].Nodes.Add("Csharp.net-informations.com");
+            TRV_Menu.Nodes[0].Nodes[2].Nodes.Add("ADO.NET");
+            TRV_Menu.Nodes[0].Nodes[2].Nodes[0].Nodes.Add("Dataset");
         }
 
         private void Inicio_Load(object sender, EventArgs e)
