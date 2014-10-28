@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:viewmodel="clr-namespace:Northwind.ViewModel;assembly=Northwind.ViewModel"
+                    xmlns:wpf="clr-namespace:Northwind.UI.WPF">
+    <Color x:Key="MainBlue">#FF145E9D</Color>
+    <SolidColorBrush x:Key="MainBlueBrush" Color="{StaticResource MainBlue}" />
+    <DataTemplate DataType="{x:Type viewmodel:CustomerDetailViewModel}">
+        <wpf:CustomerDetails />
+    </DataTemplate>
+</ResourceDictionary>
