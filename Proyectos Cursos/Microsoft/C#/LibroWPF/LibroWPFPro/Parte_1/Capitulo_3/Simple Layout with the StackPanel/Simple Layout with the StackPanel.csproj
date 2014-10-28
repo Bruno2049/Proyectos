@@ -53,9 +53,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Alignment.xaml.cs">
+      <DependentUpon>Alignment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HorizontalAlignment.xaml.cs">
+      <DependentUpon>HorizontalAlignment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SimpleStack.xaml.cs">
       <DependentUpon>SimpleStack.xaml</DependentUpon>
     </Compile>
+    <Page Include="Alignment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HorizontalAlignment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

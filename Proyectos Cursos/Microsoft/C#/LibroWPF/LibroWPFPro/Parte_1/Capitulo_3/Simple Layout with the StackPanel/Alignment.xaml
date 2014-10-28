@@ -1,0 +1,14 @@
+﻿<Window x:Class="Simple_Layout_with_the_StackPanel.Alignment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Alignment" Height="300" Width="300">
+    <Grid>
+        <StackPanel>
+            <Label HorizontalAlignment="Center">A Button Stack</Label>
+            <Button HorizontalAlignment="Left">Button 1</Button>
+            <Button HorizontalAlignment="Right">Button 2</Button>
+            <Button>Button 3</Button>
+            <Button>Button 4</Button>
+        </StackPanel>
+    </Grid>
+</Window>
