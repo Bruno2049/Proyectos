@@ -38,7 +38,7 @@ namespace Universidad.AccesoDatos.ControlUsuarios.LoginA
 
         public US_USUARIOS LoginAdministrador(string Nombre, string Contrasena)
         {
-            US_USUARIOS Usuario = null;
+            US_USUARIOS Usuario = null; 
 
             using (var Aux = new Repositorio<US_USUARIOS> ())
             {
