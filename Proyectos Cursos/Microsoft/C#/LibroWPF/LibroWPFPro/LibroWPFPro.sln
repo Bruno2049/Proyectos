@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Capitulo_3", "Capitulo_3", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Properties and Events in XAML", "Parte_2\Capitulo_3\Properties and Events in XAML\Properties and Events in XAML.csproj", "{4AACC580-EA20-4F1D-8F49-C31A9ADF35ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple Layout with the StackPanel", "Parte_1\Capitulo_3\Simple Layout with the StackPanel\Simple Layout with the StackPanel.csproj", "{0506ED85-51A6-42DC-B29D-5D9E9713C13A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{4AACC580-EA20-4F1D-8F49-C31A9ADF35ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AACC580-EA20-4F1D-8F49-C31A9ADF35ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AACC580-EA20-4F1D-8F49-C31A9ADF35ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0506ED85-51A6-42DC-B29D-5D9E9713C13A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0506ED85-51A6-42DC-B29D-5D9E9713C13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0506ED85-51A6-42DC-B29D-5D9E9713C13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0506ED85-51A6-42DC-B29D-5D9E9713C13A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +44,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{743FFEE5-8673-4580-A049-6F3271DA1AD9} = {DDA4C7F0-8738-4623-BEC0-C2EE5300EEBF}
 		{4AACC580-EA20-4F1D-8F49-C31A9ADF35ED} = {743FFEE5-8673-4580-A049-6F3271DA1AD9}
+		{0506ED85-51A6-42DC-B29D-5D9E9713C13A} = {743FFEE5-8673-4580-A049-6F3271DA1AD9}
 	EndGlobalSection
 EndGlobal

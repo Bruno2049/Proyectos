@@ -1,0 +1,15 @@
+﻿<Window x:Class="Simple_Layout_with_the_StackPanel.SimpleStack"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SimpleStack" Height="300" Width="300">
+    <Grid>
+        <StackPanel>
+            <Label Content="A button stack"/>
+            <Button Content="Button1"/>
+            <Button Content="Button2"/>
+            <Button Content="Button3"/>
+            <Button Content="Button4"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
