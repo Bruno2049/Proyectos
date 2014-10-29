@@ -63,6 +63,10 @@
       <Project>{d7f9c376-f419-4f3c-8bdd-386cf84a77b9}</Project>
       <Name>Universidad.AccesoDatos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Universidad.Helpers\Universidad.Helpers.csproj">
+      <Project>{cd6fed74-0e93-40e7-b76a-468dc2423b4b}</Project>
+      <Name>Universidad.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

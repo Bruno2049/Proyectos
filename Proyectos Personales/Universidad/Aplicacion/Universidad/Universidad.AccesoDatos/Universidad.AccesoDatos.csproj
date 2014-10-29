@@ -43,6 +43,7 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,8 +58,10 @@
     <Compile Include="AdministracionSistema\GestionCatalogos\Gestion_CAT_Nivel_Usuario.cs" />
     <Compile Include="AdministracionSistema\GestionCatalogos\Gestion_CAT_Tipos_Usuario.cs" />
     <Compile Include="AdministracionSistema\Menu_Sistema\Menu_Sistema_Administrativo.cs" />
+    <Compile Include="ControladorSQL.cs" />
     <Compile Include="IRepositorio.cs" />
     <Compile Include="ControlUsuarios\LoginA\LoginA.cs" />
+    <Compile Include="ParametrosSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio.cs" />
     <Compile Include="UnivesidadBDModel.Context.cs">
@@ -93,7 +96,12 @@
       <DependentUpon>UnivesidadBDModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Universidad.Helpers\Universidad.Helpers.csproj">
+      <Project>{cd6fed74-0e93-40e7-b76a-468dc2423b4b}</Project>
+      <Name>Universidad.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
