@@ -8,17 +8,17 @@ using System.Configuration;
 namespace Universidad.AccesoDatos
 {
     /// <summary>
-    /// The SqlHelper class is intended to encapsulate high performance, scalable best practices for 
+    /// The ControladorSQL class is intended to encapsulate high performance, scalable best practices for 
     /// common uses of SqlClient
     /// </summary>
-    public sealed class SqlHelper
+    public sealed class ControladorSQL
     {
 
         #region private utility methods & constructors
 
         // Since this class provides only static methods, make the default constructor private to prevent 
-        // instances from being created with "new SqlHelper()"
-        private SqlHelper() { }
+        // instances from being created with "new ControladorSQL()"
+        private ControladorSQL() { }
 
         /// <summary>
         /// This method is used to attach array of SqlParameters to a SqlCommand.
@@ -282,7 +282,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -408,7 +408,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connection, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -496,7 +496,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -591,7 +591,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(SqlConnectionString, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(SqlConnectionString, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -693,7 +693,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connection, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -789,7 +789,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -809,12 +809,12 @@ namespace Universidad.AccesoDatos
         #region ExecuteReader
 
         /// <summary>
-        /// This enum is used to indicate whether the connection was provided by the caller, or created by SqlHelper, so that
+        /// This enum is used to indicate whether the connection was provided by the caller, or created by ControladorSQL, so that
         /// we can set the appropriate CommandBehavior when calling ExecuteReader()
         /// </summary>
         private enum SqlConnectionOwnership
         {
-            /// <summary>Connection is owned and managed by SqlHelper</summary>
+            /// <summary>Connection is owned and managed by ControladorSQL</summary>
             Internal,
             /// <summary>Connection is owned and managed by the caller</summary>
             External
@@ -833,7 +833,7 @@ namespace Universidad.AccesoDatos
         /// <param name="commandType">The CommandType (stored procedure, text, etc.)</param>
         /// <param name="commandText">The stored procedure name or T-SQL command</param>
         /// <param name="commandParameters">An array of SqlParameters to be associated with the command or 'null' if no parameters are required</param>
-        /// <param name="connectionOwnership">Indicates whether the connection parameter was provided by the caller, or created by SqlHelper</param>
+        /// <param name="connectionOwnership">Indicates whether the connection parameter was provided by the caller, or created by ControladorSQL</param>
         /// <returns>SqlDataReader containing the results of the command</returns>
         private static SqlDataReader ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, string commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership)
         {
@@ -962,7 +962,7 @@ namespace Universidad.AccesoDatos
             // If we receive parameter values, we need to figure out where they go
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connectionString, spName);
 
                 AssignParameterValues(commandParameters, parameterValues);
 
@@ -1034,7 +1034,7 @@ namespace Universidad.AccesoDatos
             // If we receive parameter values, we need to figure out where they go
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connection, spName);
 
                 AssignParameterValues(commandParameters, parameterValues);
 
@@ -1110,7 +1110,7 @@ namespace Universidad.AccesoDatos
             // If we receive parameter values, we need to figure out where they go
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 AssignParameterValues(commandParameters, parameterValues);
 
@@ -1202,7 +1202,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1300,7 +1300,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connection, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1388,7 +1388,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1487,7 +1487,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connection, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1575,7 +1575,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1761,7 +1761,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connection, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1851,7 +1851,7 @@ namespace Universidad.AccesoDatos
             if ((parameterValues != null) && (parameterValues.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // Assign the provided values to these parameters based on parameter order
                 AssignParameterValues(commandParameters, parameterValues);
@@ -1986,7 +1986,7 @@ namespace Universidad.AccesoDatos
             if ((sourceColumns != null) && (sourceColumns.Length > 0))
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connection, spName);
 
                 // Assign the provided source columns to these parameters based on parameter order
                 for (int index = 0; index < sourceColumns.Length; index++)
@@ -2020,16 +2020,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2052,16 +2052,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connection, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteNonQuery(connection, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteNonQuery(connection, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteNonQuery(connection, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteNonQuery(connection, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2079,22 +2079,22 @@ namespace Universidad.AccesoDatos
         {
             if (transaction == null) throw new ArgumentNullException("transaction");
             if (transaction != null && transaction.Connection == null) throw new ArgumentException("The transaction was rollbacked or commited, please provide an open transaction.", "transaction");
-            if (spName == null || spName.Length == 0) throw new ArgumentNullException("spName");
+            if (string.IsNullOrEmpty(spName)) throw new ArgumentNullException("spName");
 
             // Sf the row has values, the store procedure parameters must be initialized
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteNonQuery(transaction, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteNonQuery(transaction, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteNonQuery(transaction, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteNonQuery(transaction, CommandType.StoredProcedure, spName);
             }
         }
         #endregion
@@ -2119,16 +2119,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteDataTable(connectionString, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteDataTable(connectionString, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteDataTable(connectionString, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteDataTable(connectionString, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2151,16 +2151,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connection, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteDataTable(connection, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteDataTable(connection, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteDataTable(connection, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteDataTable(connection, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2184,16 +2184,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteDataTable(transaction, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteDataTable(transaction, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteDataTable(transaction, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteDataTable(transaction, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2219,16 +2219,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteReader(connectionString, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteReader(connectionString, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteReader(connectionString, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteReader(connectionString, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2252,16 +2252,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connection, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteReader(connection, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteReader(connection, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteReader(connection, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteReader(connection, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2285,16 +2285,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteReader(transaction, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteReader(transaction, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteReader(transaction, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteReader(transaction, CommandType.StoredProcedure, spName);
             }
         }
         #endregion
@@ -2319,16 +2319,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connectionString, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connectionString, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteScalar(connectionString, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteScalar(connectionString, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteScalar(connectionString, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteScalar(connectionString, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2351,16 +2351,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connection, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteScalar(connection, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteScalar(connection, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteScalar(connection, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteScalar(connection, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2384,16 +2384,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteScalar(transaction, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteScalar(transaction, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteScalar(transaction, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteScalar(transaction, CommandType.StoredProcedure, spName);
             }
         }
         #endregion
@@ -2418,16 +2418,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(connection, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteXmlReader(connection, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteXmlReader(connection, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteXmlReader(connection, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteXmlReader(connection, CommandType.StoredProcedure, spName);
             }
         }
 
@@ -2451,16 +2451,16 @@ namespace Universidad.AccesoDatos
             if (dataRow != null && dataRow.ItemArray.Length > 0)
             {
                 // Pull the parameters for this stored procedure from the parameter cache (or discover them & populate the cache)
-                SqlParameter[] commandParameters = SqlHelperParameterCache.GetSpParameterSet(transaction.Connection, spName);
+                SqlParameter[] commandParameters = ControladorSQLParameterCache.GetSpParameterSet(transaction.Connection, spName);
 
                 // Set the parameters values
                 AssignParameterValues(commandParameters, dataRow);
 
-                return SqlHelper.ExecuteXmlReader(transaction, CommandType.StoredProcedure, spName, commandParameters);
+                return ControladorSQL.ExecuteXmlReader(transaction, CommandType.StoredProcedure, spName, commandParameters);
             }
             else
             {
-                return SqlHelper.ExecuteXmlReader(transaction, CommandType.StoredProcedure, spName);
+                return ControladorSQL.ExecuteXmlReader(transaction, CommandType.StoredProcedure, spName);
             }
         }
         #endregion
@@ -2468,16 +2468,16 @@ namespace Universidad.AccesoDatos
     }
 
     /// <summary>
-    /// SqlHelperParameterCache provides functions to leverage a static cache of procedure parameters, and the
+    /// ControladorSQLParameterCache provides functions to leverage a static cache of procedure parameters, and the
     /// ability to discover parameters for stored procedures at run-time.
     /// </summary>
-    public sealed class SqlHelperParameterCache
+    public sealed class ControladorSQLParameterCache
     {
         #region private methods, variables, and constructors
 
         //Since this class provides only static methods, make the default constructor private to prevent 
-        //instances from being created with "new SqlHelperParameterCache()"
-        private SqlHelperParameterCache() { }
+        //instances from being created with "new ControladorSQLParameterCache()"
+        private ControladorSQLParameterCache() { }
 
         private static Hashtable paramCache = Hashtable.Synchronized(new Hashtable());
 

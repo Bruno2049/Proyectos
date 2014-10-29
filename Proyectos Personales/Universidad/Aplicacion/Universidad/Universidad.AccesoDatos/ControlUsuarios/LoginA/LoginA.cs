@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using Universidad.Entidades;
 
 namespace Universidad.AccesoDatos.ControlUsuarios.LoginA
@@ -46,6 +48,29 @@ namespace Universidad.AccesoDatos.ControlUsuarios.LoginA
             }
 
             return Usuario;
+        }
+
+        public US_USUARIOS LoginAdministradoresTSQL(string Nombre, string Contrasena)
+        {
+            const string executesqlstr = "SELECT TOP 1 * FROM US_USUARIOS WHERE USUARIO = @Usuario AND CONTRASENA = @Contrasena";
+            US_USUARIOS a = null;
+            try
+            {
+                var para = new SqlParameter[] { 
+                    new SqlParameter("@Usuario",Nombre),
+                    new SqlParameter("@Contrasena",Contrasena)                    
+                };
+                var obj = ControladorSQL.ExecuteScalar(ParametrosSQL.strCon_DBLsWebApp, CommandType.Text, executesqlstr, para);
+                if (obj != null)
+                {
+                    a = ((US_USUARIOS) obj);
+                }
+            }
+            catch (SqlException ex)
+            {
+                
+            }
+            return a;
         }
 
         #endregion

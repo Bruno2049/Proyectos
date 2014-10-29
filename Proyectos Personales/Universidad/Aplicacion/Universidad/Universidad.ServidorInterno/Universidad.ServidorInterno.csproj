@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GestionCatalogos\S_GestionCatalogos.svc" />
+    <Content Include="Global.asax" />
     <Content Include="index.aspx" />
     <Content Include="Login_S\S_Login.svc" />
     <Content Include="Newtonsoft.Json.dll" />
@@ -88,6 +89,9 @@
     <Compile Include="GestionCatalogos\IS_GestionCatalogos.cs" />
     <Compile Include="GestionCatalogos\S_GestionCatalogos.svc.cs">
       <DependentUpon>S_GestionCatalogos.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
