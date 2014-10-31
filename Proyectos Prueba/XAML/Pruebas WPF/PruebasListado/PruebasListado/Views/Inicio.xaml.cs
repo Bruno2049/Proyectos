@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace PruebasListado.Views
 {
     /// <summary>
-    /// Lógica de interacción para Inicio.xaml
+    /// Interaction logic for Inicio.xaml
     /// </summary>
     public partial class Inicio : Window
     {

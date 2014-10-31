@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace PruebasListado.Views
 {
     /// <summary>
-    /// Lógica de interacción para ListarPersonas.xaml
+    /// Interaction logic for ListarPersona.xaml
     /// </summary>
-    public partial class ListarPersonas : UserControl
+    public partial class ListarPersona : UserControl
     {
-        public ListarPersonas()
+        public ListarPersona()
         {
             InitializeComponent();
         }
