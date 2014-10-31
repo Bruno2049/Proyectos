@@ -6,6 +6,44 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-            
+        <ListBox x:Name="Lst_Datos" Margin="0,48,0,0" BorderThickness="0" HorizontalContentAlignment="Stretch">
+
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True" >
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Foreground" Value="Black" />
+                        </Trigger>
+                    </Style.Triggers>
+                    <Style.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+                        <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+                    </Style.Resources>
+                </Style>
+            </ListBox.ItemContainerStyle>
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,0,0,0" Background="LightSkyBlue" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox IsChecked="{Binding Seleccionado}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <StackPanel Margin="0,0,0,0" Grid.Column="1"  Grid.ColumnSpan="2">
+                            <TextBlock Text="{Binding Nombre}" FontFamily="Times New Roman"  FontSize="12px"/>
+                            <TextBlock Text="{Binding Descripcion}" FontFamily="Times New Roman"  FontSize="12px" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" />
+                        </StackPanel>
+                        <TextBlock Text="{Binding Adicional}" Grid.Column="2" FontFamily="Times New Roman"  FontSize="12px" HorizontalAlignment="Right" />
+
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
     </Grid>
 </UserControl>

@@ -22,6 +22,7 @@ namespace PruebasListado.Views
         public Inicio()
         {
             InitializeComponent();
+            DataContext = 
         }
     }
 }
