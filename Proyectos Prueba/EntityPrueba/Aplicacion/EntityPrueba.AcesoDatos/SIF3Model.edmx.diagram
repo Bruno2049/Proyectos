@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9c299f16ed0b4967897b3ec0df7e8657" Name="Diagrama1">
+        <EntityTypeShape EntityType="db_SimiSif3Model.Productos" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_SimiSif3Model.ProductosClasificaciones" Width="2" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_SimiSif3Model.ProductosPaises" Width="1.875" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_SimiSif3Model.ProductosReglas" Width="2.125" PointX="7.625" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="db_SimiSif3Model.FK_ProductosPaises_ProductoId" ManuallyRouted="false" />
+        <AssociationConnector Association="db_SimiSif3Model.FK_ProductosClasificaciones_ProductoPaisId" ManuallyRouted="false" ></AssociationConnector>
+        <AssociationConnector Association="db_SimiSif3Model.FK_ProductosReglas_ProductoPaisId" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="db_SimiSif3Model.ListasPrecios" Width="1.5" PointX="10.5" PointY="4.125" />
+        <EntityTypeShape EntityType="db_SimiSif3Model.PreciosProductos" Width="1.75" PointX="10.5" PointY="1.125" />
+        <EntityTypeShape EntityType="db_SimiSif3Model.TiposPrecios" Width="1.5" PointX="12.875" PointY="4.125" />
+        <AssociationConnector Association="db_SimiSif3Model.FK_ListasPrecio_ProductosPaisId1" />
+        <AssociationConnector Association="db_SimiSif3Model.FK_PreciosProducto_ListaPrecioId" />
+        <AssociationConnector Association="db_SimiSif3Model.FK_PreciosProducto_TipoPrecioId" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

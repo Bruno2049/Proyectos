@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="db_SimiSif3Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="db_SimiSif3ModelStoreContainer">
+          <EntitySet Name="Productos" EntityType="db_SimiSif3Model.Store.Productos" store:Type="Tables" Schema="Catalogos" />
+          <EntitySet Name="ProductosClasificaciones" EntityType="db_SimiSif3Model.Store.ProductosClasificaciones" store:Type="Tables" Schema="Catalogos" />
+          <EntitySet Name="ProductosPaises" EntityType="db_SimiSif3Model.Store.ProductosPaises" store:Type="Tables" Schema="Catalogos" />
+          <EntitySet Name="ProductosReglas" EntityType="db_SimiSif3Model.Store.ProductosReglas" store:Type="Tables" Schema="Catalogos" />
+          <AssociationSet Name="FK_ProductosClasificaciones_ProductoPaisId" Association="db_SimiSif3Model.Store.FK_ProductosClasificaciones_ProductoPaisId">
+            <End Role="ProductosPaises" EntitySet="ProductosPaises" />
+            <End Role="ProductosClasificaciones" EntitySet="ProductosClasificaciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductosPaises_ProductoId" Association="db_SimiSif3Model.Store.FK_ProductosPaises_ProductoId">
+            <End Role="Productos" EntitySet="Productos" />
+            <End Role="ProductosPaises" EntitySet="ProductosPaises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductosReglas_ProductoPaisId" Association="db_SimiSif3Model.Store.FK_ProductosReglas_ProductoPaisId">
+            <End Role="ProductosPaises" EntitySet="ProductosPaises" />
+            <End Role="ProductosReglas" EntitySet="ProductosReglas" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="ProductoId" />
+          </Key>
+          <Property Name="ProductoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="Combo" Type="bit" Nullable="false" />
+          <Property Name="TipoProductoId" Type="tinyint" Nullable="false" />
+          <Property Name="FechaAlta" Type="smalldatetime" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="ComentarioRelacionId" Type="int" />
+        </EntityType>
+        <EntityType Name="ProductosClasificaciones">
+          <Key>
+            <PropertyRef Name="ClasificacionId" />
+            <PropertyRef Name="ProductoPaisId" />
+          </Key>
+          <Property Name="ClasificacionId" Type="smallint" Nullable="false" />
+          <Property Name="ProductoPaisId" Type="int" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductosPaises">
+          <Key>
+            <PropertyRef Name="ProductoPaisId" />
+          </Key>
+          <Property Name="ProductoPaisId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PaisId" Type="tinyint" Nullable="false" />
+          <Property Name="ProductoId" Type="int" Nullable="false" />
+          <Property Name="LineaCatalogoId" Type="smallint" />
+          <Property Name="FormaFarmaceuticaId" Type="smallint" />
+          <Property Name="Presentacion" Type="varchar" MaxLength="50" />
+          <Property Name="Concentracion" Type="varchar" MaxLength="50" />
+          <Property Name="FechaInclusion" Type="smalldatetime" />
+          <Property Name="Imagen" Type="image" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="ComentarioRelacionId" Type="int" />
+        </EntityType>
+        <EntityType Name="ProductosReglas">
+          <Key>
+            <PropertyRef Name="ProductoReglaId" />
+          </Key>
+          <Property Name="ProductoReglaId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PaisId" Type="tinyint" Nullable="false" />
+          <Property Name="ProductoPaisId" Type="int" Nullable="false" />
+          <Property Name="ActivoCompra" Type="bit" />
+          <Property Name="ActivoDistribucion" Type="bit" />
+          <Property Name="ActivoVenta" Type="bit" />
+          <Property Name="ActivoExportar" Type="bit" />
+          <Property Name="CuadroBasicoSS" Type="bit" />
+          <Property Name="ClaveSS" Type="varchar" MaxLength="30" />
+          <Property Name="EnvioFarmacia" Type="bit" />
+          <Property Name="DiasCaducidadSucursal" Type="smallint" />
+          <Property Name="DiasCaducidadFanquicia" Type="smallint" />
+          <Property Name="DescuentoVolumen" Type="bit" />
+          <Property Name="VentaFranquicia" Type="bit" />
+          <Property Name="DescuentoFranquicia" Type="bit" />
+          <Property Name="DescuentoFranquiciaPorcentaje" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="VentaMayoreo" Type="bit" />
+          <Property Name="DescuentoMayoreo" Type="bit" />
+          <Property Name="ProductoVenta" Type="bit" Nullable="false" />
+          <Property Name="Regionalizacion" Type="bit" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ProductosClasificaciones_ProductoPaisId">
+          <End Role="ProductosPaises" Type="db_SimiSif3Model.Store.ProductosPaises" Multiplicity="1" />
+          <End Role="ProductosClasificaciones" Type="db_SimiSif3Model.Store.ProductosClasificaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductosPaises">
+              <PropertyRef Name="ProductoPaisId" />
+            </Principal>
+            <Dependent Role="ProductosClasificaciones">
+              <PropertyRef Name="ProductoPaisId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductosPaises_ProductoId">
+          <End Role="Productos" Type="db_SimiSif3Model.Store.Productos" Multiplicity="1" />
+          <End Role="ProductosPaises" Type="db_SimiSif3Model.Store.ProductosPaises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Productos">
+              <PropertyRef Name="ProductoId" />
+            </Principal>
+            <Dependent Role="ProductosPaises">
+              <PropertyRef Name="ProductoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductosReglas_ProductoPaisId">
+          <End Role="ProductosPaises" Type="db_SimiSif3Model.Store.ProductosPaises" Multiplicity="1" />
+          <End Role="ProductosReglas" Type="db_SimiSif3Model.Store.ProductosReglas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductosPaises">
+              <PropertyRef Name="ProductoPaisId" />
+            </Principal>
+            <Dependent Role="ProductosReglas">
+              <PropertyRef Name="ProductoPaisId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_SimiSif3Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="db_SimiSif3Entities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Productos" EntityType="db_SimiSif3Model.Productos" />
+          <EntitySet Name="ProductosClasificaciones" EntityType="db_SimiSif3Model.ProductosClasificaciones" />
+          <EntitySet Name="ProductosPaises" EntityType="db_SimiSif3Model.ProductosPaises" />
+          <EntitySet Name="ProductosReglas" EntityType="db_SimiSif3Model.ProductosReglas" />
+          <AssociationSet Name="FK_ProductosPaises_ProductoId" Association="db_SimiSif3Model.FK_ProductosPaises_ProductoId">
+            <End Role="Productos" EntitySet="Productos" />
+            <End Role="ProductosPaises" EntitySet="ProductosPaises" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductosClasificaciones_ProductoPaisId" Association="db_SimiSif3Model.FK_ProductosClasificaciones_ProductoPaisId">
+            <End Role="ProductosPaises" EntitySet="ProductosPaises" />
+            <End Role="ProductosClasificaciones" EntitySet="ProductosClasificaciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductosReglas_ProductoPaisId" Association="db_SimiSif3Model.FK_ProductosReglas_ProductoPaisId">
+            <End Role="ProductosPaises" EntitySet="ProductosPaises" />
+            <End Role="ProductosReglas" EntitySet="ProductosReglas" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="ProductoId" />
+          </Key>
+          <Property Name="ProductoId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="Combo" Type="Boolean" Nullable="false" />
+          <Property Name="TipoProductoId" Type="Byte" Nullable="false" />
+          <Property Name="FechaAlta" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" />
+          <Property Name="ComentarioRelacionId" Type="Int32" />
+          <NavigationProperty Name="ProductosPaises" Relationship="db_SimiSif3Model.FK_ProductosPaises_ProductoId" FromRole="Productos" ToRole="ProductosPaises" />
+        </EntityType>
+        <EntityType Name="ProductosClasificaciones">
+          <Key>
+            <PropertyRef Name="ClasificacionId" />
+            <PropertyRef Name="ProductoPaisId" />
+          </Key>
+          <Property Name="ClasificacionId" Type="Int16" Nullable="false" />
+          <Property Name="ProductoPaisId" Type="Int32" Nullable="false" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ProductosPaises" Relationship="db_SimiSif3Model.FK_ProductosClasificaciones_ProductoPaisId" FromRole="ProductosClasificaciones" ToRole="ProductosPaises" />
+        </EntityType>
+        <EntityType Name="ProductosPaises">
+          <Key>
+            <PropertyRef Name="ProductoPaisId" />
+          </Key>
+          <Property Name="ProductoPaisId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PaisId" Type="Byte" Nullable="false" />
+          <Property Name="ProductoId" Type="Int32" Nullable="false" />
+          <Property Name="LineaCatalogoId" Type="Int16" />
+          <Property Name="FormaFarmaceuticaId" Type="Int16" />
+          <Property Name="Presentacion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Concentracion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FechaInclusion" Type="DateTime" Precision="0" />
+          <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" />
+          <Property Name="ComentarioRelacionId" Type="Int32" />
+          <NavigationProperty Name="Productos" Relationship="db_SimiSif3Model.FK_ProductosPaises_ProductoId" FromRole="ProductosPaises" ToRole="Productos" />
+          <NavigationProperty Name="ProductosClasificaciones" Relationship="db_SimiSif3Model.FK_ProductosClasificaciones_ProductoPaisId" FromRole="ProductosPaises" ToRole="ProductosClasificaciones" />
+          <NavigationProperty Name="ProductosReglas" Relationship="db_SimiSif3Model.FK_ProductosReglas_ProductoPaisId" FromRole="ProductosPaises" ToRole="ProductosReglas" />
+        </EntityType>
+        <EntityType Name="ProductosReglas">
+          <Key>
+            <PropertyRef Name="ProductoReglaId" />
+          </Key>
+          <Property Name="ProductoReglaId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PaisId" Type="Byte" Nullable="false" />
+          <Property Name="ProductoPaisId" Type="Int32" Nullable="false" />
+          <Property Name="ActivoCompra" Type="Boolean" />
+          <Property Name="ActivoDistribucion" Type="Boolean" />
+          <Property Name="ActivoVenta" Type="Boolean" />
+          <Property Name="ActivoExportar" Type="Boolean" />
+          <Property Name="CuadroBasicoSS" Type="Boolean" />
+          <Property Name="ClaveSS" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="EnvioFarmacia" Type="Boolean" />
+          <Property Name="DiasCaducidadSucursal" Type="Int16" />
+          <Property Name="DiasCaducidadFanquicia" Type="Int16" />
+          <Property Name="DescuentoVolumen" Type="Boolean" />
+          <Property Name="VentaFranquicia" Type="Boolean" />
+          <Property Name="DescuentoFranquicia" Type="Boolean" />
+          <Property Name="DescuentoFranquiciaPorcentaje" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="VentaMayoreo" Type="Boolean" />
+          <Property Name="DescuentoMayoreo" Type="Boolean" />
+          <Property Name="ProductoVenta" Type="Boolean" Nullable="false" />
+          <Property Name="Regionalizacion" Type="Boolean" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ProductosPaises" Relationship="db_SimiSif3Model.FK_ProductosReglas_ProductoPaisId" FromRole="ProductosReglas" ToRole="ProductosPaises" />
+        </EntityType>
+        <Association Name="FK_ProductosPaises_ProductoId">
+          <End Role="Productos" Type="db_SimiSif3Model.Productos" Multiplicity="1" />
+          <End Role="ProductosPaises" Type="db_SimiSif3Model.ProductosPaises" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Productos">
+              <PropertyRef Name="ProductoId" />
+            </Principal>
+            <Dependent Role="ProductosPaises">
+              <PropertyRef Name="ProductoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductosClasificaciones_ProductoPaisId">
+          <End Role="ProductosPaises" Type="db_SimiSif3Model.ProductosPaises" Multiplicity="1" />
+          <End Role="ProductosClasificaciones" Type="db_SimiSif3Model.ProductosClasificaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductosPaises">
+              <PropertyRef Name="ProductoPaisId" />
+            </Principal>
+            <Dependent Role="ProductosClasificaciones">
+              <PropertyRef Name="ProductoPaisId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductosReglas_ProductoPaisId">
+          <End Role="ProductosPaises" Type="db_SimiSif3Model.ProductosPaises" Multiplicity="1" />
+          <End Role="ProductosReglas" Type="db_SimiSif3Model.ProductosReglas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductosPaises">
+              <PropertyRef Name="ProductoPaisId" />
+            </Principal>
+            <Dependent Role="ProductosReglas">
+              <PropertyRef Name="ProductoPaisId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_SimiSif3ModelStoreContainer" CdmEntityContainer="db_SimiSif3Entities">
+          <EntitySetMapping Name="Productos">
+            <EntityTypeMapping TypeName="db_SimiSif3Model.Productos">
+              <MappingFragment StoreEntitySet="Productos">
+                <ScalarProperty Name="ProductoId" ColumnName="ProductoId" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Combo" ColumnName="Combo" />
+                <ScalarProperty Name="TipoProductoId" ColumnName="TipoProductoId" />
+                <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="ComentarioRelacionId" ColumnName="ComentarioRelacionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductosClasificaciones">
+            <EntityTypeMapping TypeName="db_SimiSif3Model.ProductosClasificaciones">
+              <MappingFragment StoreEntitySet="ProductosClasificaciones">
+                <ScalarProperty Name="ClasificacionId" ColumnName="ClasificacionId" />
+                <ScalarProperty Name="ProductoPaisId" ColumnName="ProductoPaisId" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductosPaises">
+            <EntityTypeMapping TypeName="db_SimiSif3Model.ProductosPaises">
+              <MappingFragment StoreEntitySet="ProductosPaises">
+                <ScalarProperty Name="ProductoPaisId" ColumnName="ProductoPaisId" />
+                <ScalarProperty Name="PaisId" ColumnName="PaisId" />
+                <ScalarProperty Name="ProductoId" ColumnName="ProductoId" />
+                <ScalarProperty Name="LineaCatalogoId" ColumnName="LineaCatalogoId" />
+                <ScalarProperty Name="FormaFarmaceuticaId" ColumnName="FormaFarmaceuticaId" />
+                <ScalarProperty Name="Presentacion" ColumnName="Presentacion" />
+                <ScalarProperty Name="Concentracion" ColumnName="Concentracion" />
+                <ScalarProperty Name="FechaInclusion" ColumnName="FechaInclusion" />
+                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="ComentarioRelacionId" ColumnName="ComentarioRelacionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductosReglas">
+            <EntityTypeMapping TypeName="db_SimiSif3Model.ProductosReglas">
+              <MappingFragment StoreEntitySet="ProductosReglas">
+                <ScalarProperty Name="ProductoReglaId" ColumnName="ProductoReglaId" />
+                <ScalarProperty Name="PaisId" ColumnName="PaisId" />
+                <ScalarProperty Name="ProductoPaisId" ColumnName="ProductoPaisId" />
+                <ScalarProperty Name="ActivoCompra" ColumnName="ActivoCompra" />
+                <ScalarProperty Name="ActivoDistribucion" ColumnName="ActivoDistribucion" />
+                <ScalarProperty Name="ActivoVenta" ColumnName="ActivoVenta" />
+                <ScalarProperty Name="ActivoExportar" ColumnName="ActivoExportar" />
+                <ScalarProperty Name="CuadroBasicoSS" ColumnName="CuadroBasicoSS" />
+                <ScalarProperty Name="ClaveSS" ColumnName="ClaveSS" />
+                <ScalarProperty Name="EnvioFarmacia" ColumnName="EnvioFarmacia" />
+                <ScalarProperty Name="DiasCaducidadSucursal" ColumnName="DiasCaducidadSucursal" />
+                <ScalarProperty Name="DiasCaducidadFanquicia" ColumnName="DiasCaducidadFanquicia" />
+                <ScalarProperty Name="DescuentoVolumen" ColumnName="DescuentoVolumen" />
+                <ScalarProperty Name="VentaFranquicia" ColumnName="VentaFranquicia" />
+                <ScalarProperty Name="DescuentoFranquicia" ColumnName="DescuentoFranquicia" />
+                <ScalarProperty Name="DescuentoFranquiciaPorcentaje" ColumnName="DescuentoFranquiciaPorcentaje" />
+                <ScalarProperty Name="VentaMayoreo" ColumnName="VentaMayoreo" />
+                <ScalarProperty Name="DescuentoMayoreo" ColumnName="DescuentoMayoreo" />
+                <ScalarProperty Name="ProductoVenta" ColumnName="ProductoVenta" />
+                <ScalarProperty Name="Regionalizacion" ColumnName="Regionalizacion" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
