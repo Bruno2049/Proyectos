@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D602F323-77C4-406C-B838-0F9FD73D0C08}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PAEEEM.AccesoDatos</RootNamespace>
+    <AssemblyName>PAEEEM.AccesoDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\PAEEEM_Augusto\PAEEEM\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\..\PAEEEM_Augusto\PAEEEM\bin\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminUsuarios\PermisoUsuarioDal.cs" />
+    <Compile Include="AltaBajaEquipos\AltaEquipos.cs" />
+    <Compile Include="AltaBajaEquipos\BajaEquipos.cs" />
+    <Compile Include="AltaBajaEquipos\DatosCompEquipoAlta.cs" />
+    <Compile Include="AltaBajaEquipos\DetalleEquiposAltaBajaEfic.cs" />
+    <Compile Include="AltaBajaEquipos\HorasTecnologia.cs" />
+    <Compile Include="AltaBajaEquipos\RegionesBioclimaticas.cs" />
+    <Compile Include="AltaBajaEquipos\RegionesMunFactBio.cs" />
+    <Compile Include="AltaBajaEquipos\TablasAhorro.cs" />
+    <Compile Include="CargaMasivaProductos\CargaProductos.cs" />
+    <Compile Include="Catalogos\AccionesRol.cs" />
+    <Compile Include="Catalogos\AdminProducto.cs" />
+    <Compile Include="Catalogos\CapacidadSustitucion.cs" />
+    <Compile Include="Catalogos\CapturaSolicitud.cs" />
+    <Compile Include="Catalogos\cat_autorizacionProveedor.cs" />
+    <Compile Include="Catalogos\CAT_PROVEEDOR_ALTAPRO.cs" />
+    <Compile Include="Catalogos\Cliente.cs" />
+    <Compile Include="Catalogos\ComunicacionSicom.cs" />
+    <Compile Include="Catalogos\Credito.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Catalogos\DelegacionMunicipio.cs" />
+    <Compile Include="Catalogos\DetalleCredito.cs" />
+    <Compile Include="Catalogos\Direccion.cs" />
+    <Compile Include="Catalogos\EQUIPOS_BAJA_ALTA.cs" />
+    <Compile Include="Catalogos\Estado.cs" />
+    <Compile Include="Catalogos\EstatusUsuario.cs" />
+    <Compile Include="Catalogos\FACTOR_SUSTITUCION.cs" />
+    <Compile Include="Catalogos\Mes.cs" />
+    <Compile Include="Catalogos\Metas.cs" />
+    <Compile Include="Catalogos\MotivoCancelacionPlantilla.cs" />
+    <Compile Include="Catalogos\MotivosCancelar_Rechazar.cs" />
+    <Compile Include="Catalogos\MotivosNoCreditos.cs" />
+    <Compile Include="Catalogos\Negocio.cs" />
+    <Compile Include="Catalogos\Origen.cs" />
+    <Compile Include="Catalogos\PLANTILLA.cs" />
+    <Compile Include="Catalogos\Producto.cs" />
+    <Compile Include="Catalogos\Programa.cs" />
+    <Compile Include="Catalogos\RefCliente.cs" />
+    <Compile Include="Catalogos\RefNotariales.cs" />
+    <Compile Include="Catalogos\Region.cs" />
+    <Compile Include="Catalogos\TARIFAS.cs" />
+    <Compile Include="Catalogos\TECNOLOGIA.cs" />
+    <Compile Include="Catalogos\TIPO_MOVIMIENTO.cs" />
+    <Compile Include="Catalogos\TipoZona.cs" />
+    <Compile Include="Catalogos\TIPO_PRODUCTO.cs" />
+    <Compile Include="Catalogos\UNIDAD_TECNOLOGICA.cs" />
+    <Compile Include="Catalogos\VariablesGlobales.cs" />
+    <Compile Include="Catalogos\Zona.cs" />
+    <Compile Include="CayD\ReasignarSolicitudes.cs" />
+    <Compile Include="CirculoCredito\PaquetesPendientes.cs" />
+    <Compile Include="CirculoCredito\PaquetesRevision.cs" />
+    <Compile Include="CreditosAutorizadosA\CreditosAutorizadosA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRepositorio.cs" />
+    <Compile Include="Log\CAT_CENTRO_DISP.cs" />
+    <Compile Include="Log\CAT_CENTRO_DISP_SUCURSAL.cs" />
+    <Compile Include="Log\CAT_PRODUCTO.cs" />
+    <Compile Include="Log\CAT_PROVEEDOR.cs" />
+    <Compile Include="Log\CAT_PROVEEDORBRANCH.cs" />
+    <Compile Include="Log\ConsultaHistoricos.cs" />
+    <Compile Include="Log\DbMonitorLog.cs" />
+    <Compile Include="Log\Registrar.cs" />
+    <Compile Include="ModuloCentral\Consultas.cs" />
+    <Compile Include="ModuloCentral\DatosConsultHistoricoProveedores.cs" />
+    <Compile Include="MRV\ConsumosDal.cs" />
+    <Compile Include="MRV\CuestionarioDal.cs" />
+    <Compile Include="MRV\Mediciones.cs" />
+    <Compile Include="Operacion Datos\AdministracionUsuarios.cs" />
+    <Compile Include="Operacion Datos\ConfiguracionComando.cs" />
+    <Compile Include="PAEEEMDBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PAEEEMDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAEEEMDBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PAEEEMDBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReactivarCredito\DatosRequeridos.cs" />
+    <Compile Include="Reportes\ReporteDistribuidores.cs" />
+    <Compile Include="Repositorio.cs" />
+    <Compile Include="RPUZona\ValidacionZonaA.cs" />
+    <Compile Include="SolicitudCredito\CambioTarifa.cs" />
+    <Compile Include="SolicitudCredito\CAPTURA.cs" />
+    <Compile Include="SolicitudCredito\CapturaAuxiliarDal.cs" />
+    <Compile Include="SolicitudCredito\CREDITO_DAL.cs" />
+    <Compile Include="SolicitudCredito\CREDITO_LOG.cs" />
+    <Compile Include="SolicitudCredito\CRE_CREDITO.cs" />
+    <Compile Include="SolicitudCredito\ESTRATIFICACION_MIPYMES.cs" />
+    <Compile Include="SolicitudCredito\ResponseData.cs" />
+    <Compile Include="SolicitudCredito\SECTOR_ECONOMICO.cs" />
+    <Compile Include="TarifaSubEstaciones\SubEstacionesDatos.cs" />
+    <Compile Include="Tarifas\CATREGIONESTARIFAS.cs" />
+    <Compile Include="Tarifas\D_Historico_Tarifas.cs" />
+    <Compile Include="Tarifas\FactorDegradacionDatos.cs" />
+    <Compile Include="Tarifas\TARIFA_02.cs" />
+    <Compile Include="Tarifas\TARIFA_03.cs" />
+    <Compile Include="Tarifas\TARIFA_HM.cs" />
+    <Compile Include="Tarifas\TARIFA_OM.cs" />
+    <Compile Include="Catalogos\PeriodoPago.cs" />
+    <Compile Include="Trama\InformacionParseo.cs" />
+    <Compile Include="Trama\ParametrosGlobales.cs" />
+    <Compile Include="Validacion_RFC_A\Validacion_RFC_A.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Vendedores\RegistrarVendedor.cs" />
+    <Compile Include="Vendedores\ValidarVendedor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="PAEEEMDBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PAEEEMDBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PAEEEMDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <CustomToolNamespace>PAEEEM.Entidades</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>PAEEEMDBModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="PAEEEMDBModel.edmx.diagram">
+      <DependentUpon>PAEEEMDBModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PAEEEM.Entidades\PAEEEM.Entidades.csproj">
+      <Project>{cd5b0c02-eefe-4e44-a732-d17fee1a8fb4}</Project>
+      <Name>PAEEEM.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.Helpers\PAEEEM.Helpers.csproj">
+      <Project>{cc5c065f-75c1-40a7-821f-3b33d97c4bc8}</Project>
+      <Name>PAEEEM.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

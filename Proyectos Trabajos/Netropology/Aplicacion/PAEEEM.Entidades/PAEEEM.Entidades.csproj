@@ -1,0 +1,916 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD5B0C02-EEFE-4E44-A732-D17FEE1A8FB4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PAEEEM.Entidades</RootNamespace>
+    <AssemblyName>PAEEEM.Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABE_HORAS_TECNOLOGIA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ABE_REGIONES_BIOCLIMATICAS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ABE_REGIONES_MUNICIPIO_FACT_BIO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ABE_SECTOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ABE_SUB_SECTOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ABE_TABLAS_AHORRO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ABE_UNIDAD_TECNOLOGIA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ABE_VALORES_PRODUCTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACCIONES_ROL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACCIONES_USUARIO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACCION_ESTATUS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACCION_ESTATUS_PROVEEDOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsuarios\AccionUsuario.cs" />
+    <Compile Include="AdminUsuarios\PermisoUsuario.cs" />
+    <Compile Include="AdminUsuarios\RolPermiso.cs" />
+    <Compile Include="AdminUsuarios\UsuarioPermiso.cs" />
+    <Compile Include="AltaBajaEquipos\CompAhorrosTecnologia.cs" />
+    <Compile Include="AltaBajaEquipos\ComTecnologiaValida.cs" />
+    <Compile Include="AltaBajaEquipos\DatosFacturacion.cs" />
+    <Compile Include="AltaBajaEquipos\DetalleEquipoAltaEfic.cs" />
+    <Compile Include="AltaBajaEquipos\DetalleEquiposBajaEfic.cs" />
+    <Compile Include="AltaBajaEquipos\DetallePresupuesto.cs" />
+    <Compile Include="AltaBajaEquipos\Equipos.cs" />
+    <Compile Include="AltaBajaEquipos\GrdEquiposAlta.cs" />
+    <Compile Include="AltaBajaEquipos\GridEquiposBaja.cs" />
+    <Compile Include="AltaBajaEquipos\Presupuesto.cs" />
+    <Compile Include="Alta_Solicitud\CapturaAuxiliar.cs" />
+    <Compile Include="Alta_Solicitud\Cliente.cs" />
+    <Compile Include="Alta_Solicitud\Colonia.cs" />
+    <Compile Include="Alta_Solicitud\CompResponseData.cs" />
+    <Compile Include="Alta_Solicitud\Credito.cs" />
+    <Compile Include="Alta_Solicitud\CreditoCambioTarifa.cs" />
+    <Compile Include="Alta_Solicitud\DatosPyme.cs" />
+    <Compile Include="Alta_Solicitud\HistoricoCredito.cs" />
+    <Compile Include="ANCLAJE.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ANOMALIAS_VENDEDORES.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AUX_DATOS_TRAMA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AUX_HISTORIAL_CONSUMO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BitacoraSis.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuroCreditoPAEEEM.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cambio_RPU.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CancelarRechazar\CAT_Motivos.cs" />
+    <Compile Include="CancelarRechazar\PlantillaMotivoCancel.cs" />
+    <Compile Include="CANCELAR_RECHAZAR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_ACCIONES.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_AHORRO_AACONDIC.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_AHORRO_ILUM_LINEAL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_AHORRO_MOTORES.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_AHORRO_REFRIGERACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_AUXILIAR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CALENDARIO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CAMPOS_BASE_PLANTILLA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CAMPOS_CUSTOM.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CAMPOS_PLANTILLA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CAMPOS_PLANTILLA_VALOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CAPACIDAD_SUSTITUCION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CENTRO_DISP.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CENTRO_DISP_SUCURSAL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CLI_REGIMEN_CONYUGAL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CLI_TIPO_ACREDITACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CLI_TIPO_IDENTIFICACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CODIGO_POSTAL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CODIGO_POSTAL_SEPOMEX.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_COMBINACION_TECNOLOGIAS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_CP_SEPOMEX.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_DELEG_MUNICIPIO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_EQUIPOS_BAJA_ALTA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_ESTADO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_ESTADO_CIVIL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_ESTATUS_CENTRO_DISP.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_ESTATUS_CONSULTA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_ESTATUS_CREDITO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_ESTATUS_PAQUETE.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_ESTATUS_PRODUCTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_ESTATUS_PROVEEDOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_ESTRATIFICACION_MIPYMES.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_FABRICANTE.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_FACTOR_SUSTITUCION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_FINANCIADOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_IDENTIFICACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_MARCA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_MODULOS_SE.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_PERIODO_PAGO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_PLANTILLA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_POTENCIA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_PROCESO_LOG.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_PRODUCTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_PRODUCTO_CAPACIDAD.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_PROGRAMA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_PROVEEDOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_PROVEEDORBRANCH.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_REGIMEN_CONYUGAL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_REGION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_REGIONES_TARIFAS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_RESIDUO_MATERIAL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SECTOR_ECONOMICO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SEXO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_APARTARRAYO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_APARTARRAYO_MARCA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_CLASE.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_CONDUCTOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_CONDUCTOR_MARCA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_COND_CONEXION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_COND_CONEXION_MARCA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_CORTACIRCUITO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_CORTACIRC_MARCA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_INTERRUPTOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_INTERRUPTOR_MARCA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_TIPO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_TRANSFORMADOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_TRANSFORM_FASE.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_TRANSFORM_MARCA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_SE_TRANSFORM_RELACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TAREAS_PROCESOS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TARIFA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TARIFAS_X_TECNOLOGIA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TECNOLOGIA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TIPO_ACREDITACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TIPO_FOTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TIPO_INDUSTRIA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TIPO_MOVIMIENTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TIPO_PROCESOS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TIPO_PRODUCTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TIPO_PROPIEDAD.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TIPO_SOCIEDAD.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_TIPO_TECNOLOGIA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_VALORES_CAMPOS_CAT.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAT_ZONA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAyD\DatosReasignar.cs" />
+    <Compile Include="CAyD\TempReasignar.cs" />
+    <Compile Include="CirculoCredito\CatEstatusCirculo.cs" />
+    <Compile Include="CirculoCredito\ConsultaPaquetes.cs" />
+    <Compile Include="CirculoCredito\DatosPackPendiente.cs" />
+    <Compile Include="CirculoCredito\RevisionPaquete.cs" />
+    <Compile Include="CirculoCredito\TemporalPDFs.cs" />
+    <Compile Include="CLI_Cliente.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLI_Cliente_Migracion.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLI_HORARIOS_OPERACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLI_Negocio.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLI_Referencias_Notariales.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLI_Ref_Cliente.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLI_Tipo_Ref.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONS_REFRIGERACION_COMERCIAL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CreditosAutorizadosE\Equipos.cs" />
+    <Compile Include="CreditosAutorizadosE\GridCreditosLiberados.cs" />
+    <Compile Include="CREDITOS_LIQUIDADOS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_CAPACIDAD_PAGO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_Consultas.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_Credito.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_CREDITO_AMORTIZACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_CREDITO_EQUIPOS_BAJA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_Facturacion.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_FACTURACION_DETALLE.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_FOTOS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_GRUPOS_TECNOLOGIA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_HISTORICO_CONSUMO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_PRESUPUESTO_INVERSION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_PSR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_RFCValido.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cre_Sustitucion_Complementaria.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRE_ValidacionRFC.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCredito.cs" />
+    <Compile Include="DIAS_OPERACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DIR_Direcciones.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DISTRIBUIDORES_ACTIVOS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntidadCredito.cs" />
+    <Compile Include="EQUIPOS_ALTA_NP.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EQUIPO_BAJA_NP.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Estatus_Validacion_RFC.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTATUS_VENDEDORES.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FACTOR_DEGRADACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GL_SECCIONES.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="H_GLOSSARY.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="H_LOG_ACTIVIDAD.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="H_NUMERO_SECUENCIA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="H_OPERACION_TOTAL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="H_SCHEDULED_NOTIFICATION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="H_SCHEDULE_JOBS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_ACTA_INHABILITACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_ACTA_RECUPERACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CAT_PROVEEDOR_CAT_CENTRO_DISP.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CENTRO_DISP_TECNOLOGIA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CONSULTAS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CONSULTAS_CREDITO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CREDITO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CREDITO_AMORTIZACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CREDITO_COSTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CREDITO_DESCUENTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CREDITO_LOG.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CREDITO_PRODUCTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CREDITO_SUSTITUCION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CREDITO_SUSTITUCION_20121030.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CREDITO_SUSTITUCION_EXTENSION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_CREDITO_TEMP.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_DATOS_PYME.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_INHABILITACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_INHABILITACION_PRODUCTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_LOG.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_METAS_REGION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_PRODUCTO_CHARACTERS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_PROGRAMA_COSTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_PROGRAMA_DESCUENTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_PROGRAMA_DET_FONDO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_PROGRAMA_TARIFA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_PROG_TECNOLOGIA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_PROVEEDOR_PRODUCTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_RECUPERACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_RECUPERACION_PRODUCTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_TARIFA_02.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_TARIFA_03.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_TARIFA_COSTO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_TARIFA_HM.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_TARIFA_OM.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_TARIFA_PROMEDIO_CFE.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="K_TECNOLOGIA_RESIDUO_MATERIAL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LIQUIDADOS_CAMBIO_RPU.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Load_LayOut.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Load_LogDetail.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Load_LogHeader.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Log_Canceled.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MATERIAL_CUBIERTA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloCentral\CAMPO_BASE_PLANTILLA.cs" />
+    <Compile Include="ModuloCentral\CAMPO_CUSTMIZABLE.cs" />
+    <Compile Include="ModuloCentral\CAMPO_CUSTOMIZABLE_PLANTILLA.cs" />
+    <Compile Include="ModuloCentral\CAMPO_CUSTOMIZABLE_PRODUCTO.cs" />
+    <Compile Include="ModuloCentral\CatProductProveedor.cs" />
+    <Compile Include="ModuloCentral\COMBINACION_TECNOLOGIA.cs" />
+    <Compile Include="ModuloCentral\COMP_PLANTILLA.cs" />
+    <Compile Include="ModuloCentral\COMP_PRODUCTO.cs" />
+    <Compile Include="ModuloCentral\COMP_TECNOLOGIA.cs" />
+    <Compile Include="ModuloCentral\DatHistoricoProveedores.cs" />
+    <Compile Include="ModuloCentral\DatosConsulta.cs" />
+    <Compile Include="ModuloCentral\DatosConsultaCredito.cs" />
+    <Compile Include="ModuloCentral\DatosCreditxRPU.cs" />
+    <Compile Include="ModuloCentral\datosProveedorBranch.cs" />
+    <Compile Include="ModuloCentral\datosSucursalVirtual.cs" />
+    <Compile Include="ModuloCentral\DATOS_REACTIVACION.cs" />
+    <Compile Include="ModuloCentral\EquiposAltaBaja.cs" />
+    <Compile Include="ModuloCentral\HistoricoConsultas.cs" />
+    <Compile Include="ModuloCentral\LayOutExcel.cs" />
+    <Compile Include="ModuloCentral\MotivosCredito.cs" />
+    <Compile Include="ModuloCentral\TARIFA_TECNOLOGIA.cs" />
+    <Compile Include="ModuloCentral\VALOR_CAMPO_CATALOGO.cs" />
+    <Compile Include="ModuloCentral\VALOR_CATALOGO.cs" />
+    <Compile Include="ModuloCentral\DetalleVariablesGlobales.cs" />
+    <Compile Include="MOTIVOS_CANCELACION_PROVEEDOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOTIVOS_RECHAZOS_CANCELACIONES.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV\Cuestionario.cs" />
+    <Compile Include="MRV\EquipoAlaEficiencia.cs" />
+    <Compile Include="MRV\GrupoCredito.cs" />
+    <Compile Include="MRV\Medicion.cs" />
+    <Compile Include="MRV\MedicionDetalle.cs" />
+    <Compile Include="MRV_CAT_CAMPOS_MEDICION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_CAT_PERSONAL_MEDICION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_CONSULTA_CONSUMOS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_CUESTIONARIO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_EQUIPOS_CUESTIONARIO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_EQUIPOS_MEDICION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_FOTOS_CUESTIONARIO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_FOTOS_MEDICION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_GRUPOS_MEDICION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_HIST_CONSULTA_CONSUMOS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_HORARIOS_OPERACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_HORAS_OPERACION_TOTAL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_MEDICION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MRV_MEDICION_DETALLE.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAEEEMDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaisEstado.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAQUETES_CIRCULO_CREDITO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERDIDA.cs" />
+    <Compile Include="PERDIDAS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PROTECCION_CONTRA_EXPLOSION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROTECCION_CONTRA_FUEGO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROTECCION_GABINETE.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROTECCION_SIN_CORRIENTE.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Regionalizacion.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RELACION_ROL_MOTIVO_CANCELACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RELACION_VENDEDOR_DISTRIBUIDOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Distribuidor.cs" />
+    <Compile Include="Reportes\RegionDistribuidor.cs" />
+    <Compile Include="ResponseData.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RPUZona\Region_Zona.cs" />
+    <Compile Include="RPUZona\UsuarioDistZona.cs" />
+    <Compile Include="RPUZona\ZonaRPURD.cs" />
+    <Compile Include="SIRCA_RPU.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMA_ARREGLO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUBESTACIONE.cs" />
+    <Compile Include="SUBESTACIONES.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubEstaciones\CambioRPU.cs" />
+    <Compile Include="SubEstaciones\Cambio_RPU_Entidad.cs" />
+    <Compile Include="SubEstaciones\Correos.cs" />
+    <Compile Include="SubEstaciones\NuevoRPU.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tabcreditoszonadif.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tarifas\CAT_Tecnologia_FD.cs" />
+    <Compile Include="Tarifas\EstructuraTarifa.cs" />
+    <Compile Include="Tarifas\CompTarifa.cs" />
+    <Compile Include="Tarifas\DETALLE_TARIFA.cs" />
+    <Compile Include="Tarifas\Factor_Degradacion_En.cs" />
+    <Compile Include="Tecnologias\DescTecnologias.cs" />
+    <Compile Include="temp3.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="temp4.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TERMINAL_TIERRA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPOS_HORARIOS.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo_Domicilio.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_ENCAPSULADO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo_Facturacion.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_IDENTIFICACION_VENDEDORES.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_MONITOR.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_PROTECCION_EXTERNA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPO_PROTECCION_INTERNA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Trama\CompConsumo.cs" />
+    <Compile Include="Trama\CompDetalleConsumo.cs" />
+    <Compile Include="Trama\CompInformacionGeneral.cs" />
+    <Compile Include="Trama\CompParseo.cs" />
+    <Compile Include="Trama\CompConcepto.cs" />
+    <Compile Include="Trama\CompHistorial.cs" />
+    <Compile Include="TR_COMUNICACION_SICOM.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TR_ESTATUS_USUARIO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TR_INFORMACION_PARSEO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TR_MES.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TR_ORIGEN.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TR_PARAMETROS_GLOBALES.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TR_TIPO_OPERACION_INFO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TR_TIPO_ZONA.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="US_NAVEGACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="US_OPERACION.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="US_PERMISO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="US_ROL.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="US_ROL_PERMISO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="US_USUARIO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="US_USUARIO_PERMISO.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Utilizables\CComboBox.cs" />
+    <Compile Include="Utilizables\ConsultaCrediticia.cs" />
+    <Compile Include="SubEstaciones\EsSubEstacion.cs" />
+    <Compile Include="Validacion_RFC_E\CorreosValidacionRFC.cs" />
+    <Compile Include="Validacion_RFC_E\DatosValidacionRFCZona.cs" />
+    <Compile Include="Validacion_RFC_E\GridZona.cs" />
+    <Compile Include="Validacion_RFC_E\ProcesoValidacionRFC.cs" />
+    <Compile Include="Validacion_RFC_E\ProcesoValidacionRFC_E.cs" />
+    <Compile Include="VENDEDORES.cs">
+      <DependentUpon>PAEEEMDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedores\DatosVendedoresDist.cs" />
+    <Compile Include="Vendedores\DatosVendedoresRegZon.cs" />
+    <Compile Include="Vendedores\TempImagen.cs" />
+    <Compile Include="Vendedores\TipoIdentificacion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PAEEEMDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PAEEEMDBModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

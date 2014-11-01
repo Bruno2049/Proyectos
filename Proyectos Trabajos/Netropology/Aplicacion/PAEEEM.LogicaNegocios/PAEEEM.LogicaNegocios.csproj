@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4E04E16-2C27-4D38-9151-88CE702D8811}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PAEEEM.LogicaNegocios</RootNamespace>
+    <AssemblyName>PAEEEM.LogicaNegocios</AssemblyName>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminUsuarios\ValidacionesUsuario.cs" />
+    <Compile Include="AltaBajaEquipos\DetalleResumenEquipos.cs" />
+    <Compile Include="AltaBajaEquipos\InfoCompAltaBajaEquipos.cs" />
+    <Compile Include="AltaBajaEquipos\OpEquiposAbEficiencia.cs" />
+    <Compile Include="CAyD\Reasignar.cs" />
+    <Compile Include="CirculoCredito\ConsultPaquete.cs" />
+    <Compile Include="CirculoCredito\GeneracionPaquetes.cs" />
+    <Compile Include="CreditosAutorizadosL\CreditosAutorizadosL.cs" />
+    <Compile Include="Credito\CAT_MotivosCancelRechaza.cs" />
+    <Compile Include="Credito\ConsultaCredito.cs" />
+    <Compile Include="Credito\Reactivacion.cs" />
+    <Compile Include="Credito\variables.cs" />
+    <Compile Include="LOG\ConsultaHistoricoBL.cs" />
+    <Compile Include="LOG\INSERTLOG.cs" />
+    <Compile Include="LOG\LNMonitorLog.cs" />
+    <Compile Include="LOG\Usuarios.cs" />
+    <Compile Include="ModuloCentral\AccionesMonitor_Rol.cs" />
+    <Compile Include="ModuloCentral\AdministraProducto.cs" />
+    <Compile Include="ModuloCentral\AdministrarVariablesGlobales.cs" />
+    <Compile Include="ModuloCentral\AltaProveedor.cs" />
+    <Compile Include="ModuloCentral\AppExcel.cs" />
+    <Compile Include="ModuloCentral\CargaMasivaProductos.cs" />
+    <Compile Include="ModuloCentral\CatalogosPlanilla.cs" />
+    <Compile Include="ModuloCentral\CatalogosRegionZona.cs" />
+    <Compile Include="ModuloCentral\CatalogosTecnologia.cs" />
+    <Compile Include="ModuloCentral\cmConsultas.cs" />
+    <Compile Include="ModuloCentral\DatosMontos.cs" />
+    <Compile Include="ModuloCentral\HistoricoProveedor.cs" />
+    <Compile Include="ModuloCentral\NoCredito.cs" />
+    <Compile Include="ModuloCentral\ProcesaExcel.cs" />
+    <Compile Include="ModuloCentral\ProductoCat.cs" />
+    <Compile Include="MRV\ConsumosLN.cs" />
+    <Compile Include="MRV\CuestionarioLN.cs" />
+    <Compile Include="MRV\MedicionesLN.cs" />
+    <Compile Include="PermisoUsuarioBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Credito\Negocio.cs" />
+    <Compile Include="Reportes\ReporteDistribuidoresBL.cs" />
+    <Compile Include="RPUZona\ValidacionZonaL.cs" />
+    <Compile Include="SolicitudCredito\CapturaAuxilialBL.cs" />
+    <Compile Include="SolicitudCredito\CatalogosSolicitud.cs" />
+    <Compile Include="Credito\Cliente.cs" />
+    <Compile Include="Credito\Credito.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Credito\Direccion.cs" />
+    <Compile Include="Credito\RefCliente.cs" />
+    <Compile Include="Credito\RefNotariales.cs" />
+    <Compile Include="SolicitudCredito\RecuperacionDatos.cs" />
+    <Compile Include="SolicitudCredito\SolicitudCreditoAcciones.cs" />
+    <Compile Include="TarifaSubEstaciones\SubEstaciones.cs" />
+    <Compile Include="Tarifas\AlgoritmoTarifa02.cs" />
+    <Compile Include="Tarifas\CalculosAhorroTecnologia.cs" />
+    <Compile Include="Tarifas\CombinacionTarifas.cs" />
+    <Compile Include="Tarifas\FactorDegradacion.cs" />
+    <Compile Include="Tarifas\RegistrarTarifas.cs" />
+    <Compile Include="Tarifas\AlgoritmoTarifaHM.cs" />
+    <Compile Include="Tarifas\AlgoritmoTarifaOM.cs" />
+    <Compile Include="Tarifas\ValidacionTarifas.cs" />
+    <Compile Include="Trama\ParseoTrama.cs" />
+    <Compile Include="Tarifas\AlgoritmoTarifa03.cs" />
+    <Compile Include="Trama\TipoOperacionesTrama.cs" />
+    <Compile Include="Trama\ValidacionTrama.cs" />
+    <Compile Include="Validacion_RFC_L\Validacion_RFC_L.cs" />
+    <Compile Include="Vendedores\RegVendedores.cs" />
+    <Compile Include="Vendedores\ValVendedores.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PAEEEM.AccesoDatos\PAEEEM.AccesoDatos.csproj">
+      <Project>{d602f323-77c4-406c-b838-0f9fd73d0c08}</Project>
+      <Name>PAEEEM.AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.BussinessLayer\PAEEEM.BussinessLayer.csproj">
+      <Project>{B5C84C95-5D68-44F2-886A-7E7668DF2E7F}</Project>
+      <Name>PAEEEM.BussinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.DataAccessLayer\PAEEEM.DataAccessLayer.csproj">
+      <Project>{9E57969E-B38D-4F64-A9E2-8D911E38F106}</Project>
+      <Name>PAEEEM.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.Entidades\PAEEEM.Entidades.csproj">
+      <Project>{cd5b0c02-eefe-4e44-a732-d17fee1a8fb4}</Project>
+      <Name>PAEEEM.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.Entities\PAEEEM.Entities.csproj">
+      <Project>{4abd974d-c681-44bd-8a2b-88133bc5c082}</Project>
+      <Name>PAEEEM.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.Helpers\PAEEEM.Helpers.csproj">
+      <Project>{CC5C065F-75C1-40A7-821F-3B33D97C4BC8}</Project>
+      <Name>PAEEEM.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

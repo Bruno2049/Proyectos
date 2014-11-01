@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PAEEEM.LogicaNegocios.AltaBajaEquipos.InfoCompAltaBajaEquipos" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAACAAAAEAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AltaBajaEquipos\InfoCompAltaBajaEquipos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.AltaBajaEquipos.OpEquiposAbEficiencia" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIBBCBJAgAAEAAQIAEAABJQQAoAAAAAsFAAVkAAAI=</HashCode>
+      <FileName>AltaBajaEquipos\OpEquiposAbEficiencia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.LOG.Insertlog" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAIAAAAAwAgAEAIAAAAAQAAAACABAAAAAgAAAA=</HashCode>
+      <FileName>LOG\INSERTLOG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.LOG.LnMonitorLog" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAgAEAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>LOG\LNMonitorLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.LOG.Usuarios" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAEIAAACAAAAAAAAIAAAQABAAAgCAAAA=</HashCode>
+      <FileName>LOG\Usuarios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.ModuloCentral.AdministraProducto" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAEIAAAAAAAABIAABAEAAIACEAAgAAAAQAAIAAA=</HashCode>
+      <FileName>ModuloCentral\AdministraProducto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.ModuloCentral.CatalogosPlanilla" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QACAAAYAECAQAAAAABAAlQAAAAkBCABABCBAAgAAQAA=</HashCode>
+      <FileName>ModuloCentral\CatalogosPlanilla.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.ModuloCentral.CatalogosTecnologia" Collapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAgIAAQAAAAAAAAQIAAEAABECBRBAAACEAACAEAABAA=</HashCode>
+      <FileName>ModuloCentral\CatalogosTecnologia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.SolicitudCredito.CatalogosSolicitud" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAQAQwAAiACAIAAAAAAIAAAhAACAAAIEAAAEUIA=</HashCode>
+      <FileName>SolicitudCredito\CatalogosSolicitud.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.SolicitudCredito.SolicitudCreditoAcciones" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAISAQQQAAAACIAAQAAAEIAAAAABAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>SolicitudCredito\SolicitudCreditoAcciones.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.Tarifas.AlgoritmoTarifa02" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAKAAAAAAAEAEAAABQACAAAA=</HashCode>
+      <FileName>Tarifas\AlgoritmoTarifa02.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.Tarifas.AlgoritmoTarifaHM" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAQMAIBAAIgAACAIABiBSAgiAAAAAAAAAAlCCiAADA=</HashCode>
+      <FileName>Tarifas\AlgoritmoTarifaHM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.Tarifas.AlgoritmoTarifaOM" Collapsed="true">
+    <Position X="10.75" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAMAIBAAIgAACAIABiASAwiAAIAAABAAAhCCiEADA=</HashCode>
+      <FileName>Tarifas\AlgoritmoTarifaOM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.Tarifas.CalculosAhorroTecnologia" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQKAAAAAAAACAAAAAAAAMAAAAAAAAAABAAAEAAAAAA=</HashCode>
+      <FileName>Tarifas\CalculosAhorroTecnologia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.Tarifas.CombinacionTarifas" Collapsed="true">
+    <Position X="11.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAACgAAAAAAAAAAAAAAAAAAAAAAABAACEAAA=</HashCode>
+      <FileName>Tarifas\CombinacionTarifas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.Tarifas.RegistrarTarifas" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAgAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAQAAAAAGAAA=</HashCode>
+      <FileName>Tarifas\RegistrarTarifas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.Tarifas.ValidacionTarifas">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAACAAAAAAAAE=</HashCode>
+      <FileName>Tarifas\ValidacionTarifas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.Trama.AlgoritmoTarifa03" Collapsed="true">
+    <Position X="7.5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAKAAAAAAAEAEAAABQACAAAA=</HashCode>
+      <FileName>Tarifas\AlgoritmoTarifa03.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.Trama.ParseoTrama" Collapsed="true">
+    <Position X="10.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAgAAAAwAAABgAAAAAIAAKCBAEAAAACAAAAAA=</HashCode>
+      <FileName>Trama\ParseoTrama.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.Trama.TipoOperacionesTrama" Collapsed="true">
+    <Position X="3.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACBgQAAAIBAAAJAAAAIAAAEABAABAAAAAMAAACAACA=</HashCode>
+      <FileName>Trama\TipoOperacionesTrama.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAEEEM.LogicaNegocios.Trama.ValidacionTrama" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAgEAAAAAAEAAhAAAAgAAAIAAABAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Trama\ValidacionTrama.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

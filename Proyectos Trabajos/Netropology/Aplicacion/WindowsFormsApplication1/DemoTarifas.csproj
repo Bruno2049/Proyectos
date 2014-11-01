@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{150045F6-9DF5-4DA9-8EE0-F3AEDFA0D3D3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consumos\FrmConsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumos\FrmConsumos.Designer.cs">
+      <DependentUpon>FrmConsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle_Consumos\FrmConsumoDemanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalle_Consumos\FrmConsumoDemanda.Designer.cs">
+      <DependentUpon>FrmConsumoDemanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle_Consumos\FrmFactorPotencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalle_Consumos\FrmFactorPotencia.Designer.cs">
+      <DependentUpon>FrmFactorPotencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle_Consumos\FrmPeriodoMesAnio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalle_Consumos\FrmPeriodoMesAnio.Designer.cs">
+      <DependentUpon>FrmPeriodoMesAnio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParseo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParseo.Designer.cs">
+      <DependentUpon>FrmParseo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tarifas\FrmTarifa02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarifas\FrmTarifa02.Designer.cs">
+      <DependentUpon>FrmTarifa02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarifas\FrmTarifa03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarifas\FrmTarifa03.Designer.cs">
+      <DependentUpon>FrmTarifa03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarifas\FrmTarifaHM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarifas\FrmTarifaHM.Designer.cs">
+      <DependentUpon>FrmTarifaHM.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Consumos\FrmConsumos.resx">
+      <DependentUpon>FrmConsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detalle_Consumos\FrmConsumoDemanda.resx">
+      <DependentUpon>FrmConsumoDemanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detalle_Consumos\FrmFactorPotencia.resx">
+      <DependentUpon>FrmFactorPotencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detalle_Consumos\FrmPeriodoMesAnio.resx">
+      <DependentUpon>FrmPeriodoMesAnio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParseo.resx">
+      <DependentUpon>FrmParseo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tarifas\FrmTarifa02.resx">
+      <DependentUpon>FrmTarifa02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarifas\FrmTarifa03.resx">
+      <DependentUpon>FrmTarifa03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarifas\FrmTarifaHM.resx">
+      <DependentUpon>FrmTarifaHM.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\PAEEEM.Entidades\PAEEEM.Entidades.csproj">
+      <Project>{CD5B0C02-EEFE-4E44-A732-D17FEE1A8FB4}</Project>
+      <Name>PAEEEM.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.LogicaNegocios\PAEEEM.LogicaNegocios.csproj">
+      <Project>{F4E04E16-2C27-4D38-9151-88CE702D8811}</Project>
+      <Name>PAEEEM.LogicaNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

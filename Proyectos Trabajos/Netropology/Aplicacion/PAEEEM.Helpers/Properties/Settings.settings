@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PAEEEM.Helpers.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PAEEEM_Helpers_Circulo1_wsCC" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.55.210.48/fide_circulo/query.php</Value>
+    </Setting>
+    <Setting Name="PAEEEM_Helpers_SICOM_TraeRecibo" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.7.7.12/webservices/recibos/TraeRecibosFIDE/TreRecibo.asmx</Value>
+    </Setting>
+    <Setting Name="PAEEEM_Helpers_PersonaMoral_PersonaMoral" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.55.210.48:8078/PersonaMoral.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

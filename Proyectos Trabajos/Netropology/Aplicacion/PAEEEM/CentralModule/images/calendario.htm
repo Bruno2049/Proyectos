@@ -1,0 +1,449 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- version modificada por Carlos Valenzuela para Firefox, Chrome e IE -->
+<HTML>
+<HEAD>
+<TITLE>Calendario</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.16625">
+<STYLE>
+.calcaption
+{
+    BORDER-RIGHT: #003399 3px solid;
+    BORDER-TOP: #003399 3px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    BORDER-LEFT: #003399 3px solid;
+    COLOR: #ffffff;
+    BORDER-BOTTOM: #003399 3px solid;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #003399
+}
+.calender
+{
+    WIDTH: 250px;
+    BACKGROUND-COLOR: #cccccc
+}
+.calborder
+{
+    BORDER-RIGHT: #cccccc 2px outset;
+    BORDER-TOP: #cccccc 2px outset;
+    BORDER-LEFT: #cccccc 2px outset;
+    BORDER-BOTTOM: #cccccc 2px outset
+}
+.caldropdowns
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    WIDTH: auto;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #ffffff
+}
+.calbutts
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    WIDTH: auto;
+    CURSOR: pointer;
+    COLOR: #000000;
+    BORDER-TOP-STYLE: none;
+    FONT-FAMILY: Arial;
+    BORDER-RIGHT-STYLE: none;
+    BORDER-LEFT-STYLE: none;
+    BACKGROUND-COLOR: #cccccc;
+    BORDER-BOTTOM-STYLE: none
+}
+.calinsideborder
+{
+    BORDER-RIGHT: #cccccc 2px inset;
+    BORDER-TOP: #cccccc 2px inset;
+    BORDER-LEFT: #cccccc 2px inset;
+    BORDER-BOTTOM: #cccccc 2px inset
+}
+.caldays
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    TEXT-TRANSFORM: uppercase;
+    COLOR: #000000;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #999999
+}
+.calwknd
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    CURSOR: pointer;
+    COLOR: #000000;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #ffffcc
+}
+.calwkdy
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    CURSOR: pointer;
+    COLOR: #000000;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #ffffff
+}
+.calinsidesettings
+{
+    WIDTH: 250px
+}
+</STYLE>
+
+<SCRIPT language=javascript>
+// Webelectrix.com
+// Advanced calender control
+//---------------------------
+// By Jonathon Cebula
+
+var now   = new Date();
+
+// Modify this to change the Webelectrix.com calendar options.
+//---------------------------------------------------------------
+
+//var firstyear=now.getYear()-1;  //how many years back!
+
+var firstyear = 2009;
+var lastyear = now.getFullYear()+3;  //1 higher than the years from today you wish to display.
+
+var colour="#cccccc";//Greyed out days.
+var coltoday="RED";//todays colour.
+
+// Click Function, Currently just displays the cell date, Modify for what you want to happen!
+// NB: cellday[cell] hold the date clicked in ddmmyyyy format.
+//-------------------------------------------------------------
+
+function message(cell)
+{
+	window.returnValue = cellday[cell];
+	window.close();
+}
+
+function message_close()
+{
+	window.returnValue = "";
+	window.close();
+}
+// Calender Code, Modify only if you know what your doing. If you don't, just keep a back up!
+//--------------------------------------------------------------------------------------------
+
+var day   = now.getDate();
+var month = now.getMonth();
+var year  = now.getFullYear();
+var daycell=new Array();
+var cellday=new Array();
+var n;
+
+// Create Calender
+//-----------------
+
+function calendar()
+{
+var calobj, caption
+
+//caption='Webelectrix Java Calendar';
+caption='';
+
+calobj='<div name="calendario" id="calendario" style="Z-INDEX: 1000; Visibility: hidden;  POSITION: absolute">';
+calobj+='<table border="1" cellspacing="0" cellpadding="0" class="calborder">';
+calobj+='<tr><td>';
+calobj+='<table border="0" cellspacing="2" cellpadding="0" class="calender">'
+//calobj+='<tr><td colspan="5" class="calcaption">'+caption+'</td></tr>';
+//calobj+='<tr><td colspan="5" align=left><font color=red><a href="#" onclick="esconde_calendario();">X</a></font></td></tr>';
+calobj+='<tr><td colspan="3">';
+calobj+='<select name="calmonth" id="calmonth" onChange="updatecalendar()" class="caldropdowns">';
+calobj+='<option>Enero<option>Febrero<option>Marzo<option>Abril<option>Mayo';
+calobj+='<option>Junio<option>Julio<option>Agosto<option>Septiembre<option>Octubre'; 
+calobj+='<option>Noviembre<option>Diciembre</select>';
+calobj+='</td><td colspan="2" align="right">';
+calobj+='<select name="calyear" id="calyear" onChange="updatecalendar()" class="caldropdowns">';
+for (n=firstyear;n<lastyear;n++)
+{
+  if (n==year)
+  {
+     calobj+='<option selected value="' + n + '">' + n +'</option>'; 
+  }
+  else
+  {
+     calobj+='<option value="' + n + '">' + n + '</option>';
+  }
+}
+calobj+='</select>';
+calobj+='</td></tr>';
+calobj+='<tr><td colspan="5" class="calinsideborder">';
+calobj+='<table cellspacing="0" class="calinsidesettings" border="1">';
+calobj+='<tr align="center">';
+calobj+='<td width="14%" class="caldays">Dom</td>';
+calobj+='<td width="14%" class="caldays">Lun</td>';
+calobj+='<td width="14%" class="caldays">Mar</td>';
+calobj+='<td width="14%" class="caldays">Mie</td>';
+calobj+='<td width="14%" class="caldays">Jue</td>';
+calobj+='<td width="14%" class="caldays">Vie</td>';
+calobj+='<td width="14%" class="caldays">Sab</td>';
+calobj+='</tr>';
+
+var calcell,calrow
+for (calcell=0;calcell<6;calcell++)
+{ 
+calobj+='<tr><td class="calwknd" width="14%" id=cal'+(calcell*7)+' onclick=message('+(calcell*7)+');>&nbsp;</td>';
+calobj+='<td width="14%" class="calwkdy" id=cal'+(calcell*7+1)+' onclick=message('+(calcell*7+1)+');>&nbsp;</td>';
+calobj+='<td width="14%" class="calwkdy" id=cal'+(calcell*7+2)+' onclick=message('+(calcell*7+2)+');>&nbsp;</td>';
+calobj+='<td width="14%" class="calwkdy" id=cal'+(calcell*7+3)+' onclick=message('+(calcell*7+3)+');>&nbsp;</td>';
+calobj+='<td width="14%" class="calwkdy" id=cal'+(calcell*7+4)+' onclick=message('+(calcell*7+4)+');>&nbsp;</td>';
+calobj+='<td width="14%" class="calwkdy" id=cal'+(calcell*7+5)+' onclick=message('+(calcell*7+5)+');>&nbsp;</td>';
+calobj+='<td class="calwknd" width="14%" id=cal'+(calcell*7+6)+' onclick=message('+(calcell*7+6)+');>&nbsp;</td></tr>';                 
+}
+calobj+='</table>';
+calobj+='</td></tr>';
+calobj+='<tr align="center">'; 
+calobj+='<td width="20%">';
+calobj+='<input type="button" name="backyear" value="&lt;&lt;" class="calbutts" onclick=gobackyear();updatecalendar()>';
+calobj+='</td>';
+calobj+='<td width="20%">';
+calobj+='<input type="button" name="backmonth" value="&lt;" class="calbutts" onclick=gobackmonth();updatecalendar()>';
+calobj+='</td>';
+calobj+='<td width="20%">';
+calobj+='<input type="button" name="TODAY" value="HOY" class="calbutts" onclick=caltoday()>';
+calobj+='</td>';
+calobj+='<td width="20%">';
+calobj+='<input type="button" name="onmonth" value="&gt;" class="calbutts" onclick=goonmonth();updatecalendar()>';
+calobj+='</td>';
+calobj+='<td width="20%">';
+calobj+='<input type="button" name="onyear" value="&gt;&gt;" class="calbutts" onclick=goonyear();updatecalendar()>';
+calobj+='</td>';
+calobj+='</tr>';
+calobj+='<tr><td colspan=5 align=center>&nbsp;</td></tr>';
+calobj+='<tr><td colspan=5 align=center><input type=button value="Cerrar" onclick="message_close();"></td></tr>';
+calobj+='</table>';
+calobj+='</td>';
+calobj+='</tr>';
+calobj+='</table>';
+calobj+='</div>';
+
+document.write(calobj)
+
+daycell[0]=document.getElementById("cal0");
+daycell[1]=document.getElementById("cal1");
+daycell[2]=document.getElementById("cal2");
+daycell[3]=document.getElementById("cal3");
+daycell[4]=document.getElementById("cal4");
+daycell[5]=document.getElementById("cal5");
+daycell[6]=document.getElementById("cal6");
+daycell[7]=document.getElementById("cal7");
+daycell[8]=document.getElementById("cal8");
+daycell[9]=document.getElementById("cal9");
+daycell[10]=document.getElementById("cal10");
+daycell[11]=document.getElementById("cal11");
+daycell[12]=document.getElementById("cal12");
+daycell[13]=document.getElementById("cal13");
+daycell[14]=document.getElementById("cal14");
+daycell[15]=document.getElementById("cal15");
+daycell[16]=document.getElementById("cal16");
+daycell[17]=document.getElementById("cal17");
+daycell[18]=document.getElementById("cal18");
+daycell[19]=document.getElementById("cal19");
+daycell[20]=document.getElementById("cal20");
+daycell[21]=document.getElementById("cal21");
+daycell[22]=document.getElementById("cal22");
+daycell[23]=document.getElementById("cal23");
+daycell[24]=document.getElementById("cal24");
+daycell[25]=document.getElementById("cal25");
+daycell[26]=document.getElementById("cal26");
+daycell[27]=document.getElementById("cal27");
+daycell[28]=document.getElementById("cal28");
+daycell[29]=document.getElementById("cal29");
+daycell[30]=document.getElementById("cal30");
+daycell[31]=document.getElementById("cal31");
+daycell[32]=document.getElementById("cal32");
+daycell[33]=document.getElementById("cal33");
+daycell[34]=document.getElementById("cal34");
+daycell[35]=document.getElementById("cal35");
+daycell[36]=document.getElementById("cal36");
+daycell[37]=document.getElementById("cal37");
+daycell[38]=document.getElementById("cal38");
+daycell[39]=document.getElementById("cal39");
+daycell[40]=document.getElementById("cal40");
+daycell[41]=document.getElementById("cal41");
+
+caltoday()
+updatecalendar()
+document.getElementById("calendario").style.left = 1;
+document.getElementById("calendario").style.top = 1;
+document.getElementById("calendario").style.visibility = 'visible';
+
+}
+
+// Set today
+//-----------
+
+function caltoday()
+{
+day   = now.getDate();
+document.getElementById("calmonth").selectedIndex = now.getMonth();
+document.getElementById("calyear").value = now.getFullYear();
+updatecalendar()
+}
+
+// Refresh Cells and Dates
+//-------------------------
+
+function updatecalendar()
+{
+month = document.getElementById("calmonth").selectedIndex
+year  = document.getElementById("calyear").value
+
+var firstOfMonth = new Date (year, month, 1);
+var startingPos = firstOfMonth.getDay();
+var curday=1
+var days=monthdays(month,year)
+var prevdays=monthdays(month-1,year)
+var str
+
+for (n=0;n<42;n++)
+{
+  if (startingPos==n)
+  {
+	if (month==now.getMonth()&year==now.getFullYear()&curday==now.getDate())
+	{
+		str=curday
+    		daycell[n].innerHTML="<font color='"+coltoday+"'>"+str.toString()+"</font>"	
+	}
+	else
+	{
+		daycell[n].innerHTML=curday
+	}
+	setday(n,month,year,curday);
+    startingPos++
+    curday++
+  }
+  else
+  {	
+  	  if (startingPos==66)
+	  {
+	  	setday(n,month+1,year,curday);
+	 	 str=curday
+ 	 	 curday++
+	  }
+	  else
+	  {
+	 	 setday(n,month-1,year,prevdays-startingPos+n+1);
+      		str=prevdays-startingPos+n+1
+	  }
+      daycell[n].innerHTML="<font color='"+colour+"'>"+str.toString()+"</font>"
+  }
+  
+  if (curday>days){
+  curday=1
+  startingPos=66
+  }
+}
+}
+
+// Set day variables
+//-------------------
+
+function setday(cell,month,year,day)
+{
+month++
+if (month==13){month=1;year++}
+if (month==0){month=12;year--}
+
+var strmon;
+var stryear;
+var strday;
+var stryear2;
+
+strmon=month.toString();
+if (strmon.length==1){strmon="0"+strmon}
+strday=day.toString();
+if (strday.length==1){strday="0"+strday}
+stryear2=year.toString();
+stryear=stryear2.substr(2, 2)
+
+//cellday[cell]=strday+strmon+stryear
+
+cellday[cell]=strday+"/"+strmon+"/"+stryear2
+}
+
+// Check days in month
+//---------------------
+
+function monthdays(month,year)  {
+var days;
+if (month==0 || month==2 || month==4 || month==6 || month==7 || month==9 || month==11 || month==-1 || month==12)  days=31;
+else if (month==3 || month==5 || month==8 || month==10) days=30;
+else if (month==1)  {
+if (leapyear(year)) { days=29; }
+else { days=28; }
+}
+return (days);
+}
+
+// Check for leap year
+//---------------------
+
+function leapyear (Year) {
+if (((Year % 4)==0) && ((Year % 100)!=0) || ((Year % 400)==0)) {
+return (true);
+} else { return (false); }
+}
+
+// Forward one month
+//-------------------
+
+function goonmonth()
+{
+  month = document.getElementById("calmonth").selectedIndex
+  month++
+  if (month==12)
+  {
+    month=0;
+    goonyear()
+  }
+  document.getElementById("calmonth").selectedIndex=month
+}
+
+// Forward one year
+//------------------
+
+function goonyear()
+{
+  year  = document.getElementById("calyear").value
+  year++
+  if (year==lastyear){year=firstyear}
+  document.getElementById("calyear").value=year
+}
+
+// Back one month
+//----------------
+
+function gobackmonth()
+{
+  month = document.getElementById("calmonth").selectedIndex
+  month--
+  if (month==-1)
+  {
+    month=11;
+    gobackyear()
+  }
+  document.getElementById("calmonth").selectedIndex=month
+}
+
+// Back one year
+//---------------
+
+function gobackyear()
+{
+  year  = document.getElementById("calyear").value
+  year--
+  if (year<firstyear){year=lastyear-1}
+  document.getElementById("calyear").value=year
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<SCRIPT language="javascript">calendar();</SCRIPT>
+</BODY></HTML>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F64F33FA-90E1-44B4-8FA5-E34FBC05FC34}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PAEEEM.CambioTarifa</RootNamespace>
+    <AssemblyName>PAEEEM.CambioTarifa</AssemblyName>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Captcha\CodeValidator.cs" />
+    <Compile Include="Captcha\GetImgText.ashx.cs">
+      <DependentUpon>GetImgText.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Captcha\Letter.cs" />
+    <Compile Include="Captcha\SecurityHelper.cs" />
+    <Compile Include="ProcesoCambioTarifa.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Captcha\images\captcha1.gif" />
+    <Content Include="Captcha\images\captcha1.png" />
+    <Content Include="Captcha\images\captcha2.jpg" />
+    <Content Include="Captcha\images\captcha3.jpg" />
+    <Content Include="EmailRPUValido.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Captcha\GetImgText.ashx" />
+    <Content Include="LsWeb.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PAEEEM.AccesoDatos\PAEEEM.AccesoDatos.csproj">
+      <Project>{D602F323-77C4-406C-B838-0F9FD73D0C08}</Project>
+      <Name>PAEEEM.AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.BussinessLayer\PAEEEM.BussinessLayer.csproj">
+      <Project>{B5C84C95-5D68-44F2-886A-7E7668DF2E7F}</Project>
+      <Name>PAEEEM.BussinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.DataAccessLayer\PAEEEM.DataAccessLayer.csproj">
+      <Project>{9E57969E-B38D-4F64-A9E2-8D911E38F106}</Project>
+      <Name>PAEEEM.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.Entidades\PAEEEM.Entidades.csproj">
+      <Project>{CD5B0C02-EEFE-4E44-A732-D17FEE1A8FB4}</Project>
+      <Name>PAEEEM.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.Entities\PAEEEM.Entities.csproj">
+      <Project>{4ABD974D-C681-44BD-8A2B-88133BC5C082}</Project>
+      <Name>PAEEEM.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.Helpers\PAEEEM.Helpers.csproj">
+      <Project>{CC5C065F-75C1-40A7-821F-3B33D97C4BC8}</Project>
+      <Name>PAEEEM.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.LogicaNegocios\PAEEEM.LogicaNegocios.csproj">
+      <Project>{F4E04E16-2C27-4D38-9151-88CE702D8811}</Project>
+      <Name>PAEEEM.LogicaNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

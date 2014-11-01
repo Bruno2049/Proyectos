@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:wsCC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:wsCC" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:wsCC">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="ctUsuarioCC">
+        <xsd:all>
+          <xsd:element name="ClaveOtorgante" type="xsd:string" />
+          <xsd:element name="NombreUsuario" type="xsd:string" />
+          <xsd:element name="Password" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ctConsulta">
+        <xsd:all>
+          <xsd:element name="FolioConsultaOtorgante" type="xsd:string" />
+          <xsd:element name="ImporteContrato" type="xsd:float" />
+          <xsd:element name="NumeroFirma" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ctPersona">
+        <xsd:all>
+          <xsd:element name="ApellidoPaterno" type="xsd:string" />
+          <xsd:element name="ApellidoMaterno" type="xsd:string" />
+          <xsd:element name="Nombres" type="xsd:string" />
+          <xsd:element name="FechaNacimiento" type="xsd:date" />
+          <xsd:element name="RFC" type="xsd:string" />
+          <xsd:element name="CURP" type="xsd:string" />
+          <xsd:element name="Sexo" type="xsd:string" />
+          <xsd:element name="Domicilio" type="tns:ctDomicilio" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ctDomicilio">
+        <xsd:all>
+          <xsd:element name="Calle" type="xsd:string" />
+          <xsd:element name="Numero" type="xsd:string" />
+          <xsd:element name="NumeroInterior" type="xsd:string" />
+          <xsd:element name="ColoniaPoblacion" type="xsd:string" />
+          <xsd:element name="DelegacionMunicipio" type="xsd:string" />
+          <xsd:element name="Ciudad" type="xsd:string" />
+          <xsd:element name="Estado" type="xsd:string" />
+          <xsd:element name="CP" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ctResultado">
+        <xsd:all>
+          <xsd:element name="MOP" type="xsd:integer" />
+          <xsd:element name="folio" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultarMOPRequest">
+    <wsdl:part name="Usuario" type="tns:ctUsuarioCC" />
+    <wsdl:part name="Consulta" type="tns:ctConsulta" />
+    <wsdl:part name="Persona" type="tns:ctPersona" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarMOPResponse">
+    <wsdl:part name="return" type="tns:ctResultado" />
+  </wsdl:message>
+  <wsdl:portType name="wsCCPortType">
+    <wsdl:operation name="ConsultarMOP">
+      <documentation>Ejecuta la Consulta a C.C. </documentation>
+      <wsdl:input message="tns:ConsultarMOPRequest" />
+      <wsdl:output message="tns:ConsultarMOPResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsCCBinding" type="tns:wsCCPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="ConsultarMOP">
+      <soap:operation soapAction="urn:wsCC#ConsultarMOP" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:wsCC" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:wsCC" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsCC">
+    <wsdl:port name="wsCCPort" binding="tns:wsCCBinding">
+      <soap:address location="http://10.55.210.48/fide_circulo/query.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,35 @@
+﻿.tbleft
+{
+	text-align: left;
+}
+.tbright
+{
+	
+	text-align: right;
+}
+.tr1
+{
+    background-color: #F0F0F0;
+    text-align: center;
+}
+.tr2
+{
+    background-color: #FFFFFF;
+    text-align: center;
+}
+.trh 
+{
+    color: #FFFFFF; 
+	font-weight: bold; 
+	background-color: #00A3D9;
+    text-align: center;
+}
+
+.tr11
+{
+    background-color: #F0F0F0;
+}
+.tr12
+{
+    background-color: #FFFFFF;
+}

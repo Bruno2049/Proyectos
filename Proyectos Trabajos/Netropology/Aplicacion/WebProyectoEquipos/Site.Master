@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebProyectoEquipos.SiteMaster" %>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="Styles/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/Site.css" rel="stylesheet" type="text/css" />    
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div style="width: 99%">
+                <br/>
+                <h1 style="background-image: url('/images/pleca3.png'); background-repeat: no-repeat; height: 69px; text-align: center">
+                    <asp:Label ID="lblSystemName" runat="server" Text="SIMULADOR DE CREDITOS DEL PROGRAMA DE AHORRO ENERGÉTICO EMPRESARIAL (PAEEEM)" 
+                        ForeColor="#0066FF" Font-Bold="True" Font-Overline="False" Font-Size="Large" 
+                        Font-Strikeout="False" />
+                </h1>
+            </div>
+            <%--<div class="title">
+                <h1>
+                    CALCULADORA PAEEEM
+                </h1>
+            </div>--%>
+            <%--<div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server"  EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                    </Items>
+                </asp:Menu>
+            </div>--%>
+        </div>
+        <div class="main">
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

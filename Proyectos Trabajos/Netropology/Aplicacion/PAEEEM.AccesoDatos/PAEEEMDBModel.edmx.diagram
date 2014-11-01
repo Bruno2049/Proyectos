@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="12c1a1d797944911a711a999b4c58123" Name="Diagram1" ZoomLevel="11">
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_TR_INFORMACION_PARSEO_TR_TIPO_OPERACION_INFO" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.ABE_SECTOR" Width="1.5" PointX="2.64714220103209" PointY="24.812773060432065" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.ABE_SUB_SECTOR" Width="1.5" PointX="5.6666208066356463" PointY="16.438447855617127" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.ABE_TABLAS_AHORRO" Width="1.5" PointX="7.2985123727929366" PointY="11.467162867759896" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.ABE_UNIDAD_TECNOLOGIA" Width="1.5" PointX="0.34653633662803857" PointY="12.164848094882839" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.ABE_VALORES_PRODUCTO" Width="1.5" PointX="5.527961882542801" PointY="0.75247849559061164" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.ACCION_ESTATUS_PROVEEDOR" Width="1.5" PointX="3.4237883889227123" PointY="20.188019180757934" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.ANCLAJE" Width="1.5" PointX="7.5100804267032437" PointY="15.295652247637348" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.BitacoraSis" Width="1.5" PointX="0.42165993173683991" PointY="13.993300429542224" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.BuroCreditoPAEEEM" Width="1.5" PointX="4.4590995220742649" PointY="0.97265699551098839" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.Cambio_RPU" Width="1.5" PointX="6.5807903048492928" PointY="8.559330974034653" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_ACCIONES" Width="1.5" PointX="11.035808102710083" PointY="3.8055222350198412" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_AHORRO_AACONDIC" Width="1.5" PointX="9.9352965978604253" PointY="25.059594434248094" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_AHORRO_ILUM_LINEAL" Width="1.5" PointX="2.0949381338874522" PointY="14.589138484834292" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_AHORRO_MOTORES" Width="1.5" PointX="10.240255068168164" PointY="25.687475484650339" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_AHORRO_REFRIGERACION" Width="1.5" PointX="7.6523987891396494" PointY="2.9296697093777682" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_AUXILIAR" Width="1.5" PointX="6.4859074179483152" PointY="31.548720419196748" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CALENDARIO" Width="1.5" PointX="2.0119360694717319" PointY="12.658643102580049" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CAMPOS_BASE_PLANTILLA" Width="1.5" PointX="0.49966628686509384" PointY="4.37637599016371" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CAMPOS_CUSTOM" Width="1.5" PointX="5.2736043637961174" PointY="10.362863828597062" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CAMPOS_PLANTILLA" Width="1.5" PointX="8.3773669844387868" PointY="5.421401398918313" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CAMPOS_PLANTILLA_VALOR" Width="1.5" PointX="11.844639887960927" PointY="0.704611718982743" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CAPACIDAD_SUSTITUCION" Width="1.5" PointX="8.2950512861344272" PointY="19.07573350662167" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CENTRO_DISP" Width="1.5" PointX="2.9331060549864105" PointY="0.457539186094673" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CENTRO_DISP_SUCURSAL" Width="1.5" PointX="8.3866839950842245" PointY="31.762893378624177" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CLI_REGIMEN_CONYUGAL" Width="1.5" PointX="2.97738140215044" PointY="24.262211825820717" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CLI_TIPO_ACREDITACION" Width="1.5" PointX="4.2915137839929738" PointY="24.56182002674873" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CLI_TIPO_IDENTIFICACION" Width="1.5" PointX="10.64846152563042" PointY="8.8387454342277465" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CODIGO_POSTAL" Width="1.5" PointX="10.473663444851368" PointY="3.2535236343990657" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CODIGO_POSTAL_SEPOMEX" Width="1.5" PointX="11.369493299801597" PointY="22.051394383446961" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_COMBINACION_TECNOLOGIAS" Width="1.5" PointX="4.0694798119689715" PointY="4.8735611759468735" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_CP_SEPOMEX" Width="1.5" PointX="6.0599310072417971" PointY="7.236621413024432" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_DELEG_MUNICIPIO" Width="1.5" PointX="8.9094192464414146" PointY="11.811561977403034" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_EQUIPOS_BAJA_ALTA" Width="1.5" PointX="5.7962720178981648" PointY="9.5813819512638183" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_ESTADO" Width="1.5" PointX="5.5585711233124933" PointY="7.36823803529527" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_ESTADO_CIVIL" Width="1.5" PointX="5.2362033059989113" PointY="28.748050494467861" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_ESTATUS_CENTRO_DISP" Width="1.5" PointX="11.973883297282217" PointY="1.5280682302676458" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_ESTATUS_CONSULTA" Width="1.5" PointX="3.9873793888778328" PointY="12.127372747346467" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_ESTATUS_CREDITO" Width="1.5" PointX="3.3651092273020695" PointY="28.724209888244147" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_ESTATUS_PRODUCTO" Width="1.5" PointX="5.1320195519980132" PointY="7.4183907543394669" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_ESTATUS_PROVEEDOR" Width="1.5" PointX="6.4642418578566243" PointY="5.1289625042718656" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_ESTRATIFICACION_MIPYMES" Width="1.5" PointX="9.0842429367286357" PointY="27.544453469824258" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_FABRICANTE" Width="1.5" PointX="6.6554219045934371" PointY="28.144184945218353" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_FACTOR_SUSTITUCION" Width="1.5" PointX="8.80711235702369" PointY="24.733933087780109" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_FINANCIADOR" Width="1.5" PointX="1.1823086315683595" PointY="28.526417417696873" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_IDENTIFICACION" Width="1.5" PointX="6.27332771861615" PointY="30.078919797241184" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_MARCA" Width="1.5" PointX="2.2716476965097936" PointY="24.011550586676016" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_MODULOS_SE" Width="1.5" PointX="11.816594123754927" PointY="17.466084115889895" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_PERIODO_PAGO" Width="1.5" PointX="7.9730945173525694" PointY="24.349084954871369" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_PLANTILLA" Width="1.5" PointX="3.3548101481771142" PointY="10.308574785622104" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_POTENCIA" Width="1.5" PointX="1.3571280470849612" PointY="30.240234195366611" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_PROCESO_LOG" Width="1.5" PointX="6.6130060714730092" PointY="14.996252618262663" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_PRODUCTO" Width="1.5" PointX="6.6748817109851544" PointY="11.191633244599977" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_PRODUCTO_CAPACIDAD" Width="1.5" PointX="9.1244461374005521" PointY="9.91596852704695" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_PROGRAMA" Width="1.5" PointX="5.2233031211529415" PointY="16.268524654334655" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_PROVEEDOR" Width="1.5" PointX="11.949420310533336" PointY="31.20555929802617" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_PROVEEDORBRANCH" Width="1.5" PointX="8.0880518109016357" PointY="22.900258045131462" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_REGIMEN_CONYUGAL" Width="1.5" PointX="1.8050310359359862" PointY="5.7229836609787235" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_REGION" Width="1.5" PointX="4.7433425042514425" PointY="20.615362549487205" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_REGIONES_TARIFAS" Width="1.5" PointX="8.0583111252907251" PointY="27.61426637862542" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_RESIDUO_MATERIAL" Width="1.5" PointX="7.6222233845024476" PointY="22.722792293281664" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_APARTARRAYO" Width="1.5" PointX="2.4107096001555721" PointY="18.296438911136445" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_APARTARRAYO_MARCA" Width="1.5" PointX="8.4897615446195758" PointY="15.884289018755913" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_CLASE" Width="1.5" PointX="8.5088712389156562" PointY="7.9188048727432285" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_COND_CONEXION" Width="1.5" PointX="0.75643146259544025" PointY="25.166927587784329" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_COND_CONEXION_MARCA" Width="1.5" PointX="8.5746702629023552" PointY="16.624539651267483" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_CONDUCTOR" Width="1.5" PointX="7.4167685599144413" PointY="3.3768106863725982" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_CONDUCTOR_MARCA" Width="1.5" PointX="1.4247684857923391" PointY="18.997744092251054" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_CORTACIRC_MARCA" Width="1.5" PointX="7.3103548676289405" PointY="9.2283952130136981" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_CORTACIRCUITO" Width="1.5" PointX="3.6542883401989421" PointY="6.5561585009825221" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_INTERRUPTOR" Width="1.5" PointX="1.4296232170563299" PointY="13.569664425016224" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_INTERRUPTOR_MARCA" Width="1.5" PointX="4.0519217867646" PointY="18.884298363180971" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_TIPO" Width="1.5" PointX="10.747986221102991" PointY="17.523314618283564" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_TRANSFORM_FASE" Width="1.5" PointX="3.1915431130638079" PointY="15.157469145561322" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_TRANSFORM_MARCA" Width="1.5" PointX="7.19930043406752" PointY="25.787934002367749" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_TRANSFORM_RELACION" Width="1.5" PointX="1.8064390392072682" PointY="0.64622283011964654" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SE_TRANSFORMADOR" Width="1.5" PointX="1.0725957327860387" PointY="13.331894016513552" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SECTOR_ECONOMICO" Width="1.5" PointX="8.2434921601058413" PointY="12.896215832278234" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_SEXO" Width="1.5" PointX="8.929378223106907" PointY="31.338243946124912" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TAREAS_PROCESOS" Width="1.5" PointX="9.1338331872289231" PointY="1.9153955438711661" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TARIFA" Width="1.5" PointX="7.6879912278093361" PointY="16.413051493658241" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TARIFAS_X_TECNOLOGIA" Width="1.5" PointX="2.9620567350471654" PointY="20.76188073529018" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TECNOLOGIA" Width="1.5" PointX="9.52602648247314" PointY="15.240581176821413" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TIPO_ACREDITACION" Width="1.5" PointX="4.2853161768453738" PointY="18.191327476031766" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TIPO_FOTO" Width="1.5" PointX="7.1628282811319588" PointY="17.815672003578243" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TIPO_INDUSTRIA" Width="1.5" PointX="6.8357640052380813" PointY="3.4205181316568134" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TIPO_MOVIMIENTO" Width="1.5" PointX="4.07647261585876" PointY="14.932671166459411" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TIPO_PROCESOS" Width="1.5" PointX="8.9257266749282032" PointY="6.756264600323636" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TIPO_PRODUCTO" Width="1.5" PointX="4.4691253232160237" PointY="19.544260570567221" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TIPO_PROPIEDAD" Width="1.5" PointX="8.1131783705731753" PointY="5.1160495007019717" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TIPO_SOCIEDAD" Width="1.5" PointX="2.7650652689696593" PointY="7.53285415821376" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_TIPO_TECNOLOGIA" Width="1.5" PointX="7.7702513932111916" PointY="8.2292165645534254" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_VALORES_CAMPOS_CAT" Width="1.5" PointX="7.6311588062118538" PointY="22.21956453761997" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CAT_ZONA" Width="1.5" PointX="5.1616066364392674" PointY="6.4461554765916222" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CLI_Cliente" Width="1.5" PointX="5.022811847283883" PointY="22.903166796501338" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CLI_Cliente_Migracion" Width="1.5" PointX="10.194775811487238" PointY="20.156035700885596" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CLI_HORARIOS_OPERACION" Width="1.5" PointX="6.3268150176512146" PointY="7.8293733633260114" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CLI_Negocio" Width="1.5" PointX="6.7705682100591105" PointY="19.399277085158637" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CLI_Ref_Cliente" Width="1.5" PointX="2.1265674243339188" PointY="22.043244029415419" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CLI_Referencias_Notariales" Width="1.5" PointX="9.5555854037197232" PointY="13.420715412786564" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CLI_Tipo_Ref" Width="1.5" PointX="2.2859268050109627" PointY="22.319454158805055" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CONS_REFRIGERACION_COMERCIAL" Width="1.5" PointX="10.521222648453538" PointY="1.382462487268477" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CRE_Consultas" Width="1.5" PointX="2.8347112456498254" PointY="1.396652639562568" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CRE_Credito" Width="1.5" PointX="8.1658609454361066" PointY="19.927584120970025" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CRE_FOTOS" Width="1.5" PointX="8.0737335812643778" PointY="15.226381159958606" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CRE_RFCValido" Width="1.5" PointX="0.36695561388831383" PointY="4.2674146910511954" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CRE_ValidacionRFC" Width="1.5" PointX="3.6386631092236672" PointY="19.240838998575153" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.CREDITOS_LIQUIDADOS" Width="1.5" PointX="9.9532080599820283" PointY="12.968455782611136" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.DIAS_OPERACION" Width="1.5" PointX="10.38464291691065" PointY="31.66960139557235" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.DIR_Direcciones" Width="1.5" PointX="0.15454646952196327" PointY="3.1831727489750707" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.DISTRIBUIDORES_ACTIVOS" Width="1.5" PointX="0.553611304868763" PointY="4.981354328329374" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.EQUIPO_BAJA_NP" Width="1.5" PointX="1.7989359562280289" PointY="28.197708619850552" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.EQUIPOS_ALTA_NP" Width="1.5" PointX="8.486101189854601" PointY="30.07266831308262" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.Estatus_Validacion_RFC" Width="1.5" PointX="6.95587928172009" PointY="3.041220278964015" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.FACTOR_DEGRADACION" Width="1.5" PointX="10.82918347736317" PointY="4.4026607146499028" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.GL_SECCIONES" Width="1.5" PointX="0.40703180078744505" PointY="21.874423499160642" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.H_GLOSSARY" Width="1.5" PointX="9.7735123102429853" PointY="8.2144269087419044" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.H_LOG_ACTIVIDAD" Width="1.5" PointX="11.632591757752277" PointY="17.054053225114036" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.H_NUMERO_SECUENCIA" Width="1.5" PointX="4.3035976608766235" PointY="19.338207894628034" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.H_OPERACION_TOTAL" Width="1.5" PointX="0.25124496605770891" PointY="18.953104177002377" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.H_SCHEDULE_JOBS" Width="1.5" PointX="0.166475756171381" PointY="25.836700242868019" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.H_SCHEDULED_NOTIFICATION" Width="1.5" PointX="6.343574722457479" PointY="30.167783766131748" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_ACTA_INHABILITACION" Width="1.5" PointX="8.2217319347996884" PointY="22.918654139581442" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_ACTA_RECUPERACION" Width="1.5" PointX="3.9198502786084313" PointY="29.630667715161419" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CAT_PROVEEDOR_CAT_CENTRO_DISP" Width="1.5" PointX="4.9828069512652267" PointY="5.0863927775464921" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CENTRO_DISP_TECNOLOGIA" Width="1.5" PointX="8.890085990023838" PointY="6.0012450693181" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CONSULTAS" Width="1.5" PointX="8.11167004150882" PointY="22.298388327610859" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CONSULTAS_CREDITO" Width="1.5" PointX="4.4791569749261981" PointY="1.1144504850331929" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CREDITO" Width="1.5" PointX="6.5708593533238675" PointY="31.85888510935888" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CREDITO_AMORTIZACION" Width="1.5" PointX="4.0323222428710768" PointY="9.4865616753169153" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CREDITO_COSTO" Width="1.5" PointX="5.5678654581158726" PointY="18.734408908865603" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CREDITO_DESCUENTO" Width="1.5" PointX="8.6436605680005911" PointY="17.127295502055109" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CREDITO_LOG" Width="1.5" PointX="5.3028611341970331" PointY="11.104124804541527" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CREDITO_PRODUCTO" Width="1.5" PointX="3.8267681989012141" PointY="1.4886747158545417" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CREDITO_SUSTITUCION" Width="1.5" PointX="7.5827228667134063" PointY="9.48783493483804" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CREDITO_SUSTITUCION_20121030" Width="1.5" PointX="0.5595732576025525" PointY="8.3541732171336989" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CREDITO_SUSTITUCION_EXTENSION" Width="1.5" PointX="11.624855557281922" PointY="13.459019741722857" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_CREDITO_TEMP" Width="1.5" PointX="1.0272140246942705" PointY="7.6395965701153488" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_DATOS_PYME" Width="1.5" PointX="7.5244331506660362" PointY="6.6293787838096634" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_INHABILITACION" Width="1.5" PointX="2.3524087976442694" PointY="31.710949033364166" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_INHABILITACION_PRODUCTO" Width="1.5" PointX="7.3574003387975511" PointY="20.918343702758822" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_LOG" Width="1.5" PointX="8.15765065334628" PointY="23.791429828755291" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_METAS_REGION" Width="1.5" PointX="4.7609117779698744" PointY="27.084173066115088" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_PRODUCTO_CHARACTERS" Width="1.5" PointX="0.0912387706764223" PointY="3.7643111663704323" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_PROG_TECNOLOGIA" Width="1.5" PointX="10.601253115852016" PointY="29.905794202306211" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_PROGRAMA_COSTO" Width="1.5" PointX="11.824410606093895" PointY="11.617375319645449" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_PROGRAMA_DESCUENTO" Width="1.5" PointX="3.2195057176144357" PointY="23.183424900836975" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_PROGRAMA_DET_FONDO" Width="1.5" PointX="1.5395486082600192" PointY="13.709526440924744" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_PROGRAMA_TARIFA" Width="1.5" PointX="1.0451020230749166" PointY="31.788903757831502" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_PROVEEDOR_PRODUCTO" Width="1.5" PointX="6.0100577781023716" PointY="10.82049368825764" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_RECUPERACION" Width="1.5" PointX="4.7677271034418265" PointY="8.9642593604346086" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_RECUPERACION_PRODUCTO" Width="1.5" PointX="3.5287775264721257" PointY="3.7996502685358982" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_TARIFA_02" Width="1.5" PointX="1.3478240339773819" PointY="15.352722756263205" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_TARIFA_03" Width="1.5" PointX="2.6256113437123649" PointY="8.1721003689673264" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_TARIFA_COSTO" Width="1.5" PointX="7.3346815981598024" PointY="4.3048220296878474" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_TARIFA_HM" Width="1.5" PointX="4.8934857812214112" PointY="10.892912825053983" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_TARIFA_OM" Width="1.5" PointX="9.59467311836531" PointY="11.041910280958708" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_TARIFA_PROMEDIO_CFE" Width="1.5" PointX="8.2000602894462933" PointY="25.929297518883505" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.K_TECNOLOGIA_RESIDUO_MATERIAL" Width="1.5" PointX="10.867752687478323" PointY="31.25833168591295" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.LIQUIDADOS_CAMBIO_RPU" Width="1.5" PointX="1.6618240353007912" PointY="19.056789958410334" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.Load_LayOut" Width="1.5" PointX="4.07280803102665" PointY="6.4404040306994714" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.Log_Canceled" Width="1.5" PointX="1.9569999025934375" PointY="22.314800108929536" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.MATERIAL_CUBIERTA" Width="1.5" PointX="3.7335274944703691" PointY="21.874820033961356" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.MOTIVOS_CANCELACION_PROVEEDOR" Width="1.5" PointX="11.913309238810701" PointY="7.8161899185814852" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.PaisEstado" Width="1.5" PointX="3.5075837948860524" PointY="21.029710958259976" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.PERDIDAS" Width="1.5" PointX="1.8197466907183391" PointY="20.276251310611261" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.PROTECCION_CONTRA_EXPLOSION" Width="1.5" PointX="8.4759592658262513" PointY="27.452596438793744" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.PROTECCION_CONTRA_FUEGO" Width="1.5" PointX="7.1238787840697348" PointY="10.655474876358861" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.PROTECCION_GABINETE" Width="1.5" PointX="4.3156013620624325" PointY="17.95408480705418" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.PROTECCION_SIN_CORRIENTE" Width="1.5" PointX="7.5739621518058531" PointY="29.343041984989792" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.RELACION_ROL_MOTIVO_CANCELACION" Width="1.5" PointX="7.5309535560807923" PointY="24.071203019503134" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.ResponseData" Width="1.5" PointX="6.07693508922911" PointY="23.965186279250862" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.SIRCA_RPU" Width="1.5" PointX="6.321187044643418" PointY="20.638848791196406" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.SISTEMA_ARREGLO" Width="1.5" PointX="6.761842626501732" PointY="29.543438299346455" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.SUBESTACIONES" Width="1.5" PointX="0.493724048367573" PointY="10.176165436476547" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.sysdiagrams" Width="1.5" PointX="6.273319727868456" PointY="3.5286070422868279" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.tabcreditoszonadif" Width="1.5" PointX="10.259014873886024" PointY="28.970030783195995" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.temp3" Width="1.5" PointX="11.984877102069966" PointY="6.2735349118120665" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.temp4" Width="1.5" PointX="1.4045973575695405" PointY="19.095273294996133" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TERMINAL_TIERRA" Width="1.5" PointX="9.691341356230593" PointY="13.719377389978327" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.Tipo_Domicilio" Width="1.5" PointX="5.843961794788" PointY="31.185440331318155" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TIPO_ENCAPSULADO" Width="1.5" PointX="11.556953843476695" PointY="30.529439970166163" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TIPO_MONITOR" Width="1.5" PointX="11.794561570414604" PointY="24.773044105979167" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TIPO_PROTECCION_EXTERNA" Width="1.5" PointX="7.6088830435689925" PointY="30.133198543513753" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TIPO_PROTECCION_INTERNA" Width="1.5" PointX="9.01683757128978" PointY="11.211352562164587" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TIPOS_HORARIOS" Width="1.5" PointX="5.4078852075188824" PointY="11.026589026221348" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TR_COMUNICACION_SICOM" Width="1.5" PointX="4.1479122304115039" PointY="7.0884887758123174" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TR_ESTATUS_USUARIO" Width="1.5" PointX="11.615342678323083" PointY="18.789618396567935" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TR_INFORMACION_PARSEO" Width="1.5" PointX="8.3382164222831925" PointY="13.253480127664972" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TR_MES" Width="1.5" PointX="2.0468629962051583" PointY="21.317224527391243" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TR_ORIGEN" Width="1.5" PointX="1.4412148862337764" PointY="2.2253863374820848" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TR_PARAMETROS_GLOBALES" Width="1.5" PointX="2.4373471711004839" PointY="31.17739134988626" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TR_TIPO_OPERACION_INFO" Width="1.5" PointX="1.6128218814790349" PointY="1.3240507996287434" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.TR_TIPO_ZONA" Width="1.5" PointX="9.3445793675932" PointY="25.632527259007343" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.US_NAVEGACION" Width="1.5" PointX="10.30984656247769" PointY="12.723475179040561" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.US_OPERACION" Width="1.5" PointX="2.5912057210650321" PointY="24.41299700383702" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.US_PERMISO" Width="1.5" PointX="9.0414404464147236" PointY="6.47785501483728" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.US_ROL" Width="1.5" PointX="5.1596789495831725" PointY="20.897102484897292" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.US_ROL_PERMISO" Width="1.5" PointX="9.4697472888369809" PointY="17.675720267778132" />
+        <EntityTypeShape EntityType="PAEEEM_DESAModel.US_USUARIO" Width="1.5" PointX="9.19238328430447" PointY="24.083454679736615" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK__ABE_SUB_S__IDSEC__575DE8F7" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK__ABE_UNIDA__IDTEC__61DB776A" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK__ABE_UNIDA__IDTEC__64ECEE3F" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_ABE_VALORES_PRODUCTO_CAT_TIPO_PRODUCTO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_ACCION_Ep_REFERENCE_CAT_ACCI" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_ACCION_Ep_REFERENCE_CAT_ESTA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAMBIO_R_REFERENCE_CRE_CRED" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_ACCI_REFERENCE_TIPO_MON" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_AHORRO_REFRIGERACION_CAT_TIPO_PRODUCTO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_AUXILIAR_K_CREDITO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CAMPOS_PLANTILLA_CAT_CAMPOS_CUSTOM" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_VALORES_CAMPOS_CAT_CAT_CAMPOS_CUSTOM" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CAMPOS_PLANTILLA_CAT_PLANTILLA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CAMPOS_PLANTILLA_VALOR_CAT_CAMPOS_PLANTILLA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CAPACIDAD_SUSTITUCION_CAT_TECNOLOGIA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CAPACIDAD_SUSTITUCION_SISTEMA_ARREGLO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_Cve_Capacidad_Sust" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_CREDITO_SUSTITUCION_CAT_CAPACIDAD_SUSTITUCION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_PRODUCTO_CHARACTERS_CAT_CAPACIDAD_SUSTITUCION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_CAT_DELEG_MUNICIPIO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_CAT_DELEG_MUNICIPIO1" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_CAT_ESTADO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_CAT_ESTADO1" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_CAT_ESTATUS_CENTRO_DISP" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_CAT_REGION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_CAT_ZONA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_SUCURSAL_CAT_CENTRO_DISP" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_CENTRO_DISP_TECNOLOGIA_CAT_CENTRO_DISP" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_SUCURSAL_CAT_DELEG_MUNICIPIO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_SUCURSAL_CAT_DELEG_MUNICIPIO1" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_SUCURSAL_CAT_ESTADO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_SUCURSAL_CAT_ESTADO1" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_SUCURSAL_CAT_ESTATUS_CENTRO_DISP" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_SUCURSAL_CAT_REGION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CENTRO_DISP_SUCURSAL_CAT_ZONA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_CLIE_REFERENCE_CAT_CLI_REGIMEN" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_NEGO_REF_CAT_CLI_tipo_acreditacion" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_NEGocioCAT_CLI_tipo_Ident" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CODIGO_POSTAL_CAT_DELEG_MUNICIPIO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CODIGO_POSTAL_CAT_ESTADO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CODI_REFERENCE_CAT_DELE" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_CODI_REFERENCE_CAT_ESTA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_DIR_DIRE_REFERENCE_CAT_CODI" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_COMBINACION_TECNOLOGIAS_CAT_TECNOLOGIA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_DELEG_MUNICIPIO_CAT_ESTADO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDOR_CAT_DELEG_MUNICIPIO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDOR_CAT_DELEG_MUNICIPIO1" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDORBRANCH_CAT_DELEG_MUNICIPIO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDORBRANCH_CAT_DELEG_MUNICIPIO1" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_DIR_DIRE_REFERENCE_CAT_DELE" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_FACTOR_D_REFERENCE_CAT_DELE" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_TECNOLOGIA_CAT_EQUIPOS_BAJA_ALTA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_TECNOLOGIA_CAT_EQUIPOS_BAJA_ALTA1" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDOR_CAT_ESTADO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDOR_CAT_ESTADO1" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDORBRANCH_CAT_ESTADO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDORBRANCH_CAT_ESTADO1" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_DIR_DIRE_REFERENCE_CAT_ESTA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_TARIFA_COSTO_CAT_ESTADO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_CLIE_REFERENCE_CAT_ESTA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_CRED_REFERENCE_CAT_ESTA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_ESTATUS_PRODUCTO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDOR_CAT_ESTATUS_PROVEEDOR" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDORBRANCH_CAT_ESTATUS_PROVEEDOR" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_ESTRATIFICACION_MIPYMES_CAT_SECTOR_ECONOMICO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_FABRICANTE" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_TECNOLOGIA_CAT_FACTOR_SUSTITUCION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_PROG_PROY_FONDO_TOTAL_CAT_FINANCIADOR" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_MARCA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_MODU_REFERENCE_CAT_SE_T" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_MODULOS_SE_CAT_PRODUCTO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_CRED_REFERENCE_CAT_PERI" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_TECNOLOGIA_CAT_PLANTILLA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_H_LOG_ACTIVIDAD_CAT_PROCESO_LOG" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_COND_CONEX_MCA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_CORTACIRC_MCA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_INTERRUP_MCA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_PRODUCTO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_SE_APARTARRAYO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_SE_COND_CONEX" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_SE_COND_MCA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_SE_CONDUCTOR" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_SE_CORTACIRCUITO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_SE_INTERRUPTOR" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_SE_TIPO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_SE_TRANFORM_FASE" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_SE_TRANSFORM" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_TECNOLOGIA1" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_TRANSFORM_MCA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_CAT_TRANSFORM_RELAC" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PRODUCTO_SE_APARTARRAY_MCA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_CREDITO_PRODUCTO_CAT_PRODUCTO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_PROVEEDOR_PRODUCTO_CAT_PRODUCTO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_TECNOLOGIA_CAT_PRODUCTO_CAPACIDAD" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_CRED_REFERENCE_CAT_PROG" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_PROG_PROY_COSTO_CAT_PROG_PROY" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_PROG_PROY_DESCUENTO_CAT_PROG_PROY" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_PROG_PROY_FONDO_TOTAL_CAT_PROG_PROY" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_PROG_TARIFA_CAT_PROG_PROY" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_PROG_TECNOLOGIA_CAT_PROG_PROY" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROV_REFERENCE_CAT_TIPO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDOR_CAT_REGION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDOR_CAT_ZONA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDORBRANCH_CAT_PROVEEDOR" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_CRED_REFERENCE_CAT_PROV" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_VALId_REFERENCE_CAT_PROV" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_PROVEEDOR_PRODUCTO_CAT_PROVEEDOR" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDORBRANCH_CAT_REGION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_PROVEEDORBRANCH_CAT_ZONA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_VALIdd_REFERENCE_CAT_PROV" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_ZONA_CAT_REGION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_TARIFA_HM_CAT_REGIONES_TARIFAS" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_TARIFA_OM_CAT_REGIONES_TARIFAS" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_TECNOLOGIA_RESIDUO_MATERIAL_CAT_RESIDUO_MATERIAL" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_TARE_REFERENCE_CAT_TIPO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_LOG_REFERENCE_CAT_TARE" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_TARIFAS_X_TECNOLOGIA_CAT_TARIFA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_PROG_TARIFA_CAT_TARIFA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_TARIFA_COSTO_CAT_TARIFA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_TARIFA_PROMEDIO_CFE_CAT_TARIFA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_TARIFAS_X_TECNOLOGIA_CAT_TECNOLOGIA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_TECNOLOGIA_CAT_TIPO_MOVIMIENTO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_TECNOLOGIA_CAT_TIPO_TECNOLOGIA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CAT_TIPO_PRODUCTO_CAT_TECNOLOGIA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_FACTOR_D_REFERENCE_CAT_TECN" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_CENTRO_DISP_TECNOLOGIA_CAT_TECNOLOGIA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_CREDITO_SUSTITUCION_CAT_TECNOLOGIA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_PROG_TECNOLOGIA_CAT_TECNOLOGIA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_TECNOLOGIA_RESIDUO_MATERIAL_CAT_TECNOLOGIA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_LOAD_LAY_REFERENCE_CAT_TECN" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_SISTEMA_ARREGLO_CAT_TECNOLOGIA" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_FOTO_REFERENCE_CAT_TIPO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_NEGO_REFERENCE_CAT_TIPO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_CREDITO_SUSTITUCION_CAT_TIPO_PRODUCTO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_SISTEMA_ARREGLO_CAT_TIPO_PRODUCTO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_DIR_DIRE_REFERENCE_CAT_TIPO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_CLIE_REFERENCE_CAT_TIPO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_REF__REFERENCE_CAT_TIPO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_VALId_REFERENCE_CAT_TIPO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_DATOS__REFERENCE_CAT_TIPO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_NEGO_REFERENCE_CLI_CLIE" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_HORA_REFERENCE_DIAS_OPE" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_HORA_REFERENCE_K_CREDIT" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_HORA_REFERENCE_TIPOS_HO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_REF__REFERENCE_CLI_NEGO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_REFE_REFERENCE_CLI_NEGO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_CRED_REFERENCE_CLI_NEGO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_DIR_DIRE_REFERENCE_CLI_NEGO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_REF__REFERENCE_CLI_TIPO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_DIR_DIRE_REFERENCE_CLI_REF_" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CLI_REFE_REFERENCE_CLI_TIPO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_CRED_REFERENCE_DIR_DIRE" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_CRED_REFERENCE_RESPONSE" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_FOTO_REFERENCE_K_CREDIT" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_FOTO_REFERENCE_K_SUS" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_VALI_REFERENCE_US_USUAR" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_VALId_REFERENCE_US_USUAR" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_DIR_DIRE_REFERENCE_TIPO_DOM" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_TR_PARAMETROS_GLOBALES_GL_SECCIONES" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_H_LOG_ACTIVIDAD_US_USUARIO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_H_OPERAC_REFERENCE_K_CREDIT_PROD" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_H_OPERAC_REFERENCE_K_CREDIT_SUST" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_H_OPERAC_REFERENCE_TIPOS_HO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_INHABILITACION_K_ACTA_INHABILITACION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_RECUPERACION_K_ACTA_RECUPERACION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_CRE_CREDITO_EQUIPOS_BAJA_SISTEMA_ARREGLO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_CREDITO_SUSTITUCION_EXTENSION_K_CREDITO_SUSTITUCION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_CREDITO_SUSTITUCION_SISTEMA_ARREGLO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_INHABILITACION_PRODUCTO_K_CREDITO_SUSTITUCION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_PRODUCTO_CHARACTERS_K_CREDITO_SUSTITUCION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_RECUPERACION_PRODUCTO_K_CREDITO_SUSTITUCION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_INHABILITACION_PRODUCTO_K_INHABILITACION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_LOG_REFERENCE_US_ROL" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_LOG_REFERENCE_US_USUAR" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_RECUPERACION_K_TECNOLOGIA_RESIDUO_MATERIAL" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_K_RECUPERACION_PRODUCTO_K_RECUPERACION" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_RELACION_REFERENCE_US_ROL" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_TR_INFORMACION_GENERAL_TR_TIPO_OPERACION_INFO" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_US_OPERA_REFERENCE_US_NAVEG" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_US_ROL_P_REFERENCE_US_PERMI" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_US_ROL_P_REFERENCE_US_ROL" />
+        <AssociationConnector Association="PAEEEM_DESAModel.FK_US_USUAR_REFERENCE_US_ROL" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

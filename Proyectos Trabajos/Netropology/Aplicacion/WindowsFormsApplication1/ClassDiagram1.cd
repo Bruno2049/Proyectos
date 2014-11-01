@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WindowsFormsApplication1.Consumos.FrmConsumos" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgBAQAEBAiIAABAgAQWEAIACACAgAQAAACSEgABAAAI=</HashCode>
+      <FileName>Consumos\FrmConsumos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Detalle_Consumos.FrmConsumoDemanda" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CBAAAAAAACEABBAAACCAAACKEBABAQAICCBBGgBEGEA=</HashCode>
+      <FileName>Detalle_Consumos\FrmConsumoDemanda.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Detalle_Consumos.FrmFactorPotencia" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AhAAQAABAiAAAAAAAACEAAACAGAAAEAAACCEAAAAAAI=</HashCode>
+      <FileName>Detalle_Consumos\FrmFactorPotencia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Detalle_Consumos.FrmPeriodoMesAnio" Collapsed="true">
+    <Position X="3.25" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BQAAEAAAACAAIBBAAADAAAIyQAEEAQACAiAAIgSIJBA=</HashCode>
+      <FileName>Detalle_Consumos\FrmPeriodoMesAnio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Tarifas.FrmTarifa02" Collapsed="true">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAQEAAACAAhBAIIACAAAACBAQAAAAAACAABJAgAgA=</HashCode>
+      <FileName>Tarifas\FrmTarifa02.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Tarifas.FrmTarifaHM" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAQMAAgCAApBMIIACEIAASBAQAQQQAACAAABAgAgA=</HashCode>
+      <FileName>Tarifas\FrmTarifaHM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Tarifa03.FrmTarifa03" Collapsed="true">
+    <Position X="1" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAQEAAACAAhBAIIACAAAQCBAQAAAAABCAABBAgAgA=</HashCode>
+      <FileName>Tarifas\FrmTarifa03.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TesterProyecto.FrmParseo" Collapsed="true">
+    <Position X="0.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAASegBAMLBCwRGHAACAgJwCBoggBQgJDCABqYEAoAI=</HashCode>
+      <FileName>FrmParseo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Program" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
