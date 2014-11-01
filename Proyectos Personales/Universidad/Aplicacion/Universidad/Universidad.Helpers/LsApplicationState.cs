@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,7 +44,8 @@ namespace Universidad.Helpers
 
         public string SQLConnString
         {
-            get { return GetValue(_sqlconnectionstring, ""); }
+            get { return ConfigurationManager.ConnectionStrings["UnivesidadDBTSQL"].ConnectionString; }
+            // GetValue(_sqlconnectionstring, ""); }
             set { _applicationState[_sqlconnectionstring] = value; }
         }
 

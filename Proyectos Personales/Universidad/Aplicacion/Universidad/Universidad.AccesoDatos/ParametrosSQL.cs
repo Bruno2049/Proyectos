@@ -11,6 +11,8 @@ namespace Universidad.AccesoDatos
     public class ParametrosSQL
     {
         static LsApplicationState appstate = new LsApplicationState(HttpContext.Current.Application);
+
+        
         /// <summary>
         /// SQL Connection String 
         /// </summary>

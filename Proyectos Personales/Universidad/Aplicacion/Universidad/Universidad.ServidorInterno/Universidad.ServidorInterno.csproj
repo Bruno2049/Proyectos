@@ -127,6 +127,10 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Universidad.Helpers\Universidad.Helpers.csproj">
+      <Project>{cd6fed74-0e93-40e7-b76a-468dc2423b4b}</Project>
+      <Name>Universidad.Helpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Universidad.LogicaNegocios\Universidad.LogicaNegocios.csproj">
       <Project>{ad4d5617-2a8b-4283-8055-c6373005fa18}</Project>
       <Name>Universidad.LogicaNegocios</Name>
