@@ -53,24 +53,43 @@ namespace Universidad.AccesoDatos.ControlUsuarios.LoginA
         public US_USUARIOS LoginAdministradoresTSQL(string Nombre, string Contrasena)
         {
             const string executesqlstr = "SELECT TOP 1 * FROM US_USUARIOS WHERE USUARIO = @Usuario AND CONTRASENA = @Contrasena";
-            US_USUARIOS a = null;
+            var resultado = new US_USUARIOS();
+
             try
             {
                 var para = new SqlParameter[] { 
                     new SqlParameter("@Usuario",Nombre),
                     new SqlParameter("@Contrasena",Contrasena)                    
                 };
-                var obj = ControladorSQL.ExecuteScalar(ParametrosSQL.strCon_DBLsWebApp, CommandType.Text, executesqlstr, para);
+                var obj = ControladorSQL.ExecuteDataTable(ParametrosSQL.strCon_DBLsWebApp, CommandType.Text, executesqlstr, para);
+
+
+
                 if (obj != null)
                 {
-                    a = ((US_USUARIOS) obj);
+                    List<US_USUARIOS> lst = (from DataRow row in obj.Rows
+                        select new US_USUARIOS()
+                        {
+                            NOMBRE_COMPLETO = (string)row["NOMBRE_COMPLETO"],
+                            CONTRASENA = (string)row["NOMBRE_COMPLETO"],
+                            ID_ESTATUS_USUARIOS = (int)row["ID_ESTATUS_USUARIOS"],
+                            ID_USUARIO = (int)row["ID_USUARIO"],
+                            ID_HISTORIAL = (int)row["ID_HISTORIAL"],
+                            ID_NIVEL_USUARIO = (int)row["ID_NIVEL_USUARIO"],
+                            ID_PERSONA = (int)row["ID_PERSONA"],
+                            ID_PER_LINKID = (int)row["ID_PER_LINKID"],
+                            ID_TIPO_USUARIO = (int)row["ID_TIPO_USUARIO"]
+                               
+                        }).ToList();
+
+                    resultado = lst.FirstOrDefault();
                 }
             }
             catch (SqlException ex)
             {
                 
             }
-            return a;
+            return resultado;
         }
 
         #endregion
