@@ -23,23 +23,23 @@ namespace Universidad.Controlador.Login
             get { return _classInstance; }
         }
 
-        public SVC_LoginAdministrativos()
+        private SVC_LoginAdministrativos()
         {
         }
 
         #endregion
 
-        public US_USUARIOS LoginAdministrativos(string Usuario, string Contrasena)
+        public US_USUARIOS LoginAdministrativos(string usuario, string contrasena)
         {
-            S_LoginClient Servicio = new S_LoginClient();
+            var servicio = new S_LoginClient();
 
             
 
-            string JLogin = Servicio.LoginAdministrador(Usuario, Contrasena);
+            var jLogin = servicio.LoginAdministrador(usuario, contrasena);
 
-            US_USUARIOS Login = JsonConvert.DeserializeObject<US_USUARIOS>(JLogin);
+            var login = JsonConvert.DeserializeObject<US_USUARIOS>(jLogin);
 
-            return Login;
+            return login;
         }
 
 
