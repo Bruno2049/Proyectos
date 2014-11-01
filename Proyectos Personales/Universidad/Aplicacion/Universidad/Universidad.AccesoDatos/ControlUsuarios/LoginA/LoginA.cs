@@ -67,7 +67,7 @@ namespace Universidad.AccesoDatos.ControlUsuarios.LoginA
 
                 if (obj != null)
                 {
-                    var lst = (from DataRow row in obj.Rows
+                    resultado = (from DataRow row in obj.Rows
                         select new US_USUARIOS
                         {
                             NOMBRE_COMPLETO = (string)row["NOMBRE_COMPLETO"],
@@ -80,9 +80,7 @@ namespace Universidad.AccesoDatos.ControlUsuarios.LoginA
                             ID_PER_LINKID = (int)row["ID_PER_LINKID"],
                             ID_TIPO_USUARIO = (int)row["ID_TIPO_USUARIO"]
                                
-                        }).ToList();
-
-                    resultado = lst.FirstOrDefault();
+                        }).ToList().FirstOrDefault();
                 }
             }
             catch (SqlException ex)
