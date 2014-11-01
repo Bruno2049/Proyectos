@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <table id="Cabecera" style="width:697px; font-family: Arial, Helvetica, sans-serif; ">
+        <tr>
+            <td colspan="5" style="text-align: left; font-size:small;font-weight: bold;">
+                Estimado @USUARIO_NOMBRE@, se le envia la siguiente información</td>
+        </tr>
+        <tr>
+            <td colspan="5" style="text-align: center; font-size: x-large;font-weight: bold;">
+                Faltas del @PERIODO@</td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td style="text-align: right; font-size:small">
+                @FECHA_ENVIO@</td>
+        </tr>
+        </table>
+
+    <table id="Agrupacion" style="width:697px; font-family: Arial, Helvetica, sans-serif;">
+        <tr>
+            <td style="font-weight: 700">
+                @AGRUPACION_NOMBRE@</td>
+        </tr>
+        </table>
+
+    <table id="Registros" 
+        
+        style="width:697px; font-family: Arial, Helvetica, sans-serif; font-size:x-small" 
+        border="1" cellpadding="0" cellspacing="0">
+        <tr id="Registro">
+            <td>
+                @PERSONA_LINK_ID@</td>
+            <td>
+                @PERSONA_NOMBRE@</td>
+            <td>
+                @PERSONA_DIARIO_FECHA@</td>
+            <td>
+                @TURNO@</td>
+            <td>
+                @ENTRADASALIDA@</td>
+        </tr>
+        
+        </table>
+
+    <table id="Pie" 
+        style="width:697px; ">
+        <tr>
+            <td style="text-align: center">
+                Si desea justificar, realizar alguna correccion o modificación de click en<br />
+                <a href="@LINK_LINK@">@LINK_TEXTO@</a> </td>
+        </tr>
+        </table>
+
+    </body>
+</html>

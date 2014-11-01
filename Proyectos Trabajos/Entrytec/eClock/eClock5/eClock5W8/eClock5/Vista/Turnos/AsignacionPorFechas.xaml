@@ -1,0 +1,31 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controles="clr-namespace:eClock5.Controles" xmlns:eClock5="clr-namespace:eClock5" x:Class="eClock5.Vista.Turnos.AsignacionPorFechas" 
+             mc:Ignorable="d" 
+             d:DesignHeight="682.169" d:DesignWidth="686.854">
+    <Grid Background="{StaticResource Blanco_Brush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="174*"/>
+            <RowDefinition Height="467*"/>
+        </Grid.RowDefinitions>
+
+        <eClock5:UC_ToolBar Width="Auto" Margin="0,0,0,153"/>
+        <TextBlock x:Name="Lbl_PeriodoAsignacion" HorizontalAlignment="Left" Margin="10,59,0,0" TextWrapping="Wrap" Text="Periodo de Asignacion" VerticalAlignment="Top" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeSubTitulo}" Foreground="{StaticResource AzulOscuro_Brush}"/>
+        <TextBlock x:Name="Lbl_Desde" Margin="106,97,0,0" TextWrapping="Wrap" Text="Desde" VerticalAlignment="Top" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeParrafo}" Foreground="{StaticResource AzulClaro_Brush}" HorizontalAlignment="Left" Width="73"/>
+        <Calendar x:Name="Cal_Desde" Margin="52,117,0,0" Grid.RowSpan="2" HorizontalAlignment="Left" Width="262" Height="168" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Lbl_Hasta" Margin="0,97,67,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeParrafo}" RenderTransformOrigin="0.574,0.544" Foreground="{StaticResource AzulClaro_Brush}" HorizontalAlignment="Right" Width="210"><Run Language="es-mx" Text="  "/><Run Text="Hasta"/></TextBlock>
+        <Calendar x:Name="Cal_Hasta" Margin="0,117,43,0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="257" Height="168" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Lbl_Empleados" Margin="10,148,0,0" TextWrapping="Wrap" Text="Empleados" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeSubTitulo}" Foreground="{StaticResource AzulOscuro_Brush}" Grid.Row="1" HorizontalAlignment="Left" Width="159" Height="21" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Lbl_Introducir" Margin="9,174,0,0" TextWrapping="Wrap" Text="Introduzca los números de empleados separados por una coma (,)" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeParrafo}" Foreground="{StaticResource AzulClaro_Brush}" Grid.Row="1" HorizontalAlignment="Left" Width="430" Height="15" VerticalAlignment="Top"/>
+        <TextBox x:Name="Tbx_Empleados" Margin="10,194,10,0" TextWrapping="Wrap" Grid.Row="1" Height="151" VerticalAlignment="Top"/>
+        <TextBlock  x:Name="Lbl_MoverEmpleados" Margin="10,379,0,0" TextWrapping="Wrap" Text="Mover empleados a otro turno " FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeSubTitulo}" Foreground="{StaticResource AzulOscuro_Brush}" Grid.Row="1" HorizontalAlignment="Left" Width="343" Height="21" VerticalAlignment="Top"/>
+        <Rectangle Fill="{StaticResource AzulClaro_Brush}" Margin="9,413,12,7" Stroke="Black" Grid.Row="1"/>
+        <TextBlock x:Name="Lbl_SeleccionarTurno" Margin="28,444,0,0" TextWrapping="Wrap" Text="Seleccionar el turno que se les asignará" VerticalAlignment="Top" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeParrafo}" Foreground="{StaticResource Blanco_Brush}" Grid.Row="1" HorizontalAlignment="Left" Width="286"/>
+        <Controles:UC_Combo Height="0" Margin="381,444,373,0" VerticalAlignment="Top" Tabla="EC_TIPO_TURNOS" CampoLlave="TIPO_TURNO_ID" CampoNombre="TIPO_TURNO_NOMBRE"/>
+    </Grid>
+
+
+</UserControl>

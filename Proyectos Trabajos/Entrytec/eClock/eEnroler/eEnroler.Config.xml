@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+      <section name="eEnroler.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+      <section name="echeck.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+    </sectionGroup>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+      <section name="eEnroler.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+      <section name="echeck.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <connectionStrings />
+  <userSettings>
+    <eEnroler.Properties.Settings>
+      <setting name="SleepInicializa" serializeAs="String">
+        <value>1000</value>
+      </setting>
+      <setting name="NameSendWindow" serializeAs="String">
+        <value>KW73!</value>
+      </setting>
+      <setting name="UsarHook" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="Mostrar" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="GuardaImagen" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="Terminal" serializeAs="String">
+        <value>1</value>
+      </setting>
+    </eEnroler.Properties.Settings>
+  </userSettings>
+  <applicationSettings>
+    <eEnroler.Properties.Settings>
+      <setting name="AVecH1" serializeAs="String">
+        <value>6</value>
+      </setting>
+      <setting name="AVecH2" serializeAs="String">
+        <value>7</value>
+      </setting>
+      <setting name="EseClock" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="CodificarTarjeta" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="TransformarNS2LongNS" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="Usuario" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="Clave" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="EsMifare" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="echeck_WS_eCheck_WS_eCheck" serializeAs="String">
+        <value>http://web.eclock.com.mx/WS_eCheck.asmx</value>
+      </setting>
+      <setting name="echeck_WS_Checador_WSChecador" serializeAs="String">
+        <value>http://web.eclock.com.mx/IsTimeWeb/WSChecador.asmx</value>
+      </setting>
+      <setting name="Proxy_Usuario" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="Proxy_Clave" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="Proxy_URL" serializeAs="String">
+        <value />
+      </setting>
+    </eEnroler.Properties.Settings>
+  </applicationSettings>
+</configuration>

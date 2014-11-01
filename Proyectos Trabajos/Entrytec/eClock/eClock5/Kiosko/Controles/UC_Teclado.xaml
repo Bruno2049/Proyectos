@@ -1,0 +1,132 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kiosko.Controles" x:Class="Kiosko.Controles.UC_Teclado" 
+             mc:Ignorable="d" 
+             d:DesignHeight="286.737" d:DesignWidth="679.543" FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoFontTeclado}" LayoutUpdated="UserControl_LayoutUpdated_1" Loaded="UserControl_Loaded" >    
+        <Grid x:Name="Grd_Main" >
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <local:UC_Tecla Grid.Column="0" Tecla="1" TeclaAlterna="!" Clickeado="UC_Tecla_Clickeado" />
+                <local:UC_Tecla Grid.Column="1" Tecla="2" TeclaAlterna="@" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="2" Tecla="3" TeclaAlterna="#" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="3" Tecla="4" TeclaAlterna="~" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="4" Tecla="5" TeclaAlterna="%" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="5" Tecla="6" TeclaAlterna="^" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="6" Tecla="7" TeclaAlterna="&amp;" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="7" Tecla="8" TeclaAlterna="*" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="8" Tecla="9" TeclaAlterna="(" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="9" Tecla="0" TeclaAlterna=")" Clickeado="UC_Tecla_Clickeado"/>
+            </Grid>
+            <Grid Grid.Row="1"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <local:UC_Tecla Grid.Column="0" Tecla="q" TeclaAlterna="+" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="1" Tecla="w" TeclaAlterna="-" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="2" Tecla="e" TeclaAlterna="X" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="3" Tecla="r" TeclaAlterna="/" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="4" Tecla="t" TeclaAlterna="?" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="5" Tecla="y" TeclaAlterna="&lt;"  Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="6" Tecla="u" TeclaAlterna="&gt;" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="7" Tecla="i" TeclaAlterna="7" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="8" Tecla="o" TeclaAlterna="8" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="9" Tecla="p" TeclaAlterna="9" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="10" Tecla="Borrar" TeclaAlterna="Borrar" Clickeado="UC_Tecla_Clickeado" />
+            </Grid>
+            <Grid Grid.Row="2"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <local:UC_Tecla Grid.Column="0" Tecla="a" TeclaAlterna="¹" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="1" Tecla="s" TeclaAlterna="²" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="2" Tecla="d" TeclaAlterna="³" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="3" Tecla="f" TeclaAlterna="." Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="4" Tecla="g" TeclaAlterna="[" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="5" Tecla="h" TeclaAlterna="]" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="6" Tecla="j" TeclaAlterna="4" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="7" Tecla="k" TeclaAlterna="5" Clickeado="UC_Tecla_Clickeado"/>
+                <local:UC_Tecla Grid.Column="8" Tecla="l" TeclaAlterna="6" Clickeado="UC_Tecla_Clickeado"/>
+            <local:UC_Tecla Grid.Column="9" Tecla="ñ" TeclaAlterna=":" Clickeado="UC_Tecla_Clickeado"/>
+            </Grid>
+            <Grid Grid.Row="3"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+            <local:UC_Tecla Grid.Column="0" Tecla="Mayús" TeclaAlterna="_" Clickeado="UC_Tecla_Clickeado"  />
+            <local:UC_Tecla Grid.Column="1" Tecla="z" TeclaAlterna="{}{" Clickeado="UC_Tecla_Clickeado"/>
+            <local:UC_Tecla Grid.Column="2" Tecla="x" TeclaAlterna="}" Clickeado="UC_Tecla_Clickeado"/>
+            <local:UC_Tecla Grid.Column="3" Tecla="c" TeclaAlterna=";" Clickeado="UC_Tecla_Clickeado"/>
+            <local:UC_Tecla Grid.Column="4" Tecla="v" TeclaAlterna="&quot;" Clickeado="UC_Tecla_Clickeado"/>
+            <local:UC_Tecla Grid.Column="5" Tecla="b" TeclaAlterna="," Clickeado="UC_Tecla_Clickeado"/>
+            <local:UC_Tecla Grid.Column="6" Tecla="n" TeclaAlterna="0" Clickeado="UC_Tecla_Clickeado"/>
+            <local:UC_Tecla Grid.Column="7" Tecla="m" TeclaAlterna="1" Clickeado="UC_Tecla_Clickeado"/>
+            <local:UC_Tecla Grid.Column="8" Tecla="," TeclaAlterna="2" Clickeado="UC_Tecla_Clickeado"/>
+            <local:UC_Tecla Grid.Column="9" Tecla="." TeclaAlterna="3" Clickeado="UC_Tecla_Clickeado"/>
+            <local:UC_Tecla Grid.Column="10" Tecla="Mayús" TeclaAlterna="Mayús" Clickeado="UC_Tecla_Clickeado"/>
+            </Grid>
+            <Grid Grid.Row="4" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="74*" />
+                    <ColumnDefinition Width="351*" />
+                    <ColumnDefinition Width="92*" />
+
+                </Grid.ColumnDefinitions>
+                <local:UC_Tecla Tecla="?123" TeclaAlterna="ABC" Clickeado="UC_Tecla_Clickeado"/>
+            <local:UC_Tecla Grid.Column="1" Tecla="Espacio" TeclaAlterna="Espacio" Clickeado="UC_Tecla_Clickeado"/>
+            <local:UC_Tecla Grid.Column="2" Tecla="Enter" TeclaAlterna="Enter" Clickeado="UC_Tecla_Clickeado"/>
+            </Grid>
+        </Grid>
+
+
+    
+</UserControl>

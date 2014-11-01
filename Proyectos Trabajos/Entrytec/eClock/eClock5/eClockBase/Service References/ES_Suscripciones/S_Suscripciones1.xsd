@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaSuscripcion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionBorrado" type="xs:boolean" />
+        <xs:element minOccurs="0" name="SuscripPrecioId" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionRazon" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionRfc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionDireccion1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionDireccion2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionCiudad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionEstado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionPais" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EdoSuscripcionId" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionFacturar" type="xs:boolean" />
+        <xs:element minOccurs="0" name="SuscripcionContratacion" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="SuscripcionEmpleados" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionTerminales" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionUsuarios" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionAlumnos" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionVisitantes" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionAdicionales" type="xs:boolean" />
+        <xs:element minOccurs="0" name="SuscripcionOtros" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionMensual" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripDatosFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaSuscripcionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregaSuscripcionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaSuscripcion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionBorrado" type="xs:boolean" />
+        <xs:element minOccurs="0" name="SuscripPrecioId" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionRazon" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionRfc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionDireccion1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionDireccion2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionCiudad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionEstado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionPais" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EdoSuscripcionId" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionFacturar" type="xs:boolean" />
+        <xs:element minOccurs="0" name="SuscripcionContratacion" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="SuscripcionEmpleados" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionTerminales" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionUsuarios" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionAlumnos" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionVisitantes" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripcionAdicionales" type="xs:boolean" />
+        <xs:element minOccurs="0" name="SuscripcionOtros" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionMensual" type="xs:int" />
+        <xs:element minOccurs="0" name="SuscripDatosFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaSuscripcionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModificaSuscripcionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorraSuscripcion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorraSuscripcionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BorraSuscripcionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreaSuscripcion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionContacto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SuscripcionContactoEmail" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreaSuscripcionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreaSuscripcionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenSuscripcionID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Suscripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenSuscripcionIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenSuscripcionIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenSuscripcionUrl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Suscripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenSuscripcionUrlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenSuscripcionUrlResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

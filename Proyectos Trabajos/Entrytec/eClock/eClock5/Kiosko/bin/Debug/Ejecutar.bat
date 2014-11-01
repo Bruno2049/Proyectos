@@ -1,0 +1,2 @@
+﻿
+eUpdater\eUpdater.exe Kiosco

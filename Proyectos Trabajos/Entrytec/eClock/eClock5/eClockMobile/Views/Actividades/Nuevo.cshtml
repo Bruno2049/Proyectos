@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Inscripcion a Actividad";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Inscripcion a Actividad</h2>
+@{
+    if (ViewBag.InscripcionExitosa)
+    {
+    <h2>La inscripcion se concreto exitosamente</h2>
+    }
+    else
+    {
+    <h2>La Inscripcion no se concreto exitosamente
+            <p>Contacte con el proveedor del servicio</p>
+    </h2>
+    } 
+}

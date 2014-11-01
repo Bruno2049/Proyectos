@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Lista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p>
+    <h3>Elige uno de los periodos y verifica tu recibo
+    </h3>
+</p>
+<ul data-role="listview">
+
+    @if (ViewBag.ListaNomina != null)
+    {
+        foreach (eClockBase.Controladores.ListadoJson Lista in ViewBag.ListaNomina)
+        {
+        <li>
+            <a href="@Url.Action("Detalles", "Nomina")/@Lista.Llave" id="@Lista.Llave" @*onclick="Redirige(@Lista.Llave)"*@>@Lista.Nombre
+                <p>Periodo: @Lista.Adicional</p>
+            </a>
+        </li>
+        }
+    }
+    else
+    {
+        <li>
+            <p>Por el momento no hay algun periodo disponible</p>
+        </li>        
+    }
+
+</ul>
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        function Redirige(Llave) {
+            var Url = '../Detalles/' + Llave + ".html";
+            $.mobile.changePage(Url, { transition: "slide", reloadPage: true });
+        }
+    </script>
+}
+
+

@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_eClock_Basico", "Setup_eClock_Basico\Setup_eClock_Basico.vdproj", "{2CC28851-B828-4602-B33F-3B41DEBFAFAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CC28851-B828-4602-B33F-3B41DEBFAFAA}.Debug|Any CPU.ActiveCfg = Debug
+		{2CC28851-B828-4602-B33F-3B41DEBFAFAA}.Release|Any CPU.ActiveCfg = Release
+		{2CC28851-B828-4602-B33F-3B41DEBFAFAA}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:50723/S_Localizaciones.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:50723/S_Localizaciones.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="S_Localizaciones_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="DoWork" />
+  </wsdl:message>
+  <wsdl:message name="S_Localizaciones_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Localizaciones_ObtenEtiqueta_InputMessage">
+    <wsdl:part name="parameters" element="ObtenEtiqueta" />
+  </wsdl:message>
+  <wsdl:message name="S_Localizaciones_ObtenEtiqueta_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenEtiquetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Localizaciones_ObtenEtiquetaDebug_InputMessage">
+    <wsdl:part name="parameters" element="ObtenEtiquetaDebug" />
+  </wsdl:message>
+  <wsdl:message name="S_Localizaciones_ObtenEtiquetaDebug_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenEtiquetaDebugResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Localizaciones_ObtenAyuda_InputMessage">
+    <wsdl:part name="parameters" element="ObtenAyuda" />
+  </wsdl:message>
+  <wsdl:message name="S_Localizaciones_ObtenAyuda_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenAyudaResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Localizaciones_ObtenEtiquetasAyuda_InputMessage">
+    <wsdl:part name="parameters" element="ObtenEtiquetasAyuda" />
+  </wsdl:message>
+  <wsdl:message name="S_Localizaciones_ObtenEtiquetasAyuda_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenEtiquetasAyudaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="S_Localizaciones">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="urn:S_Localizaciones/DoWork" message="S_Localizaciones_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Localizaciones/DoWorkResponse" message="S_Localizaciones_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenEtiqueta">
+      <wsdl:input wsaw:Action="urn:S_Localizaciones/ObtenEtiqueta" message="S_Localizaciones_ObtenEtiqueta_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Localizaciones/ObtenEtiquetaResponse" message="S_Localizaciones_ObtenEtiqueta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenEtiquetaDebug">
+      <wsdl:input wsaw:Action="urn:S_Localizaciones/ObtenEtiquetaDebug" message="S_Localizaciones_ObtenEtiquetaDebug_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Localizaciones/ObtenEtiquetaDebugResponse" message="S_Localizaciones_ObtenEtiquetaDebug_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenAyuda">
+      <wsdl:input wsaw:Action="urn:S_Localizaciones/ObtenAyuda" message="S_Localizaciones_ObtenAyuda_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Localizaciones/ObtenAyudaResponse" message="S_Localizaciones_ObtenAyuda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenEtiquetasAyuda">
+      <wsdl:input wsaw:Action="urn:S_Localizaciones/ObtenEtiquetasAyuda" message="S_Localizaciones_ObtenEtiquetasAyuda_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Localizaciones/ObtenEtiquetasAyudaResponse" message="S_Localizaciones_ObtenEtiquetasAyuda_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

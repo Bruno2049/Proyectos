@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/eClock/WS_ServicioRDatos.asmx?wsdl" docRef="http://localhost/eClock/WS_ServicioRDatos.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/eClock/WS_ServicioRDatos.asmx" xmlns:q1="IDOSOFT/eClock/FARMACOS/170983" binding="q1:WS_ServicioRDatosSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

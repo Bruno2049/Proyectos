@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="eClock5.Vista.Asistencias.ReglaJustificacion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="300">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock x:Name="Lbl_EPersonaLink" Text="No Empleado:" Style="{DynamicResource TextBlockEtiquetaStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+            <TextBlock x:Name="Lbl_PersonaLink" Text="0"  Grid.Column="1" Style="{DynamicResource TextBlockCampoStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+            <TextBlock x:Name="Lbl_EPersonaNombre" Text="Nombre:" Style="{DynamicResource TextBlockEtiquetaStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+            <TextBlock x:Name="Lbl_PersonaNombre" Text=""  Grid.Column="1" Style="{DynamicResource TextBlockCampoStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+            <TextBlock x:Name="Lbl_EFechas" Text="Fechas:" Style="{DynamicResource TextBlockEtiquetaStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+            <TextBlock x:Name="Lbl_Fechas" Text=""  Grid.Column="1" Style="{DynamicResource TextBlockCampoStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+        </StackPanel>
+        <StackPanel x:Name="Stp_Saldo">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="Lbl_EFechaDesde" Text="Fecha de Inicio:" Style="{DynamicResource TextBlockEtiquetaStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+                <TextBlock x:Name="Lbl_FechaDesde" Text="0"  Grid.Column="1" Style="{DynamicResource TextBlockCampoStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+                <TextBlock x:Name="Lbl_ESaldo" Text="Saldo Actual:" Style="{DynamicResource TextBlockEtiquetaStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+                <TextBlock x:Name="Lbl_Saldo" Text=""  Grid.Column="1" Style="{DynamicResource TextBlockCampoStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+                <TextBlock x:Name="Lbl_EAConsumir" Text="A consumir:" Style="{DynamicResource TextBlockEtiquetaStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+                <TextBlock x:Name="Lbl_AConsumir" Text=""  Grid.Column="1" Style="{DynamicResource TextBlockCampoStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+                <TextBlock x:Name="Lbl_ESaldoFinal" Text="Saldo Final:" Style="{DynamicResource TextBlockEtiquetaStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+                <TextBlock x:Name="Lbl_SaldoFinal" Text=""  Grid.Column="1" Style="{DynamicResource TextBlockCampoStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+
+            </StackPanel>
+            <TextBlock x:Name="Lbl_SinSaldo" Text="No tiene saldo disponible para completar la operación, verifique el saldo mínimo permitido" Style="{DynamicResource TextBlockErrorStyle}" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

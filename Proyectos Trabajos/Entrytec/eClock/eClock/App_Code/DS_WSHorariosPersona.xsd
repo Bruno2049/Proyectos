@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_WSHorariosPersona" targetNamespace="http://tempuri.org/DS_WSHorariosPersona.xsd" xmlns:mstns="http://tempuri.org/DS_WSHorariosPersona.xsd" xmlns="http://tempuri.org/DS_WSHorariosPersona.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DA_Horarios" GeneratorDataComponentClassName="DA_Horarios" Name="DT_Horarios" UserDataComponentName="DA_Horarios">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA, EC_PERSONAS_DIARIO.TURNO_DIA_ID, EC_TURNOS_DIA.TURNO_DIA_HE, 
+                         EC_TURNOS_DIA.TURNO_DIA_HS
+FROM            EC_PERSONAS_DIARIO INNER JOIN
+                         EC_TURNOS_DIA ON EC_PERSONAS_DIARIO.TURNO_DIA_ID = EC_TURNOS_DIA.TURNO_DIA_ID
+WHERE        (EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA = CONVERT(CHAR(12), GETDATE(), 103))
+GROUP BY EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA, EC_PERSONAS_DIARIO.TURNO_DIA_ID, EC_TURNOS_DIA.TURNO_DIA_HE, 
+                         EC_TURNOS_DIA.TURNO_DIA_HS
+ORDER BY EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA, EC_PERSONAS_DIARIO.TURNO_DIA_ID</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PERSONA_DIARIO_FECHA" DataSetColumn="PERSONA_DIARIO_FECHA" />
+              <Mapping SourceColumn="TURNO_DIA_ID" DataSetColumn="TURNO_DIA_ID" />
+              <Mapping SourceColumn="TURNO_DIA_HE" DataSetColumn="TURNO_DIA_HE" />
+              <Mapping SourceColumn="TURNO_DIA_HS" DataSetColumn="TURNO_DIA_HS" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DA_Personas" GeneratorDataComponentClassName="DA_Personas" Name="DT_Personas" UserDataComponentName="DA_Personas">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_PERSONAS.PERSONA_ID, ? AS CAMPO_LLAVE, EC_PERSONAS.PERSONA_NOMBRE, EC_PERSONAS.TURNO_ID, 
+                         EC_TURNOS_SEMANAL_DIA.TURNO_DIA_ID, EC_TURNOS_SEMANAL_DIA.DIA_SEMANA_ID, EC_PERSONAS_TERMINALES.TERMINAL_ID
+FROM            EC_PERSONAS INNER JOIN
+                         EC_PERSONAS_DATOS ON EC_PERSONAS.PERSONA_LINK_ID = EC_PERSONAS_DATOS.PERSONA_LINK_ID INNER JOIN
+                         EC_TURNOS_SEMANAL_DIA ON EC_PERSONAS.TURNO_ID = EC_TURNOS_SEMANAL_DIA.TURNO_ID INNER JOIN
+                         EC_TURNOS_DIA ON EC_TURNOS_SEMANAL_DIA.TURNO_DIA_ID = EC_TURNOS_DIA.TURNO_DIA_ID INNER JOIN
+                         EC_PERSONAS_TERMINALES ON EC_PERSONAS.PERSONA_ID = EC_PERSONAS_TERMINALES.PERSONA_ID
+WHERE        (EC_PERSONAS.PERSONA_BORRADO = 0) AND (EC_PERSONAS_TERMINALES.TERMINAL_ID = ?)
+ORDER BY EC_PERSONAS.PERSONA_ID, EC_TURNOS_SEMANAL_DIA.DIA_SEMANA_ID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param1" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="AnsiString" Direction="Input" ParameterName="Param1" Precision="0" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param2" ColumnName="TERMINAL_ID" DataSourceName="IEPSA.dbo.EC_PERSONAS_TERMINALES" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="TERMINAL_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="TERMINAL_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PERSONA_ID" DataSetColumn="PERSONA_ID" />
+              <Mapping SourceColumn="CAMPO_LLAVE" DataSetColumn="CAMPO_LLAVE" />
+              <Mapping SourceColumn="PERSONA_NOMBRE" DataSetColumn="PERSONA_NOMBRE" />
+              <Mapping SourceColumn="TURNO_ID" DataSetColumn="TURNO_ID" />
+              <Mapping SourceColumn="TURNO_DIA_ID" DataSetColumn="TURNO_DIA_ID" />
+              <Mapping SourceColumn="DIA_SEMANA_ID" DataSetColumn="DIA_SEMANA_ID" />
+              <Mapping SourceColumn="TERMINAL_ID" DataSetColumn="TERMINAL_ID" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_WSHorariosPersona" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_WSHorariosPersona" msprop:Generator_DataSetName="DS_WSHorariosPersona">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_Horarios" msprop:Generator_UserTableName="DT_Horarios" msprop:Generator_RowDeletedName="DT_HorariosRowDeleted" msprop:Generator_TableClassName="DT_HorariosDataTable" msprop:Generator_RowChangedName="DT_HorariosRowChanged" msprop:Generator_RowClassName="DT_HorariosRow" msprop:Generator_RowChangingName="DT_HorariosRowChanging" msprop:Generator_RowEvArgName="DT_HorariosRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_HorariosRowChangeEventHandler" msprop:Generator_TablePropName="DT_Horarios" msprop:Generator_TableVarName="tableDT_Horarios" msprop:Generator_RowDeletingName="DT_HorariosRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_DIARIO_FECHA" msprop:Generator_UserColumnName="PERSONA_DIARIO_FECHA" msprop:Generator_ColumnPropNameInRow="PERSONA_DIARIO_FECHA" msprop:Generator_ColumnVarNameInTable="columnPERSONA_DIARIO_FECHA" msprop:Generator_ColumnPropNameInTable="PERSONA_DIARIO_FECHAColumn" type="xs:dateTime" />
+              <xs:element name="TURNO_DIA_ID" msprop:Generator_UserColumnName="TURNO_DIA_ID" msprop:Generator_ColumnPropNameInRow="TURNO_DIA_ID" msprop:Generator_ColumnVarNameInTable="columnTURNO_DIA_ID" msprop:Generator_ColumnPropNameInTable="TURNO_DIA_IDColumn" type="xs:decimal" />
+              <xs:element name="TURNO_DIA_HE" msprop:Generator_UserColumnName="TURNO_DIA_HE" msprop:Generator_ColumnPropNameInRow="TURNO_DIA_HE" msprop:Generator_ColumnVarNameInTable="columnTURNO_DIA_HE" msprop:Generator_ColumnPropNameInTable="TURNO_DIA_HEColumn" type="xs:dateTime" />
+              <xs:element name="TURNO_DIA_HS" msprop:Generator_UserColumnName="TURNO_DIA_HS" msprop:Generator_ColumnPropNameInRow="TURNO_DIA_HS" msprop:Generator_ColumnVarNameInTable="columnTURNO_DIA_HS" msprop:Generator_ColumnPropNameInTable="TURNO_DIA_HSColumn" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_Personas" msprop:Generator_UserTableName="DT_Personas" msprop:Generator_RowDeletedName="DT_PersonasRowDeleted" msprop:Generator_TableClassName="DT_PersonasDataTable" msprop:Generator_RowChangedName="DT_PersonasRowChanged" msprop:Generator_RowClassName="DT_PersonasRow" msprop:Generator_RowChangingName="DT_PersonasRowChanging" msprop:Generator_RowEvArgName="DT_PersonasRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_PersonasRowChangeEventHandler" msprop:Generator_TablePropName="DT_Personas" msprop:Generator_TableVarName="tableDT_Personas" msprop:Generator_RowDeletingName="DT_PersonasRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_ID" msprop:Generator_UserColumnName="PERSONA_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_IDColumn" type="xs:decimal" />
+              <xs:element name="CAMPO_LLAVE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="CAMPO_LLAVE" msprop:Generator_ColumnPropNameInRow="CAMPO_LLAVE" msprop:Generator_ColumnVarNameInTable="columnCAMPO_LLAVE" msprop:Generator_ColumnPropNameInTable="CAMPO_LLAVEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONA_NOMBRE" msprop:Generator_UserColumnName="PERSONA_NOMBRE" msprop:Generator_ColumnPropNameInRow="PERSONA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnPERSONA_NOMBRE" msprop:Generator_ColumnPropNameInTable="PERSONA_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TURNO_ID" msprop:Generator_UserColumnName="TURNO_ID" msprop:Generator_ColumnPropNameInRow="TURNO_ID" msprop:Generator_ColumnVarNameInTable="columnTURNO_ID" msprop:Generator_ColumnPropNameInTable="TURNO_IDColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TURNO_DIA_ID" msprop:Generator_UserColumnName="TURNO_DIA_ID" msprop:Generator_ColumnPropNameInRow="TURNO_DIA_ID" msprop:Generator_ColumnVarNameInTable="columnTURNO_DIA_ID" msprop:Generator_ColumnPropNameInTable="TURNO_DIA_IDColumn" type="xs:decimal" />
+              <xs:element name="DIA_SEMANA_ID" msprop:Generator_UserColumnName="DIA_SEMANA_ID" msprop:Generator_ColumnPropNameInRow="DIA_SEMANA_ID" msprop:Generator_ColumnVarNameInTable="columnDIA_SEMANA_ID" msprop:Generator_ColumnPropNameInTable="DIA_SEMANA_IDColumn" type="xs:decimal" />
+              <xs:element name="TERMINAL_ID" msprop:Generator_UserColumnName="TERMINAL_ID" msprop:Generator_ColumnPropNameInRow="TERMINAL_ID" msprop:Generator_ColumnVarNameInTable="columnTERMINAL_ID" msprop:Generator_ColumnPropNameInTable="TERMINAL_IDColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

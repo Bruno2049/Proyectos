@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_AsignacionTurnosExpress" targetNamespace="http://tempuri.org/DS_AsignacionTurnosExpress.xsd" xmlns:mstns="http://tempuri.org/DS_AsignacionTurnosExpress.xsd" xmlns="http://tempuri.org/DS_AsignacionTurnosExpress.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="CeT_DataTable" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TurnosExpressDatatableTableAdapter" GeneratorDataComponentClassName="TurnosExpressDatatableTableAdapter" Name="TurnosExpressDatatable" UserDataComponentName="TurnosExpressDatatableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EC_PERSONAS.PERSONA_LINK_ID, EC_PERSONAS.PERSONA_NOMBRE, EC_PERSONAS.AGRUPACION_NOMBRE,
+                         EC_TURNOS.TURNO_NOMBRE
+FROM            EC_PERSONAS INNER JOIN
+                         EC_TURNOS ON EC_PERSONAS.TURNO_ID = EC_TURNOS.TURNO_ID LEFT OUTER JOIN
+                         EC_SUSCRIPCION ON EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID
+WHERE        (EC_PERSONAS.PERSONA_BORRADO = 0 AND EC_PERSONAS.PERSONA_ID &gt; 0) 999999</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PERSONA_LINK_ID" DataSetColumn="PERSONA_LINK_ID" />
+              <Mapping SourceColumn="PERSONA_NOMBRE" DataSetColumn="PERSONA_NOMBRE" />
+              <Mapping SourceColumn="SUSCRIPCION_NOMBRE" DataSetColumn="AGRUPACION_NOMBRE" />
+              <Mapping SourceColumn="TURNO_NOMBRE" DataSetColumn="TURNO_NOMBRE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_AsignacionTurnosExpress" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_AsignacionTurnosExpress" msprop:Generator_DataSetName="DS_AsignacionTurnosExpress">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TurnosExpressDatatable" msprop:Generator_UserTableName="TurnosExpressDatatable" msprop:Generator_RowDeletedName="TurnosExpressDatatableRowDeleted" msprop:Generator_RowChangedName="TurnosExpressDatatableRowChanged" msprop:Generator_RowClassName="TurnosExpressDatatableRow" msprop:Generator_RowChangingName="TurnosExpressDatatableRowChanging" msprop:Generator_RowEvArgName="TurnosExpressDatatableRowChangeEvent" msprop:Generator_RowEvHandlerName="TurnosExpressDatatableRowChangeEventHandler" msprop:Generator_TableClassName="TurnosExpressDatatableDataTable" msprop:Generator_TableVarName="tableTurnosExpressDatatable" msprop:Generator_RowDeletingName="TurnosExpressDatatableRowDeleting" msprop:Generator_TablePropName="TurnosExpressDatatable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_LINK_ID" msprop:Generator_UserColumnName="PERSONA_LINK_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_LINK_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_LINK_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_LINK_IDColumn" type="xs:decimal" />
+              <xs:element name="PERSONA_NOMBRE" msprop:Generator_UserColumnName="PERSONA_NOMBRE" msprop:Generator_ColumnPropNameInRow="PERSONA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnPERSONA_NOMBRE" msprop:Generator_ColumnPropNameInTable="PERSONA_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AGRUPACION_NOMBRE" msprop:Generator_UserColumnName="AGRUPACION_NOMBRE" msprop:Generator_ColumnPropNameInRow="AGRUPACION_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnPERSONA_AGRUPACION" msprop:Generator_ColumnPropNameInTable="PERSONA_AGRUPACIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="999999" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TURNO_NOMBRE" msprop:Generator_UserColumnName="TURNO_NOMBRE" msprop:Generator_ColumnPropNameInRow="TURNO_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnTURNO_NOMBRE" msprop:Generator_ColumnPropNameInTable="TURNO_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

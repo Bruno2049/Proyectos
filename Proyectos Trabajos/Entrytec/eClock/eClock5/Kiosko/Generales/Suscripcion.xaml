@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Kiosko.Generales.Suscripcion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:Kiosko.Controles" 
+             mc:Ignorable="d"  d:DesignHeight="768" d:DesignWidth="1366"  Background="{DynamicResource BrushFondoApp}"  Foreground="{DynamicResource ColorFuente}" FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoFontEtiquetas}" Loaded="UserControl_Loaded" >
+    <Grid>
+        <Controles:UC_Teclado x:Name="Teclado"   Style="{DynamicResource TecladoBannerDerStyle}" Loaded="Teclado_Loaded" />
+        <Controles:UC_Banner HorizontalAlignment="Right" Margin="{DynamicResource MargenBanner}" Width="{DynamicResource AnchoBanner}"/>
+
+        <eClock5:UC_ToolBar x:Name="ToolBar" Height="{DynamicResource AltoToolBar}" VerticalAlignment="Top" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" Titulo="Requiere suscripción válida" BotonesCreados="ToolBar_BotonesCreados" >
+            <eClock5:UC_ToolBar.Controles>
+                
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Buscar" Imagen="pack://siteoforigin:,,,/Resources/Siguiente-64.png" Nombre="Btn_Siguiente" Default="True" />
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+
+
+        <Grid  HorizontalAlignment="Center" Width="600"  VerticalAlignment="Top" Margin="0,80,200,0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock  x:Name="Lbl_NumEmpleado" Text="No. de suscripción"   FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoFontDia}" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{DynamicResource TextBlockEtiquetaStyle}"  />
+            <TextBox x:Name="Tbx_NumSuscripcion" Grid.Column="1" VerticalAlignment="Center" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+        </Grid>
+
+    </Grid>
+</UserControl>

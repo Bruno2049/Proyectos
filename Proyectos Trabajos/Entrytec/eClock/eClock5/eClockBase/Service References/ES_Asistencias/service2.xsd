@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaGrafica">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MostrarAgrupacion" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MostrarEmpleado" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MostrarFecha" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Persona_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Agrupacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaGraficaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenAsistenciaGraficaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EntradaSalida" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Comida" type="xs:boolean" />
+        <xs:element minOccurs="0" name="HorasExtras" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Totales" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Incidencia" type="xs:boolean" />
+        <xs:element minOccurs="0" name="TurnoDia" type="xs:boolean" />
+        <xs:element minOccurs="0" name="TiposIncidenciasSistemaIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TiposIncidenciasIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MuestraAgrupacion" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MuestraEmpleado" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Persona_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Agrupacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenAsistenciaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaLineal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Persona_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Agrupacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Campos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrdenarPor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TiposIncidenciasSistemaIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TiposIncidenciasIDs" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaLinealResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenAsistenciaLinealResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaLinealN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PERSONA_DIARIO_ID_INICIO" type="xs:int" />
+        <xs:element minOccurs="0" name="PERSONA_DIARIO_ID_FIN" type="xs:int" />
+        <xs:element minOccurs="0" name="Lang" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaLinealNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenAsistenciaLinealNResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaLinealV5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Persona_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Agrupacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="OrdenarPor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TiposIncidenciasSistemaIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TiposIncidenciasIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lang" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaLinealV5Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenAsistenciaLinealV5Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaHorizontal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EntradaSalida" type="xs:boolean" />
+        <xs:element minOccurs="0" name="TurnoDia" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncidenciaAbr" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MuestraAgrupacion" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MuestraEmpleado" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Persona_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Agrupacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaHorizontalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenAsistenciaHorizontalResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaHorizontalN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EntradaSalida" type="xs:boolean" />
+        <xs:element minOccurs="0" name="TurnoDia" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncidenciaAbr" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ColorTurno" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ColorIncidencia" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MuestraAgrupacion" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MuestraEmpleado" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Persona_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Agrupacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Lang" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaHorizontalNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenAsistenciaHorizontalNResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaSemanal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EntradaSalida" type="xs:boolean" />
+        <xs:element minOccurs="0" name="TurnoDia" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MuestraAgrupacion" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MuestraEmpleado" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Persona_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Agrupacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaSemanalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenAsistenciaSemanalResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenHorasExtras">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EntradaSalida" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Comida" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Totales" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Incidencia" type="xs:boolean" />
+        <xs:element minOccurs="0" name="TurnoDia" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MuestraAgrupacion" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MuestraEmpleado" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MuestraCeros" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Persona_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Agrupacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenHorasExtrasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenHorasExtrasResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AplicaHorasExtras">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ListadoAplicaHorasExtras" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EsAvanzada" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AplicaHorasExtrasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AplicaHorasExtrasResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QuitaHorasExtras">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PERSONA_D_HE_IDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Forzar" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QuitaHorasExtrasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QuitaHorasExtrasResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaTotalesSaldos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MostrarAgrupacion" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MostrarEmpleado" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Persona_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Agrupacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaTotalesSaldosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenAsistenciaTotalesSaldosResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaTotales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MostrarAgrupacion" type="xs:boolean" />
+        <xs:element minOccurs="0" name="MostrarEmpleado" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Persona_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Agrupacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAsistenciaTotalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenAsistenciaTotalesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenTiempos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Persona_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Agrupacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenTiemposResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenTiemposResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

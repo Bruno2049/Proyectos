@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenEtiqueta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocalizacionIdioma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LocalizacionLlave" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenEtiquetaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenEtiquetaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenEtiquetaDebug">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocalizacionIdioma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LocalizacionLlave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TextoPredeterminado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenEtiquetaDebugResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenEtiquetaDebugResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAyuda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocalizacionIdioma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LocalizacionLlave" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAyudaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenAyudaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenEtiquetasAyuda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LocalizacionIdioma" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Hash" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenEtiquetasAyudaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenEtiquetasAyudaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

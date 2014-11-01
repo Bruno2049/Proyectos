@@ -1,0 +1,14 @@
+bin\Debug\TrialMaker Example.exe
+bin\Debug\TrialMaker Example.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\TrialMaker_Example.Form1.resources
+obj\Debug\TrialMaker_Example.Properties.Resources.resources
+obj\Debug\TrialMaker Example.csproj.GenerateResource.Cache
+obj\Debug\TrialMaker Example.exe
+obj\Debug\TrialMaker Example.pdb
+bin\Debug\SoftwareLocker.dll
+bin\Debug\FilterControls.dll
+bin\Debug\SerialBoxes.dll
+bin\Debug\FilterControls.pdb
+bin\Debug\SerialBoxes.pdb
+bin\Debug\SoftwareLocker.pdb

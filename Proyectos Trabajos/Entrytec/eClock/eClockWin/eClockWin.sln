@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eClockWin", "eClockWin.csproj", "{7B3E0087-FFE9-4E83-B366-2338A3173BA5}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Enrola|Any CPU = Debug Enrola|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B3E0087-FFE9-4E83-B366-2338A3173BA5}.Debug Enrola|Any CPU.ActiveCfg = Debug Enrola|Any CPU
+		{7B3E0087-FFE9-4E83-B366-2338A3173BA5}.Debug Enrola|Any CPU.Build.0 = Debug Enrola|Any CPU
+		{7B3E0087-FFE9-4E83-B366-2338A3173BA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B3E0087-FFE9-4E83-B366-2338A3173BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B3E0087-FFE9-4E83-B366-2338A3173BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B3E0087-FFE9-4E83-B366-2338A3173BA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

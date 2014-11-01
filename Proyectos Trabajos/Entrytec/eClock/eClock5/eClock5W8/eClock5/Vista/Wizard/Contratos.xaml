@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="eClock5.Vista.Wizard.Contratos"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="395" d:DesignWidth="570">
+    <Grid >
+        <Image HorizontalAlignment="Left" Height="{StaticResource AltoWizardTitulo}" VerticalAlignment="Top" Width="100" Source="/eClock5;component/Resources/eClock.png"/>
+        <TextBlock x:Name="Lbl_Contrato" Margin="218,10,217,0" TextWrapping="Wrap" Text="Contrato" VerticalAlignment="Top" FontSize="{StaticResource FontSizeTitulo}" TextAlignment="Center" Foreground="{StaticResource Blanco_Brush}"/>
+        <CheckBox x:Name="Chb_Acepto" Content="Acepto los terminos y condiciones" Margin="10,0,323,10" FontSize="{StaticResource FontSizeParrafo}" Height="15" VerticalAlignment="Bottom"/>
+        <ScrollViewer Margin="10,69,10,0" BorderBrush="{StaticResource Negro_Brush}" BorderThickness="1" Background="{StaticResource Blanco_Brush}" Height="124" VerticalAlignment="Top">
+            <TextBlock x:Name="Lbl_Contrato1" TextWrapping="Wrap"  Text="AVISO PARA EL USUARIO: LEA CUIDADOSAMENTE ESTE CONTRATO. AL COPIAR, INSTALAR O UTILIZAR EL SOFTWARE O UNA PARTE DEL MISMO, USTED ACEPTA TODOS LOS TÉRMINOS Y CONDICIONES DE ESTE CONTRATO, INCLUYENDO, EN PARTICULAR, LAS LIMITACIONES REFERENTES A:                         2.  Licencia de Software. eClock le otorga a usted la licencia no exclusiva de uso del Software de la manera y con el objeto que se describe en la Documentación, siempre y cuando usted haya adquirido el Software de eClock o  uno de sus licenciatarios autorizados y cumpla con los términos de este contrato, los cuales se presentan a continuación.                       2.1  Uso General. Usted podrá instalar y utilizar una copia del Software en hasta el Número Permitido de Equipos compatibles.                        2.2 Utilización de Servidor. Usted podrá instalar una copia del Software en un servidor dentro de su Red Interna con el fin de descargarlo e instalarlo en hasta el Número Permitido de otros Equipos dentro de la misma Red Interna." Background="{StaticResource Blanco_Brush}" VerticalAlignment="Top" Margin="3" Foreground="#FF03030A" HorizontalAlignment="Left"/>
+        </ScrollViewer>
+        <ScrollViewer Margin="10,198,10,30" BorderBrush="{StaticResource Negro_Brush}" BorderThickness="1" Background="{StaticResource Blanco_Brush}">
+            <TextBlock x:Name="Lbl_Contrato2" TextWrapping="Wrap"  Text="AVISO PARA EL USUARIO: LEA CUIDADOSAMENTE ESTE CONTRATO. AL COPIAR, INSTALAR O UTILIZAR EL SOFTWARE O UNA PARTE DEL MISMO, USTED ACEPTA TODOS LOS TÉRMINOS Y CONDICIONES DE ESTE CONTRATO, INCLUYENDO, EN PARTICULAR, LAS LIMITACIONES REFERENTES A:                         2.  Licencia de Software. eClock le otorga a usted la licencia no exclusiva de uso del Software de la manera y con el objeto que se describe en la Documentación, siempre y cuando usted haya adquirido el Software de eClock o  uno de sus licenciatarios autorizados y cumpla con los términos de este contrato, los cuales se presentan a continuación.                       2.1  Uso General. Usted podrá instalar y utilizar una copia del Software en hasta el Número Permitido de Equipos compatibles.                        2.2 Utilización de Servidor. Usted podrá instalar una copia del Software en un servidor dentro de su Red Interna con el fin de descargarlo e instalarlo en hasta el Número Permitido de otros Equipos dentro de la misma Red Interna." Background="{StaticResource Blanco_Brush}" VerticalAlignment="Top" Margin="3" Foreground="#FF010206" HorizontalAlignment="Left"/>
+        </ScrollViewer>
+
+
+
+    </Grid>
+
+    </UserControl>

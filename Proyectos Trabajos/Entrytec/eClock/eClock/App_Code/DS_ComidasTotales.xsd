@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_ComidasTotales" targetNamespace="http://tempuri.org/DS_ComidasTotales.xsd" xmlns:mstns="http://tempuri.org/DS_ComidasTotales.xsd" xmlns="http://tempuri.org/DS_ComidasTotales.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Public" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="CeT_DataTable" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DT_ComidasTotalesTableAdapter" GeneratorDataComponentClassName="DT_ComidasTotalesTableAdapter" Name="DT_ComidasTotales" UserDataComponentName="DT_ComidasTotalesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="FamilyAndAssembly" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_SUSCRIPCION.SUSCRIPCION_NOMBRE, EC_PERSONAS.PERSONA_ID, EC_PERSONAS.PERSONA_LINK_ID, 0.0 AS TOTAL_COMIDAS1, 
+                         0.0 AS TOTAL_COMIDAS2, 0.0 AS COSTO_COMIDAS1, 0.0 AS COSTO_COMIDAS2, 0.0 AS COSTO_COMIAS_TOTAL, EC_PERSONAS.PERSONA_NOMBRE, 777777 as FechaI, 888888 as FechaF
+FROM            EC_PERSONAS INNER JOIN
+                         EC_SUSCRIPCION ON EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID WHERE EC_PERSONAS.PERSONA_BORRADO = 0 AND EC_PERSONAS.PERSONA_ID&gt;0 AND PERSONA_ID IN (999999)</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SUSCRIPCION_NOMBRE" DataSetColumn="SUSCRIPCION_NOMBRE" />
+              <Mapping SourceColumn="PERSONA_ID" DataSetColumn="PERSONA_ID" />
+              <Mapping SourceColumn="PERSONA_LINK_ID" DataSetColumn="PERSONA_LINK_ID" />
+              <Mapping SourceColumn="TOTAL_COMIDAS1" DataSetColumn="TOTAL_COMIDAS1" />
+              <Mapping SourceColumn="TOTAL_COMIDAS2" DataSetColumn="TOTAL_COMIDAS2" />
+              <Mapping SourceColumn="COSTO_COMIDAS1" DataSetColumn="COSTO_COMIDAS1" />
+              <Mapping SourceColumn="COSTO_COMIDAS2" DataSetColumn="COSTO_COMIDAS2" />
+              <Mapping SourceColumn="COSTO_COMIAS_TOTAL" DataSetColumn="COSTO_COMIAS_TOTAL" />
+              <Mapping SourceColumn="PERSONA_NOMBRE" DataSetColumn="PERSONA_NOMBRE" />
+              <Mapping SourceColumn="FECHAI" DataSetColumn="FECHAI" />
+              <Mapping SourceColumn="FECHAF" DataSetColumn="FECHAF" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillIn" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataIn" GeneratorSourceName="FillIn" GetMethodModifier="FamilyOrAssembly" GetMethodName="GetDataIn" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataIn" UserSourceName="FillIn">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_SUSCRIPCION.SUSCRIPCION_NOMBRE, EC_PERSONAS.PERSONA_ID, EC_PERSONAS.PERSONA_LINK_ID, 0.0 AS TOTAL_COMIDAS1, 
+                         0.0 AS TOTAL_COMIDAS2, 0.0 AS COSTO_COMIDAS1, 0.0 AS COSTO_COMIDAS2, 0.0 AS COSTO_COMIAS_TOTAL, EC_PERSONAS.PERSONA_NOMBRE
+FROM            EC_PERSONAS INNER JOIN
+                         EC_SUSCRIPCION ON EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID WHERE EC_PERSONAS.PERSONA_ID&gt;0 AND EC_PERSONAS.PERSONA_BORRADO = 0 AND PERSONA_ID IN (999999)
+ORDER BY EC_PERSONAS.PERSONA_LINK_ID</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DT_ComidasTotales1TableAdapter" GeneratorDataComponentClassName="DT_ComidasTotales1TableAdapter" Name="DT_ComidasTotales1" UserDataComponentName="DT_ComidasTotales1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="FamilyAndAssembly" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_SUSCRIPCION.SUSCRIPCION_NOMBRE, EC_PERSONAS_DATOS.DATARE, EC_PERSONAS.PERSONA_ID, EC_PERSONAS.PERSONA_LINK_ID, 
+                         0.0 AS TOTAL_COMIDAS1, 0.0 AS TOTAL_COMIDAS2, 0.0 AS COSTO_COMIDAS1, 0.0 AS COSTO_COMIDAS2, 0.0 AS COSTO_COMIAS_TOTAL, 
+                         EC_PERSONAS.PERSONA_NOMBRE, 777777 AS FechaI, 888888 AS FechaF
+FROM            EC_PERSONAS INNER JOIN
+                         EC_SUSCRIPCION ON EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID INNER JOIN
+                         EC_PERSONAS_DATOS ON EC_PERSONAS.PERSONA_LINK_ID = EC_PERSONAS_DATOS.TRACVE
+WHERE        (EC_PERSONAS.PERSONA_BORRADO = 0) AND (EC_PERSONAS.PERSONA_ID &gt; 0) AND (EC_PERSONAS.PERSONA_ID IN (999999))</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SUSCRIPCION_NOMBRE" DataSetColumn="SUSCRIPCION_NOMBRE" />
+              <Mapping SourceColumn="PERSONA_ID" DataSetColumn="PERSONA_ID" />
+              <Mapping SourceColumn="PERSONA_LINK_ID" DataSetColumn="PERSONA_LINK_ID" />
+              <Mapping SourceColumn="TOTAL_COMIDAS1" DataSetColumn="TOTAL_COMIDAS1" />
+              <Mapping SourceColumn="TOTAL_COMIDAS2" DataSetColumn="TOTAL_COMIDAS2" />
+              <Mapping SourceColumn="COSTO_COMIDAS1" DataSetColumn="COSTO_COMIDAS1" />
+              <Mapping SourceColumn="COSTO_COMIDAS2" DataSetColumn="COSTO_COMIDAS2" />
+              <Mapping SourceColumn="COSTO_COMIAS_TOTAL" DataSetColumn="COSTO_COMIAS_TOTAL" />
+              <Mapping SourceColumn="PERSONA_NOMBRE" DataSetColumn="PERSONA_NOMBRE" />
+              <Mapping SourceColumn="DATARE" DataSetColumn="DATARE" />
+              <Mapping SourceColumn="FECHAI" DataSetColumn="FECHAI1" />
+              <Mapping SourceColumn="FECHAF" DataSetColumn="FECHAF1" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillIn" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataIn" GeneratorSourceName="FillIn" GetMethodModifier="FamilyOrAssembly" GetMethodName="GetDataIn" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataIn" UserSourceName="FillIn">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT        EC_SUSCRIPCION.SUSCRIPCION_NOMBRE, EC_PERSONAS.PERSONA_ID, EC_PERSONAS.PERSONA_LINK_ID, 0.0 AS TOTAL_COMIDAS1, 
+                         0.0 AS TOTAL_COMIDAS2, 0.0 AS COSTO_COMIDAS1, 0.0 AS COSTO_COMIDAS2, 0.0 AS COSTO_COMIAS_TOTAL, EC_PERSONAS.PERSONA_NOMBRE
+FROM            EC_PERSONAS INNER JOIN
+                         EC_SUSCRIPCION ON EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID WHERE EC_PERSONAS.PERSONA_ID&gt;0 AND EC_PERSONAS.PERSONA_BORRADO = 0 AND PERSONA_ID IN (999999)
+ORDER BY EC_PERSONAS.PERSONA_LINK_ID</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_ComidasTotales" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_ComidasTotales" msprop:Generator_DataSetName="DS_ComidasTotales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_ComidasTotales" msprop:Generator_UserTableName="DT_ComidasTotales" msprop:Generator_RowDeletedName="DT_ComidasTotalesRowDeleted" msprop:Generator_RowChangedName="DT_ComidasTotalesRowChanged" msprop:Generator_RowClassName="DT_ComidasTotalesRow" msprop:Generator_RowChangingName="DT_ComidasTotalesRowChanging" msprop:Generator_RowEvArgName="DT_ComidasTotalesRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_ComidasTotalesRowChangeEventHandler" msprop:Generator_TableClassName="DT_ComidasTotalesDataTable" msprop:Generator_TableVarName="tableDT_ComidasTotales" msprop:Generator_RowDeletingName="DT_ComidasTotalesRowDeleting" msprop:Generator_TablePropName="DT_ComidasTotales">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SUSCRIPCION_NOMBRE" msprop:Generator_UserColumnName="SUSCRIPCION_NOMBRE" msprop:nullValue="(Empty)" msprop:Generator_ColumnVarNameInTable="columnSUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInTable="SUSCRIPCION_NOMBREColumn" msprop:Generator_ColumnPropNameInRow="SUSCRIPCION_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONA_ID" msprop:Generator_UserColumnName="PERSONA_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_IDColumn" type="xs:decimal" />
+              <xs:element name="PERSONA_LINK_ID" msprop:Generator_UserColumnName="PERSONA_LINK_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_LINK_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_LINK_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_LINK_IDColumn" type="xs:decimal" />
+              <xs:element name="TOTAL_COMIDAS1" msprop:Generator_UserColumnName="TOTAL_COMIDAS1" msprop:Generator_ColumnPropNameInRow="TOTAL_COMIDAS1" msprop:Generator_ColumnVarNameInTable="columnTOTAL_COMIDAS1" msprop:Generator_ColumnPropNameInTable="TOTAL_COMIDAS1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOTAL_COMIDAS2" msprop:Generator_UserColumnName="TOTAL_COMIDAS2" msprop:Generator_ColumnPropNameInRow="TOTAL_COMIDAS2" msprop:Generator_ColumnVarNameInTable="columnTOTAL_COMIDAS2" msprop:Generator_ColumnPropNameInTable="TOTAL_COMIDAS2Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COSTO_COMIDAS1" msprop:Generator_UserColumnName="COSTO_COMIDAS1" msprop:Generator_ColumnPropNameInRow="COSTO_COMIDAS1" msprop:Generator_ColumnVarNameInTable="columnCOSTO_COMIDAS1" msprop:Generator_ColumnPropNameInTable="COSTO_COMIDAS1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COSTO_COMIDAS2" msprop:Generator_UserColumnName="COSTO_COMIDAS2" msprop:Generator_ColumnPropNameInRow="COSTO_COMIDAS2" msprop:Generator_ColumnVarNameInTable="columnCOSTO_COMIDAS2" msprop:Generator_ColumnPropNameInTable="COSTO_COMIDAS2Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COSTO_COMIAS_TOTAL" msprop:Generator_UserColumnName="COSTO_COMIAS_TOTAL" msprop:Generator_ColumnPropNameInRow="COSTO_COMIAS_TOTAL" msprop:Generator_ColumnVarNameInTable="columnCOSTO_COMIAS_TOTAL" msprop:Generator_ColumnPropNameInTable="COSTO_COMIAS_TOTALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PERSONA_NOMBRE" msprop:Generator_UserColumnName="PERSONA_NOMBRE" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="PERSONA_NOMBRE" msprop:Generator_ColumnPropNameInTable="PERSONA_NOMBREColumn" msprop:Generator_ColumnVarNameInTable="columnPERSONA_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHAI" msprop:Generator_UserColumnName="FECHAI" msprop:Generator_ColumnPropNameInRow="FECHAI" msprop:Generator_ColumnVarNameInTable="columnFECHAI" msprop:Generator_ColumnPropNameInTable="FECHAIColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAF" msprop:Generator_UserColumnName="FECHAF" msprop:Generator_ColumnPropNameInRow="FECHAF" msprop:Generator_ColumnVarNameInTable="columnFECHAF" msprop:Generator_ColumnPropNameInTable="FECHAFColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_ComidasTotales1" msprop:Generator_UserTableName="DT_ComidasTotales1" msprop:Generator_RowDeletedName="DT_ComidasTotales1RowDeleted" msprop:Generator_TableClassName="DT_ComidasTotales1DataTable" msprop:Generator_RowChangedName="DT_ComidasTotales1RowChanged" msprop:Generator_RowClassName="DT_ComidasTotales1Row" msprop:Generator_RowChangingName="DT_ComidasTotales1RowChanging" msprop:Generator_RowEvArgName="DT_ComidasTotales1RowChangeEvent" msprop:Generator_RowEvHandlerName="DT_ComidasTotales1RowChangeEventHandler" msprop:Generator_TablePropName="DT_ComidasTotales1" msprop:Generator_TableVarName="tableDT_ComidasTotales1" msprop:Generator_RowDeletingName="DT_ComidasTotales1RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SUSCRIPCION_NOMBRE" msprop:Generator_UserColumnName="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInRow="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnSUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInTable="SUSCRIPCION_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONA_ID" msprop:Generator_UserColumnName="PERSONA_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_IDColumn" type="xs:decimal" />
+              <xs:element name="PERSONA_LINK_ID" msprop:Generator_UserColumnName="PERSONA_LINK_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_LINK_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_LINK_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_LINK_IDColumn" type="xs:decimal" />
+              <xs:element name="TOTAL_COMIDAS1" msprop:Generator_UserColumnName="TOTAL_COMIDAS1" msprop:Generator_ColumnPropNameInRow="TOTAL_COMIDAS1" msprop:Generator_ColumnVarNameInTable="columnTOTAL_COMIDAS1" msprop:Generator_ColumnPropNameInTable="TOTAL_COMIDAS1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOTAL_COMIDAS2" msprop:Generator_UserColumnName="TOTAL_COMIDAS2" msprop:Generator_ColumnPropNameInRow="TOTAL_COMIDAS2" msprop:Generator_ColumnVarNameInTable="columnTOTAL_COMIDAS2" msprop:Generator_ColumnPropNameInTable="TOTAL_COMIDAS2Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COSTO_COMIDAS1" msprop:Generator_UserColumnName="COSTO_COMIDAS1" msprop:Generator_ColumnPropNameInRow="COSTO_COMIDAS1" msprop:Generator_ColumnVarNameInTable="columnCOSTO_COMIDAS1" msprop:Generator_ColumnPropNameInTable="COSTO_COMIDAS1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COSTO_COMIDAS2" msprop:Generator_UserColumnName="COSTO_COMIDAS2" msprop:Generator_ColumnPropNameInRow="COSTO_COMIDAS2" msprop:Generator_ColumnVarNameInTable="columnCOSTO_COMIDAS2" msprop:Generator_ColumnPropNameInTable="COSTO_COMIDAS2Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COSTO_COMIAS_TOTAL" msprop:Generator_UserColumnName="COSTO_COMIAS_TOTAL" msprop:Generator_ColumnPropNameInRow="COSTO_COMIAS_TOTAL" msprop:Generator_ColumnVarNameInTable="columnCOSTO_COMIAS_TOTAL" msprop:Generator_ColumnPropNameInTable="COSTO_COMIAS_TOTALColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PERSONA_NOMBRE" msprop:Generator_UserColumnName="PERSONA_NOMBRE" msprop:Generator_ColumnPropNameInRow="PERSONA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnPERSONA_NOMBRE" msprop:Generator_ColumnPropNameInTable="PERSONA_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHAI" msprop:Generator_UserColumnName="FECHAI" msprop:Generator_ColumnPropNameInRow="FECHAI" msprop:Generator_ColumnVarNameInTable="columnFECHAI" msprop:Generator_ColumnPropNameInTable="FECHAIColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAF" msprop:Generator_UserColumnName="FECHAF" msprop:Generator_ColumnPropNameInRow="FECHAF" msprop:Generator_ColumnVarNameInTable="columnFECHAF" msprop:Generator_ColumnPropNameInTable="FECHAFColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DATARE" msprop:Generator_UserColumnName="DATARE" msprop:Generator_ColumnPropNameInRow="DATARE" msprop:Generator_ColumnVarNameInTable="columnDATARE" msprop:Generator_ColumnPropNameInTable="DATAREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHAI1" msdata:ReadOnly="true" msdata:Caption="FECHAI" msprop:Generator_UserColumnName="FECHAI1" msprop:Generator_ColumnPropNameInRow="FECHAI1" msprop:Generator_ColumnVarNameInTable="columnFECHAI1" msprop:Generator_ColumnPropNameInTable="FECHAI1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FECHAF1" msdata:ReadOnly="true" msdata:Caption="FECHAF" msprop:Generator_UserColumnName="FECHAF1" msprop:Generator_ColumnPropNameInRow="FECHAF1" msprop:Generator_ColumnVarNameInTable="columnFECHAF1" msprop:Generator_ColumnPropNameInTable="FECHAF1Column" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DT_ComidasTotales" />
+      <xs:field xpath="mstns:PERSONA_ID" />
+    </xs:unique>
+    <xs:unique name="DT_ComidasTotales1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DT_ComidasTotales1" />
+      <xs:field xpath="mstns:PERSONA_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

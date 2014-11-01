@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="eClock5.Vista.Empleados.Importar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" 
+             xmlns:local="clr-namespace:eClock5.Vista.Nomina" 
+             xmlns:Modelos="clr-namespace:eClockBase.Modelos;assembly=eClockBase" 
+             xmlns:Controles="clr-namespace:eClock5.Controles"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="600" Foreground="{DynamicResource Blanco_Brush}" >
+    <Grid>
+        <eClock5:UC_ToolBar VerticalAlignment="Top" Width="Auto" Height="48" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Nombre="Btn_Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <Grid Margin="{DynamicResource MargenAltoToolBar}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="450" Background="{DynamicResource AzulClaro_Brush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="44*"/>
+                <RowDefinition Height="37*" />
+                <RowDefinition Height="110*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Lbl_RutaArchvo" Text="Ruta del Archivo" Style="{DynamicResource TextBlockEtiquetaStyle}" Grid.Row="1" />
+            <Grid Grid.Row="1" Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="90"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="Tbx_RutaArchvo"  Grid.Row="0" Grid.Column="0" Margin="10,10,10,9"  />
+                <Button x:Name="Btn_RutaArchivo" Content="Examinar" Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Btn_RutaArchivo_Click" />
+            </Grid>
+            <TextBlock x:Name="Lbl_Ayuda" Text="Puedes importar archivos Txt (texto separado por tabulación), csv (texto separado por comas), xls o xlsx donde la primer fila debe contener el nombre del campo" Style="{DynamicResource TextBlockEtiquetaStyle}" Grid.ColumnSpan="2"  />
+            <StackPanel  Grid.Row="2" Grid.ColumnSpan="2">
+                <TextBlock x:Name="Lbl_SinDatos" Text="No se obtuvieron datos a importar" Style="{DynamicResource TextBlockErrorStyle}"  />
+                <TextBlock x:Name="Lbl_NoImportar" Text="No se pudo importar" Style="{DynamicResource TextBlockErrorStyle}"  />
+                <TextBlock x:Name="Lbl_Cargando" Text="Cargando datos..." Style="{DynamicResource TextBlockErrorStyle}"  />
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

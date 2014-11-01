@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage3.master.cs" Inherits="MasterPage3" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="font-size: 11px; font-family: tahoma; text-align: center; margin: 10px; background-image: url(skins/page.bg.colorb.jpg); background-repeat: no-repeat; background-color: #1560bd;">
+    <form id="form1" runat="server" style="text-align: center">
+
+                    <br />
+                    <table style="width:100%;">
+                        <tr>
+                            <td class="style3">
+                                </td>
+                            <td class="style3">
+                                </td>
+                            <td class="style3">
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                            <td width="1" style="text-align: center">
+                                                    <table border="0" cellpadding="0" cellspacing="0" class="BoxTable" width="960">
+                        <tr>
+                            <td class="BoxTL" style="width: 11px; height: 11px;">
+                                <img height="11" src="skins/boxed_002.gif" width="11" /></td>
+                            <td class="BoxT" style="background-repeat: repeat-x; height: 11px; background-color: white;">
+                                <img height="11" src="skins/dummy.gif" width="11" /></td>
+                            <td class="BoxTR" style="width: 11px; background-repeat: repeat-y; height: 11px; background-color: white;">
+                                <img height="11" src="skins/boxed.TR.gif" width="11" /></td>
+                        </tr>
+                        <tr>
+                            <td class="BoxL" style="width: 11px; background-repeat: repeat-y; background-color: white;">
+                                <img height="11" src="skins/dummy.gif" width="11" /></td>
+                            <td class="BoxM" valign="top" style="background-color: white">
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td class="LogoRow" style="width: 937px">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" 
+                                                style="height: 16px">
+                                                <tr>
+                                                    <td class="LogoTD" width="550" style="text-align: left">
+                                                        &nbsp;</td>
+                                                    <td class="LoginTD" nowrap="nowrap" valign="top" style="text-align: right">
+
+                                                        &nbsp;</td>
+                                                </tr>
+                                            </table> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="MenuHeight" style="width: 937px; " align="center">
+                                            
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="MenuHeight" style="width: 937px; " align="center">
+                                            
+                                                Copyright © 2009, EntryTec todos los derechos reservados                        <tr>
+                                        <td class="MenuHeight" style="width: 937px; " align="center">
+                                            
+                    <span class="FooterArrow">
+                                                        <asp:HyperLink ID="HyperLink6" runat="server" ForeColor="Black" 
+                                                NavigateUrl="http://www.eClock.com.mx">Acerca de</asp:HyperLink>| 
+                                            <a id="dnn_dnnTERMS_hypTerms0" class="FOOTER_objects"
+                            >
+                                                        <asp:HyperLink ID="HyperLink7" 
+                        runat="server" ForeColor="Black" 
+                        NavigateUrl="http://www.eClock.com.mx/eClock/Soporte">Soporte</asp:HyperLink></a> </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="BoxR" style="width: 11px; background-repeat: repeat-y; background-color: white;">
+                                <img height="11" src="skins/dummy.gif" width="11" style="background-color: white" /></td>
+                        </tr>
+                        <tr>
+                            <td class="BoxBL" style="width: 11px">
+                                <img height="11" src="skins/boxed.gif" width="11" /></td>
+                            <td class="BoxB" style="background-repeat: repeat-x; background-color: white;">
+                                <img height="11" src="skins/dummy.gif" width="11" /></td>
+                            <td class="BoxBR" style="width: 11px; background-repeat: repeat-y; background-color: white;">
+                                <img height="11" src="skins/boxed.BR.gif" width="11" /></td>
+                        </tr>
+                    </table>
+                            </td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+    </form>
+</body>
+</html>

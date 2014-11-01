@@ -1,0 +1,718 @@
+/* The CSS Class that will be applied to the outer control.*/
+.igiv_CaribbeanControl
+{
+	background-color:Transparent;
+
+}
+
+
+/*
+	This class should be used for setting any padding that might be 
+	needed if the Header is placed above the control.
+*/
+.igiv_CaribbeanHeaderPadding
+{
+	padding-top: 38px;
+}
+
+
+/*
+	This class should be used for adjusting the padding of the control
+	to account for the additional size of the header and footer.
+*/
+.igiv_CaribbeanFooterPadding
+{
+	padding-bottom: 38px;
+}
+
+
+/*
+	The CSS class that will be applied to the header. 
+    The header can be absolutely positoned anywhere in the control, because the WebImageViewerhas an internal DIV that
+    wraps the control with a position set to relative. </para>
+*/
+.igiv_CaribbeanHeaderContentArea
+{
+	font-weight:bold;
+	font-size:10px;
+	position: absolute;
+	top: -20px;
+	left: 0px;
+	width: auto;
+}
+
+
+/*The CSS class that will be applied to the Left Corner of the Header. */
+.igiv_CaribbeanHeaderContentLeft
+{
+}
+
+
+/*The CSS class that will be applied to the actual content of the Header.*/
+.igiv_CaribbeanHeaderContent
+{
+	color:#002776;
+
+
+
+
+}
+
+
+/*The CSS class that will be applied to the Right Corner of the Header. */
+.igiv_CaribbeanHeaderContentRight
+{
+}
+
+
+/*
+	A TR that wraps the TopLeft, TopArea, and TopRight elements. 
+    This CSS class is useful in setting the height of the entire row.
+*/
+.igiv_CaribbeanHeaderArea
+{
+	height: 7px;
+}
+
+
+/*
+	The CSS class that will be applied to the footer. 
+    The footer can be absolutely positoned anywhere in the control, because the WebImageViewer has an internal DIV that
+    wraps the control with a position set to relative. </para>
+*/
+.igiv_CaribbeanFooterContentArea
+{
+	font-weight:bold;
+	font-size:10px;
+
+	padding-bottom:4px;
+	position: absolute;
+	bottom: -40px;
+	width: 100%;
+	float: right;
+	right: 0px;
+	text-align:right;
+}
+
+
+/*The CSS class that will be applied to the Left Corner of the Footer. */
+.igiv_CaribbeanFooterContentLeft
+{
+}
+
+
+/*The CSS class that will be applied to the actual content of the Footer.*/
+.igiv_CaribbeanFooterContent
+{
+	position: absolute;
+	bottom: 5px;
+	right: 0px;
+	color:#002776;
+}
+
+
+/* The CSS class that will be applied to the Right Corner of the Footer. */
+.igiv_CaribbeanFooterContentRight
+{
+}
+
+
+/*
+	 A TR that wraps the BottomLeft, BottomArea, and BottomRight elements. 
+     This CSS class is useful in setting the height of the entire row.
+*/
+.igiv_CaribbeanFooterArea
+{
+	height: 1px;
+}
+
+
+/*
+	A TD that wraps the Header.
+    This CSS Class should be used for applying a Background-Image along the top border of the control.
+*/
+.igiv_CaribbeanEdgeTop
+{
+	background-repeat:repeat-x;
+
+	background-image: url(images/igiv_EdgeTop.gif);
+}
+
+
+/*
+	A TD on the left side of the ImageArea.
+    This CSS Class should be used for applying a Background-Image along the left border of the control.
+*/
+.igiv_CaribbeanEdgeLeft
+{
+	background-repeat:repeat-y;
+
+	background-image: url(images/igiv_EdgeLeft.gif);
+}
+
+
+/*
+	A TD that wraps the Footer.
+    This CSS Class should be used for applying a Background-Image along the bottom border of the control.
+*/
+.igiv_CaribbeanEdgeBottom
+{
+	background-repeat:repeat-x;
+	background-image: url(images/igiv_EdgeBottom.gif);
+}
+
+
+/*
+	 A TD on the right side of the ImageArea.
+     This CSS Class should be used for applying a Background-Image along the right border of the control.
+       
+*/
+.igiv_CaribbeanEdgeRight
+{
+	background-repeat:repeat-y;
+	background-image: url(images/igiv_EdgeRight.gif);
+}
+
+
+/*
+	 The Top Left corner of the control.
+     This CSS Class should be used for rounded corners.
+*/
+.igiv_CaribbeanCornerTopLeft
+{
+	background-repeat:no-repeat;
+
+	background-image: url(images/igiv_CornerTopLeft.gif);
+	width: 6px;
+	height: 7px;
+
+}
+
+
+/*
+	The Top Right corner of the control.
+    This CSS Class should be used for rounded corners.
+*/
+.igiv_CaribbeanCornerTopRight
+{
+	background-repeat:no-repeat;
+
+	background-image: url(images/igiv_CornerTopRight.gif);
+	width: 6px;
+	height: 7px;
+
+}
+
+
+/*
+	The Bottom Left corner of the control.
+    This CSS Class should be used for rounded corners.
+*/
+.igiv_CaribbeanCornerBottomLeft
+{
+	background-repeat:no-repeat;
+
+	background-image: url(images/igiv_CornerBottomLeft.gif);
+	width: 6px;
+	height: 7px;
+}
+
+
+/*
+	The Bottom Right corner of the control.
+    This CSS Class should be used for rounded corners.
+*/
+.igiv_CaribbeanCornerBottomRight
+{
+	background-repeat:no-repeat;
+	background-image: url(images/igiv_CornerBottomRight.gif);
+	width: 6px;
+	height: 7px;
+}
+
+
+/*
+	The CSS class that will be applied to the Container of the Previous Button. 
+    This css Class is the TD in which the Image element is rendered. This style can be used
+    to set the vertical-align CSS attribute.
+*/
+.igiv_CaribbeanPrevButtonArea
+{
+	background-color:Transparent;
+	cursor:pointer;
+}
+
+
+/*
+	The CSS class that will be applied to the Previous Button. 
+    The Previous Button can be absolutely positoned anywhere in the control, because the WebImageViewer has an internal DIV that
+    wraps the control with a position set to relative. 
+*/
+.igiv_CaribbeanPrevButton
+{
+	background-color:Transparent;
+	padding-left:2px;
+	position: relative;
+	left: 8px;
+	cursor:pointer;
+}
+
+
+/*
+	The CSS class that will be applied to the Container of the Next Button. 
+    This css Class is the TD in which the Image element is rendered. This style can be used
+    to set the vetical-align CSS attribute.
+*/
+.igiv_CaribbeanNextButtonArea
+{
+	background-color:Transparent;
+	cursor:pointer;
+}
+
+
+/*
+	The CSS class that will be applied to the Next Button. 
+    The Next Button can be absolutely positoned anywhere in the control, because the WebImageViewer has an internal DIV that
+    wraps the control with a position set to relative.
+*/
+.igiv_CaribbeanNextButton
+{
+	background-color:Transparent;
+	padding-left:1px;
+	position: relative;
+	right: 50px;
+	cursor:pointer;
+}
+
+
+/*
+	A TD that contains the ImageArea.
+    If you would like a border around the ImageArea, this is the class to use.
+*/
+.igiv_CaribbeanImageAreaContainer
+{
+	background-color:White;
+}
+
+
+/*
+	A DIV that contains all of the Images. 
+    In XHTML, to apply a border around the images a padding-bottom must be set to the size of the 
+	border-top-width plus the border-bottom-width.
+*/
+.igiv_CaribbeanImageArea
+{
+	padding-bottom: 1px;
+}
+
+
+/*
+	An IMG element that is contained by the ImageAra.
+    In XHTML, to apply a border around an image a padding-bottom must be set to the size of the 
+	border-top-width plus the border-bottom-width on the ImageArea.
+*/
+.igiv_CaribbeanImage
+{
+}
+
+
+/*Applied to an IMG when it is selected.*/
+.igiv_CaribbeanImageSelected
+{
+}
+
+
+/*Applied to an IMG when the mouse is over it.*/
+.igiv_CaribbeanImageHover
+{
+}
+
+
+/*
+	When an image is hovered, this style gets applied to all other images.
+    A good use of this style is to apply an opacity to all other images that aren't being hovered, 
+	so that the hovered image has more focus.
+*/
+.igiv_CaribbeanOtherImageHover
+{
+	opacity: .5;
+	filter: alpha(opacity=50);
+}
+
+
+/*Applied to an IMG when the image is disabled.*/
+.igiv_CaribbeanImageDisabled
+{
+	opacity: .25;
+	filter: alpha(opacity=25);
+}
+
+
+
+
+
+
+/**************************** VERTICAL ***************************************/
+/*The CSS Class that will be applied to the outer control.*/
+.igiv_CaribbeanControl_Vert
+{
+	background-color:Transparent;
+	padding-bottom:38px;
+}
+
+
+/*
+	This class should be used for setting any padding that might be 
+	needed if the Header is placed above the control.
+*/
+.igiv_CaribbeanHeaderPadding_Vert
+{
+	padding-top:38px;
+}
+
+
+/*
+	This class should be used for adjusting the padding of the control
+	to account for the additional size of the header and footer.
+*/
+.igiv_CaribbeanFooterPadding_Vert
+{
+	padding-bottom:38px;
+}
+
+
+/*
+	The CSS class that will be applied to the header. 
+    The header can be absolutely positoned anywhere in the control, because the WebImageViewer has an internal DIV that
+    wraps the control with a position set to relative.
+*/
+.igiv_CaribbeanHeaderContentArea_Vert
+{
+
+	font-size:10px;
+	width: 100%;
+	position: absolute;
+	top: -20px;
+	text-align:left;
+
+}
+
+
+/*The CSS class that will be applied to the Left Corner of the Header. */
+.igiv_CaribbeanHeaderContentLeft_Vert
+{
+}
+
+
+/*The CSS class that will be applied to the actual content of the Header.*/
+.igiv_CaribbeanHeaderContent_Vert
+{
+	color:#0F0F0F;
+
+}
+
+
+/*The CSS class that will be applied to the Right Corner of the Header. */
+.igiv_CaribbeanHeaderContentRight_Vert
+{
+}
+
+
+/*
+	A TR that wraps the TopLeft_Vert, TopArea_Vert, and TopRight_Vert elements. 
+    This CSS class is useful in setting the height of the entire row.
+*/
+.igiv_CaribbeanHeaderArea_Vert
+{
+	height: 14px;
+	text-align:center;
+}
+
+
+/*
+	The CSS class that will be applied to the footer. 
+    The footer can be absolutely positoned anywhere in the control, because the WebImageViewer has an internal DIV that
+    wraps the control with a position set to relative. 
+*/
+.igiv_CaribbeanFooterContentArea_Vert
+{
+
+	font-size:10px;
+	position: absolute;
+	bottom: -45px;
+	/* width: 100%; */
+	float: right;
+	right: 10px;
+
+	text-align:right;
+}
+
+
+/*The CSS class that will be applied to the Left Corner of the Footer. */
+.igiv_CaribbeanFooterContentLeft_Vert
+{
+}
+
+
+/*The CSS class that will be applied to the actual content of the Footer.*/
+.igiv_CaribbeanFooterContent_Vert
+{
+	position: relative;
+	top: 3px;
+	color:#0F0F0F;
+}
+
+
+/*The CSS class that will be applied to the Right Corner of the Footer. */
+.igiv_CaribbeanFooterContentRight_Vert
+{
+}
+
+
+/*
+	A TR that wraps the BottomLeft_Vert, BottomArea_Vert, and BottomRight_Vert elements. 
+    This CSS class is useful in setting the height of the entire row.
+*/
+.igiv_CaribbeanFooterArea_Vert
+{
+	height: 14px;
+
+}
+
+
+/*
+	A TD that wraps the Header_Vert.
+    This CSS Class should be used for applying a Background-Image along the top border of the control.
+*/
+.igiv_CaribbeanEdgeTop_Vert
+{
+	background-repeat:repeat-x;
+	background-position:bottom ;
+	background-image: url(images/igiv_EdgeTop_Vert.gif);
+
+
+}
+
+
+/*
+	A TD on the left side of the ImageArea_Vert.
+    This CSS Class should be used for applying a Background-Image along the left border of the control.
+*/
+.igiv_CaribbeanEdgeLeft_Vert
+{
+	background-repeat:repeat-y;
+	background-position:right ;
+	background-image: url(images/igiv_EdgeLeft_Vert.gif);
+
+}
+
+
+/*
+	A TD that wraps the Footer_Vert.
+    This CSS Class should be used for applying a Background-Image along the bottom border of the control.
+*/
+.igiv_CaribbeanEdgeBottom_Vert
+{
+	background-repeat:repeat-x;
+	background-image: url(images/igiv_EdgeBottom_Vert.gif);
+
+}
+
+
+/*
+	A TD on the right side of the ImageArea_Vert.
+    This CSS Class should be used for applying a Background-Image along the right border of the control.
+*/
+.igiv_CaribbeanEdgeRight_Vert
+{
+	background-repeat:repeat-y;
+	background-image: url(images/igiv_EdgeRight_Vert.gif);
+
+}
+
+
+/*
+	The Top Left corner of the control.
+    This CSS Class should be used for rounded corners.
+*/
+.igiv_CaribbeanCornerTopLeft_Vert
+{
+	background-repeat:no-repeat;
+	background-position:bottom ;
+	background-image: url(images/igiv_CornerTopLeft_Vert.gif);
+	width: 6px;
+	position: relative;
+	right: 0px;
+}
+
+
+/*
+	The Top Right corner of the control.
+    This CSS Class should be used for rounded corners.
+*/
+.igiv_CaribbeanCornerTopRight_Vert
+{
+	background-repeat:no-repeat;
+	background-position:bottom ;
+	background-image: url(images/igiv_CornerTopRight_Vert.gif);
+	width: 6px;
+
+
+}
+
+
+/*
+	The Bottom Left corner of the control.
+    This CSS Class should be used for rounded corners.
+*/
+.igiv_CaribbeanCornerBottomLeft_Vert
+{
+	background-repeat:no-repeat;
+	background-position:top ;
+	background-image: url(images/igiv_CornerBottomLeft_Vert.gif);
+	right: 0px;
+	position: relative;
+}
+
+
+/*
+	The Bottom Right corner of the control.
+    This CSS Class should be used for rounded corners.
+*/
+.igiv_CaribbeanCornerBottomRight_Vert
+{
+	background-repeat:no-repeat;
+	background-image: url(images/igiv_CornerBottomRight_Vert.gif);
+
+}
+
+
+/*
+	The CSS class that will be applied to the Container of the PreviousButton. 
+    This css Class is the TD in which the Image element is rendered. This style can be used
+    to set the text-align CSS attribute.
+*/
+.igiv_CaribbeanPrevButtonArea_Vert
+{
+
+
+
+}
+
+
+/*
+	The CSS class that will be applied to the Previous Button. 
+    The Previous Button can be absolutely positoned anywhere in the control, because the WebImageViewer has an internal DIV that
+    wraps the control with a position set to relative. 
+*/
+.igiv_CaribbeanPrevButton_Vert
+{
+
+
+
+
+
+
+
+	position: relative;
+	top: 60px;
+	margin-top: -30px;
+	cursor:hand;
+}
+
+
+/*
+	The CSS class that will be applied to the Container of the Next Button. 
+    This css Class is the TD in which the Image element is rendered. This style can be used
+    to set the text-align CSS attribute.
+*/
+.igiv_CaribbeanNextButtonArea_Vert
+{
+	
+	text-align:center;
+}
+
+
+/*
+	The CSS class that will be applied to the Next Button. 
+    The Next Button can be absolutely positoned anywhere in the control, because the WebImageViewer has an internal DIV that
+    wraps the control with a position set to relative. 
+*/
+.igiv_CaribbeanNextButton_Vert
+{
+
+	position: relative;
+	bottom: 60px;
+	cursor:hand;
+	text-align:center;
+}
+
+
+/*
+	A TD that contains the ImageArea.
+    If you would like a border around the ImageArea, this is the class to use.
+*/
+.igiv_CaribbeanImageAreaContainer_Vert
+{
+}
+
+
+/*
+	A DIV that contains all of the Images. 
+    In XHTML, to apply a border around the images a padding-right must be set to the size of the 
+	border-left-width plus the border-right-width.
+*/
+.igiv_CaribbeanImageArea_Vert
+{
+
+}
+
+
+/*
+	An IMG element that is contained by the ImageAra.
+    In XHTML, to apply a border around an image a padding-right must be set to the size of the 
+	border-left-width plus the border-right-width on the ImageArea_Vert.
+*/
+.igiv_CaribbeanImage_Vert
+{
+}
+
+
+/*Applied to an IMG when it is selected.*/
+.igiv_CaribbeanImageSelected_Vert
+{
+}
+
+
+/*Applied to an IMG when the mouse is over it.*/
+.igiv_CaribbeanImageHover_Vert
+{
+}
+
+
+/*
+	When an image is hovered, this style gets applied to all other images.
+    A good use of this style is to apply an opacity to all other images that aren't being hovered, 
+	so that the hovered image has more focus.
+*/
+.igiv_CaribbeanOtherImageHover_Vert
+{
+	opacity: .5;
+	filter: alpha(opacity=50);
+}
+
+
+/*Applied to an IMG when the image is disabled.*/
+.igiv_CaribbeanImageDisabled_Vert
+{
+	opacity: .25;
+	filter: alpha(opacity=25);
+}
+
+
+
+
+
+
+
+

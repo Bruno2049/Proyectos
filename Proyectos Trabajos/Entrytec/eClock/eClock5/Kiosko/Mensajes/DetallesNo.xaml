@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Kiosko.Mensajes.DetallesNo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:Kiosko.Controles"
+             mc:Ignorable="d" 
+             d:DesignHeight="804" d:DesignWidth="1402" Loaded="UserControl_Loaded_1" FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoFontEtiquetas}" Background="White" Foreground="Black" Unloaded="UserControl_Unloaded">
+    <Grid x:Name="xGridChats">    
+        <eClock5:UC_Listado x:Name="Lst_Chats" MostrarToolBar="False" Width="Auto" Height="Auto"  Margin="0,0,0,351"/>
+        
+        <Controles:UC_Teclado x:Name="Teclado" Height="277" VerticalAlignment="Bottom" Margin="0,0,0,0" />
+        
+        <Grid Margin="0,0,150,282" VerticalAlignment="Bottom" Width="820">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Lbl_Comentarios" Margin="0" TextWrapping="Wrap" Text="Mensaje:"   HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            
+            <TextBox x:Name="Tbx_Mensaje" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="{DynamicResource MargenTextBoxCaptura}" TextWrapping="WrapWithOverflow"  Grid.Column="1"/>
+            
+            <Button x:Name="Btn_Enviar" Content="Enviar" Grid.Column="2" Margin="{DynamicResource MargenTextBoxCaptura}" Click="Btn_Enviar_Click" />
+        </Grid>
+            
+    </Grid>
+</UserControl>

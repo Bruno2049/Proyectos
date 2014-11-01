@@ -1,0 +1,28 @@
+Error->""  
+ Msg = Excepción durante la operación. El resultado no es válido. Compruebe la excepción InnerException para obtener más detalles.
+ StackTrace =    en System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary()
+   en eClockBase.ES_Publicidad.ObtenImagenCompletedEventArgs.get_Result() en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Publicidad\Reference.cs:línea 51
+   en eClockBase.Controladores.Publicidad.<>c__DisplayClass1.<ObtenImagen>b__0(Object sender, ObtenImagenCompletedEventArgs e) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Controladores\Publicidad.cs:línea 45 23/03/2014 10:16:49 a.m.
+Error->""  
+ Msg = Excepción durante la operación. El resultado no es válido. Compruebe la excepción InnerException para obtener más detalles.
+ StackTrace =    en System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary()
+   en eClockBase.ES_Publicidad.ObtenImagenCompletedEventArgs.get_Result() en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Publicidad\Reference.cs:línea 51
+   en eClockBase.Controladores.Publicidad.<>c__DisplayClass1.<ObtenImagen>b__0(Object sender, ObtenImagenCompletedEventArgs e) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Controladores\Publicidad.cs:línea 45 23/03/2014 10:16:50 a.m.
+LogMsg->"" CSesion.CreaSesion_Completado Z6oAABsAAAA= 23/03/2014 10:17:44 a.m.
+LogMsg->"" CSesion.CreaSesion_Completado aKoAAAYAAAA= 23/03/2014 10:18:44 a.m.
+LogMsg->"" CSesion.CreaSesion_Completado aaoAAAkAAAA= 23/03/2014 10:20:10 a.m.
+LogMsg->"" CSesion.CreaSesion_Completado aqoAAAwAAAA= 23/03/2014 10:21:56 a.m.
+LogMsg->"" CSesion.CreaSesion_Completado bKoAABIAAAA= 23/03/2014 10:32:18 a.m.
+Error->""  
+ Msg = El búfer no puede ser nulo.
+Nombre del parámetro: buffer
+ StackTrace =    en System.IO.MemoryStream..ctor(Byte[] buffer, Boolean writable)
+   en System.IO.MemoryStream..ctor(Byte[] buffer)
+   en Kiosko.Generales.Main.Persona_ObtenFotoThumbnailEvent(Byte[] Foto) en c:\Desarrollo\eClock\Código Fuente\eClock5\Kiosko\Generales\Main.xaml.cs:línea 147 23/03/2014 10:32:18 a.m.
+LogMsg->"" CSesion.CreaSesion_Completado baoAABUAAAA= 23/03/2014 10:37:19 a.m.
+Error->""  
+ Msg = El búfer no puede ser nulo.
+Nombre del parámetro: buffer
+ StackTrace =    en System.IO.MemoryStream..ctor(Byte[] buffer, Boolean writable)
+   en System.IO.MemoryStream..ctor(Byte[] buffer)
+   en Kiosko.Generales.Main.Persona_ObtenFotoThumbnailEvent(Byte[] Foto) en c:\Desarrollo\eClock\Código Fuente\eClock5\Kiosko\Generales\Main.xaml.cs:línea 147 23/03/2014 10:37:19 a.m.

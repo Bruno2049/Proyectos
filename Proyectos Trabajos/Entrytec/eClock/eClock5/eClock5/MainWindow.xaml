@@ -1,0 +1,26 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:eClock5" xmlns:Modelos="clr-namespace:eClockBase.Modelos;assembly=eClockBase" xmlns:igEditors="http://infragistics.com/Editors" xmlns:ig="http://schemas.infragistics.com/xaml" xmlns:igDP="http://infragistics.com/DataPresenter" xmlns:Atributos_Campos="clr-namespace:eClockBase.Atributos_Campos;assembly=eClockBase" xmlns:eClockBase="clr-namespace:eClockBase;assembly=eClockBase" xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.MainWindow"
+        Title="MainWindow" Height="356" Width="538" Closing="Window_Closing_1">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <local:UC_Campos HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="497" Height="235" Grid.Column="1" />
+        <Grid HorizontalAlignment="Left" Height="100" Margin="27,34,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="40,28,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        </Grid>
+        <TextBlock x:Name="Tbk_Resultado" Margin="12,218,286,80" TextWrapping="Wrap" Text="TextBlock" RenderTransformOrigin="0.02,0.5" Grid.Column="1"/>
+        <Controles:UC_Horas Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="368,271,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿@helper MuestraListado(List<eClockBase.Controladores.ListadoJson> Listado, string Titulo, string FuncionJScript = "ML_Click")
+{
+    <ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">@Titulo</li>
+        @if (Listado != null)
+        {
+            foreach (eClockBase.Controladores.ListadoJson Elemento in Listado)
+            {
+            <li>
+                <a href="#" onclick="@FuncionJScript (@Elemento.Llave);return false;">
+                <h2>@Elemento.Nombre</h2>
+                @if(Elemento.Descripcion!= null)
+                {
+                    <p>@Elemento.Descripcion</p>
+                }
+                </a></li>
+            }
+        }
+    </ul>
+}

@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Nomina";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Nomina</h2>
+<div id="controlgroup">
+    <label for="Lbl_password">Inserta tu contraseña:</label>
+    <input type="password" name="Tbx_password" id="Tbx_password" value="" autocomplete="off">
+    <button id="Btn_Enviar" value="Validar" onclick="ValidaClv()">Validar</button>
+</div>
+
+<div data-role="popup" id="Pop_PassMsj" data-overlay-theme="b" class="ui-content" style="max-width: 340px; padding-bottom: 2em;">
+    <h3>La contraseña es invalida</h3>
+    <a href="#" class="ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-shadow ui-btn-icon-right ui-icon-check" data-rel="back">Ok</a>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        function ValidaClv() {
+            $.ajax({
+                url: '@Url.Action("ValidaPsw", "Nomina")',
+                type: 'POST',
+                data: {
+                    'Clave': $("#Tbx_password").val()
+                },
+                success: function (Resultado) {
+                    if (Resultado == "True") {
+                        $('#Tbx_password').val("");
+                        var Url = '/Nomina/Lista';
+                        $.mobile.changePage(Url, { transition: "slide", reloadPage: true });
+                    }
+
+                    else {
+                        $("#Pop_PassMsj").popup("open");
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    
+                }
+            });
+        }
+    </script>
+}

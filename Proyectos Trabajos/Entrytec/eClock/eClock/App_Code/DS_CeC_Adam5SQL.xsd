@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_CMd_Adam5SQL" targetNamespace="http://tempuri.org/DS_CMd_Adam5SQL.xsd" xmlns:mstns="http://tempuri.org/DS_CMd_Adam5SQL.xsd" xmlns="http://tempuri.org/DS_CMd_Adam5SQL.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="BD_ADAM5SQL" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BD_ADAM5SQL (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.BD_ADAM5SQL.ConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TrabajadoresTableAdapter" GeneratorDataComponentClassName="TrabajadoresTableAdapter" Name="Trabajadores" UserDataComponentName="TrabajadoresTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BD_ADAM5SQL (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        trabajadores.trabajador, trabajadores.registro_fiscal, trabajadores.nombre, trabajadores.nombre_abreviado, trabajadores.sexo, 
+                         trabajadores.fecha_nacimiento, trabajadores.domicilio, trabajadores.domicilio2, trabajadores.poblacion, trabajadores.estado_provincia, trabajadores.pais, 
+                         trabajadores.codigo_postal, trabajadores.calles_aledanas, trabajadores.telefono_particular, trabajadores.reg_seguro_social, trabajadores.domicilio3, 
+                         trabajadores.clave_unica, trabajadores.e_mail, trabajadores_grales.compania, trabajadores_grales.fecha_ingreso, trabajadores_grales.fecha_antiguedad, 
+                         trabajadores_grales.fecha_baja, trabajadores_grales.fecha_vto_contrato, trabajadores_grales.causa_baja, trabajadores_grales.relacion_laboral, 
+                         trabajadores_grales.telefono_oficina, trabajadores_grales.extension_telefonica, trabajadores_grales.clase_nomina, 
+                         trabajadores_grales.sistema_antiguedad, trabajadores_grales.sistema_horario, trabajadores_grales.turno, trabajadores_grales.forma_pago, 
+                         trabajadores_grales.sit_trabajador, trabajadores_grales.fecha_ini_contrato, trabajadores_grales.plazo, puestos.descripcion AS Puesto,
+                             (SELECT        datos_agr_trab.descripcion
+                               FROM            datos_agr_trab INNER JOIN
+                                                         rel_trab_agr ON datos_agr_trab.agrupacion = rel_trab_agr.agrupacion AND datos_agr_trab.dato = rel_trab_agr.dato
+                               WHERE        (datos_agr_trab.agrupacion = 'ASIMILADOS') AND (rel_trab_agr.compania = trabajadores_grales.compania) AND 
+                                                         (rel_trab_agr.trabajador = trabajadores_grales.trabajador)) AS ASIMILADOS,
+                             (SELECT        datos_agr_trab_5.descripcion
+                               FROM            datos_agr_trab AS datos_agr_trab_5 INNER JOIN
+                                                         rel_trab_agr AS rel_trab_agr_5 ON datos_agr_trab_5.agrupacion = rel_trab_agr_5.agrupacion AND 
+                                                         datos_agr_trab_5.dato = rel_trab_agr_5.dato
+                               WHERE        (datos_agr_trab_5.agrupacion = 'CCO') AND (rel_trab_agr_5.compania = trabajadores_grales.compania) AND 
+                                                         (rel_trab_agr_5.trabajador = trabajadores_grales.trabajador)) AS CCO,
+                             (SELECT        datos_agr_trab_4.descripcion
+                               FROM            datos_agr_trab AS datos_agr_trab_4 INNER JOIN
+                                                         rel_trab_agr AS rel_trab_agr_4 ON datos_agr_trab_4.agrupacion = rel_trab_agr_4.agrupacion AND 
+                                                         datos_agr_trab_4.dato = rel_trab_agr_4.dato
+                               WHERE        (datos_agr_trab_4.agrupacion = 'CELDAS') AND (rel_trab_agr_4.compania = trabajadores_grales.compania) AND 
+                                                         (rel_trab_agr_4.trabajador = trabajadores_grales.trabajador)) AS CELDAS,
+                             (SELECT        datos_agr_trab_3.descripcion
+                               FROM            datos_agr_trab AS datos_agr_trab_3 INNER JOIN
+                                                         rel_trab_agr AS rel_trab_agr_3 ON datos_agr_trab_3.agrupacion = rel_trab_agr_3.agrupacion AND 
+                                                         datos_agr_trab_3.dato = rel_trab_agr_3.dato
+                               WHERE        (datos_agr_trab_3.agrupacion = 'CLASIF') AND (rel_trab_agr_3.compania = trabajadores_grales.compania) AND 
+                                                         (rel_trab_agr_3.trabajador = trabajadores_grales.trabajador)) AS CLASIF,
+                             (SELECT        datos_agr_trab_2.descripcion
+                               FROM            datos_agr_trab AS datos_agr_trab_2 INNER JOIN
+                                                         rel_trab_agr AS rel_trab_agr_2 ON datos_agr_trab_2.agrupacion = rel_trab_agr_2.agrupacion AND 
+                                                         datos_agr_trab_2.dato = rel_trab_agr_2.dato
+                               WHERE        (datos_agr_trab_2.agrupacion = 'FES') AND (rel_trab_agr_2.compania = trabajadores_grales.compania) AND 
+                                                         (rel_trab_agr_2.trabajador = trabajadores_grales.trabajador)) AS FES,
+                             (SELECT        datos_agr_trab_1.descripcion
+                               FROM            datos_agr_trab AS datos_agr_trab_1 INNER JOIN
+                                                         rel_trab_agr AS rel_trab_agr_1 ON datos_agr_trab_1.agrupacion = rel_trab_agr_1.agrupacion AND 
+                                                         datos_agr_trab_1.dato = rel_trab_agr_1.dato
+                               WHERE        (datos_agr_trab_1.agrupacion = 'TIPOEMP') AND (rel_trab_agr_1.compania = trabajadores_grales.compania) AND 
+                                                         (rel_trab_agr_1.trabajador = trabajadores_grales.trabajador)) AS TIPOEMP
+FROM            plazas INNER JOIN
+                         puestos ON plazas.puesto = puestos.puesto RIGHT OUTER JOIN
+                         trabajadores INNER JOIN
+                         trabajadores_grales ON trabajadores.trabajador = trabajadores_grales.trabajador ON plazas.compania = trabajadores_grales.compania AND 
+                         plazas.trabajador = trabajadores_grales.trabajador
+ORDER BY trabajadores.trabajador</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="trabajador" DataSetColumn="trabajador" />
+              <Mapping SourceColumn="registro_fiscal" DataSetColumn="registro_fiscal" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="nombre_abreviado" DataSetColumn="nombre_abreviado" />
+              <Mapping SourceColumn="sexo" DataSetColumn="sexo" />
+              <Mapping SourceColumn="fecha_nacimiento" DataSetColumn="fecha_nacimiento" />
+              <Mapping SourceColumn="domicilio" DataSetColumn="domicilio" />
+              <Mapping SourceColumn="domicilio2" DataSetColumn="domicilio2" />
+              <Mapping SourceColumn="poblacion" DataSetColumn="poblacion" />
+              <Mapping SourceColumn="estado_provincia" DataSetColumn="estado_provincia" />
+              <Mapping SourceColumn="pais" DataSetColumn="pais" />
+              <Mapping SourceColumn="codigo_postal" DataSetColumn="codigo_postal" />
+              <Mapping SourceColumn="calles_aledanas" DataSetColumn="calles_aledanas" />
+              <Mapping SourceColumn="telefono_particular" DataSetColumn="telefono_particular" />
+              <Mapping SourceColumn="reg_seguro_social" DataSetColumn="reg_seguro_social" />
+              <Mapping SourceColumn="domicilio3" DataSetColumn="domicilio3" />
+              <Mapping SourceColumn="clave_unica" DataSetColumn="clave_unica" />
+              <Mapping SourceColumn="e_mail" DataSetColumn="e_mail" />
+              <Mapping SourceColumn="compania" DataSetColumn="compania" />
+              <Mapping SourceColumn="fecha_ingreso" DataSetColumn="fecha_ingreso" />
+              <Mapping SourceColumn="fecha_antiguedad" DataSetColumn="fecha_antiguedad" />
+              <Mapping SourceColumn="fecha_baja" DataSetColumn="fecha_baja" />
+              <Mapping SourceColumn="fecha_vto_contrato" DataSetColumn="fecha_vto_contrato" />
+              <Mapping SourceColumn="causa_baja" DataSetColumn="causa_baja" />
+              <Mapping SourceColumn="relacion_laboral" DataSetColumn="relacion_laboral" />
+              <Mapping SourceColumn="telefono_oficina" DataSetColumn="telefono_oficina" />
+              <Mapping SourceColumn="extension_telefonica" DataSetColumn="extension_telefonica" />
+              <Mapping SourceColumn="clase_nomina" DataSetColumn="clase_nomina" />
+              <Mapping SourceColumn="sistema_antiguedad" DataSetColumn="sistema_antiguedad" />
+              <Mapping SourceColumn="sistema_horario" DataSetColumn="sistema_horario" />
+              <Mapping SourceColumn="turno" DataSetColumn="turno" />
+              <Mapping SourceColumn="forma_pago" DataSetColumn="forma_pago" />
+              <Mapping SourceColumn="sit_trabajador" DataSetColumn="sit_trabajador" />
+              <Mapping SourceColumn="fecha_ini_contrato" DataSetColumn="fecha_ini_contrato" />
+              <Mapping SourceColumn="plazo" DataSetColumn="plazo" />
+              <Mapping SourceColumn="Puesto" DataSetColumn="Puesto" />
+              <Mapping SourceColumn="ASIMILADOS" DataSetColumn="ASIMILADOS" />
+              <Mapping SourceColumn="CCO" DataSetColumn="CCO" />
+              <Mapping SourceColumn="CELDAS" DataSetColumn="CELDAS" />
+              <Mapping SourceColumn="CLASIF" DataSetColumn="CLASIF" />
+              <Mapping SourceColumn="FES" DataSetColumn="FES" />
+              <Mapping SourceColumn="TIPOEMP" DataSetColumn="TIPOEMP" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="BD_ADAM5SQL (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillOracle" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataOracle" GeneratorSourceName="FillOracle" GetMethodModifier="Public" GetMethodName="GetDataOracle" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataOracle" UserSourceName="FillOracle">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>                SELECT        trabajadores.trabajador, trabajadores.registro_fiscal, trabajadores.nombre, trabajadores.nombre_abreviado, trabajadores.sexo, 
+                         trabajadores.fecha_nacimiento, trabajadores.domicilio, trabajadores.domicilio2, trabajadores.poblacion, trabajadores.estado_provincia, trabajadores.pais, 
+                         trabajadores.codigo_postal, trabajadores.calles_aledanas, trabajadores.telefono_particular, trabajadores.reg_seguro_social, trabajadores.domicilio3, 
+                         trabajadores.clave_unica, trabajadores.e_mail, trabajadores_grales.compania, trabajadores_grales.fecha_ingreso, trabajadores_grales.fecha_antiguedad, 
+                         trabajadores_grales.fecha_baja, trabajadores_grales.fecha_vto_contrato, trabajadores_grales.causa_baja, trabajadores_grales.relacion_laboral, 
+                         trabajadores_grales.telefono_oficina, trabajadores_grales.extension_telefonica, trabajadores_grales.clase_nomina, 
+                         trabajadores_grales.sistema_antiguedad, trabajadores_grales.sistema_horario, trabajadores_grales.turno, trabajadores_grales.forma_pago, 
+                         trabajadores_grales.sit_trabajador, trabajadores_grales.fecha_ini_contrato, trabajadores_grales.plazo, puestos.descripcion Puesto,
+                             (SELECT        datos_agr_trab.descripcion
+                               FROM            datos_agr_trab INNER JOIN
+                                                         rel_trab_agr ON datos_agr_trab.agrupacion = rel_trab_agr.agrupacion AND datos_agr_trab.dato = rel_trab_agr.dato
+                               WHERE        (datos_agr_trab.agrupacion = 'ASIMILADOS') AND (rel_trab_agr.compania = trabajadores_grales.compania) AND 
+                                                         (rel_trab_agr.trabajador = trabajadores_grales.trabajador)) ASIMILADOS,
+                             (SELECT        datos_agr_trab_5.descripcion
+                               FROM            datos_agr_trab datos_agr_trab_5 INNER JOIN
+                                                         rel_trab_agr rel_trab_agr_5 ON datos_agr_trab_5.agrupacion = rel_trab_agr_5.agrupacion AND 
+                                                         datos_agr_trab_5.dato = rel_trab_agr_5.dato
+                               WHERE        (datos_agr_trab_5.agrupacion = 'CCO') AND (rel_trab_agr_5.compania = trabajadores_grales.compania) AND 
+                                                         (rel_trab_agr_5.trabajador = trabajadores_grales.trabajador)) CCO,
+                             (SELECT        datos_agr_trab_4.descripcion
+                               FROM            datos_agr_trab datos_agr_trab_4 INNER JOIN
+                                                         rel_trab_agr rel_trab_agr_4 ON datos_agr_trab_4.agrupacion = rel_trab_agr_4.agrupacion AND 
+                                                         datos_agr_trab_4.dato = rel_trab_agr_4.dato
+                               WHERE        (datos_agr_trab_4.agrupacion = 'CELDAS') AND (rel_trab_agr_4.compania = trabajadores_grales.compania) AND 
+                                                         (rel_trab_agr_4.trabajador = trabajadores_grales.trabajador)) CELDAS,
+                             (SELECT        datos_agr_trab_3.descripcion
+                               FROM            datos_agr_trab datos_agr_trab_3 INNER JOIN
+                                                         rel_trab_agr rel_trab_agr_3 ON datos_agr_trab_3.agrupacion = rel_trab_agr_3.agrupacion AND 
+                                                         datos_agr_trab_3.dato = rel_trab_agr_3.dato
+                               WHERE        (datos_agr_trab_3.agrupacion = 'CLASIF') AND (rel_trab_agr_3.compania = trabajadores_grales.compania) AND 
+                                                         (rel_trab_agr_3.trabajador = trabajadores_grales.trabajador)) CLASIF,
+                             (SELECT        datos_agr_trab_2.descripcion
+                               FROM            datos_agr_trab datos_agr_trab_2 INNER JOIN
+                                                         rel_trab_agr rel_trab_agr_2 ON datos_agr_trab_2.agrupacion = rel_trab_agr_2.agrupacion AND 
+                                                         datos_agr_trab_2.dato = rel_trab_agr_2.dato
+                               WHERE        (datos_agr_trab_2.agrupacion = 'FES') AND (rel_trab_agr_2.compania = trabajadores_grales.compania) AND 
+                                                         (rel_trab_agr_2.trabajador = trabajadores_grales.trabajador)) FES,
+                             (SELECT        datos_agr_trab_1.descripcion
+                               FROM            datos_agr_trab datos_agr_trab_1 INNER JOIN
+                                                         rel_trab_agr rel_trab_agr_1 ON datos_agr_trab_1.agrupacion = rel_trab_agr_1.agrupacion AND 
+                                                         datos_agr_trab_1.dato = rel_trab_agr_1.dato
+                               WHERE        (datos_agr_trab_1.agrupacion = 'TIPOEMP') AND (rel_trab_agr_1.compania = trabajadores_grales.compania) AND 
+                                                         (rel_trab_agr_1.trabajador = trabajadores_grales.trabajador)) TIPOEMP
+FROM            plazas INNER JOIN
+                         puestos ON plazas.puesto = puestos.puesto RIGHT OUTER JOIN
+                         trabajadores INNER JOIN
+                         trabajadores_grales ON trabajadores.trabajador = trabajadores_grales.trabajador ON plazas.compania = trabajadores_grales.compania AND 
+                         plazas.trabajador = trabajadores_grales.trabajador
+ORDER BY trabajadores.trabajador</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="incidencias_kpTableAdapter" GeneratorDataComponentClassName="incidencias_kpTableAdapter" Name="incidencias_kp" UserDataComponentName="incidencias_kpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BD_ADAM5SQL (Web.config)" DbObjectName="ADAM_MX_CDEMIN_ENSENADA.dbo.incidencias_kp" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO incidencias_kp (compania, trabajador, incidencia_kp, fecha_incidencia, secuencia, referencia_01, referencia_02, referencia_03, tra_compania, referencia_04, variable_01, variable_02, variable_03, variable_04, sit_incidencia) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="PARAM1" ColumnName="COMPANIA" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.AnsiStringFixedLength(4)" DbType="AnsiString" Direction="Input" ParameterName="COMPANIA" Precision="0" ProviderType="Char" Scale="0" Size="4" SourceColumn="COMPANIA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="PARAM2" ColumnName="TRABAJADOR" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.AnsiStringFixedLength(10)" DbType="AnsiString" Direction="Input" ParameterName="TRABAJADOR" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="TRABAJADOR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="PARAM3" ColumnName="INCIDENCIA_KP" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.VarNumeric" DbType="Decimal" Direction="Input" ParameterName="INCIDENCIA_KP" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="INCIDENCIA_KP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="PARAM4" ColumnName="FECHA_INCIDENCIA" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.Time" DbType="DateTime" Direction="Input" ParameterName="FECHA_INCIDENCIA" Precision="0" ProviderType="DBTimeStamp" Scale="0" Size="0" SourceColumn="FECHA_INCIDENCIA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="PARAM5" ColumnName="SECUENCIA" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.VarNumeric" DbType="Decimal" Direction="Input" ParameterName="SECUENCIA" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="SECUENCIA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="PARAM6" ColumnName="REFERENCIA_01" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.AnsiStringFixedLength(10)" DbType="AnsiString" Direction="Input" ParameterName="REFERENCIA_01" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="REFERENCIA_01" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="PARAM7" ColumnName="REFERENCIA_02" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.AnsiStringFixedLength(10)" DbType="AnsiString" Direction="Input" ParameterName="REFERENCIA_02" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="REFERENCIA_02" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="PARAM8" ColumnName="REFERENCIA_03" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.AnsiStringFixedLength(10)" DbType="AnsiString" Direction="Input" ParameterName="REFERENCIA_03" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="REFERENCIA_03" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="PARAM9" ColumnName="TRA_COMPANIA" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.AnsiStringFixedLength(4)" DbType="AnsiString" Direction="Input" ParameterName="TRA_COMPANIA" Precision="0" ProviderType="Char" Scale="0" Size="4" SourceColumn="TRA_COMPANIA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="PARAM10" ColumnName="REFERENCIA_04" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.AnsiStringFixedLength(10)" DbType="AnsiString" Direction="Input" ParameterName="REFERENCIA_04" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="REFERENCIA_04" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="PARAM11" ColumnName="VARIABLE_01" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.VarNumeric" DbType="Decimal" Direction="Input" ParameterName="VARIABLE_01" Precision="15" ProviderType="Numeric" Scale="6" Size="0" SourceColumn="VARIABLE_01" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="PARAM12" ColumnName="VARIABLE_02" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.VarNumeric" DbType="Decimal" Direction="Input" ParameterName="VARIABLE_02" Precision="15" ProviderType="Numeric" Scale="6" Size="0" SourceColumn="VARIABLE_02" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="PARAM13" ColumnName="VARIABLE_03" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.VarNumeric" DbType="Decimal" Direction="Input" ParameterName="VARIABLE_03" Precision="15" ProviderType="Numeric" Scale="6" Size="0" SourceColumn="VARIABLE_03" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="PARAM14" ColumnName="VARIABLE_04" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.VarNumeric" DbType="Decimal" Direction="Input" ParameterName="VARIABLE_04" Precision="15" ProviderType="Numeric" Scale="6" Size="0" SourceColumn="VARIABLE_04" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="PARAM15" ColumnName="SIT_INCIDENCIA" DataSourceName="ADAM.INCIDENCIAS_KP" DataTypeServer="DbType.VarNumeric" DbType="Decimal" Direction="Input" ParameterName="SIT_INCIDENCIA" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="SIT_INCIDENCIA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        compania, trabajador, incidencia_kp, fecha_incidencia, secuencia, referencia_01, referencia_02, referencia_03, tra_compania, referencia_04, variable_01, 
+                         variable_02, variable_03, variable_04, sit_incidencia
+FROM            incidencias_kp</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="compania" DataSetColumn="compania" />
+              <Mapping SourceColumn="trabajador" DataSetColumn="trabajador" />
+              <Mapping SourceColumn="incidencia_kp" DataSetColumn="incidencia_kp" />
+              <Mapping SourceColumn="fecha_incidencia" DataSetColumn="fecha_incidencia" />
+              <Mapping SourceColumn="secuencia" DataSetColumn="secuencia" />
+              <Mapping SourceColumn="referencia_01" DataSetColumn="referencia_01" />
+              <Mapping SourceColumn="referencia_02" DataSetColumn="referencia_02" />
+              <Mapping SourceColumn="referencia_03" DataSetColumn="referencia_03" />
+              <Mapping SourceColumn="tra_compania" DataSetColumn="tra_compania" />
+              <Mapping SourceColumn="referencia_04" DataSetColumn="referencia_04" />
+              <Mapping SourceColumn="variable_01" DataSetColumn="variable_01" />
+              <Mapping SourceColumn="variable_02" DataSetColumn="variable_02" />
+              <Mapping SourceColumn="variable_03" DataSetColumn="variable_03" />
+              <Mapping SourceColumn="variable_04" DataSetColumn="variable_04" />
+              <Mapping SourceColumn="sit_incidencia" DataSetColumn="sit_incidencia" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="BD_ADAM5SQL (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="BorraIncidencias" Modifier="Public" Name="BorraIncidencias" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="BorraIncidencias">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM incidencias_kp
+WHERE        (fecha_incidencia &gt;= ? AND fecha_incidencia &lt; ?) AND (incidencia_kp = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="fecha_incidencia" DataSourceName="ADAM_MX_CDEMIN_ENSENADA.dbo.incidencias_kp" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="fecha_incidencia" Precision="0" ProviderType="DBTimeStamp" Scale="0" Size="4" SourceColumn="fecha_incidencia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="fecha_incidencia" DataSourceName="ADAM_MX_CDEMIN_ENSENADA.dbo.incidencias_kp" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="fecha_incidencia1" Precision="0" ProviderType="DBTimeStamp" Scale="0" Size="4" SourceColumn="fecha_incidencia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="incidencia_kp" DataSourceName="ADAM_MX_CDEMIN_ENSENADA.dbo.incidencias_kp" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="incidencia_kp" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="incidencia_kp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="BD_ADAM5SQL (Web.config)" DbObjectName="ADAM_MX_CDEMIN_ENSENADA.dbo.incidencias_kp" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        compania, trabajador, incidencia_kp, fecha_incidencia, secuencia, referencia_01, referencia_02, referencia_03, tra_compania, referencia_04, variable_01, 
+                         variable_02, variable_03, variable_04, sit_incidencia
+FROM            incidencias_kp
+WHERE        (fecha_incidencia &gt;= ?) AND (fecha_incidencia &lt; ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="fecha_incidencia" DataSourceName="ADAM_MX_CDEMIN_ENSENADA.dbo.incidencias_kp" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="fecha_incidencia" Precision="0" ProviderType="DBTimeStamp" Scale="0" Size="4" SourceColumn="fecha_incidencia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="fecha_incidencia" DataSourceName="ADAM_MX_CDEMIN_ENSENADA.dbo.incidencias_kp" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="fecha_incidencia1" Precision="0" ProviderType="DBTimeStamp" Scale="0" Size="4" SourceColumn="fecha_incidencia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Persona_DiarioTableAdapter" GeneratorDataComponentClassName="Persona_DiarioTableAdapter" Name="Persona_Diario" UserDataComponentName="Persona_DiarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EC_PERSONAS_DATOS.PERSONA_LINK_ID, EC_PERSONAS_DATOS.COMPANIA, EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA, 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_TT, EC_TURNOS_DIA.TURNO_DIA_HTIEMPO, 
+                         EC_TURNOS_DIA.TURNO_DIA_HS - EC_TURNOS_DIA.TURNO_DIA_HE AS HorarioTiempo, EC_TIPO_INCIDENCIAS_EX.TIPO_FALTA_EX_ID, 
+                         EC_TIPO_INCIDENCIAS_EX.TIPO_INCIDENCIAS_EX_ID, EC_TIPO_INCIDENCIAS_EX.TIPO_INCIDENCIAS_EX_PARAM, 
+                         EC_INCIDENCIAS.INCIDENCIA_COMENTARIO, EC_TIPO_INCIDENCIAS_EX_1.TIPO_INCIDENCIAS_EX_ID AS I_TIPO_INCIDENCIAS_EX_ID, 
+                         EC_TIPO_INCIDENCIAS_EX_1.TIPO_FALTA_EX_ID AS I_TIPO_FALTA_EX_ID, 
+                         EC_TIPO_INCIDENCIAS_EX_1.TIPO_INCIDENCIAS_EX_PARAM AS I_TIPO_INCIDENCIAS_EX_PARAM
+FROM            EC_PERSONAS_DATOS INNER JOIN
+                         EC_PERSONAS ON EC_PERSONAS_DATOS.PERSONA_LINK_ID = EC_PERSONAS.PERSONA_LINK_ID RIGHT OUTER JOIN
+                         EC_PERSONAS_DIARIO ON EC_PERSONAS.PERSONA_ID = EC_PERSONAS_DIARIO.PERSONA_ID LEFT OUTER JOIN
+                         EC_TURNOS_DIA ON EC_PERSONAS_DIARIO.TURNO_DIA_ID = EC_TURNOS_DIA.TURNO_DIA_ID LEFT OUTER JOIN
+                         EC_TIPO_INCIDENCIAS_EX_INC_SIS ON 
+                         EC_PERSONAS_DIARIO.TIPO_INC_SIS_ID = EC_TIPO_INCIDENCIAS_EX_INC_SIS.TIPO_INC_SIS_ID RIGHT OUTER JOIN
+                         EC_TIPO_INCIDENCIAS_EX ON 
+                         EC_TIPO_INCIDENCIAS_EX_INC_SIS.TIPO_INCIDENCIAS_EX_ID = EC_TIPO_INCIDENCIAS_EX.TIPO_INCIDENCIAS_EX_ID LEFT OUTER JOIN
+                         EC_TIPO_INCIDENCIAS_EX AS EC_TIPO_INCIDENCIAS_EX_1 INNER JOIN
+                         EC_TIPO_INCIDENCIAS_EX_INC ON 
+                         EC_TIPO_INCIDENCIAS_EX_1.TIPO_INCIDENCIAS_EX_ID = EC_TIPO_INCIDENCIAS_EX_INC.TIPO_INCIDENCIAS_EX_ID INNER JOIN
+                         EC_INCIDENCIAS ON EC_TIPO_INCIDENCIAS_EX_INC.TIPO_INCIDENCIA_ID = EC_INCIDENCIAS.TIPO_INCIDENCIA_ID ON 
+                         EC_PERSONAS_DIARIO.INCIDENCIA_ID = EC_INCIDENCIAS.INCIDENCIA_ID
+WHERE        (EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA &gt;= ?) AND (EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA &lt; ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="PERSONA_DIARIO_FECHA" DataSourceName="DEMO.dbo.EC_PERSONAS_DIARIO" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="PERSONA_DIARIO_FECHA" Precision="0" ProviderType="DBTimeStamp" Scale="0" Size="8" SourceColumn="PERSONA_DIARIO_FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="PERSONA_DIARIO_FECHA" DataSourceName="DEMO.dbo.EC_PERSONAS_DIARIO" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="PERSONA_DIARIO_FECHA1" Precision="0" ProviderType="DBTimeStamp" Scale="0" Size="8" SourceColumn="PERSONA_DIARIO_FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PERSONA_LINK_ID" DataSetColumn="PERSONA_LINK_ID" />
+              <Mapping SourceColumn="COMPANIA" DataSetColumn="COMPANIA" />
+              <Mapping SourceColumn="PERSONA_DIARIO_FECHA" DataSetColumn="PERSONA_DIARIO_FECHA" />
+              <Mapping SourceColumn="PERSONA_DIARIO_TT" DataSetColumn="PERSONA_DIARIO_TT" />
+              <Mapping SourceColumn="TURNO_DIA_HTIEMPO" DataSetColumn="TURNO_DIA_HTIEMPO" />
+              <Mapping SourceColumn="TIPO_FALTA_EX_ID" DataSetColumn="TIPO_FALTA_EX_ID" />
+              <Mapping SourceColumn="TIPO_INCIDENCIAS_EX_ID" DataSetColumn="TIPO_INCIDENCIAS_EX_ID" />
+              <Mapping SourceColumn="TIPO_INCIDENCIAS_EX_PARAM" DataSetColumn="TIPO_INCIDENCIAS_EX_PARAM" />
+              <Mapping SourceColumn="INCIDENCIA_COMENTARIO" DataSetColumn="INCIDENCIA_COMENTARIO" />
+              <Mapping SourceColumn="I_TIPO_INCIDENCIAS_EX_ID" DataSetColumn="I_TIPO_INCIDENCIAS_EX_ID" />
+              <Mapping SourceColumn="I_TIPO_FALTA_EX_ID" DataSetColumn="I_TIPO_FALTA_EX_ID" />
+              <Mapping SourceColumn="I_TIPO_INCIDENCIAS_EX_PARAM" DataSetColumn="I_TIPO_INCIDENCIAS_EX_PARAM" />
+              <Mapping SourceColumn="HorarioTiempo" DataSetColumn="HorarioTiempo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IncidenciasTableAdapter" GeneratorDataComponentClassName="IncidenciasTableAdapter" Name="Incidencias" UserDataComponentName="IncidenciasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        INCIDENCIAS_KP_DEF.COMPANIA, INCIDENCIAS_KP_DEF.INCIDENCIA_KP, INCIDENCIAS_KP_DEF.GEN_CONCEPTO_NS, 
+                         INCIDENCIAS_KP_DEF.FUNCION_GENERACION, INCIDENCIAS_KP_DEF.GEN_MULTIPLES_DIAS, INCIDENCIAS_KP_DEF.USO_REF_01, 
+                         INCIDENCIAS_KP_DEF.AGR_REF_01, INCIDENCIAS_KP_DEF.SOLICITUD_REF_01, INCIDENCIAS_KP_DEF.USO_REF_02, INCIDENCIAS_KP_DEF.AGR_REF_02, 
+                         INCIDENCIAS_KP_DEF.SOLICITUD_REF_02, INCIDENCIAS_KP_DEF.USO_REF_03, INCIDENCIAS_KP_DEF.AGR_REF_03, INCIDENCIAS_KP_DEF.SOLICITUD_REF_03, 
+                         INCIDENCIAS_KP_DEF.USO_REF_04, INCIDENCIAS_KP_DEF.AGR_REF_04, INCIDENCIAS_KP_DEF.SOLICITUD_REF_04, INCIDENCIAS_KP_DEF.SOLICITUD_VAR_01, 
+                         INCIDENCIAS_KP_DEF.SOLICITUD_VAR_02, INCIDENCIAS_KP_DEF.SOLICITUD_VAR_03, INCIDENCIAS_KP_DEF.SOLICITUD_VAR_04, 
+                         INCIDENCIAS_KP_DEF.CONCEPTO_GENERA, INCIDENCIAS_KP_DEF.COND_TURNO, INCIDENCIAS_KP_DEF.COND_REL_LAB, 
+                         INCIDENCIAS_KP_DEF.COND_COLECCION, INCIDENCIAS_KP_DEF.COND_AGR_01, INCIDENCIAS_KP_DEF.COND_DATO_01_01, 
+                         INCIDENCIAS_KP_DEF.COND_DATO_01_02, INCIDENCIAS_KP_DEF.COND_DATO_01_03, INCIDENCIAS_KP_DEF.COND_AGR_02, 
+                         INCIDENCIAS_KP_DEF.COND_DATO_02_01, INCIDENCIAS_KP_DEF.COND_DATO_02_02, INCIDENCIAS_KP_DEF.COND_DATO_02_03, 
+                         INCIDENCIAS_KP_DEF.COND_AGR_03, INCIDENCIAS_KP_DEF.COND_DATO_03_01, INCIDENCIAS_KP_DEF.COND_DATO_03_02, 
+                         INCIDENCIAS_KP_DEF.COND_DATO_03_03, INCIDENCIAS_KP_DEF.REFERENCIA_NOMINA, INCIDENCIAS_KP_DEF.REFERENCIA2_NOMINA, 
+                         INCIDENCIAS_KP_DEF.TIEMPO_NOMINA, INCIDENCIAS_KP_DEF.IMPORTE_NOMINA, INCIDENCIAS_KP_DEF.FACTOR_01_NOMINA, 
+                         INCIDENCIAS_KP_DEF.FACTOR_02_NOMINA, INCIDENCIAS_KP_DEF.FACTOR_03_NOMINA, INCIDENCIAS_KP_DEF.GEN_SIST_HORARIO, 
+                         INCIDENCIAS.DESCRIPCION_KP, INCIDENCIAS.ABREVIATURA_KP
+FROM            INCIDENCIAS_KP_DEF INNER JOIN
+                         INCIDENCIAS ON INCIDENCIAS_KP_DEF.INCIDENCIA_KP = INCIDENCIAS.INCIDENCIA_KP
+ORDER BY INCIDENCIAS_KP_DEF.COMPANIA, INCIDENCIAS_KP_DEF.INCIDENCIA_KP</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="COMPANIA" DataSetColumn="COMPANIA" />
+              <Mapping SourceColumn="INCIDENCIA_KP" DataSetColumn="INCIDENCIA_KP" />
+              <Mapping SourceColumn="GEN_CONCEPTO_NS" DataSetColumn="GEN_CONCEPTO_NS" />
+              <Mapping SourceColumn="FUNCION_GENERACION" DataSetColumn="FUNCION_GENERACION" />
+              <Mapping SourceColumn="GEN_MULTIPLES_DIAS" DataSetColumn="GEN_MULTIPLES_DIAS" />
+              <Mapping SourceColumn="USO_REF_01" DataSetColumn="USO_REF_01" />
+              <Mapping SourceColumn="AGR_REF_01" DataSetColumn="AGR_REF_01" />
+              <Mapping SourceColumn="SOLICITUD_REF_01" DataSetColumn="SOLICITUD_REF_01" />
+              <Mapping SourceColumn="USO_REF_02" DataSetColumn="USO_REF_02" />
+              <Mapping SourceColumn="AGR_REF_02" DataSetColumn="AGR_REF_02" />
+              <Mapping SourceColumn="SOLICITUD_REF_02" DataSetColumn="SOLICITUD_REF_02" />
+              <Mapping SourceColumn="USO_REF_03" DataSetColumn="USO_REF_03" />
+              <Mapping SourceColumn="AGR_REF_03" DataSetColumn="AGR_REF_03" />
+              <Mapping SourceColumn="SOLICITUD_REF_03" DataSetColumn="SOLICITUD_REF_03" />
+              <Mapping SourceColumn="USO_REF_04" DataSetColumn="USO_REF_04" />
+              <Mapping SourceColumn="AGR_REF_04" DataSetColumn="AGR_REF_04" />
+              <Mapping SourceColumn="SOLICITUD_REF_04" DataSetColumn="SOLICITUD_REF_04" />
+              <Mapping SourceColumn="SOLICITUD_VAR_01" DataSetColumn="SOLICITUD_VAR_01" />
+              <Mapping SourceColumn="SOLICITUD_VAR_02" DataSetColumn="SOLICITUD_VAR_02" />
+              <Mapping SourceColumn="SOLICITUD_VAR_03" DataSetColumn="SOLICITUD_VAR_03" />
+              <Mapping SourceColumn="SOLICITUD_VAR_04" DataSetColumn="SOLICITUD_VAR_04" />
+              <Mapping SourceColumn="CONCEPTO_GENERA" DataSetColumn="CONCEPTO_GENERA" />
+              <Mapping SourceColumn="COND_TURNO" DataSetColumn="COND_TURNO" />
+              <Mapping SourceColumn="COND_REL_LAB" DataSetColumn="COND_REL_LAB" />
+              <Mapping SourceColumn="COND_COLECCION" DataSetColumn="COND_COLECCION" />
+              <Mapping SourceColumn="COND_AGR_01" DataSetColumn="COND_AGR_01" />
+              <Mapping SourceColumn="COND_DATO_01_01" DataSetColumn="COND_DATO_01_01" />
+              <Mapping SourceColumn="COND_DATO_01_02" DataSetColumn="COND_DATO_01_02" />
+              <Mapping SourceColumn="COND_DATO_01_03" DataSetColumn="COND_DATO_01_03" />
+              <Mapping SourceColumn="COND_AGR_02" DataSetColumn="COND_AGR_02" />
+              <Mapping SourceColumn="COND_DATO_02_01" DataSetColumn="COND_DATO_02_01" />
+              <Mapping SourceColumn="COND_DATO_02_02" DataSetColumn="COND_DATO_02_02" />
+              <Mapping SourceColumn="COND_DATO_02_03" DataSetColumn="COND_DATO_02_03" />
+              <Mapping SourceColumn="COND_AGR_03" DataSetColumn="COND_AGR_03" />
+              <Mapping SourceColumn="COND_DATO_03_01" DataSetColumn="COND_DATO_03_01" />
+              <Mapping SourceColumn="COND_DATO_03_02" DataSetColumn="COND_DATO_03_02" />
+              <Mapping SourceColumn="COND_DATO_03_03" DataSetColumn="COND_DATO_03_03" />
+              <Mapping SourceColumn="REFERENCIA_NOMINA" DataSetColumn="REFERENCIA_NOMINA" />
+              <Mapping SourceColumn="REFERENCIA2_NOMINA" DataSetColumn="REFERENCIA2_NOMINA" />
+              <Mapping SourceColumn="TIEMPO_NOMINA" DataSetColumn="TIEMPO_NOMINA" />
+              <Mapping SourceColumn="IMPORTE_NOMINA" DataSetColumn="IMPORTE_NOMINA" />
+              <Mapping SourceColumn="FACTOR_01_NOMINA" DataSetColumn="FACTOR_01_NOMINA" />
+              <Mapping SourceColumn="FACTOR_02_NOMINA" DataSetColumn="FACTOR_02_NOMINA" />
+              <Mapping SourceColumn="FACTOR_03_NOMINA" DataSetColumn="FACTOR_03_NOMINA" />
+              <Mapping SourceColumn="GEN_SIST_HORARIO" DataSetColumn="GEN_SIST_HORARIO" />
+              <Mapping SourceColumn="DESCRIPCION_KP" DataSetColumn="DESCRIPCION_KP" />
+              <Mapping SourceColumn="ABREVIATURA_KP" DataSetColumn="ABREVIATURA_KP" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_CMd_Adam5SQL" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DS_CMd_Adam5SQL" msprop:Generator_UserDSName="DS_CMd_Adam5SQL">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Trabajadores" msprop:Generator_UserTableName="Trabajadores" msprop:Generator_RowEvArgName="TrabajadoresRowChangeEvent" msprop:Generator_TableVarName="tableTrabajadores" msprop:Generator_TablePropName="Trabajadores" msprop:Generator_RowDeletingName="TrabajadoresRowDeleting" msprop:Generator_RowChangingName="TrabajadoresRowChanging" msprop:Generator_RowDeletedName="TrabajadoresRowDeleted" msprop:Generator_RowEvHandlerName="TrabajadoresRowChangeEventHandler" msprop:Generator_RowChangedName="TrabajadoresRowChanged" msprop:Generator_TableClassName="TrabajadoresDataTable" msprop:Generator_RowClassName="TrabajadoresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="trabajador" msprop:Generator_ColumnVarNameInTable="columntrabajador" msprop:Generator_ColumnPropNameInRow="trabajador" msprop:Generator_ColumnPropNameInTable="trabajadorColumn" msprop:Generator_UserColumnName="trabajador">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="registro_fiscal" msprop:Generator_ColumnVarNameInTable="columnregistro_fiscal" msprop:Generator_ColumnPropNameInRow="registro_fiscal" msprop:Generator_ColumnPropNameInTable="registro_fiscalColumn" msprop:Generator_UserColumnName="registro_fiscal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_abreviado" msprop:Generator_ColumnVarNameInTable="columnnombre_abreviado" msprop:Generator_ColumnPropNameInRow="nombre_abreviado" msprop:Generator_ColumnPropNameInTable="nombre_abreviadoColumn" msprop:Generator_UserColumnName="nombre_abreviado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sexo" msprop:Generator_ColumnVarNameInTable="columnsexo" msprop:Generator_ColumnPropNameInRow="sexo" msprop:Generator_ColumnPropNameInTable="sexoColumn" msprop:Generator_UserColumnName="sexo" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="fecha_nacimiento" msprop:Generator_ColumnVarNameInTable="columnfecha_nacimiento" msprop:Generator_ColumnPropNameInRow="fecha_nacimiento" msprop:Generator_ColumnPropNameInTable="fecha_nacimientoColumn" msprop:Generator_UserColumnName="fecha_nacimiento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="domicilio" msprop:Generator_ColumnVarNameInTable="columndomicilio" msprop:Generator_ColumnPropNameInRow="domicilio" msprop:Generator_ColumnPropNameInTable="domicilioColumn" msprop:Generator_UserColumnName="domicilio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="domicilio2" msprop:Generator_ColumnVarNameInTable="columndomicilio2" msprop:Generator_ColumnPropNameInRow="domicilio2" msprop:Generator_ColumnPropNameInTable="domicilio2Column" msprop:Generator_UserColumnName="domicilio2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="poblacion" msprop:Generator_ColumnVarNameInTable="columnpoblacion" msprop:Generator_ColumnPropNameInRow="poblacion" msprop:Generator_ColumnPropNameInTable="poblacionColumn" msprop:Generator_UserColumnName="poblacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estado_provincia" msprop:Generator_ColumnVarNameInTable="columnestado_provincia" msprop:Generator_ColumnPropNameInRow="estado_provincia" msprop:Generator_ColumnPropNameInTable="estado_provinciaColumn" msprop:Generator_UserColumnName="estado_provincia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pais" msprop:Generator_ColumnVarNameInTable="columnpais" msprop:Generator_ColumnPropNameInRow="pais" msprop:Generator_ColumnPropNameInTable="paisColumn" msprop:Generator_UserColumnName="pais" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo_postal" msprop:Generator_ColumnVarNameInTable="columncodigo_postal" msprop:Generator_ColumnPropNameInRow="codigo_postal" msprop:Generator_ColumnPropNameInTable="codigo_postalColumn" msprop:Generator_UserColumnName="codigo_postal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calles_aledanas" msprop:Generator_ColumnVarNameInTable="columncalles_aledanas" msprop:Generator_ColumnPropNameInRow="calles_aledanas" msprop:Generator_ColumnPropNameInTable="calles_aledanasColumn" msprop:Generator_UserColumnName="calles_aledanas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefono_particular" msprop:Generator_ColumnVarNameInTable="columntelefono_particular" msprop:Generator_ColumnPropNameInRow="telefono_particular" msprop:Generator_ColumnPropNameInTable="telefono_particularColumn" msprop:Generator_UserColumnName="telefono_particular" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="reg_seguro_social" msprop:Generator_ColumnVarNameInTable="columnreg_seguro_social" msprop:Generator_ColumnPropNameInRow="reg_seguro_social" msprop:Generator_ColumnPropNameInTable="reg_seguro_socialColumn" msprop:Generator_UserColumnName="reg_seguro_social" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="domicilio3" msprop:Generator_ColumnVarNameInTable="columndomicilio3" msprop:Generator_ColumnPropNameInRow="domicilio3" msprop:Generator_ColumnPropNameInTable="domicilio3Column" msprop:Generator_UserColumnName="domicilio3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clave_unica" msprop:Generator_ColumnVarNameInTable="columnclave_unica" msprop:Generator_ColumnPropNameInRow="clave_unica" msprop:Generator_ColumnPropNameInTable="clave_unicaColumn" msprop:Generator_UserColumnName="clave_unica" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="e_mail" msprop:Generator_ColumnVarNameInTable="columne_mail" msprop:Generator_ColumnPropNameInRow="e_mail" msprop:Generator_ColumnPropNameInTable="e_mailColumn" msprop:Generator_UserColumnName="e_mail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="compania" msprop:Generator_ColumnVarNameInTable="columncompania" msprop:Generator_ColumnPropNameInRow="compania" msprop:Generator_ColumnPropNameInTable="companiaColumn" msprop:Generator_UserColumnName="compania">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha_ingreso" msprop:Generator_ColumnVarNameInTable="columnfecha_ingreso" msprop:Generator_ColumnPropNameInRow="fecha_ingreso" msprop:Generator_ColumnPropNameInTable="fecha_ingresoColumn" msprop:Generator_UserColumnName="fecha_ingreso" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha_antiguedad" msprop:Generator_ColumnVarNameInTable="columnfecha_antiguedad" msprop:Generator_ColumnPropNameInRow="fecha_antiguedad" msprop:Generator_ColumnPropNameInTable="fecha_antiguedadColumn" msprop:Generator_UserColumnName="fecha_antiguedad" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha_baja" msprop:Generator_ColumnVarNameInTable="columnfecha_baja" msprop:Generator_ColumnPropNameInRow="fecha_baja" msprop:Generator_ColumnPropNameInTable="fecha_bajaColumn" msprop:Generator_UserColumnName="fecha_baja" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha_vto_contrato" msprop:Generator_ColumnVarNameInTable="columnfecha_vto_contrato" msprop:Generator_ColumnPropNameInRow="fecha_vto_contrato" msprop:Generator_ColumnPropNameInTable="fecha_vto_contratoColumn" msprop:Generator_UserColumnName="fecha_vto_contrato" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="causa_baja" msprop:Generator_ColumnVarNameInTable="columncausa_baja" msprop:Generator_ColumnPropNameInRow="causa_baja" msprop:Generator_ColumnPropNameInTable="causa_bajaColumn" msprop:Generator_UserColumnName="causa_baja" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="relacion_laboral" msprop:Generator_ColumnVarNameInTable="columnrelacion_laboral" msprop:Generator_ColumnPropNameInRow="relacion_laboral" msprop:Generator_ColumnPropNameInTable="relacion_laboralColumn" msprop:Generator_UserColumnName="relacion_laboral" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefono_oficina" msprop:Generator_ColumnVarNameInTable="columntelefono_oficina" msprop:Generator_ColumnPropNameInRow="telefono_oficina" msprop:Generator_ColumnPropNameInTable="telefono_oficinaColumn" msprop:Generator_UserColumnName="telefono_oficina" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="extension_telefonica" msprop:Generator_ColumnVarNameInTable="columnextension_telefonica" msprop:Generator_ColumnPropNameInRow="extension_telefonica" msprop:Generator_ColumnPropNameInTable="extension_telefonicaColumn" msprop:Generator_UserColumnName="extension_telefonica" type="xs:int" minOccurs="0" />
+              <xs:element name="clase_nomina" msprop:Generator_ColumnVarNameInTable="columnclase_nomina" msprop:Generator_ColumnPropNameInRow="clase_nomina" msprop:Generator_ColumnPropNameInTable="clase_nominaColumn" msprop:Generator_UserColumnName="clase_nomina" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sistema_antiguedad" msprop:Generator_ColumnVarNameInTable="columnsistema_antiguedad" msprop:Generator_ColumnPropNameInRow="sistema_antiguedad" msprop:Generator_ColumnPropNameInTable="sistema_antiguedadColumn" msprop:Generator_UserColumnName="sistema_antiguedad" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="sistema_horario" msprop:Generator_ColumnVarNameInTable="columnsistema_horario" msprop:Generator_ColumnPropNameInRow="sistema_horario" msprop:Generator_ColumnPropNameInTable="sistema_horarioColumn" msprop:Generator_UserColumnName="sistema_horario" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="turno" msprop:Generator_ColumnVarNameInTable="columnturno" msprop:Generator_ColumnPropNameInRow="turno" msprop:Generator_ColumnPropNameInTable="turnoColumn" msprop:Generator_UserColumnName="turno" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="forma_pago" msprop:Generator_ColumnVarNameInTable="columnforma_pago" msprop:Generator_ColumnPropNameInRow="forma_pago" msprop:Generator_ColumnPropNameInTable="forma_pagoColumn" msprop:Generator_UserColumnName="forma_pago" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="sit_trabajador" msprop:Generator_ColumnVarNameInTable="columnsit_trabajador" msprop:Generator_ColumnPropNameInRow="sit_trabajador" msprop:Generator_ColumnPropNameInTable="sit_trabajadorColumn" msprop:Generator_UserColumnName="sit_trabajador" type="xs:unsignedByte" />
+              <xs:element name="fecha_ini_contrato" msprop:Generator_ColumnVarNameInTable="columnfecha_ini_contrato" msprop:Generator_ColumnPropNameInRow="fecha_ini_contrato" msprop:Generator_ColumnPropNameInTable="fecha_ini_contratoColumn" msprop:Generator_UserColumnName="fecha_ini_contrato" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="plazo" msprop:Generator_ColumnVarNameInTable="columnplazo" msprop:Generator_ColumnPropNameInRow="plazo" msprop:Generator_ColumnPropNameInTable="plazoColumn" msprop:Generator_UserColumnName="plazo" type="xs:short" minOccurs="0" />
+              <xs:element name="Puesto" msprop:Generator_ColumnVarNameInTable="columnPuesto" msprop:Generator_ColumnPropNameInRow="Puesto" msprop:Generator_ColumnPropNameInTable="PuestoColumn" msprop:Generator_UserColumnName="Puesto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASIMILADOS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnASIMILADOS" msprop:Generator_ColumnPropNameInRow="ASIMILADOS" msprop:Generator_ColumnPropNameInTable="ASIMILADOSColumn" msprop:Generator_UserColumnName="ASIMILADOS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CCO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCCO" msprop:Generator_ColumnPropNameInRow="CCO" msprop:Generator_ColumnPropNameInTable="CCOColumn" msprop:Generator_UserColumnName="CCO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CELDAS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCELDAS" msprop:Generator_ColumnPropNameInRow="CELDAS" msprop:Generator_ColumnPropNameInTable="CELDASColumn" msprop:Generator_UserColumnName="CELDAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLASIF" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCLASIF" msprop:Generator_ColumnPropNameInRow="CLASIF" msprop:Generator_ColumnPropNameInTable="CLASIFColumn" msprop:Generator_UserColumnName="CLASIF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FES" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFES" msprop:Generator_ColumnPropNameInRow="FES" msprop:Generator_ColumnPropNameInTable="FESColumn" msprop:Generator_UserColumnName="FES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOEMP" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIPOEMP" msprop:Generator_ColumnPropNameInRow="TIPOEMP" msprop:Generator_ColumnPropNameInTable="TIPOEMPColumn" msprop:Generator_UserColumnName="TIPOEMP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="incidencias_kp" msprop:Generator_UserTableName="incidencias_kp" msprop:Generator_RowEvArgName="incidencias_kpRowChangeEvent" msprop:Generator_TableVarName="tableincidencias_kp" msprop:Generator_TablePropName="incidencias_kp" msprop:Generator_RowDeletingName="incidencias_kpRowDeleting" msprop:Generator_RowChangingName="incidencias_kpRowChanging" msprop:Generator_RowDeletedName="incidencias_kpRowDeleted" msprop:Generator_RowEvHandlerName="incidencias_kpRowChangeEventHandler" msprop:Generator_RowChangedName="incidencias_kpRowChanged" msprop:Generator_TableClassName="incidencias_kpDataTable" msprop:Generator_RowClassName="incidencias_kpRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="compania" msprop:Generator_ColumnVarNameInTable="columncompania" msprop:Generator_ColumnPropNameInRow="compania" msprop:Generator_ColumnPropNameInTable="companiaColumn" msprop:Generator_UserColumnName="compania">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="trabajador" msprop:Generator_ColumnVarNameInTable="columntrabajador" msprop:Generator_ColumnPropNameInRow="trabajador" msprop:Generator_ColumnPropNameInTable="trabajadorColumn" msprop:Generator_UserColumnName="trabajador">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="incidencia_kp" msprop:Generator_ColumnVarNameInTable="columnincidencia_kp" msprop:Generator_ColumnPropNameInRow="incidencia_kp" msprop:Generator_ColumnPropNameInTable="incidencia_kpColumn" msprop:Generator_UserColumnName="incidencia_kp" type="xs:short" />
+              <xs:element name="fecha_incidencia" msprop:Generator_ColumnVarNameInTable="columnfecha_incidencia" msprop:Generator_ColumnPropNameInRow="fecha_incidencia" msprop:Generator_ColumnPropNameInTable="fecha_incidenciaColumn" msprop:Generator_UserColumnName="fecha_incidencia" type="xs:dateTime" />
+              <xs:element name="secuencia" msprop:Generator_ColumnVarNameInTable="columnsecuencia" msprop:Generator_ColumnPropNameInRow="secuencia" msprop:Generator_ColumnPropNameInTable="secuenciaColumn" msprop:Generator_UserColumnName="secuencia" type="xs:short" />
+              <xs:element name="referencia_01" msprop:Generator_ColumnVarNameInTable="columnreferencia_01" msprop:Generator_ColumnPropNameInRow="referencia_01" msprop:Generator_ColumnPropNameInTable="referencia_01Column" msprop:Generator_UserColumnName="referencia_01" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="referencia_02" msprop:Generator_ColumnVarNameInTable="columnreferencia_02" msprop:Generator_ColumnPropNameInRow="referencia_02" msprop:Generator_ColumnPropNameInTable="referencia_02Column" msprop:Generator_UserColumnName="referencia_02" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="referencia_03" msprop:Generator_ColumnVarNameInTable="columnreferencia_03" msprop:Generator_ColumnPropNameInRow="referencia_03" msprop:Generator_ColumnPropNameInTable="referencia_03Column" msprop:Generator_UserColumnName="referencia_03" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tra_compania" msprop:Generator_ColumnVarNameInTable="columntra_compania" msprop:Generator_ColumnPropNameInRow="tra_compania" msprop:Generator_ColumnPropNameInTable="tra_companiaColumn" msprop:Generator_UserColumnName="tra_compania" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="referencia_04" msprop:Generator_ColumnVarNameInTable="columnreferencia_04" msprop:Generator_ColumnPropNameInRow="referencia_04" msprop:Generator_ColumnPropNameInTable="referencia_04Column" msprop:Generator_UserColumnName="referencia_04" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="variable_01" msprop:Generator_ColumnVarNameInTable="columnvariable_01" msprop:Generator_ColumnPropNameInRow="variable_01" msprop:Generator_ColumnPropNameInTable="variable_01Column" msprop:Generator_UserColumnName="variable_01" type="xs:decimal" minOccurs="0" />
+              <xs:element name="variable_02" msprop:Generator_ColumnVarNameInTable="columnvariable_02" msprop:Generator_ColumnPropNameInRow="variable_02" msprop:Generator_ColumnPropNameInTable="variable_02Column" msprop:Generator_UserColumnName="variable_02" type="xs:decimal" minOccurs="0" />
+              <xs:element name="variable_03" msprop:Generator_ColumnVarNameInTable="columnvariable_03" msprop:Generator_ColumnPropNameInRow="variable_03" msprop:Generator_ColumnPropNameInTable="variable_03Column" msprop:Generator_UserColumnName="variable_03" type="xs:decimal" minOccurs="0" />
+              <xs:element name="variable_04" msprop:Generator_ColumnVarNameInTable="columnvariable_04" msprop:Generator_ColumnPropNameInRow="variable_04" msprop:Generator_ColumnPropNameInTable="variable_04Column" msprop:Generator_UserColumnName="variable_04" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sit_incidencia" msprop:Generator_ColumnVarNameInTable="columnsit_incidencia" msprop:Generator_ColumnPropNameInRow="sit_incidencia" msprop:Generator_ColumnPropNameInTable="sit_incidenciaColumn" msprop:Generator_UserColumnName="sit_incidencia" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Persona_Diario" msprop:Generator_UserTableName="Persona_Diario" msprop:Generator_RowEvArgName="Persona_DiarioRowChangeEvent" msprop:Generator_TableVarName="tablePersona_Diario" msprop:Generator_TablePropName="Persona_Diario" msprop:Generator_RowDeletingName="Persona_DiarioRowDeleting" msprop:Generator_RowChangingName="Persona_DiarioRowChanging" msprop:Generator_RowDeletedName="Persona_DiarioRowDeleted" msprop:Generator_RowEvHandlerName="Persona_DiarioRowChangeEventHandler" msprop:Generator_RowChangedName="Persona_DiarioRowChanged" msprop:Generator_TableClassName="Persona_DiarioDataTable" msprop:Generator_RowClassName="Persona_DiarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_LINK_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_LINK_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_LINK_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_LINK_IDColumn" msprop:Generator_UserColumnName="PERSONA_LINK_ID" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COMPANIA" msprop:Generator_ColumnVarNameInTable="columnCOMPANIA" msprop:Generator_ColumnPropNameInRow="COMPANIA" msprop:Generator_ColumnPropNameInTable="COMPANIAColumn" msprop:Generator_UserColumnName="COMPANIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONA_DIARIO_FECHA" msprop:Generator_ColumnVarNameInTable="columnPERSONA_DIARIO_FECHA" msprop:Generator_ColumnPropNameInRow="PERSONA_DIARIO_FECHA" msprop:Generator_ColumnPropNameInTable="PERSONA_DIARIO_FECHAColumn" msprop:Generator_UserColumnName="PERSONA_DIARIO_FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PERSONA_DIARIO_TT" msprop:Generator_ColumnVarNameInTable="columnPERSONA_DIARIO_TT" msprop:Generator_ColumnPropNameInRow="PERSONA_DIARIO_TT" msprop:Generator_ColumnPropNameInTable="PERSONA_DIARIO_TTColumn" msprop:Generator_UserColumnName="PERSONA_DIARIO_TT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TURNO_DIA_HTIEMPO" msprop:Generator_ColumnVarNameInTable="columnTURNO_DIA_HTIEMPO" msprop:Generator_ColumnPropNameInRow="TURNO_DIA_HTIEMPO" msprop:Generator_ColumnPropNameInTable="TURNO_DIA_HTIEMPOColumn" msprop:Generator_UserColumnName="TURNO_DIA_HTIEMPO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TIPO_FALTA_EX_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_FALTA_EX_ID" msprop:Generator_ColumnPropNameInRow="TIPO_FALTA_EX_ID" msprop:Generator_ColumnPropNameInTable="TIPO_FALTA_EX_IDColumn" msprop:Generator_UserColumnName="TIPO_FALTA_EX_ID" type="xs:decimal" />
+              <xs:element name="TIPO_INCIDENCIAS_EX_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIAS_EX_ID" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIAS_EX_ID" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIAS_EX_IDColumn" msprop:Generator_UserColumnName="TIPO_INCIDENCIAS_EX_ID" type="xs:decimal" />
+              <xs:element name="TIPO_INCIDENCIAS_EX_PARAM" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIAS_EX_PARAM" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIAS_EX_PARAM" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIAS_EX_PARAMColumn" msprop:Generator_UserColumnName="TIPO_INCIDENCIAS_EX_PARAM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCIDENCIA_COMENTARIO" msprop:Generator_ColumnVarNameInTable="columnINCIDENCIA_COMENTARIO" msprop:Generator_ColumnPropNameInRow="INCIDENCIA_COMENTARIO" msprop:Generator_ColumnPropNameInTable="INCIDENCIA_COMENTARIOColumn" msprop:Generator_UserColumnName="INCIDENCIA_COMENTARIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="I_TIPO_INCIDENCIAS_EX_ID" msprop:Generator_ColumnVarNameInTable="columnI_TIPO_INCIDENCIAS_EX_ID" msprop:Generator_ColumnPropNameInRow="I_TIPO_INCIDENCIAS_EX_ID" msprop:Generator_ColumnPropNameInTable="I_TIPO_INCIDENCIAS_EX_IDColumn" msprop:Generator_UserColumnName="I_TIPO_INCIDENCIAS_EX_ID" type="xs:decimal" minOccurs="0" />
+              <xs:element name="I_TIPO_FALTA_EX_ID" msprop:Generator_ColumnVarNameInTable="columnI_TIPO_FALTA_EX_ID" msprop:Generator_ColumnPropNameInRow="I_TIPO_FALTA_EX_ID" msprop:Generator_ColumnPropNameInTable="I_TIPO_FALTA_EX_IDColumn" msprop:Generator_UserColumnName="I_TIPO_FALTA_EX_ID" type="xs:decimal" minOccurs="0" />
+              <xs:element name="I_TIPO_INCIDENCIAS_EX_PARAM" msprop:Generator_ColumnVarNameInTable="columnI_TIPO_INCIDENCIAS_EX_PARAM" msprop:Generator_ColumnPropNameInRow="I_TIPO_INCIDENCIAS_EX_PARAM" msprop:Generator_ColumnPropNameInTable="I_TIPO_INCIDENCIAS_EX_PARAMColumn" msprop:Generator_UserColumnName="I_TIPO_INCIDENCIAS_EX_PARAM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HorarioTiempo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHorarioTiempo" msprop:Generator_ColumnPropNameInRow="HorarioTiempo" msprop:Generator_ColumnPropNameInTable="HorarioTiempoColumn" msprop:Generator_UserColumnName="HorarioTiempo" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Incidencias" msprop:Generator_TableClassName="IncidenciasDataTable" msprop:Generator_TableVarName="tableIncidencias" msprop:Generator_TablePropName="Incidencias" msprop:Generator_RowDeletingName="IncidenciasRowDeleting" msprop:Generator_UserTableName="Incidencias" msprop:Generator_RowChangingName="IncidenciasRowChanging" msprop:Generator_RowEvHandlerName="IncidenciasRowChangeEventHandler" msprop:Generator_RowDeletedName="IncidenciasRowDeleted" msprop:Generator_RowEvArgName="IncidenciasRowChangeEvent" msprop:Generator_RowChangedName="IncidenciasRowChanged" msprop:Generator_RowClassName="IncidenciasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COMPANIA" msprop:Generator_ColumnVarNameInTable="columnCOMPANIA" msprop:Generator_ColumnPropNameInRow="COMPANIA" msprop:Generator_ColumnPropNameInTable="COMPANIAColumn" msprop:Generator_UserColumnName="COMPANIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCIDENCIA_KP" msprop:Generator_ColumnVarNameInTable="columnINCIDENCIA_KP" msprop:Generator_ColumnPropNameInRow="INCIDENCIA_KP" msprop:Generator_ColumnPropNameInTable="INCIDENCIA_KPColumn" msprop:Generator_UserColumnName="INCIDENCIA_KP" type="xs:decimal" />
+              <xs:element name="GEN_CONCEPTO_NS" msprop:Generator_ColumnVarNameInTable="columnGEN_CONCEPTO_NS" msprop:Generator_ColumnPropNameInRow="GEN_CONCEPTO_NS" msprop:Generator_ColumnPropNameInTable="GEN_CONCEPTO_NSColumn" msprop:Generator_UserColumnName="GEN_CONCEPTO_NS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FUNCION_GENERACION" msprop:Generator_ColumnVarNameInTable="columnFUNCION_GENERACION" msprop:Generator_ColumnPropNameInRow="FUNCION_GENERACION" msprop:Generator_ColumnPropNameInTable="FUNCION_GENERACIONColumn" msprop:Generator_UserColumnName="FUNCION_GENERACION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GEN_MULTIPLES_DIAS" msprop:Generator_ColumnVarNameInTable="columnGEN_MULTIPLES_DIAS" msprop:Generator_ColumnPropNameInRow="GEN_MULTIPLES_DIAS" msprop:Generator_ColumnPropNameInTable="GEN_MULTIPLES_DIASColumn" msprop:Generator_UserColumnName="GEN_MULTIPLES_DIAS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="USO_REF_01" msprop:Generator_ColumnVarNameInTable="columnUSO_REF_01" msprop:Generator_ColumnPropNameInRow="USO_REF_01" msprop:Generator_ColumnPropNameInTable="USO_REF_01Column" msprop:Generator_UserColumnName="USO_REF_01" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AGR_REF_01" msprop:Generator_ColumnVarNameInTable="columnAGR_REF_01" msprop:Generator_ColumnPropNameInRow="AGR_REF_01" msprop:Generator_ColumnPropNameInTable="AGR_REF_01Column" msprop:Generator_UserColumnName="AGR_REF_01" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOLICITUD_REF_01" msprop:Generator_ColumnVarNameInTable="columnSOLICITUD_REF_01" msprop:Generator_ColumnPropNameInRow="SOLICITUD_REF_01" msprop:Generator_ColumnPropNameInTable="SOLICITUD_REF_01Column" msprop:Generator_UserColumnName="SOLICITUD_REF_01" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USO_REF_02" msprop:Generator_ColumnVarNameInTable="columnUSO_REF_02" msprop:Generator_ColumnPropNameInRow="USO_REF_02" msprop:Generator_ColumnPropNameInTable="USO_REF_02Column" msprop:Generator_UserColumnName="USO_REF_02" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AGR_REF_02" msprop:Generator_ColumnVarNameInTable="columnAGR_REF_02" msprop:Generator_ColumnPropNameInRow="AGR_REF_02" msprop:Generator_ColumnPropNameInTable="AGR_REF_02Column" msprop:Generator_UserColumnName="AGR_REF_02" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOLICITUD_REF_02" msprop:Generator_ColumnVarNameInTable="columnSOLICITUD_REF_02" msprop:Generator_ColumnPropNameInRow="SOLICITUD_REF_02" msprop:Generator_ColumnPropNameInTable="SOLICITUD_REF_02Column" msprop:Generator_UserColumnName="SOLICITUD_REF_02" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USO_REF_03" msprop:Generator_ColumnVarNameInTable="columnUSO_REF_03" msprop:Generator_ColumnPropNameInRow="USO_REF_03" msprop:Generator_ColumnPropNameInTable="USO_REF_03Column" msprop:Generator_UserColumnName="USO_REF_03" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AGR_REF_03" msprop:Generator_ColumnVarNameInTable="columnAGR_REF_03" msprop:Generator_ColumnPropNameInRow="AGR_REF_03" msprop:Generator_ColumnPropNameInTable="AGR_REF_03Column" msprop:Generator_UserColumnName="AGR_REF_03" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOLICITUD_REF_03" msprop:Generator_ColumnVarNameInTable="columnSOLICITUD_REF_03" msprop:Generator_ColumnPropNameInRow="SOLICITUD_REF_03" msprop:Generator_ColumnPropNameInTable="SOLICITUD_REF_03Column" msprop:Generator_UserColumnName="SOLICITUD_REF_03" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USO_REF_04" msprop:Generator_ColumnVarNameInTable="columnUSO_REF_04" msprop:Generator_ColumnPropNameInRow="USO_REF_04" msprop:Generator_ColumnPropNameInTable="USO_REF_04Column" msprop:Generator_UserColumnName="USO_REF_04" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AGR_REF_04" msprop:Generator_ColumnVarNameInTable="columnAGR_REF_04" msprop:Generator_ColumnPropNameInRow="AGR_REF_04" msprop:Generator_ColumnPropNameInTable="AGR_REF_04Column" msprop:Generator_UserColumnName="AGR_REF_04" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOLICITUD_REF_04" msprop:Generator_ColumnVarNameInTable="columnSOLICITUD_REF_04" msprop:Generator_ColumnPropNameInRow="SOLICITUD_REF_04" msprop:Generator_ColumnPropNameInTable="SOLICITUD_REF_04Column" msprop:Generator_UserColumnName="SOLICITUD_REF_04" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOLICITUD_VAR_01" msprop:Generator_ColumnVarNameInTable="columnSOLICITUD_VAR_01" msprop:Generator_ColumnPropNameInRow="SOLICITUD_VAR_01" msprop:Generator_ColumnPropNameInTable="SOLICITUD_VAR_01Column" msprop:Generator_UserColumnName="SOLICITUD_VAR_01" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOLICITUD_VAR_02" msprop:Generator_ColumnVarNameInTable="columnSOLICITUD_VAR_02" msprop:Generator_ColumnPropNameInRow="SOLICITUD_VAR_02" msprop:Generator_ColumnPropNameInTable="SOLICITUD_VAR_02Column" msprop:Generator_UserColumnName="SOLICITUD_VAR_02" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOLICITUD_VAR_03" msprop:Generator_ColumnVarNameInTable="columnSOLICITUD_VAR_03" msprop:Generator_ColumnPropNameInRow="SOLICITUD_VAR_03" msprop:Generator_ColumnPropNameInTable="SOLICITUD_VAR_03Column" msprop:Generator_UserColumnName="SOLICITUD_VAR_03" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SOLICITUD_VAR_04" msprop:Generator_ColumnVarNameInTable="columnSOLICITUD_VAR_04" msprop:Generator_ColumnPropNameInRow="SOLICITUD_VAR_04" msprop:Generator_ColumnPropNameInTable="SOLICITUD_VAR_04Column" msprop:Generator_UserColumnName="SOLICITUD_VAR_04" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONCEPTO_GENERA" msprop:Generator_ColumnVarNameInTable="columnCONCEPTO_GENERA" msprop:Generator_ColumnPropNameInRow="CONCEPTO_GENERA" msprop:Generator_ColumnPropNameInTable="CONCEPTO_GENERAColumn" msprop:Generator_UserColumnName="CONCEPTO_GENERA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COND_TURNO" msprop:Generator_ColumnVarNameInTable="columnCOND_TURNO" msprop:Generator_ColumnPropNameInRow="COND_TURNO" msprop:Generator_ColumnPropNameInTable="COND_TURNOColumn" msprop:Generator_UserColumnName="COND_TURNO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="COND_REL_LAB" msprop:Generator_ColumnVarNameInTable="columnCOND_REL_LAB" msprop:Generator_ColumnPropNameInRow="COND_REL_LAB" msprop:Generator_ColumnPropNameInTable="COND_REL_LABColumn" msprop:Generator_UserColumnName="COND_REL_LAB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_COLECCION" msprop:Generator_ColumnVarNameInTable="columnCOND_COLECCION" msprop:Generator_ColumnPropNameInRow="COND_COLECCION" msprop:Generator_ColumnPropNameInTable="COND_COLECCIONColumn" msprop:Generator_UserColumnName="COND_COLECCION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_AGR_01" msprop:Generator_ColumnVarNameInTable="columnCOND_AGR_01" msprop:Generator_ColumnPropNameInRow="COND_AGR_01" msprop:Generator_ColumnPropNameInTable="COND_AGR_01Column" msprop:Generator_UserColumnName="COND_AGR_01" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_DATO_01_01" msprop:Generator_ColumnVarNameInTable="columnCOND_DATO_01_01" msprop:Generator_ColumnPropNameInRow="COND_DATO_01_01" msprop:Generator_ColumnPropNameInTable="COND_DATO_01_01Column" msprop:Generator_UserColumnName="COND_DATO_01_01" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_DATO_01_02" msprop:Generator_ColumnVarNameInTable="columnCOND_DATO_01_02" msprop:Generator_ColumnPropNameInRow="COND_DATO_01_02" msprop:Generator_ColumnPropNameInTable="COND_DATO_01_02Column" msprop:Generator_UserColumnName="COND_DATO_01_02" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_DATO_01_03" msprop:Generator_ColumnVarNameInTable="columnCOND_DATO_01_03" msprop:Generator_ColumnPropNameInRow="COND_DATO_01_03" msprop:Generator_ColumnPropNameInTable="COND_DATO_01_03Column" msprop:Generator_UserColumnName="COND_DATO_01_03" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_AGR_02" msprop:Generator_ColumnVarNameInTable="columnCOND_AGR_02" msprop:Generator_ColumnPropNameInRow="COND_AGR_02" msprop:Generator_ColumnPropNameInTable="COND_AGR_02Column" msprop:Generator_UserColumnName="COND_AGR_02" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_DATO_02_01" msprop:Generator_ColumnVarNameInTable="columnCOND_DATO_02_01" msprop:Generator_ColumnPropNameInRow="COND_DATO_02_01" msprop:Generator_ColumnPropNameInTable="COND_DATO_02_01Column" msprop:Generator_UserColumnName="COND_DATO_02_01" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_DATO_02_02" msprop:Generator_ColumnVarNameInTable="columnCOND_DATO_02_02" msprop:Generator_ColumnPropNameInRow="COND_DATO_02_02" msprop:Generator_ColumnPropNameInTable="COND_DATO_02_02Column" msprop:Generator_UserColumnName="COND_DATO_02_02" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_DATO_02_03" msprop:Generator_ColumnVarNameInTable="columnCOND_DATO_02_03" msprop:Generator_ColumnPropNameInRow="COND_DATO_02_03" msprop:Generator_ColumnPropNameInTable="COND_DATO_02_03Column" msprop:Generator_UserColumnName="COND_DATO_02_03" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_AGR_03" msprop:Generator_ColumnVarNameInTable="columnCOND_AGR_03" msprop:Generator_ColumnPropNameInRow="COND_AGR_03" msprop:Generator_ColumnPropNameInTable="COND_AGR_03Column" msprop:Generator_UserColumnName="COND_AGR_03" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_DATO_03_01" msprop:Generator_ColumnVarNameInTable="columnCOND_DATO_03_01" msprop:Generator_ColumnPropNameInRow="COND_DATO_03_01" msprop:Generator_ColumnPropNameInTable="COND_DATO_03_01Column" msprop:Generator_UserColumnName="COND_DATO_03_01" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_DATO_03_02" msprop:Generator_ColumnVarNameInTable="columnCOND_DATO_03_02" msprop:Generator_ColumnPropNameInRow="COND_DATO_03_02" msprop:Generator_ColumnPropNameInTable="COND_DATO_03_02Column" msprop:Generator_UserColumnName="COND_DATO_03_02" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COND_DATO_03_03" msprop:Generator_ColumnVarNameInTable="columnCOND_DATO_03_03" msprop:Generator_ColumnPropNameInRow="COND_DATO_03_03" msprop:Generator_ColumnPropNameInTable="COND_DATO_03_03Column" msprop:Generator_UserColumnName="COND_DATO_03_03" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REFERENCIA_NOMINA" msprop:Generator_ColumnVarNameInTable="columnREFERENCIA_NOMINA" msprop:Generator_ColumnPropNameInRow="REFERENCIA_NOMINA" msprop:Generator_ColumnPropNameInTable="REFERENCIA_NOMINAColumn" msprop:Generator_UserColumnName="REFERENCIA_NOMINA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="REFERENCIA2_NOMINA" msprop:Generator_ColumnVarNameInTable="columnREFERENCIA2_NOMINA" msprop:Generator_ColumnPropNameInRow="REFERENCIA2_NOMINA" msprop:Generator_ColumnPropNameInTable="REFERENCIA2_NOMINAColumn" msprop:Generator_UserColumnName="REFERENCIA2_NOMINA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TIEMPO_NOMINA" msprop:Generator_ColumnVarNameInTable="columnTIEMPO_NOMINA" msprop:Generator_ColumnPropNameInRow="TIEMPO_NOMINA" msprop:Generator_ColumnPropNameInTable="TIEMPO_NOMINAColumn" msprop:Generator_UserColumnName="TIEMPO_NOMINA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IMPORTE_NOMINA" msprop:Generator_ColumnVarNameInTable="columnIMPORTE_NOMINA" msprop:Generator_ColumnPropNameInRow="IMPORTE_NOMINA" msprop:Generator_ColumnPropNameInTable="IMPORTE_NOMINAColumn" msprop:Generator_UserColumnName="IMPORTE_NOMINA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FACTOR_01_NOMINA" msprop:Generator_ColumnVarNameInTable="columnFACTOR_01_NOMINA" msprop:Generator_ColumnPropNameInRow="FACTOR_01_NOMINA" msprop:Generator_ColumnPropNameInTable="FACTOR_01_NOMINAColumn" msprop:Generator_UserColumnName="FACTOR_01_NOMINA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FACTOR_02_NOMINA" msprop:Generator_ColumnVarNameInTable="columnFACTOR_02_NOMINA" msprop:Generator_ColumnPropNameInRow="FACTOR_02_NOMINA" msprop:Generator_ColumnPropNameInTable="FACTOR_02_NOMINAColumn" msprop:Generator_UserColumnName="FACTOR_02_NOMINA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FACTOR_03_NOMINA" msprop:Generator_ColumnVarNameInTable="columnFACTOR_03_NOMINA" msprop:Generator_ColumnPropNameInRow="FACTOR_03_NOMINA" msprop:Generator_ColumnPropNameInTable="FACTOR_03_NOMINAColumn" msprop:Generator_UserColumnName="FACTOR_03_NOMINA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GEN_SIST_HORARIO" msprop:Generator_ColumnVarNameInTable="columnGEN_SIST_HORARIO" msprop:Generator_ColumnPropNameInRow="GEN_SIST_HORARIO" msprop:Generator_ColumnPropNameInTable="GEN_SIST_HORARIOColumn" msprop:Generator_UserColumnName="GEN_SIST_HORARIO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DESCRIPCION_KP" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION_KP" msprop:Generator_ColumnPropNameInRow="DESCRIPCION_KP" msprop:Generator_ColumnPropNameInTable="DESCRIPCION_KPColumn" msprop:Generator_UserColumnName="DESCRIPCION_KP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ABREVIATURA_KP" msprop:Generator_ColumnVarNameInTable="columnABREVIATURA_KP" msprop:Generator_ColumnPropNameInRow="ABREVIATURA_KP" msprop:Generator_ColumnPropNameInTable="ABREVIATURA_KPColumn" msprop:Generator_UserColumnName="ABREVIATURA_KP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Trabajadores" />
+      <xs:field xpath="mstns:trabajador" />
+      <xs:field xpath="mstns:compania" />
+    </xs:unique>
+    <xs:unique name="Incidencias_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Incidencias" />
+      <xs:field xpath="mstns:COMPANIA" />
+      <xs:field xpath="mstns:INCIDENCIA_KP" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

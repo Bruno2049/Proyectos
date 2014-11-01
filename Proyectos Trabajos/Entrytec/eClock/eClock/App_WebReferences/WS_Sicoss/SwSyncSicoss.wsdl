@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.gruposicoss.com.mx/SwSyncSicoss/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.gruposicoss.com.mx/SwSyncSicoss/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.gruposicoss.com.mx/SwSyncSicoss/">
+      <s:import namespace="http://tempuri.org/DS_ListaPersonas.xsd" />
+      <s:import schemaLocation="http://localhost:1375/SwSyncSicoss/SwSyncSicoss.asmx?schema=DS_ListaPersonas" namespace="http://tempuri.org/DS_ListaPersonas.xsd" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SirveWebconfig">
+        <s:complexType />
+      </s:element>
+      <s:element name="SirveWebconfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SirveWebconfigResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Palabras">
+        <s:complexType />
+      </s:element>
+      <s:element name="PalabrasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PalabrasResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubeLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Terminal_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contenido" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubeLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubeLogResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstaConectado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Compania_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstaConectadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EstaConectadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EsPersonaValida">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Terminal_ID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Persona_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EsPersonaValidaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EsPersonaValidaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Compania_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminalesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenTerminalesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenDatos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Compania_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenDatosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenDatosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaEmpleados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDCompania" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaEmpleadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaEmpleadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ListaPersonas.xsd" name="namespace" />
+                <s:attribute fixed="EmpleadosDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibirChecadas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDCompania" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TablaIncidencias">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_ListaPersonas.xsd" name="namespace" />
+                <s:attribute fixed="EmpleadoIncidenciaRelojDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibirChecadasResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="FormatoCompania">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDCompania" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FormatoCompaniaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FormatoCompaniaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="SirveWebconfigSoapIn">
+    <wsdl:part name="parameters" element="tns:SirveWebconfig" />
+  </wsdl:message>
+  <wsdl:message name="SirveWebconfigSoapOut">
+    <wsdl:part name="parameters" element="tns:SirveWebconfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="PalabrasSoapIn">
+    <wsdl:part name="parameters" element="tns:Palabras" />
+  </wsdl:message>
+  <wsdl:message name="PalabrasSoapOut">
+    <wsdl:part name="parameters" element="tns:PalabrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubeLogSoapIn">
+    <wsdl:part name="parameters" element="tns:SubeLog" />
+  </wsdl:message>
+  <wsdl:message name="SubeLogSoapOut">
+    <wsdl:part name="parameters" element="tns:SubeLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="EstaConectadoSoapIn">
+    <wsdl:part name="parameters" element="tns:EstaConectado" />
+  </wsdl:message>
+  <wsdl:message name="EstaConectadoSoapOut">
+    <wsdl:part name="parameters" element="tns:EstaConectadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EsPersonaValidaSoapIn">
+    <wsdl:part name="parameters" element="tns:EsPersonaValida" />
+  </wsdl:message>
+  <wsdl:message name="EsPersonaValidaSoapOut">
+    <wsdl:part name="parameters" element="tns:EsPersonaValidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenTerminales" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenTerminalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenDatosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenDatos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenDatosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaEmpleadosSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="ListaEmpleadosSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecibirChecadasSoapIn">
+    <wsdl:part name="parameters" element="tns:RecibirChecadas" />
+  </wsdl:message>
+  <wsdl:message name="RecibirChecadasSoapOut">
+    <wsdl:part name="parameters" element="tns:RecibirChecadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="FormatoCompaniaSoapIn">
+    <wsdl:part name="parameters" element="tns:FormatoCompania" />
+  </wsdl:message>
+  <wsdl:message name="FormatoCompaniaSoapOut">
+    <wsdl:part name="parameters" element="tns:FormatoCompaniaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SwSyncSicossSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SirveWebconfig">
+      <wsdl:input message="tns:SirveWebconfigSoapIn" />
+      <wsdl:output message="tns:SirveWebconfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Palabras">
+      <wsdl:input message="tns:PalabrasSoapIn" />
+      <wsdl:output message="tns:PalabrasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubeLog">
+      <wsdl:input message="tns:SubeLogSoapIn" />
+      <wsdl:output message="tns:SubeLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EstaConectado">
+      <wsdl:input message="tns:EstaConectadoSoapIn" />
+      <wsdl:output message="tns:EstaConectadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EsPersonaValida">
+      <wsdl:input message="tns:EsPersonaValidaSoapIn" />
+      <wsdl:output message="tns:EsPersonaValidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminales">
+      <wsdl:input message="tns:ObtenTerminalesSoapIn" />
+      <wsdl:output message="tns:ObtenTerminalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDatos">
+      <wsdl:input message="tns:ObtenDatosSoapIn" />
+      <wsdl:output message="tns:ObtenDatosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaEmpleados">
+      <wsdl:input message="tns:ListaEmpleadosSoapIn" />
+      <wsdl:output message="tns:ListaEmpleadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibirChecadas">
+      <wsdl:input message="tns:RecibirChecadasSoapIn" />
+      <wsdl:output message="tns:RecibirChecadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FormatoCompania">
+      <wsdl:input message="tns:FormatoCompaniaSoapIn" />
+      <wsdl:output message="tns:FormatoCompaniaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SwSyncSicossSoap" type="tns:SwSyncSicossSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SirveWebconfig">
+      <soap:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/SirveWebconfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Palabras">
+      <soap:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/Palabras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubeLog">
+      <soap:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/SubeLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstaConectado">
+      <soap:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/EstaConectado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EsPersonaValida">
+      <soap:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/EsPersonaValida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminales">
+      <soap:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/ObtenTerminales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDatos">
+      <soap:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/ObtenDatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaEmpleados">
+      <soap:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/ListaEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibirChecadas">
+      <soap:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/RecibirChecadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormatoCompania">
+      <soap:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/FormatoCompania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SwSyncSicossSoap12" type="tns:SwSyncSicossSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SirveWebconfig">
+      <soap12:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/SirveWebconfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Palabras">
+      <soap12:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/Palabras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubeLog">
+      <soap12:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/SubeLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstaConectado">
+      <soap12:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/EstaConectado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EsPersonaValida">
+      <soap12:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/EsPersonaValida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminales">
+      <soap12:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/ObtenTerminales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDatos">
+      <soap12:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/ObtenDatos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaEmpleados">
+      <soap12:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/ListaEmpleados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibirChecadas">
+      <soap12:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/RecibirChecadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormatoCompania">
+      <soap12:operation soapAction="http://www.gruposicoss.com.mx/SwSyncSicoss/FormatoCompania" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SwSyncSicoss">
+    <wsdl:port name="SwSyncSicossSoap" binding="tns:SwSyncSicossSoap">
+      <soap:address location="http://localhost:1375/SwSyncSicoss/SwSyncSicoss.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SwSyncSicossSoap12" binding="tns:SwSyncSicossSoap12">
+      <soap12:address location="http://localhost:1375/SwSyncSicoss/SwSyncSicoss.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

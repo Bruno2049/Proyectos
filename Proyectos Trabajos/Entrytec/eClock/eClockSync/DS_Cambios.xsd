@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Cambios" targetNamespace="http://tempuri.org/DS_Cambios.xsd" xmlns:mstns="http://tempuri.org/DS_Cambios.xsd" xmlns="http://tempuri.org/DS_Cambios.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Cambios" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Cambios" msprop:Generator_UserDSName="DS_Cambios">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_Personas" msprop:Generator_TableClassName="DT_PersonasDataTable" msprop:Generator_TableVarName="tableDT_Personas" msprop:Generator_TablePropName="DT_Personas" msprop:Generator_RowDeletingName="DT_PersonasRowDeleting" msprop:Generator_UserTableName="DT_Personas" msprop:Generator_RowChangingName="DT_PersonasRowChanging" msprop:Generator_RowEvHandlerName="DT_PersonasRowChangeEventHandler" msprop:Generator_RowDeletedName="DT_PersonasRowDeleted" msprop:Generator_RowEvArgName="DT_PersonasRowChangeEvent" msprop:Generator_RowChangedName="DT_PersonasRowChanged" msprop:Generator_RowClassName="DT_PersonasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_IDColumn" msprop:Generator_UserColumnName="PERSONA_ID" type="xs:decimal" />
+              <xs:element name="PERSONAS_A_VEC_T1" msprop:Generator_ColumnVarNameInTable="columnPERSONAS_A_VEC_T1" msprop:Generator_ColumnPropNameInRow="PERSONAS_A_VEC_T1" msprop:Generator_ColumnPropNameInTable="PERSONAS_A_VEC_T1Column" msprop:Generator_UserColumnName="PERSONAS_A_VEC_T1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONAS_A_VEC_T2" msprop:Generator_ColumnVarNameInTable="columnPERSONAS_A_VEC_T2" msprop:Generator_ColumnPropNameInRow="PERSONAS_A_VEC_T2" msprop:Generator_ColumnPropNameInTable="PERSONAS_A_VEC_T2Column" msprop:Generator_UserColumnName="PERSONAS_A_VEC_T2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONAS_A_VEC_T3" msprop:Generator_ColumnVarNameInTable="columnPERSONAS_A_VEC_T3" msprop:Generator_ColumnPropNameInRow="PERSONAS_A_VEC_T3" msprop:Generator_ColumnPropNameInTable="PERSONAS_A_VEC_T3Column" msprop:Generator_UserColumnName="PERSONAS_A_VEC_T3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnPERSONA_NOMBRE" msprop:Generator_ColumnPropNameInRow="PERSONA_NOMBRE" msprop:Generator_ColumnPropNameInTable="PERSONA_NOMBREColumn" msprop:Generator_UserColumnName="PERSONA_NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONA_LINK_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_LINK_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_LINK_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_LINK_IDColumn" msprop:Generator_UserColumnName="PERSONA_LINK_ID" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PERSONA_ID_S_HUELLA" msprop:Generator_ColumnVarNameInTable="columnPERSONA_ID_S_HUELLA" msprop:Generator_ColumnPropNameInRow="PERSONA_ID_S_HUELLA" msprop:Generator_ColumnPropNameInTable="PERSONA_ID_S_HUELLAColumn" msprop:Generator_UserColumnName="PERSONA_ID_S_HUELLA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PERSONAS_A_VEC_1" msprop:Generator_ColumnVarNameInTable="columnPERSONAS_A_VEC_1" msprop:Generator_ColumnPropNameInRow="PERSONAS_A_VEC_1" msprop:Generator_ColumnPropNameInTable="PERSONAS_A_VEC_1Column" msprop:Generator_UserColumnName="PERSONAS_A_VEC_1" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="PERSONAS_A_VEC_2" msprop:Generator_ColumnVarNameInTable="columnPERSONAS_A_VEC_2" msprop:Generator_ColumnPropNameInRow="PERSONAS_A_VEC_2" msprop:Generator_ColumnPropNameInTable="PERSONAS_A_VEC_2Column" msprop:Generator_UserColumnName="PERSONAS_A_VEC_2" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="PERSONAS_A_VEC_3" msprop:Generator_ColumnVarNameInTable="columnPERSONAS_A_VEC_3" msprop:Generator_ColumnPropNameInRow="PERSONAS_A_VEC_3" msprop:Generator_ColumnPropNameInTable="PERSONAS_A_VEC_3Column" msprop:Generator_UserColumnName="PERSONAS_A_VEC_3" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="PERSONA_S_HUELLA_CLAVE" msprop:Generator_ColumnVarNameInTable="columnPERSONA_S_HUELLA_CLAVE" msprop:Generator_ColumnPropNameInRow="PERSONA_S_HUELLA_CLAVE" msprop:Generator_ColumnPropNameInTable="PERSONA_S_HUELLA_CLAVEColumn" msprop:Generator_UserColumnName="PERSONA_S_HUELLA_CLAVE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HASH_TOTAL" msprop:Generator_ColumnVarNameInTable="columnHASH_TOTAL" msprop:Generator_ColumnPropNameInRow="HASH_TOTAL" msprop:Generator_ColumnPropNameInTable="HASH_TOTALColumn" msprop:Generator_UserColumnName="HASH_TOTAL" type="xs:string" minOccurs="0" />
+              <xs:element name="ULTIMO_ENVIO" msprop:Generator_ColumnVarNameInTable="columnULTIMO_ENVIO" msprop:Generator_ColumnPropNameInRow="ULTIMO_ENVIO" msprop:Generator_ColumnPropNameInTable="ULTIMO_ENVIOColumn" msprop:Generator_UserColumnName="ULTIMO_ENVIO" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DT_Personas" />
+      <xs:field xpath="mstns:PERSONA_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

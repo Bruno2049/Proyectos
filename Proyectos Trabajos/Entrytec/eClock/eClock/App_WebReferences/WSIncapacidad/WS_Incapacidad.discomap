@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost/WSIncapacidad/WS_Incapacidad.asmx?wsdl" filename="WS_Incapacidad.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost/WSIncapacidad/WS_Incapacidad.asmx?schema=DSIncapacidadSicoss" filename="DSIncapacidadSicoss.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost/WSIncapacidad/WS_Incapacidad.asmx?disco" filename="WS_Incapacidad.disco" />
+  </Results>
+</DiscoveryClientResultsFile>

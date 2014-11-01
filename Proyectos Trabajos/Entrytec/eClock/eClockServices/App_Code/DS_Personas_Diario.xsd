@@ -1,0 +1,92 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DS_Personas_Diario" targetNamespace="http://www.tempuri.org/DS_Personas_Diario.xsd" xmlns:mstns="http://www.tempuri.org/DS_Personas_Diario.xsd" xmlns="http://www.tempuri.org/DS_Personas_Diario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DS_Personas_Diario" msdata:IsDataSet="true" msdata:Locale="es-MX">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="EC_ACCESOSE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ACCESO_ID" type="xs:decimal" />
+              <xs:element name="ACCESO_FECHAHORA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TERMINAL_NOMBRE" type="xs:string" />
+              <xs:element name="TIPO_ACCESO_NOMBRE" type="xs:string" />
+              <xs:element name="PERSONA_ID" type="xs:decimal" />
+              <xs:element name="TERMINAL_ID" type="xs:decimal" />
+              <xs:element name="TIPO_ACCESO_ID" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_TIPO_INCIDENCIAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPO_INCIDENCIA_ID" type="xs:decimal" />
+              <xs:element name="TIPO_INCIDENCIA_NOMBRE" type="xs:string" />
+              <xs:element name="TIPO_INCIDENCIA_ABR" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_INCIDENCIA_BORRADO" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_PERSONAS_DIARIOE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_DIARIO_ID" type="xs:decimal" />
+              <xs:element name="ACCESO_E_ID" type="xs:decimal" />
+              <xs:element name="ACCESO_S_ID" type="xs:decimal" />
+              <xs:element name="ACCESO_CS_ID" type="xs:decimal" />
+              <xs:element name="ACCESO_CR_ID" type="xs:decimal" />
+              <xs:element name="PERSONA_ID" type="xs:decimal" />
+              <xs:element name="PERSONA_DIARIO_FECHA" type="xs:dateTime" />
+              <xs:element name="TIPO_INC_SIS_ID" type="xs:decimal" />
+              <xs:element name="TIPO_INC_C_SIS_ID" type="xs:decimal" />
+              <xs:element name="INCIDENCIA_ID" type="xs:decimal" />
+              <xs:element name="TURNO_DIA_ID" type="xs:decimal" />
+              <xs:element name="PERSONA_DIARIO_TT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PERSONA_DIARIO_TE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PERSONA_DIARIO_TC" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PERSONA_DIARIO_TDE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ACCESO_E" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ACCESO_S" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ACCESO_CS" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ACCESO_CR" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ACCESO_E_TERMINAL" type="xs:string" />
+              <xs:element name="ACCESO_S_TERMINAL" type="xs:string" />
+              <xs:element name="ACCESO_CS_TERMINAL" type="xs:string" />
+              <xs:element name="ACCESO_CR_TERMINAL" type="xs:string" />
+              <xs:element name="ACCESO_ID" type="xs:decimal" />
+              <xs:element name="ACCESO_E_TERMINAL_ID" type="xs:decimal" />
+              <xs:element name="ACCESO_S_TERMINAL_ID" type="xs:decimal" />
+              <xs:element name="EXPR1" type="xs:decimal" />
+              <xs:element name="EXPR2" type="xs:decimal" />
+              <xs:element name="EXPR3" type="xs:decimal" />
+              <xs:element name="EXPR5" type="xs:decimal" />
+              <xs:element name="EXPR6" type="xs:decimal" />
+              <xs:element name="EXPR4" type="xs:decimal" />
+              <xs:element name="INCIDENCIA_COMENTARIO" type="xs:string" minOccurs="0" />
+              <xs:element name="INCIDENCIA_EXTRAS" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_INCIDENCIA_ID" type="xs:decimal" />
+              <xs:element name="TIPO_INCIDENCIA_NOMBRE" type="xs:string" />
+              <xs:element name="TIPO_INCIDENCIA_ABR" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_TIPO_INC_SIS__">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPO_INC_SIS_ID" type="xs:decimal" />
+              <xs:element name="TIPO_INC_SIS_NOMBRE" type="xs:string" />
+              <xs:element name="TIPO_INC_SIS_ABR" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_TIPO_INCIDENCIAS" />
+      <xs:field xpath="mstns:TIPO_INCIDENCIA_ID" />
+    </xs:unique>
+    <xs:unique name="EC_TIPO_INC_SIS___Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_TIPO_INC_SIS__" />
+      <xs:field xpath="mstns:TIPO_INC_SIS_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

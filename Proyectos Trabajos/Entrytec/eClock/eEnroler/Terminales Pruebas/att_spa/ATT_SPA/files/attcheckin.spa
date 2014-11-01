@@ -1,0 +1,3100 @@
+[LanguageOptions]
+FontName=MS Sans Serif
+FontSize=9
+FontCharSet=1
+LCDFontSize=9
+
+[FormAbout]
+FormAbout.Caption=Acerca del Sistema
+FormAbout.LabelInfo.Caption=\x20 Obtenga información acerca de productos y servicio de soporte técnico en Línea.
+FormAbout.Label2.Caption=Sistema de Tiempo\n y Asistencia
+FormAbout.LabelHttp.Caption=http://www.entrytec.com.mx
+FormAbout.LabelCopyright.Caption=Los derechos de software pertenecen al desarrollador del software.
+
+[FormDept]
+FormDept.Caption=Dep. Mantenimiento
+FormDept.Panel1.Caption=
+FormDept.DBNavigator1.Hints=Primer\r\nAnt\r\nSgt\r\nUlt\r\nIngres\r\nBorrar\r\nEditar\r\nGuardar\r\nCancelar\r\nActual
+
+[FormOutput]
+FormOutput.Caption=Informe Salida
+FormOutput.GroupBox1.Caption=Informe Salida a 
+FormOutput.RadioButtonPreview.Caption=Vista Previa
+FormOutput.RadioButtonPrint.Caption=Imprimir
+FormOutput.RadioButtonText.Caption=Archivo Texto
+FormOutput.BitBtn1.Caption=Config.Impresora
+FormOutput.BitBtn2.Caption=OK
+FormOutput.BitBtn3.Caption=Cancela
+
+
+[FormHintMsg]
+FormHintMsg.BitBtnCancel.Caption=Cancela
+
+[FormAttMain]
+FormAttMain.Caption=Adm. de Programa AC FP
+FormAttMain.ToolButton1.Caption=Reg.Asist.
+FormAttMain.ToolButton1.Hint=Buscar/Leer Asistencia Empleo Marc-ent/Marc-Sal Registro
+FormAttMain.ToolButton5.Caption=Abnormit
+FormAttMain.ToolButton8.Caption=Perm.
+FormAttMain.ToolButton2.Caption=Empleados
+FormAttMain.ToolButton2.Hint=Variada Informac.Para Mantenim.de Empleados
+FormAttMain.ToolButton4.Caption=AC Tiempo
+FormAttMain.ToolButton4.Hint=Mantenimiento de Empleados Hora En/Sal 	
+FormAttMain.ToolButton3.Caption=Informe
+FormAttMain.ToolButton3.Hint=Leer/Generar/ImprimirVariosReportes
+FormAttMain.ToolButton6.Caption=Sal.
+FormAttMain.ToolButton6.Hint=Salir Sistema Admin. Control de Asistencia 
+FormAttMain.ActionAttRec.Caption=AC Reg.
+FormAttMain.ActionAttRec.Hint=Buscar/Leer Asistencia Empleados Marc-Ent/Sal 
+FormAttMain.ActionExce.Caption=AusNormal 
+FormAttMain.ActionLeave.Caption=Licencia
+FormAttMain.ActionEmployee.Caption=Empleados
+FormAttMain.ActionEmployee.Hint=Mantenimiento de Empleados
+FormAttMain.ActionScheduler.Caption=AC Tiempo
+FormAttMain.ActionScheduler.Hint= Mantenimiento de Empleados Hora En-/Sal
+FormAttMain.ActionReport.Caption=Reporte
+FormAttMain.ActionReport.Hint=Lee/Hacer/Imprimir Reportes
+FormAttMain.ActionClose.Caption=Sal
+FormAttMain.ActionClose.Hint=Salir Sistema Administración de Asistencia
+FormAttMain.ActionHelp.Caption=Ayuda
+FormAttMain.ActionHelp.Hint=Obtiene Ayuda
+;V3.0
+FormAttMain.actionAddDev.Caption=Equipo
+FormAttMain.actionAddDev.Hint=Adic.o Elim.Disp. 
+FormAttMain.actionDelDev.Caption=Borrar Disp.
+FormAttMain.actionEditDev.Caption=Edita
+FormAttMain.actionConnectDev.Caption=Conecta
+FormAttMain.actionDisConnectDev.Caption=Desconecta
+FormAttMain.actionUpdate.Caption=Actualizar
+FormAttMain.Open_door.Caption=AbrePuerta
+
+
+FormAttMain.F1.Caption=&Datos
+FormAttMain.mInit.Caption=&Inicializa Sistema
+FormAttMain.mClearData.Caption=&Borra Data Obsoleta
+FormAttMain.MenuBackData.Caption=Respaldo BD
+FormAttMain.MenuRestoreData.Caption=Restaurar BD
+FormAttMain.mImport.Caption=Importa AC Data
+FormAttMain.mImport.Hint=Import. Dato Asistencia o Dato Empleado 
+FormAttMain.mExportEmp.Caption=&Export AC Data
+FormAttMain.C2.Captio=Cambia Usuario
+FormAttMain.N5.Caption=Salir
+FormAttMain.N5.Hint=Salir Sistema Adm. de Asistencia
+
+
+FormAttMain.E1.Caption=&Asistencia
+FormAttMain.a2iu1.Caption=Inasistencia Justificada/Licencias/Comisiones 
+FormAttMain.N16.Caption=Empleados que Olvidaron Marcar Ent/Sal
+FormAttMain.N12.Caption=Marcaciones Colectivas
+FormAttMain.N17.Caption=Manipulación de Marcaciones Colectivas
+FormAttMain.S1.Caption=&Buscar/Imprimir
+FormAttMain.b1.Caption=Registros de Asistencia
+FormAttMain.b1.Hint=Buscar/Leer Empleados Registro Marc-Ent/Sal 
+FormAttMain.N3.Caption=Busqueda AusNormal
+FormAttMain.N11.Caption=Estado Entrada Empleados Actuales 
+FormAttMain.N21.Caption=Descargar Inf. de Usuarios
+FormAttMain.N21.Hint=Leer/Hacer/Imp.Varios Reportes
+FormAttMain.O1.Caption=&Mantenimiento/Opciones
+FormAttMain.mDepartment.Caption=&Departamento/Lista
+FormAttMain.mEmployee.Caption=Mant de Empleados
+FormAttMain.mEmployee.Hint=Mantener Inf. Variada del empleado
+FormAttMain.mAdministrator.Caption=&Administrador
+FormAttMain.mScheduler.Caption=Comprueba Turno de Asis. del empleado
+FormAttMain.mScheduler.Hint=Mantener el Horario Ent/Sal del empleado
+FormAttMain.mnuHoliday.Caption=&Lista de días festivos
+FormAttMain.mnuLeaveClass.Caption=&Tipos de Permisos
+FormAttMain.mnuAttRule.Caption=&Reglas de Asistencia
+FormAttMain.mOption.Caption=&Opciones de Base Datos
+FormAttMain.H1.Caption=&Ayuda
+FormAttMain.mHelpContent.Caption=Contenido
+FormAttMain.mHelpContent.Hint=Obtener Ayuda Sistema
+FormAttMain.mHelpIndex.Caption=Ayuda &Indice
+FormAttMain.mAbout.Caption=Sobre...
+FormAttMain.C2.Caption=Cambia &Usuario
+FormAttMain.Test2.Caption=&Prueba
+FormAttMain.mnuAddin.Caption=Añadir
+FormAttMain.mnuAddinManage.Caption=Añadir Programa
+FormAttMain.tbtnReport.Caption=Reporte
+FormAttMain.tbtnSchClass.caption=Horario
+FormAttMain.tbtnScheduler.caption=Turnos
+FormAttMain.tbtnScheduler.Hint=Turno de empleados
+FormAttMain.mnuHintRestore.caption=Activar Notas
+FormAttMain.mnuReport.caption=Cálculo de Asistencia y Reportes
+FormAttMain.mnuSchClass.Caption=Mantenimiento de Horarios
+FormAttMain.mnuSchMng.Caption=Mantenimiento de Turnos
+FormAttMain.mnuSetDBPass.Caption=Fijar Contraseña BD
+FormAttMain.mnuAttMachine.Caption=Conectar a la Máquina
+FormAttMain.tbtnReport.Hint=Leer/Hacer/Imprimir Varios Reporte
+FormAttMain.tbExit.Caption=Salir Sistema
+FormAttMain.tbExit.Hint=Salir Sistema Admin.de Asistencia
+FormAttMain.ActionSchClass.Caption=Horario
+FormAttMain.mnuPreProcRec.Caption=Manejar Reg Asist.
+FormAttMain.mnuAudit.Caption=Auditar Excepciones 
+FormAttMain.mnuRestoreLog.Caption=Restaura Eventos 
+FormAttMain.mnuReport.Hint=Leer/Hacer/Imprime Varios Reporte
+FormAttMain.mnuScheduler.Caption=Turnos de los empleados
+FormAttMain.mnuScheduler.Hint=Asignar Empleado con Turno
+FormAttMain.mnuACTRManager.Caption=Admin Equipos
+FormAttMain.mnuACTRComm.Caption=Conecta
+FormAttMain.mnuACManager.Caption=Desconecta
+FormAttMain.mImportUSB.Caption= Admin USB
+FormAttMain.mnuSMSMange.Caption=Admin SMS
+FormAttMain.mnuUDiskMng.Caption=Admin UDisk
+FormAttMain.mnuHIDMonitor.Caption=Monitor Tarjeta
+;V3.0
+FormAttMain.memorylogs.DisplayLabel[0]=Id
+FormAttMain.memorylogs.DisplayLabel[1]=Ac-No
+FormAttMain.memorylogs.DisplayLabel[2]=Nombre
+FormAttMain.memorylogs.DisplayLabel[3=Tiempo
+FormAttMain.memorylogs.DisplayLabel[4]=ModoDeVerificación
+FormAttMain.memorylogs.DisplayLabel[5]=Máquina
+FormAttMain.memorylogs.DisplayLabel[6]=Excepción
+FormAttMain.gbAlarm.Caption=Excepcion Evento
+FormAttMain.memoryDataDoor.DisplayLabel[0]=Ac-No
+FormAttMain.memoryDataDoor.DisplayLabel[1]=Tiempo
+FormAttMain.memoryDataDoor.DisplayLabel[2]=Máquina
+FormAttMain.memoryDataDoor.DisplayLabel[3]=Evento
+
+FormAttMain.MachinesView.Caption[0]=NombreDisp
+FormAttMain.MachinesView.Caption[1]=Estado
+FormAttMain.MachinesView.Caption[2]=No.Máquina
+FormAttMain.MachinesView.Caption[3]=TipoComm
+FormAttMain.MachinesView.Caption[4]=Velocidad
+FormAttMain.MachinesView.Caption[5]=Dirrec.IP
+FormAttMain.MachinesView.Caption[6]=Puerto
+FormAttMain.MachinesView.Caption[7]=NombreProd
+FormAttMain.MachinesView.Caption[8]=CuentaUsu
+FormAttMain.MachinesView.Caption[9]=CuentaAdmin
+FormAttMain.MachinesView.Caption[10]=CuentaFP
+FormAttMain.MachinesView.Caption[11]=CuentaContraseña
+FormAttMain.MachinesView.Caption[12]=CuentaReg
+FormAttMain.MachinesView.Caption[13]=Número Serial
+FormAttMain.MemoryStatus.DisplayLabel[0]=ID
+FormAttMain.MemoryStatus.DisplayLabel[1]=Estado
+FormAttMain.MemoryStatus.DisplayLabel[2]=Tiempo
+
+
+FormAttMain.Menu_Device.Caption=Máquina
+FormAttMain.acDownlog.Caption=Descargar Eventos
+FormAttMain.acUploadFinger.Caption=Cargar Inf. de Usuarios
+FormAttMain.acDownloadFinger.Caption=Descargar Inf. de Usuarios
+FormAttMain.acDevManager.Caption=Admin AC
+FormAttMain.Menu_Set.Caption=Mantenimiento/Opciones
+FormAttMain.acDeptSet.Caption=Departamento/Lista
+FormAttMain.acManagerSet.Caption=Administrador
+FormAttMain.acemployeeset.Caption=Mant.de Personal
+FormAttMain.AcDbfSet.Caption=Opciones de Base Datos
+FormAttMain.Menu_Arrange.Caption=Turno de empleados
+FormAttMain.acTimeSet.Caption=Mantenimiento de Horarios
+FormAttMain.acShiftSet.Caption=Mantenimiento de Turnos
+FormAttMain.acemployeeshift.Caption=Turno de empleados
+FormAttMain.acAttrule.Caption=Reglas de Asistencia
+FormAttMain.Menu_Data.Caption=Mantenimiento de Datos
+FormAttMain.acImportAtt.Caption=Importar Marcaciones
+FormAttMain.acExportAtt.Caption=Exportar Marcaciones
+FormAttMain.acBackup.Caption=Respaldar BD
+FormAttMain.acRestore.Caption=Restaurar BD
+FormAttMain.acDellog.Caption=Borrar AC Reg
+FormAttMain.Menu_door.Caption=Adm Puerta
+FormAttMain.acTimeZone.Caption=Zona Horaria
+FormAttMain.acAcGroup.Caption=Grupo
+FormAttMain.acUnlockCom.Caption=Abrir Combinación
+FormAttMain.AcUserPrivilege.Caption=Privilegio Control Acceso
+FormAttMain.AcUploadPara.Caption=Cargar Opciones
+FormAttMain.AcSysnTime.Caption=Sincroniza Hora
+
+FormAttMain.JvNavPaneToolPanel1.Caption=Lista/Máquinas
+FormAttMain.NSelectAll.Caption=Selecc Todo
+FormAttMain.NConnectDev.Caption=Conecta
+FormAttMain.NDisConnectDev.Caption=Desconecta
+FormAttMain.NDeleteDev.Caption=Borrar
+FormAttMain.NBackupDev.Caption=Respalda Data
+FormAttMain.NRestoreDev.Caption=Restaura Data
+FormAttMain.NDownloadLog.Caption=Descargar Reg
+FormAttMain.NDeleteData.Caption=Borrar AC Reg
+FormAttMain.NdeleteOplogs.Caption=Borrar OP Reg
+FormAttMain.NDisabledDev.Caption=Desabilitar
+FormAttMain.NEnabledDev.Caption=Habilitar
+FormAttMain.NSysncDevtime.Caption=Sincroniza Hora
+FormAttMain.NRestartDevice.Caption=Actualiza
+FormAttMain.NProperty.Caption=Propiedad
+FormAttMain.LargeIcon1.Caption=Icono Grande
+FormAttMain.SmallIcon1.Caption=Icono Peque?o
+FormAttMain.List1.Caption=Lista
+FormAttMain.Report1.Caption=Reporte
+FormAttMain.NSystem.Caption=Opciones del Sistema
+FormAttMain.NCompact.Caption=Compactar BD
+FormAttMain.NISShow.Caption=Mostrar/Ocultar
+FormAttMain.NSystemOption.Caption=Set.Sistema
+FormAttMain.NExit.Caption=Salir
+FormAttMain.mnuExport.Caption=ExportaData
+FFormAttMain.mnuReport.Caption=Crear Reporte
+FormAttMain.mnuSaveLyout.Caption=Limpiar Datos 
+FormAttMain.mnuShowAllCol.Caption=
+FormAttMain.HideAllCol.Caption=
+FormAttMain.mnuVisible.Caption=
+FormAttMain.mnuSort.Caption=
+FormAttMain.NSystemLog.Caption=Sistema opera reg
+formAttMain.NAlarmLog.Caption=Alarma Evento 
+formAttMain.Nexportfile.Caption=Export archivo Config
+
+[FormEmpsch]
+FormEmpsch.Caption=Turnos AC Empleados 
+FormEmpsch.TabSheetEmps.Caption=Arreglar y ajustar cambios en términos de Empl. 
+FormEmpsch.SpeedButtonschedit.Caption=Cambios Temporales
+FormEmpsch.SpeedButtonschedit.Hint=Cambios Temp. de Empleados
+FormEmpsch.SpeedButtonschsave.Hint=Guardar Cambios Temp de Empleado
+FormEmpsch.SpeedButtonschcancel.Hint=Cancelar Operaciones Cambios Temp.
+FormEmpsch.SpeedPrintEmpSch.Hint=Imprimir Horas Normales Trabajo de Empl. 
+FormEmpsch.SpeedDeleteTempSch.Hint=Cancelar cambios temp. durante este período 
+FormEmpsch.SpeedButtonSch.Caption=ArreglarCambio
+FormEmpsch.SpeedButtonSch.Hint=Arreglar cambios del empl.
+FormEmpsch.SpeedButtonMSch.Hint=Admin Cambios
+FormEmpsch.SpeedButtonShift.Hint=Arreglar Cambios Modificados Empl.
+FormEmpsch.SpeedButtonMShift.Hint=Cambiar Adm Cambios de metodos
+FormEmpsch.TabSheetADay.Caption=Buscar Dias  
+FormEmpsch.Label2.Caption=Dpto:
+FormEmpsch.SpeedButtonDeptSch.Hint=Turno del Dpto.
+
+FormEmpsch.msch.Caption=Arreglar cambios del empl.
+FormEmpsch.mschedit.Caption=Cambios Temp. en Empleados
+FormEmpsch.mSelAll.Caption=Selec Todo
+FormEmpsch.mSelAllnone.Caption=Selec Ninguno
+
+
+[FormSelectSch]
+FormSelectSch.BitBtn1.Caption=OK
+FormSelectSch.BitBtn2.Caption=Cancelar
+
+[FormShift_Sch]
+FormShift_Sch.Caption=Cambiar Metodos Modificaciones.
+FormShift_Sch.Label1.Caption=Cambiar Metodo Modificaciones
+FormShift_Sch.DBNavigator1.Hints=Primer Metodo\r\nAnterior Metodo \r\nSgte Metodo\r\nUltimo Metod\r\nAñadir Metodo\nBorrar Metodo\r\nEditar Metodo\r\nGuardar Metodo\r\nCancelar Edición/Adición\r\n
+FormShift_Sch.Panel3.Caption=
+FormShift_Sch.Label2.Caption=Cambios Usados
+FormShift_Sch.SpeedButtonAdd.Hint=Añadir Cambio
+FormShift_Sch.SpeedButtonDel.Hint=Remover Cambio
+FormShift_Sch.SpeedButtonUp.Hint=Hacia Arriba
+FormShift_Sch.SpeedButtonDown.Hint=Hacia Abajo
+FormShift_Sch.Label3.Caption=CambiarPeriodoTiempo
+FormShift_Sch.BitBtn1.Caption=OK
+FormShift_Sch.BitBtn2.Caption=Cancel
+FormShift_Sch.DBNavigator1.Hint=Primer Metodo\r\nAnterior Metodo \r\nSgte Metodo\r\nUltimo Metodo\r\nAñadir Metodo\nBorrar Metodo\r\nEditar Metodo\r\nGuardar Metodo\r\nCancelar Edición/Adición
+FormShift_Sch.shift_sch.DisplayLabel[1]=NombreMetodo
+FormShift_Sch.shift_sch.DisplayLabel[3]=Iniciando Fecha
+FormShift_Sch.shift_sch.DisplayLabel[4]=Finalizar Fecha
+FormShift_Sch.shift_sch.DisplayLabel[5]=Número Cambio
+FormShift_Sch.shift_sch.DisplayLabel[6]=Primer Cambio
+FormShift_Sch.shift_sch.DisplayLabel[18]=Ciclo Cambio
+FormShift_Sch.shift_sch.DisplayLabel[19]=Unit Ciclo
+
+[FormEmployeelist]
+FormEmployeelist.Caption=Lista Empleados
+FormEmployeelist.Label2.Caption=Nombre
+FormEmployeelist.Label3.Caption=No.
+FormEmployeelist.Label5.Caption=No.Celular
+FormEmployeelist.Label6.Caption=Fecha de Nac.
+FormEmployeelist.Label15.Caption=Tel.Oficina
+FormEmployeelist.Label1.Caption=Fecha de \r\n Empleo
+FormEmployeelist.Label7.Caption=Nacionalidad
+FormEmployeelist.Label13.Caption=Dirección
+FormEmployeelist.Label16.Caption=Privilegio
+FormEmployeelist.Label21.Caption=AC-No. 
+FormEmployeelist.Label9.Caption=Genero
+FormEmployeelist.Label4.Caption=Num.Tarjeta
+FormEmployeelist.Label11.Caption=Tit.
+FormEmployeelist.BitBtnFingerprint.Caption=&FP
+FormEmployeelist.DBRadioGroup1.Caption=Metodo Verificación
+FormEmployeelist.BitBtnSchedule.Caption=&Turnos AC
+FormEmployeelist.DBCheckBox1.Caption=Hora-Ent Marc-Ent 
+FormEmployeelist.DBCheckBox2.Caption=Hora-Sal Marc-Sal
+FormEmployeelist.dbchkOverTime.Caption=CuentaOT
+FormEmployeelist.dbchkValid.Caption=Activa AC
+FormEmployeelist.dbchkHoliday.Caption=Rest. Feriados
+FormEmployeelist.SpeedButtonDy.Hint=Transferencia de empleado a interior Dpto.
+FormEmployeelist.SpeedButtonLG.Hint=Empleados despedidos 
+FormEmployeelist.SpeedButtonLZ.Hint=Empleados reasignados
+FormEmployeelist.DBNavigator1.Hints=Primero\r\nAnterior\r\nSgte\r\nUltimo\r\nAñadir\r\nBorra\r\nEdita\r\nGuarda\r\nCancel
+FormEmployeelist.EditSearch.Hint=Aquí puedes entrar nombre o No.
+FormEmployeelist.ToolButtonSearch.Hint=Buscar
+FormEmployeelist.ToolButtonSearch.Hint=Ingresa Nombre/Registro No./Telefono/Titulo aqui para buscar
+FormEmployeelist.ToolButtonSearchNext.Hint=Sgte. Busqueda
+FormEmployeelist.SpeedButtonMngDept.Hint=Administrador de Dpto.
+FormEmployeelist.N1.Caption=Agregar Nuevo Empleado  
+FormEmployeelist.N2.Caption=Resign
+FormEmployeelist.N3.Caption=Transfer
+FormEmployeelist.N4.Caption=Dejar Post 
+FormEmployeelist.TabSheet1.Caption=Información Basica
+FormEmployeelist.TabSheet2.Caption=Adición
+FormEmployeelist.TabSheet3.Caption=Opción AC 
+
+FormEmployeelist.DBRadioGroup1.Items=Solo FP\r\nSolo AC No.\r\nAC-No. + FP\r\nAC-No. o FP\r\n
+
+FormEmployeelist.DBNavigator1.Hint=Primer\r\nAnterior\r\nSgte\r\nUltimo\r\nAñadir\r\nBorrar\r\nEditar\r\nGuardar\r\nCancel Edición/Adición
+FormEmployeelist.Employees.DisplayLabel[1]=AC-No.
+FormEmployeelist.Employees.DisplayLabel[2]=No.
+FormEmployeelist.Employees.DisplayLabel[3]=Nombre
+FormEmployeelist.Employees.DisplayLabel[4]=Género
+FormEmployeelist.Employees.DisplayLabel[5]=Tit.
+FormEmployeelist.Employees.DisplayLabel[6]=Movil/Pag.
+FormEmployeelist.Employees.DisplayLabel[7]=Cumplea?os
+FormEmployeelist.Employees.DisplayLabel[8]=Fecha Inicio
+FormEmployeelist.Employees.DisplayLabel[9]=Añadir
+FormEmployeelist.Employees.DisplayLabel[10]=CodPostal
+FormEmployeelist.Employees.DisplayLabel[11]=Tel.Oficina
+FormEmployeelist.Employees.DisplayLabel[12]=Tel.Casa
+FormEmployeelist.Employees.DisplayLabel[14]=Dpto.
+FormEmployeelist.Employees.DisplayLabel[15]=Administrador
+FormEmployeelist.Employees.DisplayLabel[22]=Nacionalidad
+FormEmployeelist.Employees.DisplayLabel[26]=Ciudad
+FormEmployeelist.Employees.DisplayLabel[27]=Estado
+FormEmployeelist.Employees.DisplayLabel[30]=Tarjeta
+FormEmployeelist.Employees.DisplayLabel[31]=Privilegio
+
+
+FormEmployeelist.DBRadioGroup2.Items=Masc\r\nFemen\r\n
+FormEmployeelist.dbrgIn.Caption=Marc-Hora/Ent
+FormEmployeelist.dbrgIn.Items=Por Zona Hora\r\nDebe Marc Ent\r\nNo Marcar
+FormEmployeelist.dbrgOut.Caption=Marc-Hora/Sal
+FormEmployeelist.dbrgOut.Items=Por Zona Hora\r\nDebe Marc Sal\r\nNo Marcar
+FormEmployeelist.btnAddBatch.Caption=Lotes
+FormEmployeelist.btnAddBatch.Hint=Agregar lote de empleado
+FormEmployeelist.lblVMHint.caption=Note: Verificación de metodo es solo para huella digital en Línea System Att
+FormEmployeelist.SpeedButtonDy.Caption=T
+FormEmployeelist.SpeedButtonLG.Caption=L
+FormEmployeelist.SpeedButtonLZ.Caption=Borrar
+FormEmployeelist.ToolButtonSearch.Caption=Buscar
+FormEmployeelist.ToolButtonSearchNext.Caption=Sgte
+FormEmployeelist.ToolButton3.Caption=Añadir
+FormEmployeelist.ToolButton4.Caption=Grabar
+FormEmployeelist.ToolButton5.Caption=Cancela
+FormEmployeelist.btnSetPass.Caption=Fija Contraseña
+FormEmployeelist.btnSetPass.Hint=Fija Contraseña
+FormEmployeelist.GroupBox4.Caption=Lista Usuario
+FormEmployeelist.gbfinger.Caption=Adm. FP (Requiere sensor U.are.U.)
+FormEmployeelist.gbUserInfo.Caption=Transmitiendo información de Usuario y FP
+FormEmployeelist.btnConnDevice.Caption=Disp.Conectado 
+FormEmployeelist.RadioGroup1.Items=Disp.FP\r\nsensor\r\nArch Imag\r\n
+
+
+FormEmployeelist.lblHint.Caption=Por favor conecte primero el dispositivo, Si Usted quiere enrolar por FP o ID card.
+FormEmployeelist.btnViewEnrollment.Caption=Estado de Enrolamiento de FP
+FormEmployeelist.btnImport.Caption=Importa
+FormEmployeelist.btnExport.Caption=Exporta
+FormEmployeelist.btnWriteCardViaFPReader.Caption=Escriba Tarjeta por FP Disp.
+FormEmployeelist.btnWriteCardViaMFR.Caption= Escriba Tarjeta por MF Disp.
+FormEmployeelist.btnClearCard.Caption=Tarjta Vacia Por Disp FP.
+FormEmployeelist.btnEnrollFP.Caption=&Enrola
+FormEmployeelist.btnVerifyFP.Caption=&Verifica
+FormEmployeelist.btnPc2Reader.Caption=De Pc a Disp.
+FormEmployeelist.btnReader2PC.Caption=De Disp.a PC
+FormEmployeelist.GroupBox5.Caption=Foto
+FormEmployeelist.SpeedButtonOpen.Hint=Archivo Imagen
+FormEmployeelist.SpeedButtonScan.Hint=Fotografiando/Scaneando
+FormEmployeelist.SpeedButtonClear.Hint=Limpiar
+FormEmployeelist.SpeedButtonSelectDevice.Hint=Seleccionar Dispostvo
+FormEmployeelist.SpeedButton5.Caption=Elegir Fuente para Fotografiando/scaneando
+FormEmployeelist.DBRadioGroup1.Caption=Metodo Verificación
+FormEmployeelist.DBEditPin.Hint=Ingrese AC-No.s, y esos No.s no se pueden usar para varios empleados repetidamente.
+
+FormEmployeelist.btnView.Caption=Ver
+FormEmployeelist.mnuExport.Caption=Exportar Dato
+FormEmployeelist.mnuReport.Caption=Crear Informe Para el Actual cuadro
+FormEmployeelist.mnuSaveLyout.Caption=Guardar cuadro
+FormEmployeelist.mnuShowAllCol.Caption=Mostrar Todas las Columas
+FormEmployeelist.HideAllCol.Caption=Ocultar Todas Columnas
+FormEmployeelist.mnuVisible.Caption=Columnas
+FormEmployeelist.mnuSort.Caption=Ordenar Columnas
+FormEmployeelist.NAdVancedExport.Caption=Export.Avanzada
+FormEmployeelist.chkinclude.Caption=Incluir Sub Dpto.
+FormEmployeelist.ImportUserData1.Caption=Import Datos Usuario
+FormEmployeelist.ToolButton6.Caption=Importar
+FormEmployeelist.ToolButton6.Hint=Import datos Usuario
+
+
+
+
+
+[FormAttRec]
+FormAttRec.Caption=Busqueda de Marcaciones de Asistencia de los Empleados
+FormAttRec.Label1.Caption=Empleado
+FormAttRec.Label6.Caption=Departamento
+FormAttRec.GroupBox1.Caption=Condición
+
+FormAttRec.Label3.Caption=Si usted desea Añadir,editar registros de Asistencia Originales, Use las funciones de "Empleados que Olvidaron Marcar Ent/Sal", "Los que vienen Tarde o se van Temprano colectivamente",o "Manejo avanzado de Registros de Asistencia".
+
+
+FormAttRec.LabelIn.Caption=Ent
+FormAttRec.LabelOut.Caption=Sal
+FormAttRec.BitBtnSearch.Caption=&Buscar
+FormAttRec.BitBtnPrevLog.Caption=&Previo
+FormAttRec.BitBtnHistory.Caption=&Modifica Reg
+FormAttRec.BitBtnExport.Caption=&Exporta
+FormAttRec.BtExport.Caption=Export Avanzada
+FormAttRec.ChkInOut.DisplayLabel[1]=Dpto.
+FormAttRec.ChkInOut.DisplayLabel[2]=Nombre
+FormAttRec.ChkInOut.DisplayLabel[3]=No.
+FormAttRec.ChkInOut.DisplayLabel[4]=Fecha/Hora
+FormAttRec.ChkInOut.DisplayLabel[5]=Marc-Ent/Sal
+FormAttRec.ChkInOut.DisplayLabel[6]=Locación ID
+FormAttRec.ChkInOut.DisplayLabel[7]=Dpto.
+FormAttRec.ChkInOut.DisplayLabel[8]=ID Número
+FormAttRec.ChkInOut.DisplayLabel[9]=Incidencia
+FormAttRec.ChkInOut.DisplayLabel[10]=VerificaCod
+FormAttRec.CheckBox1.Caption=Mostrar Estado
+FormAttRec.CheckBox2.Caption=Mostrar Incidencia
+FormAttRec.CheckBox3.Caption=Soporta Simple Calc
+FormAttRec.CheckBox4.Caption=Mostrar Reg. Nulos
+FormAttRec.OnlyDisplayNull.Caption=Solo Mostrar Nulos
+FormAttRec.TabSheet1.Caption=Reg.Primario
+FormAttRec.TabSheet2.Caption=Simple Calc
+
+
+FormAttRec.rmdrec.DisplayLabel[1]=AC-No
+FormAttRec.rmdrec.DisplayLabel[2]=Nombre
+FormAttRec.rmdrec.DisplayLabel[4]=Dpto.
+FormAttRec.rmdrec.DisplayLabel[5]=Fecha
+FormAttRec.rmdrec.DisplayLabel[6]=Hora
+FormAttRec.mex.DisplayLabel[0]=Dpto
+FormAttRec.mex.DisplayLabel[1]=No.
+FormAttRec.mex.DisplayLabel[2]=Nombre
+FormAttRec.mex.DisplayLabel[3]=Marc-Hora/Ent
+FormAttRec.mex.DisplayLabel[4]=Modifica Hora
+FormAttRec.mex.DisplayLabel[5]=Marc-Ent/Sal
+FormAttRec.mex.DisplayLabel[6]=Modificación Tipo 
+FormAttRec.mex.DisplayLabel[7]=Razón Modificación
+FormAttRec.mex.DisplayLabel[8]=Modifica
+
+
+
+[FormEmpToDept]
+FormEmpToDept.Caption=Transferir Empleado
+FormEmpToDept.Label1.Caption=Por favor elegir un dpto:
+FormEmpToDept.OK.Caption=OK
+FormEmpToDept.CENCLE.Caption=Cancela
+
+
+[FormDeptEmp]
+FormDeptEmp.Caption=Emplear Empleados
+FormDeptEmp.Label2.Caption=Empleados de Nuestro Dpto.
+FormDeptEmp.Label1.Caption=Empleado
+FormDeptEmp.ButtonRemove.Caption=Quitar &<<
+FormDeptEmp.ButtonRemove.Hint=Quitar empleados elegidos de este departamento
+FormDeptEmp.OK.Caption=&Cerrar
+FormDeptEmp.ButtonAdd.Caption=Añadir &>>
+FormDeptEmp.ButtonAdd.Hint=Agregar empleados seleccionado a este Dpto.
+FormDeptEmp.qryNoDeptEmp.DisplayLabel[0]=AC-No.
+FormDeptEmp.qryNoDeptEmp.DisplayLabel[1]=Nombre
+FormDeptEmp.qryThisDeptEmp.DisplayLabel[1]=AC-No.
+FormDeptEmp.qryThisDeptEmp.DisplayLabel[2]=Nombre
+
+
+[FormHolidays]
+FormHolidays.Caption=Mantenimiento Dias Festivos
+FormHolidays.DBNavigator1.Hints=Primer\r\nAnterior\r\nSgter\nUltimo\r\nAñadir\r\nBorrar\r\nEditar Datos\r\nGuardar\r\nCancelar\r\nActualizar\r\n
+
+
+[FormSupervisor]
+FormSupervisor.Caption=Administradores
+FormSupervisor.BitBtnAddAdmin.Caption=Administrador
+FormSupervisor.BitBtnModifyPassword.Caption=Modificar Clave
+FormSupervisor.BitBtnPrivilege.Caption=Operación Permiso
+FormSupervisor.NDeptAdmin.Caption=Agregar Admin. de Dpto.
+FormSupervisor.N3.Caption=Agregar Admin. Nivel 2 Dpto. 
+FormSupervisor.N4.Caption=Agregar Admin. Nivel 1 Dpto. 
+FormSupervisor.NSuperAdmin.Caption=Agregar Admin. Super 
+FormSupervisor.N2.Caption=Cancel Administrador
+
+[FormPickEmp]
+FormPickEmp.Caption=Lista Empleados por Dpto.
+FormPickEmp.BitBtn1.Caption=OK
+FormPickEmp.BitBtn2.Caption=Cancela
+
+
+[FormClearData]
+FormClearData.Caption=Retira Datos Obsoletos
+FormClearData.GroupBox3.Caption=Registros de Excepciones de Asistencia
+FormClearData.Label7.Caption=Cerrar Fecha
+FormClearData.Label8.Caption=Respaldar a 
+FormClearData.BitBtnExp.Caption=&OK
+FormClearData.GroupBox1.Caption=AC Marc-Ent/Sal
+FormClearData.Label2.Caption=Cerrar Fecha
+FormClearData.Label3.Caption=Respaldar a 
+FormClearData.BitBtnLog.Caption=&OK
+FormClearData.GroupBox4.Caption=Cambia datos AC tiempo
+FormClearData.Label1.Caption=Cerrar Fecha 
+FormClearData.BitBtn1.Caption=OK
+FormClearData.BitBtnCompact.Caption=&Compactar archivo BD
+FormClearData.FileNameEditLog.DialogTitle=Navegar
+FormClearData.FileNameEditLog.Filter=Archivo de Registros |*.*|All files (*.*)|*.*
+FormClearData.FileNameEditExp.DialogTitle=Navegar
+FormClearData.FileNameEditExp.Filter=Datos de Excepción de Asis.(*.aex)|*.aex|All files (*.*)|*.*
+
+[FormModifyPass]
+FormModifyPass.Caption=Modificar la Contraseña del adm.
+FormModifyPass.Label1.Caption=Contraseña Ant.
+FormModifyPass.Label2.Caption=Nueva Cotrase?a 
+FormModifyPass.Label3.Caption=Verificar nueva Contraseña
+FormModifyPass.BitBtnOK.Caption=OK
+FormModifyPass.BitBtn2.Caption=Cancelar
+
+[FormImportData]
+FormImportData.Caption=Importar Eventos de Asistencia
+FormImportData.BitBtnOk.Caption=Importar
+FormImportData.BitBtnClose.Caption=Cerrar
+FormImportData.Label1.Caption=Conectar BD:
+FormImportData.SpeedButton1.Hint=Fijar Cadena conexión para BD antiguas
+FormImportData.LabelVer11x.Caption=Antes V1.2
+FormImportData.Label5.Caption=Elegir Rapido BD->
+FormImportData.LabelVer12x.Caption=Despues V1.2
+FormImportData.RadioButtonDB.Caption=Importar de BD
+FormImportData.RadioButtonFile.Caption=Importar de Archivos
+FormImportData.FilenameEditLog.DialogTitle=Selec archivos a importar
+FormImportData.RadioButtonUSB.Caption=Importar de USB flashdisk
+
+[FormLeaveClass]
+FormLeaveClass.Caption=Establecer Tipos de Permisos
+FormLeaveClass.DBNavigator1.Hints=Primer\r\nAnterior\r\nSgte\r\nUltimo\r\nAñadir\r\nBorrar\r\nEditar\r\nGuard\r\nCancel Edicion/Adicion\r\nActuliza\r\n
+FormLeaveClass.qryLeaveClass.DisplayLabel[1]=Tipos de permisos
+FormLeaveClass.lblName.Caption=Nombre del Permiso:
+
+
+
+[FormExport]
+FormExport.Caption=Exportar Registros de Asistencia
+FormExport.GroupBox1.Caption=Condiciones y Rango para Exportar Registros 
+FormExport.Label1.Caption=Fecha Inicial:
+FormExport.Label4.Caption=Dpto:
+FormExport.ltvcDepts.Hint=Opción Departmento 
+FormExport.BitBtnLog.Caption=Exporta
+FormExport.BitBtnClose.Caption=Cierra
+FormExport.Label2.Caption=Conexión BD:
+FormExport.SpeedButton1.Hint=Establecer cadena de conexión para BD
+FormExport.LabelVer12x.Caption=Elija Archivo BD
+FormExport.RadioButtonFile.Caption=Exporta a Archivo
+FormExport.RadioButtonDB.Caption=Exportar a BD
+FormExport.FileNameEditLog.DialogTitle=Selecc. Archivo a Exportar
+FormExport.OpenDialog1.Title=Selecc. la BD a Exportar
+
+
+
+
+[FormLeave]
+FormLeave.Caption= Setup de Inasistencia Justificada/Licencias/Comisiones FormLeave.LabelLeaveColor.Caption=BL
+FormLeave.Scheduler1.Hint=Usted Puede mover el mouse para cambiar item actual o puede mover mouse en areas vacias para Añadir nuevo item.
+FormLeave.Label1.Caption=Razón:
+FormLeave.btnQuery.Caption=Consulta
+FormLeave.btnNew.Caption=Añadir
+FormLeave.btnEdit.Caption=Edita
+FormLeave.btnDelete.Caption=Borrar
+FormLeave.BtnPrint.Caption=&Informe
+FormLeave.BtnExport.Caption=&Exporta
+FormLeave.qryLeave1.DisplayLabel[1]=Nombre
+FormLeave.qryLeave1.DisplayLabel[2]=Ac-No
+FormLeave.qryLeave1.DisplayLabel[3]=TiempoInicial
+FormLeave.qryLeave1.DisplayLabel[4]=TiempoFinal
+FormLeave.qryLeave1.DisplayLabel[5]=ClaseLicencia
+FormLeave.qryLeave1.DisplayLabel[6]=Razón
+FormLeave.qryLeave1.DisplayLabel[7]=IngreseFecha
+FormLeave.Tabset1.Items=Ver Dia\r\nVer Lista
+FormLeave.qryLeave.DisplayLabel[1]=TiempoInicial
+FormLeave.qryLeave.DisplayLabel[2]=TiempoFinal
+FormLeave.qryLeave.DisplayLabel[3]=ClaseLicencia
+FormLeave.qryLeave.DisplayLabel[4]=Razón
+FormLeave.qryLeave.DisplayLabel[5]=IngreseFecha
+
+
+
+
+[FormDeptMng]
+FormDeptMng.Caption=Administrar Departamentos
+FormDeptMng.Label14.Caption=Dpto.
+FormDeptMng.Label3.Caption=Dpto.
+FormDeptMng.ToolButton4.Caption=Renombrar
+FormDeptMng.ToolButtonAdd.Caption=Añadir
+FormDeptMng.ToolButton3.Caption=Borrar
+FormDeptMng.ToolButton2.Caption=Empleado
+FormDeptMng.Label1.Caption=Si deseas editar nombres de Dpto, Necesitas hacer click en el nombre de Dpto dos veces o presionar F2. Si deseas modificar la relación subordinada de los Dptos , Arrastrar el departamento para modificarse a un nuevo nombre de Dpto superior.
+FormDeptMng.Label4.Caption=Punto
+
+
+
+
+[FormNoCome]
+FormNoCome.Caption=Manipula los que Vienen tarde/Se van temprano
+FormNoCome.Label5.Caption=Cuando parte o todos los empleados de un departamento llegan tarde o salen tempranos con razones, Puede cambiar las marcas de tiempo  Ent-Sal y los cambios pueden buscarse usando <Modifica Reg.> del modulo de Busq. de Reg. de Asistencia.
+FormNoCome.GroupBox1.Caption=Dejar de Marcar Ent
+FormNoCome.Label1.Caption=De
+FormNoCome.Label4.Caption=a
+FormNoCome.GroupBox2.Caption=Mar-Ent despues de modificación
+FormNoCome.OK.Caption=OK
+FormNoCome.BitBtn1.Caption=Cancela
+FormNoCome.RadioButton1.Caption=Llega tarde
+FormNoCome.RadioButton2.Caption=Irse Temprano
+
+
+
+[Formcollectnocome]
+Formcollectnocome.Caption=Añadir Empleado que olvido Marc-Ent/Sal 
+Formcollectnocome.Label5.Caption=Cuando parte o todos lo empleados de un Dpto olvidan Marcar Ent/Sal con razones,pueden Añadirse marcardo Ent/Sal tiempo y los cambios pueden buscarse usando <Reg Modif> del modulo de Busqueda de Registros de Asistencia de Empleado.\r\n Presione [ctrl] para seleccionar multifilas.
+
+Formcollectnocome.Label4.Caption=Estado:
+Formcollectnocome.GroupBox2.Caption=Añadir Registro:
+Formcollectnocome.BitBtn2.Caption=&Añadir
+Formcollectnocome.BitBtn1.Caption=&Cerrar
+Formcollectnocome.lblMachine.Caption=No.Máquina
+
+
+
+
+[FormYNoCome]
+FormYNoCome.Caption=Añadir empleado que olvido Marc-Ent/Sal
+FormYNoCome.Label1.Caption=Añadir registros:
+FormYNoCome.Label2.Caption=Estado:
+FormYNoCome.OK.Caption=&Añadir
+FormYNoCome.BitBtn1.Caption=&Cerrar
+FormYNoCome.rbCheckIn.Caption=Marc-Ent
+FormYNoCome.rbCheckOut.Caption=Marc-Sal
+
+
+[FormAttRules]
+FormAttRules.Caption=Reglas de asistencia generales
+FormAttRules.TabSheet1.Caption=Parámetros básicos
+FormAttRules.Label44.Caption=1DiáCuentaComo
+FormAttRules.Label46.Caption=mins
+FormAttRules.Label7.Caption=No Hora C/Ent
+FormAttRules.Label8.Caption=mins
+FormAttRules.Label12.Caption=No Hora C/Sal
+FormAttRules.Label17.Caption=Retraso de
+FormAttRules.Label16.Caption=Min,cuentanComoRetraso
+FormAttRules.Label21.Caption=Salir antes de
+FormAttRules.Label22.Caption=Min,CuentanComoSalirTemp
+FormAttRules.Label1.Caption=mins
+FormAttRules.Label2.Caption=No C/Ent dejar mensaje
+FormAttRules.Label3.Caption=mins
+FormAttRules.Label4.Caption=No C/Sal dejar mensaje
+FormAttRules.Label5.Caption=mins
+FormAttRules.Label9.Caption=Empresa
+FormAttRules.Label11.Caption=Abreviación
+FormAttRules.Label13.Caption=Del
+FormAttRules.Label14.Caption=Del
+FormAttRules.GroupBox7.Caption=Expande a dos días
+FormAttRules.RadioButtonOneDay.Caption=1er día
+FormAttRules.RadioButtonTwoDay.Caption=2do día
+FormAttRules.chkOutOverTime.Caption=Después
+FormAttRules.cbStartWeek.Items[0]=Domingo
+FormAttRules.cbStartWeek.Items[1]=Lunes
+FormAttRules.cbStartWeek.Items[2]=Martes
+FormAttRules.cbStartWeek.Items[3]=Miercoles
+FormAttRules.cbStartWeek.Items[4]=Jueves
+FormAttRules.cbStartWeek.Items[5]=Viernes
+FormAttRules.cbStartWeek.Items[6]=Sabado
+FormAttRules.chkRegOverTime.Caption=Registra para OT
+FormAttRules.TabSheet2.Caption=Estadísticas
+FormAttRules.Label6.Caption=Item:
+FormAttRules.BitBtnOK.Caption=OK
+FormAttRules.BitBtnCancel.Caption=Cancela
+FormAttRules.cbStartWeek.Items=Domingo\r\nLunes\r\nMartes\r\nMiercoles\r\nJueves\r\nViernes\r\nSabado\r\n
+FormAttRules.Label15.Caption=Inic.Sem
+FormAttRules.Label18.Caption=Inic.Mes
+FormAttRules.Label19.Caption=Min,deLaSalida,CuentaOT
+FormAttRules.lblMaxSch.Caption=ZonaHoraria MasLargaDebajo
+FormAttRules.lblMinSch.Caption=ZonaHoraria MasCortaExcede 
+FormAttRules.lblHour1.Caption=mins
+FormAttRules.lblHour2.Caption=mins
+FormAttRules.lblMinRec.Caption=Menos Minutos del Intervalo
+
+
+FormAttRules.Label24.Caption=Mins
+FormAttRules.GroupBox2.Caption=Estado OT
+FormAttRules.rbOT.Caption=Directo como OT
+FormAttRules.rbOTConfirm.Caption=Auditar
+FormAttRules.rbOTIgnore.Caption=Ignora el Estado
+FormAttRules.GroupBox1.Caption=Estado Sal
+FormAttRules.rbOut.Caption=Como Sal
+FormAttRules.rbBOut.Caption=Como Sal Negoc
+FormAttRules.rbOutConfirm.Caption=Auditar
+FormAttRules.rbOutIgnore.Caption=Ignora el Estado
+FormAttRules.TabSheet3.Caption=Cálculos
+FormAttRules.Label10.Caption=Mins,CuentaComoAus
+FormAttRules.Label20.Caption=Mins,CuentaComoAus 
+FormAttRules.cboNoIn.Items=Tardanza\r\nAusente\r\n
+FormAttRules.cboNoOut.Items=SalirTemprano\r\nAusente
+FormAttRules.chkLateAbsent.Caption=SiRetrasoExcede
+FormAttRules.chkEarlyAbsent.Caption=SiSaleAntesExcede
+FormAttRules.chkNoIn.Caption=Si no Mar/Ent cuentaComo
+FormAttRules.chkNoOut.Caption=Si no Mar/Sal cuentaComo
+
+
+
+
+
+[FormOnGrundQuery]
+FormOnGrundQuery.Caption=Buscar estado de empleados
+FormOnGrundQuery.SelType.Items=Todo\r\nHoraEnt\r\nNo HoraEnt
+FormOnGrundQuery.BitBtn1.Caption=&Consula
+FormOnGrundQuery.BitBtn2.Caption=&Cerrar
+FormOnGrundQuery.PanelIn.Caption=HoraEnt
+FormOnGrundQuery.PanelOut.Caption=Sin HoraEnt
+FormOnGrundQuery.mCheck.DisplayLabel[0]=Dpto
+FormOnGrundQuery.mCheck.DisplayLabel[1]=AC-No.
+FormOnGrundQuery.mCheck.DisplayLabel[2]=Nombre
+FormOnGrundQuery.mCheck.DisplayLabel[3]=último Marc-Ent/Sal
+FormOnGrundQuery.BitBtnPrevLog.caption=Previo
+
+
+
+
+
+[ment_comb]
+ment_comb.Caption=Fusión Dpto
+ment_comb.Label1.Caption=Dpto fusionado
+ment_comb.Label2.Caption=Fusionando Dpto
+ment_comb.Label3.Caption=Fecha de Fusión
+ment_comb.csc.Caption=Fusionando Empleado simultaneamente
+ment_comb.csdc.Caption=Dpto fusionado se pone como subordinado
+ment_comb.keep.Caption=Guarde los Dptos fusionados subordinados
+ment_comb.BitBtn1.Caption=OK
+ment_comb.BitBtn2.Caption=Cancela
+ment_comb.RadioGroup1.Caption=Cuando Dptos subordinados tiene el mismo nombre
+ment_comb.RadioGroup1.Items=Fusionando Dptos\r\nAñadir prefijo  sufijo
+
+
+
+
+[FormSelect]
+FormSelect.Caption=Parar agregar item para pedir licencia
+FormSelect.Label1.Caption=Selecc. tipos de licencia:
+FormSelect.BitBtn1.Caption=Cancela
+FormSelect.BitBtn2.Caption=OK
+
+
+[FormSchProperty]
+FormSchProperty.Caption=Editar Mantenimiento de Horarios
+FormSchProperty.lblName.Caption=Nombre Horario
+FormSchProperty.Label2.Caption=Hora Ent
+FormSchProperty.Label3.Caption=Hora Sal
+FormSchProperty.Label4.Caption=Toler.Ent(mins)
+FormSchProperty.lblStartLeaveEarly.Caption=Toler.Sal(mins)
+FormSchProperty.LabelColor2.Caption=Cambio de color
+FormSchProperty.Label6.Caption=Inicio Ent
+FormSchProperty.Label7.Caption=Final Ent 
+FormSchProperty.Label8.Caption=Inicio Sal
+FormSchProperty.Label9.Caption=Final Sal
+FormSchProperty.btnTest.Caption=Analice cambio de periodo del reg de asis.
+FormSchProperty.DBEdit6.Caption=Debe C/Ent
+FormSchProperty.DBEdit7.Caption=Debe C/Sal
+FormSchProperty.DBNavigator1.Hints=Primer\r\nAntes\r\nSgte\r\núltimo\r\nAñadir\r\nBorrar\r\nEditar Datos\r\nGuarda Actualiza\r\nCancela Actualiza \r\nMostrar Actualiza Datos\r\n
+
+
+FormSchProperty.cnt.DisplayLabel[0]=No.
+FormSchProperty.cnt.DisplayLabel[1]=Marc-Hora/Ent
+FormSchProperty.cnt.DisplayLabel[2]=Marc-Hora/Sal
+FormSchProperty.cnt.DisplayLabel[3]=Resumen Hora/Ent
+FormSchProperty.cnt.DisplayLabel[4]=Resumen Hora/Sal
+FormSchProperty.cnt.DisplayLabel[5]=Tiempo
+FormSchProperty.cnt.DisplayLabel[6]=DiaTrab
+FormSchProperty.lblWorkday.Caption=Cuenta DiaTrab
+FormSchProperty.lblWorkMinute.Caption=Cuenta Minuto(mins)
+FormSchProperty.btnAdd.Caption=Nuevo
+FormSchProperty.btnPost.Caption=Guarda
+FormSchProperty.btnDel.Caption=Borrar
+
+
+[FormAddTimeZone]
+FormAddTimeZone.Caption=Añadir Periodo Tiempo
+FormAddTimeZone.Label1.Caption=Selecc.fecha para Añadir este periodo:
+FormAddTimeZone.Label2.Caption=Selecc. Categoria para este Periodo:
+FormAddTimeZone.BitBtn1.Caption=OK
+FormAddTimeZone.BitBtn2.Caption=Cancela
+FormAddTimeZone.Label3.Caption=OT minutos:
+FormAddTimeZone.cbOvertime.Caption=Registra Periodo Tiempo como OT
+FormAddTimeZone.N1.Caption=Selecc. Todo
+FormAddTimeZone.N2.Caption=Selecc. Ning.
+FormAddTimeZone.N3.Caption=Selecc. Estado Inverso 
+
+
+
+[FormSelRptItem]
+FormSelRptItem.lblPredefine.Caption=Lista Predefinida:
+FormSelRptItem.lblHint.Caption=\x20        Ud. debe:\r\n<Guardar Opc Actual> Ing. nombre en la Lista anterior predefinida, y entonces presione "OK".\r\n<Opc. Import. Previa> Escoja un nombre que se ha guardado antes en la Lista anterior Predefinida, y presione "OK".
+FormSelRptItem.Caption=Selecc.Contenido del Informe
+FormSelRptItem.lblItems.Caption=Seleccione items a ser mostrado en Informe:
+FormSelRptItem.BitBtnOK.Caption=OK
+FormSelRptItem.BitBtn2.Caption=Cancela
+
+
+[AdminDlg]
+AdminDlg.Caption=Fijar Permisos del administrador
+AdminDlg.Label2.Caption=Items que pueden ser autorizados:
+AdminDlg.BitBtn1.Caption=OK
+AdminDlg.BitBtn2.Caption=Cancela
+
+
+[FrameCountProperty]
+FrameCountProperty.GroupBoxCount.Caption=Regla Estadística
+FrameCountProperty.Label1.Caption=Unid.Min.
+FrameCountProperty.LabelDecMoney.Caption=Deducir cuentas de la unidad mínima
+FrameCountProperty.cboUnit.Items=Hora\r\nMinuto\r\nDia
+FrameCountProperty.chkCount1.Caption= Acumulación Estadística
+FrameCountProperty.GroupBox2.Caption=Control de Redondeo
+FrameCountProperty.rdbTrunc.Caption=Debajo
+FrameCountProperty.rdbRound.Caption=Sin
+FrameCountProperty.rdbIn.Caption=Arriba
+FrameCountProperty.CheckBoxByTimes.Caption=Calcular en terms de tiempo
+FrameCountProperty.chkTimeZone.Caption=Categoriza en terms de cambio de periodo
+FrameCountProperty.chkHoliday.Caption=Categoriza en terms de Festivos
+FrameCountProperty.Label9.Caption=Mostrar Simbolo en Informe
+
+
+
+[FrameDeptAndEmpsGrid]
+FrameDeptAndEmpsGrid.Label2.Caption=Dpto:
+FrameDeptAndEmpsGrid.Label7.Caption=Empleado:
+FrameDeptAndEmpsGrid.SpeedButtonSelAll.Hint=Selecc. todo
+FrameDeptAndEmpsGrid.SpeedButtonSelNone.hint=Select. Ning.
+[ctrl] para mas de una opción y directamente ingrese Número, Nombre, Pingyin o iniciles de Pingyin para buscar empleados.
+FrameDeptAndEmpsGrid.mdUsersNumber.DisplayLabel=AC-No.
+FrameDeptAndEmpsGrid.mdUsersName.DisplayLabel=Nombre
+FrameDeptAndEmpsGrid.mdUsersRunSch.DisplayLabel=Cambio
+
+
+
+
+[FrameRangeSch]
+FrameRangeSch.Scheduler1.IntervalFormat=%d Dia %d Hora %d Minuto
+FrameRangeSch.btnAddTimezone.Hint=A?ade Periodo
+FrameRangeSch.btnDeleteTimeZone.Hint=Borre Periodo Elegido
+FrameRangeSch.btnEdit.Hint=Cambiar tipo de periodo
+FrameRangeSch.btnEditTimeZone.Hint=Editar Periodo
+FrameRangeSch.btnClearTimeZone.Hint=Borra Todos los Periodos
+FrameRangeSch.Menu.Caption=&Fije tipo de Periodo
+FrameRangeSch.menuAutoSchClass.Caption=Auto-distinguir
+
+
+
+[FrameTimeRange]
+FrameTimeRange.Label4.Caption=De
+FrameTimeRange.GroupBox1.Caption=Hora para comenzar y Terminar
+FrameTimeRange.Label4.Caption=a
+FrameTimeRange.NYesteday.Caption=Ayer
+FrameTimeRange.NToDay.Caption=Hoy
+FrameTimeRange.NLastWeek.Caption=Semana Pasada
+FrameTimeRange.NThisWeek.Caption=Esta Semana
+FrameTimeRange.NLastMonth.Caption=Mes Pasado
+FrameTimeRange.NThisMonth.Caption=Este Mes
+
+[Msg]
+_Informe Estadistico Diario AC
+_Informe Estadistico General AC
+_Informe Estadistico por Dpto. AC
+_Horario Empleados Hora-Ent/Hora-Sal
+_Comprueba Informe de la Estadística
+Todos Items
+Simple Items
+
+
+[MSGResource]
+SAppTitle=Sistema de Registro de Asistencia por FP 
+SAttTitle=Programa de Administración de Asistencia
+SAskRestartForFace=Nueva ventana sólo puede usarse después de restablecer el sistema!
+SFileNotFound=No puede encontrar el archivo:
+SDefaultNotes=Noticia:
+
+SLiteVersionLabel=Versión Normal
+SStdVersionLabel=Versión Standard
+STR_ALL=<Todo>
+ERSensorKey= El dispositivo URU para conectar con la computadora no puede ser encontrado,\r\n ,se requiere el permiso correspondiente!
+OpHint=Presione su dedo en la supericie del lente de Lectura del lector de FP
+ErSensorInitError=Error al inicializar Sistema de Identificación de FP!
+SNormalDateFormat=yyyy/mm
+SLunarLabel=Calendario Lunar
+SErrOpenDB=Error al abrir BD!
+STrialTimeOver=Usted está usando una versión de ensayo, que ha sido retrasada! \r\n Sólo puede continuar su uso después de que usted ha adquirido la licencia.
+SRestartCheck=Los cambios son efectivos después de reinicializar el Sistema.
+SQueryAdminPin=Primero ingrese el codigo de apertura del Admin!
+SQueryAdminPass=La Contraseña ingresada es incorrecta
+SNotFoundFinger=No se encuentra la FP
+SEnrollSeccuss=Registro exitoso
+SEnrollFail=Registro fallo!
+SEnrollFinger=Registro FP
+SRestCount=%d TiempoLeft
+SCheckIn=Ent
+SCheckOut=Sal
+SMaxTrailSensors= La versión de ensayo solo puede soportar dos lectores de FP!
+SNoSensorLic=El Documento de permiso para usar la colección de FP no puede ser encontrada!\r\nDesea continuar buscando?
+SErrNoLic=Ningún permiso de uso!
+SStartupLinkName=\Asistencia FP Checking.lnk
+SErrShutdowTimeRange=Ajustes falsos de tiempo!\r\rUse Semicolum para separar diferente items de tiempo.
+SSelectSensor= Usted primero debe elegir un Lector!
+SDeleteSensor= Si usted ha anulado el Lector, y usted quiere recuperar su systema\r\nUsted debe tener el documento del permiso para usar el lector\r\n. \r\r Eliminar?
+STimeChangeNotify= ?El tiempo de sistema ha cambiado, y Control de Asis. no registrara!'\r\n\r\n Si usted quiere continuar su Control de Asistencia, por favor avise al admin..\r\ Entre en el Setup del sistema, y presione "OK" después de ajustar el setup del sistema.
+
+SErrDate=Fecha Falsa!
+SErrTimeLate=Llegar tarde debe registrarse despues del tiempo normal de inicio
+SErrTimeLeave= Salir Temprano debe grabarse después del tiempo de venir tarde
+SErrTimeOut= La Hora normal de dejar el trabajo debe grabar después de la Hora de salir temprano
+SErrTimeBreakLeave= Salir temprano antes del descanso intermedio debe grabar después del tiempo de venir tarde a el trabajo. 
+SErrTimeBreakLate= Salir temprano después del descanso intermedio debe grabar antes del tiempo de salir temprano
+SErrTimeBreakInOut= Venir tarde durante el descanso intermedio debe grabar después del tiempo final del descanso
+SErrBreakTime= El tiempo final del descanso intermedio debe estar después del tiempo de inicio
+SErrBreakTimeLeave2= Salir temprano durante el descanso intermedio debe grabar antes del tiempo inicial de descanso
+SErrCheckInOut=La Hora extra  no debe registrarse antes del tiempo de dejar el trabajo
+STrialLimited=La versión de Ensayo no incluye esta funcion!
+SPageNo=La %d Pag
+SRptEmp=Empleado:
+SRptDept=Dpto:
+SRptTime=Tiempo:
+SDeleteAttRec=?Esta Seguro de eliminar los registros de Ent y Sal? \r\rsugerencia¡êoUd. puede respaldar los datos usando la función Export antes de Borrar
+SNoDataToExport=No puede exportar datos
+SExportResult=Importar resultados de registros\r\rImporta Número de registros¡êo%d\r\nNúmero Falso de Reg: %d
+SErrorRecs=Error de Registros cuando importaba datos
+STimeHour=Hora
+STimeMinute=Minuto
+SNoData=No dato!
+SAttRecsNum=Total %d de partes de registros de Marc-Ent/Sal
+SRptAttRecTitle=Registro Empleados AC Marc-Ent
+SRptChkTime=Marc-Ent/Sal
+SName=Nombre
+SPinNum=Ac-No.
+STime=Tiempo
+SDept=Dpto
+STotal1=Resumen Interno
+STotal2=Total
+SWorkDay=Dia Lab
+SCount=Tiempo
+SAttTotal=Asist.al Trab.en total %d Dia
+SRptAbsent=Falto del Trabajo
+SRptLate=Llega Tarde
+SRptLeave=SalirTemprano
+SRptOvertime=HorasExtras
+SRptNotes=Comentarios
+SDate=Fecha
+SCloseSave=Desea Guardar los datos?
+SErrNoPinNumber=No No.:
+SErrNoPin=No such a No.:
+NormalInfo=Elegir una FP, entonces Haga click derecho para registrar o verificar.
+SErrCannotFoundFinger= No puede hallar la FP:
+SVerifyFinger=Verificar FP
+SCannotFoundUser=No puede hallar "%s",\r\nIngrese nuevamente el nombre o No. a Buscar.
+SReFound=El Registro no se halla! Reiniciar.
+SErrSensorError=El lector no puede leer la huella
+SFingerVerified=La FP coincide
+SFingerFound=Buscar la FP
+SCheckinSuccess=Marc-Ent Exitosa
+SCheckOutSuccess= Marc-Sal Exitosa
+SVerifyRes=Resultado de verificación de la FP
+SFingerNoVer=La huella digital no coincide
+SNotAtt=Verificación fallo
+SMatching=Verificación FP 
+SErrorSensorSN=Falso Conector No.Serial de FP Falso.
+SInputSensorID=Ingrese número de etiqueta del lector!
+SInputSensorSN=Ingrese número serial del lector!
+STrialVersion=Versión Prueba
+SAttCheckInPrg=Programa Marc-Ent 
+SLocalDBForNet=Nosotros recomendamos  usar la Base de Datos localmente para aprovechar la función de conexión de red!\r\n\r\nUd. Puede usar la BD localmente eliminando antes conexiones establecidas\r\nDeseas eliminar las conexiones a BD establecidas actualmente?
+SLabelYes=Si
+SLabelNo=No
+SErrFmtComStatusAlready=Estado de entrada del puerto serial %s se ha definido!
+SErrNoComSelected=Ud. No ha escogido ningún puerto!
+SWrnFmtComDelete=Realmente quiere eliminar el puerto serial %s?
+SErrDeptDelete= No puedes suprimir este depto!
+
+SErrFmtSaveEmp=Estos errores aparecen cuando guarda datos:\r\n%s\r\n\r\nRevise: \r\n1?¡é ?Tener el número y nombre ingresado? Y  debe ingresar número y fecha;\r\n2?¡éNúmero Ingresado repetido? y los números de empleado deben ser exclusivos y sólo número de apoyo.
+
+SLabelLabel=Etiq.Texto
+SButtonLabel=Boton
+SClockLabel=Reloj
+SStripeLabel=Raya decorativa
+SPanelLabel=Grupo contenedor
+SGroupLabel=Objeto contenedor
+SImageLabel=Imagen
+SAALNone=No.Operación
+SAALCloseWindows=Apagar Computadora
+SAALReBootWindows=Resetar Computadora
+SAALCloseProgram=Cerrar Programa
+SAALTurnCheckIn=Entre Estado Mar-Ent
+SAALTurnCheckOut= Entre Estado Mar-Sal
+SAALShowMessage=Mostrar Mensaje
+SAALClearMessage=Borrar Mensaje
+SAALBackupDataBase=Respaldar BD
+SAALAttLog=AC Registro
+SAALOptions=Config.Sistema
+SAALEnroll=Registrar
+SAALEnter=OK
+SAALClearPin=Borra Caja de Ent
+SAALSelectPin=Elige Caja de Ent
+SAASNone=Ning
+SAASCloseWindows=Cierre la Computadora
+SAASReBootWindows=Resetea
+SAASCloseProgram=Cerrar
+SAASTurnCheckIn=Marc-Ent
+SAASTurnCheckOut=Marc-Sal
+SAASShowMessage=Mostrar
+SAASClearMessage=Borrar
+SAASBackupDataBase=Respalda
+SAASAttLog=Registro
+SAASOptions=Config.
+SAASEnroll=Registrar
+SAASEnter=OK
+SAASClearPin=Borrar
+SAASSelectPin=Selecc.Todo
+SCapChangeText=Cambia Texto
+SInputTextLabel=Ingresar la cadena que usted quiere mostrar:
+SDPMenuNew=A?ade Nuevo Obj
+SDPMenuDel=Borra Obj
+SDPMenuFont=Fija Fuente
+SDPMenuColor=Fija Color
+SDPMenuText=Fija Text
+SDPMenuImage=Fija Imagen
+SDPMenuFront=Ponga objeto en frente
+SDPMenuBack=Ponga objeto atras
+SDPMenuBorder=Reparar Border Obj.
+SDPMenuLeft=Izq.
+SDPMenuRight=Der.
+SDPMenuTop=Arriba
+SDPMenuBottom=Abajo
+SDPMenuSetup=Prepare el Objeto...
+SLCDDTFormat=mm-dd-yyyy hh:nn
+SExitSystem=Salir del Sistema
+SLabelCheckIn=C/Ent
+SLabelCheckOut=C/Sal
+STagCheckIn=I
+STagCheckOut=O
+SLCDInputLabel=Ingrese No.:
+SLCDHintReg=Presione Enrolar FP
+SLCDHintIn=Presione FP Marc/Ent
+SLCDHintOut= Presione FP Marc/Sal
+SLCDMatching=Verificando..
+SLCDInOk=Marc-Ent exitoso
+SLCDOutOk=Marc-Sal exitosa
+SLCDEnroll=Enrolar FP
+SLCDStartVerify=Verificar FP
+SLCDVerifySuccess=Verificación exitosa
+SLCDEnrollSuccess=Registro exitoso
+SLCDVerifyFail=Verificación fallo
+SLCDIdentifyFail=Asistencia fallo
+SLCDEnrollFail=Registro fallo
+SRecOpDelete=Borrar
+SRecOpAdd=A?ade Registros
+SRecOpOri=Se han anulado los reg. originales
+SRecOpModiAndAdd= Reg. agregados después de modif.
+SRecOpModi=Registros Modif.
+SBus1ErrTimeZoneOver=Ud. No puede Añadir este item para solicitar un permiso:\r\ El Nuevo Periodo de Tiempo solapará con el tiempo existente de Pedirle a permiso!
+SBus1ErrTimeZoneOverModi=Los Items no pueden ser solapados!
+SCfmDeleteLeave=Desea borrar este item?
+SBus1SelectLeaveClass=Elija el tipo de Licencia:
+SBus1AddLeave=Añadir el Item de Salida con permiso
+SClrErrEndDate=Primero ingrese la fecha de cierre de los datos que ud. quiere borrar!
+SClrErrDate= Puede anular sólo datos grabados hace 10 días!
+SErrNoInputFile= Usted no ha entrado el archivo
+SErrFmtFileExists=Archivo %s ya existe!
+SFmtExportOK= Usted ha eliminado con éxito y ha exportado %d pedazos de archivos
+SNoClear=Ninguna Asistencia que Verifica reg.se ha borrado!
+SHntCompacting=Esta compactando la BD. Por favor espere....
+SHntCompactOk=La BD ha sido compactada con exito!
+SHntCompactFail=Compactación de la BD fallida!
+SClrHntScheduleOk=Los datos de cambio de empleado obsoleto se han borrado!!
+SDayLabel=Dia
+SWeekLabel=Semana
+SMonthLabel=Mes
+SWorkDayLabel=WDia
+SMinuteLabel=Min.
+SHourLabel=Hora
+SFmtDayLabel=%d Dia
+SFmtDayIndexLabel=Dia %d
+
+SHntUpdateDb= La BD que usted está usando actualmente debe actualizarse!\r\n\r\nSelecc. <Si> para iniciar la actualización de la BD;\r\n\r\nSelecc <No> para no actualizar la BD. Asegúrese que si ha preparado la conexión a la BD \r\nPuede usar este sistema
+
+
+SHntUpdateDbOK= Usted ha actualizado la BD con éxito!
+SHntUpdateDbFail= Usted no pudo actualizar la BD!
+SErrDbConnection=La cadena de conexión de la BD esta equivocada. Por favor prepare la cadena de conexión \r\n en Config. Del sistema, y reinice su PC.
+SLCNone=Ok
+SLCLate=Tarde
+SLCEarly=Temprano
+SLCLeave=AFL
+SLCAbsent=Falta
+SLCOver=OT
+SLCOverHoliday=OTH
+SLCHoliday=Feriado
+SLCBusinessLeave=BL
+SLCNoIn=NEnt
+SLCNoOut=NoSal
+SLCLeaveNoIn=LNI
+SLCLeaveNoOut=LNO
+SLCLeaveOut=LPost
+SLCCNormal=Normal
+SLCCWork=Actual
+SLCCCheckInTime=Hora Ent
+SLCCCheckOutTime=Hora Sal
+SLCCValidIn=VIn
+SLCCValidOut=VSal
+SLCCCheckTime=Tiempo
+SLCCWorkTime=WTiempo
+SSpeDayNormal=NDias
+SSpeDayHoliday=Festivo
+SSpeDayWeekend=FinSemana
+SSpeDayNormalOT=NDias_OT
+SSpeDayHolidayOT=Festivo_OT
+SSpeDayWeekendOT= FinSemana_OT
+SSAttTime=Tpo Ast
+SSSchCount=CuentaTurn
+SErrFmtCopyData=Error ocurrido durante el proceso de copia de datos:\r\n%s\r\n\r\n Usted quiere obviar este error y continuar?
+SErrFmtNoRptFile=Archivo de Informe %s no existe!
+
+SHntFmtExportOK= Se han exportado los datos con éxito al archivo %s!
+
+SSuperVisorName=Super Administrador
+SDeptSVName=Administrador del Dpto
+SDefaultCompany=Esta Compa?ia
+SShiftLabel=Cambio
+SMorningShift=Ma?ana
+SMoonShift=Cambio Noche
+SSMorningShift=Cambio Ma?ana
+SDayShift=Cambio dia
+SAfterShift=Cambio de Tarde
+SCopyingDept=Copiando Dpto...
+SCopyingDeptR=Fijar la relación subordinada del Dpto...
+SCopyingUser=Copiando información Empleados...
+SCopyingFinger=Copiando FP de Empleados...
+SCopyingRec=Copiando los registros de Asistencia...
+SCopyingLog=Copiando los registros de Asistencia y datos historicos modificados..
+SCopyingHoliday=Copiando Config. feriados ...
+SCopyingTempSch=Copiando la Asistencia Temporal de Empleado que Verifica el tiempo fijado...
+SCopyLeaveClass=Copiando ajustes para solicitar tipos de licencia...
+SCopyLeave=Copiando ajustes para excepciones de Asistencia de Empleados...
+SCopyingShift=Copiando Config..
+SCopyingUserShift=Copiando Config. de Empleados...
+SCopyingOK=Copiado de datos finalizo!
+SHntCounting=Esta contando el registro de control de Asistencia. Espere...
+SFrmNewDept=Añadir Nuevo Dpto.
+SHntInputDept=Ingrese Nombre de Dpto. a Añadir:
+SCfmLeave= ?Este empleado realmente quiere resignar?
+SCfmLeaveIdle= ?Estos empleados realmente quieren dejar sus posts?
+SSupervisorLabel=Administrador
+SNoSuchRecord= Ningún empleado calificado se ha encontrado!
+
+SNoSuchRecordAndReSearch= No pueden encontrarse los empleados calificados!\r\n Entre los nuevos requisitos por buscar.
+SFrmShiftMng=Shift Management
+SFrmShiftArray=los Cambios de Empleado
+SHntColseSaveTemp= El cambio temporal de empleado no se ha guardado. Desea Guardarlos?
+SSearchLicFile= Usted debe instalar el documento del permiso para usar la colección de FP!\r\n\r\nDesea buscar este documento de permiso?
+SNoLicFile= Ningún documento del permiso.Salir del Sistema!
+SFPSystemError=Sistema de Identificación de FP no puede trabajar normalmente!
+SNoLicense=Asegurate que el lector de FP asignado este conectado!\r\n Doc. de Licencia para este sistema solo puede operar con el lector de FP asignado.
+SNoSupervisor=Primero ud. necesita asignar un Super Adm. por lo menos !
+STempSupervisor=Supervisor-Temp
+SCfmInitDb=Inicializando el sistema que Borrara todos los datos de regs. Desea Continuar?
+
+SHntInitData=Borrando datos. Espere...
+SHntInitOk=Datos Borrados con exito!
+SFrmReg=Registre el producto que esta utilizando
+SFmtRegLabel= La Clave para el registro es: %s      \r\n\r\n Llame a nuestra compa?ía,  diciéndonos su "Clave", y usted conseguirá un número del registro!
+SHntRegOk=Registro exitoso!
+SHntRegFail=Registro fallido!\r\n\r\nEste producto puede ser utilizado normalmente solamente después de registrarse .
+SFrmInputBackFile=Ingrese archivo de respaldo
+SBackupOk=Base de Datos se ha respaldado con exito a: %s!
+SErrMergeSupDept=El departamento superior no se puede incluir en el departamento subordinado .
+SFmtIgnoreRec=Abandonados %s Regs
+SFmtAfterModify=Tiempo %s despues de la modif.:
+SErrMissPass=Su antigua Contraseña no ha pasado la verificación.Ingresa su Contraseña nuevamente.
+SErrMissCfmPass=Nueva Contraseña es diferente de la Contraseña de verif. Ingrese Contraseña de verif. nuevamente.
+
+SHntPreRec= Está verificando asistencia que verifica los datos. Espere....
+
+SRecErrState=Estado Ent/Sal 
+SRecErrRepeat=Tiene el mismo reg.
+SRecErrSomeThing=Desconocido
+SRecProcIn=a Marc-Ent
+SRecProcOut= a Marc-Sal
+SRecProcDel=Borrar
+SHntPreRecProc=Esta procesando/guardando datos.Espere...
+SErrShiftTooLong= Un período de cambio no puede exceder 24 horas!
+SErrNoSelectShift=Elegir primer periodo de Tiempo!
+SErrFmtShiftMerge=Los períodos siguientes no pueden ser agregados \r\n\r\n%s\r\La posible razón es que estos periodos \r\nse Algunos períodos existentes, o los intervalos son demasiado peque?os.
+
+SErrShiftMerge= Los períodos agregados solapan con algunos períodos  existentes, o los intervalos son demasiado cortos.
+
+SErrModifyShiftMerge=Cronometre los períodos después del traslapo de la modif. con algunos períodos existentes,o los intervalos son muy cortos.
+
+SFmtFoundShifts=Hora Ent/Hora Sal:\r\n%s\r\n\r\n Esta Seguro?
+SNoFoundShift=No se encontro ningún cambio en el periodo.
+SErrShiftsIsRunning= ?Este método de cambio  está usándose, y no puede anularse!
+SFrmShiftsArray= Coloque el cambio de empleado
+SFrmShiftsManage= Cambio de método de admin.
+SLblSelectStartShift=Selecc.Inicio del cambio
+SLblSelectShift= Cambios usados para el Método
+SLblShowShift= El trabajo del período durante un ciclo de cambio de la fecha de inicio.
+SLblShifts=Cambie el Periodo
+SDefaultShiftsName= Nuevo Método de Cambio
+SNoRightToDelShifts= No son autorizados modificar o anular métodos de cambio que están usándose por otros departamentos.    
+SNoRightToDelShift= No son autorizados modificar o anular cambios que están usándose por otros departamentos.
+SErrNoRightToModify=Admin. del dpto no es autorizado para modificar las Contraseñas de otros administradores!
+SFmtErrAddedSupervisor=El %d administrador ha sido con éxito. Añadir\r\n la Contraseña inicial de admin. es su propia asistencia que verifica el número
+SErrNoRightToDelete= ?admin. del dpto no es autorizado para anular a los administradores de otros dptos!
+SErrNoRightToDelSelf= Administrador no puede anularse. él puede anular a sólo otros administradores.
+SCfmDelSupervisor= ?Usted está seguro que quiere anular a este administrador?
+SErrChangeSelfRight=?El administrador no puede modificar sus propios límites de autoridad!
+SErrChangeSuperRight=El admin. no puede modificar los límites de admin. superiores de autoridad!
+SErrTimeRange=Rango de periodo falso!
+SErrTimeZoneTooShort=El período es demasiado corto o largo
+SErrTimeZoneTooLong=El Período es demasiado largo(no más de 24 hras)
+
+SDateRangeTooLong=Rango fecha no puede ser mayor a un mes!
+SCustomRptFlag=Cliente
+SErrNeedExcel=Esta computadora no esta equipada con EXCEL,y esta función solo puede aplicarse a computadoras con EXCEL!
+SHntExporting= Está exportando asistencia que verifica los datos.Espere..
+SFmtErrInvalidTmp=La Plantilla "%s"\r\n es inválida,y no pueden exportarse datos de este formato de nuevo!
+SFmtExportOpen=Los datos se han exportado al archivo "%s"!\r\n\r\n Desea abrir este archivo?
+SFmtExportFail=Los sgtes errores aparecen al exportar datos:\r\n%s
+SFmtFileExist=%s Ya existe. Deseas sobreescribirlo?
+SErrFmtFileExist=%s Ya existe!
+SFmtErrFileCreate=Los errores aparecen al crear el archivo %s
+SLblMinusScore=Deduzca la cuenta cada vez
+SLblMinusUnitScore=Deduzca la cuenta para cada unid.mín.
+SFmtExportRec=%d asistencia verifica los archivos se ha exportado con éxito
+SNoExportRec=Ningún Registro de Control de Asist. se exporto!
+SExportFilter=Encriptando asistencia de Marc-Ent
+dato(*.ABT)|*.abt|Asistencia verifica Marc-Ent (*.txt)|*.txt Respaldar archivo BD(attBackup.mdb)|attBackup.mdb|Asistencia verifica sistema de archivos de BD(*.mdb)|*.mdb  
+SHntImporting=Se esta importando datos. Espere...
+SImportFail=Importación de datos fallo!\r\nDesea examinar la información?
+SFmtImportOk=%d se han importado los registros con éxito!
+SFmtImportResult=%d registros se han importado con éxito!\r\nPero %d  regs no pueden importarse. ?Usted quiere examinar los regs de error?
+
+SQstNoPin= Asistencia que Verifica No. eso se encuentra no registrado:%s\r\n\r\nUsted quiere registrar este número en este sistema?\r\n\r\nSi? Sí, Registre este número en este sistema, guarde su asistencia que verifica el registro;\r\nNo,Ignore la asistencia que verifica registro de este número;\r\nSí a Todos, Registre  todos nuevos números en este sistema, y guarde su asistencia que verifica los regs;\r\nNo a todos, Ignore asistencia que verifica regs de todos los números que no han sido registrados;\r\nCancel?Pare el proceso
+
+SImportFilter= Asistencia encriptada que verifica Marc-Ent
+(*.ABT)|*.abt| Asistencia que verifica  Marc-Ent (*.txt*.txt|Respaldar archivo BD(attBackup.mdb)|attBackup.mdb|1.1* Versión de asistencia de FP  que Verifica el archivo de BD (att.mdb)|att.mdb| Asistencia que verifica el archivo de BD (*.mdb)|*.*
+
+SErrFileNoExist=Este archivo no existe!
+SFileUnknownExt=Formato Desconocido!
+SNameField=Nombre;NombreUsua.;
+SDeptField=Departamento;departamento;nomdep;
+SPinField=pin;Número;Número verifica Asistencia;No.verifica Asistencia;
+
+SShiftNavReadOnly=PrimerCambio\r\nPrevioCambio\r\nSgteCambio\r\núltimoCambio
+SShiftNav=PrimerCambio\r\n\r\n\r\núltimoCambio\r\nAñadirCambio\r\nBorrar Cambio\r\nEditarCambio\r\nGuardarEdición\r\nBorrarEdición
+SErrShiftIsRunning= Este cambio está usándose, y no puede anularse
+SFmtErrShiftIsRunning=Este cambio está usándose en el Método de Cambio "% s", y no puede anularse.
+SDefaultShiftName=NuevoCambio
+SFrmExport=Opción Exporta Campos
+SLblExportItems=Seleccione los campos que desea exportar:
+SAttCheckInOEMVer=2.0
+SAttCheckInVer=3.0
+sfCountInfo=%d\r\n%d\r\n%d
+SRecRptName1=EventoAsist
+SRecRptName2=RegAsis
+SFrmLeft=%d TiempoSal
+
+SfmtCfmDelete=Seguro que desea eliminar %s
+
+rptlist.cfg=rptlist_e.cfg
+comstatus.cfg=comStatus_e.cfg
+IntervalFormat=%d Dias %d Horas %d Minutos
+ExportResourceDll=QEEnglish.dll
+ReportResourceDll=FR_Eng.dll
+SQLServer.sql=sqlserver_e.sql
+template.tdb=template_e.tdb
+UI_1=
+FaceFile=AttFace_e.dat
+SPassChanged=Contraseña cambiada con exito
+SPassChangeFail=Error al cambiar Contraseña
+SValidatePassChange=Debe ingresar usuario y Contraseña valido\r\n para cambiar la Contraseña
+SHntInputPass=Ingresar nombre de usuario y Contraseña para acceder al sistema.
+SFrmLoginCount=Tiene %d veces para reintentar
+SDeptSVName2=Nivel 2 Dep. Administrador
+SDeptSVName1=Nivel 1 Dep. Administrador
+SLCD_Font_Name=MS Serif
+SLCD_Font_Size=-14
+SLCD_Font_Style=Bold
+SCfmFmtDeptChange=Trasladando el empleado al Dpto %s?
+PreProcess=Pretreatment Marc-Ent/Sal
+SErrDatetimeRange=Ingrese rango valido para  la fecha!
+SNoSelectValue=Seleccione un valor!
+SSpeDayRest=RestoDía
+SAddinProgram1=Disp. Comunicador BioClock
+SErrConnectFail=Error al conectar
+SDownloadLogs=Descargando ...
+SReadLogs=Leyendo Datos...
+SSaveLogs=Guardando datos..
+SDownloadLogsMsg=%s Reg. Descargado: %d Nuevos reg.: %d
+SDownloadNoLogs=No.nuevo reg.
+SVerifyPass=Verifica Contraseña
+SLoadUserData=Cargando datos usuarios..
+SDownloadUser=Descargar usuarios enrolados...
+SSaveUser=Transfiriendo datos ..
+SFmtSaveUser=Inf.Usua.Editados:%d\r\nFP Descargados:%d\r\nFP Cargados:%d\r\n Usuarios Borrados:%d
+SActiveProduct=Producto Activado
+SUnActiveProduct=Producto Desactivado
+SMustActive=Periodo prueba finalizada! Ud.Debe activarlo.\r\n\r\n Desea activarlo?
+SErrSystemInstall=Error de Sistema! Debes reinstalar el software.
+SFmtActiveWarning=Active este Software.\r\n\r\Debes activar este software dentro de %d día(s) .Si no funcionará correctamente .\r\n\r\nDeseas activarlo ahora??
+SInsertFloppy=Ingrese el disco de Activación del Producto en el Driver Disk !
+SActiveOK=Activación Exitosa
+SDeactiveOK=Desactivación Exitosa. Ahora usted puede instalarlo en otro PC.\r\nPara usar este producto en esta computadora,debe reactivarlo.
+SErrFloppy=Falta el Codigo de Activación.
+SNoFloppy=No Existe Disco
+SWriteProtectFloppy= Para escribir la información, debe abrir la protección de escritura .
+SErrReActive=El producto ha activado en otro PC. Activar este producto, usted debe desactivarlo en el otro PC.
+SErrNoActive=Este producto no esta activado en esta PC!
+SFmtErrLeaveUsed=Clase licencia %s esta en uso,imposible borrar.
+
+SSetMachineStatus=Guardando ajustes para la Máquina....
+SGetMachineStatus=Leyendo información de la Máquina...
+SOKToInitMachine=La Máquina se inicializo con exito.
+SFailToInitMachine=Error al inicializar la máquina.
+SInitializeMachine=Inicializando máquinas..
+SFrmConnectionFrom=%s Conectando de "%s"
+SFrmConnectionOverLics=%s Nodo %s Maximo limite del Nodo 
+SFrmConnectionNotLiced=%s Nodo Inhabilitado %s,Comando interrumpido
+SFrmConnectionTransMsg=%s <%s> Mensaje: %s
+SFrmConnectionShowScreen=T&A Nodo %s foto [%s]:
+SFrmConnectionCheckData=%s Transacciones(%d Bytes): %s
+SFrmConnectionFingerData=%s Enrolar FP(%dB): %s
+SFrmConnectionInvalidCmd=%s De "%s" Invalidar Comando: %d
+SFrmDisConnection=Desconectado
+SWrnInitTerm=Inicializar y borrar todas transacciones!
+SCapClearData=Borrar todos datos antiguos
+SFrmTermDate=Ingrese fecha a Borrar de la BD  (%s)
+SFrmTermDate2=Sistema Borrara nodos %s %stransacciones!
+SFrmUpdateCheckData=De<%s>Actualizar nueva transacción%d
+SFrmUpdateFingerData=De<%s>Actualizar nueva plantilla: %d
+SSvrHtmlHead=<html><head><title>T&A Consul</title></head><body>
+SHntUserInvalid=fallo Verificación Usuario
+SHntNoUserName=No NomUsuario
+SHntPassChgWrong=Mal Cambio de Contraseña
+SHntPassNotOne=La Confirmación de nueva Contraseña
+SHntPassChgOK=Cambio Contraseña exitosa
+SHntPassChged=Su Contraseña se cambio exitosamente!
+SHntLoginFail=Error Accesar Sistema
+SHntLoginNeeded=Sistema requiere accesar
+SHntLoginHint=<a href="logon.htm">Logon a sistema</a>
+SHntErrDateRange=Error Rango fecha!
+SHntMsgDateRange=Entre el rango de fecha correcto.
+SHntOptOk=Operación exitosa
+SHntExecDeleted=Transación Eliminada
+SHntOptFail=Operación Falla
+SHntExecDeleteError=No puede anular reg.de la excepción. Verifique la entrada de la fecha.
+SHntExecSaved= Reg de excepción grabados
+SHntOptExecSaveError= Reg de excepción no grabados SAuthenticationFail=<html><head><title>Error</title></head><body><h1>Autorizado falla</h1></body></html>
+STermInfo=Estado Nodo en Línea:\r\n\r\n____Node NombreHost:%s\r\n__________tiempo conexión:%s\r\n______último
+tiempo conexión%s\r\n Cargar nuevas transacciones%s\r\n Transacciones cargadas%d\r\ ya el empleado  cargado
+Transacciones%d\r\nCargando plantillas de FP %d\r\n
+SHntLoginAgain=Bienvenido: %s<br><a href="logon.htm">Logon de nuevo</a>
+
+SHntLogin1=<font color="red"><a href="logon.htm">Logon a Sistema</a></font>
+SHntLogin2=<a href="logon.htm">Sistema Logon</a>
+SInCaption=Hora Ent
+SOutCaption=No Hora Ent
+SLabelEdit=Edita
+sAuthenticationRealm=Software pregunta sistema servidor V1.8
+SHntPassOrUserInvalid=Nombre o Contraseña invalida!
+SWebPath=web_en
+SCheckSuccess=Verificación exitosa
+SLCDHintPressFinger=Ponga su dedo
+SAdminNo=Ingrese No. de admin.!
+SAdminNoPrivilege=Acces denegado! Ingrese No. de admin.!
+SAdminPassword=Ingrese Contraseña o FP!
+SAdminTimeOut=Tiempofuera! Reintente.
+SAdminPassError=Contraseña incorrecta!
+SFrmSystemInfo=Usuario:%d\r\nFP:%d\r\nReg Asist.:%d\r\nRed:%s
+SAdminNeedHighPrivilege=Debe tener alto privilegio
+SAttCheckState_0_Out=M/Sal
+SAttCheckState_0_In=M/Ent
+SAttCheckState_1_Out=Sal Hrs Ext
+SAttCheckState_1_In=Ent Hrs Ext
+SAttCheckState_2_Out=Sal
+SAttCheckState_2_In=SalFuera
+SAttCheckState_3_Out=AbrirParaSal
+SAttCheckState_3_In= AbrirParaEnt
+SFingerName_0=Pulgar Der. 
+SFingerName_1=Indice Der.
+SFingerName_2=Medio Der.
+SFingerName_3=Anular Der.
+SFingerName_4=Me?ique Der.
+SFingerName_5=Pulgar Izq.
+SFingerName_6=Indice Izq.
+SFingerName_7=Medio Izq.
+SFingerName_8=Anular Izq.
+SFingerName_9=Me?ique Izq.
+
+
+
+SInManaging=Es Ahora Administrador
+SVerifyMethod_0=Solo FP
+SVerifyMethod_1=Solo ID
+SVerifyMethod_2=ID+FP
+SVerifyMethod_3=ID o FP
+SUserPrivilege_0=Invalido
+SUserPrivilege_1=Usuario
+SUserPrivilege_2=Enrolar
+SUserPrivilege_3=Admin.
+SUserPrivilege_4=Supervisor
+SConnectState_1=Conectado
+SConnectState_0=Desconectado
+EmpFieldsOptions=1111
+SCfmActiveBioclock=Deseas usar registro de tiempo para activar el software?\r\n\r\n Con registro tiempo activarlo, click "Si",\r\nUsando floppy activarlo, click "No".
+SAASCancel=Cancela
+SAASWelcomeHint=Información Sistema
+SAALExecute=Abrir
+SAASExecute=Abrir
+SLCROver=ROT
+SLCFOver=FOT
+SLCBOut=BOUT
+SLCOut=OUT
+SWizardButtonCancel=&Cancela
+SWizardButtonNext=&Sgte >
+SWizardButtonBack=< &Atras
+SWizardButtonFinish=&Finalizar
+SHintNoData=Información BD
+SHintNoDataMsg=Ningún empleado fue registrado.Ud. debe registrar a los empleados primeros. \r\n\r\n Nota:Puedes descargar empleados de una Máquina standalone. \r\n\r\n Abrir ventana del mantenimiento de empleado para registrarlos?
+SHintNoSupervisor=No hay admin. del sistema
+SHintNoSupervisorMsg=Ud puede manejar privilegios del operador solo cuando Ud. registra a un administrador,sino cualquiera puede usar el programa.\r\n\r\nAbrir ventana de mantenimiento para registrar Adm.?
+SHintNoSchClass= Ningún horario para los empleados
+SHintNoSchClassMsgCommonVersion= No hay ningún Horario para los cambios de empleado. El horario de cambio se combinó por hoarios que se forman repetidamente en cierto período. El turno  esta preparado asignar a los empleados. \r\n\r\nUsted quiere abrir la ventana de turnos para agregar algunos turnos?
+
+
+SHintNoSch=NingunTurno
+SHintNoSchMsg= No hay ningún turno. El turno se combinó con los horarios, qué se forma repetidamente en cierto período. El turno  esta preparado para asignar a los empleados. \r\n\r\nUsted quiere abrir la ventana de turnos para agregar algunos turnos?
+
+STSetDBPwd=Contraseña BD
+SHSetDBPwd=Ingresar la nueva Contraseña de BD
+SHSetDBPwdOK=Nueva Contraseña de BD se config. con exito.\r\nFavor de recordarla.
+STSelectField=Selecc.un campo
+SWaitSaveData=Guardando Datos,espere...
+SSelectedEmpSch=Ud. Selecciono %d empleado(s):%s. \r\nArreglar turno temporal para ellos de %s a %s ?
+
+SLogStateChanged=%d Registro(s) de estado de Asistencia se cambió.
+SErrMustSelectTR=Debe selecc. una ZonaHoraria valida.
+SErrMustOverTR= Puede seleccionar el ZonaHoraria
+SSecDayTimeFmt=hh:nn "a Segundo día"
+SAllEmpStr=%s de %s
+SAEmpStr=%s desde %s
+SFmtStrLogChged=%s 's Registro de Asist. de %s a %s sera cambiado al nuevo estado %s
+SFmtStrLogChged2=%s 's Registro de Asist. de %s a %s sera cambiado al siguiente estado r\n\r\n%s
+
+SFmtStrLoged=%d registro(s) Asist. fueron cambiado.
+STFmtEmpSchA=Opciones de Asist. del Empl ( %s )
+STFmtEmpSch=Opciones de Asist. del Empl ( %d empleados: %s )
+SESelectedAllSch=Todas ZonaHoraria selecionadas.
+SENoSelectSch=Selecc. un item primero 
+SENoSchPlan=No hay Turno
+
+SNameMorningTZ=Ma?ana
+SNameNormalShift=Normal
+SNameDayTZ=Dia
+SNameAfteroonTZ=Tarde
+SErrInvalidShiftTZ=Ingrese Hora Ent/Sal
+SErrInvalidTZ=El tiempo es invalido.
+SFmtAutoAddShift1=El Sistema agregará un horario nombrado "%s" y un turno nombrado "%s". \r\n y después de ése, puedes asignar este nuevo turno a los empleados.
+SFmtAutoAddShift2=Sistema agregará dos horarios nombrados  "%s" y "%s", y agregara un nuevo turno nombrado "%s". \r\nDespues,puedes asignar este nuevo turno a los empleados.
+
+SFmtCTestResult=Resultado: \r\n%s
+SInvalidInput=El dato es invalido,ingrese nuevamente.
+SCopyFromEmp=Copiar datos de %s(%s).
+SRecAbnormiteText_1=OK
+SRecAbnormiteText_2=Invalido
+SRecAbnormiteText_3=Repetido
+SRecAbnormiteText_4=Mal Estado
+SRecAbnormiteText_5=Sal
+SRecAbnormiteText_6=OT
+SRecAbnormiteText_7=FOT
+SRecAbnormiteText_8=AutoTurno
+SErrHadOpSet=Usted Tiene seleccionado algunas operaciones para registros de Asist. o excepciones.El Sgte Proceso ,ud. debe aplicar o cancelar.
+SErrHadOpSetClose=Usted Tiene seleccionado algunas operaciones para registros de Asist. o exepciones. Estas operaciones seran canceladas si usted cierra esta ventana ahora.
+
+SCalcPrepare=Preparando para calcular...
+
+SInvalidTimeRange2=Rango de tiempo invalido
+SCalcingEmpAtt=Calculando datos para %s(%s)...
+SCalcing=Calculando items de reports...
+SCalcFinish=Calculación finalizada.
+SCalcNoData= No hay ningún empleado seleccionado,o los empleados seleccionados no marcan asistencia.
+SLblInvalid=Invalido
+SLblDepartment=Dpto.
+SLblName=Nombre
+SLblSSN=No.ID
+SLblBadgeNumber=AC-No.
+SLblUserId=No.
+SLblShiftTZ=Horario
+SLblFmtSybolm="Symbol_"mm_dd
+SLblFmtTimes="Timeslice_"mm_dd
+SHntRecOpCount=La cuenta de registros de proceso: %d
+SHntFmtAudited=Auditados : %d
+SAFmlClsTime=TiempoAsist.
+SAFmlDIsHoliday=Es Feriado(D)
+SAFmlClsData=Reg Asist.
+SAFmlDIsWeekDay=EsFinSemana(D)
+SAFmlDIsNormalDay=EsDiaNormal(D)
+SAFmlDUserInfo=Inf.Usuario(Item)
+SAFmlDGetException=ObtExcepción(ExcepciónNombre, Exp)
+SAFmlDGetDataSymbols=ObtFechSymbols(IndiceFec)
+SAFmlDGetDateTimes=ObtFechTiemp(IndiceFec)
+SAFmlDGetAttItemUnit=ObtAstItemUnit(AstItem)
+SAFmlDNumberToCount=NúmeroDeCueta(N, PriCuenta, SegCuenta)
+SAFmlDRoundNumber=RedonNúmero(N, Unit, MinUnit)
+SAFmlDTrunckNumber=TrunckNúmero(N, Unit, MinUnit)
+SFmtWngDelRptItem=Borrar item?¡ã%s?¡Àdejara error reporte!\r\n\r\nEsta Seguro de borrarlo?
+SLblOpTextDel=Borrar
+SHntRecOpCounted=La Cuenta registro de proceso: %d
+SLblAuditTo=Auditarlo a: %s
+SFmtAddBatchEmployee=Añadir %d Empleado(s)
+SEmpFieldsTitle=Campo\r\nValor
+EmpFieldsOptions=1111
+SErrHasUsedNow=El horario es usado ahora
+SWrnNoDeptName=Debe ingresar un nombre dpto!
+SHntDeleteDept=Borrar el Dpto.?
+SHintFouledAttRule= Su periodo es largo está fuera de la regla de asistencia que es La zona de tiempo más larga y más corta, El sistema anulará estas ZonasHorarias,verifique./r/n Esta seguro de Borrar? 
+
+SCfmDeleteEmAttLog=Borrar Todas las asistencias de la máquina?
+SDeleteEmAttLogSucess= El registro de asistencia en la máquina se ha anulado;
+sDeleteEmAttLogFail=Borrado de reg. de asistencia fallado.
+
+SCfmUpdateEm= Usted debe guardar el poder y la conexión a PC y actualizar el grabador de tiempo.\r\nReinicialice después de actualizar\r\n\nUsted desea actualizar el firmware?
+
+SHntUpdateEmScuess=Actualización exitosa!
+SErrMissingFile=Faltan Archivos
+SErrParameter=Parametro Error 
+SErrUnknown=Error Desconocido
+SHntUpdateEmMissingInfo=Actualización perdida de la información Actual. abortará.
+SHntUpVerGreaterThanEmVer=la versión del firmware es mayor o igual a la versión de actualización
+SErrVerify=Marc-Sal error.
+SErrVersionOlder=Firmware no requiere actualizar.
+SErrUpdateFailed=Actualización fallo,
+SErrFirmWareFile=Firmware archivo error.
+SCfmDeleteRFAttLog= Puede libremente borrar registros del grabador de tiempos/r/nAsegúrese que  tuvo que descargar regs!
+
+SHntRFDownloadUsers=Descargar empleados %d
+SErrRFDownloadUsers=Descargar Error Reintente!
+SHntRFUploadUsers=Cargando empleados(%d)????
+SHntRFUploadUsers=Cargab(%d)????
+SHntRFReadUsers=Leer empleados %d
+SReadLogCount=Leer regs %d
+SHntRFSetUserInfoSuccess=Carga datos exitos!
+SErrRFSetUserInfo=Error Carga Datos!
+SHntRFNotSelect= Usted no ha seleccionado los datos del empleado a cargar
+SHntRFInitial=Disp.Inicial???
+?
+SHntRFInitialSuccess=Inicializado el Sistema!
+SErrRFInitial=Inicialización falla en el Sistema!
+SHntRFClearData=Borrar Datos????
+SHntRFClearDataSuccess=Borrar datos exitoso!
+SErrRFClearData=Borrar datos fallo!
+SHntRFSyncTimeSuccess=sync. de tiempo exitoso!
+SErrRFSyncTime=sync. de tiempo Fallido!
+SHntRFAdminPass=Administrador fallido!
+SHntRFInputPassword=Ingrese la nueva Contraseña de administrador 6 digitos
+SHntRFSetPasswordSuccess=Conf. Contraseña de admin. exitoso.
+SErrRFSetPassword=Fijar Contraseña de admin, Intente otra vez!
+SErrRFInputPassword=Contraseña Administrador debe ser 6 digitos?
+SErrRFReadData=Error leer datos en Disp.!
+SHntDeviceHad=Same Nombre del dispo. ya existe!
+SHntConnectSuccess=Conexión exitosa!
+SErrConnectFail=Conexión fallo!
+STxtACCfg=Setup del control access
+sTxtACTimeZone=ZonaHoraria
+sTxtACGroup=Grupo
+sTxtACUnlockCombination=Combinación
+sTxtACUnlockDelay=Retraso Apertura
+sTxtACUserAcCfg=Fijar Usuarios de Control Acceso 
+sTxtEnrolledAdminCount=Total administrador
+sTxtEnrolledUserCount=Total Usuarios
+sTxtEnrolledFingerCount=Total FP
+sTxtEnrollPasswordCount=Total Contraseñas
+sTxtManageCount= Total admin. regs
+sTxtLogCount=Total Ent y Sal regs
+sTxtNominalFPNum=Número Nominal FP
+sTxtNominalUserNum=Número Nominal Usuario
+sTxtNominalLogNum=Registro Nominal de Ent y Sal  
+sTxtRemainFPNum=Núm.Remanente FP 
+sTxtRemainUserNum=Núm.Remanente Usuario 
+sTxtRemainLogNum=Registro Remanente de Ent y Sal 
+sTxtFirmwareVersion=Versión Firmware: 
+sTxtSN=Número Serial:
+sTxtProduceCode=Producto: 
+sTxtConnTime=Tiempo Conexión:
+sTxtComPort=Puerto COM 
+sTxtBaudRate=Velocidad
+sTxtIPAddress=Dirrec.IP
+sTxtPort=Puerto
+SHntAddDevice=Ningún disp. en el sistema, Agrega el disp. en admin. de disp.
+SHntGetACMachineStatus=Leer Datos desde el Disp. Espere un momento...
+sHntConnectDevice=Conectando,Espere un momento...
+SHntSetACValue=Aplicar config.,Espere...
+SHntIsSyncUserInfo=La Inf.de usuario en este Sistema difiere a la del disp. Descargar Inf. usuario y reemplazar los datos locales?
+sHntIsAddnewUserInfo=Se encontro nuevo usuario en el Disp.,Deseas agregar este Usuario al Sistema?
+sTxtACUserAcLog=Reg
+HintDiskInfo=Espacio Disco:%n MB\r\nEspacio Libre:%n MB\r\nEspacioUsado:%n MB
+NotFoundUSBFlashDisk=No se encuentra Disp.USB
+NoAttLog=No datos in USB FlashDisk
+HintImport=Importar datos a el sistema 
+sInvalidTimezone=ZonaHoraria Deny
+sSelectFingerToRegister  =Selecc. FP
+sFingerprintQualityIsPoor= Calidad es pobre!\r\nTiempo Restante:
+sPressFinger = Press FP flatware\r\nTiempo Restante:
+sRegisterSuccess = éxito en registro de FP
+sRegisterfailed  = Error en registro de FP;
+sDeleteFingerprint = Eliminar las FP seleccionadas existentes?
+sNotInstallDriver = Instalar driver del sensor FP
+sNotConnectSensor = No hay conexión con sensor
+sInitializationfailed = Fallo Inicialización del sensor
+sCancelFingerprintChanged = Datos de la FP existente se ha cambiado, si guarda éstos?
+sSelectFingerToVerify  = Presione FP flatware
+sVerFingerprintQualityIsPoor = Calidad de FP es pobre!
+sFeatureOk = Selección modulo FP exitoso!
+sImageReceivedOK = FP recibida con éxito
+sFingerVerifing = Verificando FP
+sVerifySucceed =éxito en verificación de la FP
+sVerifyFailed = Error en la verificacion de la FP	
+sRegisterTitle = Registro de la FP	
+sVerifyTitle   = Verificación de la FP
+sSunday=Domingo
+sMonday=Lunes
+sTuesday=Martes
+sWednesday=Miercoles
+sThursday=Jueves
+sFriday=viernes
+sSatday=Sabado	  
+
+ 
+  cxSFilterOperatorEqual = Iguales	
+  cxSFilterOperatorNotEqual = Diferente
+  cxSFilterOperatorLess = es menos que
+  cxSFilterOperatorLessEqual = es menos que o igual a
+  cxSFilterOperatorGreater = es mayor que	
+  cxSFilterOperatorGreaterEqual = es mayor que o igual a	
+  cxSFilterOperatorLike = Cual
+  cxSFilterOperatorNotLike = No Cual
+  cxSFilterOperatorBetween = Entre
+  cxSFilterOperatorNotBetween = No Entre
+  cxSFilterOperatorInList = Ent
+  cxSFilterOperatorNotInList = No Ent	
+  cxSFilterOperatorYesterday = Es ayer
+  cxSFilterOperatorToday = Es hoy
+  cxSFilterOperatorTomorrow = Es ma?ana
+  cxSFilterOperatorLastWeek = es última semana
+  cxSFilterOperatorLastMonth = is último mes
+  cxSFilterOperatorLastMonth = is último a?o
+  cxSFilterOperatorThisWeek = es esta semana  
+  cxSFilterOperatorThisMonth = es este mes
+  cxSFilterOperatorThisYear = es este a?o
+  cxSFilterOperatorNextWeek = es prox.Semana
+  cxSFilterOperatorNextMonth = es prox.Mes
+  cxSFilterOperatorNextMonth = es prox.A?o
+  cxSFilterAndCaption = y
+  cxSFilterOrCaption = o
+  cxSFilterNotCaption = no
+  cxSFilterBlankCaption = blanco
+  cxSFilterOperatorIsNull = es blanco
+  cxSFilterOperatorIsNotNull = no es blanco
+  cxSFilterOperatorBeginsWith = Inicia con
+  cxSFilterOperatorDoesNotBeginWith = No inicia con
+  cxSFilterOperatorEndsWith = Fin  con
+  cxSFilterOperatorDoesNotEndWith = No acaba con
+  cxSFilterOperatorContains = contiene
+  cxSFilterOperatorDoesNotContain = no contiene
+  cxSFilterBoxAllCaption = (Todo)
+  cxSFilterBoxCustomCaption = (Custom...)
+  cxSFilterBoxBlanksCaption = (Blanks)
+  cxSFilterBoxNonBlanksCaption = (NonBlanks)
+  cxSFilterBoolOperatorAnd = y             
+  cxSFilterBoolOperatorOr = O         
+  cxSFilterBoolOperatorNotAnd = NO Y
+  cxSFilterBoolOperatorNotOr = NO O 
+cxSFilterRootButtonCaption = Filtro
+cxSFilterAddCondition = A?ade &Condición
+cxSFilterAddGroup = Añadir &Grupo
+cxSFilterRemoveRow = &Quite fila
+cxSFilterClearAll = Borra &Todo
+cxSFilterFooterAddCondition = Press el botón para agregar nueva condición  cxSFilterGroupCaption = aplica a las condiciones siguientes   cxSFilterRootGroupCaption = <raiz>
+cxSFilterControlNullString = <vacío>
+cxSFilterErrorBuilding = No puede construir filtro de fuente 
+  
+//FilterDialog
+  cxSFilterDialogCaption = Filtro Personalizado
+  cxSFilterDialogInvalidValue = Valor Invalido
+  cxSFilterDialogUse = 'Use
+  cxSFilterDialogSingleCharacter = para repres. Cualq. solo carácter
+  cxSFilterDialogCharactersSeries = para repres. Cualq. serie de caracteres
+  cxSFilterDialogOperationAnd = Y
+  cxSFilterDialogOperationOr = O
+  cxSFilterDialogRows = Donde ver filas:
+
+  
+// FilterControlDialog
+cxSFilterControlDialogCaption = Filtro Constructor
+cxSFilterControlDialogNewFile = untitled.flt
+cxSFilterControlDialogOpenDialogCaption = Abrir un filtro existe
+cxSFilterControlDialogSaveDialogCaption = Guardar filtro activado
+cxSFilterControlDialogActionSaveCaption = &Guardar Como..
+cxSFilterControlDialogActionOpenCaption = &Abrir...
+cxSFilterControlDialogActionApplyCaption = &Aplicar
+cxSFilterControlDialogActionOkCaption = Ok
+cxSFilterControlDialogActionCancelCaption = Cancelar
+cxSFilterControlDialogFileExt = flt
+cxSFilterControlDialogFileFilter = Filtros (*.flt)|*.flt
+
+SHntClearLog=Borra Reg
+SHntFPDataError=FP se enrola con datos incorrectos
+SHntDownloadLog=Inicia descarga Reg
+SHntDownloadLogCount=De %s  descarga reg %d 
+SCheckNewUserInfo= Check nuevas opc.del usuario
+SErrorInfo_-5=Datos Existen
+SErrorInfo_-4=Sin Espacio
+SErrorInfo_-3=Tama?oError
+SErrorInfo_-2=Operación falló o datos se repiten
+SErrorInfo_-1=Operación fallo
+SErrorInfo_0=NingúnDato
+SErrorInfo_1=Conexión fallo
+SOperateItem_1=Disp.
+SOperateItem_2=Leer inf. de Usuario
+SOperateItem_3=Fijar inf. de Usuario
+SOperateItem_4=Leer Plantilla de FP
+SOperateItem_5=Fijar Plantilla de FP 
+SOperateItem_6=BorrarUsuario
+ErrNoSelectUser=Seleccione Usuario
+ErrNoSelectDevice=Seleccione Disp.
+SErrTimeFormat=Error Formato de Fecha
+SErrNoNewUser=No Usua.Nuevo
+SErrNoUser=No Usua.
+SErrDeleteEmTmp=Fallo Eliminar FP en la Máquina
+SCommType_0=Serial Port/RS485
+SCommType_1=Ethernet
+SErrState=Estado Máquina es no permitida
+SErrParam =El ID Usuario/FP es invalido
+SErrEnrolled =El ID Usuario/FP es ya esta enrolado.
+SErrUnknown =Error Desconocido
+SErrSave=Falla GuardarDato
+SErrRepeat=Enrolar una FP repetida
+SErrCancel=Enrolar cancelado
+SCfmInitMachine= Inicializar disp. borrara todos los datos en el disp.Deseas continuar?
+SHintRestart=La activación se fijara despues reiniciar en Software.
+SHintAddUser=Añadir Primer Usuario
+SHintVerifiedNoPri=Verificado(Sin privilegio)
+SHntMachineBroken=Máquina parada
+SHntDuressAlarm=Duress Alarma
+SHntDoorNoClose=Puerta no Cerrada
+SHntOpenDoor=Puerta Abierta
+SHntDoorClose=Cerrar Puerta
+SHntDoorButton=Boton Puerta
+SHntVerifyFailed=Verifica fallo
+SCfmUpdateEm= Usted debe guardar el poder y la conexión de PC y actualizar el disp.\r\nReinicie el disp. después de actualizar\r\n\nUsted debe actualizar el firmware?
+SConnectEnrollMachine=Disp.Conectado
+SHntRestartDevice=Reiniciar Dispositivo
+SCfmSupportPinWidth9= El dispositivo soporta un No. de  5 digitos ?\r\ Nota: Si su dispositivo no soporta  5 digitos,\n  No use los No. que 65534, en general usuarios desconocidos  al disp.\r\nhaga click SI, si el disp. soporta, caso contrario click NO
+
+SCfmInputDecCardNo=Es el número de la tarjeta decimal que entró?
+SHintConnectDevice=Primero conecte dispositivo!
+SHntPutOnCard= Pónga la tarj.
+SHntWriteCardSuccess=Tarj.escrita c/éxito
+SHntWriteCardFailed= Tarj.escrita Fallo
+SHntEmptyCardSuccess=Tarj.vacia c/éxito
+SHntEmptyCardFailed=Tarj. vacia fallo.
+sHntConnectDevice=Conectando con dispositivo, espere..
+SErrConnectfail= falla conectando con el disp.
+
+SHntConnectSuccess=Exito en conexión con Dispositivo
+sHntNotSelectDoor=No selecciono ninguna puerta, al menos designe una
+SCfmDelUserOnDevice=Este usuario todavia existe en la Máquina de FP, Borrarlo de la Máquina?
+SCfmDelUserContinue=No tuvo éxito en eliminar Usuarios de alguna Máquina de FP,Continuar?
+sTxtUploadUserAcCfg=Cargado Control de acceso correcto
+SHntDeviceHad=Ya existe Dispositvo con el mismo nombre!
+SErrTZFormat=Error en formato ZonaHoraria
+
+SHntRegSuccess=Registro exitoso! Bienvenidos a usar productos ISADAT \r\n Salir del Sistema y acceder otra vez.
+
+SHntRegfail=Registro Número  incorrecto.
+SHntAddACPriCount=Aumentando por %d
+SHntDelACPriCount=Borrando %d
+SRestoreOk=Exito en recuperar datos
+SRestorefailed=fallo en recuperar datos
+SCfmDeleteLeave=Deseas borrar este item?
+SCfmDelete=Estas seguro de borrar?
+SCfmDeleteAll=Esta seguro de borrar datos?
+SHntNameNoNull=Nombre no puede ser nulo!
+SHintTimeZoneExist=Esta ZonaHoraria ya existe!
+SHntSetACValue=Aplicando configuraciones, Espere...
+SHntSetValueFinish=Operación finalizada!
+
+SHntSetACValueFinish=Operación finalizada!
+SHntOpreatefailed=fallo en operación!
+SAppTitle=Adm. Disco USB
+srecstatenew = Nuevo
+Srecstatenosync =NoSync
+srecstatelocal = Local
+srecstatesync = Sync
+reccount = Número:
+Gridtitle1 = Ac_No.
+Gridtitle2 = Nombre
+Gridtitle3 = No.Tarj.
+Gridtitle0 = Tipo
+strchoose = Elegir
+SCfmimportdata=Seguro de importar datos?
+SDownloaduserMsg=Importar: %d;Nuevo: %d;No sync: %d
+SDownloaduserMsg1=Importar: %d;Nuevo: %d;No sync: %d; FP: %d
+SCfmaddAttLog=Si agrega nuevo usuario registrado al sistema
+SadduserMsg=AñadirNuevosUsua.finalizado,No: %d
+SadduserMsg1=AñadirNuevosUsua.finalizado,No: %d; Reg FP: %d
+SCfmsyncdata=Seguro de sobrescribir datos locales?
+SsyncdataMsg = Finalizada Sobreescritura de datos,num regs: %d
+Smescount = Navege en número de información de empleado: %d
+SCfmoutdata = Seguro de exportar datos?
+suseroverfile = Si sobreescribir archivo fuente?
+Ssoutcount = Exportado,Número: %d.
+Ssoutcount1 = Exportado,Número: %d; FP: %d.
+proreccount = Cuenta: %d
+rmvrec = Seguro de quitar Reg Selecc.?
+diskinfo1=Capacidad Disco:
+diskinfo2=Restante:
+diskinfo3=Usado:
+Nouserrec=No encontrado Datos de Usua. 
+createtm =  Crear Tiempo
+fielsize =  Tama?oArchivo:
+SfmtCfmDelete = Seguro Borra DatoUsuario?
+SdelfileMsg= éxito a Borrar datos
+SdelfilefailMsg= Error a Borrar Datos
+Simportdatastep = Importando datos Usuario..
+Simportfpstep = Procesando los Datos FP...
+Sreguserstep = Registra nuevo Usua..
+Sexportdatastep = Exportando los datos..
+sinvalidpwd =Contraseña Invalida
+schecktime =Tiempo
+schecktype1 =Modo Verif.
+scheckvalue1 =Etiq.de.Reg
+schecktype2 = Verif.Item
+scheckvalue2 = Verif.Resul.
+devtype1 = Máquina Asistencia
+devtype2 = Contraceptive ring recorder of family planning
+Sudiskset =  Seguro guardar config.? No el cambio después de fijar
+sdeltbusrrec = Esta usted seguro de borrar la info.del empleado seleccionada de la PC?
+sdeltbusrtmprec = Si anula los datos de la FP pertinentes al mismo tiempo
+sdeltblogrec = Usted está seguro Borrar el reg. seleccionado de la computadora?
+Ssmsstattm = TiempInicial
+Ssmstmleng = Long.Tiempo (minuto)
+stmlenghint = Permanencia
+Nouserrec1 = No esta el archivo desigando al directorio 
+SCfmsmsDelete = Seguro de borrar datos de mensaje cortos del  archivo del USB FlashDisk?
+
+Ssmstmleng = LongTiemp(minuto)
+smstype = Tipo
+SMSid = ID
+smsstm = TiempInicial
+tmleng = LongTiemp
+content = Contenido
+pubsms = Publico
+usersms = Persona
+stmlenghint = SinTiem.Limit
+Nouserrec1 = No se encuentra?
+SCfmsmsDelete = Seguro de Borrar DatosSMS local;
+ssmsid = Id SMS
+ssmscontent = contenido
+ssmspublic = publico
+ssmsuser = persona
+Ssmscount8 = SMS Local:%d
+Sexportsmstep = Exporta SMS...
+strfp = FP
+rmvrec =Seguro quitar los Reg Selecc.?
+diskinfo1 = Tama?Disco:
+diskinfo2 =   EspacioLibre:
+diskinfo3 =   Usado:
+Nouserrec = No hay datos de usuario en el USB Flash Disk 
+createtm =  ArchivoTime:
+fielsize =  Tama?Arch:
+SfmtCfmDelete = Seguro de Borrar Usuarios?
+SdelfileMsg= Dato Usuario Borrado exitoso!
+SdelfilefailMsg= Falla a Borrar Dato Usuario
+Simportdatastep = Importando Datos Usuario..
+Simportfpstep = Procesando datos de FP....
+Sexportdatastep = Exportando Dato Usuario..
+sinvalidpwd = Contraseña Invalida
+schecktime = Tiempo
+schecktype1 = Metodo de Verificación
+scheckvalue1 = Simbolo
+schecktype2 = Verif.Item
+scheckvalue2 = Verif.Resultado
+Nousmsec=No hay  datos de SMS en USB Flash Disk 
+STxtFingerprint=FP
+STxtPassword=Contraseña
+STxtOther=Otro
+STxtIDCard=Tarj.ID  
+SHntConnectWarn=Conectar Dispositivo
+TipsConnectTitle=Conectar Disp. hints
+TipsConnectMsg=Config parametros de disp. antes de conectar,el sistema conf. 2 Disp. por defecto,click en <Disp> o <Borrar Disp>,puedes finalizar a?adiendo disp. o eliminandolos.
+SHintSaveEmployee=Primero Guarde los datos de empleado 
+SHintSelectEmployee=Primero selecione al empleado
+TipsDownIDHelp=Se encontro nuevo usuario en el Disp.,Desea agregar este Usuario al Sistema?
+
+
+
+[PreviewForm]
+PreviewForm.Caption=Imprimir Previo  
+PreviewForm.ZoomLabel.Caption=Mostrar escala
+PreviewForm.FirstPage.Hint=Primer Pag.
+PreviewForm.PrevPage.Hint=Pag.Anterior
+PreviewForm.NextPage.Hint=Sgte.Pag
+PreviewForm.LastPage.Hint=últimaPag.
+PreviewForm.CloseBtn.Caption=&Cierra
+PreviewForm.CloseBtn.Hint=Cierra
+PreviewForm.PrintBtn.Caption=&Imprimir
+PreviewForm.PrintBtn.Hint=Imprimir Rep.
+
+
+
+
+[AttData]
+AttData.Holiday.DisplayLabel[1]=Descripción
+AttData.Holiday.DisplayLabel[2]=Fecha
+AttData.Holiday.DisplayLabel[3]=Dias
+AttData.Supervisors.DisplayLabel[1]=AC-No.
+AttData.Supervisors.DisplayLabel[2]=Nombre
+AttData.Supervisors.DisplayLabel[3]=Privilegio
+AttData.SchClass.DisplayLabel[1]=Horario
+AttData.SchClass.DisplayLabel[2]=Hora Ent
+AttData.SchClass.DisplayLabel[3]=Hora Sal
+AttData.SchClass.DisplayLabel[4]=Tardanza
+AttData.SchClass.DisplayLabel[5]=SalTemprano
+AttData.SchClass.DisplayLabel[6]=Debe Marc/Ent
+AttData.SchClass.DisplayLabel[7]=Debe Marc/Sal
+AttData.SchClass.DisplayLabel[8]=Inicio Marc/Ent
+AttData.SchClass.DisplayLabel[9]=Termin Marc/Ent
+AttData.SchClass.DisplayLabel[10]=Inicio Marc/Sal
+AttData.SchClass.DisplayLabel[11]=Termin Marc/Sal
+AttData.SchClass.DisplayLabel[13]=Color
+AttData.SchClass.DisplayLabel[14]=DiaTrab
+
+
+
+[FrameDeptAndEmpsGrid1]
+FrameDeptAndEmpsGrid1.Label2.Caption=Dpto:
+FrameDeptAndEmpsGrid1.Label7.Caption=Empleado:
+FrameDeptAndEmpsGrid1.SpeedButtonSelAll.Hint=SeleccTodo
+FrameDeptAndEmpsGrid1.SpeedButtonSelNone.Hint=NoSelección
+FrameDeptAndEmpsGrid1.RxDBGridEmps.Hint=Haga Click mientras presiona Ctrl para selecc. mas de uno y buscar empleados para ingresar No. y Nombre.
+
+FrameDeptAndEmpsGrid1.mdUsers.DisplayLabel[2]=AC-No.
+FrameDeptAndEmpsGrid1.mdUsers.DisplayLabel[3]=Nombre
+FrameDeptAndEmpsGrid1.mdUsers.DisplayLabel[4]=Shift
+
+
+[FrameTimeRange1]
+FrameTimeRange1.Label4.Caption=De
+FrameTimeRange1.Label8.Caption=a
+FrameTimeRange1.NYesteday.Caption=Ayer
+FrameTimeRange1.NToday.Caption=Hoy
+FrameTimeRange1.NLastWeek.Caption=SemanaPasada
+FrameTimeRange1.NThisWeek.Caption=EstaSemana  
+FrameTimeRange1.NLastMonth.Caption=último Mes
+FrameTimeRange1.NThisMonth.Caption=EstaSemana 
+FrameTimeRange1.GroupBox1.Caption=RangoTiempo 
+
+
+[FrameRangeSch1]
+FrameRangeSch1.btnAddTimezone.Hint=Añadir Periodo
+FrameRangeSch1.btnDeleteTimeZone.Hint=Borrar Periodo Selecc.
+FrameRangeSch1.btnEdit.Hint=Cambiar Categoria de Periodo
+FrameRangeSch1.btnEditTimeZone.Hint=Editar Periodo
+FrameRangeSch1.btnClearTimeZone.Hint=Borrar todos Periodos
+FrameRangeSch1.Menu.Caption=&Fijar Categ. Periodo
+FrameRangeSch1.menuAutoSchClass.Caption=&Auto-distinguir
+
+
+[FrameSchedulers1]
+FrameSchedulers1.Label1.Caption=Shifts
+FrameSchedulers1.DBNavigator1.Hint=Primer\r\núltimo\r\nAñadir\r\nBorrar\r\nEditar\nGuardar\r\nCancelar
+
+FrameSchedulers1.Memo1.Lines=
+FrameSchedulers1.Label17.Caption=Periodo de Tiempo 
+FrameSchedulers1.qrySchs.DisplayLabel[1]=Nombre
+FrameSchedulers1.qrySchs.DisplayLabel[2]=Iniciar Fecha
+FrameSchedulers1.qrySchs.DisplayLabel[4]=Num.Ciclo
+FrameSchedulers1.qrySchs.DisplayLabel[5]=Unid.Ciclo
+FrameSchedulers1.Menu.Caption=&Fija Categoria de periodo
+FrameSchedulers1.menuAutoSchClass.Caption=&Auto-distinguir
+FrameSchedulers1.menuAutoSchClass.Caption=Auto
+FrameSchedulers1.btAdd.Caption=Añadir
+FrameSchedulers1.btSave.Caption=Guardar 
+FrameSchedulers1.btModify.Caption=Edita
+FrameSchedulers1.btDel.Caption=Borrar
+FrameSchedulers1.btnAddTimezone.Caption=A?adeTiempo 
+FrameSchedulers1.btnDeleteTimeZone.Caption=Borrar
+FrameSchedulers1.btnDeleteTimeZone.Hint=Borrar Periodo elegido
+FrameSchedulers1.btnEdit.Caption=EditaTiempo
+FrameSchedulers1.btnEdit.Hint=Editar Periodo
+FrameSchedulers1.btnClearTimeZone.Caption=BorrarTodo
+FrameSchedulers1.btnClearTimeZone.Hint=Borra todo los periodos  
+FrameSchedulers1.CheckTimeZone.Caption=Check Todo
+FrameSchedulers1.CheckTimeZone.Hint=Check reglas de periodos  
+
+
+
+
+
+[FrameDeptAndEmps1]
+FrameDeptAndEmps1.Label2.Caption=Dep.:
+FrameDeptAndEmps1.Label7.Caption=Nombre:
+FrameDeptAndEmps1.cbeUsers.Hint=Ingrese No.o Nombre para buscar empleado
+FrameDeptAndEmps1.mdUsers.DisplayLabel[2]=Nombre
+FrameDeptAndEmps1.mdUsers.DisplayLabel[3]=AC-No.
+
+
+[FrameCountProperty1]
+FrameCountProperty1.GroupBoxCount.Caption=Regla de estadistica
+FrameCountProperty1.Label1.Caption=Min. unid
+FrameCountProperty1.LabelDecMoney.Caption=Min. unit deducción
+FrameCountProperty1.cboUnit.Items=Hora\r\nMinuto\r\nDiaTrab\r\n
+FrameCountProperty1.chkCount1.Caption=Redondeo a Acc.
+FrameCountProperty1.GroupBox2.Caption=Control de redondeo
+FrameCountProperty1.rdbTrunc.Caption=Debajo
+FrameCountProperty1.rdbRound.Caption=Sin
+FrameCountProperty1.rdbIn.Caption=Arriba
+FrameCountProperty1.CheckBoxByTimes.Caption=Acc. por Tiempo
+FrameCountProperty1.chkTimeZone.Caption=Grupo por periodos
+FrameCountProperty1.chkHoliday.Caption=Grupo por feriados
+FrameCountProperty1.Label9.Caption=Simbolo en reporte
+FrameCountProperty1.chkRealLeave.caption=Cuenta a Licen    
+
+
+
+
+
+
+[FormFinger]
+FormFinger.Caption=Mantenimiento de FP de Empleados
+FormFinger.Panel1.Caption=
+FormFinger.Label2.Caption=AC-No.:
+FormFinger.Label1.Caption=Nombre:
+FormFinger.Label3.Caption=FP:
+FormFinger.Label4.Caption=Enrolar la FP, usando la FP de Marc-Ent del programa
+
+
+FormFinger.ComboBoxFinger.Items=Pulgar Der.\r\nIndice Der.\r\nMedio Der.\r\nAnular Der.\r\nMe?ique Der.\r\nPulgar Izq.\r\nIndice Izq.\r\nMedio Izq.\r\nAnular Izq.\r\nMe?ique Izq.\r\n
+
+FormFinger.ButtonEnroll.Caption=&Enrolar
+FormFinger.ButtonVerify.Caption=&Verifica
+FormFinger.ButtonDel.Caption=&Borrar
+
+
+
+
+[LoginForm]
+LoginForm.Caption=Accede al Sistema
+LoginForm.Label3.Caption=Accediendo al sistema,
+LoginForm.LabelHint.Caption=Ingrese su Nombre de Usuario y Contraseña,o presione su huella en el sensor.
+LoginForm.GroupBox1.Caption=Cuenta Accesso
+LoginForm.Label1.Caption=Usuario
+LoginForm.Label2.Caption=Contraseña 
+LoginForm.BitBtnLogin.Caption=Acceso
+LoginForm.BitBtnCancel.Caption=Salir
+LoginForm.BitBtnChangePassword.Caption=Cambiar Pass.
+
+
+
+[FormChangePwd]
+FormChangePwd.Caption=Cambiar Contraseña
+FormChangePwd.Label1.Caption=Nueva Contraseña:
+FormChangePwd.Label2.Caption=Re-Ingrese Contraseña 
+FormChangePwd.Label3.Caption=Debe ingresar su nueva Contraseña para cambiar la antigua.
+FormChangePwd.BitBtnOK.Caption=OK
+FormChangePwd.BitBtnCancel.Caption=Cancela
+
+
+
+[FormLeavePro]
+FormLeavePro.Caption=Propiedades de permisos
+FormLeavePro.Label1.Caption=Razón
+FormLeavePro.BitBtn1.Caption=Cancela
+FormLeavePro.BitBtn2.Caption=OK
+FormLeavePro.Label2.Caption=Razón
+
+
+[FormAddInManage]
+FormAddInManage.Label1.Caption=A?ade Lista de programas:
+FormAddInManage.Label2.Caption=Archivo ejecutable:
+FormAddInManage.Label3.Caption=A?ade Nombre programa:
+FormAddInManage.BitBtn2.Caption=&Cerrar 
+FormAddInManage.Caption=Añadir admin. de programa
+
+
+[frmInputPassword]
+frmInputPassword.lblPassword.Caption=Contraseña:
+frmInputPassword.btnOK.Caption=OK
+frmInputPassword.btnCancel.Caption=Cancela
+frmInputPassword.lblHint.Caption=Si Usted no fija una Contraseña en el Disp, no requiere entrar Contraseña.
+
+
+
+
+[FormAttRecLog]
+FormAttRecLog.Label1.Caption=Emp.
+FormAttRecLog.Label6.Caption=Dpto.
+FormAttRecLog.GroupBox1.Caption=Condición
+FormAttRecLog.Label3.Caption=Los reg a?adidos,modificados,eliminados pueden ser buscados.Y puede seleccionar los registros perdidos y restauralos(Press tecla [ctrl] para selecc. varios reg).
+FormAttRecLog.LabelIn.Caption=C/Ent
+FormAttRecLog.LabelOut.Caption=C/Sal
+FormAttRecLog.BitBtnSearch.Caption=&Buscar
+FormAttRecLog.BitBtnPrevLog.Caption=Pre&visual
+FormAttRecLog.BitBtnExport.Caption=&Exporta
+FormAttRecLog.btnRestore.Caption=Restaurar Reg.
+FormAttRecLog.qryRecLog.DisplayLabel[2]=Dpto.
+FormAttRecLog.qryRecLog.DisplayLabel[3]=Nombre
+FormAttRecLog.qryRecLog.DisplayLabel[4]=AC-No
+FormAttRecLog.qryRecLog.DisplayLabel[5]=Marc-Ent/Sal
+FormAttRecLog.qryRecLog.DisplayLabel[6]=Tipo
+FormAttRecLog.qryRecLog.DisplayLabel[7]=Añadir
+FormAttRecLog.qryRecLog.DisplayLabel[8]=Modificado
+FormAttRecLog.qryRecLog.DisplayLabel[9]=Borrado
+FormAttRecLog.qryRecLog.DisplayLabel[10]=Razon
+FormAttRecLog.qryRecLog.DisplayLabel[11]=Operador
+FormAttRecLog.qryRecLog.DisplayLabel[12]=Fecha
+FormAttRecLog.Caption=Grabar cambios en reg.
+
+
+
+[FormPickDept]
+FormPickDept.Caption=Selecciona un Departamento
+FormPickDept.rbTree.Caption=Ver Arbol
+FormPickDept.rbList.Caption=Ver Lista
+FormPickDept.BitBtn1.Caption=OK
+FormPickDept.BitBtn2.Caption=Cancela
+
+[FrameDeptAndEmpsNew]
+FrameDeptAndEmpsNew.Label2.Caption=Dpto:
+FrameDeptAndEmpsNew.Label7.Caption=Tiem: 
+
+
+[frmDS]
+frmDS.chkAllowUpdate.Caption=Actualizar datos en servidor si fueron cambiados en el nodo
+frmDS.ChkAllowInsert.Caption=Añadir los datos a la BD si un usuario se enrolo en el nodo
+frmDS.chkAllowDelete.Caption=Eliminar el dato en la BD si un usuario se elimino en el nodo
+frmDS.chkUpdateClient.Caption=Actualizar datos de usuario en el nodo si los datos cambiaron en BD
+frmDS.chkInsertClient.Caption=Añadir los datos del usuario en el nodo si un Usuario se enrolo en BD
+frmDS.chkDeleteClient.Caption=Borrar datos de usuario en el nodo si un usuario esta eliminado en BD.
+frmDS.chkDeleteClient.Caption=Borrar datos de usuario en nodo si un usuario esta eliminado en BD.
+
+
+
+
+[fmDS]
+fmDS.chkAllowUpdate.Caption=Actualizar datos en la BD si los datos cambiaron en el nodo
+fmDS.ChkAllowInsert.Caption=Añadir los datos a BD si un usuario se enrolo en nodo
+fmDS.chkAllowDelete.Caption=Eliminar los datos en la BD  si un usuario se Borro en el nodo
+fmDS.chkUpdateClient.Caption=Actualizar datos usuario en nodo si los datos cambiaron en la BD
+fmDS.chkInsertClient.Caption=Añadir los datos de Usuario en nodo si un usuario  se enrolo en la BD
+fmDS.chkDeleteClient.Caption=Borrar datos del usuario en el nodo si un usuario se elimino en la BD
+
+
+[fDeptSch]
+fDeptSch.caption=Turnos del Dpto.
+fDeptSch.GroupBox1.Caption=Turno por defecto
+fDeptSch.Label1.Caption=Selecc. turno por defecto para nuevo empleado mientras es registrado:
+fDeptSch.GroupBox2.Caption=Turnos usados
+fDeptSch.Label2.Caption=Selecc. los turnos a ser usados por los empleados en el Dpto.
+fDeptSch.BitBtn1.Caption=OK
+fDeptSch.BitBtn2.Caption=Cancela
+
+
+
+
+[fWzdAttTime]
+fWzdAttTime.Caption=Asistente para confígurar Periodos de Trabajo
+fWzdAttTime.Label1.Caption=Horarios de Entradas/Salidas 
+fWzdAttTime.lblShift3Start.Caption=Hora Entrada
+fWzdAttTime.lblShift3End.Caption=Hora Salida
+fWzdAttTime.lblShift2Start.Caption= Hora Entrada
+fWzdAttTime.lblShift2End.Caption= Hora Salida 
+fWzdAttTime.Label13.Caption=Configure la Hora de Ent/Sal en esta organización
+fWzdAttTime.lblShift1Start.Caption=Hora Entrada 
+fWzdAttTime.lblShift1End.Caption=Hora Salida 
+fWzdAttTime.rbShiftOne.Caption=Entrada en la ma?ana, Salida en la tarde
+fWzdAttTime.rbShiftTwo.Caption=Entrada y Salida en la ma?ana y en la tarde
+fWzdAttTime.Label15.Caption=Marcar Entradas/Salidas
+fWzdAttTime.Label16.Caption=\x20  El rango de horas que se le permite al empleado marcar. Fuera de este rango es inválido.
+fWzdAttTime.grpShift1.Caption=8:00-12:00
+fWzdAttTime.Label17.Caption=Inicia M/Ent
+fWzdAttTime.Label18.Caption=Inicia M/Sal
+fWzdAttTime.Label19.Caption=Termin M/Ent
+fWzdAttTime.Label20.Caption=Termin M/Sal
+fWzdAttTime.chkShift1In.Caption=Debe M/Ent
+fWzdAttTime.chkShift1Out.Caption=Debe M/Sal
+fWzdAttTime.grpShift2.Caption=14:00-17:00
+fWzdAttTime.Label14.Caption=Inicia M/Ent
+fWzdAttTime.Label21.Caption=Inicia M/Sal
+fWzdAttTime.Label22.Caption=Termin M/Ent
+fWzdAttTime.Label23.Caption=Termin M/Sal
+fWzdAttTime.chkShift2In.Caption=Debe M/Ent
+fWzdAttTime.chkShift2Out.Caption=Debe M/Sal
+fWzdAttTime.Label10.Caption=Tolerancias
+fWzdAttTime.Label11.Caption=Fijar las reglas de asistencia
+fWzdAttTime.Label6.Caption=?Cuantos minutos después de la hora de entrada hay de tolerancia para no ser contado como retraso?
+fWzdAttTime.Label12.Caption=?Cuantos minutos antes de la hora de salida hay de tolerancia para no ser contado salida temprano?
+fWzdAttTime.Label3.Caption=OK
+fWzdAttTime.lblConfirmHint.Caption=Click para "Finalizar"
+fWzdAttTime.chkDefault.Caption=Asignar este turno a cada Departamento como turno por defecto
+fWzdAttTime.chkOpen.Caption=Abrir ventana de turnos
+fWzdAttTime.chkAll.Caption=Asignar este turno a los empleados que no tienen asignado ningún turno
+fWzdAttTime.Button3.Caption=&Cancela
+fWzdAttTime.Button1.Caption=< &Atras
+fWzdAttTime.Button2.Caption=&Sgte >
+
+
+
+
+
+ [fSchPlan]
+fSchPlan.Caption=Opciones y Turnos de Asistencia
+fSchPlan.Label5.Caption=??¡ã¨¤D¡ì1??¨¨¨º?¡êo
+fSchPlan.btnAddSchArray.Hint=Añadir nuevo turno
+fSchPlan.btnDeleteItemSchArray.Hint=Borrar el seleccionado
+fSchPlan.Label4.Caption=Asignar lista de turnos
+fSchPlan.BitBtn1.Caption=OK
+fSchPlan.BitBtn2.Caption=Cancela
+fSchPlan.chkOTRegistry.Caption=Registra Para OT
+fSchPlan.rgClockIn.Caption=Marca Entrada 
+fSchPlan.rgClockIn.Items=Por Horario\r\nDebe M/Ent\r\nPermite no M/Ent
+fSchPlan.rgClockOut.Caption=Marca Salida
+fSchPlan.rgClockOut.Items=Por Horario\r\nDebe M/Sal\r\nPermite no M/Sal
+
+
+fSchPlan.chkHoliday.Caption=Dias Feriados
+fSchPlan.chkAttValid.Caption=Activa asistencia
+fSchPlan.chkOverTime.Caption=Cuenta OT
+fSchPlan.chkAutoPlan.Caption=AutoAsignaHorario
+fSchPlan.Label14.Caption=Dia(s)
+fSchPlan.Label15.Caption=Hora(s)
+fSchPlan.Label3.Caption=Horario Usado:
+fSchPlan.btnAddItemSClass.Hint=Añadir Horario
+fSchPlan.btnDeleteItemSClass.Hint=Borrar Selección
+fSchPlan.Label1.Caption=Cada cuando se autoasigna:
+fSchPlan.rmdSchArray.DisplayLabel[0]=DiaInicio
+fSchPlan.rmdSchArray.DisplayLabel[1]=DiaFinal
+fSchPlan.rmdSchArray.DisplayLabel[2]=Rol de Turnos
+fSchPlan.rmdSchArray.DisplayLabel[3]=Rol de Turnos
+fSchPlan.Menu.Caption=&Fijar los Horarios
+
+
+
+[fBatchPro]
+fBatchPro.Caption=A?ade a grupo de empleados
+fBatchPro.lblUserInfo.Caption=Selecciona empleados
+fBatchPro.Label6.Caption=Seleccione campos a copiar:
+fBatchPro.chkCopySchedule.Caption=Copiar opciones y turnos de empleados selecc. 
+fBatchPro.GroupBox1.Caption=AC-No
+fBatchPro.Label1.Caption=Patrón Número:
+fBatchPro.Label2.Caption=a
+fBatchPro.Label3.Caption=De
+fBatchPro.Label4.Caption=Wildcard "(*)"  largo:
+fBatchPro.edtPtn.Hint="(*)" is wildcard
+fBatchPro.memNumbers.Lines=001
+fBatchPro.BitBtn1.Caption=OK
+fBatchPro.BitBtn2.Caption=Cancela
+
+
+
+
+[fAttCalc]
+fAttCalc.Caption=Cálculos de Asistencia
+fAttCalc.BitBtnCalc.Caption=Calcular
+fAttCalc.BitBtnReport.Caption=Reporte
+fAttCalc.chkDesignReport.Caption=Diseñar Reporte
+fAttCalc.btnExport.Caption=ExportaDatos
+fAttCalc.tsRec.Caption=Marcaciones
+fAttCalc.lblAutoToOT.Caption=Cambiar registros auto asignados \r\nHorario a registro OT
+fAttCalc.lblAddRecord.Caption=Añadir Marc-Ent/Sal
+fAttCalc.Label1.Caption=Cambiar Estado...
+fAttCalc.Label2.Caption=Borrar Selección
+fAttCalc.Label3.Caption=Cancela oper.para selección
+fAttCalc.Label4.Caption=Ver historial de oper.
+fAttCalc.lblApplyRec.Caption=Aplicar Todo
+fAttCalc.lblCancelRec.Caption=Cancel Todo
+fAttCalc.lblApplyRecCorrect.Caption=Aplica nuevo Est.
+fAttCalc.lblSelectedRec.Caption=Cuenta Oper.:
+fAttCalc.Label5.Caption=Procesando
+fAttCalc.lblChangeRecColor.Caption=Cambiar Color...
+fAttCalc.lblRecChangeFilter.Caption=Cambiar Filtro...
+fAttCalc.tsShift.Caption=Movimientos
+fAttCalc.grpAbnormite.Caption=Item
+fAttCalc.btnMoveDown.Hint=Sgte
+fAttCalc.btnMoveUp.Hint=Ant.
+fAttCalc.btnEdit.Hint=Edita
+fAttCalc.btnDelete.Hint=Eliminar
+fAttCalc.btnAdd.Hint=Añadir
+fAttCalc.lblAAChangeColor.Caption=Cambiar color...
+fAttCalc.Label21.Caption=Filtrar por excepción..
+fAttCalc.Label6.Caption=Filtrar por horario...
+fAttCalc.lblFogetRec.Caption=Añadir Marc-Ent/Sal
+fAttCalc.lblLeave.Caption=Manten. AL/BL
+fAttCalc.tsAttException.Caption=Misceleanos
+fAttCalc.lblFogot.Caption=Añadir Marc-Ent/Sal
+fAttCalc.Label18.Caption=Auditar Excepc.
+fAttCalc.lblRestoreIt.Caption=Restaura
+fAttCalc.lblFreeOTAll.Caption=Cancel todo OT
+fAttCalc.lblOTAll.Caption=Promo.todo OT
+fAttCalc.lblOTAll.Hint=Promo.todo OT a valida OT
+fAttCalc.lblBOutAll.Caption=Cuenta todo OUT a BOUT
+fAttCalc.lblSaveAudit.Caption=Hacer todo Auditado
+fAttCalc.lblOutAll.Caption=Cancel todo BOUT
+fAttCalc.lblOutAll.Hint=Cambia todo BOUT a OUT
+fAttCalc.lblCancelAll.Caption=Cancela lo auditado
+fAttCalc.lblInvalidIt.Caption=Selección Invalida
+fAttCalc.lblAuditIt.Caption=Operación
+fAttCalc.lblExcAuditInfo.Caption=Cuenta Procesando:
+fAttCalc.lblAEChangeColor.Caption=Cambio color...
+fAttCalc.lblAEChangeFilter.Caption=Cambio filtro...
+fAttCalc.tsReportCalc.Caption=Resumen de Cálculos
+fAttCalc.GroupBox2.Caption=Item
+fAttCalc.btnAddCalc.Hint=Añadir
+fAttCalc.btnDeleteCalc.Hint=Eliminar
+fAttCalc.btnEditCalc.Hint=Edita
+fAttCalc.btnMoveCalcUp.Hint=Ant.
+fAttCalc.btnMoveCalcDown.Hint=Sgte.
+fAttCalc.stxtRefresh.Caption=Datos fueron cambiados! Calcular Nuevamente
+fAttCalc.rmdRecAbnormite.DisplayLabel[0]=Emp No.
+fAttCalc.rmdRecAbnormite.DisplayLabel[1]=AC-No.
+fAttCalc.rmdRecAbnormite.DisplayLabel[2]=Nombre
+fAttCalc.rmdRecAbnormite.DisplayLabel[3]=Marc.
+fAttCalc.rmdRecAbnormite.DisplayLabel[4]=Estado
+fAttCalc.rmdRecAbnormite.DisplayLabel[5]=NvoEstado
+fAttCalc.rmdRecAbnormite.DisplayLabel[6]=Tipo
+fAttCalc.rmdRecAbnormite.DisplayLabel[7]=Cambio
+fAttCalc.rmdRecAbnormite.DisplayLabel[8]=Operación
+fAttCalc.rmdRecAbnormite.DisplayLabel[9]=Dpto.
+fAttCalc.rmdAttAbnormite.DisplayLabel[0]=Emp No.
+fAttCalc.rmdAttAbnormite.DisplayLabel[1]=AC-No.
+fAttCalc.rmdAttAbnormite.DisplayLabel[2]=Nombre
+fAttCalc.rmdAttAbnormite.DisplayLabel[3]=Schedule
+fAttCalc.rmdAttAbnormite.DisplayLabel[4]=Auto-asigna
+fAttCalc.rmdAttAbnormite.DisplayLabel[5]=Dia    
+fAttCalc.rmdAttAbnormite.DisplayLabel[6]=Horario
+fAttCalc.rmdAttAbnormite.DisplayLabel[7]=HoraEnt
+fAttCalc.rmdAttAbnormite.DisplayLabel[8]=HoraSal
+fAttCalc.rmdAttAbnormite.DisplayLabel[9]=Marc-Ent
+fAttCalc.rmdAttAbnormite.DisplayLabel[10]=Marc-Sal
+fAttCalc.rmdAttAbnormite.DisplayLabel[11]=Normal
+fAttCalc.rmdAttAbnormite.DisplayLabel[12]=TiemReal
+fAttCalc.rmdAttAbnormite.DisplayLabel[13]=No C/Ent
+fAttCalc.rmdAttAbnormite.DisplayLabel[14]=No C/Sal
+fAttCalc.rmdAttAbnormite.DisplayLabel[15]=Tardanza
+fAttCalc.rmdAttAbnormite.DisplayLabel[16]=SalioTempr 
+fAttCalc.rmdAttAbnormite.DisplayLabel[17]=Falta
+fAttCalc.rmdAttAbnormite.DisplayLabel[18]=HoraExtra
+fAttCalc.rmdAttAbnormite.DisplayLabel[19]=TiemTrabajado 
+fAttCalc.rmdAttAbnormite.DisplayLabel[20]=Excepción
+fAttCalc.rmdAttAbnormite.DisplayLabel[21]=Simbolo
+fAttCalc.rmdAttAbnormite.DisplayLabel[22]=Debe C/In
+fAttCalc.rmdAttAbnormite.DisplayLabel[23]=Debe C/Sal
+fAttCalc.rmdAttAbnormite.DisplayLabel[24]=Departamento
+fAttCalc.rmdAttAbnormite.DisplayLabel[27]=NDias
+fAttCalc.rmdAttAbnormite.DisplayLabel[28]=FinSemana
+fAttCalc.rmdAttAbnormite.DisplayLabel[29]=Feriado
+fAttCalc.rmdAttAbnormite.DisplayLabel[30]=TiemAsist    
+fAttCalc.rmdAttAbnormite.DisplayLabel[31]=NDias_OT
+fAttCalc.rmdAttAbnormite.DisplayLabel[32]=FinSemanaOT
+fAttCalc.rmdAttAbnormite.DisplayLabel[33]=FeriadoOT
+fAttCalc.rmdAttException.DisplayLabel[0]=Departamento
+fAttCalc.rmdAttException.DisplayLabel[1]=Emp No.
+fAttCalc.rmdAttException.DisplayLabel[2]=AC-No.
+fAttCalc.rmdAttException.DisplayLabel[3]=Nombre
+fAttCalc.rmdAttException.DisplayLabel[4]=TiemInicio
+fAttCalc.rmdAttException.DisplayLabel[5]=TiemFinal
+fAttCalc.rmdAttException.DisplayLabel[6]=Excepción
+fAttCalc.rmdAttException.DisplayLabel[7]=Auditar
+fAttCalc.rmdAttException.DisplayLabel[8]=Auditado
+fAttCalc.rmdAttException.DisplayLabel[9]=TiemCam
+fAttCalc.rmdAttException.DisplayLabel[10]=TiemLargo
+fAttCalc.rmdAttException.DisplayLabel[11]=TiemValid
+fAttCalc.rmdAttException.DisplayLabel[12]=Fecha
+fAttCalc.rmdAttException.DisplayLabel[14]=DiaTrab
+fAttCalc.mnuExport.Caption=Exporta Datos
+fAttCalc.mnuReport.Caption=Crear Reporte de Actual Pantalla
+fAttCalc.mnuFromFirstCopy.Caption=Copia Dato(del primer al actual)
+fAttCalc.mnuCopyGrid.Caption=Copia Dato(del actual al último)
+fAttCalc.mnuSaveReport.Caption=Guarda como plantilla
+fAttCalc.mnuVisible.Caption=Columnas
+fAttCalc.mnuVisibleField.Caption=Nombre
+fAttCalc.mnuShowAllCol.Caption=Mostrar todas
+fAttCalc.mnuHideAllCol.Caption=Ocultar todas
+fAttCalc.mnuSaveLayOut.Caption=Guardar Actuales    
+fAttCalc.mnuLoadLayout.Caption=Cargar Anterior
+fAttCalc.N1.Caption=Columnas Fija
+fAttCalc.mnuFixed0.Caption=0
+fAttCalc.mnuFixed1.Caption=1
+fAttCalc.mnuFixed2.Caption=2
+fAttCalc.mnuFixed3.Caption=3
+fAttCalc.mnuFixed4.Caption=4
+fAttCalc.mnuFixed5.Caption=5
+fAttCalc.mnuFixed6.Caption=6
+fAttCalc.mnuSort.Caption=Orden Por Col.
+fAttCalc.mnuSortColumn.Caption=Nombre
+fAttCalc.mnuSortInc.Caption=Ascendente
+fAttCalc.mnuDescending.Caption=Descendente
+fAttCalc.mnuNoOrder.Caption=Orden Original
+fAttCalc.nAdvancedExport.Caption=Export Avanzada
+fAttCalc.rmdDates.DisplayLabel[0]=FechaInicial
+fAttCalc.N2.Caption=Normal
+fAttCalc.N5.Caption=Tardanza
+fAttCalc.N6.Caption=SalioTempr
+fAttCalc.N7.Caption=No C/In
+fAttCalc.N8.Caption=No C/Sal
+fAttCalc.N9.Caption=Falta
+fAttCalc.N10.Caption=Auto-asigna
+fAttCalc.mnuAA.Caption= Scheduled
+fAttCalc.mnuInterval1.Caption=Interval1
+fAttCalc.ToolButtonSearchNext.Hint=Buscar sgte
+fAttCalc.ToolButtonSearch.Caption=Buscar
+fAttCalc.ToolButtonSearchNext.Caption=Sgte
+fAttCalc.rgSort.Caption=Orden
+fAttCalc.cbDept.Caption=Dpto.
+fAttCalc.cbPin.Caption=UsuarioNo.
+fAttCalc.cbName.Caption=Nombre
+fAttCalc.cbTime.Caption=Tiempo                         
+fAttCalc.cbDescending.Caption=Descendente
+
+
+
+[fPrintSet]
+fPrintSet.lblTitle.Caption=Titulo
+fPrintSet.GroupBox1.Caption=Imprimir Pag.
+fPrintSet.chkpoPortrait.Caption=Vertical     
+fPrintSet.chkpoLandscape.Caption=Horizontal
+fPrintSet.btnOk.Caption=Ok
+fPrintSet.btnCancel.Caption=Cancela
+
+[FormTips]
+FormTips.ShowAtStart.Caption=Mostrar proximo hint                
+ShowAtStart.Caption=Mostrar Notificación Sgte
+
+
+[FormImportFlashDisk]
+FormImportFlashDisk.Caption=Importa de USB Flashdisk
+FormImportFlashDisk.btnImport.Caption=Importa(&I)
+FormImportFlashDisk.btnDelete.Caption=Elimina(&D)
+FormImportFlashDisk.btnRefresh.Caption=Actualiza(&R)
+FormImportFlashDisk.btnExit.Caption=Cierra(&C)
+FormImportFlashDisk.lvLogFileList.Caption[0]=Dispos.ID
+FormImportFlashDisk.lvLogFileList.Caption[1]=Tiem.Descarga
+FormImportFlashDisk.lvLogFileList.Caption[2]=Tama?o
+
+;V3.0
+[FormReader2PC]
+FormReader2PC.Caption=De Dispositivo a PC
+FormReader2PC.btnDownload.Caption=Descargar
+FormReader2PC.btnDelete.Caption=Elimina
+FormReader2PC.btnErrorLog.Caption=Error Reg
+FormReader2PC.btnClose.Caption=Cierra(&X)
+FormReader2PC.btnAll1.Caption=Selec.Todo
+FormReader2PC.btnInvert1.Caption=InvertirTdo
+FormReader2PC.btnAll2.Caption=Selec.Todo
+FormReader2PC.btnInvert2.Caption=InvertirTdo
+FormReader2PC.gbDevices.Caption=Disp.
+FormReader2PC.gbUsersInDB.Caption=Usuario en BD local
+FormReader2PC.gbNewUsers.Caption=Nuevo Usuario (No en BD local )
+FormReader2PC.btnGetAllUser.Caption=Navegar Usuario en Disp.
+FormReader2PC.rbAll.Caption=TodosUsuar
+FormReader2PC.rbNew.Caption=NuevoUsuar
+FormReader2PC.rbChecked.Caption=SeleccUsuar
+FormReader2PC.rmUsersInDB.DisplayLabel[1]=selecc
+FormReader2PC.rmUsersInDB.DisplayLabel[2]=ID
+FormReader2PC.rmUsersInDB.DisplayLabel[3]=Nombre
+FormReader2PC.rmUsersInDB.DisplayLabel[4]=Cuenta FP
+FormReader2PC.rmUsersInDB.DisplayLabel[5]=Privilegios
+FormReader2PC.rmUsersInDB.DisplayLabel[6]=Contraseña
+FormReader2PC.rmUsersInDB.DisplayLabel[9]=No.Tarj.
+FormReader2PC.rmNewUsers.DisplayLabel[1]=Selecc.
+FormReader2PC.rmNewUsers.DisplayLabel[2]=ID
+FormReader2PC.rmNewUsers.DisplayLabel[3]=Nombre
+FormReader2PC.rmNewUsers.DisplayLabel[4]=Dpto.
+FormReader2PC.rmNewUsers.DisplayLabel[5]=Privilegio
+FormReader2PC.rmNewUsers.DisplayLabel[6]=Contraseña
+FormReader2PC.rmNewUsers.DisplayLabel[9]=No.Tarj.
+FormReader2PC.rmMachines.DisplayLabel[1]=Selecc.
+FormReader2PC.rmMachines.DisplayLabel[2]=Máquina
+FormReader2PC.Label1.Caption=Aviso:La unica información del Usuario sera eliminada, Suprimiendo la operación en el Disp.
+FormReader2PC.cbBatchUpdate.Caption=Alto Rate
+FormReader2PC.chFingerPrint.Caption=Solo FP
+FormReader2PC.chPassword.Caption=Solo Contraseña
+FormReader2PC.chfp.Caption=Incluyendo FP
+
+
+[FormPc2Reader]
+FormPc2Reader.Caption=De Pc a Dispositivo
+FormPc2Reader.btnUpload.Caption=Cargar
+FormPc2Reader.btnDelete.Caption=Borrar
+FormPc2Reader.btnErrorLog.Caption=Error Reg
+FormPc2Reader.btnClose.Caption=close (&X)
+FormPc2Reader.btnAll1.Caption=Selecc Tdo
+FormPc2Reader.btnInvert1.Caption=InvertTodo
+FormPc2Reader.btnAll2.Caption=SeleccTodo
+FormPc2Reader.btnInvert2.Caption=InvertTodo
+FormPc2Reader.rmEmps.DisplayLabel[1]=Selecc.
+FormPc2Reader.rmEmps.DisplayLabel[2]=ID
+FormPc2Reader.rmEmps.DisplayLabel[3]=Nombre
+FormPc2Reader.rmEmps.DisplayLabel[4]=Dpto.
+FormPc2Reader.rmEmps.DisplayLabel[5]=Privilegio
+FormPc2Reader.rmEmps.DisplayLabel[6]=Cuenta FP
+FormPc2Reader.rmEmps.DisplayLabel[7]=No.Tarj.
+FormPc2Reader.rmMachines.DisplayLabel[1]=Selecc.
+FormPc2Reader.rmMachines.DisplayLabel[2]=Máquina
+FormPc2Reader.GroupBox1.Caption=Usuario
+FormPc2Reader.GroupBox3.Caption=Dispos.
+
+FormPc2Reader.Label1.Caption=Noticia:La info. del Usuario solo será anulada por la operación de borrar en el disp.de FP,la info.del usuario esta almacenada todavía en el sistema.\r\nModo Cache puede mejorar la velocidad.
+
+FormPc2Reader.cbUserInfo.Caption=Info.Usuario
+FormPc2Reader.cbFingerprint.Caption=FP
+FormPc2Reader.cbBatchUpdate.Caption=Alto modo rate
+FormPc2Reader.cbBatchUpdate.Hint=Ud. debe tener encendido y conexión entre La PC y dispositivos cuando Cargue datos.
+
+
+FormPc2Reader.ACControl.Caption=Control de Acceso
+
+
+[formEmManager]
+formEmManager.Caption=Dispositivos
+formEmManager.gbMachines.Caption=Lista/Máquinas
+formEmManager.lblMachineNumber.Caption=Número Disp.
+formEmManager.lblPort.Caption=Port
+formEmManager.lblBaudRate.Caption=Velocidad
+formEmManager.cbCom.Items=COM1\r\nCOM2\r\nCOM3\r\nCOM4\r\n
+formEmManager.lblSelectConType.Caption=Tipo Comunicación
+formEmManager.lblEmIP.Caption=Dirrec.IP
+formEmManager.lblIpPort.Caption=Port
+formEmManager.lblPassword.Caption=Llave Comunicación 
+formEmManager.LabelIdle.Caption=Idle Opción
+formEmManager.LabelVoice.Caption=Voz
+formEmManager.LabelLockControl.Caption=Cerrar Control Delay(20ms)
+formEmManager.lblThreshold.Caption=1:N Threshold
+formEmManager.lblThreshold1.Caption=1:1 Threshold
+formEmManager.cbVoice.Items=Cerrar\r\n\nAbrir
+formEmManager.edtThreshold.Items=Muy Alto\r\nAlto\r\nMedio\r\nBajo\r\nMuy Bajo
+formEmManager.cb121Threshold.Items=Muy Alto\r\nAlto\r\nMedio\\r\nBajo\r\nMuy Bajo
+formEmManager.cbIdle.Items=hibernate\r\nApagar
+formEmManager.lblWiegand.Caption=Formato Wiegand
+formEmManager.LabelFirmwareVersion.Caption=Versión Firmware
+formEmManager.LabelProductType.Caption=Nombre Prod.
+formEmManager.LabelUserCount.Caption=Cuenta Usuario
+formEmManager.LabelManagerCount.Caption=Cuenta Admin.
+formEmManager.LabelFingerCount.Caption=Cuenta FP
+formEmManager.LabelSecretCount.Caption=Cuenta Contraseña
+formEmManager.lblLogCount.Caption=Cuenta Reg
+formEmManager.lblOpreateLog.Caption=Cuenta SuperReg
+formEmManager.btnDownDevInfo.Caption=Leer Opcions
+formEmManager.btnUploadDevInfo.Caption=Set Opcions
+formEmManager.btnInitDev.Caption=Disp. Inicial
+formEmManager.btnAdd.Caption=Añadir
+formEmManager.btnModify.Caption=Edita
+formEmManager.btnDelete.Caption=Borrar
+formEmManager.btnSave.Caption=Guardar
+formEmManager.btnTest.Caption=Prueba Conexión
+formEmManager.btnExit.Caption=Salir(&x)
+formEmManager.Label1.Caption=Nombre
+formEmManager.LabelDateFormat.Caption=FormatoFecha
+formEmManager.lblOnlyVerifyIDCard.Caption=Solo Verif. Tarj.ID
+formEmManager.lblOnly121.Caption=Solo 1:1 verify
+formEmManager.cbOnlyVerifyIDCard.Items=No\r\nSi
+formEmManager.cbOnly121.Items=No\r\nSi
+formEmManager.btnCaptureFingerprint.Caption=Capturar Img.
+formEmManager.btnRestartDevice.Caption=Reiniciar Disp.
+formEmManager.btnUpdatefirmware.Caption=Actualizar firmware
+formEmManager.btnAddEm.Caption=Añadir
+formEmManager.btnDeleteEm.Caption=Borrar
+formEmManager.TabSheetWiegand.Caption=Wiegand
+formEmManager.TabSheetSysInfo.Caption=Inf. Disp.
+formEmManager.TabSheetCommu.Caption=Edita Disp.
+formEmManager.TabSheetBiometric.Caption=Biometria
+formEmManager.TabSheetPowerMng.Caption=Power
+formEmManager.TabSheetAC.Caption=Control Acceso
+formEmManager.TabSheetOther.Caption=Función Avanzada
+formEmManager.TabSheetCommset.Caption=Comm Set
+formEmManager.gbDeviceInfo.Caption=Información
+formEmManager.gbCommPara.Caption=Parametros Comunicación
+formEmManager.GroupBox2.Caption=Opc. de Comunicación
+formEmManager.qryMachines.DisplayLabel[1]=Nombre Máquina
+formEmManager.btnClearAdmin.Caption=Borra Adm. Privilegio
+formEmManager.btnSyncTime.Caption=Sync Hora
+formEmManager.lblNetSpeed.Caption=Vel. Red
+formEmManager.rbDefined.Caption=Formato Predefindo
+formEmManager.cbFailedID.Caption=Fallo ID
+formEmManager.cbDuressID.Caption=Duress ID
+formEmManager.cbSiteCode.Caption=Cod.Sitio
+formEmManager.rbCustDefine.Caption=Format Usuar.defin.
+formEmManager.lblWGBitsCount.Caption=Total bits
+formEmManager.Label3.Caption=ID Inicio
+formEmManager.Label4.Caption=ID Bits
+formEmManager.Label5.Caption=Duress ID Inicio  
+formEmManager.Label6.Caption=Duress ID Bits  
+formEmManager.lblDevBaudRate.Caption=Velocidad
+formEmManager.lblDevIP.Caption=Dirrecc.IP
+formEmManager.lblDevPassword.Caption=Llave comunicación
+formEmManager.lblDevMachineNumber.Caption=Número Disp.
+formEmManager.cbNoAttendance.Caption=No Asistencia
+formEmManager.btnPowerOff.Caption=Disp. Apagado
+formEmManager.gbPulseWidth.Caption=Ancho Pulso
+formEmManager.gbPulseInterval.Caption=Interval Pulso
+formEmManager.lblusecond1.Caption=usecond
+formEmManager.lblusecond2.Caption=usecond
+formEmManager.cbUseDefaultPW.Caption=Por defecto
+formEmManager.cbUseDefaultPI.Caption=Por defecto
+formEmManager.lblFPNum.Caption=Cuenta FP
+formEmManager.lblStartSector.Caption=Inicia Sector Numb.Para FP
+formEmManager.lblSectorNumber.Caption=Cuenta Sector Para FP
+formEmManager.lblFPKey.Caption=Tarj.Llave
+formEmManager.lblWriteOnly.Caption=(Solo Escribe)
+formEmManager.lblMustEnroll.Caption=Registra solo Tarj.Mifare  
+formEmManager.cbMustEnroll.Items=No\r\nSi
+formEmManager.lblIdleMin.Caption=Idle minutes
+formEmManager.labelSerialNumber.Caption=Número Serial
+formEmManager.lableManuDate.Caption=Tiempo de Fab.
+formEmManager.gbNominal.Caption=Capacidad
+formEmManager.lableUser.Caption=Usuario
+formEmManager.labelFP.Caption=FP
+formEmManager.labelLog.Caption=Reg
+formEmManager.ProduceGroup.Caption=Produce Kind
+formEmManager.ProduceGroup.Items=FP\r\nK7/K9(Solo para RFID)\r\n
+
+formEmManager.lbK9hint.Caption=K9 Solo cuando tipo de comunicación es RS485,Número Máquina es alguna Máquina,rango es de 101 to 132\r\n cuando otro tipo, el rango además es 101-132,No soporta Enternet?
+
+
+formEmManager.btnDownManLog.Caption=Descarga Man Reg
+formEmManager.btnBellOn.Caption=Bell Salida
+formEmManager.btnBellOff.Caption=Bell Apagado
+formEmManager.btnUnlock.Caption=Abrir
+formEmManager.btnLock.Caption=Cerrar
+formEmManager.lblDelayTime.Caption=Delay(<16Sec)
+formEmManager.BellGroup.Caption=Bell Parametros
+formEmManager.lblBelldelay.Caption=Delay(<16Sec)
+formEmManager.lblSchedule.Caption=La Campanilla del turno
+formEmManager.lockGroup.Caption=Cerrar
+formEmManager.lbllock.Caption=Retraso(<16Sec)
+formEmManager.lblScheduleHint.Caption=El turno de tiempo en
+HHMM'\r\nejemplo "1200 1930 0855"
+formEmManager.btnLoginPwd.Caption=Fijar Clave para Disp.
+
+
+[formOptions]
+formOptions.Caption=Opciones del sistema
+formOptions.gbAutoMonitor.Caption=Monitorear Automaticamente
+formOptions.rbLogMonitor.Caption=Monitorear Automaticamente Ent y Sal
+formOptions.rbFullMonitor.Caption=Activar Modo Automatico de Monitoreo
+formOptions.cbAutoMonitor.Caption=Cuando el Programa Inicia, Activa Monitor
+formOptions.Label5.Caption=Activar Monitor en Zona Horaria Asignada 
+formOptions.Label6.Caption=Sincroniza el Tiempo con Máquina
+formOptions.Label1.Caption=Ciclo Polling (second) por defecto 
+formOptions.Label2.Caption=Tiempo de reconexión debido a fallos
+formOptions.Label4.Caption=Guardar Número de Reg. del Disp.
+formOptions.GroupBox6.Caption=Función de Config. 
+formOptions.rbAttendance.Caption=Tiempo de Asis.
+formOptions.rbAccessControl.Caption=Control Acceso
+formOptions.rbReader.Caption=Leer FP
+formOptions.rbUsbSupport.Caption=Admin. USB
+formOptions.rbSmsSupport.Caption=Admin.Contenido SMS
+formOptions.chPhoto.Caption=Mostrar Foto  
+formOptions.lblCompanyName.Caption=Nombre de Compa?ia
+formOptions.chkAutoRun.Caption=Cuando Inicia Windows,Inicia el Programa
+formOptions.btnSetDataBase.Caption=Fijar conexión a BD
+
+formOptions.Label8.Caption=El Inicio-fin de un periodo es dividido por la se?al de resta, Algún periodo de tiempo dividido por semicol Ej. "8:00-9:00;11:00-14:00?¡À.
+formOptions.Label3.Caption= Algún periodo de tiempo dividido por semicol Ej. ?¡ã8:00;9:00;14:00".
+
+formOptions.rbReader.Caption=Leer
+formOptions.lblGetAllLogPeriod.Caption=Descargar Todos Reg.
+formOptions.gbServer.Caption=Servidor
+formOptions.cbServer.Caption=Iniciar Red
+formOptions.Label10.Caption=Dir.Servidor:
+formOptions.Label11.Caption=Port Servid:
+formOptions.MainWindows.Caption=Main Window
+formOptions.rbGridLine.Caption=Mostrar Lineas
+formOptions.rbminimize.Caption=Minimizar el programa al Inicio
+formOptions.rbUseXP.Caption=Usar Estilo XP
+formOptions.Label7.Caption=Ver Max.Items(Cuando Zero Cierra automatic. el monitor)
+formOptions.TreeMenu.Items[0]=Regular
+formOptions.TreeMenu.Items[1]=Monitor
+formOptions.TreeMenu.Items[2]=Opción Función
+formOptions.TreeMenu.Items[3]=Inicio
+formOptions.TreeMenu.Items[4]=Descarga Regs
+formOptions.rbReadAllLogs.Caption=Descarga Todo Reg
+formOptions.rbReadNewLogs.Caption=Descarga Nuevo Reg
+formOptions.chSaveFile.Caption=Guardar archivo luego de Descargar
+formOptions.filefmt.Caption=NomArchv(Nomb Máquina+)
+formOptions.Label9.Caption=Directory:
+formOptions.chWriteCard.Caption=Escribe Tarj.por Disp.FP
+formOptions.chSaveWindow.Caption=Guarda Ventana y sale;
+formOptions.chShowProgress.Caption=Ver Progreso Cuando Descarga Reg.
+formOptions.chDeleteLogs.Caption=Elimina Reg. en Dispositivo y sale
+formOptions.lblHints.Caption=\x20 Primero setting Tiempo en el Monitor        
+formOptions.filefmtconfig.Caption=Archivo de Config.
+formOptions.rgImport.Caption=Cuando al Importar tiene mismo AC-No
+formOptions.rgImport.items=Skip\r\nOverwrite\r\nWarn
+formOptions.rgImportfmt.Caption=Importa archivo codigo
+
+
+[fUsbSelect]
+fUsbSelect.lblInfo.Caption=Seleccionar Abajo el item del dispositivo
+fUsbSelect.rb5Code.Caption=5 Code(Max Ac No es 65535)
+fUsbSelect.rb9Code.Caption=9 Code(OEM)
+fUsbSelect.rb24Code.Caption=Lector de Servicio
+fUsbSelect.btnOk.Caption=Ok
+fUsbSelect.btnCancel.Caption=Cancela
+
+[FormUsbFlashDisk]
+FormUsbFlashDisk.caption=Admin. Datos U Disk
+FormUsbFlashDisk.TabSheet1.Caption=Importa Usuarios
+FormUsbFlashDisk.Label5.Caption=Nuevo registro:
+FormUsbFlashDisk.labsuc.Caption=0
+FormUsbFlashDisk.Label6.Caption=No syncronizado:
+FormUsbFlashDisk.labfail.Caption=0
+FormUsbFlashDisk.SpeedButton9.Caption=No Selecc.Todo
+FormUsbFlashDisk.SpeedButton10.Caption=Selec.Todo
+FormUsbFlashDisk.SpeedButton8.Caption=Actualizar
+FormUsbFlashDisk.SpeedButton41.Caption=Importa De Disco Local
+FormUsbFlashDisk.SpeedButton1.Caption=Importa Usuario
+FormUsbFlashDisk.SpeedButton2.Caption=A?ade Nuevo Usuario a Pc
+FormUsbFlashDisk.SpeedButton3.Caption=Sobreescribe Datos de Pc
+FormUsbFlashDisk.SpeedButton4.Caption=Borrar Datos de U Disk
+FormUsbFlashDisk.SpeedButton7.Caption=Quitar Lista
+FormUsbFlashDisk.TabSheet2.Caption=Exporta Usuario
+FormUsbFlashDisk.GroupBox5.Caption=Navega Inf.Usuario Núm.: 15
+FormUsbFlashDisk.SpeedButton11.Caption=Selecc.a Lista
+FormUsbFlashDisk.SpeedButton12.Caption=Selecc.Todo a Lista
+FormUsbFlashDisk.GroupBox2.Caption=Navega inf.Usuario
+FormUsbFlashDisk.Label7.Caption=Condición:
+FormUsbFlashDisk.Label8.Caption = Entrada:
+FormUsbFlashDisk.GroupBox4.Caption = Inf.Usuario
+FormUsbFlashDisk.SpeedButton22.Caption = Navega
+FormUsbFlashDisk.SpeedButton5.Caption = Añadir
+FormUsbFlashDisk.SpeedButton15.Caption = Edita
+FormUsbFlashDisk.SpeedButton16.Caption = Actualizar
+FormUsbFlashDisk.SpeedButton18.Caption = Borrar
+FormUsbFlashDisk.GroupBox6.Caption = Exporta Usuarios
+FormUsbFlashDisk.SpeedButton13.Caption = Exporta Usuario a U Disk
+FormUsbFlashDisk.GroupBox3.Caption = Requiere datos Export.
+FormUsbFlashDisk.SpeedButton6.Caption = Selecc.Todo
+FormUsbFlashDisk.reccountlab.Caption = Rec
+FormUsbFlashDisk.TabSheet3.Caption = Importa Registros
+FormUsbFlashDisk.SpeedButton20.Caption = Actualizar
+FormUsbFlashDisk.SpeedButton42.Caption = Importar de local
+FormUsbFlashDisk.SpeedButton21.Caption = Importa reg desde U Disk
+FormUsbFlashDisk.SpeedButton24.Caption = Borrar Dato de UDisk
+FormUsbFlashDisk.SpeedButton25.Caption = BorraLista
+FormUsbFlashDisk.TabSheet4.Caption = Exporta Registros
+FormUsbFlashDisk.GroupBox1.Caption = Check info.reg  
+FormUsbFlashDisk.SpeedButton31.Caption = Selecc. a lista
+FormUsbFlashDisk.SpeedButton32.Caption = Selecc.Todo a List
+FormUsbFlashDisk.GroupBox7.Caption = Navega
+FormUsbFlashDisk.Label1.Caption = Check hora
+FormUsbFlashDisk.Label2.Caption = a
+FormUsbFlashDisk.Label3.Caption = Otras Condiciones
+FormUsbFlashDisk.SpeedButton27.Caption = Navega
+FormUsbFlashDisk.GroupBox9.Caption = Check Info.Reg 
+FormUsbFlashDisk.SpeedButton28.Caption = Añadir
+FormUsbFlashDisk.SpeedButton29.Caption = Editar
+FormUsbFlashDisk.SpeedButton30.Caption = Actualizar
+FormUsbFlashDisk.SpeedButton19.Caption = Borrar
+FormUsbFlashDisk.GroupBox8.Caption =  Exporta a reg.
+FormUsbFlashDisk.SpeedButton26.Caption = Exporta a reg.
+FormUsbFlashDisk.Label4.Caption = No.Machine:
+FormUsbFlashDisk.recloglabel.Caption = Rec
+FormUsbFlashDisk.SpeedButton35.Caption = Borrar la Selecc.
+FormUsbFlashDisk.SpeedButton6.Caption = Borra Todos
+FormUsbFlashDisk.TabSheet5.Caption = Importa SMS
+FormUsbFlashDisk.Label9.Caption = Nuevo reg.:
+FormUsbFlashDisk.Label10.Caption = 0
+FormUsbFlashDisk.Label11.Caption = No Sync:
+FormUsbFlashDisk.Label12.Caption = 0
+FormUsbFlashDisk.SpeedButton23.Caption = No selecc.
+FormUsbFlashDisk.SpeedButton33.Caption = Selecc.Todo
+FormUsbFlashDisk.SpeedButton34.Caption = Actualizar
+FormUsbFlashDisk.SpeedButton36.Caption = Importa SMS de U Disk
+FormUsbFlashDisk.SpeedButton37.Caption = A?ade Registro a Local
+FormUsbFlashDisk.SpeedButton38.Caption = Sobreescribe Dato Local
+FormUsbFlashDisk.SpeedButton39.Caption = Borrar Dato de UDisk
+FormUsbFlashDisk.SpeedButton40.Caption = Borra Lista
+FormUsbFlashDisk.TabSheet6.Caption = Exporta Datos SMS
+FormUsbFlashDisk.GroupBox10.Caption = Local SMS
+FormUsbFlashDisk.SpeedButton43.Caption = Selecc.Todo a Lista
+FormUsbFlashDisk.SpeedButton44.Caption = Selecc.a Lista
+FormUsbFlashDisk.GroupBox12.Caption = Navega SMS
+FormUsbFlashDisk.Label13.Caption = Condición:
+FormUsbFlashDisk.Label14.Caption = Entrada:
+FormUsbFlashDisk.SpeedButton45.Caption = Navega
+FormUsbFlashDisk.SpeedButton49.Caption = Actualizar
+FormUsbFlashDisk.GroupBox11.Caption = SMS
+FormUsbFlashDisk.GroupBox13.Caption = ListaDato
+FormUsbFlashDisk.SpeedButton46.Caption = BorraLista
+FormUsbFlashDisk.Label15.Caption = Reg
+FormUsbFlashDisk.SpeedButton47.Caption = Borra Lista Selecc.
+FormUsbFlashDisk.GroupBox14.Caption = Exporta SMS a U Disk
+FormUsbFlashDisk.SpeedButton48.Caption = Exporta SMS a U Disk 
+FormUsbFlashDisk.importac.Caption = Importa Usuarios de U Disk
+FormUsbFlashDisk.importac.Hint = Importa Usuarios de U Disk
+FormUsbFlashDisk.clearac.Caption = BorraLista
+FormUsbFlashDisk.clearac.Hint = BorraLista
+FormUsbFlashDisk.selectallac.Caption = Selecc.Todo
+FormUsbFlashDisk.selectallac.Hint = Selecc.Todo
+FormUsbFlashDisk.unselectallac.Caption = No selecc.
+FormUsbFlashDisk.unselectallac.Hint = No selecc.
+FormUsbFlashDisk.newuserac.Caption = Añadir Usuario a Local
+FormUsbFlashDisk.newuserac.Hint = Añadir Usuario a Local
+FormUsbFlashDisk.sysncdataac.Caption = Sobreescribe Dato Local
+FormUsbFlashDisk.sysncdataac.Hint = Sobreescribe Dato Local
+FormUsbFlashDisk.refreshac.Caption = Actualizar
+FormUsbFlashDisk.refreshac.Hint = Actualizar
+FormUsbFlashDisk.findac.Caption = Navega
+FormUsbFlashDisk.findac.Hint = navega
+FormUsbFlashDisk.outdataac.Caption = Exporta a U disk
+FormUsbFlashDisk.outdataac.Hint = Exporta a U disk
+FormUsbFlashDisk.chooserecac.Caption = Selecc.a Lista
+FormUsbFlashDisk.chooserecac.Hint = Selecc.a Lista
+FormUsbFlashDisk.chooseallrec.Caption = Selecc.Todo a Lista
+FormUsbFlashDisk.chooseallrec.Hint = Selecc.Todo a Lista
+FormUsbFlashDisk.removeac.Hint = Borra Selecc.
+FormUsbFlashDisk.Selectall1ac.Caption = Selecc.Todo
+FormUsbFlashDisk.Selectall1ac.Hint = Selecc.Todo
+FormUsbFlashDisk.unselectall1ac.Caption = No selecc.
+FormUsbFlashDisk.unselectall1ac.Hint = No selecc.
+FormUsbFlashDisk.refreshdiskac.Caption = Actualizar
+FormUsbFlashDisk.refreshdiskac.Hint = Actualizar
+FormUsbFlashDisk.delfileac.Caption = Borrar Dato de UDisk
+FormUsbFlashDisk.delfileac.Hint = Borrar Dato de UDisk
+FormUsbFlashDisk.rmvall.Caption = BorraLista
+FormUsbFlashDisk.rmvall.Hint = BorraLista
+FormUsbFlashDisk.Action1.Caption = Acción1
+FormUsbFlashDisk.addac.Caption = Añadir
+FormUsbFlashDisk.addac.Hint = Añadir
+FormUsbFlashDisk.editac.Caption = Edita
+FormUsbFlashDisk.editac.Hint = Edita
+FormUsbFlashDisk.importlogac.Caption = Importa de UDisk
+FormUsbFlashDisk.importlogac.Hint = Importa de UDisk
+FormUsbFlashDisk.addlogac.Caption = Añadir
+FormUsbFlashDisk.addlogac.Hint = Añadir
+FormUsbFlashDisk.choosealllogac.Caption = Selecc.Todo a Lista
+FormUsbFlashDisk.choosealllogac.Hint = Selecc.Todo a Lista
+FormUsbFlashDisk.chooselogac.Caption = Selecc. a Lista
+FormUsbFlashDisk.chooselogac.Hint = Selecc. a Lista
+FormUsbFlashDisk.rmvlogac.Caption = Selecc. a Lista
+FormUsbFlashDisk.rmvlogac.Hint = Selecc. a Lista
+FormUsbFlashDisk.Findlogac.Caption = Navega
+FormUsbFlashDisk.Findlogac.Hint = Navega
+FormUsbFlashDisk.refreshlogac.Caption = Actualizar
+FormUsbFlashDisk.refreshlogac.Hint = Actualizar
+FormUsbFlashDisk.Editlogac.Caption = Edita
+FormUsbFlashDisk.Editlogac.Hint = Edita
+FormUsbFlashDisk.OutLogac.Caption = Exporta a USB Disk
+FormUsbFlashDisk.OutLogac.Hint = Exporta a USB Disk
+FormUsbFlashDisk.dellogac.Caption = Borra Dato de USB Disk
+FormUsbFlashDisk.dellogac.Hint = Borra Dato de USB Disk
+FormUsbFlashDisk.clearlogac.Caption = BorraLista
+FormUsbFlashDisk.clearlogac.Hint = BorraLista
+FormUsbFlashDisk.rmvalllogac.Caption = BorraLista
+FormUsbFlashDisk.rmvalllogac.Hint = BorraLista
+FormUsbFlashDisk.delac.Caption = Borrar
+FormUsbFlashDisk.delac.Hint = Borrar
+FormUsbFlashDisk.del2ac.Caption = Borrar
+FormUsbFlashDisk.del2ac.Hint = Borrar
+
+FormUsbFlashDisk.impsms.Caption = Importa Datos de USB Disk FormUsbFlashDisk.impsms.Hint = Importa Datos de USB Disk
+FormUsbFlashDisk.regnewsms.Caption = Nuevo SMS a Local
+FormUsbFlashDisk.regnewsms.Hint = Nuevo SMS a Local
+FormUsbFlashDisk.del3ac.Caption = Borra Dato de USB Disk
+FormUsbFlashDisk.del3ac.Hint = Borra Dato de USB Disk
+FormUsbFlashDisk.imfromlocalac.Caption = Importar de local
+FormUsbFlashDisk.imfromlocalac.Hint = Importar de local
+FormUsbFlashDisk.imlogfromlac.Caption = Importar de local
+FormUsbFlashDisk.imlogfromlac.Hint = Importar de local
+FormUsbFlashDisk.clearsmsac.Caption = BorraLista
+FormUsbFlashDisk.clearsmsac.Hint = BorraLista
+FormUsbFlashDisk.syncsmsdataac.Caption = Sobreescribe Dato Local
+FormUsbFlashDisk.syncsmsdataac.Hint = Sobreescribe Dato Local
+FormUsbFlashDisk.findsmsac.Caption = Navega
+FormUsbFlashDisk.findsmsac.Hint = Navega
+FormUsbFlashDisk.refreshsmsac.Caption = Actualizar
+FormUsbFlashDisk.refreshsmsac.Hint = Actualizar
+FormUsbFlashDisk.selecallsmsac.Caption = Selecc.Todo a Lista
+FormUsbFlashDisk.selecallsmsac.Hint = Selecc.Todo a Lista
+FormUsbFlashDisk.choosesmsac.Caption = Selecc.a Lista
+FormUsbFlashDisk.choosesmsac.Hint = Selecc.a Lista
+FormUsbFlashDisk.exportsmsac.Caption = Exporta a USB Disk
+FormUsbFlashDisk.exportsmsac.Hint = Exporta a USB Disk
+FormUsbFlashDisk.clearallsmsac.Caption = BorraLista
+FormUsbFlashDisk.clearallsmsac.Hint = BorraLista
+FormUsbFlashDisk.clsmsac.Caption = Borrar Selecc.
+FormUsbFlashDisk.clsmsac.Hint = Borrar Selecc.
+FormUsbFlashDisk.N1.Caption = BorraLista
+FormUsbFlashDisk.N2.Caption = Borrar Selecc.
+FormUsbFlashDisk.N3.Caption = BorraLista
+FormUsbFlashDisk.N4.Caption = Borrar Selecc.
+FormUsbFlashDisk.N5.Caption = BorraLista
+FormUsbFlashDisk.lvLogFileList.Caption[0]=DevID
+FormUsbFlashDisk.lvLogFileList.Caption[1]=Descarga Hora
+FormUsbFlashDisk.lvLogFileList.Caption[2]=Tama?o
+FormUsbFlashDisk.lvUserFileList.Caption[0]=Devid
+FormUsbFlashDisk.lvUserFileList.Caption[1]=Descarga Hora
+FormUsbFlashDisk.lvUserFileList.Caption[2]=Tama?o
+FormUsbFlashDisk.USERMEMDATA1.DisplayLabel[0]=No-AC
+FormUsbFlashDisk.USERMEMDATA1.DisplayLabel[1]=Nombre
+FormUsbFlashDisk.USERMEMDATA1.DisplayLabel[3]=Privilegio
+FormUsbFlashDisk.USERMEMDATA1.DisplayLabel[4]=No.Tarj.
+
+
+[FormSystemLog]
+FormSystemLog.Caption=Sistema de Registros
+FormSystemLog.cbRunInfo.Caption=Corrida Reg 
+FormSystemLog.Label1.Caption=Primero Borra
+FormSystemLog.Label2.Caption=Reg
+FormSystemLog.btnDelete.Caption=Borrar
+FormSystemLog.btnExport.Caption=exporta
+FormSystemLog.qrySystemLog.DisplayLabel[0]=ID
+FormSystemLog.qrySystemLog.DisplayLabel[1]=Operador
+FormSystemLog.qrySystemLog.DisplayLabel[2]=Fecha
+FormSystemLog.qrySystemLog.DisplayLabel[3]=Disp.
+FormSystemLog.qrySystemLog.DisplayLabel[4]=Descripción
+
+
+
+[FormAlarmLog]
+FormAlarmLog.Caption=Consulta de Alarmas
+FormAlarmLog.Label1.Caption=Antes Borrar
+FormAlarmLog.Label2.Caption=reg.
+FormAlarmLog.btnDelete.Caption=Borrar
+FormAlarmLog.qryAlarmLog.DisplayLabel[0]=ID
+FormAlarmLog.qryAlarmLog.DisplayLabel[1]=Operador
+FormAlarmLog.qryAlarmLog.DisplayLabel[2]=Fecha
+FormAlarmLog.qryAlarmLog.DisplayLabel[3]=Disp.
+FormAlarmLog.qryAlarmLog.DisplayLabel[4]=Tipo Alarma
+FormAlarmLog.qryAlarmLog.DisplayLabel[5]=Número Enrol.
+
+[FrmImportUserData]
+FrmImportUserData.Caption=Importa Usuarios
+FrmImportUserData.btnImport.Caption=&Importa
+FrmImportUserData.btnDelete.Caption=&Borrar
+FrmImportUserData.btnSave.Caption=&Guarda
+FrmImportUserData.btnCancel.Caption=&Cancela
+
+[updateMain]
+updateMain.Caption= Sistema de Actualizaciones
+updateMain.updateTitle.Caption= Sistema de Actualizaciones
+updateMain.btn_update.Caption=Actualizar
+updateMain.btn_Cancel.Caption=Cerrar
+updateMain.Info.Caption=Total
+updateMain.lblDownloaded.Caption=Descargado
+updateMain.lblCurrent.Caption=Actual
+updateMain.lblProgress.Caption=Progreso
+updateMain.chproxy.Caption=UseServidorProxy
+updateMain.lblServer.Caption=Host
+updateMain.lblPort.Caption=Puerto
+updateMain.lblUsername.Caption=Nomb.Usua
+updateMain.lblPassWord.Caption=Contraseña
+updateMain.btnConfig.Caption=Establece
+updateMain.btnApply.Caption=Aplica
+
+;the following text for door function,if dont use it,you dont change it
+
+
+[FormACTimeZone]
+FormACTimeZone.Caption=Opc.ZonaHoraria
+FormACTimeZone.Label1.Caption=Descripción
+FormACTimeZone.lblSelectTZ.Caption=selec.IDZonaHoraria
+FormACTimeZone.GroupBox1.Caption=Domingo
+FormACTimeZone.GroupBox2.Caption=Lunes
+FormACTimeZone.GroupBox3.Caption=Martes
+FormACTimeZone.GroupBox4.Caption=Miercoles
+FormACTimeZone.GroupBox5.Caption=Jueves
+FormACTimeZone.GroupBox6.Caption=Viernes
+FormACTimeZone.GroupBox7.Caption=Sabado
+FormACTimeZone.btnSet.Caption=OK
+FormACTimeZone.btnCancel.Caption=Cancela
+
+[FormACTimeZones]
+FormACTimeZones.Caption=AC opción ZonaHora
+FormACTimeZones.btnAdd.Caption=Añadir
+FormACTimeZones.btnEdit.Caption=Editar
+FormACTimeZones.btnDelete.Caption=Borrar
+FormACTimeZones.qryACTimeZones.DisplayLabel[0]=ID
+FormACTimeZones.qryACTimeZones.DisplayLabel[1]=Descripción
+FormACTimeZones.qryACTimeZones.DisplayLabel[2]=Inicio
+FormACTimeZones.qryACTimeZones.DisplayLabel[3]=Fin
+FormACTimeZones.qryACTimeZones.DisplayLabel[4]=Inicio
+FormACTimeZones.qryACTimeZones.DisplayLabel[5]=Fin
+FormACTimeZones.qryACTimeZones.DisplayLabel[6]=Inicio
+FormACTimeZones.qryACTimeZones.DisplayLabel[7]=Fin
+FormACTimeZones.qryACTimeZones.DisplayLabel[8]=Inicio
+FormACTimeZones.qryACTimeZones.DisplayLabel[9]=Fin
+FormACTimeZones.qryACTimeZones.DisplayLabel[10]=Inicio
+FormACTimeZones.qryACTimeZones.DisplayLabel[11]=Fin
+FormACTimeZones.qryACTimeZones.DisplayLabel[12]=Inicio
+FormACTimeZones.qryACTimeZones.DisplayLabel[13]=Fin
+FormACTimeZones.qryACTimeZones.DisplayLabel[14]=Inicio
+FormACTimeZones.qryACTimeZones.DisplayLabel[15]=Fin
+
+[FormACGroup]
+FormACGroup.Caption=Grupo
+FormACGroup.btnAdd.Caption=Añadir
+FormACGroup.btnDelete.Caption=Borrar
+FormACGroup.btnGroupSet.Caption=Guardar
+FormACGroup.btnGroupCancel.Caption=Cerra
+FormACGroup.qryACGroup.DisplayLabel[0]=Grupo
+FormACGroup.qryACGroup.DisplayLabel[1]=Descripción
+FormACGroup.qryACGroup.DisplayLabel[2]=ZonaHora1
+FormACGroup.qryACGroup.DisplayLabel[3]=ZonaHora2
+FormACGroup.qryACGroup.DisplayLabel[4]=ZonaHora3
+
+FormACGroup.lblHint.Caption=Atención: al poner ZonaHoraria de grupo, ZonaHoraria 1 no puede ser 0, por otra parte la ZonaHoraria de este grupo es no válido;\r\n también, si ZonaHoraria 2 es 0, ZonaHoraria 3 es no válido.
+
+[FormACUnlockComb]
+FormACUnlockComb.Caption=Abrir Combinación
+FormACUnlockComb.btnViewACGroup.Caption=Detalle Grupo
+FormACUnlockComb.btnULGSet.Caption=Guardar
+FormACUnlockComb.btnAdd.Caption=Añadir
+FormACUnlockComb.btnDelete.Caption=Borrar
+FormACUnlockComb.btnULGCancel.Caption=Cerrar
+FormACUnlockComb.qryACUnlockComb.DisplayLabel[0]=Abrir Combinación
+FormACUnlockComb.qryACUnlockComb.DisplayLabel[1]=Descripción
+FormACUnlockComb.qryACUnlockComb.DisplayLabel[2]=Grupo 1
+FormACUnlockComb.qryACUnlockComb.DisplayLabel[3]=Grupo 2
+FormACUnlockComb.qryACUnlockComb.DisplayLabel[4]=Grupo 3
+FormACUnlockComb.qryACUnlockComb.DisplayLabel[5]=Grupo 4
+FormACUnlockComb.qryACUnlockComb.DisplayLabel[6]=Grupo 5
+
+[FormSetUserPrivilege]
+FormSetUserPrivilege.Caption=Privilegio Usuario
+FormSetUserPrivilege.btnSetUserGroup.Caption=FijaGrupo
+FormSetUserPrivilege.Label1.Caption=ZonaHora
+FormSetUserPrivilege.btnAllowAccess.Caption=Aplica Privilegio
+FormSetUserPrivilege.btnNoAccess.Caption=AccesoDeneg
+FormSetUserPrivilege.btnExit.Caption=Salir
+FormSetUserPrivilege.rmdUsers.DisplayLabel[1]=Dpto.
+FormSetUserPrivilege.rmdUsers.DisplayLabel[2]=ID
+FormSetUserPrivilege.rmdUsers.DisplayLabel[3]=Nombre
+FormSetUserPrivilege.rmdUsers.DisplayLabel[4]=Grupo
+FormSetUserPrivilege.rmdSelectUsers.DisplayLabel[1]=Dpto.
+FormSetUserPrivilege.rmdSelectUsers.DisplayLabel[2]=ID
+FormSetUserPrivilege.rmdSelectUsers.DisplayLabel[3]=Nombre
+FormSetUserPrivilege.rmdSelectUsers.DisplayLabel[4]=Grupo
+FormSetUserPrivilege.rmdMachines.DisplayLabel[1]=Máquina
+FormSetUserPrivilege.rmdMachines.DisplayLabel[2]=Número Máquina
+FormSetUserPrivilege.rmdMachines.DisplayLabel[3]=Dirrec.IP
+FormSetUserPrivilege.rmdSelectMachines.DisplayLabel[1]=Máquina
+FormSetUserPrivilege.rmdSelectMachines.DisplayLabel[2]=Número Máquina
+FormSetUserPrivilege.rmdSelectMachines.DisplayLabel[3]=Dirrec.IP
+
+[FormACUserPrivilege]
+FormACUserPrivilege.Caption=Ac Opción Privilegio
+FormACUserPrivilege.btnEditACPrivilege.Caption=Edita Privileg
+FormACUserPrivilege.ACDelete.Caption=Borra Privilegio
+FormACUserPrivilege.ACDelete.Caption=Borra todo Privilegio
+FormACUserPrivilege.qryUserACPrivilege.DisplayLabel[1]=ID
+FormACUserPrivilege.qryUserACPrivilege.DisplayLabel[2]=Nombre
+FormACUserPrivilege.qryUserACPrivilege.DisplayLabel[3]=Grupo
+FormACUserPrivilege.qryUserACPrivilege.DisplayLabel[4]=Grupo en Uso
+FormACUserPrivilege.qryUserACPrivilege.DisplayLabel[5]=ZonaHora 1
+FormACUserPrivilege.qryUserACPrivilege.DisplayLabel[6]=ZonaHora 2
+FormACUserPrivilege.qryUserACPrivilege.DisplayLabel[7]=ZonaHora 3
+FormACUserPrivilege.qryUserACPrivilege.DisplayLabel[8]=Puerta(AC Maq.)
+FormACUserPrivilege.qryUserACPrivilege.DisplayLabel[9]=Dpto.
+
+[FormUploadChoice]
+FormUploadChoice.Caption=Elegir Cargar
+FormUploadChoice.cbACOptions.Caption=AC Opc.
+FormUploadChoice.cbUserACPrivilege.Caption=Opc. Usuario AC  
+
+

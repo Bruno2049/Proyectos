@@ -1,0 +1,27 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kiosko.Controles" x:Class="Kiosko.Controles.UC_CalendarioFiltro" 
+             mc:Ignorable="d" 
+             d:DesignHeight="336" d:DesignWidth="571" FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoMesTitulo}" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  />
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition  />
+        </Grid.ColumnDefinitions>
+
+        <local:UC_Mes x:Name="Mes1" Grid.Row="1" MesChanged="UC_Mes_MesChanged" SeleccionadoChanged="UC_Mes_SeleccionadoChanged" MultipleSeleccion="False"   />
+        <local:UC_Mes x:Name="Mes2" Grid.Column="2" Grid.Row="1" MesChanged="UC_Mes_MesChanged"  SeleccionadoChanged="UC_Mes_SeleccionadoChanged" MultipleSeleccion="False"  />
+        <TextBlock Text="Periodo" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="3"/>
+        <!--<TextBlock Text="Hasta" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" />-->
+
+    </Grid>
+</UserControl>

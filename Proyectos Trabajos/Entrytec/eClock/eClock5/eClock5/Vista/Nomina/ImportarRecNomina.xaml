@@ -1,0 +1,54 @@
+﻿<UserControl xmlns:Controles="clr-namespace:eClock5.Controles"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5"  x:Class="eClock5.Vista.Nomina.ImportarRecNomina" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500" Foreground="{DynamicResource Blanco_Brush}" Loaded="UserControl_Loaded">
+    <Grid>
+        <eClock5:UC_ToolBar VerticalAlignment="Top" Width="Auto" Height="48" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Nombre="Btn_Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <Grid Margin="{DynamicResource MargenAltoToolBar}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="350" Background="{DynamicResource AzulClaro_Brush}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Lbl_TipoNomina" Text="Nomina" Style="{DynamicResource TextBlockEtiquetaStyle}" />
+            <Controles:UC_Combo x:Name="Cmb_NominaID" CampoLlave="NOMINA_ID" CampoNombre="NOMINA_NOMBRE" Tabla="EC_NOMINAS" CampoAdicional="NOMINA_PERIODO_NO" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}" SelectionChanged="Cmb_NominaID_SelectionChanged" CampoDescripcion="NOMINA_PERIODO_ANO" />
+            <TextBlock x:Name="Lbl_Ano" Grid.Row="1" Text="Año" Style="{DynamicResource TextBlockEtiquetaStyle}" />
+            <TextBox x:Name="Tbx_Ano"  Grid.Row="1" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}" TextChanged="Tbx_Ano_TextChanged" IsReadOnly="True" />
+            <TextBlock x:Name="Lbl_PeriodoNo" Grid.Row="2" Text="Periodo Número" Style="{DynamicResource TextBlockEtiquetaStyle}" />
+            <TextBox x:Name="Tbx_PeriodoNo"  Grid.Row="2" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}" TextChanged="Tbx_PeriodoNo_TextChanged" IsReadOnly="True" />
+            <StackPanel  Grid.Row="6" Grid.ColumnSpan="2">
+                <TextBlock x:Name="Lbl_SinDatos" Text="No se obtuvieron datos a importar" Style="{DynamicResource TextBlockErrorStyle}"  />
+                <TextBlock x:Name="Lbl_NoImportar" Text="No se pudo importar" Style="{DynamicResource TextBlockErrorStyle}"  />
+                <TextBlock x:Name="Lbl_Cargando" Text="Cargando datos..." Style="{DynamicResource TextBlockErrorStyle}"  />
+                <TextBlock x:Name="Lbl_SinNomina" Text="No tiene interfaz de nomina configurada" Style="{DynamicResource TextBlockErrorStyle}"  />
+                <TextBlock x:Name="Lbl_SelNomina" Text="Seleccione la nomina" Style="{DynamicResource TextBlockErrorStyle}" />
+                <TextBlock x:Name="Lbl_eAnoValido" Text="Introduzca un año válido" Style="{DynamicResource TextBlockErrorStyle}" />
+                <TextBlock x:Name="Lbl_ePeriodoValido" Text="Introduzca un periodo válido" Style="{DynamicResource TextBlockErrorStyle}" />
+                <TextBlock x:Name="Lbl_eSelCarpeta" Text="Seleccione una carpeta a importar" Style="{DynamicResource TextBlockErrorStyle}" />
+                <TextBlock x:Name="Lbl_eRed" Text="Error de red, no se pudo terminar" Style="{DynamicResource TextBlockErrorStyle}" />
+            </StackPanel>
+            <TextBlock x:Name="Lbl_SelCarpeta" Grid.Row="3" Text="Carpeta con PDFs y Xmls" Style="{DynamicResource TextBlockEtiquetaStyle}"  />
+            <TextBlock x:Name="Lbl_Carpeta" Grid.Row="3" Text=""  Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+            <Button x:Name="Btn_Elegir" Content="..." Grid.Column="1"  Grid.Row="3" Width="30" HorizontalAlignment="Right" Click="Btn_Elegir_Click"/>
+            <ProgressBar x:Name="Pbr_Recibos" Grid.ColumnSpan="2"  Grid.Row="4" Height="26" Margin="{DynamicResource MargenGeneralCorto}" />
+            <TextBlock x:Name="Lbl_Avance" Grid.Row="5" Text="" Style="{DynamicResource TextBlockEtiquetaStyle}" HorizontalAlignment="Center" Grid.ColumnSpan="2"  />
+        </Grid>
+
+    </Grid>
+</UserControl>

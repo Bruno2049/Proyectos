@@ -1,0 +1,45 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controles="clr-namespace:eClock5.Controles" xmlns:eClock5="clr-namespace:eClock5" x:Class="eClock5.Vista.Turnos.AsignacionPorFechas" 
+             mc:Ignorable="d" d:DesignWidth="500" Height="587.5">
+    
+        <Grid Background="{DynamicResource Blanco_Brush}">
+            <eClock5:UC_ToolBar Width="Auto" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" VerticalAlignment="Top">
+                <eClock5:UC_ToolBar.Controles>
+                    <!--eClock5:UC_ToolBar_Control Etiqueta="Regresar" Imagen="pack://siteoforigin:,,,/Resources/Regresar_64.png" Nombre="Btn_Regresar"/-->
+                    <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png" Nombre="Btn_Guardar"/>
+                    <eClock5:UC_ToolBar_Control Etiqueta="Mas" Imagen="pack://siteoforigin:,,,/Resources/MenuEscondido_64.png" Alineacion="Derecha" Nombre="Btn_Mas"/>
+                </eClock5:UC_ToolBar.Controles>
+            </eClock5:UC_ToolBar>
+        <Grid x:Name="XGrid_EC_AsigxFecha" Margin="10,53,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Lbl_PeriodoAsignacion" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Periodo de Asignacion" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeSubTitulo}" Foreground="{DynamicResource AzulOscuro_Brush}"/>
+            <TextBlock x:Name="Lbl_Desde" Margin="10,36,0,0" TextWrapping="Wrap" Text="Desde" Height="25" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulOscuro_Brush}" HorizontalAlignment="Left" Width="73"/>
+                <TextBlock x:Name="Lbl_Hasta" Margin="260,36,0,0" TextWrapping="Wrap" Text="Hasta" Height="25" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulOscuro_Brush}" HorizontalAlignment="Left" Width="73" Grid.ColumnSpan="2"/>
+                <Calendar x:Name="Cal_Desde" Margin="10,66,0,0" HorizontalAlignment="Left" Width="245" Height="183" VerticalAlignment="Top"/>
+                <Calendar x:Name="Cal_Hasta" Margin="250,66,0,0" HorizontalAlignment="Left" Width="210" Height="183" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="Lbl_Introducir" Margin="10,237,0,0" TextWrapping="Wrap" Text="Introduzca los números de empleados separados por una coma (,)" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeSubTitulo}" Foreground="{DynamicResource AzulOscuro_Brush}" HorizontalAlignment="Left" Width="460" Height="45" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="Tbx_Empleados" Margin="5,292,5,0" TextWrapping="Wrap" Height="37" VerticalAlignment="Top" Background="AliceBlue"  BorderBrush="{DynamicResource GrisClaro_Brush}" Grid.ColumnSpan="2"/>
+                <TextBlock  x:Name="Lbl_MoverEmpleados" Margin="10,342,0,0" TextWrapping="Wrap" Text="Mover empleados a otro turno " FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeSubTitulo}" Foreground="{DynamicResource AzulOscuro_Brush}" HorizontalAlignment="Left" Width="343" Height="21" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Grid Margin="-10,368,-10,10" Background="{DynamicResource AzulClaro_Brush}" Grid.ColumnSpan="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200*"/>
+                    </Grid.ColumnDefinitions>
+                
+                <Controles:UC_ListBox x:Name="Lstb_EC_TURNOS" CampoLlave="TURNO_ID" CampoNombre="TURNO_NOMBRE" Margin="3" Tabla="EC_TURNOS"/>
+                <!--TextBlock x:Name="Lbl_SeleccionarTurno" Margin="10,10,0,0" TextWrapping="Wrap" Text="Seleccionar el turno que se les asignará" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource Blanco_Brush}" HorizontalAlignment="Left" Width="210" Height="28"/>
+                <Controles:UC_Combo x:Name="Cbx_EC_TURNOS" Margin="10,10,31,42" Tabla="EC_TURNOS" CampoLlave="TURNO_ID" CampoNombre="TURNO_NOMBRE" MostrarBorrados="False" Grid.Column="1" Height="28" VerticalAlignment="Center" HorizontalAlignment="Center" Width="189" />
+                <Button x:Name="Btn_Asignar" Margin="57,42,76,10" Grid.Column="1" Content="Asignar" Click="Btn_Asignar_Click" /-->
+                </Grid>
+        </Grid>
+
+
+        </Grid>
+    
+</UserControl>

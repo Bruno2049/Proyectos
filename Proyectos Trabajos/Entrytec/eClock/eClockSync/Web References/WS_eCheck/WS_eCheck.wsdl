@@ -1,0 +1,3495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/DS_WS_eCheck.xsd" />
+      <s:import namespace="http://tempuri.org/DS_WSAccesos.xsd" />
+      <s:import namespace="http://tempuri.org/DS_WSHorariosPersona.xsd" />
+      <s:import schemaLocation="http://localhost:49351/eClock/WS_eCheck.asmx?schema=DS_WSPersonasTerminales" namespace="http://tempuri.org/DS_WS_eCheck.xsd" />
+      <s:import schemaLocation="http://localhost:49351/eClock/WS_eCheck.asmx?schema=DS_WSAccesos" namespace="http://tempuri.org/DS_WSAccesos.xsd" />
+      <s:import schemaLocation="http://localhost:49351/eClock/WS_eCheck.asmx?schema=DS_WSHorariosPersona" namespace="http://tempuri.org/DS_WSHorariosPersona.xsd" />
+      <s:element name="ParcheDS_WSPersonasTerminales">
+        <s:complexType />
+      </s:element>
+      <s:element name="ParcheDS_WSPersonasTerminalesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParcheDS_WSPersonasTerminalesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_WS_eCheck.xsd" name="namespace" />
+                <s:attribute fixed="DT_PersonasTerminalesDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregaDExtra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Tipo" type="tns:Tipo_Term_DEXTRAS" />
+            <s:element minOccurs="0" maxOccurs="1" name="Extra" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="Tipo_Term_DEXTRAS">
+        <s:restriction base="s:string">
+          <s:enumeration value="Conexion_Correcta" />
+          <s:enumeration value="Error_Conexion" />
+          <s:enumeration value="ComunicacionCorrecta" />
+          <s:enumeration value="Error_Comunicacion" />
+          <s:enumeration value="Log_Comunicacion" />
+          <s:enumeration value="FechaHora_Enviada" />
+          <s:enumeration value="FechaHora_Error" />
+          <s:enumeration value="Checadas_Descargadas" />
+          <s:enumeration value="Checadas_Error" />
+          <s:enumeration value="Vectores_Descargados" />
+          <s:enumeration value="Vectores_Error_Desc" />
+          <s:enumeration value="Vectores_Enviados" />
+          <s:enumeration value="Vectores_Error_Env" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AgregaDExtraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AgregaDExtraResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Confirma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuarioCrypt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordEncriptado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuarioCryptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarUsuarioCryptResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuarioTerminal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Terminal_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuarioTerminalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarUsuarioTerminalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistePersonaWindowsCE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LongitudNoEmpleado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LongitudNoSerie" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="LecturaCredencial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistePersonaWindowsCEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExistePersonaWindowsCEResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistePersonaTracve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistePersonaTracveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExistePersonaTracveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenSESION_ID">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenSESION_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenSESION_IDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenSUSCRIPCION_ID">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenSUSCRIPCION_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenSUSCRIPCION_IDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenUsuario_ID">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenUsuario_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenUsuario_IDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Sitio_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminalesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenTerminalesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_WS_eCheck.xsd" name="namespace" />
+                <s:attribute fixed="EC_TERMINALESDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenTerminalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_WS_eCheck.xsd" name="namespace" />
+                <s:attribute fixed="EC_TERMINALESDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenSitio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Sitio_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenSitioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenSitioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_WS_eCheck.xsd" name="namespace" />
+                <s:attribute fixed="EC_SITIOSDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenSitioID">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenSitioIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenSitioIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenSitiosDSMenu">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenSitiosDSMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenSitiosDSMenuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TerminalAgrega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sitio_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tmodelo_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_tecn_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_tecn_add_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tcampollave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tdireccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tminutos_dif" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TerminalAgregaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalAgregaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TerminalBorra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="terminalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TerminalBorraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalBorraResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SitioAgrega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NombreSitio" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="segundosSync" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SitioAgregaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SitioAgregaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TerminalActualiza">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sitio_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tmodelo_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipo_tecn_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tcampollave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tdireccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tminutos_dif" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="terminalid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TerminalActualizaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalActualizaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SitioActualiza">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NombreSitio" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="segundosSync" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SitioID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SitioActualizaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SitioActualizaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminalesDSMenu">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenTerminalesDSMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenTerminalesDSMenuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminalesDSMenuporSitio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SitioID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminalesDSMenuporSitioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenTerminalesDSMenuporSitioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibeVectores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Terminal_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Datos">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_WS_eCheck.xsd" name="namespace" />
+                <s:attribute fixed="DT_VectoresDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibeVectoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RecibeVectoresResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenParametro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Terminal_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parametro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorPredeterminado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenParametroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenParametroResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaParametro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Terminal_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parametro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaParametroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AsignaParametroResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenFechaHora">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenFechaHoraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenFechaHoraResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenZonaHorario">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenZonaHorarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenZonaHorarioResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistePersonaIDCampoLlave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoLlave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistePersonaIDCampoLlaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExistePersonaIDCampoLlaveResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoAdicional" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExisteSupervisor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NoSupervisor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExisteSupervisorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExisteSupervisorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistePersonaIDCampoAdicional">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoAdicional" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistePersonaIDCampoAdicionalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExistePersonaIDCampoAdicionalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenValorCampoAdicionalWindows">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenValorCampoAdicionalWindowsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenValorCampoAdicionalWindowsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenValorCampoAdicionalWindowsCE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenValorCampoAdicionalWindowsCEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenValorCampoAdicionalWindowsCEResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaValorCampoAdicionalWindows">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoAdicional" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaValorCampoAdicionalWindowsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AsignaValorCampoAdicionalWindowsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaValorCampoAdicionalWindowsCE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoAdicional" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaValorCampoAdicionalWindowsCEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AsignaValorCampoAdicionalWindowsCEResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValorCampoLlaveWindows">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValorCampoLlaveWindowsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoLlaveWindowsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValorCampoLlaveWindowsCE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValorCampoLlaveWindowsCEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoLlaveWindowsCEResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenFotoWindows">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenFotoWindowsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenFotoWindowsResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenFotoWindowsCE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenFotoWindowsCEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenFotoWindowsCEResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PersonaNombreWindows">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PersonaNombreWindowsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PersonaNombreWindowsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PersonaNombreWindowsCE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PersonaNombreWindowsCEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PersonaNombreWindowsCEResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarChecadas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DataSetAccesos">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DS_WSAccesos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarChecadasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarChecadasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DS_WSAccesos.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarChecadaWindows">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoAccesoID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaHora" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarChecadaWindowsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarChecadaWindowsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarChecadaSinFechaWindows">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoAccesoID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarChecadaSinFechaWindowsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarChecadaSinFechaWindowsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarChecadaSinFechaWindowsCE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoAccesoID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarChecadaSinFechaWindowsCEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarChecadaSinFechaWindowsCEResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenHuella">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenHuellaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenHuellaResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenHuellaEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NoHuella" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenHuellaExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenHuellaExResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HayHuella">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NoHuella" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HayHuellaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HayHuellaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaVectorAVec">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlmacenID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Huella" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="NoHuella" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaVectorAVecResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AsignaVectorAVecResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaHuellaEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Huella" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaHuellaExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AsignaHuellaExResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaHuella">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Huella" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="NoHuella" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaHuellaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AsignaHuellaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EtiquetaLlave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EtiquetaLlaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EtiquetaLlaveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EtiquetaLlaveAdicional">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EtiquetaLlaveAdicionalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EtiquetaLlaveAdicionalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculaHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Texto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculaHashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalculaHashResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmaListaEmpleados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmaListaEmpleadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmaListaEmpleadosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaEmpleadosCambios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaEmpleadosCambiosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaEmpleadosCambiosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DS_WS_eCheck.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaEmpleados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaEmpleadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaEmpleadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DS_WS_eCheck.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregaChecada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Llave" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaHora" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="TAcceso" type="tns:TipoAccesos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="TipoAccesos">
+        <s:restriction base="s:string">
+          <s:enumeration value="No_definido" />
+          <s:enumeration value="Correcto" />
+          <s:enumeration value="Entrada" />
+          <s:enumeration value="Salida" />
+          <s:enumeration value="Salida_a_Comer" />
+          <s:enumeration value="Regreso_de_comer" />
+          <s:enumeration value="Incorrecto" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AgregaChecadaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AgregaChecadaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviaChecadas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Checadas">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_WS_eCheck.xsd" name="namespace" />
+                <s:attribute fixed="DT_CHECADASDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviaChecadasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EnviaChecadasResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistePersonaIDTerminalID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistePersonaIDTerminalIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExistePersonaIDTerminalIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenPersonas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Persona_Link_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenPersonasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenPersonasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_WS_eCheck.xsd" name="namespace" />
+                <s:attribute fixed="PERSONASDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenPersonaID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Persona_Link_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenPersonaIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenPersonaIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenPersonaLinkID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Persona_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenPersonaLinkIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenPersonaLinkIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminalIDIp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID485" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminalIDIpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenTerminalIDIpResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenPersonaIDWindowsCE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Persona_Link_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenPersonaIDWindowsCEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenPersonaIDWindowsCEResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarHorarioWindowsCE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EsEntrada" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarHorarioWindowsCEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarHorarioWindowsCEResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenPersonasNombre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Persona_Nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenPersonasNombreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenPersonasNombreResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_WS_eCheck.xsd" name="namespace" />
+                <s:attribute fixed="PERSONASDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenNoPersonas">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenNoPersonasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenNoPersonasResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenValorCampo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Campo_Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenValorCampoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenValorCampoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregaTerminal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Sesion_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Modelo" type="tns:ModeloTerminales" />
+            <s:element minOccurs="1" maxOccurs="1" name="Tecnologia" type="tns:Tecnologias" />
+            <s:element minOccurs="1" maxOccurs="1" name="TecnologiaAdd" type="tns:Tecnologias" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampoLlave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampoAdd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Enrola" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="ModeloTerminales">
+        <s:restriction base="s:string">
+          <s:enumeration value="No_definido" />
+          <s:enumeration value="TRAX" />
+          <s:enumeration value="HandPunch" />
+          <s:enumeration value="AC215" />
+          <s:enumeration value="AC115" />
+          <s:enumeration value="EnTRAX" />
+          <s:enumeration value="Lector_de_Huella_USB" />
+          <s:enumeration value="Lector_de_Huella_MS" />
+          <s:enumeration value="Lector_6055" />
+          <s:enumeration value="Lector_Windows_Chip" />
+          <s:enumeration value="Lector_Serial_CB_BM" />
+          <s:enumeration value="UlTRAX" />
+          <s:enumeration value="Prox" />
+          <s:enumeration value="SuperMax" />
+          <s:enumeration value="Max" />
+          <s:enumeration value="NeoMax" />
+          <s:enumeration value="Camara_Usb" />
+          <s:enumeration value="Camara_Intellinet" />
+          <s:enumeration value="Panel_Plumas" />
+          <s:enumeration value="BioEntryPlus" />
+          <s:enumeration value="BioStation" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="Tecnologias">
+        <s:restriction base="s:string">
+          <s:enumeration value="Ninguna" />
+          <s:enumeration value="Código_de_Barras" />
+          <s:enumeration value="Banda_Magnética" />
+          <s:enumeration value="Proximidad" />
+          <s:enumeration value="Mifare" />
+          <s:enumeration value="Huella" />
+          <s:enumeration value="Palma" />
+          <s:enumeration value="Chip_de_contacto" />
+          <s:enumeration value="Rostro" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AgregaTerminalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AgregaTerminalResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminalesEnrolamiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Sesion_ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenTerminalesEnrolamientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenTerminalesEnrolamientoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DS_WS_eCheck.xsd" name="namespace" />
+                <s:attribute fixed="EC_TERMINALESDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaAntiPassBack">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonaID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoChecada" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaAntiPassBackResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidaAntiPassBackResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HorariosPersona">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TerminalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HorariosPersonaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HorariosPersonaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DS_WSHorariosPersona.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenLinkNuevoUsuario">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenLinkNuevoUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenLinkNuevoUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenLinkOlvidoClave">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenLinkOlvidoClaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenLinkOlvidoClaveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ParcheDS_WSPersonasTerminalesSoapIn">
+    <wsdl:part name="parameters" element="tns:ParcheDS_WSPersonasTerminales" />
+  </wsdl:message>
+  <wsdl:message name="ParcheDS_WSPersonasTerminalesSoapOut">
+    <wsdl:part name="parameters" element="tns:ParcheDS_WSPersonasTerminalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregaDExtraSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregaDExtra" />
+  </wsdl:message>
+  <wsdl:message name="AgregaDExtraSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregaDExtraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmaSoapIn">
+    <wsdl:part name="parameters" element="tns:Confirma" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioCryptSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioCrypt" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioCryptSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioCryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioTerminalSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioTerminal" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioTerminalSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioTerminalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExistePersonaWindowsCESoapIn">
+    <wsdl:part name="parameters" element="tns:ExistePersonaWindowsCE" />
+  </wsdl:message>
+  <wsdl:message name="ExistePersonaWindowsCESoapOut">
+    <wsdl:part name="parameters" element="tns:ExistePersonaWindowsCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExistePersonaTracveSoapIn">
+    <wsdl:part name="parameters" element="tns:ExistePersonaTracve" />
+  </wsdl:message>
+  <wsdl:message name="ExistePersonaTracveSoapOut">
+    <wsdl:part name="parameters" element="tns:ExistePersonaTracveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSESION_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenSESION_ID" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSESION_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenSESION_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSUSCRIPCION_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenSUSCRIPCION_ID" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSUSCRIPCION_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenSUSCRIPCION_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenUsuario_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenUsuario_ID" />
+  </wsdl:message>
+  <wsdl:message name="ObtenUsuario_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenUsuario_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenTerminales" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenTerminalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenTerminal" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenTerminalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSitioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenSitio" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSitioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenSitioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSitioIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenSitioID" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSitioIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenSitioIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSitiosDSMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenSitiosDSMenu" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSitiosDSMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenSitiosDSMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="TerminalAgregaSoapIn">
+    <wsdl:part name="parameters" element="tns:TerminalAgrega" />
+  </wsdl:message>
+  <wsdl:message name="TerminalAgregaSoapOut">
+    <wsdl:part name="parameters" element="tns:TerminalAgregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TerminalBorraSoapIn">
+    <wsdl:part name="parameters" element="tns:TerminalBorra" />
+  </wsdl:message>
+  <wsdl:message name="TerminalBorraSoapOut">
+    <wsdl:part name="parameters" element="tns:TerminalBorraResponse" />
+  </wsdl:message>
+  <wsdl:message name="SitioAgregaSoapIn">
+    <wsdl:part name="parameters" element="tns:SitioAgrega" />
+  </wsdl:message>
+  <wsdl:message name="SitioAgregaSoapOut">
+    <wsdl:part name="parameters" element="tns:SitioAgregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TerminalActualizaSoapIn">
+    <wsdl:part name="parameters" element="tns:TerminalActualiza" />
+  </wsdl:message>
+  <wsdl:message name="TerminalActualizaSoapOut">
+    <wsdl:part name="parameters" element="tns:TerminalActualizaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SitioActualizaSoapIn">
+    <wsdl:part name="parameters" element="tns:SitioActualiza" />
+  </wsdl:message>
+  <wsdl:message name="SitioActualizaSoapOut">
+    <wsdl:part name="parameters" element="tns:SitioActualizaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalesDSMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenTerminalesDSMenu" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalesDSMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenTerminalesDSMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalesDSMenuporSitioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenTerminalesDSMenuporSitio" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalesDSMenuporSitioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenTerminalesDSMenuporSitioResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecibeVectoresSoapIn">
+    <wsdl:part name="parameters" element="tns:RecibeVectores" />
+  </wsdl:message>
+  <wsdl:message name="RecibeVectoresSoapOut">
+    <wsdl:part name="parameters" element="tns:RecibeVectoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenParametroSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenParametro" />
+  </wsdl:message>
+  <wsdl:message name="ObtenParametroSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenParametroResponse" />
+  </wsdl:message>
+  <wsdl:message name="AsignaParametroSoapIn">
+    <wsdl:part name="parameters" element="tns:AsignaParametro" />
+  </wsdl:message>
+  <wsdl:message name="AsignaParametroSoapOut">
+    <wsdl:part name="parameters" element="tns:AsignaParametroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenFechaHoraSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenFechaHora" />
+  </wsdl:message>
+  <wsdl:message name="ObtenFechaHoraSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenFechaHoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenZonaHorarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenZonaHorario" />
+  </wsdl:message>
+  <wsdl:message name="ObtenZonaHorarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenZonaHorarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExistePersonaIDCampoLlaveSoapIn">
+    <wsdl:part name="parameters" element="tns:ExistePersonaIDCampoLlave" />
+  </wsdl:message>
+  <wsdl:message name="ExistePersonaIDCampoLlaveSoapOut">
+    <wsdl:part name="parameters" element="tns:ExistePersonaIDCampoLlaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExisteSupervisorSoapIn">
+    <wsdl:part name="parameters" element="tns:ExisteSupervisor" />
+  </wsdl:message>
+  <wsdl:message name="ExisteSupervisorSoapOut">
+    <wsdl:part name="parameters" element="tns:ExisteSupervisorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExistePersonaIDCampoAdicionalSoapIn">
+    <wsdl:part name="parameters" element="tns:ExistePersonaIDCampoAdicional" />
+  </wsdl:message>
+  <wsdl:message name="ExistePersonaIDCampoAdicionalSoapOut">
+    <wsdl:part name="parameters" element="tns:ExistePersonaIDCampoAdicionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenValorCampoAdicionalWindowsSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenValorCampoAdicionalWindows" />
+  </wsdl:message>
+  <wsdl:message name="ObtenValorCampoAdicionalWindowsSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenValorCampoAdicionalWindowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenValorCampoAdicionalWindowsCESoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenValorCampoAdicionalWindowsCE" />
+  </wsdl:message>
+  <wsdl:message name="ObtenValorCampoAdicionalWindowsCESoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenValorCampoAdicionalWindowsCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="AsignaValorCampoAdicionalWindowsSoapIn">
+    <wsdl:part name="parameters" element="tns:AsignaValorCampoAdicionalWindows" />
+  </wsdl:message>
+  <wsdl:message name="AsignaValorCampoAdicionalWindowsSoapOut">
+    <wsdl:part name="parameters" element="tns:AsignaValorCampoAdicionalWindowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AsignaValorCampoAdicionalWindowsCESoapIn">
+    <wsdl:part name="parameters" element="tns:AsignaValorCampoAdicionalWindowsCE" />
+  </wsdl:message>
+  <wsdl:message name="AsignaValorCampoAdicionalWindowsCESoapOut">
+    <wsdl:part name="parameters" element="tns:AsignaValorCampoAdicionalWindowsCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValorCampoLlaveWindowsSoapIn">
+    <wsdl:part name="parameters" element="tns:ValorCampoLlaveWindows" />
+  </wsdl:message>
+  <wsdl:message name="ValorCampoLlaveWindowsSoapOut">
+    <wsdl:part name="parameters" element="tns:ValorCampoLlaveWindowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValorCampoLlaveWindowsCESoapIn">
+    <wsdl:part name="parameters" element="tns:ValorCampoLlaveWindowsCE" />
+  </wsdl:message>
+  <wsdl:message name="ValorCampoLlaveWindowsCESoapOut">
+    <wsdl:part name="parameters" element="tns:ValorCampoLlaveWindowsCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenFotoWindowsSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenFotoWindows" />
+  </wsdl:message>
+  <wsdl:message name="ObtenFotoWindowsSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenFotoWindowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenFotoWindowsCESoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenFotoWindowsCE" />
+  </wsdl:message>
+  <wsdl:message name="ObtenFotoWindowsCESoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenFotoWindowsCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonaNombreWindowsSoapIn">
+    <wsdl:part name="parameters" element="tns:PersonaNombreWindows" />
+  </wsdl:message>
+  <wsdl:message name="PersonaNombreWindowsSoapOut">
+    <wsdl:part name="parameters" element="tns:PersonaNombreWindowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonaNombreWindowsCESoapIn">
+    <wsdl:part name="parameters" element="tns:PersonaNombreWindowsCE" />
+  </wsdl:message>
+  <wsdl:message name="PersonaNombreWindowsCESoapOut">
+    <wsdl:part name="parameters" element="tns:PersonaNombreWindowsCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarChecadasSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarChecadas" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarChecadasSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarChecadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarChecadaWindowsSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarChecadaWindows" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarChecadaWindowsSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarChecadaWindowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarChecadaSinFechaWindowsSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarChecadaSinFechaWindows" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarChecadaSinFechaWindowsSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarChecadaSinFechaWindowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarChecadaSinFechaWindowsCESoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarChecadaSinFechaWindowsCE" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarChecadaSinFechaWindowsCESoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarChecadaSinFechaWindowsCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenHuellaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenHuella" />
+  </wsdl:message>
+  <wsdl:message name="ObtenHuellaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenHuellaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenHuellaExSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenHuellaEx" />
+  </wsdl:message>
+  <wsdl:message name="ObtenHuellaExSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenHuellaExResponse" />
+  </wsdl:message>
+  <wsdl:message name="HayHuellaSoapIn">
+    <wsdl:part name="parameters" element="tns:HayHuella" />
+  </wsdl:message>
+  <wsdl:message name="HayHuellaSoapOut">
+    <wsdl:part name="parameters" element="tns:HayHuellaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AsignaVectorAVecSoapIn">
+    <wsdl:part name="parameters" element="tns:AsignaVectorAVec" />
+  </wsdl:message>
+  <wsdl:message name="AsignaVectorAVecSoapOut">
+    <wsdl:part name="parameters" element="tns:AsignaVectorAVecResponse" />
+  </wsdl:message>
+  <wsdl:message name="AsignaHuellaExSoapIn">
+    <wsdl:part name="parameters" element="tns:AsignaHuellaEx" />
+  </wsdl:message>
+  <wsdl:message name="AsignaHuellaExSoapOut">
+    <wsdl:part name="parameters" element="tns:AsignaHuellaExResponse" />
+  </wsdl:message>
+  <wsdl:message name="AsignaHuellaSoapIn">
+    <wsdl:part name="parameters" element="tns:AsignaHuella" />
+  </wsdl:message>
+  <wsdl:message name="AsignaHuellaSoapOut">
+    <wsdl:part name="parameters" element="tns:AsignaHuellaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EtiquetaLlaveSoapIn">
+    <wsdl:part name="parameters" element="tns:EtiquetaLlave" />
+  </wsdl:message>
+  <wsdl:message name="EtiquetaLlaveSoapOut">
+    <wsdl:part name="parameters" element="tns:EtiquetaLlaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="EtiquetaLlaveAdicionalSoapIn">
+    <wsdl:part name="parameters" element="tns:EtiquetaLlaveAdicional" />
+  </wsdl:message>
+  <wsdl:message name="EtiquetaLlaveAdicionalSoapOut">
+    <wsdl:part name="parameters" element="tns:EtiquetaLlaveAdicionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculaHashSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculaHash" />
+  </wsdl:message>
+  <wsdl:message name="CalculaHashSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculaHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmaListaEmpleadosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmaListaEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmaListaEmpleadosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmaListaEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaEmpleadosCambiosSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaEmpleadosCambios" />
+  </wsdl:message>
+  <wsdl:message name="ListaEmpleadosCambiosSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaEmpleadosCambiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaEmpleadosSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="ListaEmpleadosSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregaChecadaSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregaChecada" />
+  </wsdl:message>
+  <wsdl:message name="AgregaChecadaSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregaChecadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviaChecadasSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviaChecadas" />
+  </wsdl:message>
+  <wsdl:message name="EnviaChecadasSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviaChecadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExistePersonaIDTerminalIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ExistePersonaIDTerminalID" />
+  </wsdl:message>
+  <wsdl:message name="ExistePersonaIDTerminalIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ExistePersonaIDTerminalIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenPersonasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenPersonas" />
+  </wsdl:message>
+  <wsdl:message name="ObtenPersonasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenPersonasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenPersonaIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenPersonaID" />
+  </wsdl:message>
+  <wsdl:message name="ObtenPersonaIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenPersonaIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenPersonaLinkIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenPersonaLinkID" />
+  </wsdl:message>
+  <wsdl:message name="ObtenPersonaLinkIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenPersonaLinkIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalIDIpSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenTerminalIDIp" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalIDIpSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenTerminalIDIpResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenPersonaIDWindowsCESoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenPersonaIDWindowsCE" />
+  </wsdl:message>
+  <wsdl:message name="ObtenPersonaIDWindowsCESoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenPersonaIDWindowsCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarHorarioWindowsCESoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarHorarioWindowsCE" />
+  </wsdl:message>
+  <wsdl:message name="ValidarHorarioWindowsCESoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarHorarioWindowsCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenPersonasNombreSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenPersonasNombre" />
+  </wsdl:message>
+  <wsdl:message name="ObtenPersonasNombreSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenPersonasNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenNoPersonasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenNoPersonas" />
+  </wsdl:message>
+  <wsdl:message name="ObtenNoPersonasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenNoPersonasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenValorCampoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenValorCampo" />
+  </wsdl:message>
+  <wsdl:message name="ObtenValorCampoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenValorCampoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregaTerminalSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregaTerminal" />
+  </wsdl:message>
+  <wsdl:message name="AgregaTerminalSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregaTerminalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalesEnrolamientoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenTerminalesEnrolamiento" />
+  </wsdl:message>
+  <wsdl:message name="ObtenTerminalesEnrolamientoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenTerminalesEnrolamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaAntiPassBackSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaAntiPassBack" />
+  </wsdl:message>
+  <wsdl:message name="ValidaAntiPassBackSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaAntiPassBackResponse" />
+  </wsdl:message>
+  <wsdl:message name="HorariosPersonaSoapIn">
+    <wsdl:part name="parameters" element="tns:HorariosPersona" />
+  </wsdl:message>
+  <wsdl:message name="HorariosPersonaSoapOut">
+    <wsdl:part name="parameters" element="tns:HorariosPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenLinkNuevoUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenLinkNuevoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ObtenLinkNuevoUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenLinkNuevoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenLinkOlvidoClaveSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenLinkOlvidoClave" />
+  </wsdl:message>
+  <wsdl:message name="ObtenLinkOlvidoClaveSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenLinkOlvidoClaveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_eCheckSoap">
+    <wsdl:operation name="ParcheDS_WSPersonasTerminales">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">no Ejecutar</wsdl:documentation>
+      <wsdl:input message="tns:ParcheDS_WSPersonasTerminalesSoapIn" />
+      <wsdl:output message="tns:ParcheDS_WSPersonasTerminalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaDExtra">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agrega un movimiento a Terminales DExtras</wsdl:documentation>
+      <wsdl:input message="tns:AgregaDExtraSoapIn" />
+      <wsdl:output message="tns:AgregaDExtraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Confirma">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Confirma la transmisión de una persona</wsdl:documentation>
+      <wsdl:input message="tns:ConfirmaSoapIn" />
+      <wsdl:output message="tns:ConfirmaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioCrypt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inicia sesión con encriptación</wsdl:documentation>
+      <wsdl:input message="tns:ValidarUsuarioCryptSoapIn" />
+      <wsdl:output message="tns:ValidarUsuarioCryptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inicia sesión</wsdl:documentation>
+      <wsdl:input message="tns:ValidarUsuarioSoapIn" />
+      <wsdl:output message="tns:ValidarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioTerminal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inicia sesión con TerminalID</wsdl:documentation>
+      <wsdl:input message="tns:ValidarUsuarioTerminalSoapIn" />
+      <wsdl:output message="tns:ValidarUsuarioTerminalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersona">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Verifica si existe la persona a partir de la lectura de la credencial</wsdl:documentation>
+      <wsdl:input name="ExistePersonaWindowsCE" message="tns:ExistePersonaWindowsCESoapIn" />
+      <wsdl:output name="ExistePersonaWindowsCE" message="tns:ExistePersonaWindowsCESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersonaTracve">
+      <wsdl:input message="tns:ExistePersonaTracveSoapIn" />
+      <wsdl:output message="tns:ExistePersonaTracveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSESION_ID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene la sesion actual</wsdl:documentation>
+      <wsdl:input message="tns:ObtenSESION_IDSoapIn" />
+      <wsdl:output message="tns:ObtenSESION_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSUSCRIPCION_ID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene la Suscripcion actual</wsdl:documentation>
+      <wsdl:input message="tns:ObtenSUSCRIPCION_IDSoapIn" />
+      <wsdl:output message="tns:ObtenSUSCRIPCION_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenUsuario_ID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el usuarioID</wsdl:documentation>
+      <wsdl:input message="tns:ObtenUsuario_IDSoapIn" />
+      <wsdl:output message="tns:ObtenUsuario_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminales">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene la lista de terminales asignadas a un sitio</wsdl:documentation>
+      <wsdl:input message="tns:ObtenTerminalesSoapIn" />
+      <wsdl:output message="tns:ObtenTerminalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los datos de una termial</wsdl:documentation>
+      <wsdl:input message="tns:ObtenTerminalSoapIn" />
+      <wsdl:output message="tns:ObtenTerminalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSitio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los datos de un sitio</wsdl:documentation>
+      <wsdl:input message="tns:ObtenSitioSoapIn" />
+      <wsdl:output message="tns:ObtenSitioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSitioID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el ID de el sitio predeterminado del usuarios (el primero)</wsdl:documentation>
+      <wsdl:input message="tns:ObtenSitioIDSoapIn" />
+      <wsdl:output message="tns:ObtenSitioIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSitiosDSMenu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los datos de un sitio</wsdl:documentation>
+      <wsdl:input message="tns:ObtenSitiosDSMenuSoapIn" />
+      <wsdl:output message="tns:ObtenSitiosDSMenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TerminalAgrega">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los datos de un sitio</wsdl:documentation>
+      <wsdl:input message="tns:TerminalAgregaSoapIn" />
+      <wsdl:output message="tns:TerminalAgregaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TerminalBorra">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los datos de un sitio</wsdl:documentation>
+      <wsdl:input message="tns:TerminalBorraSoapIn" />
+      <wsdl:output message="tns:TerminalBorraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SitioAgrega">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los datos de un sitio</wsdl:documentation>
+      <wsdl:input message="tns:SitioAgregaSoapIn" />
+      <wsdl:output message="tns:SitioAgregaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TerminalActualiza">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los datos de un sitio</wsdl:documentation>
+      <wsdl:input message="tns:TerminalActualizaSoapIn" />
+      <wsdl:output message="tns:TerminalActualizaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SitioActualiza">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los datos de un sitio</wsdl:documentation>
+      <wsdl:input message="tns:SitioActualizaSoapIn" />
+      <wsdl:output message="tns:SitioActualizaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminalesDSMenu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los datos de un sitio</wsdl:documentation>
+      <wsdl:input message="tns:ObtenTerminalesDSMenuSoapIn" />
+      <wsdl:output message="tns:ObtenTerminalesDSMenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminalesDSMenuporSitio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los datos de un sitio</wsdl:documentation>
+      <wsdl:input message="tns:ObtenTerminalesDSMenuporSitioSoapIn" />
+      <wsdl:output message="tns:ObtenTerminalesDSMenuporSitioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibeVectores">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene un parámetro de la terminal</wsdl:documentation>
+      <wsdl:input message="tns:RecibeVectoresSoapIn" />
+      <wsdl:output message="tns:RecibeVectoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenParametro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene un parámetro de la terminal</wsdl:documentation>
+      <wsdl:input message="tns:ObtenParametroSoapIn" />
+      <wsdl:output message="tns:ObtenParametroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaParametro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Asigna un parámetro a la terminal</wsdl:documentation>
+      <wsdl:input message="tns:AsignaParametroSoapIn" />
+      <wsdl:output message="tns:AsignaParametroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenFechaHora">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los datos de un sitio</wsdl:documentation>
+      <wsdl:input message="tns:ObtenFechaHoraSoapIn" />
+      <wsdl:output message="tns:ObtenFechaHoraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenZonaHorario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene la zona horaria</wsdl:documentation>
+      <wsdl:input message="tns:ObtenZonaHorarioSoapIn" />
+      <wsdl:output message="tns:ObtenZonaHorarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersonaIDCampoLlave">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el valor del campo llave de una persona</wsdl:documentation>
+      <wsdl:input message="tns:ExistePersonaIDCampoLlaveSoapIn" />
+      <wsdl:output message="tns:ExistePersonaIDCampoLlaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExisteSupervisor">
+      <wsdl:input message="tns:ExisteSupervisorSoapIn" />
+      <wsdl:output message="tns:ExisteSupervisorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersonaIDCampoAdicional">
+      <wsdl:input message="tns:ExistePersonaIDCampoAdicionalSoapIn" />
+      <wsdl:output message="tns:ExistePersonaIDCampoAdicionalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenValorCampoAdicional">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene un valor del campo adicional de una terminal</wsdl:documentation>
+      <wsdl:input name="ObtenValorCampoAdicionalWindows" message="tns:ObtenValorCampoAdicionalWindowsSoapIn" />
+      <wsdl:output name="ObtenValorCampoAdicionalWindows" message="tns:ObtenValorCampoAdicionalWindowsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenValorCampoAdicional">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene un valor del campo adicional de una terminal</wsdl:documentation>
+      <wsdl:input name="ObtenValorCampoAdicionalWindowsCE" message="tns:ObtenValorCampoAdicionalWindowsCESoapIn" />
+      <wsdl:output name="ObtenValorCampoAdicionalWindowsCE" message="tns:ObtenValorCampoAdicionalWindowsCESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaCampoAdicional">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Asigna un valor al campo adicional de una terminal</wsdl:documentation>
+      <wsdl:input name="AsignaValorCampoAdicionalWindows" message="tns:AsignaValorCampoAdicionalWindowsSoapIn" />
+      <wsdl:output name="AsignaValorCampoAdicionalWindows" message="tns:AsignaValorCampoAdicionalWindowsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaCampoAdicional">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Asigna un valor al campo adicional de una terminal</wsdl:documentation>
+      <wsdl:input name="AsignaValorCampoAdicionalWindowsCE" message="tns:AsignaValorCampoAdicionalWindowsCESoapIn" />
+      <wsdl:output name="AsignaValorCampoAdicionalWindowsCE" message="tns:AsignaValorCampoAdicionalWindowsCESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValorCampoLlave">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el valor del campo llave</wsdl:documentation>
+      <wsdl:input name="ValorCampoLlaveWindows" message="tns:ValorCampoLlaveWindowsSoapIn" />
+      <wsdl:output name="ValorCampoLlaveWindows" message="tns:ValorCampoLlaveWindowsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValorCampoLlave">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el valor del campo llave</wsdl:documentation>
+      <wsdl:input name="ValorCampoLlaveWindowsCE" message="tns:ValorCampoLlaveWindowsCESoapIn" />
+      <wsdl:output name="ValorCampoLlaveWindowsCE" message="tns:ValorCampoLlaveWindowsCESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenFoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene la foto de una persona a partir de un identificador</wsdl:documentation>
+      <wsdl:input name="ObtenFotoWindows" message="tns:ObtenFotoWindowsSoapIn" />
+      <wsdl:output name="ObtenFotoWindows" message="tns:ObtenFotoWindowsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenFoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene la foto de una persona a partir de un identificador</wsdl:documentation>
+      <wsdl:input name="ObtenFotoWindowsCE" message="tns:ObtenFotoWindowsCESoapIn" />
+      <wsdl:output name="ObtenFotoWindowsCE" message="tns:ObtenFotoWindowsCESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonaNombre">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el nombre de la persona</wsdl:documentation>
+      <wsdl:input name="PersonaNombreWindows" message="tns:PersonaNombreWindowsSoapIn" />
+      <wsdl:output name="PersonaNombreWindows" message="tns:PersonaNombreWindowsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonaNombre">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el nombre de la persona</wsdl:documentation>
+      <wsdl:input name="PersonaNombreWindowsCE" message="tns:PersonaNombreWindowsCESoapIn" />
+      <wsdl:output name="PersonaNombreWindowsCE" message="tns:PersonaNombreWindowsCESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarChecadas">
+      <wsdl:input message="tns:RegistrarChecadasSoapIn" />
+      <wsdl:output message="tns:RegistrarChecadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarChecada">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registra una chacada de laguna persona</wsdl:documentation>
+      <wsdl:input name="RegistrarChecadaWindows" message="tns:RegistrarChecadaWindowsSoapIn" />
+      <wsdl:output name="RegistrarChecadaWindows" message="tns:RegistrarChecadaWindowsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarChecada">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registra una chacada de laguna persona</wsdl:documentation>
+      <wsdl:input name="RegistrarChecadaSinFechaWindows" message="tns:RegistrarChecadaSinFechaWindowsSoapIn" />
+      <wsdl:output name="RegistrarChecadaSinFechaWindows" message="tns:RegistrarChecadaSinFechaWindowsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarChecada">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registra una chacada de la persona</wsdl:documentation>
+      <wsdl:input name="RegistrarChecadaSinFechaWindowsCE" message="tns:RegistrarChecadaSinFechaWindowsCESoapIn" />
+      <wsdl:output name="RegistrarChecadaSinFechaWindowsCE" message="tns:RegistrarChecadaSinFechaWindowsCESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenHuella">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">obtiene la huella de la persona</wsdl:documentation>
+      <wsdl:input message="tns:ObtenHuellaSoapIn" />
+      <wsdl:output message="tns:ObtenHuellaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenHuella">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">obtiene la huella de la persona</wsdl:documentation>
+      <wsdl:input name="ObtenHuellaEx" message="tns:ObtenHuellaExSoapIn" />
+      <wsdl:output name="ObtenHuellaEx" message="tns:ObtenHuellaExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HayHuella">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">obtiene la huella de la persona</wsdl:documentation>
+      <wsdl:input message="tns:HayHuellaSoapIn" />
+      <wsdl:output message="tns:HayHuellaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaVectorAVec">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Asigna un vector a un almacen de vectores</wsdl:documentation>
+      <wsdl:input message="tns:AsignaVectorAVecSoapIn" />
+      <wsdl:output message="tns:AsignaVectorAVecSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaHuella">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guardar los vectores de huella en un almacen</wsdl:documentation>
+      <wsdl:input name="AsignaHuellaEx" message="tns:AsignaHuellaExSoapIn" />
+      <wsdl:output name="AsignaHuellaEx" message="tns:AsignaHuellaExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaHuella">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guardar los vectores de huella en un almacen</wsdl:documentation>
+      <wsdl:input message="tns:AsignaHuellaSoapIn" />
+      <wsdl:output message="tns:AsignaHuellaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EtiquetaLlave">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Devuelve la etiqueta del campo Llave</wsdl:documentation>
+      <wsdl:input message="tns:EtiquetaLlaveSoapIn" />
+      <wsdl:output message="tns:EtiquetaLlaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EtiquetaLlaveAdicional">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Devuelve la etiqueta del campo Llave Adicional</wsdl:documentation>
+      <wsdl:input message="tns:EtiquetaLlaveAdicionalSoapIn" />
+      <wsdl:output message="tns:EtiquetaLlaveAdicionalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculaHash">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calcula Hash</wsdl:documentation>
+      <wsdl:input message="tns:CalculaHashSoapIn" />
+      <wsdl:output message="tns:CalculaHashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmaListaEmpleados">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Indica que se ha procesado devidamente la lista de empleados y se debe confirmar.</wsdl:documentation>
+      <wsdl:input message="tns:ConfirmaListaEmpleadosSoapIn" />
+      <wsdl:output message="tns:ConfirmaListaEmpleadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaEmpleadosCambios">
+      <wsdl:input message="tns:ListaEmpleadosCambiosSoapIn" />
+      <wsdl:output message="tns:ListaEmpleadosCambiosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaEmpleados">
+      <wsdl:input message="tns:ListaEmpleadosSoapIn" />
+      <wsdl:output message="tns:ListaEmpleadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaChecada">
+      <wsdl:input message="tns:AgregaChecadaSoapIn" />
+      <wsdl:output message="tns:AgregaChecadaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviaChecadas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Envia las checadas</wsdl:documentation>
+      <wsdl:input message="tns:EnviaChecadasSoapIn" />
+      <wsdl:output message="tns:EnviaChecadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersonaIDTerminalID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Verifica si esta asignada la persona a la terminal</wsdl:documentation>
+      <wsdl:input message="tns:ExistePersonaIDTerminalIDSoapIn" />
+      <wsdl:output message="tns:ExistePersonaIDTerminalIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene un listado de personas con el mismo Campo Llave</wsdl:documentation>
+      <wsdl:input message="tns:ObtenPersonasSoapIn" />
+      <wsdl:output message="tns:ObtenPersonasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonaID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el identificador de la persona</wsdl:documentation>
+      <wsdl:input message="tns:ObtenPersonaIDSoapIn" />
+      <wsdl:output message="tns:ObtenPersonaIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonaLinkID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el identificador del empleado</wsdl:documentation>
+      <wsdl:input message="tns:ObtenPersonaLinkIDSoapIn" />
+      <wsdl:output message="tns:ObtenPersonaLinkIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminalIDIp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el identificador de la terminal a partir de la ip y el identificador 485</wsdl:documentation>
+      <wsdl:input message="tns:ObtenTerminalIDIpSoapIn" />
+      <wsdl:output message="tns:ObtenTerminalIDIpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonaID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el identificador de la persona</wsdl:documentation>
+      <wsdl:input name="ObtenPersonaIDWindowsCE" message="tns:ObtenPersonaIDWindowsCESoapIn" />
+      <wsdl:output name="ObtenPersonaIDWindowsCE" message="tns:ObtenPersonaIDWindowsCESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarHorario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida el horario de turnos de una persona</wsdl:documentation>
+      <wsdl:input name="ValidarHorarioWindowsCE" message="tns:ValidarHorarioWindowsCESoapIn" />
+      <wsdl:output name="ValidarHorarioWindowsCE" message="tns:ValidarHorarioWindowsCESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonasNombre">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los nombres de las personas activas</wsdl:documentation>
+      <wsdl:input message="tns:ObtenPersonasNombreSoapIn" />
+      <wsdl:output message="tns:ObtenPersonasNombreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenNoPersonas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el numero de personas en la base de datos activas</wsdl:documentation>
+      <wsdl:input message="tns:ObtenNoPersonasSoapIn" />
+      <wsdl:output message="tns:ObtenNoPersonasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenValorCampo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el valor de un campo de la tabla EC_PERSONAS_DATOS</wsdl:documentation>
+      <wsdl:input message="tns:ObtenValorCampoSoapIn" />
+      <wsdl:output message="tns:ObtenValorCampoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaTerminal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agrega o actualiza una terminal en el listado de terminales</wsdl:documentation>
+      <wsdl:input message="tns:AgregaTerminalSoapIn" />
+      <wsdl:output message="tns:AgregaTerminalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminalesEnrolamiento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene la lista de terminales de enrolamiento</wsdl:documentation>
+      <wsdl:input message="tns:ObtenTerminalesEnrolamientoSoapIn" />
+      <wsdl:output message="tns:ObtenTerminalesEnrolamientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaAntiPassBack">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida el AntiPassBack de un Empleado</wsdl:documentation>
+      <wsdl:input message="tns:ValidaAntiPassBackSoapIn" />
+      <wsdl:output message="tns:ValidaAntiPassBackSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HorariosPersona">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Devuelve la lista de los empleados y la lista de los turnos corrientes</wsdl:documentation>
+      <wsdl:input message="tns:HorariosPersonaSoapIn" />
+      <wsdl:output message="tns:HorariosPersonaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenLinkNuevoUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el link de nuevo usuario</wsdl:documentation>
+      <wsdl:input message="tns:ObtenLinkNuevoUsuarioSoapIn" />
+      <wsdl:output message="tns:ObtenLinkNuevoUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenLinkOlvidoClave">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el link de olvido de contraseña</wsdl:documentation>
+      <wsdl:input message="tns:ObtenLinkOlvidoClaveSoapIn" />
+      <wsdl:output message="tns:ObtenLinkOlvidoClaveSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_eCheckSoap" type="tns:WS_eCheckSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ParcheDS_WSPersonasTerminales">
+      <soap:operation soapAction="http://tempuri.org/ParcheDS_WSPersonasTerminales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaDExtra">
+      <soap:operation soapAction="http://tempuri.org/AgregaDExtra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Confirma">
+      <soap:operation soapAction="http://tempuri.org/Confirma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioCrypt">
+      <soap:operation soapAction="http://tempuri.org/ValidarUsuarioCrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuario">
+      <soap:operation soapAction="http://tempuri.org/ValidarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioTerminal">
+      <soap:operation soapAction="http://tempuri.org/ValidarUsuarioTerminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersona">
+      <soap:operation soapAction="http://tempuri.org/ExistePersonaWindowsCE" style="document" />
+      <wsdl:input name="ExistePersonaWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ExistePersonaWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersonaTracve">
+      <soap:operation soapAction="http://tempuri.org/ExistePersonaTracve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSESION_ID">
+      <soap:operation soapAction="http://tempuri.org/ObtenSESION_ID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSUSCRIPCION_ID">
+      <soap:operation soapAction="http://tempuri.org/ObtenSUSCRIPCION_ID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenUsuario_ID">
+      <soap:operation soapAction="http://tempuri.org/ObtenUsuario_ID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminales">
+      <soap:operation soapAction="http://tempuri.org/ObtenTerminales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminal">
+      <soap:operation soapAction="http://tempuri.org/ObtenTerminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSitio">
+      <soap:operation soapAction="http://tempuri.org/ObtenSitio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSitioID">
+      <soap:operation soapAction="http://tempuri.org/ObtenSitioID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSitiosDSMenu">
+      <soap:operation soapAction="http://tempuri.org/ObtenSitiosDSMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerminalAgrega">
+      <soap:operation soapAction="http://tempuri.org/TerminalAgrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerminalBorra">
+      <soap:operation soapAction="http://tempuri.org/TerminalBorra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SitioAgrega">
+      <soap:operation soapAction="http://tempuri.org/SitioAgrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerminalActualiza">
+      <soap:operation soapAction="http://tempuri.org/TerminalActualiza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SitioActualiza">
+      <soap:operation soapAction="http://tempuri.org/SitioActualiza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminalesDSMenu">
+      <soap:operation soapAction="http://tempuri.org/ObtenTerminalesDSMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminalesDSMenuporSitio">
+      <soap:operation soapAction="http://tempuri.org/ObtenTerminalesDSMenuporSitio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibeVectores">
+      <soap:operation soapAction="http://tempuri.org/RecibeVectores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenParametro">
+      <soap:operation soapAction="http://tempuri.org/ObtenParametro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaParametro">
+      <soap:operation soapAction="http://tempuri.org/AsignaParametro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenFechaHora">
+      <soap:operation soapAction="http://tempuri.org/ObtenFechaHora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenZonaHorario">
+      <soap:operation soapAction="http://tempuri.org/ObtenZonaHorario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersonaIDCampoLlave">
+      <soap:operation soapAction="http://tempuri.org/ExistePersonaIDCampoLlave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteSupervisor">
+      <soap:operation soapAction="http://tempuri.org/ExisteSupervisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersonaIDCampoAdicional">
+      <soap:operation soapAction="http://tempuri.org/ExistePersonaIDCampoAdicional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenValorCampoAdicional">
+      <soap:operation soapAction="http://tempuri.org/ObtenValorCampoAdicionalWindows" style="document" />
+      <wsdl:input name="ObtenValorCampoAdicionalWindows">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenValorCampoAdicionalWindows">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenValorCampoAdicional">
+      <soap:operation soapAction="http://tempuri.org/ObtenValorCampoAdicionalWindowsCE" style="document" />
+      <wsdl:input name="ObtenValorCampoAdicionalWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenValorCampoAdicionalWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaCampoAdicional">
+      <soap:operation soapAction="http://tempuri.org/AsignaValorCampoAdicionalWindows" style="document" />
+      <wsdl:input name="AsignaValorCampoAdicionalWindows">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AsignaValorCampoAdicionalWindows">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaCampoAdicional">
+      <soap:operation soapAction="http://tempuri.org/AsignaValorCampoAdicionalWindowsCE" style="document" />
+      <wsdl:input name="AsignaValorCampoAdicionalWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AsignaValorCampoAdicionalWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValorCampoLlave">
+      <soap:operation soapAction="http://tempuri.org/ValorCampoLlaveWindows" style="document" />
+      <wsdl:input name="ValorCampoLlaveWindows">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ValorCampoLlaveWindows">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValorCampoLlave">
+      <soap:operation soapAction="http://tempuri.org/ValorCampoLlaveWindowsCE" style="document" />
+      <wsdl:input name="ValorCampoLlaveWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ValorCampoLlaveWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenFoto">
+      <soap:operation soapAction="http://tempuri.org/ObtenFotoWindows" style="document" />
+      <wsdl:input name="ObtenFotoWindows">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenFotoWindows">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenFoto">
+      <soap:operation soapAction="http://tempuri.org/ObtenFotoWindowsCE" style="document" />
+      <wsdl:input name="ObtenFotoWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenFotoWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonaNombre">
+      <soap:operation soapAction="http://tempuri.org/PersonaNombreWindows" style="document" />
+      <wsdl:input name="PersonaNombreWindows">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PersonaNombreWindows">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonaNombre">
+      <soap:operation soapAction="http://tempuri.org/PersonaNombreWindowsCE" style="document" />
+      <wsdl:input name="PersonaNombreWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PersonaNombreWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarChecadas">
+      <soap:operation soapAction="http://tempuri.org/RegistrarChecadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarChecada">
+      <soap:operation soapAction="http://tempuri.org/RegistrarChecadaWindows" style="document" />
+      <wsdl:input name="RegistrarChecadaWindows">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RegistrarChecadaWindows">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarChecada">
+      <soap:operation soapAction="http://tempuri.org/RegistrarChecadaSinFechaWindows" style="document" />
+      <wsdl:input name="RegistrarChecadaSinFechaWindows">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RegistrarChecadaSinFechaWindows">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarChecada">
+      <soap:operation soapAction="http://tempuri.org/RegistrarChecadaSinFechaWindowsCE" style="document" />
+      <wsdl:input name="RegistrarChecadaSinFechaWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RegistrarChecadaSinFechaWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenHuella">
+      <soap:operation soapAction="http://tempuri.org/ObtenHuella" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenHuella">
+      <soap:operation soapAction="http://tempuri.org/ObtenHuellaEx" style="document" />
+      <wsdl:input name="ObtenHuellaEx">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenHuellaEx">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HayHuella">
+      <soap:operation soapAction="http://tempuri.org/HayHuella" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaVectorAVec">
+      <soap:operation soapAction="http://tempuri.org/AsignaVectorAVec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaHuella">
+      <soap:operation soapAction="http://tempuri.org/AsignaHuellaEx" style="document" />
+      <wsdl:input name="AsignaHuellaEx">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AsignaHuellaEx">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaHuella">
+      <soap:operation soapAction="http://tempuri.org/AsignaHuella" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EtiquetaLlave">
+      <soap:operation soapAction="http://tempuri.org/EtiquetaLlave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EtiquetaLlaveAdicional">
+      <soap:operation soapAction="http://tempuri.org/EtiquetaLlaveAdicional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculaHash">
+      <soap:operation soapAction="http://tempuri.org/CalculaHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmaListaEmpleados">
+      <soap:operation soapAction="http://tempuri.org/ConfirmaListaEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaEmpleadosCambios">
+      <soap:operation soapAction="http://tempuri.org/ListaEmpleadosCambios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaEmpleados">
+      <soap:operation soapAction="http://tempuri.org/ListaEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaChecada">
+      <soap:operation soapAction="http://tempuri.org/AgregaChecada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviaChecadas">
+      <soap:operation soapAction="http://tempuri.org/EnviaChecadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersonaIDTerminalID">
+      <soap:operation soapAction="http://tempuri.org/ExistePersonaIDTerminalID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonas">
+      <soap:operation soapAction="http://tempuri.org/ObtenPersonas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonaID">
+      <soap:operation soapAction="http://tempuri.org/ObtenPersonaID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonaLinkID">
+      <soap:operation soapAction="http://tempuri.org/ObtenPersonaLinkID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminalIDIp">
+      <soap:operation soapAction="http://tempuri.org/ObtenTerminalIDIp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonaID">
+      <soap:operation soapAction="http://tempuri.org/ObtenPersonaIDWindowsCE" style="document" />
+      <wsdl:input name="ObtenPersonaIDWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenPersonaIDWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarHorario">
+      <soap:operation soapAction="http://tempuri.org/ValidarHorarioWindowsCE" style="document" />
+      <wsdl:input name="ValidarHorarioWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ValidarHorarioWindowsCE">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonasNombre">
+      <soap:operation soapAction="http://tempuri.org/ObtenPersonasNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenNoPersonas">
+      <soap:operation soapAction="http://tempuri.org/ObtenNoPersonas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenValorCampo">
+      <soap:operation soapAction="http://tempuri.org/ObtenValorCampo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaTerminal">
+      <soap:operation soapAction="http://tempuri.org/AgregaTerminal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminalesEnrolamiento">
+      <soap:operation soapAction="http://tempuri.org/ObtenTerminalesEnrolamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaAntiPassBack">
+      <soap:operation soapAction="http://tempuri.org/ValidaAntiPassBack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HorariosPersona">
+      <soap:operation soapAction="http://tempuri.org/HorariosPersona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenLinkNuevoUsuario">
+      <soap:operation soapAction="http://tempuri.org/ObtenLinkNuevoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenLinkOlvidoClave">
+      <soap:operation soapAction="http://tempuri.org/ObtenLinkOlvidoClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_eCheckSoap12" type="tns:WS_eCheckSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ParcheDS_WSPersonasTerminales">
+      <soap12:operation soapAction="http://tempuri.org/ParcheDS_WSPersonasTerminales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaDExtra">
+      <soap12:operation soapAction="http://tempuri.org/AgregaDExtra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Confirma">
+      <soap12:operation soapAction="http://tempuri.org/Confirma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioCrypt">
+      <soap12:operation soapAction="http://tempuri.org/ValidarUsuarioCrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/ValidarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuarioTerminal">
+      <soap12:operation soapAction="http://tempuri.org/ValidarUsuarioTerminal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersona">
+      <soap12:operation soapAction="http://tempuri.org/ExistePersonaWindowsCE" style="document" />
+      <wsdl:input name="ExistePersonaWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ExistePersonaWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersonaTracve">
+      <soap12:operation soapAction="http://tempuri.org/ExistePersonaTracve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSESION_ID">
+      <soap12:operation soapAction="http://tempuri.org/ObtenSESION_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSUSCRIPCION_ID">
+      <soap12:operation soapAction="http://tempuri.org/ObtenSUSCRIPCION_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenUsuario_ID">
+      <soap12:operation soapAction="http://tempuri.org/ObtenUsuario_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminales">
+      <soap12:operation soapAction="http://tempuri.org/ObtenTerminales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminal">
+      <soap12:operation soapAction="http://tempuri.org/ObtenTerminal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSitio">
+      <soap12:operation soapAction="http://tempuri.org/ObtenSitio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSitioID">
+      <soap12:operation soapAction="http://tempuri.org/ObtenSitioID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSitiosDSMenu">
+      <soap12:operation soapAction="http://tempuri.org/ObtenSitiosDSMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerminalAgrega">
+      <soap12:operation soapAction="http://tempuri.org/TerminalAgrega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerminalBorra">
+      <soap12:operation soapAction="http://tempuri.org/TerminalBorra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SitioAgrega">
+      <soap12:operation soapAction="http://tempuri.org/SitioAgrega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerminalActualiza">
+      <soap12:operation soapAction="http://tempuri.org/TerminalActualiza" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SitioActualiza">
+      <soap12:operation soapAction="http://tempuri.org/SitioActualiza" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminalesDSMenu">
+      <soap12:operation soapAction="http://tempuri.org/ObtenTerminalesDSMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminalesDSMenuporSitio">
+      <soap12:operation soapAction="http://tempuri.org/ObtenTerminalesDSMenuporSitio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibeVectores">
+      <soap12:operation soapAction="http://tempuri.org/RecibeVectores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenParametro">
+      <soap12:operation soapAction="http://tempuri.org/ObtenParametro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaParametro">
+      <soap12:operation soapAction="http://tempuri.org/AsignaParametro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenFechaHora">
+      <soap12:operation soapAction="http://tempuri.org/ObtenFechaHora" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenZonaHorario">
+      <soap12:operation soapAction="http://tempuri.org/ObtenZonaHorario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersonaIDCampoLlave">
+      <soap12:operation soapAction="http://tempuri.org/ExistePersonaIDCampoLlave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteSupervisor">
+      <soap12:operation soapAction="http://tempuri.org/ExisteSupervisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersonaIDCampoAdicional">
+      <soap12:operation soapAction="http://tempuri.org/ExistePersonaIDCampoAdicional" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenValorCampoAdicional">
+      <soap12:operation soapAction="http://tempuri.org/ObtenValorCampoAdicionalWindows" style="document" />
+      <wsdl:input name="ObtenValorCampoAdicionalWindows">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenValorCampoAdicionalWindows">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenValorCampoAdicional">
+      <soap12:operation soapAction="http://tempuri.org/ObtenValorCampoAdicionalWindowsCE" style="document" />
+      <wsdl:input name="ObtenValorCampoAdicionalWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenValorCampoAdicionalWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaCampoAdicional">
+      <soap12:operation soapAction="http://tempuri.org/AsignaValorCampoAdicionalWindows" style="document" />
+      <wsdl:input name="AsignaValorCampoAdicionalWindows">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AsignaValorCampoAdicionalWindows">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaCampoAdicional">
+      <soap12:operation soapAction="http://tempuri.org/AsignaValorCampoAdicionalWindowsCE" style="document" />
+      <wsdl:input name="AsignaValorCampoAdicionalWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AsignaValorCampoAdicionalWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValorCampoLlave">
+      <soap12:operation soapAction="http://tempuri.org/ValorCampoLlaveWindows" style="document" />
+      <wsdl:input name="ValorCampoLlaveWindows">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ValorCampoLlaveWindows">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValorCampoLlave">
+      <soap12:operation soapAction="http://tempuri.org/ValorCampoLlaveWindowsCE" style="document" />
+      <wsdl:input name="ValorCampoLlaveWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ValorCampoLlaveWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenFoto">
+      <soap12:operation soapAction="http://tempuri.org/ObtenFotoWindows" style="document" />
+      <wsdl:input name="ObtenFotoWindows">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenFotoWindows">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenFoto">
+      <soap12:operation soapAction="http://tempuri.org/ObtenFotoWindowsCE" style="document" />
+      <wsdl:input name="ObtenFotoWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenFotoWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonaNombre">
+      <soap12:operation soapAction="http://tempuri.org/PersonaNombreWindows" style="document" />
+      <wsdl:input name="PersonaNombreWindows">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PersonaNombreWindows">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonaNombre">
+      <soap12:operation soapAction="http://tempuri.org/PersonaNombreWindowsCE" style="document" />
+      <wsdl:input name="PersonaNombreWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="PersonaNombreWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarChecadas">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarChecadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarChecada">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarChecadaWindows" style="document" />
+      <wsdl:input name="RegistrarChecadaWindows">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RegistrarChecadaWindows">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarChecada">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarChecadaSinFechaWindows" style="document" />
+      <wsdl:input name="RegistrarChecadaSinFechaWindows">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RegistrarChecadaSinFechaWindows">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarChecada">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarChecadaSinFechaWindowsCE" style="document" />
+      <wsdl:input name="RegistrarChecadaSinFechaWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RegistrarChecadaSinFechaWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenHuella">
+      <soap12:operation soapAction="http://tempuri.org/ObtenHuella" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenHuella">
+      <soap12:operation soapAction="http://tempuri.org/ObtenHuellaEx" style="document" />
+      <wsdl:input name="ObtenHuellaEx">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenHuellaEx">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HayHuella">
+      <soap12:operation soapAction="http://tempuri.org/HayHuella" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaVectorAVec">
+      <soap12:operation soapAction="http://tempuri.org/AsignaVectorAVec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaHuella">
+      <soap12:operation soapAction="http://tempuri.org/AsignaHuellaEx" style="document" />
+      <wsdl:input name="AsignaHuellaEx">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AsignaHuellaEx">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaHuella">
+      <soap12:operation soapAction="http://tempuri.org/AsignaHuella" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EtiquetaLlave">
+      <soap12:operation soapAction="http://tempuri.org/EtiquetaLlave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EtiquetaLlaveAdicional">
+      <soap12:operation soapAction="http://tempuri.org/EtiquetaLlaveAdicional" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculaHash">
+      <soap12:operation soapAction="http://tempuri.org/CalculaHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmaListaEmpleados">
+      <soap12:operation soapAction="http://tempuri.org/ConfirmaListaEmpleados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaEmpleadosCambios">
+      <soap12:operation soapAction="http://tempuri.org/ListaEmpleadosCambios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaEmpleados">
+      <soap12:operation soapAction="http://tempuri.org/ListaEmpleados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaChecada">
+      <soap12:operation soapAction="http://tempuri.org/AgregaChecada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviaChecadas">
+      <soap12:operation soapAction="http://tempuri.org/EnviaChecadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistePersonaIDTerminalID">
+      <soap12:operation soapAction="http://tempuri.org/ExistePersonaIDTerminalID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonas">
+      <soap12:operation soapAction="http://tempuri.org/ObtenPersonas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonaID">
+      <soap12:operation soapAction="http://tempuri.org/ObtenPersonaID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonaLinkID">
+      <soap12:operation soapAction="http://tempuri.org/ObtenPersonaLinkID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminalIDIp">
+      <soap12:operation soapAction="http://tempuri.org/ObtenTerminalIDIp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonaID">
+      <soap12:operation soapAction="http://tempuri.org/ObtenPersonaIDWindowsCE" style="document" />
+      <wsdl:input name="ObtenPersonaIDWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ObtenPersonaIDWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarHorario">
+      <soap12:operation soapAction="http://tempuri.org/ValidarHorarioWindowsCE" style="document" />
+      <wsdl:input name="ValidarHorarioWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ValidarHorarioWindowsCE">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonasNombre">
+      <soap12:operation soapAction="http://tempuri.org/ObtenPersonasNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenNoPersonas">
+      <soap12:operation soapAction="http://tempuri.org/ObtenNoPersonas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenValorCampo">
+      <soap12:operation soapAction="http://tempuri.org/ObtenValorCampo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregaTerminal">
+      <soap12:operation soapAction="http://tempuri.org/AgregaTerminal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTerminalesEnrolamiento">
+      <soap12:operation soapAction="http://tempuri.org/ObtenTerminalesEnrolamiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaAntiPassBack">
+      <soap12:operation soapAction="http://tempuri.org/ValidaAntiPassBack" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HorariosPersona">
+      <soap12:operation soapAction="http://tempuri.org/HorariosPersona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenLinkNuevoUsuario">
+      <soap12:operation soapAction="http://tempuri.org/ObtenLinkNuevoUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenLinkOlvidoClave">
+      <soap12:operation soapAction="http://tempuri.org/ObtenLinkOlvidoClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_eCheck">
+    <wsdl:port name="WS_eCheckSoap" binding="tns:WS_eCheckSoap">
+      <soap:address location="http://localhost:49351/eClock/WS_eCheck.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_eCheckSoap12" binding="tns:WS_eCheckSoap12">
+      <soap12:address location="http://localhost:49351/eClock/WS_eCheck.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,103 @@
+Error: "" EjecutaEscalar Comando SELECT CONFIG_USUARIO_VALOR FROM eC_CONFIG_USUARIO WHERE CONFIG_USUARIO_VARIABLE = 'RutaReportesPDF' AND USUARIO_ID = 0 14/09/2009 12:55:27 p.m.
+Error: ""  
+ Msg = El nombre de objeto 'eC_CONFIG_USUARIO' no es válido.
+ StackTrace =    en System.Data.OleDb.OleDbDataReader.ProcessResults(OleDbHResult hr)
+   en System.Data.OleDb.OleDbDataReader.NextResult()
+   en System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   en System.Data.OleDb.OleDbCommand.ExecuteScalar()
+   en CeC_BD.EjecutaEscalar(String Comando) en t:\IdSoft Proyectos\EntryTec\eClock\Código Fuente\eClock\App_Code\CeC_BD.cs:línea 585 14/09/2009 12:55:28 p.m.
+Error: ""  
+ Msg = Error de inicio de sesión del usuario 'sa'.
+ StackTrace =    en System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   en System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup)
+   en System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   en System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.OleDb.OleDbConnection.Open()
+   en CeC_BD.EjecutaEscalar(String Comando) en c:\Users\benja\Documents\EntryTec\eClock\App_Code\CeC_BD.cs:línea 578
+   en CeC_BD.ObtenConfig(Int32 USUARIO_ID, String Variable, String ValorDefecto) en c:\Users\benja\Documents\EntryTec\eClock\App_Code\CeC_BD.cs:línea 1362 28/09/2009 11:12:15 a.m.
+Error: "" EjecutaEscalar Comando SELECT CONFIG_USUARIO_VALOR FROM eC_CONFIG_USUARIO WHERE CONFIG_USUARIO_VARIABLE = 'RutaReportesPDF' AND USUARIO_ID = 0 28/09/2009 11:31:58 a.m.
+Error: ""  
+ Msg = El nombre de objeto 'eC_CONFIG_USUARIO' no es válido.
+ StackTrace =    en System.Data.OleDb.OleDbDataReader.ProcessResults(OleDbHResult hr)
+   en System.Data.OleDb.OleDbDataReader.NextResult()
+   en System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   en System.Data.OleDb.OleDbCommand.ExecuteScalar()
+   en CeC_BD.EjecutaEscalar(String Comando) en c:\Users\benja\Documents\EntryTec\eClock\App_Code\CeC_BD.cs:línea 585 28/09/2009 11:31:58 a.m.
+Error: ""  
+ Msg = [DBNETLIB][ConnectionOpen (Connect()).]No existe el servidor SQL Server o se ha denegado el acceso al mismo.
+ StackTrace =    en System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   en System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup)
+   en System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   en System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.OleDb.OleDbConnection.Open()
+   en CeC_BD.EjecutaEscalar(String Comando) en c:\Users\benja\Documents\EntryTec\eClock\App_Code\CeC_BD.cs:línea 578
+   en CeC_BD.ObtenConfig(Int32 USUARIO_ID, String Variable, String ValorDefecto) en c:\Users\benja\Documents\EntryTec\eClock\App_Code\CeC_BD.cs:línea 1362 30/09/2009 09:17:18 a.m.
+Error: ""  
+ Msg = [DBNETLIB][ConnectionOpen (Connect()).]No existe el servidor SQL Server o se ha denegado el acceso al mismo.
+ StackTrace =    en System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   en System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup)
+   en System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   en System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.OleDb.OleDbConnection.Open()
+   en CeC_BD.EjecutaEscalar(String Comando) en c:\Users\benja\Documents\EntryTec\eClock\App_Code\CeC_BD.cs:línea 592
+   en CeC_BD.ObtenConfig(Int32 USUARIO_ID, String Variable, String ValorDefecto) en c:\Users\benja\Documents\EntryTec\eClock\App_Code\CeC_BD.cs:línea 1376 12/10/2009 08:57:04 a.m.
+Error: ""  
+ Msg = Error de inicio de sesión del usuario 'sa'.
+ StackTrace =    en System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   en System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup)
+   en System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   en System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.OleDb.OleDbConnection.Open()
+   en CeC_BD.EjecutaEscalar(String Comando) en c:\Users\benja\Documents\EntryTec\eClock\App_Code\CeC_BD.cs:línea 592
+   en CeC_BD.ObtenConfig(Int32 USUARIO_ID, String Variable, String ValorDefecto) en c:\Users\benja\Documents\EntryTec\eClock\App_Code\CeC_BD.cs:línea 1376 12/10/2009 09:15:16 a.m.
+Error: ""  
+ Msg = No se ha especificado un proveedor OLE DB en ConnectionString.  Un ejemplo sería, 'Provider=SQLOLEDB;'.
+ StackTrace =    en System.Data.OleDb.OleDbConnectionString.ValidateProvider(String progid)
+   en System.Data.OleDb.OleDbConnectionString.ValidateConnectionString(String connectionString)
+   en System.Data.OleDb.OleDbConnectionString..ctor(String connectionString, Boolean validate)
+   en System.Data.OleDb.OleDbConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   en System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(String connectionString, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   en System.Data.OleDb.OleDbConnection.ConnectionString_Set(String value)
+   en System.Data.OleDb.OleDbConnection.set_ConnectionString(String value)
+   en System.Data.OleDb.OleDbConnection..ctor(String connectionString)
+   en CeC_BD.EjecutaEscalar(String Comando) en s:\Proyectos\EntryTec\eClock\Código Fuente\eClock\App_Code\CeC_BD.cs:línea 591
+   en CeC_BD.ObtenConfig(Int32 USUARIO_ID, String Variable, String ValorDefecto) en s:\Proyectos\EntryTec\eClock\Código Fuente\eClock\App_Code\CeC_BD.cs:línea 1376 18/02/2010 02:53:18 p.m.
+Error: "" EjecutaEscalar Comando SELECT CONFIG_USUARIO_VALOR FROM eC_CONFIG_USUARIO WHERE CONFIG_USUARIO_VARIABLE = 'RutaReportesPDF' AND USUARIO_ID = 0 18/02/2010 03:02:28 p.m.
+Error: ""  
+ Msg = El nombre de objeto 'eC_CONFIG_USUARIO' no es válido.
+ StackTrace =    en System.Data.OleDb.OleDbDataReader.ProcessResults(OleDbHResult hr)
+   en System.Data.OleDb.OleDbDataReader.NextResult()
+   en System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   en System.Data.OleDb.OleDbCommand.ExecuteScalar()
+   en CeC_BD.EjecutaEscalar(String Comando) en s:\Proyectos\EntryTec\eClock\Código Fuente\eClock\App_Code\CeC_BD.cs:línea 599 18/02/2010 03:02:28 p.m.
+Error: "" EjecutaEscalar Comando SELECT CONFIG_USUARIO_VALOR FROM eC_CONFIG_USUARIO WHERE CONFIG_USUARIO_VARIABLE = 'RutaReportesPDF' AND USUARIO_ID = 0 03/06/2010 07:06:42 p.m.
+Error: ""  
+ Msg = El nombre de objeto 'eC_CONFIG_USUARIO' no es válido.
+ StackTrace =    en System.Data.OleDb.OleDbDataReader.ProcessResults(OleDbHResult hr)
+   en System.Data.OleDb.OleDbDataReader.NextResult()
+   en System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   en System.Data.OleDb.OleDbCommand.ExecuteScalar()
+   en CeC_BD.EjecutaEscalar(String Comando) en s:\Proyectos\EntryTec\eClock\Código Fuente\eClock\App_Code\CeC_BD.cs:línea 599 03/06/2010 07:06:42 p.m.
+Error: "" EjecutaEscalar Comando SELECT CONFIG_USUARIO_VALOR FROM eC_CONFIG_USUARIO WHERE CONFIG_USUARIO_VARIABLE = 'RutaReportesPDF' AND USUARIO_ID = 0 03/06/2010 07:13:56 p.m.
+Error: ""  
+ Msg = El nombre de objeto 'eC_CONFIG_USUARIO' no es válido.
+ StackTrace =    en System.Data.OleDb.OleDbDataReader.ProcessResults(OleDbHResult hr)
+   en System.Data.OleDb.OleDbDataReader.NextResult()
+   en System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   en System.Data.OleDb.OleDbCommand.ExecuteScalar()
+   en CeC_BD.EjecutaEscalar(String Comando) en s:\Proyectos\EntryTec\eClock\Código Fuente\eClock\App_Code\CeC_BD.cs:línea 599 03/06/2010 07:13:56 p.m.
+Error: ""  
+ Msg = [DBNETLIB][ConnectionOpen (Connect()).]No existe el servidor SQL Server o se ha denegado el acceso al mismo.
+ StackTrace =    en System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   en System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup)
+   en System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   en System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.OleDb.OleDbConnection.Open()
+   en CeC_BD.lEjecutaEscalar(String Comando) en s:\Proyectos\EntryTec\eClock\Código Fuente\eClock\App_Code\CeC_BD.cs:línea 56
+   en CeC_BD.EjecutaEscalar(String Comando) en s:\Proyectos\EntryTec\eClock\Código Fuente\eClock\App_Code\CeC_BD.cs:línea 91
+   en CeC_BD.ObtenConfig(Int32 USUARIO_ID, String Variable, String ValorDefecto) en s:\Proyectos\EntryTec\eClock\Código Fuente\eClock\App_Code\CeC_BD.cs:línea 1429 21/06/2011 02:35:34 p.m.

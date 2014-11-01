@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Estimado (a)</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>4.68559cm</Top>
+        <Left>1.32856cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.52646cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!RZONom.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>5.65227cm</Top>
+        <Left>1.32856cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.00334cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>NÚMERO DE SOLICITUD</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>4.68559cm</Top>
+        <Left>14.20967cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.80729cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!No_Credito.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>5.65227cm</Top>
+        <Left>12.59162cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.42534cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Atenta Nota Informativa</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>8.71635cm</Top>
+        <Left>8.10189cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.88667cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Por medio de la presente se le informa que el financiamento que solicitó mediante el programa de ahorro y eficiencia Energética Empresarial (PAEEEM) - Eco Crédito Empresarial ha sido cancelado en la fecha </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Format(Cdate(First(Fields!Fecha_Cancelacion.Value, "DataSet1")),"dd-MM-yyyy")</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value> debido al (los) siguiente (s) motivo (s):</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>11.4151cm</Top>
+        <Left>1.32856cm</Left>
+        <Height>1.50812cm</Height>
+        <Width>18.6884cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox8">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Agradecemos su interés y le reiteramos nuestra amable atención para cualquier informacíon.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox8</rd:DefaultName>
+        <Top>17.63282cm</Top>
+        <Left>1.32856cm</Left>
+        <Height>1.12917cm</Height>
+        <Width>18.6884cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Razon_Social">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Razon_Social.Value, "DataSet1")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Razon_Social</rd:DefaultName>
+        <Top>21.89261cm</Top>
+        <Left>7.20231cm</Left>
+        <Height>0.6cm</Height>
+        <Width>6.78625cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Fecha</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox20</rd:DefaultName>
+        <Top>1.59906cm</Top>
+        <Left>14.47426cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.78562cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Format(Cdate(Today()),"dd-MM-yyyy")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox21</rd:DefaultName>
+        <Top>1.59906cm</Top>
+        <Left>16.19815cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.81881cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Image Name="Image1">
+        <Source>Embedded</Source>
+        <Value>LogoPAEEEM</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>0.69906cm</Top>
+        <Left>1.32856cm</Left>
+        <Height>1.85568cm</Height>
+        <Width>3.16687cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Textbox Name="Motivo">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Motivo.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Motivo</rd:DefaultName>
+        <Top>14.64302cm</Top>
+        <Left>1.32856cm</Left>
+        <Height>1.235cm</Height>
+        <Width>18.6884cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>9.625in</Height>
+    <Style />
+  </Body>
+  <Width>8.34758in</Width>
+  <Page>
+    <PageHeight>27.94cm</PageHeight>
+    <PageWidth>21.59cm</PageWidth>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <DataSourceReference>PAEEEM_DESARROLLO_03</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>94e4c3c2-7b56-4e59-95c2-045a3d2eb56d</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@No_Credito">
+            <Value>=Parameters!No_Credito.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>
+SELECT top 1
+ CRE.No_Credito AS No_Credito,ISNULL(CLI.Razon_Social,ISNULL(CLI.Nombre, '')+ ' ' +ISNULL(CLI.Ap_Paterno,'')+ ' ' +ISNULL(CLI.Ap_Materno,'')) AS RZONom,  CRE.id_Proveedor,CRE.ID_Branch,
+ CAP.Id_PROVEEDOR AS PIDP, CAP.dx_Razon_Social as CPRZ , CBR.ID_Branch as CBRIB,CBR.ID_PROVEEDOR as CBRIP, CBR.dx_Razon_Social as CBRRZ, US.Tipo_Usuario as Tipo,
+  Case WHEN CLI.ID_Branch = 0 Then CAP.dx_razon_Social ELSE CBR.Dx_Razon_Social end as Razon_Social, CR.FECHA_ADICION as Fecha_Cancelacion,
+  case WHEN CR.ID_MOTIVO = 39 THEN CR.DESCRIPCION_MOTIVO ELSE MCR.DESCRIPCION end AS Motivo
+
+
+ FROM CRE_Credito AS CRE INNER JOIN CLI_Negocio AS Neg ON
+CRE.Id_Proveedor = Neg.Id_Proveedor and CRE.Id_Branch = Neg.Id_Branch and CRE.IdCliente = NEG.IdCliente and Cre.IdNegocio = Neg.IdNegocio
+INNER JOIN CLI_Cliente AS CLI ON
+NEG.Id_Proveedor = CLI.Id_Proveedor and NEG.Id_Branch= CLI.Id_Branch and NEG.IdCliente = CLI.IdCliente
+INNER JOIN US_Usuario AS US ON CRE.ID_PROVEEDOR = US.ID_Departamento and (US.Tipo_Usuario = 'S' or US.Tipo_Usuario='S_B')
+
+LEFT OUTER JOIN CAT_PROVEEDOR AS CAP on ClI.ID_Proveedor = CAP.ID_Proveedor --and CLI.Id_Branch = CAP.Id_Branch
+LEFT OUTER JOIN CAT_PROVEEDORBRANCH as CBR on CBR.ID_Branch = CLI.ID_Branch and CBR.ID_PRoveedor=CRE.ID_Proveedor
+
+INNER JOIN CANCELAR_RECHAZAR AS CR ON CRE.No_Credito = CR.No_Credito
+INNER JOIN MOTIVOS_RECHAZOS_CANCELACIONES AS MCR ON CR.ID_MOTIVO = MCR.ID_MOTIVO
+
+WHERE  CRE.No_Credito = @No_Credito  order by CR.FECHA_ADICION  desc</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="No_Credito">
+          <DataField>No_Credito</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RZONom">
+          <DataField>RZONom</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="id_Proveedor">
+          <DataField>id_Proveedor</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ID_Branch">
+          <DataField>ID_Branch</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Razon_Social">
+          <DataField>Razon_Social</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PIDP">
+          <DataField>PIDP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CPRZ">
+          <DataField>CPRZ</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CBRIB">
+          <DataField>CBRIB</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CBRIP">
+          <DataField>CBRIP</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CBRRZ">
+          <DataField>CBRRZ</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tipo">
+          <DataField>Tipo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Fecha_Cancelacion">
+          <DataField>Fecha_Cancelacion</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Motivo">
+          <DataField>Motivo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="No_Credito">
+      <DataType>String</DataType>
+      <Prompt>No_Credito</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <EmbeddedImages>
+    <EmbeddedImage Name="LogoPAEEEM">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>12155ef7-9982-4fd5-ab52-9e5205a752f9</rd:ReportID>
+</Report>

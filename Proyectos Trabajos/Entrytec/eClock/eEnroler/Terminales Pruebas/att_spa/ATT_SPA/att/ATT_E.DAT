@@ -1,0 +1,14 @@
+[DisabledHintIDs]
+HintId_1=1
+[Options]
+SmartUpdate=1
+localefile=attcheckin.en
+Temp-Supervisor_RANGE_User=344
+Temp-Supervisor_RANGE_Dept=1
+Temp-Supervisor_RANGE_D1=2006-5-1 15:46:00
+Temp-Supervisor_RANGE_D2=2006-5-1 15:46:59
+[TfAttCalc]
+pnlRecOP_Width=166
+pnlAttAbnormite_Width=140
+pnlAudit_Width=166
+pnlCalc_Width=132

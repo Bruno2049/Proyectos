@@ -1,0 +1,110 @@
+﻿.igc_CaribbeanControl
+{
+	border:solid 1px #021262;
+	background-color:#ffffff;
+	padding:10px;
+	margin:0px;
+	font-family:Segoe UI,Verdana,Arial,Sans-Serif;
+    font-size:12px;
+}
+
+.igc_CaribbeanControlActive
+{
+	
+}
+
+.igc_CaribbeanCaptchaInput
+{
+    border:1px solid #021262;
+    display:block;
+    padding:5px 0;
+    
+    margin-bottom:10px;
+    /*IE6 and IE7 specific hack*/
+    *margin-bottom:0;
+    
+}
+
+.igc_CaribbeanRefreshAndAudioButtonsArea
+{
+    margin-left:10px;
+	border-width:0;
+	text-decoration:none;
+    display:block;
+}
+
+    .igc_CaribbeanRefreshAndAudioButtonsArea img
+    {
+	    border-width:0px;
+	    text-decoration:none;
+	    margin-bottom:3px;
+    }
+
+.igc_CaribbeanSubmitButton {
+    background:#3D75D8 url(./images/igc_submitButtonBg.png) repeat-x left top;
+    border:1px solid #021262;
+    clear:left;
+    display:block;
+    height:30px;
+    width:177px;
+    cursor:pointer;
+    color:#ffffff;
+    margin-top:10px;
+    font-family:Segoe UI,Verdana,Arial,Sans-Serif;
+    font-size:12px;
+    font-weight:bold;
+    padding:0px;
+}
+
+.igc_CaribbeanErrorLabel
+{
+    background-color:#FF6666;
+    color:white;
+    padding:3px;
+}
+
+.igc_CaribbeanCaptchaImageLabel
+{
+	border:1px solid #021262;
+}
+
+.igc_CaribbeanCaptchaInputLabel{
+}
+
+.igc_CaribbeanCaptchaInfoTextLabel
+{
+    display:block;
+    margin:10px 0 5px 0;
+}
+
+.igc_CaribbeanCaptchaImage
+{
+    display:block;
+    margin-bottom:10px;
+}
+
+.igc_CaribbeanCaptchaImageArea
+{
+    display:block;
+    float:left;
+    padding:0;
+    margin:0;
+}
+    .igc_CaribbeanCaptchaImageArea label 
+    {
+        display:block
+    }
+	    
+.igc_CaribbeanRefreshAndAudioButtonsArea 
+{
+    float:left;
+}
+    .igc_CaribbeanRefreshAndAudioButtonsArea a 
+    {
+        display:block
+    }
+    .igc_CaribbeanRefreshAndAudioButtonsArea a,
+    .igc_CaribbeanRefreshAndAudioButtonsArea img 
+    {
+        cursor:pointer
+    }

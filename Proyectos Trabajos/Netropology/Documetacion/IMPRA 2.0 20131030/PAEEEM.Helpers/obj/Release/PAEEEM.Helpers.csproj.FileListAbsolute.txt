@@ -1,0 +1,7 @@
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\bin\Release\PAEEEM.Helpers.dll.config
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\bin\Release\PAEEEM.Helpers.dll
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\bin\Release\PAEEEM.Helpers.XmlSerializers.dll
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\bin\Release\PAEEEM.Helpers.pdb
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\obj\Release\PAEEEM.Helpers.dll
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\obj\Release\PAEEEM.Helpers.pdb
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\obj\Release\PAEEEM.Helpers.XmlSerializers.dll

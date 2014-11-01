@@ -1,0 +1,10 @@
+﻿<Window x:Class="eClock5.Vista.Licencias.NoValida"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="No Valida" Height="106" Width="302" ResizeMode="NoResize" Loaded="Window_Loaded" Icon="pack://siteoforigin:,,,/Resources/favicon.ico.ico">
+    <Grid>
+        <TextBlock x:Name="Lbl_NoValida" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Licencia no valida" VerticalAlignment="Top"/>
+        <Button x:Name="Btn_Wizard" Content="Ejecutar Asistente" HorizontalAlignment="Left" Margin="147,45,0,0" VerticalAlignment="Top" Width="137" Click="Btn_Wizard_Click"/>
+
+    </Grid>
+</Window>

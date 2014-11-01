@@ -1,0 +1,10 @@
+﻿<Window xmlns:Generales="clr-namespace:Kiosko.Generales" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controles="clr-namespace:Kiosko.Controles" xmlns:Permisos="clr-namespace:Kiosko.Permisos" x:Class="Kiosko.Inicio"
+        Title="Inicio" Height="817.911" Width="967.164"  
+        WindowStyle="None" WindowState="Maximized" Loaded="Window_Loaded">
+    <Grid>
+        <Generales:Main x:Name="Main" />
+    </Grid>
+</Window>

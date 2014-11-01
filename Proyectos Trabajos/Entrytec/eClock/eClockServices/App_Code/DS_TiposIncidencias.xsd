@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DS_TiposIncidencias" targetNamespace="http://www.tempuri.org/DS_TiposIncidencias.xsd"
+	xmlns:mstns="http://www.tempuri.org/DS_TiposIncidencias.xsd" xmlns="http://www.tempuri.org/DS_TiposIncidencias.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DS_TiposIncidencias" msdata:IsDataSet="true" msdata:Locale="es-MX">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="EC_TIPO_INCIDENCIAS_Edicion">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TIPO_INCIDENCIA_ID" type="xs:decimal" />
+							<xs:element name="TIPO_INCIDENCIA_NOMBRE" type="xs:string" />
+							<xs:element name="TIPO_INCIDENCIA_ABR" type="xs:string" minOccurs="0" />
+							<xs:element name="TIPO_INCIDENCIA_BORRADO" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EC_TIPO_INC_COMIDA_SIS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TIPO_INC_C_SIS_ID" type="xs:decimal" />
+							<xs:element name="TIPO_INC_C_SIS_NOMBRE" type="xs:string" />
+							<xs:element name="TIPO_INC_C_SIS_ABR" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EC_TIPO_INC_SIS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TIPO_INC_SIS_ABR" type="xs:string" minOccurs="0" />
+							<xs:element name="TIPO_INC_SIS_NOMBRE" type="xs:string" />
+							<xs:element name="TIPO_INC_SIS_ID" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EC_TIPO_INCIDENCIAS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TIPO_INCIDENCIA_ID" type="xs:decimal" />
+							<xs:element name="TIPO_INCIDENCIA_NOMBRE" type="xs:string" />
+							<xs:element name="TIPO_INCIDENCIA_ABR" type="xs:string" minOccurs="0" />
+							<xs:element name="TIPO_INCIDENCIA_BORRADO" type="xs:decimal" minOccurs="0" />
+							<xs:element name="STATUS" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:EC_TIPO_INCIDENCIAS_Edicion" />
+			<xs:field xpath="mstns:TIPO_INCIDENCIA_ID" />
+		</xs:unique>
+		<xs:unique name="EC_TIPO_INC_COMIDA_SIS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:EC_TIPO_INC_COMIDA_SIS" />
+			<xs:field xpath="mstns:TIPO_INC_C_SIS_ID" />
+		</xs:unique>
+		<xs:unique name="EC_TIPO_INC_SIS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:EC_TIPO_INC_SIS" />
+			<xs:field xpath="mstns:TIPO_INC_SIS_ID" />
+		</xs:unique>
+		<xs:unique name="EC_TIPO_INCIDENCIAS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:EC_TIPO_INCIDENCIAS" />
+			<xs:field xpath="mstns:TIPO_INCIDENCIA_ID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

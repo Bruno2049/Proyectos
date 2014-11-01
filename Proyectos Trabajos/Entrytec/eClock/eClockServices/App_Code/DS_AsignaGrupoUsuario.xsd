@@ -1,0 +1,60 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DS_AsignaGrupoUsuario" targetNamespace="http://www.tempuri.org/DS_AsignaGrupoUsuario.xsd"
+	xmlns:mstns="http://www.tempuri.org/DS_AsignaGrupoUsuario.xsd" xmlns="http://www.tempuri.org/DS_AsignaGrupoUsuario.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DS_AsignaGrupoUsuario" msdata:IsDataSet="true" msdata:Locale="es-MX">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="EC_SUSCRIPCION">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SUSCRIPCION_ID" type="xs:decimal" />
+							<xs:element name="SUSCRIPCION_NOMBRE" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EC_USUARIOS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="USUARIO_ID" type="xs:decimal" />
+							<xs:element name="PERFIL_ID" type="xs:decimal" />
+							<xs:element name="USUARIO_USUARIO" type="xs:string" />
+							<xs:element name="USUARIO_NOMBRE" type="xs:string" />
+							<xs:element name="USUARIO_DESCRIPCION" type="xs:string" minOccurs="0" />
+							<xs:element name="USUARIO_CLAVE" type="xs:string" />
+							<xs:element name="USUARIO_BORRADO" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EC_PERMISOS_SUSCRIP">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="USUARIO_ID" type="xs:decimal" />
+							<xs:element name="SUSCRIPCION_ID" type="xs:decimal" />
+							<xs:element name="SUSCRIPCION_NOMBRE" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EC_PERMISOS_SUSCRIP_Asignados">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="USUARIO_ID" type="xs:decimal" />
+							<xs:element name="SUSCRIPCION_ID" type="xs:decimal" />
+							<xs:element name="SUSCRIPCION_NOMBRE" type="xs:string" minOccurs="0" />
+							<xs:element name="BORRADO" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DS_AsignaGrupoUsuarioKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:EC_USUARIOS" />
+			<xs:field xpath="mstns:USUARIO_ID" />
+		</xs:unique>
+		<xs:keyref name="EC_USUARIOSEC_PERMISOS_SUSCRIP" refer="DS_AsignaGrupoUsuarioKey1">
+			<xs:selector xpath=".//mstns:EC_PERMISOS_SUSCRIP" />
+			<xs:field xpath="mstns:USUARIO_ID" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,10 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:eClock5" x:Class="eClock5.Dlg_Prueba"
+        Title="Dlg_Prueba" Height="300" Width="300">
+    <Grid>
+        <local:UC_Listado Margin="0" Height="Auto" Width="Auto" CampoLlave="TIPO_INC_SIS_ID" CampoNombre="TIPO_INC_SIS_NOMBRE" Tabla="EC_TIPO_INC_SIS" CampoAdicional="TIPO_INC_SIS_ABR"/>
+        <TextBlock HorizontalAlignment="Left" Margin="75,96,0,0" TextWrapping="Wrap" Text="pruegbasdfa&#10;sdfasda&#10;dsfasdf &#10;asdfasdf&#10;asdfasdfasdf" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

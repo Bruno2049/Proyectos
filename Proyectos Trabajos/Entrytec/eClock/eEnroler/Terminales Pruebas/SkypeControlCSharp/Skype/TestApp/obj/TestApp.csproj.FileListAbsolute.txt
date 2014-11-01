@@ -1,0 +1,10 @@
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\TestApp\bin\Debug\TestApp.exe
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\TestApp\bin\Debug\TestApp.pdb
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\TestApp\bin\Debug\SkypeControl.dll
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\TestApp\bin\Debug\SkypeControl.pdb
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\TestApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\TestApp\obj\Debug\TestApp.Form1.resources
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\TestApp\obj\Debug\TestApp.Properties.Resources.resources
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\TestApp\obj\Debug\TestApp.csproj.GenerateResource.Cache
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\TestApp\obj\Debug\TestApp.exe
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\TestApp\obj\Debug\TestApp.pdb

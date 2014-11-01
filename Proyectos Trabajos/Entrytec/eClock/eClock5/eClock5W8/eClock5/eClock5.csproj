@@ -1,0 +1,961 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{866A87CF-B031-4D77-91C7-3BDD1BDEF3E6}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eClock5</RootNamespace>
+    <AssemblyName>eClock5</AssemblyName>
+    <DefaultLanguage>es-ES</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>eClock5_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\eClock5\BaseModificada\CeC_Sesion.cs">
+      <Link>BaseModificada\CeC_Sesion.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\BaseModificada\CeC_StreamFile.cs">
+      <Link>BaseModificada\CeC_StreamFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\BaseModificada\Localizaciones.cs">
+      <Link>BaseModificada\Localizaciones.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Clases\Parametros.cs">
+      <Link>Clases\Parametros.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_Acordion.xaml.cs">
+      <Link>Controles\UC_Acordion.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_AsistenciaHorizontal.xaml.cs">
+      <Link>Controles\UC_AsistenciaHorizontal.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_Btn_LiveTile.xaml.cs">
+      <Link>Controles\UC_Btn_LiveTile.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_Campos.xaml.cs">
+      <Link>Controles\UC_Campos.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_Combo.xaml.cs">
+      <Link>Controles\UC_Combo.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_DateTimePicker.xaml.cs">
+      <Link>Controles\UC_DateTimePicker.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_Horas.xaml.cs">
+      <Link>Controles\UC_Horas.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_Listado.xaml.cs">
+      <Link>Controles\UC_Listado.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_Multiseleccion.xaml.cs">
+      <Link>Controles\UC_Multiseleccion.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_Pestanas.xaml.cs">
+      <Link>Controles\UC_Pestanas.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_TextBoxButton.xaml.cs">
+      <Link>Controles\UC_TextBoxButton.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_TipoAccesoColor.xaml.cs">
+      <Link>Controles\UC_TipoAccesoColor.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_ToolBar.xaml.cs">
+      <Link>Controles\UC_ToolBar.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Controles\UC_Wizard.xaml.cs">
+      <Link>Controles\UC_Wizard.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Diseno.xaml.cs">
+      <Link>Diseno.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Dlg_Prueba.xaml.cs">
+      <Link>Dlg_Prueba.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\eClock.xaml.cs">
+      <Link>eClock.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\LogIn.xaml.cs">
+      <Link>LogIn.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Recursos.cs">
+      <Link>Recursos.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Accesos\Edicion.xaml.cs">
+      <Link>Vista\Accesos\Edicion.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Accesos\filtrar.xaml.cs">
+      <Link>Vista\Accesos\filtrar.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Accesos\Listado.xaml.cs">
+      <Link>Vista\Accesos\Listado.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Asistencias\EdicionIncidencias.xaml.cs">
+      <Link>Vista\Asistencias\EdicionIncidencias.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Asistencias\Listado.xaml.cs">
+      <Link>Vista\Asistencias\Listado.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Asistencias\ListadoIncidencias.xaml.cs">
+      <Link>Vista\Asistencias\ListadoIncidencias.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\AlertasMail.xaml.cs">
+      <Link>Vista\Configuracion\AlertasMail.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\EdicionCampos.xaml.cs">
+      <Link>Vista\Configuracion\EdicionCampos.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\EdicionDisenos.xaml.cs">
+      <Link>Vista\Configuracion\EdicionDisenos.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\EdicionLicencias.xaml.cs">
+      <Link>Vista\Configuracion\EdicionLicencias.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\EdicionLicenciasDistribuidores.xaml.cs">
+      <Link>Vista\Configuracion\EdicionLicenciasDistribuidores.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\EdicionLocalizaciones.xaml.cs">
+      <Link>Vista\Configuracion\EdicionLocalizaciones.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\EdicionMascaras.xaml.cs">
+      <Link>Vista\Configuracion\EdicionMascaras.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\ListadoCampos.xaml.cs">
+      <Link>Vista\Configuracion\ListadoCampos.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\ListadoCamposEmpleados.xaml.cs">
+      <Link>Vista\Configuracion\ListadoCamposEmpleados.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\ListadoDisenos.xaml.cs">
+      <Link>Vista\Configuracion\ListadoDisenos.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\ListadoLicencias.xaml.cs">
+      <Link>Vista\Configuracion\ListadoLicencias.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\ListadoLicenciasDistribuidores.xaml.cs">
+      <Link>Vista\Configuracion\ListadoLicenciasDistribuidores.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\ListadoLocalizaciones.xaml.cs">
+      <Link>Vista\Configuracion\ListadoLocalizaciones.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\ListadoMascaras.xaml.cs">
+      <Link>Vista\Configuracion\ListadoMascaras.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\ReagruparEmpleados.xaml.cs">
+      <Link>Vista\Configuracion\ReagruparEmpleados.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Configuracion\Smpt.xaml.cs">
+      <Link>Vista\Configuracion\Smpt.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\DiasFestivos\Edicion.xaml.cs">
+      <Link>Vista\DiasFestivos\Edicion.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\DiasFestivos\EdicionCalendariosDF.xaml.cs">
+      <Link>Vista\DiasFestivos\EdicionCalendariosDF.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\DiasFestivos\Listado.xaml.cs">
+      <Link>Vista\DiasFestivos\Listado.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\DiasFestivos\ListadoCalendariosDF.xaml.cs">
+      <Link>Vista\DiasFestivos\ListadoCalendariosDF.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\eClock\LiveTiles.xaml.cs">
+      <Link>Vista\eClock\LiveTiles.xaml.cs</Link>
+      <DependentUpon>LiveTiles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Empleados\EdicionPersonas.xaml.cs">
+      <Link>Vista\Empleados\EdicionPersonas.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Empleados\EdicionPersonasSHuella.xaml.cs">
+      <Link>Vista\Empleados\EdicionPersonasSHuella.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Empleados\ListadoPersonas.xaml.cs">
+      <Link>Vista\Empleados\ListadoPersonas.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Empleados\ListadoPersonasSHuella.xaml.cs">
+      <Link>Vista\Empleados\ListadoPersonasSHuella.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Empleados\Supervisores.xaml.cs">
+      <Link>Vista\Empleados\Supervisores.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\IncidenciasAvanzadas\ImportacionDeIncidencias.xaml.cs">
+      <Link>Vista\IncidenciasAvanzadas\ImportacionDeIncidencias.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Monedero\EdicionProductos.xaml.cs">
+      <Link>Vista\Monedero\EdicionProductos.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Monedero\EdicionPromociones.xaml.cs">
+      <Link>Vista\Monedero\EdicionPromociones.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Monedero\EdicionRecompensas.xaml.cs">
+      <Link>Vista\Monedero\EdicionRecompensas.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Monedero\ListadoProductos.xaml.cs">
+      <Link>Vista\Monedero\ListadoProductos.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Monedero\ListadoPromociones.xaml.cs">
+      <Link>Vista\Monedero\ListadoPromociones.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Monedero\ListadoRecompensas.xaml.cs">
+      <Link>Vista\Monedero\ListadoRecompensas.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Perfiles\EdicionPerfiles.xaml.cs">
+      <Link>Vista\Perfiles\EdicionPerfiles.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Perfiles\ListadoPerfiles.xaml.cs">
+      <Link>Vista\Perfiles\ListadoPerfiles.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Periodos\EdicionPeriodosN.xaml.cs">
+      <Link>Vista\Periodos\EdicionPeriodosN.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Periodos\EdicionTipoNomina.xaml.cs">
+      <Link>Vista\Periodos\EdicionTipoNomina.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Periodos\ListadoPeriodosN.xaml.cs">
+      <Link>Vista\Periodos\ListadoPeriodosN.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Periodos\ListadoTipoNomina.xaml.cs">
+      <Link>Vista\Periodos\ListadoTipoNomina.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Sitios\EdicionSitios.xaml.cs">
+      <Link>Vista\Sitios\EdicionSitios.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Sitios\ListadoSitios.xaml.cs">
+      <Link>Vista\Sitios\ListadoSitios.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Suscripciones\EdicionSuscripcion.xaml.cs">
+      <Link>Vista\Suscripciones\EdicionSuscripcion.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Suscripciones\EdicionSuscripcionCliente.xaml.cs">
+      <Link>Vista\Suscripciones\EdicionSuscripcionCliente.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Suscripciones\EdicionSuscripPrecios.xaml.cs">
+      <Link>Vista\Suscripciones\EdicionSuscripPrecios.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Suscripciones\ListadoSuscripcion.xaml.cs">
+      <Link>Vista\Suscripciones\ListadoSuscripcion.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Suscripciones\ListadoSuscripPrecios.xaml.cs">
+      <Link>Vista\Suscripciones\ListadoSuscripPrecios.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Terminales\EdicionModelosTerminales.xaml.cs">
+      <Link>Vista\Terminales\EdicionModelosTerminales.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Terminales\EdicionTerminales.xaml.cs">
+      <Link>Vista\Terminales\EdicionTerminales.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Terminales\ListadoModelosTerminales.xaml.cs">
+      <Link>Vista\Terminales\ListadoModelosTerminales.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Terminales\ListadoTerminales.xaml.cs">
+      <Link>Vista\Terminales\ListadoTerminales.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\TiposIncidencias\EdicionTipoIncidencias.xaml.cs">
+      <Link>Vista\TipoIncidencias\EdicionTipoIncidencias.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\TiposIncidencias\EdicionTipoIncidenciasEx.xaml.cs">
+      <Link>Vista\TipoIncidencias\EdicionTipoIncidenciasEx.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\TiposIncidencias\ListadoTipoIncidencias.xaml.cs">
+      <Link>Vista\TipoIncidencias\ListadoTipoIncidencias.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\TiposIncidencias\ListadoTipoIncidenciasEx.xaml.cs">
+      <Link>Vista\TipoIncidencias\ListadoTipoIncidenciasEx.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\TiposIncidencias\ListadoTipoIncidenciasR.xaml.cs">
+      <Link>Vista\TipoIncidencias\ListadoTipoIncidenciasR.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Turnos\AsignacionPorFechas.xaml.cs">
+      <Link>Vista\Turnos\AsignacionPorFechas.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Turnos\Edicion.xaml.cs">
+      <Link>Vista\Turnos\Edicion.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Turnos\ImportacionDeAsiganacionDeTurnos.xaml.cs">
+      <Link>Vista\Turnos\ImportacionDeAsiganacionDeTurnos.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Turnos\Listado.xaml.cs">
+      <Link>Vista\Turnos\Listado.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Usuarios\Edicion.xaml.cs">
+      <Link>Vista\Usuarios\Edicion.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Usuarios\Listado.xaml.cs">
+      <Link>Vista\Usuarios\Listado.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Wizard\Bienvenida.xaml.cs">
+      <Link>Vista\Wizard\Bienvenida.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Wizard\Contratos.xaml.cs">
+      <Link>Vista\Wizard\Contratos.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Wizard\Instalacion.xaml.cs">
+      <Link>Vista\Wizard\Instalacion.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Wizard\Licencia.xaml.cs">
+      <Link>Vista\Wizard\Licencia.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Wizard\Login.xaml.cs">
+      <Link>Vista\Wizard\Login.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Wizard\Sucursal.xaml.cs">
+      <Link>Vista\Wizard\Sucursal.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\..\eClock5\Vista\Wizard\Suscripcion.xaml.cs">
+      <Link>Vista\Wizard\Suscripcion.xaml.cs</Link>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="eClock5_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\eClock5\Resources\Actualizar_64.png">
+      <Link>Resources\Actualizar_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Borrar_64.png">
+      <Link>Resources\Borrar_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Brasil_20.png">
+      <Link>Resources\Brasil_20.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Busqueda_64.png">
+      <Link>Resources\Busqueda_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\CandadoBlanco.png">
+      <Link>Resources\CandadoBlanco.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\CandadoRojo.png">
+      <Link>Resources\CandadoRojo.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\CandadoVerde.png">
+      <Link>Resources\CandadoVerde.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Candado_Rojo.png">
+      <Link>Resources\Candado_Rojo.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Cerrar_24.png">
+      <Link>Resources\Cerrar_24.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Cerrar_32.png">
+      <Link>Resources\Cerrar_32.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Checador.png">
+      <Link>Resources\Checador.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Comentarios.png">
+      <Link>Resources\Comentarios.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Compatibilidad.png">
+      <Link>Resources\Compatibilidad.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\e.png">
+      <Link>Resources\e.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\eClock.png">
+      <Link>Resources\eClock.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\España_20.png">
+      <Link>Resources\España_20.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Estados_20.png">
+      <Link>Resources\Estados_20.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Filtro_64.png">
+      <Link>Resources\Filtro_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\FlechaArriba_48.png">
+      <Link>Resources\FlechaArriba_48.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\FlechaArriba_64.png">
+      <Link>Resources\FlechaArriba_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\FlechaIzquierda_64.png">
+      <Link>Resources\FlechaIzquierda_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Francia_20.png">
+      <Link>Resources\Francia_20.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Guardar_64.png">
+      <Link>Resources\Guardar_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Icon1.ico">
+      <Link>Resources\Icon1.ico</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Image1.png">
+      <Link>Resources\Image1.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Italia_20.png">
+      <Link>Resources\Italia_20.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Justificar_64.png">
+      <Link>Resources\Justificar_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Llave_64.png">
+      <Link>Resources\Llave_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\LogInRojo.png">
+      <Link>Resources\LogInRojo.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\LogInVerde.png">
+      <Link>Resources\LogInVerde.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Logo_Login.png">
+      <Link>Resources\Logo_Login.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Maximizar_Pantalla_24.png">
+      <Link>Resources\Maximizar_Pantalla_24.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\MenuEscondido_64.png">
+      <Link>Resources\MenuEscondido_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Minimizar_24.png">
+      <Link>Resources\Minimizar_24.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Minimizar_32.png">
+      <Link>Resources\Minimizar_32.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Mini_Pantalla_24.png">
+      <Link>Resources\Mini_Pantalla_24.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Mini_Pantalla_32.png">
+      <Link>Resources\Mini_Pantalla_32.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Nuevo_64.png">
+      <Link>Resources\Nuevo_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Portugal_20.png">
+      <Link>Resources\Portugal_20.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Regresar_64.png">
+      <Link>Resources\Regresar_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Seleccionados_64.png">
+      <Link>Resources\Seleccionados_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Tiempo_64.png">
+      <Link>Resources\Tiempo_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\Totales_64.png">
+      <Link>Resources\Totales_64.png</Link>
+    </Content>
+    <Content Include="..\..\eClock5\Resources\WizardBienvenida.png">
+      <Link>Resources\WizardBienvenida.png</Link>
+    </Content>
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="eClockBase.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_Acordion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_AsistenciaHorizontal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_Btn_LiveTile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_Campos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_Combo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_DateTimePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_Horas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_Listado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_Multiseleccion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_Pestanas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_TextBoxButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_TipoAccesoColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_ToolBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_Wizard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Diseno.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dlg_Prueba.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="eClock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LogIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Accesos\Edicion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Accesos\filtrar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Accesos\Listado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Asistencias\EdicionIncidencias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Asistencias\Listado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Asistencias\ListadoIncidencias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\AlertasMail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\EdicionCampos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\EdicionDisenos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\EdicionLicencias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\EdicionLicenciasDistribuidores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\EdicionLocalizaciones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\EdicionMascaras.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\ListadoCampos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\ListadoCamposEmpleados.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\ListadoDisenos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\ListadoLicencias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\ListadoLicenciasDistribuidores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\ListadoLocalizaciones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\ListadoMascaras.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\ReagruparEmpleados.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\Smpt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\DiasFestivos\Edicion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\DiasFestivos\EdicionCalendariosDF.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\DiasFestivos\Listado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\DiasFestivos\ListadoCalendariosDF.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\eClock\LiveTiles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Empleados\EdicionPersonas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Empleados\EdicionPersonasSHuella.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Empleados\ListadoPersonas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Empleados\ListadoPersonasSHuella.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Empleados\Supervisores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\IncidenciasAvanzadas\ImportacionDeIncidencias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Monedero\EdicionProductos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Monedero\EdicionPromociones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Monedero\EdicionRecompensas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Monedero\ListadoProductos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Monedero\ListadoPromociones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Monedero\ListadoRecompensas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Perfiles\EdicionPerfiles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Perfiles\ListadoPerfiles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Periodos\EdicionPeriodosN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Periodos\EdicionTipoNomina.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Periodos\ListadoPeriodosN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Periodos\ListadoTipoNomina.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Sitios\EdicionSitios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Sitios\ListadoSitios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Suscripciones\EdicionSuscripcion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Suscripciones\EdicionSuscripcionCliente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Suscripciones\EdicionSuscripPrecios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Suscripciones\ListadoSuscripcion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Suscripciones\ListadoSuscripPrecios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Terminales\EdicionModelosTerminales.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Terminales\EdicionTerminales.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Terminales\ListadoModelosTerminales.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Terminales\ListadoTerminales.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\TipoIncidencias\EdicionTipoIncidencias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\TipoIncidencias\EdicionTipoIncidenciasEx.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\TipoIncidencias\ListadoTipoIncidencias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\TipoIncidencias\ListadoTipoIncidenciasEx.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\TipoIncidencias\ListadoTipoIncidenciasR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Turnos\AsignacionPorFechas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Turnos\Edicion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Turnos\ImportacionDeAsiganacionDeTurnos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Turnos\Listado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Usuarios\Edicion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Usuarios\Listado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Wizard\Bienvenida.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Wizard\Contratos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Wizard\Instalacion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Wizard\Licencia.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Wizard\Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Wizard\Sucursal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Wizard\Suscripcion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="eClockBase">
+      <HintPath>.\eClockBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.3\lib\netcore45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Vista\Agrupaciones\" />
+    <Folder Include="Vista\Ayuda\" />
+    <Folder Include="Vista\Comidas\" />
+    <Folder Include="Vista\HorasExtras\" />
+    <Folder Include="Vista\Logs\" />
+    <Folder Include="Vista\Mails\" />
+    <Folder Include="Vista\ModoFoto\" />
+    <Folder Include="Vista\Noticias\" />
+    <Folder Include="Vista\PortalEmpleado\" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

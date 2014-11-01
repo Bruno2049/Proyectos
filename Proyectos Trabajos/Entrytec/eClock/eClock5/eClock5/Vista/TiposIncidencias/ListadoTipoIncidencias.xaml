@@ -1,0 +1,21 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:local="clr-namespace:eClock5.Vista.TiposIncidencias" xmlns:Modelos="clr-namespace:eClockBase.Modelos;assembly=eClockBase" x:Class="eClock5.Vista.TiposIncidencias.ListadoTipoIncidencias" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+
+        <eClock5:UC_Listado Height="Auto" Width="Auto" Tabla="EC_TIPO_INCIDENCIAS" CampoLlave="TIPO_INCIDENCIA_ID" CampoNombre="TIPO_INCIDENCIA_NOMBRE" CampoAdicional="TIPO_INCIDENCIA_ABR" CampoDescripcion="TIPO_INCIDENCIA_AGRUPADOR">
+            <eClock5:UC_Listado.ControlEdicion>
+                <local:EdicionTipoIncidencias/>
+            </eClock5:UC_Listado.ControlEdicion>
+            <eClock5:UC_Listado.DataContext>
+                <Modelos:Model_TIPO_INCIDENCIAS/>
+            </eClock5:UC_Listado.DataContext>
+        </eClock5:UC_Listado>
+
+    </Grid>
+</UserControl>

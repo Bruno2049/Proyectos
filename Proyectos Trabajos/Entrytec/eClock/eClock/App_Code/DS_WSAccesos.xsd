@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_WSAccesos" targetNamespace="http://tempuri.org/DS_WSAccesos.xsd" xmlns:mstns="http://tempuri.org/DS_WSAccesos.xsd" xmlns="http://tempuri.org/DS_WSAccesos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_WSAccesos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_WSAccesos" msprop:Generator_DataSetName="DS_WSAccesos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_Accesos" msprop:Generator_UserTableName="DT_Accesos" msprop:Generator_RowDeletedName="DT_AccesosRowDeleted" msprop:Generator_TableClassName="DT_AccesosDataTable" msprop:Generator_RowChangedName="DT_AccesosRowChanged" msprop:Generator_RowClassName="DT_AccesosRow" msprop:Generator_RowChangingName="DT_AccesosRowChanging" msprop:Generator_RowEvArgName="DT_AccesosRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_AccesosRowChangeEventHandler" msprop:Generator_TablePropName="DT_Accesos" msprop:Generator_TableVarName="tableDT_Accesos" msprop:Generator_RowDeletingName="DT_AccesosRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_ID" msprop:Generator_UserColumnName="PERSONA_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_IDColumn" type="xs:decimal" />
+              <xs:element name="TERMINAL_ID" msprop:Generator_UserColumnName="TERMINAL_ID" msprop:Generator_ColumnPropNameInRow="TERMINAL_ID" msprop:Generator_ColumnVarNameInTable="columnTERMINAL_ID" msprop:Generator_ColumnPropNameInTable="TERMINAL_IDColumn" type="xs:decimal" />
+              <xs:element name="ACCESO_FECHAHORA" msprop:Generator_UserColumnName="ACCESO_FECHAHORA" msprop:Generator_ColumnPropNameInRow="ACCESO_FECHAHORA" msprop:Generator_ColumnVarNameInTable="columnACCESO_FECHAHORA" msprop:Generator_ColumnPropNameInTable="ACCESO_FECHAHORAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TIPO_ACCESO_ID" msprop:Generator_UserColumnName="TIPO_ACCESO_ID" msprop:Generator_ColumnPropNameInRow="TIPO_ACCESO_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_ACCESO_ID" msprop:Generator_ColumnPropNameInTable="TIPO_ACCESO_IDColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSImpresiones" targetNamespace="http://tempuri.org/DSImpresiones.xsd" xmlns:mstns="http://tempuri.org/DSImpresiones.xsd" xmlns="http://tempuri.org/DSImpresiones.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ImpresionesTableAdapter" GeneratorDataComponentClassName="ImpresionesTableAdapter" Name="Impresiones" UserDataComponentName="ImpresionesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_US_IMPRESION.US_IMPRESION_ID, EC_DISENOS.DISENO_NOMBRE, EC_PERSONAS.PERSONA_NOMBRE, EC_USUARIOS.USUARIO_NOMBRE, 
+                         EC_ESTADO_IMPRESION.ESTADO_IMPRESION, EC_USUARIOS.USUARIO_USUARIO, EC_USUARIOS.USUARIO_EMAIL, 
+                         EC_US_IMPRESION.FECHA_IMPRESION, EC_US_IMPRESION.DISENO_ID, EC_US_IMPRESION.ESTADO_IMPRESION_ID, 
+                         EC_US_IMPRESION.USUARIO_ID, EC_US_IMPRESION.US_IMPRESION_REVER, EC_US_IMPRESION.US_IMPRESION_FRENTE, 
+                         EC_US_IMPRESION.TIPO_TARJETA_ID, EC_US_IMPRESION.TIPO_IMPRESION_ID, EC_US_IMPRESION.PERSONA_ID, EC_US_IMPRESION.PEDIDO_ID, 
+                         EC_US_IMPRESION.US_IMPRESION_NO
+FROM            EC_DISENOS INNER JOIN
+                         EC_US_IMPRESION INNER JOIN
+                         EC_ESTADO_IMPRESION ON EC_US_IMPRESION.ESTADO_IMPRESION_ID = EC_ESTADO_IMPRESION.ESTADO_IMPRESION_ID ON 
+                         EC_DISENOS.DISENO_ID = EC_US_IMPRESION.DISENO_ID INNER JOIN
+                         EC_USUARIOS ON EC_US_IMPRESION.USUARIO_ID = EC_USUARIOS.USUARIO_ID INNER JOIN
+                         EC_PERSONAS ON EC_US_IMPRESION.PERSONA_ID = EC_PERSONAS.PERSONA_ID</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DISENO_NOMBRE" DataSetColumn="DISENO_NOMBRE" />
+              <Mapping SourceColumn="PERSONA_NOMBRE" DataSetColumn="PERSONA_NOMBRE" />
+              <Mapping SourceColumn="USUARIO_NOMBRE" DataSetColumn="USUARIO_NOMBRE" />
+              <Mapping SourceColumn="USUARIO_USUARIO" DataSetColumn="USUARIO_USUARIO" />
+              <Mapping SourceColumn="USUARIO_EMAIL" DataSetColumn="USUARIO_EMAIL" />
+              <Mapping SourceColumn="FECHA_IMPRESION" DataSetColumn="FECHA_IMPRESION" />
+              <Mapping SourceColumn="ESTADO_IMPRESION" DataSetColumn="ESTADO_IMPRESION" />
+              <Mapping SourceColumn="ESTADO_IMPRESION_ID" DataSetColumn="ESTADO_IMPRESION_ID" />
+              <Mapping SourceColumn="US_IMPRESION_REVER" DataSetColumn="US_IMPRESION_REVER" />
+              <Mapping SourceColumn="US_IMPRESION_FRENTE" DataSetColumn="US_IMPRESION_FRENTE" />
+              <Mapping SourceColumn="TIPO_TARJETA_ID" DataSetColumn="TIPO_TARJETA_ID" />
+              <Mapping SourceColumn="TIPO_IMPRESION_ID" DataSetColumn="TIPO_IMPRESION_ID" />
+              <Mapping SourceColumn="PERSONA_ID" DataSetColumn="PERSONA_ID" />
+              <Mapping SourceColumn="PEDIDO_ID" DataSetColumn="PEDIDO_ID" />
+              <Mapping SourceColumn="US_IMPRESION_NO" DataSetColumn="US_IMPRESION_NO" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="ActualizaporImpresionID" Modifier="Public" Name="ActualizaporImpresionID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="ActualizaporImpresionID">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>UPDATE       EC_US_IMPRESION
+SET                TIPO_IMPRESION_ID = ?, ESTADO_IMPRESION_ID = ?, TIPO_TARJETA_ID = ?, US_IMPRESION_NO = ?, FECHA_IMPRESION = GETDATE(), 
+                         US_IMPRESION_FRENTE = ?, US_IMPRESION_REVER = ?, PEDIDO_ID = ?
+WHERE        (US_IMPRESION_ID = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param1" ColumnName="TIPO_IMPRESION_ID" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="TIPO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="TIPO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param2" ColumnName="ESTADO_IMPRESION_ID" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="ESTADO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="ESTADO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param3" ColumnName="TIPO_TARJETA_ID" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="TIPO_TARJETA_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="TIPO_TARJETA_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param4" ColumnName="US_IMPRESION_NO" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="US_IMPRESION_NO" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="US_IMPRESION_NO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param5" ColumnName="US_IMPRESION_FRENTE" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(1, 0)" DbType="Decimal" Direction="Input" ParameterName="US_IMPRESION_FRENTE" Precision="1" ProviderType="Numeric" Scale="0" Size="5" SourceColumn="US_IMPRESION_FRENTE" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Param6" ColumnName="US_IMPRESION_REVER" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(1, 0)" DbType="Decimal" Direction="Input" ParameterName="US_IMPRESION_REVER" Precision="1" ProviderType="Numeric" Scale="0" Size="5" SourceColumn="US_IMPRESION_REVER" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param7" ColumnName="PEDIDO_ID" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="PEDIDO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="PEDIDO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param8" ColumnName="US_IMPRESION_ID" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="Original_US_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="US_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByEstadoImpresion" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByEstadoImpresion" GeneratorSourceName="FillByEstadoImpresion" GetMethodModifier="Public" GetMethodName="GetDataByEstadoImpresion" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByEstadoImpresion" UserSourceName="FillByEstadoImpresion">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_US_IMPRESION.US_IMPRESION_ID, EC_DISENOS.DISENO_NOMBRE, EC_PERSONAS.PERSONA_NOMBRE, EC_USUARIOS.USUARIO_NOMBRE, 
+                         EC_ESTADO_IMPRESION.ESTADO_IMPRESION, EC_USUARIOS.USUARIO_USUARIO, EC_USUARIOS.USUARIO_EMAIL, 
+                         EC_US_IMPRESION.FECHA_IMPRESION, EC_US_IMPRESION.DISENO_ID, EC_US_IMPRESION.ESTADO_IMPRESION_ID, 
+                         EC_US_IMPRESION.USUARIO_ID, EC_US_IMPRESION.US_IMPRESION_REVER, EC_US_IMPRESION.US_IMPRESION_FRENTE, 
+                         EC_US_IMPRESION.TIPO_TARJETA_ID, EC_US_IMPRESION.TIPO_IMPRESION_ID, EC_US_IMPRESION.PERSONA_ID, EC_US_IMPRESION.PEDIDO_ID, 
+                         EC_US_IMPRESION.US_IMPRESION_NO
+FROM            EC_DISENOS INNER JOIN
+                         EC_US_IMPRESION INNER JOIN
+                         EC_ESTADO_IMPRESION ON EC_US_IMPRESION.ESTADO_IMPRESION_ID = EC_ESTADO_IMPRESION.ESTADO_IMPRESION_ID ON 
+                         EC_DISENOS.DISENO_ID = EC_US_IMPRESION.DISENO_ID INNER JOIN
+                         EC_USUARIOS ON EC_US_IMPRESION.USUARIO_ID = EC_USUARIOS.USUARIO_ID INNER JOIN
+                         EC_PERSONAS ON EC_US_IMPRESION.PERSONA_ID = EC_PERSONAS.PERSONA_ID
+WHERE        (EC_US_IMPRESION.USUARIO_ID = ?) AND (EC_US_IMPRESION.ESTADO_IMPRESION_ID = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param1" ColumnName="USUARIO_ID" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="USUARIO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="USUARIO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param2" ColumnName="ESTADO_IMPRESION_ID" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="ESTADO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="ESTADO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByNoEstado" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByNoEstado" GeneratorSourceName="FillByNoEstado" GetMethodModifier="Public" GetMethodName="GetDataByNoEstado" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByNoEstado" UserSourceName="FillByNoEstado">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_US_IMPRESION.US_IMPRESION_ID, EC_DISENOS.DISENO_NOMBRE, EC_PERSONAS.PERSONA_NOMBRE, EC_USUARIOS.USUARIO_NOMBRE, 
+                         EC_ESTADO_IMPRESION.ESTADO_IMPRESION, EC_USUARIOS.USUARIO_USUARIO, EC_USUARIOS.USUARIO_EMAIL, 
+                         EC_US_IMPRESION.FECHA_IMPRESION, EC_US_IMPRESION.DISENO_ID, EC_US_IMPRESION.ESTADO_IMPRESION_ID, 
+                         EC_US_IMPRESION.USUARIO_ID, EC_US_IMPRESION.US_IMPRESION_REVER, EC_US_IMPRESION.US_IMPRESION_FRENTE, 
+                         EC_US_IMPRESION.TIPO_TARJETA_ID, EC_US_IMPRESION.TIPO_IMPRESION_ID, EC_US_IMPRESION.PERSONA_ID, EC_US_IMPRESION.PEDIDO_ID, 
+                         EC_US_IMPRESION.US_IMPRESION_NO
+FROM            EC_DISENOS INNER JOIN
+                         EC_US_IMPRESION INNER JOIN
+                         EC_ESTADO_IMPRESION ON EC_US_IMPRESION.ESTADO_IMPRESION_ID = EC_ESTADO_IMPRESION.ESTADO_IMPRESION_ID ON 
+                         EC_DISENOS.DISENO_ID = EC_US_IMPRESION.DISENO_ID INNER JOIN
+                         EC_USUARIOS ON EC_US_IMPRESION.USUARIO_ID = EC_USUARIOS.USUARIO_ID INNER JOIN
+                         EC_PERSONAS ON EC_US_IMPRESION.PERSONA_ID = EC_PERSONAS.PERSONA_ID
+WHERE        (EC_US_IMPRESION.ESTADO_IMPRESION_ID &lt;&gt; ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param1" ColumnName="ESTADO_IMPRESION_ID" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="ESTADO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="ESTADO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByUserEstadoDiferente" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByUserEstadoDiferente" GeneratorSourceName="FillByUserEstadoDiferente" GetMethodModifier="Public" GetMethodName="GetDataByUserEstadoDiferente" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByUserEstadoDiferente" UserSourceName="FillByUserEstadoDiferente">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_US_IMPRESION.US_IMPRESION_ID, EC_DISENOS.DISENO_NOMBRE, EC_PERSONAS.PERSONA_NOMBRE, EC_USUARIOS.USUARIO_NOMBRE, 
+                         EC_ESTADO_IMPRESION.ESTADO_IMPRESION, EC_USUARIOS.USUARIO_USUARIO, EC_USUARIOS.USUARIO_EMAIL, 
+                         EC_US_IMPRESION.FECHA_IMPRESION, EC_US_IMPRESION.DISENO_ID, EC_US_IMPRESION.ESTADO_IMPRESION_ID, 
+                         EC_US_IMPRESION.USUARIO_ID, EC_US_IMPRESION.US_IMPRESION_REVER, EC_US_IMPRESION.US_IMPRESION_FRENTE, 
+                         EC_US_IMPRESION.TIPO_TARJETA_ID, EC_US_IMPRESION.TIPO_IMPRESION_ID, EC_US_IMPRESION.PERSONA_ID, EC_US_IMPRESION.PEDIDO_ID, 
+                         EC_US_IMPRESION.US_IMPRESION_NO
+FROM            EC_DISENOS INNER JOIN
+                         EC_US_IMPRESION INNER JOIN
+                         EC_ESTADO_IMPRESION ON EC_US_IMPRESION.ESTADO_IMPRESION_ID = EC_ESTADO_IMPRESION.ESTADO_IMPRESION_ID ON 
+                         EC_DISENOS.DISENO_ID = EC_US_IMPRESION.DISENO_ID INNER JOIN
+                         EC_USUARIOS ON EC_US_IMPRESION.USUARIO_ID = EC_USUARIOS.USUARIO_ID INNER JOIN
+                         EC_PERSONAS ON EC_US_IMPRESION.PERSONA_ID = EC_PERSONAS.PERSONA_ID
+WHERE        (EC_US_IMPRESION.USUARIO_ID = ?) AND (EC_US_IMPRESION.ESTADO_IMPRESION_ID &lt;&gt; ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param1" ColumnName="USUARIO_ID" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="USUARIO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="USUARIO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param2" ColumnName="ESTADO_IMPRESION_ID" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_IMPRESION" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="ESTADO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="ESTADO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByUsuario" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByUsuario" GeneratorSourceName="FillByUsuario" GetMethodModifier="Public" GetMethodName="GetDataByUsuario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByUsuario" UserSourceName="FillByUsuario">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_US_IMPRESION.US_IMPRESION_ID, EC_DISENOS.DISENO_NOMBRE, EC_PERSONAS.PERSONA_NOMBRE, EC_USUARIOS.USUARIO_NOMBRE, 
+                         EC_ESTADO_IMPRESION.ESTADO_IMPRESION, EC_USUARIOS.USUARIO_USUARIO, EC_USUARIOS.USUARIO_EMAIL, 
+                         EC_US_IMPRESION.FECHA_IMPRESION, EC_US_IMPRESION.DISENO_ID, EC_US_IMPRESION.ESTADO_IMPRESION_ID, 
+                         EC_US_IMPRESION.USUARIO_ID, EC_US_IMPRESION.US_IMPRESION_REVER, EC_US_IMPRESION.US_IMPRESION_FRENTE, 
+                         EC_US_IMPRESION.TIPO_TARJETA_ID, EC_US_IMPRESION.TIPO_IMPRESION_ID, EC_US_IMPRESION.PERSONA_ID, EC_US_IMPRESION.PEDIDO_ID, 
+                         EC_US_IMPRESION.US_IMPRESION_NO
+FROM            EC_DISENOS INNER JOIN
+                         EC_US_IMPRESION INNER JOIN
+                         EC_ESTADO_IMPRESION ON EC_US_IMPRESION.ESTADO_IMPRESION_ID = EC_ESTADO_IMPRESION.ESTADO_IMPRESION_ID ON 
+                         EC_DISENOS.DISENO_ID = EC_US_IMPRESION.DISENO_ID INNER JOIN
+                         EC_USUARIOS ON EC_US_IMPRESION.USUARIO_ID = EC_USUARIOS.USUARIO_ID INNER JOIN
+                         EC_PERSONAS ON EC_US_IMPRESION.PERSONA_ID = EC_PERSONAS.PERSONA_ID
+WHERE        (EC_USUARIOS.USUARIO_ID = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param1" ColumnName="USUARIO_ID" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_USUARIOS" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="USUARIO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="USUARIO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EC_TIPO_TARJETATableAdapter" GeneratorDataComponentClassName="EC_TIPO_TARJETATableAdapter" Name="EC_TIPO_TARJETA" UserDataComponentName="EC_TIPO_TARJETATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_TIPO_TARJETA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [EC_TIPO_TARJETA] WHERE (([TIPO_TARJETA_ID] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="Original_TIPO_TARJETA_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_TARJETA_ID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [EC_TIPO_TARJETA] ([TIPO_TARJETA_ID], [PRODUCTO_ID], [TIPO_TARJETA], [TIPO_TARJETA_DESC]) VALUES (?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="TIPO_TARJETA_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_TARJETA_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PRODUCTO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="PRODUCTO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="TIPO_TARJETA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPO_TARJETA" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="TIPO_TARJETA_DESC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPO_TARJETA_DESC" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_TIPO_TARJETA.*
+FROM            EC_TIPO_TARJETA</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [EC_TIPO_TARJETA] SET [TIPO_TARJETA_ID] = ?, [PRODUCTO_ID] = ?, [TIPO_TARJETA] = ?, [TIPO_TARJETA_DESC] = ? WHERE (([TIPO_TARJETA_ID] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="TIPO_TARJETA_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_TARJETA_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PRODUCTO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="PRODUCTO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="TIPO_TARJETA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPO_TARJETA" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="TIPO_TARJETA_DESC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPO_TARJETA_DESC" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="Original_TIPO_TARJETA_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_TARJETA_ID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TIPO_TARJETA_ID" DataSetColumn="TIPO_TARJETA_ID" />
+              <Mapping SourceColumn="PRODUCTO_ID" DataSetColumn="PRODUCTO_ID" />
+              <Mapping SourceColumn="TIPO_TARJETA" DataSetColumn="TIPO_TARJETA" />
+              <Mapping SourceColumn="TIPO_TARJETA_DESC" DataSetColumn="TIPO_TARJETA_DESC" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EC_TIPO_ENVIOTableAdapter" GeneratorDataComponentClassName="EC_TIPO_ENVIOTableAdapter" Name="EC_TIPO_ENVIO" UserDataComponentName="EC_TIPO_ENVIOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_TIPO_ENVIO" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [EC_TIPO_ENVIO] WHERE (([TIPO_ENVIO_ID] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="Original_TIPO_ENVIO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_ENVIO_ID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [EC_TIPO_ENVIO] ([TIPO_ENVIO_ID], [PRODUCTO_ID], [TIPO_ENVIO], [TIPO_ENVIO_DESC], [TIPO_ENVIO_COSTO], [TIPO_ENVIO_BORRADO]) VALUES (?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="TIPO_ENVIO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_ENVIO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PRODUCTO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="PRODUCTO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="TIPO_ENVIO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPO_ENVIO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="TIPO_ENVIO_DESC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPO_ENVIO_DESC" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="TIPO_ENVIO_COSTO" Precision="18" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_ENVIO_COSTO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="TIPO_ENVIO_BORRADO" Precision="1" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_ENVIO_BORRADO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_TIPO_ENVIO.*
+FROM            EC_TIPO_ENVIO</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [EC_TIPO_ENVIO] SET [TIPO_ENVIO_ID] = ?, [PRODUCTO_ID] = ?, [TIPO_ENVIO] = ?, [TIPO_ENVIO_DESC] = ?, [TIPO_ENVIO_COSTO] = ?, [TIPO_ENVIO_BORRADO] = ? WHERE (([TIPO_ENVIO_ID] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="TIPO_ENVIO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_ENVIO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PRODUCTO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="PRODUCTO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="TIPO_ENVIO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPO_ENVIO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="TIPO_ENVIO_DESC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPO_ENVIO_DESC" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="TIPO_ENVIO_COSTO" Precision="18" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_ENVIO_COSTO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="TIPO_ENVIO_BORRADO" Precision="1" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_ENVIO_BORRADO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="Original_TIPO_ENVIO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_ENVIO_ID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TIPO_ENVIO_ID" DataSetColumn="TIPO_ENVIO_ID" />
+              <Mapping SourceColumn="PRODUCTO_ID" DataSetColumn="PRODUCTO_ID" />
+              <Mapping SourceColumn="TIPO_ENVIO" DataSetColumn="TIPO_ENVIO" />
+              <Mapping SourceColumn="TIPO_ENVIO_DESC" DataSetColumn="TIPO_ENVIO_DESC" />
+              <Mapping SourceColumn="TIPO_ENVIO_COSTO" DataSetColumn="TIPO_ENVIO_COSTO" />
+              <Mapping SourceColumn="TIPO_ENVIO_BORRADO" DataSetColumn="TIPO_ENVIO_BORRADO" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EC_ESTADO_IMPRESIONTableAdapter" GeneratorDataComponentClassName="EC_ESTADO_IMPRESIONTableAdapter" Name="EC_ESTADO_IMPRESION" UserDataComponentName="EC_ESTADO_IMPRESIONTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_ESTADO_IMPRESION" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [EC_ESTADO_IMPRESION] WHERE (([ESTADO_IMPRESION_ID] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="Original_ESTADO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="ESTADO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [EC_ESTADO_IMPRESION] ([ESTADO_IMPRESION_ID], [ESTADO_IMPRESION]) VALUES (?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="ESTADO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="ESTADO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="ESTADO_IMPRESION" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ESTADO_IMPRESION" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_ESTADO_IMPRESION.*
+FROM            EC_ESTADO_IMPRESION</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [EC_ESTADO_IMPRESION] SET [ESTADO_IMPRESION_ID] = ?, [ESTADO_IMPRESION] = ? WHERE (([ESTADO_IMPRESION_ID] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="ESTADO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="ESTADO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="ESTADO_IMPRESION" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ESTADO_IMPRESION" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="Original_ESTADO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="ESTADO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ESTADO_IMPRESION_ID" DataSetColumn="ESTADO_IMPRESION_ID" />
+              <Mapping SourceColumn="ESTADO_IMPRESION" DataSetColumn="ESTADO_IMPRESION" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EC_TIPO_IMPRESIONTableAdapter" GeneratorDataComponentClassName="EC_TIPO_IMPRESIONTableAdapter" Name="EC_TIPO_IMPRESION" UserDataComponentName="EC_TIPO_IMPRESIONTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_TIPO_IMPRESION" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [EC_TIPO_IMPRESION] WHERE (([TIPO_IMPRESION_ID] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="Original_TIPO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [EC_TIPO_IMPRESION] ([TIPO_IMPRESION_ID], [PRODUCTO_ID], [TIPO_IMPRESION]) VALUES (?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="TIPO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PRODUCTO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="PRODUCTO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="TIPO_IMPRESION" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPO_IMPRESION" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_TIPO_IMPRESION.*
+FROM            EC_TIPO_IMPRESION</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [EC_TIPO_IMPRESION] SET [TIPO_IMPRESION_ID] = ?, [PRODUCTO_ID] = ?, [TIPO_IMPRESION] = ? WHERE (([TIPO_IMPRESION_ID] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="TIPO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="PRODUCTO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="PRODUCTO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="TIPO_IMPRESION" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPO_IMPRESION" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="Original_TIPO_IMPRESION_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="TIPO_IMPRESION_ID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TIPO_IMPRESION_ID" DataSetColumn="TIPO_IMPRESION_ID" />
+              <Mapping SourceColumn="PRODUCTO_ID" DataSetColumn="PRODUCTO_ID" />
+              <Mapping SourceColumn="TIPO_IMPRESION" DataSetColumn="TIPO_IMPRESION" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EC_US_DATTableAdapter" GeneratorDataComponentClassName="EC_US_DATTableAdapter" Name="EC_US_DAT" UserDataComponentName="EC_US_DATTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_DAT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [EC_US_DAT] WHERE (([US_DAT_ID] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="Original_US_DAT_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="US_DAT_ID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [EC_US_DAT] ([US_DAT_ID], [USUARIO_ID], [US_DAT_RFC], [US_DAT_RS], [US_DAT_F_DIR1], [US_DAT_F_DIR2], [US_DAT_F_CIUDAD], [US_DAT_F_EDO], [US_DAT_F_CP], [US_DAT_F_PAIS], [US_DAT_F_TELEFONO], [US_DAT_E_A], [US_DAT_E_DIR1], [US_DAT_E_DIR2], [US_DAT_E_CIUDAD], [US_DAT_E_EDO], [US_DAT_E_CP], [US_DAT_E_PAIS], [US_DAT_E_MENS], [US_DAT_E_COMEN], [US_DAT_FECHAMOD], [US_DAT_E_TELEFONO]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="US_DAT_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="US_DAT_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="USUARIO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="USUARIO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_RFC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_RFC" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_RS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_RS" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_DIR1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_DIR1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_DIR2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_DIR2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_CIUDAD" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_CIUDAD" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_EDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_EDO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_CP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_CP" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_PAIS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_PAIS" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_TELEFONO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_TELEFONO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_A" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_A" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_DIR1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_DIR1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_DIR2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_DIR2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_CIUDAD" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_CIUDAD" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_EDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_EDO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_CP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_CP" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_PAIS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_PAIS" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_MENS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_MENS" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_COMEN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_COMEN" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="US_DAT_FECHAMOD" Precision="0" ProviderType="DBTimeStamp" Scale="0" Size="0" SourceColumn="US_DAT_FECHAMOD" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_TELEFONO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_TELEFONO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_US_DAT.*
+FROM            EC_US_DAT</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [EC_US_DAT] SET [US_DAT_ID] = ?, [USUARIO_ID] = ?, [US_DAT_RFC] = ?, [US_DAT_RS] = ?, [US_DAT_F_DIR1] = ?, [US_DAT_F_DIR2] = ?, [US_DAT_F_CIUDAD] = ?, [US_DAT_F_EDO] = ?, [US_DAT_F_CP] = ?, [US_DAT_F_PAIS] = ?, [US_DAT_F_TELEFONO] = ?, [US_DAT_E_A] = ?, [US_DAT_E_DIR1] = ?, [US_DAT_E_DIR2] = ?, [US_DAT_E_CIUDAD] = ?, [US_DAT_E_EDO] = ?, [US_DAT_E_CP] = ?, [US_DAT_E_PAIS] = ?, [US_DAT_E_MENS] = ?, [US_DAT_E_COMEN] = ?, [US_DAT_FECHAMOD] = ?, [US_DAT_E_TELEFONO] = ? WHERE (([US_DAT_ID] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="US_DAT_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="US_DAT_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="USUARIO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="USUARIO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_RFC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_RFC" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_RS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_RS" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_DIR1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_DIR1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_DIR2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_DIR2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_CIUDAD" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_CIUDAD" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_EDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_EDO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_CP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_CP" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_PAIS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_PAIS" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_F_TELEFONO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_F_TELEFONO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_A" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_A" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_DIR1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_DIR1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_DIR2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_DIR2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_CIUDAD" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_CIUDAD" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_EDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_EDO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_CP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_CP" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_PAIS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_PAIS" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_MENS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_MENS" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_COMEN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_COMEN" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="US_DAT_FECHAMOD" Precision="0" ProviderType="DBTimeStamp" Scale="0" Size="0" SourceColumn="US_DAT_FECHAMOD" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="US_DAT_E_TELEFONO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="US_DAT_E_TELEFONO" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="Original_US_DAT_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="0" SourceColumn="US_DAT_ID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="US_DAT_ID" DataSetColumn="US_DAT_ID" />
+              <Mapping SourceColumn="USUARIO_ID" DataSetColumn="USUARIO_ID" />
+              <Mapping SourceColumn="US_DAT_RFC" DataSetColumn="US_DAT_RFC" />
+              <Mapping SourceColumn="US_DAT_RS" DataSetColumn="US_DAT_RS" />
+              <Mapping SourceColumn="US_DAT_F_DIR1" DataSetColumn="US_DAT_F_DIR1" />
+              <Mapping SourceColumn="US_DAT_F_DIR2" DataSetColumn="US_DAT_F_DIR2" />
+              <Mapping SourceColumn="US_DAT_F_CIUDAD" DataSetColumn="US_DAT_F_CIUDAD" />
+              <Mapping SourceColumn="US_DAT_F_EDO" DataSetColumn="US_DAT_F_EDO" />
+              <Mapping SourceColumn="US_DAT_F_CP" DataSetColumn="US_DAT_F_CP" />
+              <Mapping SourceColumn="US_DAT_F_PAIS" DataSetColumn="US_DAT_F_PAIS" />
+              <Mapping SourceColumn="US_DAT_F_TELEFONO" DataSetColumn="US_DAT_F_TELEFONO" />
+              <Mapping SourceColumn="US_DAT_E_A" DataSetColumn="US_DAT_E_A" />
+              <Mapping SourceColumn="US_DAT_E_DIR1" DataSetColumn="US_DAT_E_DIR1" />
+              <Mapping SourceColumn="US_DAT_E_DIR2" DataSetColumn="US_DAT_E_DIR2" />
+              <Mapping SourceColumn="US_DAT_E_CIUDAD" DataSetColumn="US_DAT_E_CIUDAD" />
+              <Mapping SourceColumn="US_DAT_E_EDO" DataSetColumn="US_DAT_E_EDO" />
+              <Mapping SourceColumn="US_DAT_E_CP" DataSetColumn="US_DAT_E_CP" />
+              <Mapping SourceColumn="US_DAT_E_PAIS" DataSetColumn="US_DAT_E_PAIS" />
+              <Mapping SourceColumn="US_DAT_E_MENS" DataSetColumn="US_DAT_E_MENS" />
+              <Mapping SourceColumn="US_DAT_E_COMEN" DataSetColumn="US_DAT_E_COMEN" />
+              <Mapping SourceColumn="US_DAT_FECHAMOD" DataSetColumn="US_DAT_FECHAMOD" />
+              <Mapping SourceColumn="US_DAT_E_TELEFONO" DataSetColumn="US_DAT_E_TELEFONO" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_DAT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUsuarioID" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByUsuarioID" GeneratorSourceName="FillByUsuarioID" GetMethodModifier="Public" GetMethodName="GetDataByUsuarioID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByUsuarioID" UserSourceName="FillByUsuarioID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        US_DAT_ID, USUARIO_ID, US_DAT_RFC, US_DAT_RS, US_DAT_F_DIR1, US_DAT_F_DIR2, US_DAT_F_CIUDAD, US_DAT_F_EDO, US_DAT_F_CP, 
+                         US_DAT_F_PAIS, US_DAT_F_TELEFONO, US_DAT_E_A, US_DAT_E_DIR1, US_DAT_E_DIR2, US_DAT_E_CIUDAD, US_DAT_E_EDO, US_DAT_E_CP, 
+                         US_DAT_E_PAIS, US_DAT_E_MENS, US_DAT_E_COMEN, US_DAT_FECHAMOD, US_DAT_E_TELEFONO
+FROM            EC_US_DAT
+WHERE        (USUARIO_ID = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param1" ColumnName="USUARIO_ID" DataSourceName="[host-w09_mssqlb3df0cc6c252c9fa3773908c89f].usrd61b5a603cf6.EC_US_DAT" DataTypeServer="decimal(38, 0)" DbType="Decimal" Direction="Input" ParameterName="USUARIO_ID" Precision="38" ProviderType="Numeric" Scale="0" Size="17" SourceColumn="USUARIO_ID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSImpresiones" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSImpresiones" msprop:Generator_DataSetName="DSImpresiones">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Impresiones" msprop:Generator_UserTableName="Impresiones" msprop:Generator_RowDeletedName="ImpresionesRowDeleted" msprop:Generator_RowChangedName="ImpresionesRowChanged" msprop:Generator_RowClassName="ImpresionesRow" msprop:Generator_RowChangingName="ImpresionesRowChanging" msprop:Generator_RowEvArgName="ImpresionesRowChangeEvent" msprop:Generator_RowEvHandlerName="ImpresionesRowChangeEventHandler" msprop:Generator_TableClassName="ImpresionesDataTable" msprop:Generator_TableVarName="tableImpresiones" msprop:Generator_RowDeletingName="ImpresionesRowDeleting" msprop:Generator_TablePropName="Impresiones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="US_IMPRESION_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="US_IMPRESION_ID" msprop:Generator_ColumnVarNameInTable="columnUS_IMPRESION_ID" msprop:Generator_ColumnPropNameInRow="US_IMPRESION_ID" msprop:Generator_ColumnPropNameInTable="US_IMPRESION_IDColumn" type="xs:int" />
+              <xs:element name="DISENO_NOMBRE" msprop:Generator_UserColumnName="DISENO_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnDISENO_NOMBRE" msprop:Generator_ColumnPropNameInRow="DISENO_NOMBRE" msprop:Generator_ColumnPropNameInTable="DISENO_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONA_NOMBRE" msprop:Generator_UserColumnName="PERSONA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnPERSONA_NOMBRE" msprop:Generator_ColumnPropNameInRow="PERSONA_NOMBRE" msprop:Generator_ColumnPropNameInTable="PERSONA_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USUARIO_NOMBRE" msprop:Generator_UserColumnName="USUARIO_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_NOMBRE" msprop:Generator_ColumnPropNameInRow="USUARIO_NOMBRE" msprop:Generator_ColumnPropNameInTable="USUARIO_NOMBREColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USUARIO_USUARIO" msprop:Generator_UserColumnName="USUARIO_USUARIO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_USUARIO" msprop:Generator_ColumnPropNameInRow="USUARIO_USUARIO" msprop:Generator_ColumnPropNameInTable="USUARIO_USUARIOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USUARIO_EMAIL" msprop:Generator_UserColumnName="USUARIO_EMAIL" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_EMAIL" msprop:Generator_ColumnPropNameInRow="USUARIO_EMAIL" msprop:Generator_ColumnPropNameInTable="USUARIO_EMAILColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA_IMPRESION" msprop:Generator_UserColumnName="FECHA_IMPRESION" msprop:Generator_ColumnVarNameInTable="columnFECHA_IMPRESION" msprop:Generator_ColumnPropNameInRow="FECHA_IMPRESION" msprop:Generator_ColumnPropNameInTable="FECHA_IMPRESIONColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DISENO_ID" msprop:Generator_UserColumnName="DISENO_ID" msprop:Generator_ColumnVarNameInTable="columnDISENO_ID" msprop:Generator_ColumnPropNameInRow="DISENO_ID" msprop:Generator_ColumnPropNameInTable="DISENO_IDColumn" type="xs:int" />
+              <xs:element name="USUARIO_ID" msprop:Generator_UserColumnName="USUARIO_ID" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_ID" msprop:Generator_ColumnPropNameInRow="USUARIO_ID" msprop:Generator_ColumnPropNameInTable="USUARIO_IDColumn" type="xs:int" />
+              <xs:element name="ESTADO_IMPRESION" msprop:Generator_UserColumnName="ESTADO_IMPRESION" msprop:Generator_ColumnPropNameInRow="ESTADO_IMPRESION" msprop:Generator_ColumnVarNameInTable="columnESTADO_IMPRESION" msprop:Generator_ColumnPropNameInTable="ESTADO_IMPRESIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESTADO_IMPRESION_ID" msprop:Generator_UserColumnName="ESTADO_IMPRESION_ID" msprop:Generator_ColumnPropNameInRow="ESTADO_IMPRESION_ID" msprop:Generator_ColumnVarNameInTable="columnESTADO_IMPRESION_ID" msprop:Generator_ColumnPropNameInTable="ESTADO_IMPRESION_IDColumn" type="xs:decimal" />
+              <xs:element name="US_IMPRESION_REVER" msprop:Generator_UserColumnName="US_IMPRESION_REVER" msprop:Generator_ColumnVarNameInTable="columnUS_IMPRESION_REVER" msprop:Generator_ColumnPropNameInRow="US_IMPRESION_REVER" msprop:Generator_ColumnPropNameInTable="US_IMPRESION_REVERColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="US_IMPRESION_FRENTE" msprop:Generator_UserColumnName="US_IMPRESION_FRENTE" msprop:Generator_ColumnVarNameInTable="columnUS_IMPRESION_FRENTE" msprop:Generator_ColumnPropNameInRow="US_IMPRESION_FRENTE" msprop:Generator_ColumnPropNameInTable="US_IMPRESION_FRENTEColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TIPO_TARJETA_ID" msprop:Generator_UserColumnName="TIPO_TARJETA_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_TARJETA_ID" msprop:Generator_ColumnPropNameInRow="TIPO_TARJETA_ID" msprop:Generator_ColumnPropNameInTable="TIPO_TARJETA_IDColumn" type="xs:decimal" />
+              <xs:element name="TIPO_IMPRESION_ID" msprop:Generator_UserColumnName="TIPO_IMPRESION_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_IMPRESION_ID" msprop:Generator_ColumnPropNameInRow="TIPO_IMPRESION_ID" msprop:Generator_ColumnPropNameInTable="TIPO_IMPRESION_IDColumn" type="xs:decimal" />
+              <xs:element name="PERSONA_ID" msprop:Generator_UserColumnName="PERSONA_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_IDColumn" type="xs:decimal" />
+              <xs:element name="PEDIDO_ID" msprop:Generator_UserColumnName="PEDIDO_ID" msprop:Generator_ColumnPropNameInRow="PEDIDO_ID" msprop:Generator_ColumnVarNameInTable="columnPEDIDO_ID" msprop:Generator_ColumnPropNameInTable="PEDIDO_IDColumn" type="xs:decimal" />
+              <xs:element name="US_IMPRESION_NO" msprop:Generator_UserColumnName="US_IMPRESION_NO" msprop:Generator_ColumnPropNameInRow="US_IMPRESION_NO" msprop:Generator_ColumnVarNameInTable="columnUS_IMPRESION_NO" msprop:Generator_ColumnPropNameInTable="US_IMPRESION_NOColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_TIPO_TARJETA" msprop:Generator_UserTableName="EC_TIPO_TARJETA" msprop:Generator_RowDeletedName="EC_TIPO_TARJETARowDeleted" msprop:Generator_RowChangedName="EC_TIPO_TARJETARowChanged" msprop:Generator_RowClassName="EC_TIPO_TARJETARow" msprop:Generator_RowChangingName="EC_TIPO_TARJETARowChanging" msprop:Generator_RowEvArgName="EC_TIPO_TARJETARowChangeEvent" msprop:Generator_RowEvHandlerName="EC_TIPO_TARJETARowChangeEventHandler" msprop:Generator_TableClassName="EC_TIPO_TARJETADataTable" msprop:Generator_TableVarName="tableEC_TIPO_TARJETA" msprop:Generator_RowDeletingName="EC_TIPO_TARJETARowDeleting" msprop:Generator_TablePropName="EC_TIPO_TARJETA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPO_TARJETA_ID" msprop:Generator_UserColumnName="TIPO_TARJETA_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_TARJETA_ID" msprop:Generator_ColumnPropNameInRow="TIPO_TARJETA_ID" msprop:Generator_ColumnPropNameInTable="TIPO_TARJETA_IDColumn" type="xs:decimal" />
+              <xs:element name="PRODUCTO_ID" msprop:Generator_UserColumnName="PRODUCTO_ID" msprop:Generator_ColumnVarNameInTable="columnPRODUCTO_ID" msprop:Generator_ColumnPropNameInRow="PRODUCTO_ID" msprop:Generator_ColumnPropNameInTable="PRODUCTO_IDColumn" type="xs:decimal" />
+              <xs:element name="TIPO_TARJETA" msprop:Generator_UserColumnName="TIPO_TARJETA" msprop:Generator_ColumnVarNameInTable="columnTIPO_TARJETA" msprop:Generator_ColumnPropNameInRow="TIPO_TARJETA" msprop:Generator_ColumnPropNameInTable="TIPO_TARJETAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_TARJETA_DESC" msprop:Generator_UserColumnName="TIPO_TARJETA_DESC" msprop:Generator_ColumnVarNameInTable="columnTIPO_TARJETA_DESC" msprop:Generator_ColumnPropNameInRow="TIPO_TARJETA_DESC" msprop:Generator_ColumnPropNameInTable="TIPO_TARJETA_DESCColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_TIPO_ENVIO" msprop:Generator_UserTableName="EC_TIPO_ENVIO" msprop:Generator_RowDeletedName="EC_TIPO_ENVIORowDeleted" msprop:Generator_RowChangedName="EC_TIPO_ENVIORowChanged" msprop:Generator_RowClassName="EC_TIPO_ENVIORow" msprop:Generator_RowChangingName="EC_TIPO_ENVIORowChanging" msprop:Generator_RowEvArgName="EC_TIPO_ENVIORowChangeEvent" msprop:Generator_RowEvHandlerName="EC_TIPO_ENVIORowChangeEventHandler" msprop:Generator_TableClassName="EC_TIPO_ENVIODataTable" msprop:Generator_TableVarName="tableEC_TIPO_ENVIO" msprop:Generator_RowDeletingName="EC_TIPO_ENVIORowDeleting" msprop:Generator_TablePropName="EC_TIPO_ENVIO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPO_ENVIO_ID" msprop:Generator_UserColumnName="TIPO_ENVIO_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_ENVIO_ID" msprop:Generator_ColumnPropNameInRow="TIPO_ENVIO_ID" msprop:Generator_ColumnPropNameInTable="TIPO_ENVIO_IDColumn" type="xs:decimal" />
+              <xs:element name="PRODUCTO_ID" msprop:Generator_UserColumnName="PRODUCTO_ID" msprop:Generator_ColumnVarNameInTable="columnPRODUCTO_ID" msprop:Generator_ColumnPropNameInRow="PRODUCTO_ID" msprop:Generator_ColumnPropNameInTable="PRODUCTO_IDColumn" type="xs:decimal" />
+              <xs:element name="TIPO_ENVIO" msprop:Generator_UserColumnName="TIPO_ENVIO" msprop:Generator_ColumnVarNameInTable="columnTIPO_ENVIO" msprop:Generator_ColumnPropNameInRow="TIPO_ENVIO" msprop:Generator_ColumnPropNameInTable="TIPO_ENVIOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_ENVIO_DESC" msprop:Generator_UserColumnName="TIPO_ENVIO_DESC" msprop:Generator_ColumnVarNameInTable="columnTIPO_ENVIO_DESC" msprop:Generator_ColumnPropNameInRow="TIPO_ENVIO_DESC" msprop:Generator_ColumnPropNameInTable="TIPO_ENVIO_DESCColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_ENVIO_COSTO" msprop:Generator_UserColumnName="TIPO_ENVIO_COSTO" msprop:Generator_ColumnVarNameInTable="columnTIPO_ENVIO_COSTO" msprop:Generator_ColumnPropNameInRow="TIPO_ENVIO_COSTO" msprop:Generator_ColumnPropNameInTable="TIPO_ENVIO_COSTOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TIPO_ENVIO_BORRADO" msprop:Generator_UserColumnName="TIPO_ENVIO_BORRADO" msprop:Generator_ColumnVarNameInTable="columnTIPO_ENVIO_BORRADO" msprop:Generator_ColumnPropNameInRow="TIPO_ENVIO_BORRADO" msprop:Generator_ColumnPropNameInTable="TIPO_ENVIO_BORRADOColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_ESTADO_IMPRESION" msprop:Generator_UserTableName="EC_ESTADO_IMPRESION" msprop:Generator_RowDeletedName="EC_ESTADO_IMPRESIONRowDeleted" msprop:Generator_RowChangedName="EC_ESTADO_IMPRESIONRowChanged" msprop:Generator_RowClassName="EC_ESTADO_IMPRESIONRow" msprop:Generator_RowChangingName="EC_ESTADO_IMPRESIONRowChanging" msprop:Generator_RowEvArgName="EC_ESTADO_IMPRESIONRowChangeEvent" msprop:Generator_RowEvHandlerName="EC_ESTADO_IMPRESIONRowChangeEventHandler" msprop:Generator_TableClassName="EC_ESTADO_IMPRESIONDataTable" msprop:Generator_TableVarName="tableEC_ESTADO_IMPRESION" msprop:Generator_RowDeletingName="EC_ESTADO_IMPRESIONRowDeleting" msprop:Generator_TablePropName="EC_ESTADO_IMPRESION">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ESTADO_IMPRESION_ID" msprop:Generator_UserColumnName="ESTADO_IMPRESION_ID" msprop:Generator_ColumnVarNameInTable="columnESTADO_IMPRESION_ID" msprop:Generator_ColumnPropNameInRow="ESTADO_IMPRESION_ID" msprop:Generator_ColumnPropNameInTable="ESTADO_IMPRESION_IDColumn" type="xs:decimal" />
+              <xs:element name="ESTADO_IMPRESION" msprop:Generator_UserColumnName="ESTADO_IMPRESION" msprop:Generator_ColumnVarNameInTable="columnESTADO_IMPRESION" msprop:Generator_ColumnPropNameInRow="ESTADO_IMPRESION" msprop:Generator_ColumnPropNameInTable="ESTADO_IMPRESIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_TIPO_IMPRESION" msprop:Generator_UserTableName="EC_TIPO_IMPRESION" msprop:Generator_RowDeletedName="EC_TIPO_IMPRESIONRowDeleted" msprop:Generator_RowChangedName="EC_TIPO_IMPRESIONRowChanged" msprop:Generator_RowClassName="EC_TIPO_IMPRESIONRow" msprop:Generator_RowChangingName="EC_TIPO_IMPRESIONRowChanging" msprop:Generator_RowEvArgName="EC_TIPO_IMPRESIONRowChangeEvent" msprop:Generator_RowEvHandlerName="EC_TIPO_IMPRESIONRowChangeEventHandler" msprop:Generator_TableClassName="EC_TIPO_IMPRESIONDataTable" msprop:Generator_TableVarName="tableEC_TIPO_IMPRESION" msprop:Generator_RowDeletingName="EC_TIPO_IMPRESIONRowDeleting" msprop:Generator_TablePropName="EC_TIPO_IMPRESION">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPO_IMPRESION_ID" msprop:Generator_UserColumnName="TIPO_IMPRESION_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_IMPRESION_ID" msprop:Generator_ColumnPropNameInRow="TIPO_IMPRESION_ID" msprop:Generator_ColumnPropNameInTable="TIPO_IMPRESION_IDColumn" type="xs:decimal" />
+              <xs:element name="PRODUCTO_ID" msprop:Generator_UserColumnName="PRODUCTO_ID" msprop:Generator_ColumnVarNameInTable="columnPRODUCTO_ID" msprop:Generator_ColumnPropNameInRow="PRODUCTO_ID" msprop:Generator_ColumnPropNameInTable="PRODUCTO_IDColumn" type="xs:decimal" />
+              <xs:element name="TIPO_IMPRESION" msprop:Generator_UserColumnName="TIPO_IMPRESION" msprop:Generator_ColumnVarNameInTable="columnTIPO_IMPRESION" msprop:Generator_ColumnPropNameInRow="TIPO_IMPRESION" msprop:Generator_ColumnPropNameInTable="TIPO_IMPRESIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_US_DAT" msprop:Generator_UserTableName="EC_US_DAT" msprop:Generator_RowDeletedName="EC_US_DATRowDeleted" msprop:Generator_RowChangedName="EC_US_DATRowChanged" msprop:Generator_RowClassName="EC_US_DATRow" msprop:Generator_RowChangingName="EC_US_DATRowChanging" msprop:Generator_RowEvArgName="EC_US_DATRowChangeEvent" msprop:Generator_RowEvHandlerName="EC_US_DATRowChangeEventHandler" msprop:Generator_TableClassName="EC_US_DATDataTable" msprop:Generator_TableVarName="tableEC_US_DAT" msprop:Generator_RowDeletingName="EC_US_DATRowDeleting" msprop:Generator_TablePropName="EC_US_DAT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="US_DAT_ID" msprop:Generator_UserColumnName="US_DAT_ID" msprop:Generator_ColumnPropNameInRow="US_DAT_ID" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_ID" msprop:Generator_ColumnPropNameInTable="US_DAT_IDColumn" type="xs:decimal" />
+              <xs:element name="USUARIO_ID" msprop:Generator_UserColumnName="USUARIO_ID" msprop:Generator_ColumnPropNameInRow="USUARIO_ID" msprop:Generator_ColumnVarNameInTable="columnUSUARIO_ID" msprop:Generator_ColumnPropNameInTable="USUARIO_IDColumn" type="xs:decimal" />
+              <xs:element name="US_DAT_RFC" msprop:Generator_UserColumnName="US_DAT_RFC" msprop:Generator_ColumnPropNameInRow="US_DAT_RFC" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_RFC" msprop:Generator_ColumnPropNameInTable="US_DAT_RFCColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_RS" msprop:Generator_UserColumnName="US_DAT_RS" msprop:Generator_ColumnPropNameInRow="US_DAT_RS" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_RS" msprop:Generator_ColumnPropNameInTable="US_DAT_RSColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_F_DIR1" msprop:Generator_UserColumnName="US_DAT_F_DIR1" msprop:Generator_ColumnPropNameInRow="US_DAT_F_DIR1" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_F_DIR1" msprop:Generator_ColumnPropNameInTable="US_DAT_F_DIR1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_F_DIR2" msprop:Generator_UserColumnName="US_DAT_F_DIR2" msprop:Generator_ColumnPropNameInRow="US_DAT_F_DIR2" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_F_DIR2" msprop:Generator_ColumnPropNameInTable="US_DAT_F_DIR2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_F_CIUDAD" msprop:Generator_UserColumnName="US_DAT_F_CIUDAD" msprop:Generator_ColumnPropNameInRow="US_DAT_F_CIUDAD" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_F_CIUDAD" msprop:Generator_ColumnPropNameInTable="US_DAT_F_CIUDADColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_F_EDO" msprop:Generator_UserColumnName="US_DAT_F_EDO" msprop:Generator_ColumnPropNameInRow="US_DAT_F_EDO" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_F_EDO" msprop:Generator_ColumnPropNameInTable="US_DAT_F_EDOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_F_CP" msprop:Generator_UserColumnName="US_DAT_F_CP" msprop:Generator_ColumnPropNameInRow="US_DAT_F_CP" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_F_CP" msprop:Generator_ColumnPropNameInTable="US_DAT_F_CPColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_F_PAIS" msprop:Generator_UserColumnName="US_DAT_F_PAIS" msprop:Generator_ColumnPropNameInRow="US_DAT_F_PAIS" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_F_PAIS" msprop:Generator_ColumnPropNameInTable="US_DAT_F_PAISColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_F_TELEFONO" msprop:Generator_UserColumnName="US_DAT_F_TELEFONO" msprop:Generator_ColumnPropNameInRow="US_DAT_F_TELEFONO" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_F_TELEFONO" msprop:Generator_ColumnPropNameInTable="US_DAT_F_TELEFONOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_E_A" msprop:Generator_UserColumnName="US_DAT_E_A" msprop:Generator_ColumnPropNameInRow="US_DAT_E_A" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_E_A" msprop:Generator_ColumnPropNameInTable="US_DAT_E_AColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_E_DIR1" msprop:Generator_UserColumnName="US_DAT_E_DIR1" msprop:Generator_ColumnPropNameInRow="US_DAT_E_DIR1" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_E_DIR1" msprop:Generator_ColumnPropNameInTable="US_DAT_E_DIR1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_E_DIR2" msprop:Generator_UserColumnName="US_DAT_E_DIR2" msprop:Generator_ColumnPropNameInRow="US_DAT_E_DIR2" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_E_DIR2" msprop:Generator_ColumnPropNameInTable="US_DAT_E_DIR2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_E_CIUDAD" msprop:Generator_UserColumnName="US_DAT_E_CIUDAD" msprop:Generator_ColumnPropNameInRow="US_DAT_E_CIUDAD" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_E_CIUDAD" msprop:Generator_ColumnPropNameInTable="US_DAT_E_CIUDADColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_E_EDO" msprop:Generator_UserColumnName="US_DAT_E_EDO" msprop:Generator_ColumnPropNameInRow="US_DAT_E_EDO" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_E_EDO" msprop:Generator_ColumnPropNameInTable="US_DAT_E_EDOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_E_CP" msprop:Generator_UserColumnName="US_DAT_E_CP" msprop:Generator_ColumnPropNameInRow="US_DAT_E_CP" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_E_CP" msprop:Generator_ColumnPropNameInTable="US_DAT_E_CPColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_E_PAIS" msprop:Generator_UserColumnName="US_DAT_E_PAIS" msprop:Generator_ColumnPropNameInRow="US_DAT_E_PAIS" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_E_PAIS" msprop:Generator_ColumnPropNameInTable="US_DAT_E_PAISColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_E_MENS" msprop:Generator_UserColumnName="US_DAT_E_MENS" msprop:Generator_ColumnPropNameInRow="US_DAT_E_MENS" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_E_MENS" msprop:Generator_ColumnPropNameInTable="US_DAT_E_MENSColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_E_COMEN" msprop:Generator_UserColumnName="US_DAT_E_COMEN" msprop:Generator_ColumnPropNameInRow="US_DAT_E_COMEN" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_E_COMEN" msprop:Generator_ColumnPropNameInTable="US_DAT_E_COMENColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="US_DAT_FECHAMOD" msprop:Generator_UserColumnName="US_DAT_FECHAMOD" msprop:Generator_ColumnPropNameInRow="US_DAT_FECHAMOD" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_FECHAMOD" msprop:Generator_ColumnPropNameInTable="US_DAT_FECHAMODColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="US_DAT_E_TELEFONO" msprop:Generator_UserColumnName="US_DAT_E_TELEFONO" msprop:Generator_ColumnPropNameInRow="US_DAT_E_TELEFONO" msprop:Generator_ColumnVarNameInTable="columnUS_DAT_E_TELEFONO" msprop:Generator_ColumnPropNameInTable="US_DAT_E_TELEFONOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Impresiones" />
+      <xs:field xpath="mstns:US_IMPRESION_ID" />
+    </xs:unique>
+    <xs:unique name="EC_TIPO_TARJETA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_TIPO_TARJETA" />
+      <xs:field xpath="mstns:TIPO_TARJETA_ID" />
+    </xs:unique>
+    <xs:unique name="EC_TIPO_ENVIO_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_TIPO_ENVIO" />
+      <xs:field xpath="mstns:TIPO_ENVIO_ID" />
+    </xs:unique>
+    <xs:unique name="EC_ESTADO_IMPRESION_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_ESTADO_IMPRESION" />
+      <xs:field xpath="mstns:ESTADO_IMPRESION_ID" />
+    </xs:unique>
+    <xs:unique name="EC_TIPO_IMPRESION_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_TIPO_IMPRESION" />
+      <xs:field xpath="mstns:TIPO_IMPRESION_ID" />
+    </xs:unique>
+    <xs:unique name="EC_US_DAT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_US_DAT" />
+      <xs:field xpath="mstns:US_DAT_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

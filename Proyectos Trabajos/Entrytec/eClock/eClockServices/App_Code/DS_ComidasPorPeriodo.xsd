@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_ComidasPorPeriodo" targetNamespace="http://tempuri.org/DS_ComidasPorPeriodo.xsd" xmlns:mstns="http://tempuri.org/DS_ComidasPorPeriodo.xsd" xmlns="http://tempuri.org/DS_ComidasPorPeriodo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="CeT_DataTable" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EC_SUSCRIPCIONTableAdapter" GeneratorDataComponentClassName="EC_SUSCRIPCIONTableAdapter" Name="EC_SUSCRIPCION" UserDataComponentName="EC_SUSCRIPCIONTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>select SUSCRIPCION_NOMBRE,(SELECT COUNT (PERSONA_COMIDA_ID) 
+FROM EC_PERSONAS, EC_PERSONAS_COMIDA WHERE PERSONA_COMIDA_FECHA &gt;=  888888  AND PERSONA_COMIDA_FECHA &lt;  999999 AND TIPO_COMIDA_ID = 1 AND EC_PERSONAS.PERSONA_ID = EC_PERSONAS_COMIDA.PERSONA_ID AND EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID
+) as TOTALC1,
+(SELECT COUNT (PERSONA_COMIDA_ID) 
+FROM EC_PERSONAS, EC_PERSONAS_COMIDA WHERE PERSONA_COMIDA_FECHA &gt;=  888888  AND PERSONA_COMIDA_FECHA &lt;  999999 AND TIPO_COMIDA_ID = 2 AND EC_PERSONAS.PERSONA_ID = EC_PERSONAS_COMIDA.PERSONA_ID AND EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID
+) as TOTALC2,
+(SELECT sum (TIPO_COMIDA_COSTOA) 
+FROM EC_PERSONAS, EC_PERSONAS_COMIDA WHERE PERSONA_COMIDA_FECHA &gt;=  888888 AND PERSONA_COMIDA_FECHA &lt;  999999 AND TIPO_COMIDA_ID = 1 AND EC_PERSONAS.PERSONA_ID = EC_PERSONAS_COMIDA.PERSONA_ID AND EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID
+) as TOTALCC1,
+(SELECT sum (TIPO_COMIDA_COSTOA)  
+FROM EC_PERSONAS, EC_PERSONAS_COMIDA WHERE PERSONA_COMIDA_FECHA &gt;= 888888 AND PERSONA_COMIDA_FECHA &lt;  999999 AND TIPO_COMIDA_ID = 2 AND EC_PERSONAS.PERSONA_ID = EC_PERSONAS_COMIDA.PERSONA_ID AND EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID
+) as TOTALCC2   from EC_SUSCRIPCION
+WHERE SUSCRIPCION_ID&gt;0</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SUSCRIPCION_NOMBRE" DataSetColumn="SUSCRIPCION_NOMBRE" />
+              <Mapping SourceColumn="TOTALC1" DataSetColumn="TOTALC1" />
+              <Mapping SourceColumn="TOTALC2" DataSetColumn="TOTALC2" />
+              <Mapping SourceColumn="TOTALCC1" DataSetColumn="TOTALCC1" />
+              <Mapping SourceColumn="TOTALCC2" DataSetColumn="TOTALCC2" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EC_SUSCRIPCION1TableAdapter" GeneratorDataComponentClassName="EC_SUSCRIPCION1TableAdapter" Name="EC_SUSCRIPCION1" UserDataComponentName="EC_SUSCRIPCION1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>select SUSCRIPCION_NOMBRE,(SELECT COUNT (PERSONA_COMIDA_ID) 
+FROM EC_PERSONAS, EC_PERSONAS_COMIDA WHERE PERSONA_COMIDA_FECHA &gt;=  888888  AND PERSONA_COMIDA_FECHA &lt;  999999 AND TIPO_COMIDA_ID = 1 AND EC_PERSONAS.PERSONA_ID = EC_PERSONAS_COMIDA.PERSONA_ID AND EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID
+) as TOTALC1,
+(SELECT COUNT (PERSONA_COMIDA_ID) 
+FROM EC_PERSONAS, EC_PERSONAS_COMIDA WHERE PERSONA_COMIDA_FECHA &gt;=  888888  AND PERSONA_COMIDA_FECHA &lt;  999999 AND TIPO_COMIDA_ID = 2 AND EC_PERSONAS.PERSONA_ID = EC_PERSONAS_COMIDA.PERSONA_ID AND EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID
+) as TOTALC2,
+(SELECT sum (TIPO_COMIDA_COSTOA) 
+FROM EC_PERSONAS, EC_PERSONAS_COMIDA WHERE PERSONA_COMIDA_FECHA &gt;=  888888 AND PERSONA_COMIDA_FECHA &lt;  999999 AND TIPO_COMIDA_ID = 1 AND EC_PERSONAS.PERSONA_ID = EC_PERSONAS_COMIDA.PERSONA_ID AND EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID
+) as TOTALCC1,
+(SELECT sum (TIPO_COMIDA_COSTOA)  
+FROM EC_PERSONAS, EC_PERSONAS_COMIDA WHERE PERSONA_COMIDA_FECHA &gt;= 888888 AND PERSONA_COMIDA_FECHA &lt;  999999 AND TIPO_COMIDA_ID = 2 AND EC_PERSONAS.PERSONA_ID = EC_PERSONAS_COMIDA.PERSONA_ID AND EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID
+) as TOTALCC2   from EC_SUSCRIPCION
+WHERE SUSCRIPCION_ID&gt;0</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SUSCRIPCION_NOMBRE" DataSetColumn="SUSCRIPCION_NOMBRE" />
+              <Mapping SourceColumn="TOTALC1" DataSetColumn="TOTALC1" />
+              <Mapping SourceColumn="TOTALC2" DataSetColumn="TOTALC2" />
+              <Mapping SourceColumn="TOTALCC1" DataSetColumn="TOTALCC1" />
+              <Mapping SourceColumn="TOTALCC2" DataSetColumn="TOTALCC2" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_ComidasPorPeriodo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_ComidasPorPeriodo" msprop:Generator_DataSetName="DS_ComidasPorPeriodo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EC_SUSCRIPCION" msprop:Generator_UserTableName="EC_SUSCRIPCION" msprop:Generator_RowDeletedName="EC_SUSCRIPCIONRowDeleted" msprop:Generator_RowChangedName="EC_SUSCRIPCIONRowChanged" msprop:Generator_RowClassName="EC_SUSCRIPCIONRow" msprop:Generator_RowChangingName="EC_SUSCRIPCIONRowChanging" msprop:Generator_RowEvArgName="EC_SUSCRIPCIONRowChangeEvent" msprop:Generator_RowEvHandlerName="EC_SUSCRIPCIONRowChangeEventHandler" msprop:Generator_TableClassName="EC_SUSCRIPCIONDataTable" msprop:Generator_TableVarName="tableEC_SUSCRIPCION" msprop:Generator_RowDeletingName="EC_SUSCRIPCIONRowDeleting" msprop:Generator_TablePropName="EC_SUSCRIPCION">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SUSCRIPCION_NOMBRE" msprop:Generator_UserColumnName="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInRow="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnSUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInTable="SUSCRIPCION_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOTALC1" msprop:Generator_UserColumnName="TOTALC1" msprop:Generator_ColumnPropNameInRow="TOTALC1" msprop:Generator_ColumnVarNameInTable="columnTOTALC1" msprop:Generator_ColumnPropNameInTable="TOTALC1Column" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="TOTALC2" msprop:Generator_UserColumnName="TOTALC2" msprop:Generator_ColumnPropNameInRow="TOTALC2" msprop:Generator_ColumnVarNameInTable="columnTOTALC2" msprop:Generator_ColumnPropNameInTable="TOTALC2Column" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="TOTALCC1" msprop:Generator_UserColumnName="TOTALCC1" msprop:Generator_ColumnPropNameInRow="TOTALCC1" msprop:Generator_ColumnVarNameInTable="columnTOTALCC1" msprop:Generator_ColumnPropNameInTable="TOTALCC1Column" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="TOTALCC2" msprop:Generator_UserColumnName="TOTALCC2" msprop:Generator_ColumnPropNameInRow="TOTALCC2" msprop:Generator_ColumnVarNameInTable="columnTOTALCC2" msprop:Generator_ColumnPropNameInTable="TOTALCC2Column" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_SUSCRIPCION1" msprop:Generator_UserTableName="EC_SUSCRIPCION1" msprop:Generator_RowDeletedName="EC_SUSCRIPCION1RowDeleted" msprop:Generator_TableClassName="EC_SUSCRIPCION1DataTable" msprop:Generator_RowChangedName="EC_SUSCRIPCION1RowChanged" msprop:Generator_RowClassName="EC_SUSCRIPCION1Row" msprop:Generator_RowChangingName="EC_SUSCRIPCION1RowChanging" msprop:Generator_RowEvArgName="EC_SUSCRIPCION1RowChangeEvent" msprop:Generator_RowEvHandlerName="EC_SUSCRIPCION1RowChangeEventHandler" msprop:Generator_TablePropName="EC_SUSCRIPCION1" msprop:Generator_TableVarName="tableEC_SUSCRIPCION1" msprop:Generator_RowDeletingName="EC_SUSCRIPCION1RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SUSCRIPCION_NOMBRE" msprop:Generator_UserColumnName="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInRow="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnSUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInTable="SUSCRIPCION_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOTALC1" msprop:Generator_UserColumnName="TOTALC1" msprop:Generator_ColumnPropNameInRow="TOTALC1" msprop:Generator_ColumnVarNameInTable="columnTOTALC1" msprop:Generator_ColumnPropNameInTable="TOTALC1Column" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="TOTALC2" msprop:Generator_UserColumnName="TOTALC2" msprop:Generator_ColumnPropNameInRow="TOTALC2" msprop:Generator_ColumnVarNameInTable="columnTOTALC2" msprop:Generator_ColumnPropNameInTable="TOTALC2Column" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="TOTALCC1" msprop:Generator_UserColumnName="TOTALCC1" msprop:Generator_ColumnPropNameInRow="TOTALCC1" msprop:Generator_ColumnVarNameInTable="columnTOTALCC1" msprop:Generator_ColumnPropNameInTable="TOTALCC1Column" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="TOTALCC2" msprop:Generator_UserColumnName="TOTALCC2" msprop:Generator_ColumnPropNameInRow="TOTALCC2" msprop:Generator_ColumnVarNameInTable="columnTOTALCC2" msprop:Generator_ColumnPropNameInTable="TOTALCC2Column" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,45 @@
+var RFC = DDXTipoPersona.SelectedIndex == 1 ? TxtRFCFisicaVPyME.Text : TxtRFCMoralVPyME.Text;
+
+                        var RFC = DDXTipoPersona.SelectedIndex == 1 ? TxtRFCFisicaVPyME.Text : TxtRFCMoralVPyME.Text;
+
+                        byte A;
+
+                        var Validacion = Validacion_RFC_L.ClassInstance.Obten_EstatusValidacion(RFC,
+                            DDXTipoPersona.SelectedIndex == 1 ? TxtNombrePFisicaVPyME.Text + " " + TxtApellidoPaternoVPyME.Text + " " + TxtApellidoMaternoVPyME.Text : TxtRazonSocialVPyME.Text,
+                            Convert.ToDateTime(DDXTipoPersona.SelectedIndex == 1 ? TxtFechaNacimientoVPyME.Text : TxtFechaConstitucionVPyME.Text),
+                            DDXTipoPersona.SelectedIndex == 1 ? A = 1 : A = 2);
+
+                        if (Validacion != null)
+                        {
+                            if (Validacion.Estatus_Validacion == 1)
+                            {
+                                ScriptManager.RegisterClientScriptBlock(panel, typeof(Page), "NextError",
+                                    "alert('El RFC esta en proceso de validacion, Debe esperar a que el jefe de zona Autorize o Rechaze la solicitud');",
+                                    true);
+                                e.Cancel = true;
+                            }
+
+                            else if (Validacion.Estatus_Validacion == 2)
+                            {
+                            }
+
+                            else if (Validacion.Estatus_Validacion == 3)
+                            {
+                                var Rechazado = Validacion_RFC_L.ClassInstance.ObtenRechazado(RFC);
+                                ScriptManager.RegisterClientScriptBlock(panel, typeof(Page), "NextError",
+                                    "alert('El RFC fue rechazado por el Jefe de zona');",
+                                    true);
+                            }
+                        }
+
+                        else if (Validacion_RFC_L.ClassInstance.Obten_EstatusValidacionRFC(RFC) == null)
+                        {
+                            ScriptManager.RegisterClientScriptBlock(panel, typeof(Page), "NextError", "ValidaRFC();",
+                                true);
+                            e.Cancel = true;
+                        }
+                        else
+                        {
+                            e.Cancel = true;
+                        }
+					

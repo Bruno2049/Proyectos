@@ -1,0 +1,162 @@
+﻿<UserControl xmlns:Turnos="clr-namespace:eClock5.Vista.Turnos" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controles="clr-namespace:eClock5.Controles" 
+             xmlns:igWindows="http://infragistics.com/Windows" 
+             xmlns:eClock5="clr-namespace:eClock5" 
+             xmlns:System="clr-namespace:System;assembly=mscorlib" 
+             x:Class="eClock5.Vista.Turnos.Edicion" 
+             mc:Ignorable="d"  Background="{DynamicResource Blanco_Brush}" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}"  
+             d:DesignHeight="824.5" d:DesignWidth="1062" Foreground="{DynamicResource Blanco_Brush}" >
+    <UserControl.Resources>
+        <System:Double x:Key="AnchoHoras">50</System:Double>
+        <Style x:Key="TextBlockTituloColumnaStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="{DynamicResource AnchoHoras}"/>
+        </Style>
+        <GridLength x:Key="AnchoColumnaHoras">50</GridLength>
+
+    </UserControl.Resources>
+    <Grid>
+        <eClock5:UC_ToolBar VerticalAlignment="Top"   OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" Width="Auto"  >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png" Nombre="Btn_Guardar" />
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"  Margin="{DynamicResource MargenAltoToolBar}">
+
+            <Grid x:Name="XGrid_EC_TURNOS"  >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Background="{DynamicResource AzulClaro_Brush}" Margin="0,0,5,0" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+                    <TextBlock x:Name="Lbl_EC_TURNOS" Text="Detalles del Turno" Style="{DynamicResource TextBlockTituloStyle}" />
+                    <Grid  >
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="Lbl_TURNO_NOMBRE" Text="Nombre: " Grid.Column="0" Style="{DynamicResource TextBlockEtiquetaStyle}"   />
+                        <TextBox x:Name="Tbx_TURNO_NOMBRE" Grid.Column="1" Margin="{DynamicResource MargenGeneralCorto}"  />
+                        <TextBlock x:Name="Lbl_TURNO_COLOR" Text="Color: " Style="{DynamicResource TextBlockEtiquetaStyle}" Grid.Row="1"   />
+                        <TextBlock x:Name="Lbl_TURNO_GRUPOS" Text="Grupo: " Style="{DynamicResource TextBlockEtiquetaStyle}" Grid.Column="0"  Grid.Row="2"  />
+                        <TextBox x:Name="Tbx_TURNO_GRUPOS" Grid.Column="1"   Grid.Row="2" Margin="{DynamicResource MargenGeneralCorto}"   />
+                        <Controles:UC_ColorPicker   x:Name="CP_TURNO_COLOR" Grid.Column="1"  Grid.Row="1" Margin="{DynamicResource MargenGeneralCorto}" />
+
+                    </Grid>
+                    <CheckBox x:Name="Chb_TURNO_ASISTENCIA" Content="El Turno Genera Asistencia" Checked="ActualizaVista" Margin="{DynamicResource MargenGeneralCorto}" Foreground="White"  />
+                    <RadioButton x:Name="Rbn_Horario" Content="Por Horario" Checked="ActualizaVista" IsEnabled="True"  Grid.Row="1" Margin="{DynamicResource MargenGeneralCorto}" Foreground="White"      />
+                    <RadioButton x:Name="Rbn_Jornada" Content="Por Jornada de Trabajo" Checked="ActualizaVista"   Grid.Row="2" Margin="{DynamicResource MargenGeneralCorto}" Foreground="White"   />
+                    <Grid Background="#FF40598D" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="{DynamicResource AnchoColumnaHoras}" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition  />
+                            <RowDefinition  />
+                            <RowDefinition  />
+                            <RowDefinition  />
+                            <RowDefinition  />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock x:Name="Lbl_TURNO_DIA_HBLOQUE" Text="Bloque"  Style="{DynamicResource TextBlockEtiquetaStyle}" Grid.Column="0"   />
+                        <Controles:UC_Horas Width="{DynamicResource AnchoHoras}" x:Name="DT_TURNO_DIA_HBLOQUE"  Grid.Column="1" Margin="{DynamicResource MargenGeneralCorto}"        />
+                        <TextBlock x:Name="Lbl_Tolerancias" Text="Tolerancias" Grid.Row="1" Grid.ColumnSpan="2" Style="{DynamicResource TextBlockTituloStyle}"  />
+
+                        <TextBlock x:Name="Lbl_TURNO_DIA_HERETARDO" Style="{DynamicResource TextBlockEtiquetaStyle}" Text="Minutos para Retardo" Grid.Column="0" Grid.Row="2"     />
+                        <Controles:UC_Horas Width="{DynamicResource AnchoHoras}" x:Name="DT_TURNO_DIA_HERETARDO" Grid.Row="2"   Grid.Column="1" Margin="{DynamicResource MargenGeneralCorto}"  />
+                        <TextBlock x:Name="Lbl_TURNO_DIA_HERETARDO_B" Text="Minutos para Retardo Mínimo" Style="{DynamicResource TextBlockEtiquetaStyle}" Grid.Column="0" Grid.Row="3"    />
+                        <Controles:UC_Horas Width="{DynamicResource AnchoHoras}" x:Name="DT_TURNO_DIA_HERETARDO_B"  Grid.Row="3"  Grid.Column="1" Margin="{DynamicResource MargenGeneralCorto}"  />
+                        <TextBlock x:Name="Lbl_TURNO_DIA_HERETARDO_C" Text="Minutos para Retardo Máximo" Style="{DynamicResource TextBlockEtiquetaStyle}" Grid.Column="0" Grid.Row="4"        />
+                        <Controles:UC_Horas Width="{DynamicResource AnchoHoras}" x:Name="DT_TURNO_DIA_HERETARDO_C" Grid.Row="4"   Grid.Column="1" Margin="{DynamicResource MargenGeneralCorto}" />
+                        <TextBlock x:Name="Lbl_TURNO_DIA_HERETARDO_D" Style="{DynamicResource TextBlockEtiquetaStyle}" Text="Minutos para Retardo Superior" Grid.Column="0" Grid.Row="5"    />
+                        <Controles:UC_Horas Width="{DynamicResource AnchoHoras}" x:Name="DT_TURNO_DIA_HERETARDO_D" Grid.Row="5"    Grid.Column="1" Margin="{DynamicResource MargenGeneralCorto}" />
+                        <TextBlock x:Name="Lbl_TURNO_DIA_HCTOLERA" Text="Tolerancia Regreso Comida" Style="{DynamicResource TextBlockEtiquetaStyle}" Grid.Column="0" Grid.Row="6"      />
+                        <Controles:UC_Horas Width="{DynamicResource AnchoHoras}" x:Name="DT_TURNO_DIA_HCTOLERA" Grid.Column="1" Grid.Row="6" Margin="{DynamicResource MargenGeneralCorto}" />
+                        <TextBlock x:Name="Lbl_TOLERANCIABLOQUE" Text="Tolerancia de Bloque"  Style="{DynamicResource TextBlockEtiquetaStyle}" Grid.Row="8" Grid.Column="0"   />
+                        <Controles:UC_Horas Width="{DynamicResource AnchoHoras}" x:Name="DT_TOLERANCIABLOQUE" Grid.Row="8"  Grid.Column="1" Margin="{DynamicResource MargenGeneralCorto}"        />
+                    </Grid>
+
+                    <CheckBox x:Name="Chb_TURNO_PHEXTRAS" Content="Permite Tiempo Extra" Margin="{DynamicResource MargenGeneralCorto}" Foreground="White"    />
+                    <CheckBox x:Name="Chb_MismoHorario" Content="Mismo Horario Para Cada Día" Checked="ActualizaVista"  Unchecked="ActualizaVista"  Grid.Row="1" Margin="{DynamicResource MargenGeneralCorto}" Foreground="White"  />
+                    <CheckBox x:Name="Chb_RestringeAcceso" Content="Restringir Horario"  Checked="ActualizaVista" Unchecked="ActualizaVista"   Grid.Row="2" Margin="{DynamicResource MargenGeneralCorto}" Foreground="White"  />
+
+                    <StackPanel    Grid.Row="3" Background="#FF40598D" >
+                        <TextBlock x:Name="Lbl_HorarioComer" Text="Horario para comer"   Style="{DynamicResource TextBlockTituloStyle}"  />
+                        <RadioButton x:Name="Rbn_SinComida" Content="Sin Comida" Checked="ActualizaVista" Margin="{DynamicResource MargenGeneralCorto}" Foreground="White"   />
+                        <RadioButton x:Name="Rbn_ComidaPorTiempo" Content="Por Tiempo" Checked="ActualizaVista" Margin="{DynamicResource MargenGeneralCorto}" Foreground="White"    />
+                        <RadioButton x:Name="Rbn_ComidaHorarioFijo" Content="Horario Fijo" Checked="ActualizaVista" Margin="{DynamicResource MargenGeneralCorto}" Foreground="White"  />
+                        <RadioButton x:Name="Rbn_ComidaAvanzado" Content="Avanzado" Checked="ActualizaVista" Margin="{DynamicResource MargenGeneralCorto}" Foreground="White"   />
+                    </StackPanel>
+                    <CheckBox x:Name="Chb_TURNO_BORRADO" Content="Turno Borrado"  Margin="{DynamicResource MargenGeneralCorto}" Foreground="White"  />
+
+
+
+                </StackPanel>
+                <!--  lado derecho-->
+                <!--  lado derecho-->
+                <!--  lado derecho-->
+
+                <StackPanel Grid.Column="2" Background="{DynamicResource AzulClaro_Brush}" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock x:Name="Lbl_EC_TURNOS_DIA_Config" Text="Configuración" Style="{DynamicResource TextBlockTituloStyle}"  />
+                    <StackPanel x:Name="Stp_Dias" Margin="{DynamicResource MargenGeneral}">
+                        <Turnos:UC_TurnoDia x:Name="TD_Lunes" Texto="Lunes" MostrarCheckBox="True" MostrarTitulos="True" />
+                        <Turnos:UC_TurnoDia x:Name="TD_Martes" Texto="Martes" MostrarCheckBox="True" MostrarTitulos="False" />
+                        <Turnos:UC_TurnoDia x:Name="TD_Miercoles" Texto="Miercoles" MostrarCheckBox="True" MostrarTitulos="False" />
+                        <Turnos:UC_TurnoDia x:Name="TD_Jueves" Texto="Jueves" MostrarCheckBox="True" MostrarTitulos="False" />
+                        <Turnos:UC_TurnoDia x:Name="TD_Viernes" Texto="Viernes" MostrarCheckBox="True" MostrarTitulos="False" />
+                        <Turnos:UC_TurnoDia x:Name="TD_Sabado" Texto="Sabado" MostrarCheckBox="True" MostrarTitulos="False" />
+                        <Turnos:UC_TurnoDia x:Name="TD_Domingo" Texto="Domingo" MostrarCheckBox="True" MostrarTitulos="False" />
+                    </StackPanel>
+                    <Grid x:Name="Grd_Dia" Margin="{DynamicResource MargenGeneral}" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="30"/>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="80*" />
+                            <ColumnDefinition Width="80*" />
+                            <ColumnDefinition Width="80*" />
+                            <ColumnDefinition Width="80"/>
+                        </Grid.ColumnDefinitions>
+                        <Turnos:UC_TurnoDia x:Name="TD_Dias" Texto="Horario" MostrarCheckBox="False" MostrarTitulos="True" Grid.Row="0
+                                            " Grid.ColumnSpan="5" RestringirHorario="True" Comida="Avanzada" />
+                        <CheckBox x:Name="Chb_HorarioLunes" Content="Lunes"  Grid.Column="1" Grid.Row="2" Foreground="White"/>
+                        <CheckBox x:Name="Chb_HorarioMartes" Content="Martes"  Grid.Column="2" Grid.Row="2" Foreground="White"/>
+                        <CheckBox x:Name="Chb_HorarioMiercoles" Content="Miércoles"  Grid.Column="3" Grid.Row="2" Foreground="White"/>
+                        <CheckBox x:Name="Chb_HorarioJueves" Content="Jueves"  Grid.Column="1" Grid.Row="3" Foreground="White"/>
+                        <CheckBox x:Name="Chb_HorarioViernes" Content="Viernes"  Grid.Column="2" Grid.Row="3" Foreground="White"/>
+                        <CheckBox x:Name="Chb_HorarioSabado" Content="Sabado"  Grid.Column="3" Grid.Row="3" Foreground="White" />
+                        <CheckBox x:Name="Chb_HorarioDomingo" Content="Domingo"  Grid.Column="2" Grid.Row="4" Foreground="White" />
+                    </Grid>
+                </StackPanel>
+
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+
+</UserControl>

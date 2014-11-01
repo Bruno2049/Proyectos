@@ -1,0 +1,373 @@
+﻿.ui-icon-brasil {
+	background-image: url("images/Brasil18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-brasil {
+		background-image: url("images/Brasil36.png");
+		background-size: 18px 18px;
+	}
+}
+.ui-icon-francia {
+	background-image: url("images/Francia18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-francia {
+		background-image: url("images/Francia36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-mexico {
+	background-image: url("images/Mexico18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-mexico {
+		background-image: url("images/Mexico36.png");
+		background-size: 18px 18px;
+	}
+}
+.ui-icon-usa {
+	background-image: url("images/Usa18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-usa {
+		background-image: url("images/Usa36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-eclock:after {
+	background-image: url("images/eClock18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-eclock:after {
+		background-image: url("images/eClock36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-tiempo:after {
+	background-image: url("images/Tiempo_18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-tiempo:after {
+		background-image: url("images/Tiempo_36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-justificar:after {
+	background-image: url("images/Justificar_18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-justificar:after {
+		background-image: url("images/Justificar_36.png");
+		background-size: 18px 18px;
+	}
+}
+
+/*Codigo CSS3 escondido XD nadie me dijo que aqui iba los iconos... de aqui son mis iconos*/
+
+
+
+/* Edicion */
+.ui-icon-edicion {
+	background-image: url("images/Iconos/Menu/edicion18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .ui-icon-edicion {
+        background-image: url("images/Iconos/Menu/edicion36.png");
+        background-size: 18px 18px;
+    }
+}
+
+/* Empleado */
+.ui-icon-empleado {
+	background-image: url("images/Iconos/Menu/empleado18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-empleado {
+		background-image: url("images/Iconos/Menu/empleado36.png");
+		background-size: 18px 18px;
+	}
+}
+
+/* Ayuda */
+.ui-icon-aydua {
+	background-image: url("images/Iconos/Menu/ayuda18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-ayuda {
+		background-image: url("images/Iconos/Menu/ayuda36.png");
+		background-size: 18px 18px;
+	}
+}
+
+/* Nuevo Empleado */
+.ui-icon-nuevo-empleado {
+	background-image: url("images/Iconos/Menu/nuevo-empleado18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-nuevo-empleado {
+		background-image: url("images/Iconos/Menu/nuevo-empleado36.png");
+		background-size: 18px 18px;
+	}
+}
+
+/* Usuario */
+.ui-icon-usuario {
+	background-image: url("images/Iconos/Menu/usuario18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-usuario {
+		background-image: url("images/Iconos/Menu/usuario36.png");
+		background-size: 18px 18px;
+	}
+}
+
+/* Terminal */
+.ui-icon-terminal {
+	background-image: url("images/Iconos/Menu/terminal18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-empleado {
+		background-image: url("images/Iconos/Menu/terminal36.png");
+		background-size: 18px 18px;
+	}
+}
+
+/* Nomina */
+.ui-icon-nomina {
+	background-image: url("images/Iconos/Menu/nomina18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-empleado {
+		background-image: url("images/Iconos/Menu/nomina36.png");
+		background-size: 18px 18px;
+	}
+}
+
+/* Calendario */
+.ui-icon-calendario {
+	background-image: url("images/Iconos/Menu/calendario18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-calendario {
+		background-image: url("images/Iconos/Menu/calendario36.png");
+		background-size: 18px 18px;
+	}
+}
+
+/* Aqui son para la prueba de los iconos =)*/
+
+.ui-icon-1 {
+	background-image: url("images/Iconos/Menu/AgrupA18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-1 {
+		background-image: url("images/Iconos/Menu/AgrupA36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-2 {
+	background-image: url("images/Iconos/Menu/AgrupB18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-2 {
+		background-image: url("images/Iconos/Menu/AgrupB36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-3 {
+	background-image: url("images/Iconos/Menu/AgrupC18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-3 {
+		background-image: url("images/Iconos/Menu/AgrupC36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-4 {
+	background-image: url("images/Iconos/Menu/AgrupD18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-4 {
+		background-image: url("images/Iconos/Menu/AgrupD36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-5 {
+	background-image: url("images/Iconos/Menu/AgrupE18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-5 {
+		background-image: url("images/Iconos/Menu/AgrupE36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-6 {
+	background-image: url("images/Iconos/Menu/borrar18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-6 {
+		background-image: url("images/Iconos/Menu/borrar36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-7 {
+	background-image: url("images/Iconos/Menu/configA18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-7 {
+		background-image: url("images/Iconos/Menu/configA36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-8 {
+	background-image: url("images/Iconos/Menu/EditarA18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-8 {
+		background-image: url("images/Iconos/Menu/EditarA36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-9 {
+	background-image: url("images/Iconos/Menu/EditarB18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-9 {
+		background-image: url("images/Iconos/Menu/EditarB36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-10 {
+	background-image: url("images/Iconos/Menu/EditarC18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-10 {
+		background-image: url("images/Iconos/Menu/EditarC36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-11 {
+	background-image: url("images/Iconos/Menu/EditarC18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-11 {
+		background-image: url("images/Iconos/Menu/EditarC36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-12 {
+	background-image: url("images/Iconos/Menu/grupo18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-12 {
+		background-image: url("images/Iconos/Menu/grupo36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-13 {
+	background-image: url("images/Iconos/Menu/GraficaA18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-13 {
+		background-image: url("images/Iconos/Menu/GraficaA36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-14 {
+	background-image: url("images/Iconos/Menu/GraficaB18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-14 {
+		background-image: url("images/Iconos/Menu/GraficaB36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-15 {
+	background-image: url("images/Iconos/Menu/GraficaC18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-15 {
+		background-image: url("images/Iconos/Menu/GraficaC36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-16 {
+	background-image: url("images/Iconos/Menu/guardarA18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-16 {
+		background-image: url("images/Iconos/Menu/guardarA36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-16 {
+	background-image: url("images/Iconos/Menu/GuardarA18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-16 {
+		background-image: url("images/Iconos/Menu/GuardarA36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-17 {
+	background-image: url("images/Iconos/Menu/listaA18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-17 {
+		background-image: url("images/Iconos/Menu/listaA36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-18 {
+	background-image: url("images/Iconos/Menu/listaB18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-18 {
+		background-image: url("images/Iconos/Menu/listaB36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-19 {
+	background-image: url("images/Iconos/Menu/ListaC18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-19 {
+		background-image: url("images/Iconos/Menu/ListaC36.png");
+		background-size: 18px 18px;
+	}
+}
+
+.ui-icon-20 {
+	background-image: url("images/Iconos/Menu/nominaA18.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-20 {
+		background-image: url("images/Iconos/Menu/nominaA36.png");
+		background-size: 18px 18px;
+	}
+}
+
+

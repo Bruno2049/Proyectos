@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Kiosko.Actividades.DetalleEdicion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:Kiosko.Controles" 
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1366"  Background="{DynamicResource BrushFondoApp}"  Foreground="{DynamicResource ColorFuente}" FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoFontEtiquetas}" Loaded="UserControl_Loaded_1">
+
+    <Grid>
+
+        <Controles:UC_Banner HorizontalAlignment="Right" Margin="{DynamicResource MargenBanner}" Width="{DynamicResource AnchoBanner}"/>
+
+        <eClock5:UC_ToolBar x:Name="ToolBar" Height="{DynamicResource AltoToolBar}" VerticalAlignment="Top"  Titulo="Opciones de Registro" OnEventClickToolBar="ToolBar_OnEventClickToolBar" >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Etiqueta="Regresar" Imagen="pack://siteoforigin:,,,/Resources/Regresar-64.png" Nombre="Btn_Regresar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Aceptar" Imagen="pack://siteoforigin:,,,/Resources/Siguiente-64.png" Nombre="Btn_Siguiente" Default="True" />
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+
+        <Grid  Margin="{DynamicResource MargenGridCentral}" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="160" />
+                <RowDefinition  Height="60"/>
+                <RowDefinition />
+                <RowDefinition Height="350" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  />
+            </Grid.ColumnDefinitions>
+            
+            <Image x:Name="Img_Foto" Source="pack://siteoforigin:,,,/Resources/banner-abajo.png" Stretch="UniformToFill" />
+
+            <TextBlock  x:Name="Lbl_Titulo" Text="Titulo"  Grid.Row="1" Style="{DynamicResource TextBlockTituloStyle}"   />
+
+            <Controles:UC_CamposTextoEdicion x:Name="Campos" Grid.Row="2"  MaxWidth="550"/>
+            <Controles:UC_Teclado x:Name="Teclado"  Grid.Row="3"  />
+        </Grid>
+    </Grid>
+</UserControl>

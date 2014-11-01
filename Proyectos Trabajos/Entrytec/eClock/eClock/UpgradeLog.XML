@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="eClock">
+</Property><Property Name="Archivo de la solución" Value="D:\EntryTecSvr\Proyectos\EntryTec\eClock\Código Fuente\eClock\eClock.sln">
+</Property><Property Name="Date" Value="Viernes, 06 de Julio de 2007">
+</Property><Property Name="Time" Value="10:17 a.m.">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="eClock.sln" Description="La solución se convirtió correctamente">
+</Event><Event ErrorLevel="3" Project="" Source="eClock.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="eClock" Source="eClock.csproj" Description="Búsqueda completa: no es necesario actualizar los archivos de proyecto.">
+</Event><Event ErrorLevel="3" Project="eClock" Source="eClock.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="eClock" Source="eClock.csproj" Description="Ha completado el primer paso para la conversión del proyecto Web de Visual Studio .NET 2003. Para completar la conversión, seleccione el proyecto en el Explorador de soluciones y elija el elemento del menú contextual 'Convertir a aplicación Web'.">
+</Event></UpgradeLog>

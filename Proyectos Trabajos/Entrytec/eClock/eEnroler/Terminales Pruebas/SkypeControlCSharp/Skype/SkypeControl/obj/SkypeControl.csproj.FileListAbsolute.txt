@@ -1,0 +1,5 @@
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\SkypeControl\bin\Debug\SkypeControl.dll
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\SkypeControl\bin\Debug\SkypeControl.pdb
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\SkypeControl\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\SkypeControl\obj\Debug\SkypeControl.dll
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\SkypeControlCSharp\Skype\SkypeControl\obj\Debug\SkypeControl.pdb

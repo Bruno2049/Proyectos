@@ -1,0 +1,18 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" x:Class="eClock5.Vista.Nomina.Recibos_Emp" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Loaded="UserControl_Loaded_1" IsVisibleChanged="UserControl_IsVisibleChanged" >
+    <Grid>
+
+        <eClock5:UC_ToolBar x:Name="ToolBar" VerticalAlignment="Top" Width="Auto" Height="{DynamicResource AltoToolBar}" OnEventClickToolBar="ToolBar_OnEventClickToolBar">
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Reportes" Imagen="pack://siteoforigin:,,,/Resources/Reportes_64.png" Nombre="Btn_Reportes"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <eClock5:UC_Listado x:Name="Lst_Nominas" CampoLlave="REC_NOMINA_ID" CampoNombre="REC_NOMINA_FFIN" CampoDescripcion="REC_NOMINA_COMENTARIOS" CampoAdicional="REC_NOMINA_NO" Tabla="EC_REC_NOMINAS" Filtro="PERSONA_ID=@PERSONA_ID" SelectionChanged="Lst_Nominas_SelectionChanged" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,28 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:local="clr-namespace:eClock5.Vista.Empleados" x:Class="eClock5.Vista.Empleados.ListadoPersonas" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Loaded="UserControl_Loaded" IsVisibleChanged="UserControl_IsVisibleChanged">
+    <Grid>
+
+        <eClock5:UC_Listado x:Name="Lst_Main" Width="Auto" Height="Auto" Tabla="EC_PERSONAS" CampoLlave="PERSONA_ID" CampoNombre="PERSONA_NOMBRE" CampoDescripcion="AGRUPACION_NOMBRE" CampoAdicional="PERSONA_LINK_ID" CambioListadoEvent="UC_Listado_CambioListadoEvent">
+            <eClock5:UC_Listado.ControlesAdicionales>
+                <eClock5:UC_Listado_OpcionesAdicionales Etiqueta="Importar Imagenes" Nombre="Btn_ImpImagenes">
+                    <eClock5:UC_Listado_OpcionesAdicionales.Control>
+                        <local:ImportarImagenes/>
+                    </eClock5:UC_Listado_OpcionesAdicionales.Control>
+                </eClock5:UC_Listado_OpcionesAdicionales>
+            </eClock5:UC_Listado.ControlesAdicionales>
+            <eClock5:UC_Listado.ControlEdicion>
+                <local:EdicionEmpleados/>
+            </eClock5:UC_Listado.ControlEdicion>
+            <eClock5:UC_Listado.ControlImportar>
+                <local:Importar/>
+            </eClock5:UC_Listado.ControlImportar>
+        </eClock5:UC_Listado>
+
+    </Grid>
+</UserControl>

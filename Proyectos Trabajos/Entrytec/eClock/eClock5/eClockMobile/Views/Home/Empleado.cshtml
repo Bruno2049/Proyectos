@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Empleado";
+}
+<table>
+    <tr>
+        <td><img src="/Personas/Foto/@(ViewBag.DatosPersona.PERSONA_ID + "_128x128.jpg")"></td>
+        <td><h2>@ViewBag.Persona</h2></td>
+    </tr>
+</table>
+
+@section Page
+{
+id="HomeEmpleado"
+}
+ @Html.Partial("_Fechas")
+
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        $('#Asistencias').click(function () { Redirige("Asistencias", "Empleado"); return false; });
+        $('#AsistenciasFiltradas').click(function () { Redirige("Asistencias", "EmpleadoFiltro"); return false; });
+        $('#SoloFaltasyRetardos').click(function () { Redirige("Asistencias", "EmpleadoFyR"); return false; });
+        $('#Accesos').click(function () { Redirige("Accesos", "Empleado"); return false; });
+        $('#Reportes').click(function () { Redirige("Reportes", "Empleado"); return false; });
+
+        var dt_FechaInicial;
+        var dt_FechaFinal;
+        function Redirige(controlador, accion) {
+            dt_FechaInicial = $('#FechaInicial').val();
+            dt_FechaFinal = $('#FechaFinal').val();
+            var Url = '/' + controlador + "/" + accion + "/" + @ViewBag.DatosPersona.PERSONA_ID + ".html?FechaInicial=" + dt_FechaInicial + "&FechaFinal=" + dt_FechaFinal;
+            $.mobile.changePage(Url, { transition: "slide", reloadPage: true });
+         }
+
+    </script>
+    @*
+    // se deshabilita ya que la intencion era recargar la pagina para asignar la ultima fecha seleccikonada
+    <script type="text/javascript">
+        var Recargar = 2;
+        $(".selector").on("pagecontainershow", function (event, ui) { alert("pagecontainershow"); });
+        $(document).on('pageinit', '#HomeEmpleado', function () {
+            //alert('Pageinit');
+            Recargar = 1;
+        });
+
+        $(document).on('pagebeforeshow', '#HomeEmpleado', function () {
+            @*alert('Pagebeforeshow');
+            Recargar = Recargar - 1;
+            if (Recargar-- <= 0) {
+                alert('location.reload');
+                location.reload();
+            }
+        });
+    </script>
+    *@
+}

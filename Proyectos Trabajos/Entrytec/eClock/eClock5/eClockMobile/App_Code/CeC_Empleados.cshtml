@@ -1,0 +1,22 @@
+﻿@helper MuestraAgrupacion(eClockBase.Modelos.Personas.Model_Arbol Arbol)
+{
+    if (Arbol == null)
+    {
+        return;
+    }
+    <div data-role="collapsible-set">
+        @foreach(eClockBase.Modelos.Personas.Model_Arbol Agrupacion in Arbol.Agrupaciones)
+        {
+            <div data-role="collapsible" >
+                <h3>@Agrupacion.Agrupacion <a href="Agrupacion/@Agrupacion.AGRUPACION_NOMBRE" data-rel="dialog" data-transition="fade"> Ir a...</a></h3>
+@MuestraAgrupacion(Agrupacion)
+            </div>
+        }
+    </div>
+    <ul data-role="listview" data-theme="b" >
+        @foreach(eClockBase.Modelos.Personas.Model_ArbolPersona Persona in Arbol.Personas)
+        {
+            <li><a href="Empleado/@Persona.PERSONA_ID">@Persona.PERSONA_NOMBRE (@Persona.PERSONA_LINK_ID)</a> </li>
+        }
+    </ul>
+}

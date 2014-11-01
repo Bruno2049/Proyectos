@@ -1,0 +1,6 @@
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\bin\Debug\PAEEEM.Helpers.dll.config
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\bin\Debug\PAEEEM.Helpers.dll
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\bin\Debug\PAEEEM.Helpers.pdb
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\obj\Debug\PAEEEM.Helpers.csprojResolveAssemblyReference.cache
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\obj\Debug\PAEEEM.Helpers.dll
+G:\FIDE- PAEEEM\Metodologia PAEEEM\código PAEEEM\IMPRA 2.0 20131030\PAEEEM.Helpers\obj\Debug\PAEEEM.Helpers.pdb

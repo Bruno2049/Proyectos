@@ -1,0 +1,23 @@
+[DisabledHintIDs]
+HintId_1=1
+[Options]
+SmartUpdate=1
+localefile=attcheckin.chs
+EmConnectedEnabled=0
+临时超级用户_RANGE_User=1
+临时超级用户_RANGE_Dept=1
+临时超级用户_RANGE_D1=2007-05-05 00:00:00
+临时超级用户_RANGE_D2=2007-05-12 23:59:59
+MainFormLeft=0
+MainFormTop=0
+MainFormWidth=1280
+MainFormHeight=870
+LeftMenu=194
+RightInfo=300
+MachinesViewHeight=438
+ViewStyle=3
+[TfAttCalc]
+pnlRecOP_Width=166
+pnlAttAbnormite_Width=140
+pnlAudit_Width=166
+pnlCalc_Width=132

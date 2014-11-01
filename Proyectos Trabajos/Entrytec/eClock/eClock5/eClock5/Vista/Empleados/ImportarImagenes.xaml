@@ -1,0 +1,44 @@
+﻿<UserControl xmlns:eClock5="clr-namespace:eClock5"  x:Class="eClock5.Vista.Empleados.ImportarImagenes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Background="White" Foreground="White"  >
+    <Grid >
+
+
+        <eClock5:UC_ToolBar VerticalAlignment="Top" Width="Auto" Height="48" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar">
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Izquierda" Etiqueta="Regresar" Nombre="Btn_Regresar" Imagen="pack://siteoforigin:,,,/Resources/Regresar_64.png"/>
+            <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Nombre="Btn_Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        
+        
+
+        <StackPanel  Background="{DynamicResource AzulClaro_Brush}" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <RadioButton x:Name="Opt_Foto"  Content="Importar Fotos" Grid.Column="0" Foreground="White" Tag="1" IsChecked="True" />
+                <RadioButton x:Name="Opt_Firma"  Content="Importar Firmas" Grid.Column="1"  Foreground="White" Tag="2" />
+            </Grid>
+                
+
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock x:Name="Lbl_Archivo" Text="Ruta de la carpeta"  Margin="{DynamicResource MargenGeneral}" Style="{DynamicResource TextBlockEtiquetaStyle}" />
+                <TextBox x:Name="Tbx_Archivo" Width="150" Margin="{DynamicResource MargenGeneral}" />                
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" >
+                <Button x:Name="Btn_Seleccionar" Content=" Seleccionar Carpeta" Click="Btn_Seleccionar_Click" />
+            </StackPanel>
+
+        </StackPanel>
+       
+        
+    </Grid>
+</UserControl>

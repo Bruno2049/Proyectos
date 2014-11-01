@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="eEnroler.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SleepInicializa" Type="System.Int64" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="NameSendWindow" Type="System.String" Scope="User">
+      <Value Profile="(Default)">KW73!</Value>
+    </Setting>
+    <Setting Name="UsarHook" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AVecH1" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="AVecH2" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
+    <Setting Name="Mostrar" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="GuardaImagen" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="EseClock" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CodificarTarjeta" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="TransformarNS2LongNS" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Usuario" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Clave" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EsMifare" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Terminal" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="echeck_WS_eCheck_WS_eCheck" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://38.124.170.140/eclock_panalpina/WS_eCheck.asmx</Value>
+    </Setting>
+    <Setting Name="echeck_WS_Checador_WSChecador" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://38.124.170.140/eclock_panalpina/WSChecador.asmx</Value>
+    </Setting>
+    <Setting Name="Proxy_Usuario" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">svcatebcofidi-mex</Value>
+    </Setting>
+    <Setting Name="Proxy_Clave" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ServiceMX2411</Value>
+    </Setting>
+    <Setting Name="Proxy_URL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">194.11.54.38:8080</Value>
+    </Setting>
+    <Setting Name="Proxy_Dominio" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">latam</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAccesos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MuestraAgrupacion" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Persona_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Agrupacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TerminalesIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TipoAccesosIds" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenAccesosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenAccesosResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaChecada">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TerminalID" type="xs:int" />
+        <xs:element minOccurs="0" name="Llave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaHora" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TAccesoID" type="xs:int" />
+        <xs:element minOccurs="0" name="AgregarInmediatamente" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaChecadaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregaChecadaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregarAcceso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TerminalID" type="xs:int" />
+        <xs:element minOccurs="0" name="PersonaID" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaHora" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TAccesoID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregarAccesoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregarAccesoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaAccesos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DatoAccesos" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregaAccesosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregaAccesosResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

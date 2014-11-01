@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:50723/S_Turnos.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:50723/S_Turnos.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="S_Turnos_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="DoWork" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_ObtenTurnosDSMenu_InputMessage">
+    <wsdl:part name="parameters" element="ObtenTurnosDSMenu" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_ObtenTurnosDSMenu_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenTurnosDSMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaTurnoPredeterminado_InputMessage">
+    <wsdl:part name="parameters" element="AsignaTurnoPredeterminado" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaTurnoPredeterminado_OutputMessage">
+    <wsdl:part name="parameters" element="AsignaTurnoPredeterminadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaTurnoDia_InputMessage">
+    <wsdl:part name="parameters" element="AsignaTurnoDia" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaTurnoDia_OutputMessage">
+    <wsdl:part name="parameters" element="AsignaTurnoDiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaTurnoRangoFechas_InputMessage">
+    <wsdl:part name="parameters" element="AsignaTurnoRangoFechas" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaTurnoRangoFechas_OutputMessage">
+    <wsdl:part name="parameters" element="AsignaTurnoRangoFechasResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaTurnoNombreRangoFechas_InputMessage">
+    <wsdl:part name="parameters" element="AsignaTurnoNombreRangoFechas" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaTurnoNombreRangoFechas_OutputMessage">
+    <wsdl:part name="parameters" element="AsignaTurnoNombreRangoFechasResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_ObtenDatos_InputMessage">
+    <wsdl:part name="parameters" element="ObtenDatos" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_ObtenDatos_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_GuardaDatos_InputMessage">
+    <wsdl:part name="parameters" element="GuardaDatos" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_GuardaDatos_OutputMessage">
+    <wsdl:part name="parameters" element="GuardaDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignacionTurnosAEmpleados_InputMessage">
+    <wsdl:part name="parameters" element="AsignacionTurnosAEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignacionTurnosAEmpleados_OutputMessage">
+    <wsdl:part name="parameters" element="AsignacionTurnosAEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaHorario_InputMessage">
+    <wsdl:part name="parameters" element="AsignaHorario" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaHorario_OutputMessage">
+    <wsdl:part name="parameters" element="AsignaHorarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaHorarioAPersonaDiarioIDs_InputMessage">
+    <wsdl:part name="parameters" element="AsignaHorarioAPersonaDiarioIDs" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaHorarioAPersonaDiarioIDs_OutputMessage">
+    <wsdl:part name="parameters" element="AsignaHorarioAPersonaDiarioIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaHorarioPredeterminadoAPersonaDiarioIDs_InputMessage">
+    <wsdl:part name="parameters" element="AsignaHorarioPredeterminadoAPersonaDiarioIDs" />
+  </wsdl:message>
+  <wsdl:message name="S_Turnos_AsignaHorarioPredeterminadoAPersonaDiarioIDs_OutputMessage">
+    <wsdl:part name="parameters" element="AsignaHorarioPredeterminadoAPersonaDiarioIDsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="S_Turnos">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="urn:S_Turnos/DoWork" message="S_Turnos_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Turnos/DoWorkResponse" message="S_Turnos_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTurnosDSMenu">
+      <wsdl:input wsaw:Action="urn:S_Turnos/ObtenTurnosDSMenu" message="S_Turnos_ObtenTurnosDSMenu_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Turnos/ObtenTurnosDSMenuResponse" message="S_Turnos_ObtenTurnosDSMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaTurnoPredeterminado">
+      <wsdl:input wsaw:Action="urn:S_Turnos/AsignaTurnoPredeterminado" message="S_Turnos_AsignaTurnoPredeterminado_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Turnos/AsignaTurnoPredeterminadoResponse" message="S_Turnos_AsignaTurnoPredeterminado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaTurnoDia">
+      <wsdl:input wsaw:Action="urn:S_Turnos/AsignaTurnoDia" message="S_Turnos_AsignaTurnoDia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Turnos/AsignaTurnoDiaResponse" message="S_Turnos_AsignaTurnoDia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaTurnoRangoFechas">
+      <wsdl:input wsaw:Action="urn:S_Turnos/AsignaTurnoRangoFechas" message="S_Turnos_AsignaTurnoRangoFechas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Turnos/AsignaTurnoRangoFechasResponse" message="S_Turnos_AsignaTurnoRangoFechas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaTurnoNombreRangoFechas">
+      <wsdl:input wsaw:Action="urn:S_Turnos/AsignaTurnoNombreRangoFechas" message="S_Turnos_AsignaTurnoNombreRangoFechas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Turnos/AsignaTurnoNombreRangoFechasResponse" message="S_Turnos_AsignaTurnoNombreRangoFechas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDatos">
+      <wsdl:input wsaw:Action="urn:S_Turnos/ObtenDatos" message="S_Turnos_ObtenDatos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Turnos/ObtenDatosResponse" message="S_Turnos_ObtenDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardaDatos">
+      <wsdl:input wsaw:Action="urn:S_Turnos/GuardaDatos" message="S_Turnos_GuardaDatos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Turnos/GuardaDatosResponse" message="S_Turnos_GuardaDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignacionTurnosAEmpleados">
+      <wsdl:input wsaw:Action="urn:S_Turnos/AsignacionTurnosAEmpleados" message="S_Turnos_AsignacionTurnosAEmpleados_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Turnos/AsignacionTurnosAEmpleadosResponse" message="S_Turnos_AsignacionTurnosAEmpleados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaHorario">
+      <wsdl:input wsaw:Action="urn:S_Turnos/AsignaHorario" message="S_Turnos_AsignaHorario_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Turnos/AsignaHorarioResponse" message="S_Turnos_AsignaHorario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaHorarioAPersonaDiarioIDs">
+      <wsdl:input wsaw:Action="urn:S_Turnos/AsignaHorarioAPersonaDiarioIDs" message="S_Turnos_AsignaHorarioAPersonaDiarioIDs_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Turnos/AsignaHorarioAPersonaDiarioIDsResponse" message="S_Turnos_AsignaHorarioAPersonaDiarioIDs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaHorarioPredeterminadoAPersonaDiarioIDs">
+      <wsdl:input wsaw:Action="urn:S_Turnos/AsignaHorarioPredeterminadoAPersonaDiarioIDs" message="S_Turnos_AsignaHorarioPredeterminadoAPersonaDiarioIDs_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Turnos/AsignaHorarioPredeterminadoAPersonaDiarioIDsResponse" message="S_Turnos_AsignaHorarioPredeterminadoAPersonaDiarioIDs_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

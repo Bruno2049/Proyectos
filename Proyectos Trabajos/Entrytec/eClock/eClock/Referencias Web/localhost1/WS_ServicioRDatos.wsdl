@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RecepcionDatos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dato" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecepcionDatosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecepcionDatosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerID">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarRegistros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Datos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarRegistrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GuardarRegistrosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="RecepcionDatosSoapIn">
+    <part name="parameters" element="s0:RecepcionDatos" />
+  </message>
+  <message name="RecepcionDatosSoapOut">
+    <part name="parameters" element="s0:RecepcionDatosResponse" />
+  </message>
+  <message name="ObtenerIDSoapIn">
+    <part name="parameters" element="s0:ObtenerID" />
+  </message>
+  <message name="ObtenerIDSoapOut">
+    <part name="parameters" element="s0:ObtenerIDResponse" />
+  </message>
+  <message name="GuardarRegistrosSoapIn">
+    <part name="parameters" element="s0:GuardarRegistros" />
+  </message>
+  <message name="GuardarRegistrosSoapOut">
+    <part name="parameters" element="s0:GuardarRegistrosResponse" />
+  </message>
+  <portType name="WS_ServicioRDatosSoap">
+    <operation name="RecepcionDatos">
+      <input message="s0:RecepcionDatosSoapIn" />
+      <output message="s0:RecepcionDatosSoapOut" />
+    </operation>
+    <operation name="ObtenerID">
+      <input message="s0:ObtenerIDSoapIn" />
+      <output message="s0:ObtenerIDSoapOut" />
+    </operation>
+    <operation name="GuardarRegistros">
+      <input message="s0:GuardarRegistrosSoapIn" />
+      <output message="s0:GuardarRegistrosSoapOut" />
+    </operation>
+  </portType>
+  <binding name="WS_ServicioRDatosSoap" type="s0:WS_ServicioRDatosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="RecepcionDatos">
+      <soap:operation soapAction="http://tempuri.org/RecepcionDatos" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerID">
+      <soap:operation soapAction="http://tempuri.org/ObtenerID" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GuardarRegistros">
+      <soap:operation soapAction="http://tempuri.org/GuardarRegistros" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_ServicioRDatos">
+    <port name="WS_ServicioRDatosSoap" binding="s0:WS_ServicioRDatosSoap">
+      <soap:address location="http://localhost/eClock/WS_ServicioRDatos.asmx" />
+    </port>
+  </service>
+</definitions>

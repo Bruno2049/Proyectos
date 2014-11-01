@@ -1,0 +1,60 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.Vista.Configuracion.Kiosco" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Loaded="UserControl_Loaded_1">
+    <Grid>
+
+        <eClock5:UC_ToolBar VerticalAlignment="Top" Width="Auto" Height="48" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar"  >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Nombre="Btn_Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+
+
+        <StackPanel  Background="{DynamicResource AzulClaro_Brush}" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock x:Name="Lbl_Reporte_Asistencia" Text="Reporte Asistencia"  Margin="{DynamicResource MargenGeneral}" Style="{DynamicResource TextBlockEtiquetaStyle}" />
+                <Controles:UC_Combo x:Name="Cmb_Reporte_Asistencia" Width="150" Margin="{DynamicResource MargenGeneral}" Tabla="EC_REPORTES" CampoLlave="REPORTE_ID" CampoNombre="REPORTE_TITULO" CampoDescripcion="REPORTE_DESCRIP" Filtro="REPORTE_MODELO IN ('eClockBase.Modelos.Asistencias.Reporte_Asistencias')"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock x:Name="Lbl_Formato_Reporte_Asistencia" Text="Formato Rep. Asistencia"  Margin="{DynamicResource MargenGeneral}" Style="{DynamicResource TextBlockEtiquetaStyle}" />
+                <Controles:UC_Combo x:Name="Cmb_Formato_Reporte_Asistencia" Width="150" Margin="{DynamicResource MargenGeneral}" Tabla="EC_FORMATOS_REP" CampoLlave="FORMATO_REP_ID" CampoNombre="FORMATO_REP_NOMBRE" CampoDescripcion="FORMATO_REP_NOMBRE"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock x:Name="Lbl_Reporte_Nomina" Text="Reporte Nómina"  Margin="{DynamicResource MargenGeneral}" Style="{DynamicResource TextBlockEtiquetaStyle}" />
+                <Controles:UC_Combo x:Name="Cmb_Reporte_Nomina" Width="150" Margin="{DynamicResource MargenGeneral}" Tabla="EC_REPORTES" CampoLlave="REPORTE_ID" CampoNombre="REPORTE_TITULO" CampoDescripcion="REPORTE_DESCRIP" Filtro="REPORTE_MODELO IN ('eClockBase.Modelos.Nomina.Reporte_RecNomina')"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock x:Name="Lbl_Formato_Reporte_Nomina" Text="Formato Rep. Asistencia"  Margin="{DynamicResource MargenGeneral}" Style="{DynamicResource TextBlockEtiquetaStyle}" />
+                <Controles:UC_Combo x:Name="Cmb_Formato_Reporte_Nomina" Width="150" Margin="{DynamicResource MargenGeneral}" Tabla="EC_FORMATOS_REP" CampoLlave="FORMATO_REP_ID" CampoNombre="FORMATO_REP_NOMBRE" CampoDescripcion="FORMATO_REP_NOMBRE"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock x:Name="Lbl_Reporte_Rec_Nomina" Text="Recibo Nomina"  Margin="{DynamicResource MargenGeneral}" Style="{DynamicResource TextBlockEtiquetaStyle}" />
+                <Controles:UC_Combo x:Name="Cmb_Reporte_Rec_Nomina" Width="150" Margin="{DynamicResource MargenGeneral}" Tabla="EC_REPORTES" CampoLlave="REPORTE_ID" CampoNombre="REPORTE_TITULO" CampoDescripcion="REPORTE_DESCRIP" Filtro="REPORTE_MODELO IN ('eClockBase.Modelos.Nomina.Reporte_RecNomina')"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock x:Name="Lbl_TIPO_INCIDENCIA_ID_Vaca" Text="Incidencia de Vacaciones"  Margin="{DynamicResource MargenGeneral}" Style="{DynamicResource TextBlockEtiquetaStyle}" />
+                <Controles:UC_Combo x:Name="Cmb_TIPO_INCIDENCIA_ID_Vaca" Width="150" Margin="{DynamicResource MargenGeneral}" Tabla="EC_TIPO_INCIDENCIAS" CampoLlave="TIPO_INCIDENCIA_ID" CampoNombre="TIPO_INCIDENCIA_NOMBRE" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock x:Name="Lbl_Color" Text="Color"  Margin="{DynamicResource MargenGeneral}" Style="{DynamicResource TextBlockEtiquetaStyle}" />
+                <Controles:UC_ColorPicker x:Name="CP_Color_Reporte" Width="150" Margin="{DynamicResource MargenGeneral}"  />
+            </StackPanel>            
+
+            <StackPanel HorizontalAlignment="Center">
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

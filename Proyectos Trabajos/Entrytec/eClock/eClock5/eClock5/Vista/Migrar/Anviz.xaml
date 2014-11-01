@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="eClock5.Vista.Migrar.Anviz"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="366" d:DesignWidth="475.789" Background="{DynamicResource Blanco_Brush}" FontFamily="{DynamicResource EntryTecFont}">
+    <Grid>
+        <TextBlock x:Name="Lbl_Anviz" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Anviz" Width="133" VerticalAlignment="Top" FontSize="{DynamicResource AltoToolBar}" Foreground="{DynamicResource AzulOscuro_Brush}"/>
+        <TextBlock x:Name="Lbl_Descripcion" Margin="10,79,10,0" TextWrapping="Wrap" Text="Para poder realizar una migración de empleados desde &quot;Anviz&quot;, es necesario que capture los datos que se piden a continuación. &#10;&#10;Solo acepta formato .mdb." VerticalAlignment="Top" FontSize="{DynamicResource FontSizeParrafo}" Height="98" Foreground="{DynamicResource AzulOscuro_Brush}"/>
+        <Grid Height="174" Margin="10,182,10,0" VerticalAlignment="Top" Background="{DynamicResource AzulClaro_Brush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="25*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="200*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Lbl_RutaDeLaCarpeta" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Ruta de la carpeta donde se muestre el archivo" VerticalAlignment="Top" Foreground="{DynamicResource Blanco_Brush}" Grid.Row="2"/>
+            <TextBlock x:Name="Lbl_Usuario" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Usuario" VerticalAlignment="Top" Foreground="{DynamicResource Blanco_Brush}"/>
+            <TextBlock x:Name="Lbl_Contraseña" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Contraseña" VerticalAlignment="Top" Foreground="{DynamicResource Blanco_Brush}"/>
+            <TextBox  x:Name="Tbx_Usuario" Height="23" Margin="0,11,88,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="163" Grid.Column="1" />
+            <TextBox  x:Name="Tbx_Contraseña" Height="23" Margin="0,11,88,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="163" Grid.Column="1" Grid.Row="1"/>
+            <TextBox  x:Name="Tbx_RutaDeLaCarpeta" HorizontalAlignment="Right" Height="23" Margin="0,11,88,0" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="163" Grid.Column="1"/>
+            <Button x:Name="Lbl_Prueba" Content="Prueba" Margin="0,16,98,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Grid.Column="1" Grid.Row="3" Click="Lbl_Prueba_Click"/>
+            <Button x:Name="Lbl_Siguiente" Content="Importar" Margin="0,16,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Grid.Column="1" Grid.Row="3" Click="Lbl_Siguiente_Click"/>
+            <Button x:Name="Btn_Examinar" Content="Examinar" Margin="0,14,10,0" Grid.Row="2" VerticalAlignment="Top" Grid.Column="1" Click="Btn_Examinar_Click" HorizontalAlignment="Right" Width="73"/>
+
+        </Grid>
+        <Image Height="58" Margin="0,10,10,0" VerticalAlignment="Top" Source="pack://siteoforigin:,,,/Resources/Anviz_70.png" Width="61" HorizontalAlignment="Right"/>
+
+    </Grid>
+</UserControl>

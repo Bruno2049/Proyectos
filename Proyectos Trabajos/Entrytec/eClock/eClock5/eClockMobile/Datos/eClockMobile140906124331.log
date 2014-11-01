@@ -1,0 +1,15 @@
+Error->""  
+ Msg = Excepción durante la operación. El resultado no es válido. Compruebe la excepción InnerException para obtener más detalles.
+ StackTrace =    en System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary()
+   en eClockBase.ES_Reportes.ObtenListadoCompletedEventArgs.get_Result() en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClock5\eClockBase\Service References\ES_Reportes\Reference.cs:línea 56
+   en eClockBase.Controladores.Reportes.<>c__DisplayClass1.<ObtenListado>b__0(Object sender, ObtenListadoCompletedEventArgs e) en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClock5\eClockBase\Controladores\Reportes.cs:línea 48 06/09/2014 12:49:39 p.m.
+Error->""  
+ Msg = Excepción durante la operación. El resultado no es válido. Compruebe la excepción InnerException para obtener más detalles.
+ StackTrace =    en System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary()
+   en eClockBase.ES_Reportes.ObtenListadoCompletedEventArgs.get_Result() en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClock5\eClockBase\Service References\ES_Reportes\Reference.cs:línea 56
+   en eClockBase.Controladores.Reportes.<>c__DisplayClass1.<ObtenListado>b__0(Object sender, ObtenListadoCompletedEventArgs e) en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClock5\eClockBase\Controladores\Reportes.cs:línea 48 06/09/2014 12:55:47 p.m.
+Error->""  
+ Msg = Excepción durante la operación. El resultado no es válido. Compruebe la excepción InnerException para obtener más detalles.
+ StackTrace =    en System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary()
+   en eClockBase.ES_Accesos.ObtenAccesosCompletedEventArgs.get_Result() en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClock5\eClockBase\Service References\ES_Accesos\Reference.cs:línea 61
+   en eClockBase.Controladores.Accesos.m_S_AccesosObtenAccesosCompleted(Object sender, ObtenAccesosCompletedEventArgs e) en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClock5\eClockBase\Controladores\Accesos.cs:línea 94 06/09/2014 12:55:59 p.m.

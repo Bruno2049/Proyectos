@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenTurnosDSMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenTurnosDSMenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenTurnosDSMenuResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaTurnoPredeterminado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Persona_Link_IDS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Turno_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaTurnoPredeterminadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AsignaTurnoPredeterminadoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaTurnoDia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Persona_Diario_IDS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Turno_Dia_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaTurnoDiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AsignaTurnoDiaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaTurnoRangoFechas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Persona_Diario_IDS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Turno_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaTurnoRangoFechasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AsignaTurnoRangoFechasResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaTurnoNombreRangoFechas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Persona_Diario_IDS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Turno_Nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaTurnoNombreRangoFechasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AsignaTurnoNombreRangoFechasResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenDatos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Turno_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenDatosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenDatosResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaDatos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Datos" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaDatosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardaDatosResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignacionTurnosAEmpleados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DatosTurnoImportacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignacionTurnosAEmpleadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AsignacionTurnosAEmpleadosResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaHorario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DatosTurnoAsignacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaHorarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AsignaHorarioResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaHorarioAPersonaDiarioIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Persona_Diario_IDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Turno_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaHorarioAPersonaDiarioIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AsignaHorarioAPersonaDiarioIDsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaHorarioPredeterminadoAPersonaDiarioIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SesionSeguridad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Persona_Diario_IDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Turno_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignaHorarioPredeterminadoAPersonaDiarioIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AsignaHorarioPredeterminadoAPersonaDiarioIDsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

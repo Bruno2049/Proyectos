@@ -1,0 +1,30 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.Vista.Wizard.Contratos" 
+             mc:Ignorable="d" 
+             d:DesignHeight="395" d:DesignWidth="570" Loaded="UserControl_Loaded">
+    <Grid >
+        <CheckBox x:Name="Chb_Acepto" Content="Acepto los terminos y condiciones" Margin="10,0,323,10" FontSize="{DynamicResource FontSizeParrafo}" Height="15" VerticalAlignment="Bottom"/>
+        <ScrollViewer Margin="10,69,10,0" BorderBrush="{DynamicResource Negro_Brush}" BorderThickness="1" Background="{DynamicResource Blanco_Brush}" Height="124" VerticalAlignment="Top">
+            <RichTextBox x:Name="Rtb_Acuerdo" >
+
+            </RichTextBox>
+        </ScrollViewer>
+        <ScrollViewer Margin="10,198,10,30" BorderBrush="{DynamicResource Negro_Brush}" BorderThickness="1" Background="{DynamicResource Blanco_Brush}">
+            <RichTextBox x:Name="Rtb_Licencia" >
+
+            </RichTextBox>
+        </ScrollViewer>
+
+
+
+        <Controles:UC_WizardTitulo VerticalAlignment="Top" Titulo="Contrato de Licencia" SubTitulo="Lea cuidadosamente los terminos y condiciones de uso del software"/>
+
+
+
+    </Grid>
+
+</UserControl>

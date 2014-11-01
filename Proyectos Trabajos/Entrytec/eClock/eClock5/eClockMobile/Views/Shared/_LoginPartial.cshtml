@@ -1,0 +1,18 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left ui-btn-inline ui-mini ">
+        @if (!eClockMobile.BaseModificada.CeC_Sesion.EsKiosco)
+        {
+            @Html.ActionLink("Inicio", "eClock", "Home", routeValues: null, htmlAttributes: new { data_icon = "eclock", data_transition = "slide", data_iconpos = "notext", data_role = "button", data_inline = "true" })
+        }
+        else
+        {
+            @Html.ActionLink("Inicio", "Kiosco", "Home", routeValues: null, htmlAttributes: new { data_icon = "eclock", data_transition = "slide", data_iconpos = "notext", data_role = "button", data_inline = "true" })
+        }
+        @Html.ActionLink("Regresar", "Index", "Home", null, new { data_icon = "arrow-l", data_rel = "back", data_transition = "slide", data_iconpos = "notext", data_role = "button", data_inline = "true", data_mini = "true" })
+    </div>
+}
+else
+{
+    @Html.ActionLink("Iniciar sesión", "Login", "Account", routeValues: null, htmlAttributes: new { data_icon = "gear" })
+}

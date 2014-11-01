@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://www.gruposicoss.com.mx/wssicoss/wsfaltatrabid/WSFaltaTrabID.asmx?wsdl" docRef="http://www.gruposicoss.com.mx/wssicoss/wsfaltatrabid/WSFaltaTrabID.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://www.gruposicoss.com.mx/wssicoss/wsfaltatrabid/WSFaltaTrabID.asmx" xmlns:q1="http://tempuri.org/" binding="q1:WSFaltaTrabIDSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://www.gruposicoss.com.mx/wssicoss/wsfaltatrabid/WSFaltaTrabID.asmx" xmlns:q2="http://tempuri.org/" binding="q2:WSFaltaTrabIDSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

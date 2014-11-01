@@ -1,0 +1,23 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:eClock5="clr-namespace:eClock5" 
+             x:Class="eClock5.Vista.Turnos.ImportacionDeAsiganacionDeTurnos" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" 
+             mc:Ignorable="d" d:DesignWidth="500" Background="{DynamicResource Blanco_Brush}" Height="476.119">
+    <Grid x:Name="XGrid_EC_Asig_Turno" >
+        <TextBlock x:Name="Lbl_Turnoxx" Margin="10,53,0,0" TextWrapping="Wrap" Text="El formato que se utilizara para realizar la importación será:&#xA;&#xA;9 dígitos para el número de empleado, se debe agregar ceros a la izquierda para completar los nueve dígitos.&#10;Nombre del turno, verificandoi que este exactamente escrito como se encuentra dado de alta en el sistema.&#10;Fecha de inicio de asignación DD/MM/YYYY.&#10;Fecha de fin de asignación DD/MM/YYYY Los campos deberán estar separados por coma (,).&#10;Se puede usar MS Exel y guardar el archivo como CSV.&#10;Se usara una linea por reguistro.&#10; &#10;Ejemplo: &#10; &#10; Para el empleado número 125 se tienen los datos siguientes: &#10; Empleado= 125, Turno= Matutino, Fecha de inicio= 25/ 03/2013 &#10; &#10; Se debe hacer de este modo 000000125, matutino,25/03/2013, 30/03/2013" Foreground="{DynamicResource AzulOscuro_Brush}" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" HorizontalAlignment="Left" Width="490" Height="357" VerticalAlignment="Top"/>
+         <Rectangle Fill="{DynamicResource AzulClaro_Brush}" Height="103" Margin="10,362,10,0" Stroke="Black" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Lbl_Incidencias10" Margin="32,378,0,0" TextWrapping="Wrap" Text="1. Seleccione el archivo de acceso que desea importar" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource Blanco_Brush}" Height="32" HorizontalAlignment="Left" Width="214"/>
+        <TextBox x:Name="Tbx_Examinar" Height="32" Margin="251,378,103,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+        <Button x:Name="Btn_Examinar" Content="Examinar" Margin="0,378,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="78" Click="Btn_Examinar_Click" Height="32" RenderTransformOrigin="0.477,0.529"/>
+        <TextBlock x:Name="Lbl_Incidencias11" Margin="32,415,0,0" TextWrapping="Wrap" Text="2. De clic en importar" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource Blanco_Brush}" Height="32" HorizontalAlignment="Left" Width="163"/>
+        <!--Button x:Name="Btn_Importar" Content="Importar" Margin="0,415,103,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85" Height="32" Click="Btn_Importar_Click"/-->
+
+        <eClock5:UC_ToolBar VerticalAlignment="Top" Grid.ColumnSpan="3" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" Width="Auto"  >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png" Nombre="Btn_Guardar" />
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+    </Grid>
+</UserControl>

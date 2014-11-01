@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="Grupos_Empleados" targetNamespace="http://www.tempuri.org/Grupos_Empleados.xsd" xmlns:mstns="http://www.tempuri.org/Grupos_Empleados.xsd" xmlns="http://www.tempuri.org/Grupos_Empleados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="Grupos_Empleados" msdata:IsDataSet="true" msdata:Locale="es-MX">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="EC_PERSONAS_DATOS_GRUPOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GRUPO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

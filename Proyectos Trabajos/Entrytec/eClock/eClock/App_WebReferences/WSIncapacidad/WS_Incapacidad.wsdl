@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/DSIncapacidadSicoss.xsd" />
+      <s:import schemaLocation="http://localhost/WSIncapacidad/WS_Incapacidad.asmx?schema=DSIncapacidadSicoss" namespace="http://tempuri.org/DSIncapacidadSicoss.xsd" />
+      <s:element name="IncapacidadporFecha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FInicio" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="FFinal" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncapacidadporFechaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncapacidadporFechaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DSIncapacidadSicoss.xsd" name="namespace" />
+                <s:attribute fixed="IncapacidadDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbOpen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbOpenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbOpenResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IncapacidadporFechaSoapIn">
+    <wsdl:part name="parameters" element="tns:IncapacidadporFecha" />
+  </wsdl:message>
+  <wsdl:message name="IncapacidadporFechaSoapOut">
+    <wsdl:part name="parameters" element="tns:IncapacidadporFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbOpenSoapIn">
+    <wsdl:part name="parameters" element="tns:dbOpen" />
+  </wsdl:message>
+  <wsdl:message name="dbOpenSoapOut">
+    <wsdl:part name="parameters" element="tns:dbOpenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_IncapacidadSoap">
+    <wsdl:operation name="IncapacidadporFecha">
+      <wsdl:input message="tns:IncapacidadporFechaSoapIn" />
+      <wsdl:output message="tns:IncapacidadporFechaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbOpen">
+      <wsdl:input message="tns:dbOpenSoapIn" />
+      <wsdl:output message="tns:dbOpenSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_IncapacidadSoap" type="tns:WS_IncapacidadSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IncapacidadporFecha">
+      <soap:operation soapAction="http://tempuri.org/IncapacidadporFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbOpen">
+      <soap:operation soapAction="http://tempuri.org/dbOpen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_IncapacidadSoap12" type="tns:WS_IncapacidadSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IncapacidadporFecha">
+      <soap12:operation soapAction="http://tempuri.org/IncapacidadporFecha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbOpen">
+      <soap12:operation soapAction="http://tempuri.org/dbOpen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_Incapacidad">
+    <wsdl:port name="WS_IncapacidadSoap" binding="tns:WS_IncapacidadSoap">
+      <soap:address location="http://localhost/WSIncapacidad/WS_Incapacidad.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_IncapacidadSoap12" binding="tns:WS_IncapacidadSoap12">
+      <soap12:address location="http://localhost/WSIncapacidad/WS_Incapacidad.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

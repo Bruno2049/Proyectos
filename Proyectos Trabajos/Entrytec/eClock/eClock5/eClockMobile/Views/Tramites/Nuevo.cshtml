@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Nuevo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    if (ViewBag.TramiteExitoso)
+    {
+    <h2>El tramite se concreto exitosamente</h2>
+    }
+    else
+    {
+    <h2>El tramite no se concreto exitosamente
+            <p>Contacte con el proveedor del servicio</p>
+    </h2>
+    } 
+}

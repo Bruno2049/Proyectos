@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/">
+      <s:element name="ConsultarTrama">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rpu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarTramaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarTramaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaFE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rpu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaFEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaFEResult" type="tns:FEResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FEResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="rpu" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Resultado" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="errMsg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CFD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultaSICOM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rpu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaSICOMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaSICOMResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarRecibo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rpu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sistema" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bXML" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="bGrafica" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="flujo" type="tns:Flujo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="Flujo">
+        <s:restriction base="s:string">
+          <s:enumeration value="DB_SICOM" />
+          <s:enumeration value="SICOM" />
+          <s:enumeration value="FE_DB_SICOM" />
+          <s:enumeration value="FE" />
+          <s:enumeration value="FE_Historico" />
+          <s:enumeration value="DB" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ConsultarReciboResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarReciboResult" type="tns:Recibo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Recibo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:IRecibo">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Encontrado" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="EsFacturacionActual" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaLimiteToDate" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="IRecibo" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Rpu" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tipo" type="tns:TipoRecibo" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tarifa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Colonia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Poblacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaLimite" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaPago" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xml" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AnioMes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoCuenta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BGrafica" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="BXML" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Grafica" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="FE_SERIE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FE_FOLIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOAPROBACION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ANOAPROBACION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOCERTIFICADO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CADENAORIGINAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SELLO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusConsulta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XMLSAT" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Origen" type="tns:OrigenRecibo" />
+          <s:element minOccurs="1" maxOccurs="1" name="EsVMBimestral" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="EsTarifaDomestica" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaPagoActual" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EsServicioInactivo" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusInternoID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusInternoMensaje" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConsultaExitosa" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConsultaValida" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="InformacionDeOrigenValida" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TipoRecibo">
+        <s:restriction base="s:string">
+          <s:enumeration value="Bimestral" />
+          <s:enumeration value="Mensual" />
+          <s:enumeration value="MensualHorario" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="OrigenRecibo">
+        <s:restriction base="s:string">
+          <s:enumeration value="Invalido" />
+          <s:enumeration value="SICOM" />
+          <s:enumeration value="NuevoSICOM" />
+          <s:enumeration value="DBRecibos" />
+          <s:enumeration value="FacturaElectronica" />
+          <s:enumeration value="FacturaElectronicaHistorico" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ConsultarHistorial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rpu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sistema" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bXML" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="bGrafica" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="serie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarHistorialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarHistorialResult" type="tns:Recibo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResumenRecibo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rpu" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResumenReciboResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ResumenReciboResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaRpuSerieFolio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rpu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaRpuSerieFolioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConsultaRpuSerieFolioResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cfd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="FEResult" nillable="true" type="tns:FEResult" />
+      <s:element name="Recibo" nillable="true" type="tns:Recibo" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultarTramaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarTrama" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTramaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarTramaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFESoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaFE" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFESoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaFEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaSICOMSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaSICOM" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaSICOMSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaSICOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarReciboSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarRecibo" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarReciboSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarReciboResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarHistorialSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarHistorial" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarHistorialSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarHistorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResumenReciboSoapIn">
+    <wsdl:part name="parameters" element="tns:ResumenRecibo" />
+  </wsdl:message>
+  <wsdl:message name="ResumenReciboSoapOut">
+    <wsdl:part name="parameters" element="tns:ResumenReciboResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaRpuSerieFolioSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaRpuSerieFolio" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaRpuSerieFolioSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaRpuSerieFolioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTramaHttpGetIn">
+    <wsdl:part name="rpu" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTramaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFEHttpGetIn">
+    <wsdl:part name="rpu" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFEHttpGetOut">
+    <wsdl:part name="Body" element="tns:FEResult" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaSICOMHttpGetIn">
+    <wsdl:part name="rpu" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaSICOMHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarReciboHttpGetIn">
+    <wsdl:part name="rpu" type="s:string" />
+    <wsdl:part name="sistema" type="s:string" />
+    <wsdl:part name="bXML" type="s:string" />
+    <wsdl:part name="bGrafica" type="s:string" />
+    <wsdl:part name="flujo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarReciboHttpGetOut">
+    <wsdl:part name="Body" element="tns:Recibo" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarHistorialHttpGetIn">
+    <wsdl:part name="rpu" type="s:string" />
+    <wsdl:part name="sistema" type="s:string" />
+    <wsdl:part name="bXML" type="s:string" />
+    <wsdl:part name="bGrafica" type="s:string" />
+    <wsdl:part name="serie" type="s:string" />
+    <wsdl:part name="folio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarHistorialHttpGetOut">
+    <wsdl:part name="Body" element="tns:Recibo" />
+  </wsdl:message>
+  <wsdl:message name="ResumenReciboHttpGetIn">
+    <wsdl:part name="rpu" type="s:string" />
+    <wsdl:part name="cantidad" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ResumenReciboHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTramaHttpPostIn">
+    <wsdl:part name="rpu" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarTramaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFEHttpPostIn">
+    <wsdl:part name="rpu" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFEHttpPostOut">
+    <wsdl:part name="Body" element="tns:FEResult" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaSICOMHttpPostIn">
+    <wsdl:part name="rpu" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaSICOMHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarReciboHttpPostIn">
+    <wsdl:part name="rpu" type="s:string" />
+    <wsdl:part name="sistema" type="s:string" />
+    <wsdl:part name="bXML" type="s:string" />
+    <wsdl:part name="bGrafica" type="s:string" />
+    <wsdl:part name="flujo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarReciboHttpPostOut">
+    <wsdl:part name="Body" element="tns:Recibo" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarHistorialHttpPostIn">
+    <wsdl:part name="rpu" type="s:string" />
+    <wsdl:part name="sistema" type="s:string" />
+    <wsdl:part name="bXML" type="s:string" />
+    <wsdl:part name="bGrafica" type="s:string" />
+    <wsdl:part name="serie" type="s:string" />
+    <wsdl:part name="folio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarHistorialHttpPostOut">
+    <wsdl:part name="Body" element="tns:Recibo" />
+  </wsdl:message>
+  <wsdl:message name="ResumenReciboHttpPostIn">
+    <wsdl:part name="rpu" type="s:string" />
+    <wsdl:part name="cantidad" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ResumenReciboHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="TraeReciboSoap">
+    <wsdl:operation name="ConsultarTrama">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de trama del Recibo.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarTramaSoapIn" />
+      <wsdl:output message="tns:ConsultarTramaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta a FE</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaFESoapIn" />
+      <wsdl:output message="tns:ConsultaFESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaSICOM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta SICOM.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaSICOMSoapIn" />
+      <wsdl:output message="tns:ConsultaSICOMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRecibo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de Recibo.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarReciboSoapIn" />
+      <wsdl:output message="tns:ConsultarReciboSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHistorial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de Recibo.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarHistorialSoapIn" />
+      <wsdl:output message="tns:ConsultarHistorialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumenRecibo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Resumen de Facturas.</wsdl:documentation>
+      <wsdl:input message="tns:ResumenReciboSoapIn" />
+      <wsdl:output message="tns:ResumenReciboSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaRpuSerieFolio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de Recibo por Serie y Folio.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaRpuSerieFolioSoapIn" />
+      <wsdl:output message="tns:ConsultaRpuSerieFolioSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TraeReciboHttpGet">
+    <wsdl:operation name="ConsultarTrama">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de trama del Recibo.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarTramaHttpGetIn" />
+      <wsdl:output message="tns:ConsultarTramaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta a FE</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaFEHttpGetIn" />
+      <wsdl:output message="tns:ConsultaFEHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaSICOM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta SICOM.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaSICOMHttpGetIn" />
+      <wsdl:output message="tns:ConsultaSICOMHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRecibo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de Recibo.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarReciboHttpGetIn" />
+      <wsdl:output message="tns:ConsultarReciboHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHistorial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de Recibo.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarHistorialHttpGetIn" />
+      <wsdl:output message="tns:ConsultarHistorialHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumenRecibo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Resumen de Facturas.</wsdl:documentation>
+      <wsdl:input message="tns:ResumenReciboHttpGetIn" />
+      <wsdl:output message="tns:ResumenReciboHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TraeReciboHttpPost">
+    <wsdl:operation name="ConsultarTrama">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de trama del Recibo.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarTramaHttpPostIn" />
+      <wsdl:output message="tns:ConsultarTramaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta a FE</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaFEHttpPostIn" />
+      <wsdl:output message="tns:ConsultaFEHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaSICOM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta SICOM.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaSICOMHttpPostIn" />
+      <wsdl:output message="tns:ConsultaSICOMHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRecibo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de Recibo.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarReciboHttpPostIn" />
+      <wsdl:output message="tns:ConsultarReciboHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHistorial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de Recibo.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarHistorialHttpPostIn" />
+      <wsdl:output message="tns:ConsultarHistorialHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumenRecibo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Resumen de Facturas.</wsdl:documentation>
+      <wsdl:input message="tns:ResumenReciboHttpPostIn" />
+      <wsdl:output message="tns:ResumenReciboHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TraeReciboSoap" type="tns:TraeReciboSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarTrama">
+      <soap:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ConsultarTrama" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFE">
+      <soap:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ConsultaFE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaSICOM">
+      <soap:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ConsultaSICOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRecibo">
+      <soap:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ConsultarRecibo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHistorial">
+      <soap:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ConsultarHistorial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumenRecibo">
+      <soap:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ResumenRecibo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaRpuSerieFolio">
+      <soap:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ConsultaRpuSerieFolio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TraeReciboSoap12" type="tns:TraeReciboSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarTrama">
+      <soap12:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ConsultarTrama" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFE">
+      <soap12:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ConsultaFE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaSICOM">
+      <soap12:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ConsultaSICOM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRecibo">
+      <soap12:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ConsultarRecibo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHistorial">
+      <soap12:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ConsultarHistorial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumenRecibo">
+      <soap12:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ResumenRecibo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaRpuSerieFolio">
+      <soap12:operation soapAction="http://recibos.cfe.gob.mx/webservices/wsTraeRecibo/ConsultaRpuSerieFolio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TraeReciboHttpGet" type="tns:TraeReciboHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ConsultarTrama">
+      <http:operation location="/ConsultarTrama" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFE">
+      <http:operation location="/ConsultaFE" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaSICOM">
+      <http:operation location="/ConsultaSICOM" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRecibo">
+      <http:operation location="/ConsultarRecibo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHistorial">
+      <http:operation location="/ConsultarHistorial" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumenRecibo">
+      <http:operation location="/ResumenRecibo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TraeReciboHttpPost" type="tns:TraeReciboHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ConsultarTrama">
+      <http:operation location="/ConsultarTrama" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFE">
+      <http:operation location="/ConsultaFE" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaSICOM">
+      <http:operation location="/ConsultaSICOM" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRecibo">
+      <http:operation location="/ConsultarRecibo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHistorial">
+      <http:operation location="/ConsultarHistorial" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumenRecibo">
+      <http:operation location="/ResumenRecibo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TraeRecibo">
+    <wsdl:port name="TraeReciboSoap" binding="tns:TraeReciboSoap">
+      <soap:address location="http://10.7.7.12/webservices/recibos/TraeRecibosFIDE/TreRecibo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TraeReciboSoap12" binding="tns:TraeReciboSoap12">
+      <soap12:address location="http://10.7.7.12/webservices/recibos/TraeRecibosFIDE/TreRecibo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TraeReciboHttpGet" binding="tns:TraeReciboHttpGet">
+      <http:address location="http://10.7.7.12/webservices/recibos/TraeRecibosFIDE/TreRecibo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TraeReciboHttpPost" binding="tns:TraeReciboHttpPost">
+      <http:address location="http://10.7.7.12/webservices/recibos/TraeRecibosFIDE/TreRecibo.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

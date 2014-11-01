@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="eClock5.Controles.UC_Wizard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="327" d:DesignWidth="598">
+    <Grid Background="{DynamicResource GrisClaro_Brush}">
+        <Rectangle Fill="{DynamicResource GrisMedio_Brush}" Stroke="{DynamicResource GrisMedio_Brush}" Height="45" VerticalAlignment="Bottom" Margin="0,0,0,0"/>
+
+        <Button x:Name="Btn_Siguiente" Content="Siguiente &gt;" HorizontalAlignment="Right" Margin="0,0,91,10" VerticalAlignment="Bottom" Width="75" Click="Btn_Siguiente_Click"/>
+        <Button x:Name="Btn_Cancelar" Content="Cancelar" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="75" Click="Btn_Cancelar_Click"/>
+        <Button x:Name="Btn_Atras" Content="&lt; Atras" HorizontalAlignment="Right" Margin="0,0,171,10" VerticalAlignment="Bottom" Width="75" Click="Btn_Atras_Click"/>
+        <Grid x:Name="XGrid" Margin="0,0,0,50">
+            <Grid x:Name="XGrid_Titulo" Height="{DynamicResource AltoWizardTitulo}" VerticalAlignment="Top" Background="{DynamicResource AzulOscuro_Brush}"/>
+        </Grid>
+        <Button x:Name="Btn_Finalizar" Content="Finalizar" HorizontalAlignment="Right" Margin="0,0,91,10" VerticalAlignment="Bottom" Width="75" Click="Btn_Finalizar_Click" Visibility="Hidden" />
+
+
+    </Grid>
+</UserControl>

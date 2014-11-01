@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46EBE544-2C06-4DDB-8815-6429C6BBF9C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eClockSync5</RootNamespace>
+    <AssemblyName>eClockSync5</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>idr_main.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug1|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug1\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="eClockBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\eClock5\eClock5Android\eClockBase.dll</HintPath>
+    </Reference>
+    <Reference Include="EntryTec, Version=1.0.4763.16151, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\EntryTec.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseModificada\CeC_BD.cs" />
+    <Compile Include="BaseModificada\CeC_Sesion.cs" />
+    <Compile Include="BaseModificada\CeC_StreamFile.cs" />
+    <Compile Include="CeC.cs" />
+    <Compile Include="CeClockTerm.cs" />
+    <Compile Include="CeClockTerminal.cs" />
+    <Compile Include="CeC_ABC.cs" />
+    <Compile Include="CeC_Registro.cs" />
+    <Compile Include="CeC_SesionMVC.cs" />
+    <Compile Include="CeC_Vectores.cs" />
+    <Compile Include="CeC_Terminales.cs" />
+    <Compile Include="CeS_eCheck.cs" />
+    <Compile Include="CeTerminalSync.cs" />
+    <Compile Include="CeZkSoftware.cs" />
+    <Compile Include="CeZkSoftwareiClock.cs" />
+    <Compile Include="DS_Cambios1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Cambios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_eClock.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_eClock.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElTicket.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElTicket.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Frm_Asistente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Asistente.Designer.cs">
+      <DependentUpon>Frm_Asistente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Configuracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Configuracion.Designer.cs">
+      <DependentUpon>Frm_Configuracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_LogIn.Designer.cs">
+      <DependentUpon>Frm_LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ModoFoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ModoFoto.Designer.cs">
+      <DependentUpon>Frm_ModoFoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Prueba.Designer.cs">
+      <DependentUpon>Frm_Prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Sitios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Sitios.Designer.cs">
+      <DependentUpon>Frm_Sitios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Vista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Vista.Designer.cs">
+      <DependentUpon>Frm_Vista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SuscripcionModels.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosLocalizables\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosLocalizables\Resources.en.Designer.cs">
+      <DependentUpon>Resources.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Service References\ES_Sesion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ticket.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Usc_Bienvenida.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usc_Bienvenida.Designer.cs">
+      <DependentUpon>Usc_Bienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usc_Licencia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usc_Licencia.Designer.cs">
+      <DependentUpon>Usc_Licencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usc_Serial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usc_Serial.Designer.cs">
+      <DependentUpon>Usc_Serial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usc_Sitios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usc_Sitios.Designer.cs">
+      <DependentUpon>Usc_Sitios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usc_Suscripcion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usc_Suscripcion.Designer.cs">
+      <DependentUpon>Usc_Suscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usc_Usuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usc_Usuario.Designer.cs">
+      <DependentUpon>Usc_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS_eCheck\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ElTicket.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ElTicket.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Asistente.en.resx">
+      <DependentUpon>Frm_Asistente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Asistente.resx">
+      <DependentUpon>Frm_Asistente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Configuracion.en.resx">
+      <DependentUpon>Frm_Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Configuracion.resx">
+      <DependentUpon>Frm_Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_LogIn.resx">
+      <DependentUpon>Frm_LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ModoFoto.resx">
+      <DependentUpon>Frm_ModoFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Sitios.en.resx">
+      <DependentUpon>Frm_Sitios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Sitios.resx">
+      <DependentUpon>Frm_Sitios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Vista.resx">
+      <DependentUpon>Frm_Vista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosLocalizables\Resources.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosLocalizables\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usc_Bienvenida.en.resx">
+      <DependentUpon>Usc_Bienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usc_Bienvenida.resx">
+      <DependentUpon>Usc_Bienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usc_Licencia.en.resx">
+      <DependentUpon>Usc_Licencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usc_Licencia.resx">
+      <DependentUpon>Usc_Licencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usc_Serial.en.resx">
+      <DependentUpon>Usc_Serial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usc_Serial.resx">
+      <DependentUpon>Usc_Serial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usc_Sitios.en.resx">
+      <DependentUpon>Usc_Sitios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usc_Sitios.resx">
+      <DependentUpon>Usc_Sitios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usc_Suscripcion.en.resx">
+      <DependentUpon>Usc_Suscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usc_Suscripcion.resx">
+      <DependentUpon>Usc_Suscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usc_Usuario.en.resx">
+      <DependentUpon>Usc_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usc_Usuario.resx">
+      <DependentUpon>Usc_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CopiaBinario.bat" />
+    <None Include="DS_Cambios.xsc">
+      <DependentUpon>DS_Cambios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Cambios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Cambios1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Cambios.xss">
+      <DependentUpon>DS_Cambios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_eClock.xsc">
+      <DependentUpon>DS_eClock.xsd</DependentUpon>
+    </None>
+    <None Include="DS_eClock.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_eClock.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_eClock.xss">
+      <DependentUpon>DS_eClock.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\ES_Sesion\S_Sesion.wsdl" />
+    <None Include="Service References\ES_Sesion\S_Sesion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Sesion\S_Sesion1.wsdl" />
+    <None Include="Service References\ES_Sesion\S_Sesion1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Sesion\S_Sesion2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ticket.rpt" />
+    <None Include="Web References\WS_eCheck\DS_WSAccesos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS_eCheck\DS_WSAccesos.xsd" />
+    <None Include="Web References\WS_eCheck\DS_WSHorariosPersona.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS_eCheck\DS_WSHorariosPersona.xsd" />
+    <None Include="Web References\WS_eCheck\DS_WSPersonasTerminales.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS_eCheck\DS_WSPersonasTerminales.xsd" />
+    <None Include="Web References\WS_eCheck\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_eCheck\WS_eCheck.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\okshield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candadosinfondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning_triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="eClockBase.dll" />
+    <Content Include="EntryTec.dll" />
+    <Content Include="idr_main.ico" />
+    <Content Include="RecursosLocalizables\Licencia.txt" />
+    <None Include="Resources\Bienvenida.jpg" />
+    <None Include="Resources\Acceso.jpg" />
+    <Content Include="Resources\Brasil18.png" />
+    <None Include="Resources\cuadro-blanco-sombra.png" />
+    <Content Include="Resources\Francia18.png" />
+    <Content Include="Resources\header.bmp" />
+    <Content Include="Resources\Mexico18.png" />
+    <Content Include="Resources\Usa18.png" />
+    <None Include="Resources\usuario.png" />
+    <Content Include="Resources\watermark.bmp" />
+    <None Include="Service References\ES_Sesion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ES_Sesion\configuration.svcinfo" />
+    <None Include="Service References\ES_Sesion\configuration91.svcinfo" />
+    <None Include="Service References\ES_Sesion\S_Sesion.disco" />
+    <None Include="Web References\WS_eCheck\WS_eCheck.disco" />
+    <None Include="tc400.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="zkemkeeper">
+      <Guid>{FE9DED34-E159-408E-8490-B720A5E632C7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:50723/WS_eCheck.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_eCheck\</RelPath>
+      <UpdateFromURL>http://localhost:50723/WS_eCheck.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>eClockSync5_WS_eCheck_WS_eCheck</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WizardDialogLib\WizardDialogLib.csproj">
+      <Project>{91f1fe4d-7c89-41ec-80e2-ad77b76f681b}</Project>
+      <Name>WizardDialogLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ES_Sesion\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(ProjectDir)CopiaBinario.bat" "$(ProjectDir)" $(OutDir)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

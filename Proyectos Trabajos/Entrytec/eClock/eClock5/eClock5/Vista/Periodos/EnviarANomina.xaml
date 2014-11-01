@@ -1,0 +1,15 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" x:Class="eClock5.Vista.Periodos.EnviarANomina" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <TextBlock x:Name="Lbl_Estado"  Text="Enviando a nomina..." HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeTitulo}" Loaded="Lbl_Estado_Loaded" />
+
+        <eClock5:UC_ToolBar   VerticalAlignment="Top" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" />
+
+    </Grid>
+</UserControl>

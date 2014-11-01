@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Kiosco";
+}
+@section stylesHeader
+{
+    @*@Styles.Render("~/Content/listview-grid")*@
+}
+
+@section page
+{
+class="ecgrid-layout"
+}
+<ul data-role="listview" data-inset="true">
+    @if (ViewBag.Datos.PERSONA_ID > 0)
+    {
+        <li>
+            <a data-ajax="false" href="#">
+                <img src="@Url.Action("Foto", "Personas")/@(ViewBag.Datos.PERSONA_ID + "_80x80.jpg")" class="ui-li-thumb">
+                <h2>@(ViewBag.Datos.PERSONA_NOMBRE + "(" + ViewBag.Datos.PERSONA_LINK_ID + ")")</h2>
+                <p>Ultimo inicio @ViewBag.Datos.UltimaSesion </p>
+                @*<p class="ui-li-aside">iOS</p>*@
+            </a>
+        </li>
+        <li>
+            <a data-ajax="false" href="@Url.Action("Empleado", "Home")/@ViewBag.Datos.PERSONA_ID">
+                <img src="/Content/Iconos/Home/Asistencia.png" class="ui-li-thumb">
+                <h2>Mis Asistencia y Checadas</h2>
+                <p>Consulta los días que llegaste tarde o solicita un permiso o cambio de turno </p>
+                @*<p class="ui-li-aside">iOS</p>*@
+            </a>
+        </li>
+        <li>
+            <a data-ajax="false" href="@Url.Action("Tramites", "Tramites")/@ViewBag.Datos.PERSONA_ID">
+                <img src="/Content/Iconos/Home/Documentos.png" class="ui-li-thumb">
+                <h2>Trámites</h2>
+                <p>Inicia un trámite y ahorra tiempo</p>
+                @*<p class="ui-li-aside">iOS</p>*@
+            </a>
+        </li>
+        
+        <li>
+            <a data-ajax="false" href="@Url.Action("Actividades", "Actividades")/@ViewBag.Datos.PERSONA_ID">
+                <img src="/Content/Iconos/Home/Calendario.png" class="ui-li-thumb">
+                <h2>Actividades</h2>
+                <p>Inscríbete a alguna de nuestras actividades o consulta nuestros días festivos</p>
+                @*<p class="ui-li-aside">iOS</p>*@
+            </a>
+        </li>
+        
+        <li>
+            <a data-ajax="false" href="@Url.Action("Mensajes", "Mensajes")/@ViewBag.Datos.PERSONA_ID">
+                <img src="~/Content/images/Mensaje.png" class="ui-li-thumb">
+                <h2>Mensajes</h2>
+                <p>Envia mensajes a tus compañeros de trabajo</p>
+                @*<p class="ui-li-aside">iOS</p>*@
+            </a>
+        </li>
+        <li>
+            <a data-ajax="false" href="@Url.Action("ValidaClv", "Nomina")/@ViewBag.Datos.PERSONA_ID">
+                <img src="~/Content/images/Nomina.png" class="ui-li-thumb">
+                <h2>Nomina</h2>
+                <p>Aqui puedes revizar tu nomina y los periodos en tus pagos </p>
+                @*<p class="ui-li-aside">iOS</p>*@
+            </a>
+        </li>
+    }
+    <li data-role="list-divider">Configuración</li>
+    <li>@Html.ActionLink("Cambiar contraseña", "ChangePassword", "Account")</li>
+    <li>@Html.ActionLink("Cerrar sesión", "LogOff", "Account")</li>
+</ul>
+
+
+@*@section scripts
+{
+    <script type="text/javascript">
+        window.clearInterval(Contador);
+    </script>
+}*@

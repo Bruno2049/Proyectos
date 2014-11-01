@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_DesayunosPago" targetNamespace="http://tempuri.org/DS_DesayunosPago.xsd" xmlns:mstns="http://tempuri.org/DS_DesayunosPago.xsd" xmlns="http://tempuri.org/DS_DesayunosPago.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="CeT_DataTable" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DT_DesayunosPagoTableAdapter" GeneratorDataComponentClassName="DT_DesayunosPagoTableAdapter" Name="DT_DesayunosPago" UserDataComponentName="DT_DesayunosPagoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT        EC_SUSCRIPCION.SUSCRIPCION_NOMBRE, EC_MONEDERO.PERSONA_ID, EC_PERSONAS.PERSONA_LINK_ID, EC_PERSONAS.PERSONA_NOMBRE, 
+                         EC_MONEDERO.MONEDERO_FECHA, EC_MONEDERO.MONEDERO_CONSUMO, EC_MONEDERO.MONEDERO_SALDO, 
+                         EC_TIPO_COBRO.TIPO_COBRO, '01/01/2008' as FechaI, '01/01/2008' as FechaF
+FROM            EC_MONEDERO LEFT OUTER JOIN
+                         EC_TIPO_COBRO ON EC_MONEDERO.TIPO_COBRO_ID = EC_TIPO_COBRO.TIPO_COBRO_ID LEFT OUTER JOIN
+                         EC_SUSCRIPCION INNER JOIN
+                         EC_PERSONAS ON EC_SUSCRIPCION.SUSCRIPCION_ID = EC_PERSONAS.SUSCRIPCION_ID ON 
+                         EC_MONEDERO.PERSONA_ID = EC_PERSONAS.PERSONA_ID LEFT OUTER JOIN
+                         EC_PRODUCTOS LEFT OUTER JOIN
+                         EC_MONEDERO_PROD ON EC_PRODUCTOS.PRODUCTO_ID = EC_MONEDERO_PROD.PRODUCTO_ID ON 
+                         EC_MONEDERO.MONEDERO_ID = EC_MONEDERO_PROD.MONEDERO_ID
+WHERE        (EC_MONEDERO.MONEDERO_FECHA BETWEEN TO_DATE('01/01/2006', 'DD/MM/YYYY') AND TO_DATE('01/01/2008', 'DD/MM/YYYY'))
+ORDER BY EC_MONEDERO.MONEDERO_ID, EC_PERSONAS.PERSONA_LINK_ID</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SUSCRIPCION_NOMBRE" DataSetColumn="SUSCRIPCION_NOMBRE" />
+              <Mapping SourceColumn="PERSONA_ID" DataSetColumn="PERSONA_ID" />
+              <Mapping SourceColumn="PERSONA_LINK_ID" DataSetColumn="PERSONA_LINK_ID" />
+              <Mapping SourceColumn="PERSONA_NOMBRE" DataSetColumn="PERSONA_NOMBRE" />
+              <Mapping SourceColumn="MONEDERO_FECHA" DataSetColumn="MONEDERO_FECHA" />
+              <Mapping SourceColumn="MONEDERO_CONSUMO" DataSetColumn="MONEDERO_CONSUMO" />
+              <Mapping SourceColumn="MONEDERO_SALDO" DataSetColumn="MONEDERO_SALDO" />
+              <Mapping SourceColumn="TIPO_COBRO" DataSetColumn="TIPO_COBRO" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_DesayunosPago" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_DesayunosPago" msprop:Generator_DataSetName="DS_DesayunosPago">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_DesayunosPago" msprop:Generator_UserTableName="DT_DesayunosPago" msprop:Generator_RowDeletedName="DT_DesayunosPagoRowDeleted" msprop:Generator_RowChangedName="DT_DesayunosPagoRowChanged" msprop:Generator_RowClassName="DT_DesayunosPagoRow" msprop:Generator_RowChangingName="DT_DesayunosPagoRowChanging" msprop:Generator_RowEvArgName="DT_DesayunosPagoRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_DesayunosPagoRowChangeEventHandler" msprop:Generator_TableClassName="DT_DesayunosPagoDataTable" msprop:Generator_TableVarName="tableDT_DesayunosPago" msprop:Generator_RowDeletingName="DT_DesayunosPagoRowDeleting" msprop:Generator_TablePropName="DT_DesayunosPago">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SUSCRIPCION_NOMBRE" msprop:Generator_UserColumnName="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnSUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInRow="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInTable="SUSCRIPCION_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONA_ID" msprop:Generator_UserColumnName="PERSONA_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_IDColumn" type="xs:decimal" />
+              <xs:element name="PERSONA_LINK_ID" msprop:Generator_UserColumnName="PERSONA_LINK_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_LINK_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_LINK_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_LINK_IDColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PERSONA_NOMBRE" msprop:Generator_UserColumnName="PERSONA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnPERSONA_NOMBRE" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="PERSONA_NOMBRE" msprop:Generator_ColumnPropNameInTable="PERSONA_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MONEDERO_FECHA" msprop:Generator_UserColumnName="MONEDERO_FECHA" msprop:Generator_ColumnVarNameInTable="columnMONEDERO_FECHA" msprop:Generator_ColumnPropNameInRow="MONEDERO_FECHA" msprop:Generator_ColumnPropNameInTable="MONEDERO_FECHAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MONEDERO_CONSUMO" msprop:Generator_UserColumnName="MONEDERO_CONSUMO" msprop:Generator_ColumnVarNameInTable="columnMONEDERO_CONSUMO" msprop:Generator_ColumnPropNameInRow="MONEDERO_CONSUMO" msprop:Generator_ColumnPropNameInTable="MONEDERO_CONSUMOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MONEDERO_SALDO" msprop:Generator_UserColumnName="MONEDERO_SALDO" msprop:Generator_ColumnVarNameInTable="columnMONEDERO_SALDO" msprop:Generator_ColumnPropNameInRow="MONEDERO_SALDO" msprop:Generator_ColumnPropNameInTable="MONEDERO_SALDOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TIPO_COBRO" msprop:Generator_UserColumnName="TIPO_COBRO" msprop:Generator_ColumnVarNameInTable="columnTIPO_COBRO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="TIPO_COBRO" msprop:Generator_ColumnPropNameInTable="TIPO_COBROColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHAI" msdata:ReadOnly="true" msprop:Generator_UserColumnName="FECHAI" msprop:Generator_ColumnPropNameInRow="FECHAI" msprop:Generator_ColumnVarNameInTable="columnFECHAI" msprop:Generator_ColumnPropNameInTable="FECHAIColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAF" msdata:ReadOnly="true" msprop:Generator_UserColumnName="FECHAF" msprop:Generator_ColumnPropNameInRow="FECHAF" msprop:Generator_ColumnVarNameInTable="columnFECHAF" msprop:Generator_ColumnPropNameInTable="FECHAFColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

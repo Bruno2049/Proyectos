@@ -1,0 +1,17 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kiosko.Controles" x:Class="Kiosko.Controles.UC_CalendarioFiltroDlg" 
+             mc:Ignorable="d" 
+             d:DesignHeight="405" d:DesignWidth="609" FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoFuenteToolBar}" Foreground="{DynamicResource ColorFuente}" Loaded="UserControl_Loaded_1">
+    <Grid Background="#FFF70DE2">
+
+        <local:UC_CalendarioFiltro x:Name="Calendario" Margin="0,54,0,64" Background="#FFF70DE2"/>
+        <TextBlock x:Name="Lbl_Titulo" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FFF70DE2" />
+        <local:UC_Boton x:Name="Btn_Listo" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Bottom" Height="64" Width="220" Texto="Listo" Imagen="pack://siteoforigin:,,,/Resources/asistir-64.png" NoAlertas="-1" Click="Btn_Listo_Click" Foreground="Black" Background="{DynamicResource Blanco_Brush}" ColorFondo="White" ColorFont="Black" />
+        <local:UC_Boton x:Name="Btn_Cancelar" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Bottom" Height="64" Width="220" Texto="Cancelar" Imagen="pack://siteoforigin:,,,/Resources/asistir-64.png" NoAlertas="-1" Click="Btn_Cancelar_Click" />
+
+    </Grid>
+</UserControl>

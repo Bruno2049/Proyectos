@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="196x196" href="eClock196.png"> 
+    <link rel="shortcut icon" sizes="128x128" href="eClock128.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="eClock128.png">
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="eClock128.png">
+
+    @Styles.Render("~/Content/mobileCss", "~/Content/css", "~/Content/eClock")    
+    @RenderSection("stylesHeader", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jquerymobile")
+    @if (Request.Browser.Browser == "IE" || Request.Browser.Browser == "InternetExplorer") 
+    {
+        <script src="/Scripts/jquery.mobile.datepickerjs"></script>
+    }
+    @RenderSection("scriptsHeader", required: false)
+</head>
+<body>
+    <div data-role="page" data-theme="b"
+        @if (IsSectionDefined("Page"))
+        {@RenderSection("Page") } >
+        <div data-role="header" data-position="fixed">
+            @if (IsSectionDefined("Header"))
+            {
+                @RenderSection("Header")
+            }
+            else
+            {
+                <h1>@ViewBag.Title</h1>
+                @Html.Partial("_LoginPartial")
+            }
+        </div>
+        <div data-role="content" id="content">
+            @RenderBody()
+        </div>
+        @RenderSection("scripts", required: false)
+    </div>
+    
+</body>
+</html>

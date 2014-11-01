@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="50bcdaf1-5208-4297-aa80-cdd0758e758c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50723/S_Tramites.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="S_Tramites.xsd" MetadataType="Schema" ID="22b2371b-ca4e-406c-b8fb-d3b317840359" SourceId="1" SourceUrl="http://localhost:50723/S_Tramites.svc?xsd=xsd0" />
+    <MetadataFile FileName="S_Tramites.wsdl" MetadataType="Wsdl" ID="dd7562ce-f45b-49a2-a6da-589905ecc5ed" SourceId="1" SourceUrl="http://localhost:50723/S_Tramites.svc?wsdl" />
+    <MetadataFile FileName="S_Tramites1.wsdl" MetadataType="Wsdl" ID="92107750-4a44-42c8-8047-a6e0828bfaaa" SourceId="1" SourceUrl="http://localhost:50723/S_Tramites.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="S_Tramites.disco" MetadataType="Disco" ID="c035bcbe-1ef2-4ef4-8f60-901a24d4417a" SourceId="1" SourceUrl="http://localhost:50723/S_Tramites.svc?disco" />
+    <MetadataFile FileName="S_Tramites1.xsd" MetadataType="Schema" ID="b4f53b63-4808-41b0-a7ec-c05c89ff1c29" SourceId="1" SourceUrl="http://localhost:50723/S_Tramites.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,45 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5"
+             xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.Vista.Campos.ReagruparEmpleados" 
+             d:DesignHeight="400" d:DesignWidth="465" mc:Ignorable="d" Background="{DynamicResource Blanco_Brush}" Loaded="UserControl_Loaded_1">
+    
+    
+    <Grid>
+        <Grid Margin="0,53,0,0">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Background="{DynamicResource AzulClaro_Brush}" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="300*"/>
+                <RowDefinition Height="100*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="234*"/>
+                <ColumnDefinition Width="211*"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock x:Name="Lbl_Empleados" Margin="0,7,5,0" TextWrapping="Wrap" Text="1. Elija los campos por los que desea agrupar" Foreground="{DynamicResource Blanco_Brush}" Style="{DynamicResource TextBlockStyle}" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+            
+            <TextBlock  x:Name="Lbl_Empleados1" Margin="0,5,5,0" TextWrapping="Wrap" Text="2. Edite el orden que se usará para generar las nuevas agrupaciones" VerticalAlignment="Top" RenderTransformOrigin="0.506,1.248" Grid.Row="1" Foreground="{DynamicResource Blanco_Brush}" Style="{DynamicResource TextBlockStyle}" HorizontalAlignment="Right" />
+            
+            <Button x:Name="Btn_Quitar" Content="Quitar de la lista" Margin="5,10,10,13" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Width="Auto" Click="Btn_Quitar_Click"/>
+            <TextBlock x:Name="Lbl_Quitar" Margin="0,5,5,10 " TextWrapping="Wrap" Text="* Todas las agrupaciones anteriores se perderan" Grid.Row="2" Foreground="{DynamicResource Blanco_Brush}" Style="{DynamicResource TextBlockStyle}" HorizontalAlignment="Right"/>
+                    <Controles:UC_Combo x:Name="Cmb_Campos" Margin="5,10,10,0" VerticalAlignment="Top" Height="22" Width="200" Grid.Column="1" Tabla="EC_CAMPOS_DATOS" CampoLlave="CAMPO_DATO_ID" CampoNombre="CAMPO_DATO_ETIQUETA" DatosActualizados="Cmb_Campos_DatosActualizados" />
+            <Button x:Name="Btn_Agregar" Content="Agregar Campo" Grid.Column="1"  Click="Btn_Agregar_Click" Margin="5,40,10,5" Height="20"/>
+            <!--<Controles:UC_ListBox  x:Name="Lst_Orden" Grid.Column="1" Margin="5,5,10,5" Grid.Row="1" Height="150"/>-->
+            <ListBox x:Name="Lst_Orden" Grid.Column="1" Grid.Row="1" Margin="5,5,10,5" Width="200" Height="150" SelectionMode="Multiple" />
+        </Grid>
+        </ScrollViewer>
+        </Grid>
+        <eClock5:UC_ToolBar  x:Name="Tbar" VerticalAlignment="Top" Width="Auto" OnEventClickToolBar="Tbar_OnEventClickToolBar">
+            <eClock5:UC_ToolBar.Controles>
+                <!--<eClock5:UC_ToolBar_Control Nombre="Btn_Regresar" Etiqueta="Regresar" Imagen="pack://siteoforigin:,,,/Resources/Regresar_64.png"/>-->
+                <eClock5:UC_ToolBar_Control Nombre="Btn_Guardar" Alineacion="Derecha" Etiqueta="Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Mas" Imagen="pack://siteoforigin:,,,/Resources/MenuEscondido_64.png"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>        
+    </Grid>
+</UserControl>

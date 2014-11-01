@@ -1,0 +1,1998 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6610EEA7-6D83-487D-84D5-2EAAC27E01D7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>eClock</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>eClock</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics2.WebUI.Misc.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.Misc.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.Shared.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.Shared.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebCalcManager.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.UltraWebCalcManager.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebGrid.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.UltraWebGrid.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebListbar.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.UltraWebListbar.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebNavigator.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.UltraWebNavigator.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebTab.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.UltraWebTab.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebToolbar.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.UltraWebToolbar.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.WebCombo.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.WebCombo.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.WebDataInput.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.WebDataInput.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.WebDateChooser.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.WebDateChooser.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.WebNavBar.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.WebNavBar.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.WebSchedule.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.WebSchedule.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.WebScheduleDataProvider.v11.1, Version=11.1.20111.2238, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2011.1\ASP.NET\CLR2.0\Bin\Infragistics2.WebUI.WebScheduleDataProvider.v11.1.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashMovie">
+      <Name>flashmovie</Name>
+      <HintPath>bin\flashmovie.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="PdfViewer CS 2k3">
+      <Name>PdfViewer CS 2k3</Name>
+      <HintPath>bin\PdfViewer CS 2k3.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration.Install">
+      <Name>System.Configuration.Install</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <Name>System.Data.OracleClient</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Name>System.DirectoryServices</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Messaging">
+      <Name>System.Messaging</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ankh.Load" />
+    <None Include="DS_Asignacion_Grupo_Persona.xsx">
+      <DependentUpon>DS_Asignacion_Grupo_Persona.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AsignaGrupoUsuario.xsx">
+      <DependentUpon>DS_AsignaGrupoUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AsistenciaAux.xsx">
+      <DependentUpon>DS_AsistenciaAux.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Asistencia_Rapida.xsx">
+      <DependentUpon>DS_Asistencia_Rapida.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CeC_Asistencias.xsx">
+      <DependentUpon>DS_CeC_Asistencias.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Config.xsx">
+      <DependentUpon>DS_Config.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Config_Usuario.xsx">
+      <DependentUpon>DS_Config_Usuario.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DiasFestivos.xsx">
+      <DependentUpon>DS_DiasFestivos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Eicion_Contenido.xsx">
+      <DependentUpon>DS_Eicion_Contenido.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EmpleadoAltaBaja.xsx">
+      <DependentUpon>DS_EmpleadoAltaBaja.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EmpleadoBuscar.xsx">
+      <DependentUpon>DS_EmpleadoBuscar.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Empleados.xsx">
+      <DependentUpon>DS_Empleados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EmpleadosFil.xsx">
+      <DependentUpon>DS_EmpleadosFil.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EmpleadosStatus.xsx">
+      <DependentUpon>DS_EmpleadosStatus.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EmpleadosStatusPie.xsx">
+      <DependentUpon>DS_EmpleadosStatusPie.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EmpleadosStatus_B.xsx">
+      <DependentUpon>DS_EmpleadosStatus_B.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EmpleadoxTerminal.xsx">
+      <DependentUpon>DS_EmpleadoxTerminal.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EnviaReporte.xsx">
+      <DependentUpon>DS_EnviaReporte.xsd</DependentUpon>
+    </None>
+    <None Include="DS_HorarioPersona.xsx">
+      <DependentUpon>DS_HorarioPersona.xsd</DependentUpon>
+    </None>
+    <None Include="DS_HuellasNAsig.xsx">
+      <DependentUpon>DS_HuellasNAsig.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ImagenReporte.xsx">
+      <DependentUpon>DS_ImagenReporte.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Inasistencias.xsx">
+      <DependentUpon>DS_Inasistencias.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Incidencias.xsx">
+      <DependentUpon>DS_Incidencias.xsd</DependentUpon>
+    </None>
+    <None Include="DS_InformacionReporte.xsx">
+      <DependentUpon>DS_InformacionReporte.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Perfiles.xsx">
+      <DependentUpon>DS_Perfiles.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Personas.xsx">
+      <DependentUpon>DS_Personas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PersonasSHuella.xsx">
+      <DependentUpon>DS_PersonasSHuella.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Personas_Diario.xsx">
+      <DependentUpon>DS_Personas_Diario.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RACCESOS.xsx">
+      <DependentUpon>DS_RACCESOS.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteAccesos.xsx">
+      <DependentUpon>DS_ReporteAccesos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteImagen.xsx">
+      <DependentUpon>DS_ReporteImagen.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Reporte_Faltas.xsx">
+      <DependentUpon>DS_Reporte_Faltas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Restricciones.xsx">
+      <DependentUpon>DS_Restricciones.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Terminales.xsx">
+      <DependentUpon>DS_Terminales.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposIncidencias.xsx">
+      <DependentUpon>DS_TiposIncidencias.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Turnos.xsx">
+      <DependentUpon>DS_Turnos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TurnosAnual.xsx">
+      <DependentUpon>DS_TurnosAnual.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TurnosEmpleadosE.xsx">
+      <DependentUpon>DS_TurnosEmpleadosE.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Usuarios.xsx">
+      <DependentUpon>DS_Usuarios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_UsuariosxE.xsx">
+      <DependentUpon>DS_UsuariosxE.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Referencias Web\eClock\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Referencias Web\eClock\WS_ServicioRDatos.disco" />
+    <None Include="Referencias Web\eClock\WS_ServicioRDatos.wsdl" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CeC_Asistencias.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CeC_BD.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CeC_Config.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CeC_Remote_Keep.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CEC_RESTRICCIONES.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CeC_Sesion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CeC_Terminales_Param.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CIT_Perfiles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CR_AccesosCC.cs">
+      <DependentUpon>CR_AccesosCC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_AccesoT.cs">
+      <DependentUpon>CR_AccesoT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_AsisitenciaAux.cs">
+      <DependentUpon>CR_AsisitenciaAux.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_Asisitencias.cs">
+      <DependentUpon>CR_Asisitencias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_AsistenciasD.cs">
+      <DependentUpon>CR_AsistenciasD.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_Asistencia_Rapida.cs">
+      <DependentUpon>CR_Asistencia_Rapida.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_DiasFestivos.cs">
+      <DependentUpon>CR_DiasFestivos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_Empleados.cs">
+      <DependentUpon>CR_Empleados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_EmpleadosFaltas.cs">
+      <DependentUpon>CR_EmpleadosFaltas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_EmpleadosStatusPie.cs">
+      <DependentUpon>CR_EmpleadosStatusPie.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_EmpleadoStatus.cs">
+      <DependentUpon>CR_EmpleadoStatus.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_EmpleadoStatus_B.cs">
+      <DependentUpon>CR_EmpleadoStatus_B.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_Incidencias_Rastreo3.cs">
+      <DependentUpon>CR_Incidencias_Rastreo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_Perfiles.cs">
+      <DependentUpon>CR_Perfiles.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_Terminales.cs">
+      <DependentUpon>CR_Terminales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_Tipo_Incidencias.cs">
+      <DependentUpon>CR_Tipo_Incidencias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_Tipo_Inc_Comida_Sis.cs">
+      <DependentUpon>CR_Tipo_Inc_Comida_Sis.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_Tipo_Inc_Sis.cs">
+      <DependentUpon>CR_Tipo_Inc_Sis.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_Turnos.cs">
+      <DependentUpon>CR_Turnos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CR_Usuarios.cs">
+      <DependentUpon>CR_Usuarios.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DS_AccesosNAsig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AccesosNAsig.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Asignacion_Grupo_Persona.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Asignacion_Grupo_Persona.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_AsignaGrupoUsuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AsignaGrupoUsuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_AsistenciaAux.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AsistenciaAux.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Asistencia_Rapida.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Asistencia_Rapida.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_CeC_Asistencias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_CeC_Asistencias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Config.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Config.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Config_Usuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Config_Usuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ControlTerminales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ControlTerminales.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DiaPersona.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DiaPersona.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DiasFestivos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DiasFestivos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Eicion_Contenido.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Eicion_Contenido.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EmpleadoAltaBaja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EmpleadoAltaBaja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EmpleadoBuscar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EmpleadoBuscar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Empleados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Empleados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EmpleadosFil.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EmpleadosFil.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EmpleadosGrupos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EmpleadosGrupos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EmpleadosStatus.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EmpleadosStatus.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EmpleadosStatusPie.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EmpleadosStatusPie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EmpleadosStatus_B.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EmpleadosStatus_B.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EmpleadoxTerminal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EmpleadoxTerminal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EnviaReporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EnviaReporte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_HorarioPersona.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_HorarioPersona.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_HuellasNAsig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_HuellasNAsig.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ImagenReporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ImagenReporte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Inasistencias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Inasistencias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Incidencias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Incidencias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Incidencias_Rastreo.cs">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="DS_Incidencias_Rastreo_Eliminacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Incidencias_Rastreo_Eliminacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_InformacionReporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_InformacionReporte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Perfiles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Perfiles.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Personas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Personas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_PersonasSHuella.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PersonasSHuella.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Personas_Diario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Personas_Diario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_RACCESOS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_RACCESOS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReporteAccesos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReporteAccesos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReporteImagen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReporteImagen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Reporte_Faltas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Reporte_Faltas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Restricciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Restricciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Terminales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Terminales.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TiposIncidencias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TiposIncidencias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Turnos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Turnos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TurnosAnual.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TurnosAnual.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TurnosEmpleadosE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TurnosEmpleadosE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Usuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Usuarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_UsuariosxE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_UsuariosxE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Referencias Web\eClock\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="WC_Horario.ascx.cs">
+      <DependentUpon>WC_Horario.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WC_HorarioDiario.aspx.cs">
+      <DependentUpon>WC_HorarioDiario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WC_Menu.ascx.cs">
+      <DependentUpon>WC_Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WC_Mes.ascx.cs">
+      <DependentUpon>WC_Mes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFR_AccesoCC.aspx.cs">
+      <DependentUpon>WFR_AccesoCC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFR_AccesoCC.aspx.designer.cs">
+      <DependentUpon>WFR_AccesoCC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFR_AccesoT.aspx.cs">
+      <DependentUpon>WFR_AccesoT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFR_AccesoT.aspx.designer.cs">
+      <DependentUpon>WFR_AccesoT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFR_Asistencia.aspx.cs">
+      <DependentUpon>WFR_Asistencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFR_Asistencia.aspx.designer.cs">
+      <DependentUpon>WFR_Asistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFR_AsistenciasAux.aspx.cs">
+      <DependentUpon>WFR_AsistenciasAux.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFR_AsistenciasAux.aspx.designer.cs">
+      <DependentUpon>WFR_AsistenciasAux.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFR_AsistenciasCCPie.aspx.cs">
+      <DependentUpon>WFR_AsistenciasCCPie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFR_AsistenciasCCPie.aspx.designer.cs">
+      <DependentUpon>WFR_AsistenciasCCPie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFR_AsistenciasD.aspx.cs">
+      <DependentUpon>WFR_AsistenciasD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFR_AsistenciasD.aspx.designer.cs">
+      <DependentUpon>WFR_AsistenciasD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFR_Asistencia_Rapida.aspx.cs">
+      <DependentUpon>WFR_Asistencia_Rapida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFR_Asistencia_Rapida.aspx.designer.cs">
+      <DependentUpon>WFR_Asistencia_Rapida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFR_EmpleadosFaltas.aspx.cs">
+      <DependentUpon>WFR_EmpleadosFaltas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFR_EmpleadosFaltas.aspx.designer.cs">
+      <DependentUpon>WFR_EmpleadosFaltas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFR_EmpleadosStatus.aspx.cs">
+      <DependentUpon>WFR_EmpleadosStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFR_EmpleadosStatus.aspx.designer.cs">
+      <DependentUpon>WFR_EmpleadosStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFR_EmpleadosStatus_B.aspx.cs">
+      <DependentUpon>WFR_EmpleadosStatus_B.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFR_EmpleadosStatus_B.aspx.designer.cs">
+      <DependentUpon>WFR_EmpleadosStatus_B.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_AccesosNAsig.aspx.cs">
+      <DependentUpon>WF_AccesosNAsig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Asignacion_Grupo_Persona.aspx.cs">
+      <DependentUpon>WF_Asignacion_Grupo_Persona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_AsignarGrupoUsuarios.aspx.cs">
+      <DependentUpon>WF_AsignarGrupoUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_AsignarGrupoUsuariosE.aspx.cs">
+      <DependentUpon>WF_AsignarGrupoUsuariosE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_AsignarGrupoUsuariosE.aspx.designer.cs">
+      <DependentUpon>WF_AsignarGrupoUsuariosE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_CambioTRACVE.aspx.cs">
+      <DependentUpon>WF_CambioTRACVE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_CambioTRACVE.aspx.designer.cs">
+      <DependentUpon>WF_CambioTRACVE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Config.aspx.cs">
+      <DependentUpon>WF_Config.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Config.aspx.designer.cs">
+      <DependentUpon>WF_Config.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_ControlTermnales.aspx.cs">
+      <DependentUpon>WF_ControlTermnales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_ControlTermnales.aspx.designer.cs">
+      <DependentUpon>WF_ControlTermnales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_DiaPersona.aspx.cs">
+      <DependentUpon>WF_DiaPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_DiaPersona.aspx.designer.cs">
+      <DependentUpon>WF_DiaPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Dias_Festivos.aspx.cs">
+      <DependentUpon>WF_Dias_Festivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Dias_Festivos.aspx.designer.cs">
+      <DependentUpon>WF_Dias_Festivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Dias_FestivosE.aspx.cs">
+      <DependentUpon>WF_Dias_FestivosE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Dias_FestivosE.aspx.designer.cs">
+      <DependentUpon>WF_Dias_FestivosE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Edicion_Contenido_Tablas.aspx.cs">
+      <DependentUpon>WF_Edicion_Contenido_Tablas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Edicion_Contenido_Tablas.aspx.designer.cs">
+      <DependentUpon>WF_Edicion_Contenido_Tablas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Empleados.aspx.cs">
+      <DependentUpon>WF_Empleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Empleados.aspx.designer.cs">
+      <DependentUpon>WF_Empleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_EmpleadosBus.aspx.cs">
+      <DependentUpon>WF_EmpleadosBus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_EmpleadosBus.aspx.designer.cs">
+      <DependentUpon>WF_EmpleadosBus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_EmpleadosE.aspx.cs">
+      <DependentUpon>WF_EmpleadosE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_EmpleadosE.aspx.designer.cs">
+      <DependentUpon>WF_EmpleadosE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_EmpleadosEdicion.aspx.cs">
+      <DependentUpon>WF_EmpleadosEdicion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_EmpleadosEdicion.aspx.designer.cs">
+      <DependentUpon>WF_EmpleadosEdicion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_EmpleadosFil.aspx.cs">
+      <DependentUpon>WF_EmpleadosFil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_EmpleadosFil.aspx.designer.cs">
+      <DependentUpon>WF_EmpleadosFil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_EmpleadoTerminal.aspx.cs">
+      <DependentUpon>WF_EmpleadoTerminal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_EmpleadoTerminal.aspx.designer.cs">
+      <DependentUpon>WF_EmpleadoTerminal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_EnviarReporteUsuarios.aspx.cs">
+      <DependentUpon>WF_EnviarReporteUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_EnviarReporteUsuarios.aspx.designer.cs">
+      <DependentUpon>WF_EnviarReporteUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Grupos1Control.aspx.cs">
+      <DependentUpon>WF_Grupos1Control.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Grupos1Control.aspx.designer.cs">
+      <DependentUpon>WF_Grupos1Control.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Horario.aspx.cs">
+      <DependentUpon>WF_Horario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Horario.aspx.designer.cs">
+      <DependentUpon>WF_Horario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_HorarioDia.aspx.cs">
+      <DependentUpon>WF_HorarioDia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_HorarioDia.aspx.designer.cs">
+      <DependentUpon>WF_HorarioDia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_HorarioPersona.aspx.cs">
+      <DependentUpon>WF_HorarioPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_HorarioPersona.aspx.designer.cs">
+      <DependentUpon>WF_HorarioPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_HuellasNAsig.aspx.cs">
+      <DependentUpon>WF_HuellasNAsig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_HuellasNAsig.aspx.designer.cs">
+      <DependentUpon>WF_HuellasNAsig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Inasistencias.aspx.cs">
+      <DependentUpon>WF_Inasistencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Inasistencias.aspx.designer.cs">
+      <DependentUpon>WF_Inasistencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_IncidenciasE.aspx.cs">
+      <DependentUpon>WF_IncidenciasE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_IncidenciasE.aspx.designer.cs">
+      <DependentUpon>WF_IncidenciasE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Incidencias_Rastreo.aspx.cs">
+      <DependentUpon>WF_Incidencias_Rastreo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Incidencias_Rastreo.aspx.designer.cs">
+      <DependentUpon>WF_Incidencias_Rastreo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_LogIn.aspx.cs">
+      <DependentUpon>WF_LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_LogIn.aspx.designer.cs">
+      <DependentUpon>WF_LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Main.aspx.cs">
+      <DependentUpon>WF_Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Main.aspx.designer.cs">
+      <DependentUpon>WF_Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_PaginaReporte.aspx.cs">
+      <DependentUpon>WF_PaginaReporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_PaginaReporte.aspx.designer.cs">
+      <DependentUpon>WF_PaginaReporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Perfiles.aspx.cs">
+      <DependentUpon>WF_Perfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Perfiles.aspx.designer.cs">
+      <DependentUpon>WF_Perfiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_PerfilesPermisos.aspx.cs">
+      <DependentUpon>WF_PerfilesPermisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_PerfilesPermisos.aspx.designer.cs">
+      <DependentUpon>WF_PerfilesPermisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_PersonasAltasBajas.aspx.cs">
+      <DependentUpon>WF_PersonasAltasBajas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_PersonasAltasBajas.aspx.designer.cs">
+      <DependentUpon>WF_PersonasAltasBajas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_PersonasSHuella.aspx.cs">
+      <DependentUpon>WF_PersonasSHuella.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_PersonasSHuella.aspx.designer.cs">
+      <DependentUpon>WF_PersonasSHuella.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Personas_Diario.aspx.cs">
+      <DependentUpon>WF_Personas_Diario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Personas_Diario.aspx.designer.cs">
+      <DependentUpon>WF_Personas_Diario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Personas_DiarioE.aspx.cs">
+      <DependentUpon>WF_Personas_DiarioE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Personas_DiarioE.aspx.designer.cs">
+      <DependentUpon>WF_Personas_DiarioE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Personas_ImaS.aspx.cs">
+      <DependentUpon>WF_Personas_ImaS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Personas_ImaS.aspx.designer.cs">
+      <DependentUpon>WF_Personas_ImaS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_PiePagina.aspx.cs">
+      <DependentUpon>WF_PiePagina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_PiePagina.aspx.designer.cs">
+      <DependentUpon>WF_PiePagina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_SEmpSel.aspx.cs">
+      <DependentUpon>WF_SEmpSel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_SEmpSel.aspx.designer.cs">
+      <DependentUpon>WF_SEmpSel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Terminales.aspx.cs">
+      <DependentUpon>WF_Terminales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Terminales.aspx.designer.cs">
+      <DependentUpon>WF_Terminales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_TerminalesE.aspx.cs">
+      <DependentUpon>WF_TerminalesE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_TerminalesE.aspx.designer.cs">
+      <DependentUpon>WF_TerminalesE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Tipo_Incidencias.aspx.cs">
+      <DependentUpon>WF_Tipo_Incidencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Tipo_Incidencias.aspx.designer.cs">
+      <DependentUpon>WF_Tipo_Incidencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Tipo_IncidenciasE.aspx.cs">
+      <DependentUpon>WF_Tipo_IncidenciasE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Tipo_IncidenciasE.aspx.designer.cs">
+      <DependentUpon>WF_Tipo_IncidenciasE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Tipo_Inc_Comida_Sis.aspx.cs">
+      <DependentUpon>WF_Tipo_Inc_Comida_Sis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Tipo_Inc_Comida_Sis.aspx.designer.cs">
+      <DependentUpon>WF_Tipo_Inc_Comida_Sis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Tipo_Inc_Sis.aspx.cs">
+      <DependentUpon>WF_Tipo_Inc_Sis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Tipo_Inc_Sis.aspx.designer.cs">
+      <DependentUpon>WF_Tipo_Inc_Sis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_TurnoAnual.aspx.cs">
+      <DependentUpon>WF_TurnoAnual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_TurnoAnual.aspx.designer.cs">
+      <DependentUpon>WF_TurnoAnual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Turnos.aspx.cs">
+      <DependentUpon>WF_Turnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Turnos.aspx.designer.cs">
+      <DependentUpon>WF_Turnos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_TurnosE.aspx.cs">
+      <DependentUpon>WF_TurnosE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_TurnosE.aspx.designer.cs">
+      <DependentUpon>WF_TurnosE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_TurnosEmpleadosE.aspx.cs">
+      <DependentUpon>WF_TurnosEmpleadosE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_TurnosEmpleadosE.aspx.designer.cs">
+      <DependentUpon>WF_TurnosEmpleadosE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_UploadImagenesReporte.aspx.cs">
+      <DependentUpon>WF_UploadImagenesReporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_UploadImagenesReporte.aspx.designer.cs">
+      <DependentUpon>WF_UploadImagenesReporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_UsuarioEmpleado.aspx.cs">
+      <DependentUpon>WF_UsuarioEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_UsuarioEmpleado.aspx.designer.cs">
+      <DependentUpon>WF_UsuarioEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Usuarios.aspx.cs">
+      <DependentUpon>WF_Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_Usuarios.aspx.designer.cs">
+      <DependentUpon>WF_Usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_UsuariosE.aspx.cs">
+      <DependentUpon>WF_UsuariosE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_UsuariosE.aspx.designer.cs">
+      <DependentUpon>WF_UsuariosE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_ZlideHorario.aspx.cs">
+      <DependentUpon>WF_ZlideHorario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_ZlideHorario.aspx.designer.cs">
+      <DependentUpon>WF_ZlideHorario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WF_ZlideHorario_Flex.aspx.cs">
+      <DependentUpon>WF_ZlideHorario_Flex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WF_ZlideHorario_Flex.aspx.designer.cs">
+      <DependentUpon>WF_ZlideHorario_Flex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WS_ServicioRDatos.asmx.cs">
+      <DependentUpon>WS_ServicioRDatos.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="CR_AccesosCC.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_AccesosCC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_AccesoT.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_AccesoT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_AsisitenciaAux.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_AsisitenciaAux.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Asisitencias.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Asisitencias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_AsistenciasD.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_AsistenciasD.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Asistencia_Rapida.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Asistencia_Rapida.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_DiasFestivos.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_DiasFestivos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Empleados.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Empleados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_EmpleadosFaltas.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_EmpleadosFaltas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_EmpleadosStatusPie.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_EmpleadosStatusPie.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_EmpleadoStatus.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_EmpleadoStatus.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_EmpleadoStatus_B.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_EmpleadoStatus_B.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Incidencias_Rastreo.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Incidencias_Rastreo3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Perfiles.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Perfiles.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Terminales.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Terminales.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Tipo_Incidencias.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Tipo_Incidencias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Tipo_Inc_Comida_Sis.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Tipo_Inc_Comida_Sis.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Tipo_Inc_Sis.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Tipo_Inc_Sis.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Turnos.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Turnos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Usuarios.rpt">
+      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Usuarios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Default.aspx.resx">
+      <DependentUpon>Default.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="WC_Horario.ascx.resx">
+      <DependentUpon>WC_Horario.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WC_HorarioDiario.aspx.resx">
+      <DependentUpon>WC_HorarioDiario.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WC_Menu.ascx.resx">
+      <DependentUpon>WC_Menu.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WC_Mes.ascx.resx">
+      <DependentUpon>WC_Mes.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebForm1.aspx.resx">
+      <DependentUpon>WebForm1.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFR_AccesoCC.aspx.resx">
+      <DependentUpon>WFR_AccesoCC.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFR_AccesoT.aspx.resx">
+      <DependentUpon>WFR_AccesoT.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFR_Asistencia.aspx.resx">
+      <DependentUpon>WFR_Asistencia.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFR_AsistenciasAux.aspx.resx">
+      <DependentUpon>WFR_AsistenciasAux.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFR_AsistenciasCCPie.aspx.resx">
+      <DependentUpon>WFR_AsistenciasCCPie.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFR_AsistenciasD.aspx.resx">
+      <DependentUpon>WFR_AsistenciasD.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFR_Asistencia_Rapida.aspx.resx">
+      <DependentUpon>WFR_Asistencia_Rapida.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFR_EmpleadosFaltas.aspx.resx">
+      <DependentUpon>WFR_EmpleadosFaltas.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFR_EmpleadosStatus.aspx.resx">
+      <DependentUpon>WFR_EmpleadosStatus.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFR_EmpleadosStatus_B.aspx.resx">
+      <DependentUpon>WFR_EmpleadosStatus_B.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_AccesosNAsig.aspx.resx">
+      <DependentUpon>WF_AccesosNAsig.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Asignacion_Grupo_Persona.aspx.resx">
+      <DependentUpon>WF_Asignacion_Grupo_Persona.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_AsignarGrupoUsuarios.aspx.resx">
+      <DependentUpon>WF_AsignarGrupoUsuarios.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_AsignarGrupoUsuariosE.aspx.resx">
+      <DependentUpon>WF_AsignarGrupoUsuariosE.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_CambioTRACVE.aspx.resx">
+      <DependentUpon>WF_CambioTRACVE.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Config.aspx.resx">
+      <DependentUpon>WF_Config.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_ControlTermnales.aspx.resx">
+      <DependentUpon>WF_ControlTermnales.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_DiaPersona.aspx.resx">
+      <DependentUpon>WF_DiaPersona.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Dias_Festivos.aspx.resx">
+      <DependentUpon>WF_Dias_Festivos.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Dias_FestivosE.aspx.resx">
+      <DependentUpon>WF_Dias_FestivosE.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Edicion_Contenido_Tablas.aspx.resx">
+      <DependentUpon>WF_Edicion_Contenido_Tablas.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Empleados.aspx.resx">
+      <DependentUpon>WF_Empleados.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_EmpleadosBus.aspx.resx">
+      <DependentUpon>WF_EmpleadosBus.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_EmpleadosE.aspx.resx">
+      <DependentUpon>WF_EmpleadosE.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_EmpleadosFil.aspx.resx">
+      <DependentUpon>WF_EmpleadosFil.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_EmpleadoTerminal.aspx.resx">
+      <DependentUpon>WF_EmpleadoTerminal.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_EnviarReporteUsuarios.aspx.resx">
+      <DependentUpon>WF_EnviarReporteUsuarios.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Grupos1Control.aspx.resx">
+      <DependentUpon>WF_Grupos1Control.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Horario.aspx.resx">
+      <DependentUpon>WF_Horario.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_HorarioDia.aspx.resx">
+      <DependentUpon>WF_HorarioDia.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_HorarioPersona.aspx.resx">
+      <DependentUpon>WF_HorarioPersona.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_HuellasNAsig.aspx.resx">
+      <DependentUpon>WF_HuellasNAsig.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Inasistencias.aspx.resx">
+      <DependentUpon>WF_Inasistencias.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_IncidenciasE.aspx.resx">
+      <DependentUpon>WF_IncidenciasE.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Incidencias_Rastreo.aspx.resx">
+      <DependentUpon>WF_Incidencias_Rastreo.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_LogIn.aspx.resx">
+      <DependentUpon>WF_LogIn.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Main.aspx.resx">
+      <DependentUpon>WF_Main.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_PaginaReporte.aspx.resx">
+      <DependentUpon>WF_PaginaReporte.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Perfiles.aspx.resx">
+      <DependentUpon>WF_Perfiles.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_PerfilesPermisos.aspx.resx">
+      <DependentUpon>WF_PerfilesPermisos.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_PersonasAltasBajas.aspx.resx">
+      <DependentUpon>WF_PersonasAltasBajas.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_PersonasSHuella.aspx.resx">
+      <DependentUpon>WF_PersonasSHuella.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Personas_Diario.aspx.resx">
+      <DependentUpon>WF_Personas_Diario.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Personas_DiarioE.aspx.resx">
+      <DependentUpon>WF_Personas_DiarioE.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Personas_ImaS.aspx.resx">
+      <DependentUpon>WF_Personas_ImaS.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_PiePagina.aspx.resx">
+      <DependentUpon>WF_PiePagina.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_SEmpSel.aspx.resx">
+      <DependentUpon>WF_SEmpSel.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Terminales.aspx.resx">
+      <DependentUpon>WF_Terminales.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_TerminalesE.aspx.resx">
+      <DependentUpon>WF_TerminalesE.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Tipo_Incidencias.aspx.resx">
+      <DependentUpon>WF_Tipo_Incidencias.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Tipo_IncidenciasE.aspx.resx">
+      <DependentUpon>WF_Tipo_IncidenciasE.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Tipo_Inc_Comida_Sis.aspx.resx">
+      <DependentUpon>WF_Tipo_Inc_Comida_Sis.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Tipo_Inc_Sis.aspx.resx">
+      <DependentUpon>WF_Tipo_Inc_Sis.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_TurnoAnual.aspx.resx">
+      <DependentUpon>WF_TurnoAnual.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Turnos.aspx.resx">
+      <DependentUpon>WF_Turnos.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_TurnosE.aspx.resx">
+      <DependentUpon>WF_TurnosE.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_TurnosEmpleadosE.aspx.resx">
+      <DependentUpon>WF_TurnosEmpleadosE.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_UploadImagenesReporte.aspx.resx">
+      <DependentUpon>WF_UploadImagenesReporte.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_UsuarioEmpleado.aspx.resx">
+      <DependentUpon>WF_UsuarioEmpleado.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_Usuarios.aspx.resx">
+      <DependentUpon>WF_Usuarios.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_UsuariosE.aspx.resx">
+      <DependentUpon>WF_UsuariosE.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_ZlideHorario.aspx.resx">
+      <DependentUpon>WF_ZlideHorario.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF_ZlideHorario_Flex.aspx.resx">
+      <DependentUpon>WF_ZlideHorario_Flex.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WS_ServicioRDatos.asmx.resx">
+      <DependentUpon>WS_ServicioRDatos.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Default.aspx" />
+    <Content Include="DS_AccesosNAsig.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_AccesosNAsig.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Asignacion_Grupo_Persona.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Asignacion_Grupo_Persona.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_AsignaGrupoUsuario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_AsignaGrupoUsuario.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_AsistenciaAux.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_AsistenciaAux.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Asistencia_Rapida.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Asistencia_Rapida.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_CeC_Asistencias.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_CeC_Asistencias.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Config.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Config.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Config_Usuario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Config_Usuario.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_ControlTerminales.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_ControlTerminales.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_DiaPersona.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_DiaPersona.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_DiasFestivos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_DiasFestivos.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Eicion_Contenido.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Eicion_Contenido.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_EmpleadoAltaBaja.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_EmpleadoAltaBaja.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_EmpleadoBuscar.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_EmpleadoBuscar.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Empleados.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Empleados.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_EmpleadosFil.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_EmpleadosFil.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_EmpleadosGrupos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_EmpleadosGrupos.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_EmpleadosStatus.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_EmpleadosStatus.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_EmpleadosStatusPie.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_EmpleadosStatusPie.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_EmpleadosStatus_B.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_EmpleadosStatus_B.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_EmpleadoxTerminal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_EmpleadoxTerminal.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_EnviaReporte.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_EnviaReporte.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_HorarioPersona.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_HorarioPersona.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_HuellasNAsig.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_HuellasNAsig.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_ImagenReporte.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_ImagenReporte.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Inasistencias.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Inasistencias.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Incidencias.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Incidencias.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Incidencias_Rastreo.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DS_Incidencias_Rastreo_Eliminacion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Incidencias_Rastreo_Eliminacion.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_InformacionReporte.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_InformacionReporte.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Perfiles.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Perfiles.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Personas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Personas.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_PersonasSHuella.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_PersonasSHuella.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Personas_Diario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Personas_Diario.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_RACCESOS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_RACCESOS.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_ReporteAccesos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_ReporteAccesos.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_ReporteImagen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_ReporteImagen.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Reporte_Faltas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Reporte_Faltas.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Restricciones.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Restricciones.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Terminales.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Terminales.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_TiposIncidencias.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_TiposIncidencias.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Turnos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Turnos.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_TurnosAnual.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_TurnosAnual.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_TurnosEmpleadosE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_TurnosEmpleadosE.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_Usuarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Usuarios.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="DS_UsuariosxE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_UsuariosxE.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="FR_Main.htm" />
+    <Content Include="FR_PaginaReporte.htm" />
+    <Content Include="Global.asax">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="ieupdate.js">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WC_Horario.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="WC_HorarioDiario.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WC_Menu.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="WC_Mes.ascx">
+      <SubType>UserControl</SubType>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WFR_AccesoCC.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WFR_AccesoT.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WFR_Asistencia.aspx" />
+    <Content Include="WFR_AsistenciasAux.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WFR_AsistenciasCCPie.aspx" />
+    <Content Include="WFR_AsistenciasD.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WFR_Asistencia_Rapida.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WFR_EmpleadosFaltas.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WFR_EmpleadosStatus.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WFR_EmpleadosStatus_B.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_AccesosNAsig.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Asignacion_Grupo_Persona.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_AsignarGrupoUsuarios.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_AsignarGrupoUsuariosE.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_CambioTRACVE.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Config.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_ControlTermnales.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_DiaPersona.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Dias_Festivos.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Dias_FestivosE.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Edicion_Contenido_Tablas.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Empleados.aspx" />
+    <Content Include="WF_EmpleadosBus.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_EmpleadosE.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_EmpleadosEdicion.aspx" />
+    <Content Include="WF_EmpleadosFil.aspx" />
+    <Content Include="WF_EmpleadoTerminal.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_EnviarReporteUsuarios.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Grupos1Control.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Horario.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_HorarioDia.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_HorarioPersona.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_HuellasNAsig.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Inasistencias.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_IncidenciasE.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Incidencias_Rastreo.aspx" />
+    <Content Include="WF_LogIn.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Main.aspx" />
+    <Content Include="WF_PaginaReporte.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Perfiles.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_PerfilesPermisos.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_PersonasAltasBajas.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_PersonasSHuella.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Personas_Diario.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Personas_DiarioE.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Personas_ImaS.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_PiePagina.aspx" />
+    <Content Include="WF_SEmpSel.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Terminales.aspx" />
+    <Content Include="WF_TerminalesE.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Tipo_Incidencias.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Tipo_IncidenciasE.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Tipo_Inc_Comida_Sis.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Tipo_Inc_Sis.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_TurnoAnual.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Turnos.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_TurnosE.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_TurnosEmpleadosE.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_UploadImagenesReporte.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_UsuarioEmpleado.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_Usuarios.aspx" />
+    <Content Include="WF_UsuariosE.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WF_ZlideHorario.aspx" />
+    <Content Include="WF_ZlideHorario_Flex.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="WS_ServicioRDatos.asmx" />
+    <WebReferenceUrl Include="http://localhost/eClock/WS_ServicioRDatos.asmx">
+      <RelPath>Referencias Web\eClock\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferences Include="Referencias Web\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54322</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/eClock</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

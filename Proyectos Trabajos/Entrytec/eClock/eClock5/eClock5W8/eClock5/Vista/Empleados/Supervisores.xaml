@@ -1,0 +1,33 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.Vista.Empleados.Supervisores" 
+             d:DesignHeight="394.812" d:DesignWidth="615.91" mc:Ignorable="d">
+    <Grid >
+                <eClock5:UC_ToolBar  Width="Auto" Margin="0,0,0,347">
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Etiqueta="Atras" Imagen="/eClock5;component/Resources/Regresar_64.png"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="/eClock5;component/Resources/Guardar_64.png"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <GroupBox x:Name="Gbox_AgregarPermiso" Header="Agregar Permiso" Height="84" Margin="10,53,10,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Lbl_Supervisores1" HorizontalAlignment="Left" Margin="20,92,0,0" TextWrapping="Wrap" Text="Usuario o eMail" VerticalAlignment="Top" RenderTransformOrigin="1.153,4.34"/>
+        <TextBox x:Name="Tbx_Supervisores" HorizontalAlignment="Left" Height="24" Margin="108,84,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="176"/>
+        <TextBlock x:Name="Lbl_Supervisores2" Margin="0,93,209,0" TextWrapping="Wrap" Text="Tipo de permiso" VerticalAlignment="Top" HorizontalAlignment="Right" Width="118"/>
+        <Controles:UC_Combo Margin="0,92,30,0" VerticalAlignment="Top" Tabla="EC_TIPO_PERMISOS" CampoLlave="TIPO_PERMISO_ID" CampoNombre="TIPO_PERMISO_NOMBRE" Height="16" HorizontalAlignment="Right" Width="173"/>
+        <ListBox x:Name="Lbx_Supervisores" Height="178" Margin="10,170,30,0" VerticalAlignment="Top">
+            <Grid Height="168" Width="524">
+                <CheckBox x:Name="Chb_Supervisores" Content="Permiso ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-1,0,0"/>
+                <TextBlock x:Name="Lbl_Supervisores3" HorizontalAlignment="Left" Margin="82,-1,0,0" TextWrapping="Wrap" Text="Usuario" VerticalAlignment="Top"/>
+                <TextBlock x:Name="Lbl_Supervisores4" HorizontalAlignment="Left" Margin="127,-1,0,0" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top"/>
+                <TextBlock x:Name="Lbl_Supervisores5" HorizontalAlignment="Left" Margin="176,-1,0,0" TextWrapping="Wrap" Text="Permisos" VerticalAlignment="Top"/>
+                <TextBlock x:Name="Lbl_Supervisores6" HorizontalAlignment="Left" Margin="229,-1,0,0" TextWrapping="Wrap" Text="Permiso Sobre" VerticalAlignment="Top"/>
+            </Grid>
+
+        </ListBox>
+        <Button x:Name="Btn_Quitar" Content="Quitar Permiso" HorizontalAlignment="Left" Margin="248,365,0,0" VerticalAlignment="Top" Width="102"/>
+
+
+        
+
+
+
+    </Grid>
+</UserControl>

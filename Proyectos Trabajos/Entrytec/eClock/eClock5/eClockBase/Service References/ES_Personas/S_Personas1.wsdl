@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:50723/S_Personas.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:50723/S_Personas.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="S_Personas_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="DoWork" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ObtenPersonaIDBySuscripcion_InputMessage">
+    <wsdl:part name="parameters" element="ObtenPersonaIDBySuscripcion" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ObtenPersonaIDBySuscripcion_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenPersonaIDBySuscripcionResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ReagruparEmpleados_InputMessage">
+    <wsdl:part name="parameters" element="ReagruparEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ReagruparEmpleados_OutputMessage">
+    <wsdl:part name="parameters" element="ReagruparEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ObtenAgrupacionEmpleados_InputMessage">
+    <wsdl:part name="parameters" element="ObtenAgrupacionEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ObtenAgrupacionEmpleados_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenAgrupacionEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_QuitaPermisoAgrupacion_InputMessage">
+    <wsdl:part name="parameters" element="QuitaPermisoAgrupacion" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_QuitaPermisoAgrupacion_OutputMessage">
+    <wsdl:part name="parameters" element="QuitaPermisoAgrupacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_AsignaPermisoAgrupacion_InputMessage">
+    <wsdl:part name="parameters" element="AsignaPermisoAgrupacion" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_AsignaPermisoAgrupacion_OutputMessage">
+    <wsdl:part name="parameters" element="AsignaPermisoAgrupacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ObtenPermisosAgrupacion_InputMessage">
+    <wsdl:part name="parameters" element="ObtenPermisosAgrupacion" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ObtenPermisosAgrupacion_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenPermisosAgrupacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_BuscaPersonas_InputMessage">
+    <wsdl:part name="parameters" element="BuscaPersonas" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_BuscaPersonas_OutputMessage">
+    <wsdl:part name="parameters" element="BuscaPersonasResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_AgregaPersona_InputMessage">
+    <wsdl:part name="parameters" element="AgregaPersona" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_AgregaPersona_OutputMessage">
+    <wsdl:part name="parameters" element="AgregaPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_Agrega_InputMessage">
+    <wsdl:part name="parameters" element="Agrega" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_Agrega_OutputMessage">
+    <wsdl:part name="parameters" element="AgregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_GuardaValor_InputMessage">
+    <wsdl:part name="parameters" element="GuardaValor" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_GuardaValor_OutputMessage">
+    <wsdl:part name="parameters" element="GuardaValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ObtenFoto_InputMessage">
+    <wsdl:part name="parameters" element="ObtenFoto" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ObtenFoto_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenFotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ObtenFotoThumbnail_InputMessage">
+    <wsdl:part name="parameters" element="ObtenFotoThumbnail" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ObtenFotoThumbnail_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenFotoThumbnailResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_GuardaFoto_InputMessage">
+    <wsdl:part name="parameters" element="GuardaFoto" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_GuardaFoto_OutputMessage">
+    <wsdl:part name="parameters" element="GuardaFotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_GuardaImagen_InputMessage">
+    <wsdl:part name="parameters" element="GuardaImagen" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_GuardaImagen_OutputMessage">
+    <wsdl:part name="parameters" element="GuardaImagenResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ObtenDatos_InputMessage">
+    <wsdl:part name="parameters" element="ObtenDatos" />
+  </wsdl:message>
+  <wsdl:message name="S_Personas_ObtenDatos_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenDatosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="S_Personas">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="urn:S_Personas/DoWork" message="S_Personas_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/DoWorkResponse" message="S_Personas_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPersonaIDBySuscripcion">
+      <wsdl:input wsaw:Action="urn:S_Personas/ObtenPersonaIDBySuscripcion" message="S_Personas_ObtenPersonaIDBySuscripcion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/ObtenPersonaIDBySuscripcionResponse" message="S_Personas_ObtenPersonaIDBySuscripcion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReagruparEmpleados">
+      <wsdl:input wsaw:Action="urn:S_Personas/ReagruparEmpleados" message="S_Personas_ReagruparEmpleados_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/ReagruparEmpleadosResponse" message="S_Personas_ReagruparEmpleados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenAgrupacionEmpleados">
+      <wsdl:input wsaw:Action="urn:S_Personas/ObtenAgrupacionEmpleados" message="S_Personas_ObtenAgrupacionEmpleados_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/ObtenAgrupacionEmpleadosResponse" message="S_Personas_ObtenAgrupacionEmpleados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuitaPermisoAgrupacion">
+      <wsdl:input wsaw:Action="urn:S_Personas/QuitaPermisoAgrupacion" message="S_Personas_QuitaPermisoAgrupacion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/QuitaPermisoAgrupacionResponse" message="S_Personas_QuitaPermisoAgrupacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaPermisoAgrupacion">
+      <wsdl:input wsaw:Action="urn:S_Personas/AsignaPermisoAgrupacion" message="S_Personas_AsignaPermisoAgrupacion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/AsignaPermisoAgrupacionResponse" message="S_Personas_AsignaPermisoAgrupacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPermisosAgrupacion">
+      <wsdl:input wsaw:Action="urn:S_Personas/ObtenPermisosAgrupacion" message="S_Personas_ObtenPermisosAgrupacion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/ObtenPermisosAgrupacionResponse" message="S_Personas_ObtenPermisosAgrupacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaPersonas">
+      <wsdl:input wsaw:Action="urn:S_Personas/BuscaPersonas" message="S_Personas_BuscaPersonas_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/BuscaPersonasResponse" message="S_Personas_BuscaPersonas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregaPersona">
+      <wsdl:input wsaw:Action="urn:S_Personas/AgregaPersona" message="S_Personas_AgregaPersona_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/AgregaPersonaResponse" message="S_Personas_AgregaPersona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Agrega">
+      <wsdl:input wsaw:Action="urn:S_Personas/Agrega" message="S_Personas_Agrega_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/AgregaResponse" message="S_Personas_Agrega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardaValor">
+      <wsdl:input wsaw:Action="urn:S_Personas/GuardaValor" message="S_Personas_GuardaValor_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/GuardaValorResponse" message="S_Personas_GuardaValor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenFoto">
+      <wsdl:input wsaw:Action="urn:S_Personas/ObtenFoto" message="S_Personas_ObtenFoto_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/ObtenFotoResponse" message="S_Personas_ObtenFoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenFotoThumbnail">
+      <wsdl:input wsaw:Action="urn:S_Personas/ObtenFotoThumbnail" message="S_Personas_ObtenFotoThumbnail_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/ObtenFotoThumbnailResponse" message="S_Personas_ObtenFotoThumbnail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardaFoto">
+      <wsdl:input wsaw:Action="urn:S_Personas/GuardaFoto" message="S_Personas_GuardaFoto_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/GuardaFotoResponse" message="S_Personas_GuardaFoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardaImagen">
+      <wsdl:input wsaw:Action="urn:S_Personas/GuardaImagen" message="S_Personas_GuardaImagen_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/GuardaImagenResponse" message="S_Personas_GuardaImagen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDatos">
+      <wsdl:input wsaw:Action="urn:S_Personas/ObtenDatos" message="S_Personas_ObtenDatos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Personas/ObtenDatosResponse" message="S_Personas_ObtenDatos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

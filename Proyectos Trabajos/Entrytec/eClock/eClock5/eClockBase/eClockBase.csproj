@@ -1,0 +1,929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3B19586-0F10-4D70-92D6-DA078964644E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eClockBase</RootNamespace>
+    <AssemblyName>eClockBase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile88</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugLiTabW8|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugLiTabW8\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug Win7|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug Win7\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWin7|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWin7\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Atributos_Campos\BoolConverter.cs" />
+    <Compile Include="Atributos_Campos\CampoAttribute.cs" />
+    <Compile Include="Atributos_Campos\Campo_BinarioAttribute.cs" />
+    <Compile Include="Atributos_Campos\Campo_BoolAttribute.cs" />
+    <Compile Include="Atributos_Campos\Campo_DecimalAttribute.cs" />
+    <Compile Include="Atributos_Campos\Campo_FechaHoraAttribute.cs" />
+    <Compile Include="Atributos_Campos\Campo_IntAttribute.cs" />
+    <Compile Include="Atributos_Campos\Campo_StringAttribute.cs" />
+    <Compile Include="CeC.cs" />
+    <Compile Include="CeC_Log.cs" />
+    <Compile Include="CeC_LogDestino.cs" />
+    <Compile Include="CeC_SesionBase.cs" />
+    <Compile Include="CeC_Stream.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="ControladoresParametros\Kiosco.cs" />
+    <Compile Include="Controladores\Accesos.cs" />
+    <Compile Include="Controladores\Actividades.cs" />
+    <Compile Include="Controladores\Asistencias.cs" />
+    <Compile Include="Controladores\Campos.cs" />
+    <Compile Include="Controladores\CeC_ZLib.cs" />
+    <Compile Include="Controladores\Empleados.cs" />
+    <Compile Include="Controladores\Importacion.cs" />
+    <Compile Include="Controladores\Incidencias.cs" />
+    <Compile Include="Controladores\Licencias.cs" />
+    <Compile Include="Controladores\Localizaciones.cs" />
+    <Compile Include="Controladores\Mails.cs" />
+    <Compile Include="Controladores\Nominas.cs" />
+    <Compile Include="Controladores\Periodos.cs" />
+    <Compile Include="Controladores\Personas.cs" />
+    <Compile Include="Controladores\Publicidad.cs" />
+    <Compile Include="Controladores\Reportes.cs" />
+    <Compile Include="Controladores\Restricciones.cs" />
+    <Compile Include="Controladores\Sesion.cs" />
+    <Compile Include="Controladores\Sesion_Config.cs" />
+    <Compile Include="Controladores\Suscripciones.cs" />
+    <Compile Include="Controladores\Terminales.cs" />
+    <Compile Include="Controladores\TipoIncidencias.cs" />
+    <Compile Include="Controladores\Tramites.cs" />
+    <Compile Include="Controladores\Turnos.cs" />
+    <Compile Include="Controladores\Usuarios.cs" />
+    <Compile Include="MD5Core.cs" />
+    <Compile Include="Modelos\Accesos\Model_Accesos.cs" />
+    <Compile Include="Modelos\Accesos\Model_AccesosAgregar.cs" />
+    <Compile Include="Modelos\Actividades\Model_ACTIVIDAD.cs" />
+    <Compile Include="Modelos\Actividades\Reporte_Detalle.cs" />
+    <Compile Include="Modelos\Actividades\Reporte_Detalle_Param.cs" />
+    <Compile Include="Modelos\Actividades\Reporte_NoInscripciones.cs" />
+    <Compile Include="Modelos\Actividades\Reporte_NoInscripciones_Param.cs" />
+    <Compile Include="Modelos\Asistencias\Model_AplicaHorasExtras.cs" />
+    <Compile Include="Modelos\Asistencias\Model_AplicaHorasExtrasAv.cs" />
+    <Compile Include="Modelos\Asistencias\Model_Asistencia.cs" />
+    <Compile Include="Modelos\Asistencias\Model_AsistenciaTotales.cs" />
+    <Compile Include="Modelos\Asistencias\Model_AsistenciaTotalesSaldos.cs" />
+    <Compile Include="Modelos\Asistencias\Model_Asistencia_Lineal_N.cs" />
+    <Compile Include="Modelos\Asistencias\Model_Asistencia_Lineal_V5.cs" />
+    <Compile Include="Modelos\Asistencias\Model_HorasExtra.cs" />
+    <Compile Include="Modelos\Asistencias\Model_Lineal.cs" />
+    <Compile Include="Modelos\Asistencias\Model_Parametros.cs" />
+    <Compile Include="Modelos\Asistencias\Model_Tiempos.cs" />
+    <Compile Include="Modelos\Asistencias\Reporte_Asistencia31.cs" />
+    <Compile Include="Modelos\Asistencias\Reporte_AsistenciaAbr31.cs" />
+    <Compile Include="Modelos\Campos\Model_CampoTexto.cs" />
+    <Compile Include="Modelos\HorasExtras\Reporte_Semanal.cs" />
+    <Compile Include="Modelos\HorasExtras\Reporte_Semanal_HET.cs" />
+    <Compile Include="Modelos\Importar\Model_Resultado.cs" />
+    <Compile Include="Modelos\Incidencias\Model_Historial.cs" />
+    <Compile Include="Modelos\Incidencias\Model_Horas.cs" />
+    <Compile Include="Modelos\Incidencias\Model_Incidencias.cs" />
+    <Compile Include="Modelos\Incidencias\Model_IncidenciasExAsis.cs" />
+    <Compile Include="Modelos\Incidencias\Model_IncidenciasHorasExtras.cs" />
+    <Compile Include="Modelos\Incidencias\Model_SaldosTiposIncidenciasR.cs" />
+    <Compile Include="Modelos\Incidencias\Model_StatusDia.cs" />
+    <Compile Include="Modelos\Incidencias\Model_StatusHoras.cs" />
+    <Compile Include="Modelos\Incidencias\Model_StatusRegla.cs" />
+    <Compile Include="Modelos\Incidencias\Model_Vacaciones.cs" />
+    <Compile Include="Modelos\Kiosco\Model_Parametros.cs" />
+    <Compile Include="Modelos\Localizaciones\Model_Localizaciones.cs" />
+    <Compile Include="Modelos\Model_ACCESOS.cs" />
+    <Compile Include="Modelos\Model_ACCESOS_JUS.cs" />
+    <Compile Include="Modelos\Model_ACTIVIDADES.cs" />
+    <Compile Include="Modelos\Model_ACTIVIDAD_INS.cs" />
+    <Compile Include="Modelos\Model_AGRUPACIONES.cs" />
+    <Compile Include="Modelos\Model_ALMACEN_INC.cs" />
+    <Compile Include="Modelos\Model_ALMACEN_VEC.cs" />
+    <Compile Include="Modelos\Model_AUTONUM.cs" />
+    <Compile Include="Modelos\Model_CALENDARIOS_DF.cs" />
+    <Compile Include="Modelos\Model_CAMPOS.cs" />
+    <Compile Include="Modelos\Model_CAMPOS_DATOS.cs" />
+    <Compile Include="Modelos\Model_CAMPOS_INC_R.cs" />
+    <Compile Include="Modelos\Model_CAMPOS_TE.cs" />
+    <Compile Include="Modelos\Model_CANJES.cs" />
+    <Compile Include="Modelos\Model_CATALOGOS.cs" />
+    <Compile Include="Modelos\Model_CATALOGOS_DATOS.cs" />
+    <Compile Include="Modelos\Model_CONFIG_USUARIO.cs" />
+    <Compile Include="Modelos\Model_DIAS_FESTIVOS.cs" />
+    <Compile Include="Modelos\Model_DIAS_SEMANA.cs" />
+    <Compile Include="Modelos\Model_DIAS_TRABAJO.cs" />
+    <Compile Include="Modelos\Model_DISENOS.cs" />
+    <Compile Include="Modelos\Model_EDO_PERIODO.cs" />
+    <Compile Include="Modelos\Model_EDO_SOLICITUD.cs" />
+    <Compile Include="Modelos\Model_EDO_SUSCRIPCION.cs" />
+    <Compile Include="Modelos\Model_ENV_REPORTES.cs" />
+    <Compile Include="Modelos\Model_FORMATOS_REP.cs" />
+    <Compile Include="Modelos\Model_INCIDENCIAS.cs" />
+    <Compile Include="Modelos\Model_INCIDENCIAS_EX.cs" />
+    <Compile Include="Modelos\Model_INC_REGLA_CICLOS.cs" />
+    <Compile Include="Modelos\Model_LICENCIAS.cs" />
+    <Compile Include="Modelos\Model_LICENCIAS_DITRIBUIDORES.cs" />
+    <Compile Include="Modelos\Model_LICENCIAS_ORIGEN.cs" />
+    <Compile Include="Modelos\Model_LOCALIZACIONES.cs" />
+    <Compile Include="Modelos\Model_LOG_AUDITORIA.cs" />
+    <Compile Include="Modelos\Model_LOG_ERRORES.cs" />
+    <Compile Include="Modelos\Model_MAILS.cs" />
+    <Compile Include="Modelos\Model_MASCARAS.cs" />
+    <Compile Include="Modelos\Model_MENUS.cs" />
+    <Compile Include="Modelos\Model_MODELOS.cs" />
+    <Compile Include="Modelos\Model_MODELOS_TERMINALES.cs" />
+    <Compile Include="Modelos\Model_MOD_TERM_T_TECNO.cs" />
+    <Compile Include="Modelos\Model_MONEDERO.cs" />
+    <Compile Include="Modelos\Model_NOMINAS.cs" />
+    <Compile Include="Modelos\Model_PERFILES.cs" />
+    <Compile Include="Modelos\Model_PERIODOS.cs" />
+    <Compile Include="Modelos\Model_PERIODOS_N.cs" />
+    <Compile Include="Modelos\Model_PERSONAS.cs" />
+    <Compile Include="Modelos\Model_PERSONAS_DATO.cs" />
+    <Compile Include="Modelos\Model_PERSONAS_S_HUELLA.cs" />
+    <Compile Include="Modelos\Model_PRODUCTOS.cs" />
+    <Compile Include="Modelos\Model_PROMOCIONES.cs" />
+    <Compile Include="Modelos\Model_PUBLICIDAD.cs" />
+    <Compile Include="Modelos\Model_RECOMPENSAS.cs" />
+    <Compile Include="Modelos\Model_REC_NOMINAS.cs" />
+    <Compile Include="Modelos\Model_REC_NOMI_MOV.cs" />
+    <Compile Include="Modelos\Model_REPORTES.cs" />
+    <Compile Include="Modelos\Model_REPORTES_SRV.cs" />
+    <Compile Include="Modelos\Model_SITIOS.cs" />
+    <Compile Include="Modelos\Model_SUSCRIPCION.cs" />
+    <Compile Include="Modelos\Model_SUSCRIP_PRECIOS.cs" />
+    <Compile Include="Modelos\Model_TABLAS.cs" />
+    <Compile Include="Modelos\Model_TABLAS_SUS.cs" />
+    <Compile Include="Modelos\Model_TABLAS_SUS_DATO.cs" />
+    <Compile Include="Modelos\Model_TERMINALES.cs" />
+    <Compile Include="Modelos\Model_TIPO_INCIDENCIAS.cs" />
+    <Compile Include="Modelos\Model_TIPO_INCIDENCIAS_EX.cs" />
+    <Compile Include="Modelos\Model_TIPO_INCIDENCIAS_R.cs" />
+    <Compile Include="Modelos\Model_TIPO_INC_COMIDA_SIS.cs" />
+    <Compile Include="Modelos\Model_TIPO_INC_SIS.cs" />
+    <Compile Include="Modelos\Model_TIPO_NOMINA.cs" />
+    <Compile Include="Modelos\Model_TIPO_TRAMITE.cs" />
+    <Compile Include="Modelos\Model_TRAMITES.cs" />
+    <Compile Include="Modelos\Model_TURNOS.cs" />
+    <Compile Include="Modelos\Model_TURNOS_DIA.cs" />
+    <Compile Include="Modelos\Model_TURNOS_DIARIOS.cs" />
+    <Compile Include="Modelos\Model_TURNOS_SEMANAL_DIA.cs" />
+    <Compile Include="Modelos\Model_T_INC_ACCESO.cs" />
+    <Compile Include="Modelos\Model_USUARIOS.cs" />
+    <Compile Include="Modelos\Nomina\Model_Conceptos.cs" />
+    <Compile Include="Modelos\Nomina\Model_Deducciones.cs" />
+    <Compile Include="Modelos\Nomina\Model_Interfaz.cs" />
+    <Compile Include="Modelos\Nomina\Model_Parametros.cs" />
+    <Compile Include="Modelos\Nomina\Model_Percepciones.cs" />
+    <Compile Include="Modelos\Nomina\Model_Periodo.cs" />
+    <Compile Include="Modelos\Nomina\Model_RecNominaGuardado.cs" />
+    <Compile Include="Modelos\Nomina\Model_RecNominas.cs" />
+    <Compile Include="Modelos\Nomina\Model_RecNominasImportar.cs" />
+    <Compile Include="Modelos\Nomina\Model_RecNominasPDFyXML.cs" />
+    <Compile Include="Modelos\Nomina\Model_Rec_Nominas_Ampliados.cs" />
+    <Compile Include="Modelos\Nomina\Model_RecNomiMov.cs" />
+    <Compile Include="Modelos\Nomina\Reporte_NominaFechaConsulta.cs" />
+    <Compile Include="Modelos\Nomina\Reporte_NominaFechaConsulta_Param.cs" />
+    <Compile Include="Modelos\Nomina\Reporte_RecNomina.cs" />
+    <Compile Include="Modelos\Nomina\Reporte_SinConsultar.cs" />
+    <Compile Include="Modelos\Periodos\Model_Listado.cs" />
+    <Compile Include="Modelos\Periodos\Model_ListadoCorto.cs" />
+    <Compile Include="Modelos\Personas\Model_Arbol.cs" />
+    <Compile Include="Modelos\Personas\Model_Datos.cs" />
+    <Compile Include="Modelos\Personas\Model_PersonasBusqueda.cs" />
+    <Compile Include="Modelos\PreNomina\Reporte_PreNomina.cs" />
+    <Compile Include="Modelos\Reportes\Model_Reportes.cs" />
+    <Compile Include="Modelos\Asistencias\Reporte_ASISTENCIAS.cs" />
+    <Compile Include="Modelos\Sesion\Model_DatosPersona.cs" />
+    <Compile Include="Modelos\Sesion\Model_Sesion.cs" />
+    <Compile Include="Modelos\Solicitudes\Model_Parametros.cs" />
+    <Compile Include="Modelos\Solicitudes\Model_ReporteSolicitudVacaciones.cs" />
+    <Compile Include="Modelos\Tramites\Reporte_Detalle.cs" />
+    <Compile Include="Modelos\Tramites\Reporte_Detalle_Param.cs" />
+    <Compile Include="Modelos\Tramites\Reporte_NoTramites_Param.cs" />
+    <Compile Include="Modelos\Terminales\TerminalDir.cs" />
+    <Compile Include="Modelos\Tramites\Reporte_NoTramites.cs" />
+    <Compile Include="Modelos\Turnos\Model_Turno.cs" />
+    <Compile Include="Modelos\Turnos\Model_TurnoImportacion.cs" />
+    <Compile Include="Modelos\Usuarios\Model_RegistroEmpleado.cs" />
+    <Compile Include="Modelos\Wizard\Model_Suscripcion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ES_Accesos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Actividades\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Asistencias\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Campos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Empleados\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Incidencias\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Licencias\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Localizaciones\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Mails\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Nominas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Periodos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Personas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Publicidad\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Reportes\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Restricciones\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Sesion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Suscripciones\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Terminales\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_TipoIncidencias\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Tramites\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Turnos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ES_Usuarios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Zlib.Portable">
+      <HintPath>packages\Zlib.Portable.1.9.2\lib\portable-net4+sl4+wp71+win8\Zlib.Portable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
+    <None Include="Service References\ES_Accesos\service22.wsdl" />
+    <None Include="Service References\ES_Accesos\service22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Accesos\service23.wsdl" />
+    <None Include="Service References\ES_Accesos\service23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Actividades\S_Actividades.wsdl" />
+    <None Include="Service References\ES_Actividades\S_Actividades.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Actividades\S_Actividades1.wsdl" />
+    <None Include="Service References\ES_Actividades\S_Actividades1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Asistencias\service2.wsdl" />
+    <None Include="Service References\ES_Asistencias\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Asistencias\service3.wsdl" />
+    <None Include="Service References\ES_Asistencias\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Campos\S_Campos.wsdl" />
+    <None Include="Service References\ES_Campos\S_Campos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Campos\S_Campos1.wsdl" />
+    <None Include="Service References\ES_Campos\S_Campos1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Empleados\S_Empleados2.wsdl" />
+    <None Include="Service References\ES_Empleados\S_Empleados2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Empleados\S_Empleados21.wsdl" />
+    <None Include="Service References\ES_Empleados\S_Empleados21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Incidencias\S_Incidencias.wsdl" />
+    <None Include="Service References\ES_Incidencias\S_Incidencias.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Incidencias\S_Incidencias1.wsdl" />
+    <None Include="Service References\ES_Incidencias\S_Incidencias1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Licencias\S_Licencias.wsdl" />
+    <None Include="Service References\ES_Licencias\S_Licencias.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Licencias\S_Licencias1.wsdl" />
+    <None Include="Service References\ES_Licencias\S_Licencias1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Localizaciones\S_Localizaciones.wsdl" />
+    <None Include="Service References\ES_Localizaciones\S_Localizaciones.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Localizaciones\S_Localizaciones1.wsdl" />
+    <None Include="Service References\ES_Localizaciones\S_Localizaciones1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Mails\S_Mails.wsdl" />
+    <None Include="Service References\ES_Mails\S_Mails.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Mails\S_Mails1.wsdl" />
+    <None Include="Service References\ES_Mails\S_Mails1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Nominas\S_Nominas.wsdl" />
+    <None Include="Service References\ES_Nominas\S_Nominas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Nominas\S_Nominas1.wsdl" />
+    <None Include="Service References\ES_Nominas\S_Nominas1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Periodos\S_Periodos.wsdl" />
+    <None Include="Service References\ES_Periodos\S_Periodos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Periodos\S_Periodos1.wsdl" />
+    <None Include="Service References\ES_Periodos\S_Periodos1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Personas\S_Personas.wsdl" />
+    <None Include="Service References\ES_Personas\S_Personas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Personas\S_Personas1.wsdl" />
+    <None Include="Service References\ES_Personas\S_Personas1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Publicidad\S_Publicidad.wsdl" />
+    <None Include="Service References\ES_Publicidad\S_Publicidad.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Publicidad\S_Publicidad1.wsdl" />
+    <None Include="Service References\ES_Publicidad\S_Publicidad1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Reportes\S_Reportes.wsdl" />
+    <None Include="Service References\ES_Reportes\S_Reportes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Reportes\S_Reportes1.wsdl" />
+    <None Include="Service References\ES_Reportes\S_Reportes1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Restricciones\S_Restricciones.wsdl" />
+    <None Include="Service References\ES_Restricciones\S_Restricciones.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Restricciones\S_Restricciones1.wsdl" />
+    <None Include="Service References\ES_Restricciones\S_Restricciones1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Sesion\service.wsdl" />
+    <None Include="Service References\ES_Sesion\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Sesion\service1.wsdl" />
+    <None Include="Service References\ES_Sesion\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Sesion\service2.wsdl" />
+    <None Include="Service References\ES_Sesion\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Sesion\service3.wsdl" />
+    <None Include="Service References\ES_Sesion\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Suscripciones\S_Suscripciones.wsdl" />
+    <None Include="Service References\ES_Suscripciones\S_Suscripciones.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Suscripciones\S_Suscripciones1.wsdl" />
+    <None Include="Service References\ES_Suscripciones\S_Suscripciones1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Terminales\service.wsdl" />
+    <None Include="Service References\ES_Terminales\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Terminales\service1.wsdl" />
+    <None Include="Service References\ES_Terminales\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_TipoIncidencias\S_TipoIncidencias.wsdl" />
+    <None Include="Service References\ES_TipoIncidencias\S_TipoIncidencias.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_TipoIncidencias\S_TipoIncidencias1.wsdl" />
+    <None Include="Service References\ES_TipoIncidencias\S_TipoIncidencias1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Tramites\S_Tramites.wsdl" />
+    <None Include="Service References\ES_Tramites\S_Tramites.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Tramites\S_Tramites1.wsdl" />
+    <None Include="Service References\ES_Tramites\S_Tramites1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Turnos\S_Turnos.wsdl" />
+    <None Include="Service References\ES_Turnos\S_Turnos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Turnos\S_Turnos1.wsdl" />
+    <None Include="Service References\ES_Turnos\S_Turnos1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Usuarios\S_Usuarios.wsdl" />
+    <None Include="Service References\ES_Usuarios\S_Usuarios.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ES_Usuarios\S_Usuarios1.wsdl" />
+    <None Include="Service References\ES_Usuarios\S_Usuarios1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ES_Accesos\" />
+    <WCFMetadataStorage Include="Service References\ES_Actividades\" />
+    <WCFMetadataStorage Include="Service References\ES_Asistencias\" />
+    <WCFMetadataStorage Include="Service References\ES_Campos\" />
+    <WCFMetadataStorage Include="Service References\ES_Empleados\" />
+    <WCFMetadataStorage Include="Service References\ES_Incidencias\" />
+    <WCFMetadataStorage Include="Service References\ES_Licencias\" />
+    <WCFMetadataStorage Include="Service References\ES_Localizaciones\" />
+    <WCFMetadataStorage Include="Service References\ES_Mails\" />
+    <WCFMetadataStorage Include="Service References\ES_Nominas\" />
+    <WCFMetadataStorage Include="Service References\ES_Periodos\" />
+    <WCFMetadataStorage Include="Service References\ES_Personas\" />
+    <WCFMetadataStorage Include="Service References\ES_Publicidad\" />
+    <WCFMetadataStorage Include="Service References\ES_Reportes\" />
+    <WCFMetadataStorage Include="Service References\ES_Restricciones\" />
+    <WCFMetadataStorage Include="Service References\ES_Sesion\" />
+    <WCFMetadataStorage Include="Service References\ES_Suscripciones\" />
+    <WCFMetadataStorage Include="Service References\ES_Terminales\" />
+    <WCFMetadataStorage Include="Service References\ES_TipoIncidencias\" />
+    <WCFMetadataStorage Include="Service References\ES_Tramites\" />
+    <WCFMetadataStorage Include="Service References\ES_Turnos\" />
+    <WCFMetadataStorage Include="Service References\ES_Usuarios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Asistencias\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Asistencias\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Asistencias\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Localizaciones\S_Localizaciones.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Localizaciones\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Localizaciones\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Localizaciones\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Localizacion\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Personas\S_Personas.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Personas\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Personas\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Personas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Accesos\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Accesos\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Accesos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Restricciones\S_Restricciones.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Restricciones\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Restricciones\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Restricciones\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Empleados\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Empleados\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Empleados\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Empleados\S_Empleados1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Terminales\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Terminales\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Terminales\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Licencias\S_Licencias.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Licencias\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Licencias\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Licencias\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_TipoIncidencias\S_TipoIncidencias.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_TipoIncidencias\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_TipoIncidencias\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_TipoIncidencias\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Incidencias\S_Incidencias.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Incidencias\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Incidencias\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Incidencias\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Usuarios\S_Usuarios.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Usuarios\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Usuarios\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Usuarios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Suscripciones\S_Suscripciones.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Suscripciones\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Suscripciones\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Suscripciones\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Turnos\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Turnos\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Turnos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Turnos\S_Turnos.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Mails\S_Mails.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Mails\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Mails\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Mails\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Publicidad\S_Publicidad.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Publicidad\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Publicidad\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Publicidad\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Tramites\S_Tramites.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Tramites\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Tramites\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Tramites\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Actividades\S_Actividades.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Actividades\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Actividades\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Actividades\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Sesion\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Sesion\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Sesion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Reportes\S_Reportes.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Reportes\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Reportes\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Reportes\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Campos\S_Campos.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Campos\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Campos\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Campos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Nominas\S_Nominas.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Nominas\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Nominas\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Nominas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Periodos\S_Periodos.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Periodos\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Periodos\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ES_Periodos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

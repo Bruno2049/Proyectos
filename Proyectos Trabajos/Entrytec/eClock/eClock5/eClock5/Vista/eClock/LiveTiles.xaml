@@ -1,0 +1,34 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.Vista.eClock.LiveTiles" 
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="900" Loaded="UserControl_Loaded_1">
+    <Grid>
+    <Grid x:Name="Grd_LiveTiles" Loaded="Grd_LiveTiles_Loaded">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="87*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="87*"/>
+        </Grid.ColumnDefinitions>
+
+            <Controles:UC_Btn_LiveTile x:Name="Btn_Migrar" Titulo="Migrar" Descripcion="Trasnsforma tus datos de tu software actual al nuevo eClock"  Background="#FF69D2E7" Margin="{DynamicResource MargenGeneral}"/>
+            <Controles:UC_Btn_LiveTile x:Name="Btn_Importar" Grid.Row="1" Numero="4" Titulo="Importar" Descripcion="Copiar datos desde algún sistema"  Click="Btn_Importar_Click" Background="#FFF3852F" Margin="{DynamicResource MargenGeneral}"/>
+            <Controles:UC_Btn_LiveTile x:Name="Btn_AsignacionTurnos" Grid.Row="2" Numero="7" Titulo="Asignación Turnos" Descripcion="Asignación de turnos de empleados"  Background="#FFF8C900" Margin="{DynamicResource MargenGeneral}" Click="Btn_AsignacionTurnos_Click"/>
+            <Controles:UC_Btn_LiveTile x:Name="Btn_Campos" Grid.Column="1"  Numero="2" Titulo="Campos" Descripcion="Configuración de campos y etiquetas"  Click="Btn_Campos_Click" Background="#FFE0123B" Margin="{DynamicResource MargenGeneral}"/>
+            <Controles:UC_Btn_LiveTile x:Name="Btn_Turnos" Grid.Row="1" Grid.Column="1" Titulo="Definir Turnos" Numero="5" Descripcion="Crear turnos" Loaded="UC_Btn_LiveTile_Loaded_1"  Click="Btn_Turnos_Click" Background="#FF4971AF" Margin="{DynamicResource MargenGeneral}"/>
+            <Controles:UC_Btn_LiveTile x:Name="Btn_DiasFestivos" Grid.Row="2" Grid.Column="1" Numero="8" Titulo="Días Festivos" Descripcion="Configuración días festivos oficiales del país y operativos por la empresa"  Background="#FF00C176" Margin="{DynamicResource MargenGeneral}" Click="Btn_DiasFestivos_Click"/>
+            <Controles:UC_Btn_LiveTile x:Name="Btn_Checadores" Grid.Column="2" Numero="3" Titulo="Checadores" Descripcion="Configuración de terminales"  Click="Btn_Checadores_Click" Background="#FFC6F463" Margin="{DynamicResource MargenGeneral}"/>
+            <Controles:UC_Btn_LiveTile x:Name="Btn_Empleados" Grid.Row="1" Grid.Column="2" Numero="6" Titulo="Empleados" Descripcion="Alta de empleados de forma manual"  Click="Btn_Empleados_Click" Background="#FF8F137C" Margin="{DynamicResource MargenGeneral}"/>
+            <Controles:UC_Btn_LiveTile x:Name="Btn_AsistenciaJustificaciones" Grid.Row="2" Grid.Column="2" Numero="9" Titulo="Asistencia Justificaciones" Descripcion="Visualización de entradas y salidas del personal y justificar desde la misma"  Background="#FFE0276C" Margin="{DynamicResource MargenGeneral}" Click="Btn_AsistenciaJustificaciones_Click"/>
+
+    </Grid>
+    </Grid>
+</UserControl>

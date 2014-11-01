@@ -1,0 +1,1756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://webservices.DotNetNuke.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://webservices.DotNetNuke.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://webservices.DotNetNuke.com/">
+      <s:element name="AddFolderAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentFolderId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="newFolderName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFolderAjaxResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="folderId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="newFolderName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFolderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IWebAuthendicationHeader" type="tns:IWebAuthendicationHeader" />
+      <s:complexType name="IWebAuthendicationHeader">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PortalID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Encrypted" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebPageCall" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModuleId" type="s:int" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="CopyFileAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="sourceFileID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="destFolderId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="destFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CopyFileAjaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CopyFileAjaxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CopyFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sourceFileID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="destFolderId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="destFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CopyFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CopyFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DefaultProtectedFoldersAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="folderId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DefaultProtectedFoldersAjaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DefaultProtectedFoldersAjaxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DefaultProtectedFolders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="folderId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DefaultProtectedFoldersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DefaultProtectedFoldersResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFilesAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="files" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteFilesAjaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteFilesAjaxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="files" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteFilesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFileAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="fileId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFileAjaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadFileAjaxResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fileId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFilesByFolderAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="folderId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFilesByFolderAjaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFilesByFolderAjaxResult" type="tns:ArrayOfIWebFileInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIWebFileInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IWebFileInfo" nillable="true" type="tns:IWebFileInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IWebFileInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ContentType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Extension" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastModified" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FileId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FolderId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Height" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Size" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Width" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFilesByFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="folderId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFilesByFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFilesByFolderResult" type="tns:ArrayOfIWebFileInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileByIdAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="fileId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileByIdAjaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileByIdAjaxResult" type="tns:IWebFileInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fileId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileByIdResult" type="tns:IWebFileInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFoldersByParentAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentFolderId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFoldersByParentAjaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFoldersByParentAjaxResult" type="tns:ArrayOfIWebFolderInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIWebFolderInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IWebFolderInfo" nillable="true" type="tns:IWebFolderInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IWebFolderInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FolderId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FolderName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFoldersByParent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="parentFolderId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFoldersByParentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFoldersByParentResult" type="tns:ArrayOfIWebFolderInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderByIdAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="folderId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderByIdAjaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFolderByIdAjaxResult" type="tns:IWebFolderInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="folderId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFolderByIdResult" type="tns:IWebFolderInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxRequestLengthAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxRequestLengthAjaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMaxRequestLengthAjaxResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxRequestLength">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMaxRequestLengthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMaxRequestLengthResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPortalRootFoldersAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPortalRootFoldersAjaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPortalRootFoldersAjaxResult" type="tns:ArrayOfIWebFolderInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPortalRootFolders">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPortalRootFoldersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPortalRootFoldersResult" type="tns:ArrayOfIWebFolderInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPortalSpaceUsedAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="showQuota" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPortalSpaceUsedAjaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPortalSpaceUsedAjaxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPortalSpaceUsed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="showQuota" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPortalSpaceUsedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPortalSpaceUsedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileAjax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="portalid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="moduleId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="webPageCall" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="encrypted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="folderId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bytes" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileAjaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadFileAjaxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="folderId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bytes" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PortalsOnServer">
+        <s:complexType />
+      </s:element>
+      <s:element name="PortalsOnServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PortalsOnServerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UnEncryptedData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnEncryptData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptedData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnEncryptDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UnEncryptDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserResult" type="tns:UserInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AffiliateID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSuperUser" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Membership" type="tns:UserMembership" />
+          <s:element minOccurs="1" maxOccurs="1" name="PortalID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Profile" type="tns:UserProfile" />
+          <s:element minOccurs="0" maxOccurs="1" name="Roles" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserMembership">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Approved" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsOnLine" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastActivityDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastLockoutDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastLoginDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastPasswordChangeDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LockedOut" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ObjectHydrated" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PasswordAnswer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PasswordQuestion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatePassword" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserProfile">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Cell" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ObjectHydrated" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PreferredLocale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProfileProperties" type="tns:ArrayOfProfilePropertyDefinition" />
+          <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimeZone" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Unit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Website" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProfilePropertyDefinition">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProfilePropertyDefinition" nillable="true" type="tns:ProfilePropertyDefinition" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProfilePropertyDefinition">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="length" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="propertycategory" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="propertyname" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Newpassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddFolderAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:AddFolderAjax" />
+  </wsdl:message>
+  <wsdl:message name="AddFolderAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:AddFolderAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:AddFolder" />
+  </wsdl:message>
+  <wsdl:message name="AddFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:AddFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddFolderIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="CopyFileAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:CopyFileAjax" />
+  </wsdl:message>
+  <wsdl:message name="CopyFileAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:CopyFileAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="CopyFileAjaxIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="CopyFileSoapIn">
+    <wsdl:part name="parameters" element="tns:CopyFile" />
+  </wsdl:message>
+  <wsdl:message name="CopyFileSoapOut">
+    <wsdl:part name="parameters" element="tns:CopyFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CopyFileIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DefaultProtectedFoldersAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:DefaultProtectedFoldersAjax" />
+  </wsdl:message>
+  <wsdl:message name="DefaultProtectedFoldersAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:DefaultProtectedFoldersAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="DefaultProtectedFoldersAjaxIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DefaultProtectedFoldersSoapIn">
+    <wsdl:part name="parameters" element="tns:DefaultProtectedFolders" />
+  </wsdl:message>
+  <wsdl:message name="DefaultProtectedFoldersSoapOut">
+    <wsdl:part name="parameters" element="tns:DefaultProtectedFoldersResponse" />
+  </wsdl:message>
+  <wsdl:message name="DefaultProtectedFoldersIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFilesAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFilesAjax" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFilesAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFilesAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFilesAjaxIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFiles" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFilesIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadFileAjax" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadFileAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileAjaxIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadFile" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFilesByFolderAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFilesByFolderAjax" />
+  </wsdl:message>
+  <wsdl:message name="GetFilesByFolderAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFilesByFolderAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFilesByFolderAjaxIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFilesByFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFilesByFolder" />
+  </wsdl:message>
+  <wsdl:message name="GetFilesByFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFilesByFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFilesByFolderIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFileByIdAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileByIdAjax" />
+  </wsdl:message>
+  <wsdl:message name="GetFileByIdAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileByIdAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileByIdAjaxIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFileByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileById" />
+  </wsdl:message>
+  <wsdl:message name="GetFileByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileByIdIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFoldersByParentAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFoldersByParentAjax" />
+  </wsdl:message>
+  <wsdl:message name="GetFoldersByParentAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFoldersByParentAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFoldersByParentAjaxIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFoldersByParentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFoldersByParent" />
+  </wsdl:message>
+  <wsdl:message name="GetFoldersByParentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFoldersByParentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFoldersByParentIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderByIdAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFolderByIdAjax" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderByIdAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFolderByIdAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderByIdAjaxIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFolderById" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFolderByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderByIdIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxRequestLengthAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaxRequestLengthAjax" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxRequestLengthAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaxRequestLengthAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxRequestLengthAjaxIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxRequestLengthSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaxRequestLength" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxRequestLengthSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaxRequestLengthResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxRequestLengthIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalRootFoldersAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPortalRootFoldersAjax" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalRootFoldersAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPortalRootFoldersAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalRootFoldersAjaxIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalRootFoldersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPortalRootFolders" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalRootFoldersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPortalRootFoldersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalRootFoldersIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalSpaceUsedAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPortalSpaceUsedAjax" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalSpaceUsedAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPortalSpaceUsedAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalSpaceUsedAjaxIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalSpaceUsedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPortalSpaceUsed" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalSpaceUsedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPortalSpaceUsedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalSpaceUsedIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileAjaxSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadFileAjax" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileAjaxSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadFileAjaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileAjaxIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="PortalsOnServerSoapIn">
+    <wsdl:part name="parameters" element="tns:PortalsOnServer" />
+  </wsdl:message>
+  <wsdl:message name="PortalsOnServerSoapOut">
+    <wsdl:part name="parameters" element="tns:PortalsOnServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="PortalsOnServerIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="EncryptDataSoapIn">
+    <wsdl:part name="parameters" element="tns:EncryptData" />
+  </wsdl:message>
+  <wsdl:message name="EncryptDataSoapOut">
+    <wsdl:part name="parameters" element="tns:EncryptDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncryptDataIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="UnEncryptDataSoapIn">
+    <wsdl:part name="parameters" element="tns:UnEncryptData" />
+  </wsdl:message>
+  <wsdl:message name="UnEncryptDataSoapOut">
+    <wsdl:part name="parameters" element="tns:UnEncryptDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnEncryptDataIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserIWebAuthendicationHeader">
+    <wsdl:part name="IWebAuthendicationHeader" element="tns:IWebAuthendicationHeader" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="AddFolderAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add a new folder to specified parent or portal root. Ajax Overload. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:AddFolderAjaxSoapIn" />
+      <wsdl:output message="tns:AddFolderAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFolder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add a new folder to specified parent or portal root. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:AddFolderSoapIn" />
+      <wsdl:output message="tns:AddFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFileAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Copies a file to a new file with the specified name. Ajax Overload. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:CopyFileAjaxSoapIn" />
+      <wsdl:output message="tns:CopyFileAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Copies a file to a new file with the specified name. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:CopyFileSoapIn" />
+      <wsdl:output message="tns:CopyFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DefaultProtectedFoldersAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Determines if specified path is the default protected folder. Ajax Overload. *DotNetNuke* |IWeb Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:DefaultProtectedFoldersAjaxSoapIn" />
+      <wsdl:output message="tns:DefaultProtectedFoldersAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DefaultProtectedFolders">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Determines if specified path is the default protected folder. *DotNetNuke* |IWeb Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:DefaultProtectedFoldersSoapIn" />
+      <wsdl:output message="tns:DefaultProtectedFoldersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFilesAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Delete the list of specified files. Ajax Overload.  *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:DeleteFilesAjaxSoapIn" />
+      <wsdl:output message="tns:DeleteFilesAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFiles">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Delete the list of specified files *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:DeleteFilesSoapIn" />
+      <wsdl:output message="tns:DeleteFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Download the specified file.  Ajax Overload. *DotNetNuke* |IWeb Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:DownloadFileAjaxSoapIn" />
+      <wsdl:output message="tns:DownloadFileAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Download the specified file. *DotNetNuke* |IWeb Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:DownloadFileSoapIn" />
+      <wsdl:output message="tns:DownloadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesByFolderAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Get a list of files in the folder supplied.  Ajax Overload. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetFilesByFolderAjaxSoapIn" />
+      <wsdl:output message="tns:GetFilesByFolderAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesByFolder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Get a list of files in the folder supplied. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetFilesByFolderSoapIn" />
+      <wsdl:output message="tns:GetFilesByFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileByIdAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Get a FileInfo object for the specified FileId.  Ajax Overload. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetFileByIdAjaxSoapIn" />
+      <wsdl:output message="tns:GetFileByIdAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileById">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Get a FileInfo object for the specified FileId. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetFileByIdSoapIn" />
+      <wsdl:output message="tns:GetFileByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFoldersByParentAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Get sub folders by parent FolderId.  Ajax Overload. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetFoldersByParentAjaxSoapIn" />
+      <wsdl:output message="tns:GetFoldersByParentAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFoldersByParent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Get sub folders by parent FolderId. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetFoldersByParentSoapIn" />
+      <wsdl:output message="tns:GetFoldersByParentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderByIdAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Get a FolderInfo object for the specified FolderId. Ajax Overload. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetFolderByIdAjaxSoapIn" />
+      <wsdl:output message="tns:GetFolderByIdAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderById">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Get a FolderInfo object for the specified FolderId. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetFolderByIdSoapIn" />
+      <wsdl:output message="tns:GetFolderByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRequestLengthAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Gets the maximum request length in KBs. Return -1 if configuration could not be read. Ajax Overload. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetMaxRequestLengthAjaxSoapIn" />
+      <wsdl:output message="tns:GetMaxRequestLengthAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRequestLength">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Gets the maximum request length in KBs. Return -1 if configuration could not be read. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetMaxRequestLengthSoapIn" />
+      <wsdl:output message="tns:GetMaxRequestLengthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalRootFoldersAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Get portal root folders.  Ajax Overload. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetPortalRootFoldersAjaxSoapIn" />
+      <wsdl:output message="tns:GetPortalRootFoldersAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalRootFolders">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Get portal root folders. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetPortalRootFoldersSoapIn" />
+      <wsdl:output message="tns:GetPortalRootFoldersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalSpaceUsedAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Get the total space used by the portal folder.  Ajax Overload. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetPortalSpaceUsedAjaxSoapIn" />
+      <wsdl:output message="tns:GetPortalSpaceUsedAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalSpaceUsed">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Get the total space used by the portal folder. *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetPortalSpaceUsedSoapIn" />
+      <wsdl:output message="tns:GetPortalSpaceUsedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileAjax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Upload as file. Ajax Overload.  *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:UploadFileAjaxSoapIn" />
+      <wsdl:output message="tns:UploadFileAjaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Upload as file *DotNetNuke* |IWEB Core| #IWEB FileManager# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:UploadFileSoapIn" />
+      <wsdl:output message="tns:UploadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PortalsOnServer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Retrieves Portals on Server *DotNetNuke* |IWEB Core| #General# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:PortalsOnServerSoapIn" />
+      <wsdl:output message="tns:PortalsOnServerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Retrieves IWeb Version *DotNetNuke* |IWEB Core| #IWEB Misc# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetVersionSoapIn" />
+      <wsdl:output message="tns:GetVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncryptData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Encrypt Data *DotNetNuke* |IWEB Core| #IWEB Misc# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:EncryptDataSoapIn" />
+      <wsdl:output message="tns:EncryptDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnEncryptData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Un-Encrypt Data *DotNetNuke* |IWEB Core| #IWEB Misc# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:UnEncryptDataSoapIn" />
+      <wsdl:output message="tns:UnEncryptDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> GetUser *DotNetNuke* |IWEB Core| #IWEB Misc# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:GetUserSoapIn" />
+      <wsdl:output message="tns:GetUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> CreateUser *DotNetNuke* |IWEB Core| #IWEB Misc# !Portal! </wsdl:documentation>
+      <wsdl:input message="tns:CreateUserSoapIn" />
+      <wsdl:output message="tns:CreateUserSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddFolderAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/AddFolderAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFolder">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/AddFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddFolderIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFileAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/CopyFileAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CopyFileAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFile">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/CopyFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CopyFileIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DefaultProtectedFoldersAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/DefaultProtectedFoldersAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DefaultProtectedFoldersAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DefaultProtectedFolders">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/DefaultProtectedFolders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DefaultProtectedFoldersIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFilesAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/DeleteFilesAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteFilesAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFiles">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/DeleteFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteFilesIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/DownloadFileAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DownloadFileAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/DownloadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DownloadFileIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesByFolderAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetFilesByFolderAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFilesByFolderAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesByFolder">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetFilesByFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFilesByFolderIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileByIdAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetFileByIdAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFileByIdAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileById">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetFileById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFileByIdIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoldersByParentAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetFoldersByParentAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFoldersByParentAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoldersByParent">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetFoldersByParent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFoldersByParentIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderByIdAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetFolderByIdAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFolderByIdAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderById">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetFolderById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFolderByIdIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRequestLengthAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetMaxRequestLengthAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetMaxRequestLengthAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRequestLength">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetMaxRequestLength" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetMaxRequestLengthIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalRootFoldersAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetPortalRootFoldersAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPortalRootFoldersAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalRootFolders">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetPortalRootFolders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPortalRootFoldersIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalSpaceUsedAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetPortalSpaceUsedAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPortalSpaceUsedAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalSpaceUsed">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetPortalSpaceUsed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPortalSpaceUsedIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileAjax">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/UploadFileAjax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UploadFileAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/UploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UploadFileIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PortalsOnServer">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/PortalsOnServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PortalsOnServerIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetVersionIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptData">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/EncryptData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:EncryptDataIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnEncryptData">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/UnEncryptData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UnEncryptDataIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://webservices.DotNetNuke.com/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CreateUserIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddFolderAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/AddFolderAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFolder">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/AddFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddFolderIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFileAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/CopyFileAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CopyFileAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyFile">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/CopyFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CopyFileIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DefaultProtectedFoldersAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/DefaultProtectedFoldersAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DefaultProtectedFoldersAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DefaultProtectedFolders">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/DefaultProtectedFolders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DefaultProtectedFoldersIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFilesAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/DeleteFilesAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteFilesAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFiles">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/DeleteFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteFilesIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/DownloadFileAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DownloadFileAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/DownloadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DownloadFileIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesByFolderAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetFilesByFolderAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFilesByFolderAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesByFolder">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetFilesByFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFilesByFolderIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileByIdAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetFileByIdAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFileByIdAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileById">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetFileById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFileByIdIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoldersByParentAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetFoldersByParentAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFoldersByParentAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoldersByParent">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetFoldersByParent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFoldersByParentIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderByIdAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetFolderByIdAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFolderByIdAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderById">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetFolderById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFolderByIdIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRequestLengthAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetMaxRequestLengthAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetMaxRequestLengthAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRequestLength">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetMaxRequestLength" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetMaxRequestLengthIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalRootFoldersAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetPortalRootFoldersAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPortalRootFoldersAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalRootFolders">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetPortalRootFolders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPortalRootFoldersIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalSpaceUsedAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetPortalSpaceUsedAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPortalSpaceUsedAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalSpaceUsed">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetPortalSpaceUsed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPortalSpaceUsedIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileAjax">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/UploadFileAjax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UploadFileAjaxIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/UploadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UploadFileIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PortalsOnServer">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/PortalsOnServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PortalsOnServerIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetVersionIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncryptData">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/EncryptData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:EncryptDataIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnEncryptData">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/UnEncryptData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UnEncryptDataIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/GetUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap12:operation soapAction="http://webservices.DotNetNuke.com/CreateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CreateUserIWebAuthendicationHeader" part="IWebAuthendicationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://www.entrytec.com.mx/dotnetnuke/DesktopModules/IWeb/webservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://www.entrytec.com.mx/dotnetnuke/DesktopModules/IWeb/webservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

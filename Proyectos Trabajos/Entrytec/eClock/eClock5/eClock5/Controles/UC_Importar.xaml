@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="eClock5.Controles.UC_Importar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              mc:Ignorable="d" xmlns:local="clr-namespace:eClock5"
+             d:DesignHeight="300" d:DesignWidth="300" Background="{DynamicResource Blanco_Brush}" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource Negro_Brush}">
+    <Grid>
+        <StackPanel  Margin="{DynamicResource MargenAltoToolBar}" >
+            <TextBlock x:Name="Lbl_TipoExportacion"  Text="Elija el formato en que desea importar la información:" TextWrapping="WrapWithOverflow" Margin="{DynamicResource MargenGeneral}"/>
+            <StackPanel Width="100" HorizontalAlignment="Center"  >
+                <RadioButton x:Name="Rbt_Json" Content="Json" IsChecked="True" />
+                <RadioButton x:Name="Rbt_CSV" Content="Csv" IsEnabled="False" />
+                <RadioButton x:Name="Rbt_Txt" Content="Txt" IsEnabled="False" />
+            </StackPanel>
+            <TextBlock x:Name="Lbl_ElijaArchivo"  Text="Elija el archivo que desea importar:" TextWrapping="WrapWithOverflow" Margin="{DynamicResource MargenGeneral}"/>
+            <TextBox Name="Tbx_Archivo" Margin="{DynamicResource MargenGeneral}" TextChanged="Tbx_Archivo_TextChanged"></TextBox>
+            <Button Name="Btn_Archivo" Content="Seleccionar Archivo" Click="Btn_Archivo_Click"></Button>
+        </StackPanel>
+        <local:UC_ToolBar x:Name="Tb_General"  VerticalAlignment="Top" Width="Auto" Height="{DynamicResource AltoToolBar}" OnEventClickToolBar="Tb_General_OnEventClickToolBar" >
+            <local:UC_ToolBar.Controles>
+                <local:UC_ToolBar_Control Nombre="Btn_Regresar" Etiqueta="Regresar" Imagen="pack://siteoforigin:,,,/Resources/Regresar_64.png"/>
+                <local:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png" Nombre="Btn_Guardar" Mostrar="SoloSeleccionados"/>
+            </local:UC_ToolBar.Controles>
+        </local:UC_ToolBar>
+    </Grid>
+</UserControl>

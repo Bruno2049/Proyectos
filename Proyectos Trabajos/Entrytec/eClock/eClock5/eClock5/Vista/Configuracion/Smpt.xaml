@@ -1,0 +1,41 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" x:Class="eClock5.Vista.Configuracion.Smpt" 
+             mc:Ignorable="d" 
+             d:DesignHeight="419.201" d:DesignWidth="522.5" Background="{DynamicResource Blanco_Brush}">
+    <Grid  >
+        <eClock5:UC_ToolBar VerticalAlignment="Top" Width="Auto">
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <Grid Margin="48,102,38,34" Width="436" Background="{DynamicResource AzulClaro_Brush}" Height="283" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Lbl_Correo" Text="Correo" Margin="10,10,10,0" Foreground="{DynamicResource Blanco_Brush}" Height="25" VerticalAlignment="Top"/>
+            <TextBlock x:Name="Lbl_Servidor" Text="Servidor" Margin="10,10,10,0" Foreground="{DynamicResource Blanco_Brush}" Grid.Row="1" Height="24" VerticalAlignment="Top"/>
+            <TextBlock x:Name="Lbl_Puerto" Width="Auto" Text="Puerto" Margin="10,10,10,0" Foreground="{DynamicResource Blanco_Brush}" Grid.Row="2" Height="25" VerticalAlignment="Top"/>
+            <TextBlock x:Name="Lbl_NombreUsuario" Text="Nombre de Usuario" Margin="10,10,10,0" Foreground="{DynamicResource Blanco_Brush}" Grid.Row="3" Height="24" VerticalAlignment="Top"/>
+            <TextBlock x:Name="Lbl_Contraseña" Text="Contraseña" Margin="10,10,10,0" Foreground="{DynamicResource Blanco_Brush}" Grid.Row="4" Height="25" VerticalAlignment="Top"/>
+            <TextBox x:Name="Tbx_Correo" Margin="10,10,10,0" TextWrapping="Wrap" Grid.Column="1" Height="27" VerticalAlignment="Top"/>
+            <TextBox x:Name="Tbx_Servidor" Margin="10,8,10,0" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" Height="25" VerticalAlignment="Top"/>
+            <TextBox  x:Name="Tbx_Puerto" Margin="10,10,10,0" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2" Height="25" VerticalAlignment="Top"/>
+            <TextBox x:Name="Tbx_NombreUsuario" Margin="10,9,10,0" TextWrapping="Wrap" Grid.Column="1" Grid.Row="3" Height="26" VerticalAlignment="Top"/>
+            <TextBox x:Name="Tbx_Contraseña" Margin="10,10,10,0" TextWrapping="Wrap" Grid.Column="1" Grid.Row="4" Height="25" VerticalAlignment="Top"/>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

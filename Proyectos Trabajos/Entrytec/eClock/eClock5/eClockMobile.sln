@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eClockMobile", "eClockMobile\eClockMobile.csproj", "{A290F1DC-A1EE-4051-9FC5-3D219EBA95E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eClockBase", "eClockBase\eClockBase.csproj", "{F3B19586-0F10-4D70-92D6-DA078964644E}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Win7|Any CPU = Debug Win7|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DebugLiTabW8|Any CPU = DebugLiTabW8|Any CPU
+		DebugWin7|Any CPU = DebugWin7|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A290F1DC-A1EE-4051-9FC5-3D219EBA95E3}.Debug Win7|Any CPU.ActiveCfg = Debug|Any CPU
+		{A290F1DC-A1EE-4051-9FC5-3D219EBA95E3}.Debug Win7|Any CPU.Build.0 = Debug|Any CPU
+		{A290F1DC-A1EE-4051-9FC5-3D219EBA95E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A290F1DC-A1EE-4051-9FC5-3D219EBA95E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A290F1DC-A1EE-4051-9FC5-3D219EBA95E3}.DebugLiTabW8|Any CPU.ActiveCfg = Debug|Any CPU
+		{A290F1DC-A1EE-4051-9FC5-3D219EBA95E3}.DebugLiTabW8|Any CPU.Build.0 = Debug|Any CPU
+		{A290F1DC-A1EE-4051-9FC5-3D219EBA95E3}.DebugWin7|Any CPU.ActiveCfg = Debug|Any CPU
+		{A290F1DC-A1EE-4051-9FC5-3D219EBA95E3}.DebugWin7|Any CPU.Build.0 = Debug|Any CPU
+		{A290F1DC-A1EE-4051-9FC5-3D219EBA95E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A290F1DC-A1EE-4051-9FC5-3D219EBA95E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3B19586-0F10-4D70-92D6-DA078964644E}.Debug Win7|Any CPU.ActiveCfg = Debug Win7|Any CPU
+		{F3B19586-0F10-4D70-92D6-DA078964644E}.Debug Win7|Any CPU.Build.0 = Debug Win7|Any CPU
+		{F3B19586-0F10-4D70-92D6-DA078964644E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3B19586-0F10-4D70-92D6-DA078964644E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3B19586-0F10-4D70-92D6-DA078964644E}.DebugLiTabW8|Any CPU.ActiveCfg = DebugLiTabW8|Any CPU
+		{F3B19586-0F10-4D70-92D6-DA078964644E}.DebugLiTabW8|Any CPU.Build.0 = DebugLiTabW8|Any CPU
+		{F3B19586-0F10-4D70-92D6-DA078964644E}.DebugWin7|Any CPU.ActiveCfg = DebugWin7|Any CPU
+		{F3B19586-0F10-4D70-92D6-DA078964644E}.DebugWin7|Any CPU.Build.0 = DebugWin7|Any CPU
+		{F3B19586-0F10-4D70-92D6-DA078964644E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3B19586-0F10-4D70-92D6-DA078964644E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

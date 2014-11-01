@@ -1,0 +1,21 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:local="clr-namespace:eClock5.Vista.Periodos" x:Class="eClock5.Vista.Periodos.Abiertos" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400" IsVisibleChanged="UserControl_IsVisibleChanged">
+    <Grid>
+        <eClock5:UC_Listado x:Name="Lst_Datos" >
+            <eClock5:UC_Listado.ControlesAdicionales>
+                <eClock5:UC_Listado_OpcionesAdicionales Etiqueta="Enviar a nomina" Mostrar="SoloSeleccionados" Nombre="Btn_EnvNomina">
+                    <eClock5:UC_Listado_OpcionesAdicionales.Control>
+                        <local:EnviarANomina/>
+                    </eClock5:UC_Listado_OpcionesAdicionales.Control>
+                </eClock5:UC_Listado_OpcionesAdicionales>
+            </eClock5:UC_Listado.ControlesAdicionales>
+        </eClock5:UC_Listado>
+
+    </Grid>
+</UserControl>

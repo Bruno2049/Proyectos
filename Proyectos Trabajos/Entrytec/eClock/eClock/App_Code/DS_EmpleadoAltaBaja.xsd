@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DS_EmpleadoAltaBaja" targetNamespace="http://www.tempuri.org/DS_EmpleadoAltaBaja.xsd"
+	xmlns:mstns="http://www.tempuri.org/DS_EmpleadoAltaBaja.xsd" xmlns="http://www.tempuri.org/DS_EmpleadoAltaBaja.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DS_EmpleadoAltaBaja" msdata:IsDataSet="true" msdata:Locale="es-MX">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="EC_PERSONAS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PERSONA_ID" type="xs:decimal" />
+							<xs:element name="PERSONA_LINK_ID" type="xs:decimal" />
+							<xs:element name="SUSCRIPCION_ID" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TIPO_PERSONA_ID" type="xs:decimal" minOccurs="0" />
+							<xs:element name="GRUPO_2_ID" type="xs:decimal" minOccurs="0" />
+							<xs:element name="GRUPO_3_ID" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PERSONA_NOMBRE" type="xs:string" minOccurs="0" />
+							<xs:element name="TURNO_ID" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PERSONA_EMAIL" type="xs:string" minOccurs="0" />
+							<xs:element name="PERSONA_BORRADO" type="xs:decimal" minOccurs="0" />
+							<xs:element name="STATUS" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:EC_PERSONAS" />
+			<xs:field xpath="mstns:PERSONA_ID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

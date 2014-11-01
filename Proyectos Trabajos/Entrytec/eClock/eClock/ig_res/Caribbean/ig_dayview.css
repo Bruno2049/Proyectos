@@ -1,0 +1,249 @@
+.igdv_CaribbeanControl
+{
+	border:solid 1px #001060;
+}
+
+
+.igdv_CaribbeanCaptionHeader
+{
+	background-color:#A9B2F5;
+	background-repeat:repeat-x;
+	background-image: url(images/header_grid.gif);
+	font-weight:bold;
+	border-bottom:solid 1px #001060;
+	font-size:8pt;
+	padding: 3px;
+	height: 20px;
+	color: #FFFFFF;
+	text-align:center;
+}
+
+
+.igdv_CaribbeanDayHeader
+{
+	background-color: #E6F5FC;
+	background-repeat:repeat-x;
+	background-position:top ;
+	background-image: url(images/item_alt.gif);
+	border-bottom:solid 1px #001060;
+	font-size: 8pt;
+	padding: 5px;
+	color:#052684;
+	text-align:center;
+	vertical-align:middle;
+	overflow: hidden;
+}
+
+
+.igdv_CaribbeanNonWorkingTimeSlot
+{
+	background-color:#F7F7F7;
+	border-bottom:solid 1px #D5E1F1;
+	height: 20px;
+	cursor:hand;
+}
+
+
+.igdv_CaribbeanWorkingTimeSlot
+{
+	background-color:White;
+	border-right:solid 1px #999999;
+	border-bottom:solid 1px #E6EDF7;
+	height: 20px;
+}
+
+
+.igdv_CaribbeanAllDayEventArea
+{
+	background-color:#FAFAFA;
+	border-bottom: 1px solid #001060;
+}
+
+
+.igdv_CaribbeanAllDayEvent
+{
+	background-color: #f5f5f5;
+	font-size:8pt;
+	border: solid 1px #999999;
+	padding:5px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align:center;
+}
+
+
+.igdv_CaribbeanAppointment
+{
+	background-color:White;
+	font-size:8pt;
+	border:solid 1px #999999;
+	overflow: hidden;
+}
+
+.igdv_CaribbeanFadedAppointment
+{
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+
+.igdv_CaribbeanActivityEdge
+{
+	font-size:1px;
+	height: 4px;
+	cursor:n-resize;
+}
+
+
+.igdv_CaribbeanActivityEdgeLeft
+{
+	font-size:2px;
+	width: 6px;
+	cursor:move;
+}
+
+
+.igdv_CaribbeanTodayHeader
+{
+	background-color: #E6F5FC;
+	background-repeat:repeat-x;
+	background-position:top ;
+	background-image: url(images/item_alt.gif);
+	border-width:0px;
+	border-bottom:solid 1px #001060;
+	padding: 5px;
+	color:#052684;
+	font-weight: bold;
+}
+
+
+.igdv_CaribbeanTimeSlotLabel
+{
+	background-color:#e0f3fb;
+	background-position:bottom ;
+	background-repeat: repeat-x;
+	background-image: url(images/panel_body.gif);
+	font-size:16pt;
+	border-right:solid 1px #001060;
+	border-bottom:solid 1px #001060;
+	width: 60px;
+	color:#052684;
+	text-align:center;
+	vertical-align:top;
+}
+
+
+.igdv_CaribbeanTimeSlotLabelMinutes
+{
+	font-size:8pt;
+}
+
+
+.igdv_CaribbeanAllDayEventSelected
+{
+	background-color: #D7EEFB;
+	border-color: #000000;
+}
+
+
+.igdv_CaribbeanAllDayEventAreaSelected
+{
+	background-color:White;
+}
+
+
+.igdv_CaribbeanActivityHover
+{
+	z-index: 10000;
+}
+
+
+.igdv_CaribbeanActivityEdgeBusy
+{
+	background-color:#E6F5FC;
+}
+
+
+.igdv_CaribbeanActivityEdgeTentative
+{
+	background-color:#90C0FF;
+}
+
+
+.igdv_CaribbeanActivityEdgeOutofOffice
+{
+	background-color:#900090;
+}
+
+
+.igdv_CaribbeanActivityEdgeFree
+{
+	background-color:#F0F0F0;
+}
+
+
+.igdv_CaribbeanNavigationButton
+{
+	background-color:Transparent;
+	border-width:0px;
+	width: 20px;
+	height: 20px;
+	vertical-align:middle;
+	cursor: pointer;
+}
+
+
+.igdv_CaribbeanSelectedAppointment
+{
+	z-index: 9999;
+}
+
+.igdv_CaribbeanResourceButton
+{
+	background-color: #16356D;
+	border-width: 0;
+	border-right: solid 1px #001060;
+	border-bottom: solid 1px #001060;
+	padding: 4px;
+	font-size: 8pt;
+	color: #000000;
+	background-repeat: repeat-x;
+	background-image: url(images/item_alt.gif);
+}
+
+.igdv_CaribbeanResourceButton:focus, .igdv_CaribbeanResourceButtonActive
+{
+	filter:alpha(opacity=100);
+	-moz-opacity:1.0;
+	-khtml-opacity: 1.0;
+	opacity: 1.0;
+}
+
+.igdv_CaribbeanResourceButton:hover
+{
+	filter:alpha(opacity=100);
+	-moz-opacity:1.0;
+	-khtml-opacity: 1.0;
+	opacity: 1.0;
+}
+
+.igdv_CaribbeanMultiDayEventArrowLeft
+{
+      background-image: url(images/igws_arrowLeft.gif);
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+}
+
+.igdv_CaribbeanMultiDayEventArrowRight
+{
+      background-image: url(images/igws_arrowRight.gif);
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+}

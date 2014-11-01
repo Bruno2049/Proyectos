@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="dbOpen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Server" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataBase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPWD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbOpenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbOpenResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Coneccion">
+        <s:complexType />
+      </s:element>
+      <s:element name="ConeccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConeccionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LeerTodos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Finicio" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Ffinal" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LeerTodosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LeerTodosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Nueva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrabID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="FaltaID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NuevaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NuevaResult" type="tns:IncidenciaStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="IncidenciaStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="INCID_Correcta" />
+          <s:enumeration value="INCID_Nueva" />
+          <s:enumeration value="INCID_Actualizada" />
+          <s:enumeration value="INCID_Borrada" />
+          <s:enumeration value="INCID_NoActualizada" />
+          <s:enumeration value="INCID_NoActualizadaCerrada" />
+          <s:enumeration value="INCID_Error" />
+          <s:enumeration value="INCID_dbError" />
+          <s:enumeration value="INCID_ErrorTrabID" />
+          <s:enumeration value="INCID_ErrorNoVigente" />
+          <s:enumeration value="INCID_ErrorIncapacitado" />
+          <s:enumeration value="INCID_ErrorCerrado" />
+          <s:enumeration value="INCID_ErrorNoExiste" />
+          <s:enumeration value="INCID_TrabNoExiste" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="Borrar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrabID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BorrarResult" type="tns:IncidenciaStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dbClose">
+        <s:complexType />
+      </s:element>
+      <s:element name="dbCloseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dbCloseResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="dbOpenSoapIn">
+    <wsdl:part name="parameters" element="tns:dbOpen" />
+  </wsdl:message>
+  <wsdl:message name="dbOpenSoapOut">
+    <wsdl:part name="parameters" element="tns:dbOpenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConeccionSoapIn">
+    <wsdl:part name="parameters" element="tns:Coneccion" />
+  </wsdl:message>
+  <wsdl:message name="ConeccionSoapOut">
+    <wsdl:part name="parameters" element="tns:ConeccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="LeerTodosSoapIn">
+    <wsdl:part name="parameters" element="tns:LeerTodos" />
+  </wsdl:message>
+  <wsdl:message name="LeerTodosSoapOut">
+    <wsdl:part name="parameters" element="tns:LeerTodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="NuevaSoapIn">
+    <wsdl:part name="parameters" element="tns:Nueva" />
+  </wsdl:message>
+  <wsdl:message name="NuevaSoapOut">
+    <wsdl:part name="parameters" element="tns:NuevaResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrarSoapIn">
+    <wsdl:part name="parameters" element="tns:Borrar" />
+  </wsdl:message>
+  <wsdl:message name="BorrarSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="dbCloseSoapIn">
+    <wsdl:part name="parameters" element="tns:dbClose" />
+  </wsdl:message>
+  <wsdl:message name="dbCloseSoapOut">
+    <wsdl:part name="parameters" element="tns:dbCloseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSFaltaTrabIDSoap">
+    <wsdl:operation name="dbOpen">
+      <wsdl:input message="tns:dbOpenSoapIn" />
+      <wsdl:output message="tns:dbOpenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Coneccion">
+      <wsdl:input message="tns:ConeccionSoapIn" />
+      <wsdl:output message="tns:ConeccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerTodos">
+      <wsdl:input message="tns:LeerTodosSoapIn" />
+      <wsdl:output message="tns:LeerTodosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Nueva">
+      <wsdl:input message="tns:NuevaSoapIn" />
+      <wsdl:output message="tns:NuevaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Borrar">
+      <wsdl:input message="tns:BorrarSoapIn" />
+      <wsdl:output message="tns:BorrarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dbClose">
+      <wsdl:input message="tns:dbCloseSoapIn" />
+      <wsdl:output message="tns:dbCloseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSFaltaTrabIDSoap" type="tns:WSFaltaTrabIDSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="dbOpen">
+      <soap:operation soapAction="http://tempuri.org/dbOpen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Coneccion">
+      <soap:operation soapAction="http://tempuri.org/Coneccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerTodos">
+      <soap:operation soapAction="http://tempuri.org/LeerTodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nueva">
+      <soap:operation soapAction="http://tempuri.org/Nueva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Borrar">
+      <soap:operation soapAction="http://tempuri.org/Borrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbClose">
+      <soap:operation soapAction="http://tempuri.org/dbClose" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSFaltaTrabIDSoap12" type="tns:WSFaltaTrabIDSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="dbOpen">
+      <soap12:operation soapAction="http://tempuri.org/dbOpen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Coneccion">
+      <soap12:operation soapAction="http://tempuri.org/Coneccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerTodos">
+      <soap12:operation soapAction="http://tempuri.org/LeerTodos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nueva">
+      <soap12:operation soapAction="http://tempuri.org/Nueva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Borrar">
+      <soap12:operation soapAction="http://tempuri.org/Borrar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dbClose">
+      <soap12:operation soapAction="http://tempuri.org/dbClose" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSFaltaTrabID">
+    <wsdl:port name="WSFaltaTrabIDSoap" binding="tns:WSFaltaTrabIDSoap">
+      <soap:address location="http://www.gruposicoss.com.mx/wssicoss/wsfaltatrabid/WSFaltaTrabID.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSFaltaTrabIDSoap12" binding="tns:WSFaltaTrabIDSoap12">
+      <soap12:address location="http://www.gruposicoss.com.mx/wssicoss/wsfaltatrabid/WSFaltaTrabID.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

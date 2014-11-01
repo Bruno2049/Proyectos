@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f754a243-c386-4393-a440-428751a2e12d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50723/S_Reportes.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="S_Reportes.xsd" MetadataType="Schema" ID="9f9c5723-fbde-42f1-937d-e5e4dca12ca3" SourceId="1" SourceUrl="http://localhost:50723/S_Reportes.svc?xsd=xsd1" />
+    <MetadataFile FileName="S_Reportes1.xsd" MetadataType="Schema" ID="0c4f2166-ace7-4d8e-8176-205c2f585bbb" SourceId="1" SourceUrl="http://localhost:50723/S_Reportes.svc?xsd=xsd0" />
+    <MetadataFile FileName="S_Reportes.disco" MetadataType="Disco" ID="4a95094c-7111-4eac-bb9f-3c233e8e3549" SourceId="1" SourceUrl="http://localhost:50723/S_Reportes.svc?disco" />
+    <MetadataFile FileName="S_Reportes.wsdl" MetadataType="Wsdl" ID="85e72aaa-562f-492d-bade-0f07351ef51b" SourceId="1" SourceUrl="http://localhost:50723/S_Reportes.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="S_Reportes1.wsdl" MetadataType="Wsdl" ID="1664c7ad-dc8c-45af-9abd-ed72440bc35a" SourceId="1" SourceUrl="http://localhost:50723/S_Reportes.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

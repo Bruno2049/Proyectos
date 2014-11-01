@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="eClock5.Controles.UC_ElegirIdioma"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="56" d:DesignWidth="265">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Btn_Español"  Height="32"   Width="32" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" BorderThickness="0" Click="Btn_Español_Click"  >
+            <Image  Source="pack://siteoforigin:,,,/Resources/España_32.png" Stretch="Fill" />
+        </Button>
+        <Button x:Name="Btn_Ingles"  Height="32"   Width="32" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" BorderThickness="0" Click="Btn_Ingles_Click"   Grid.Column="1">
+            <Image Source="pack://siteoforigin:,,,/Resources/EstadosUnidos_32.png" Stretch="Fill" />
+        </Button>
+        <Button x:Name="Btn_Italiano"  Height="32"   Width="32" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" BorderThickness="0" Click="Btn_Italiano_Click"   Grid.Column="2">
+            <Image Source="pack://siteoforigin:,,,/Resources/Italia_32.png" Stretch="Fill" />
+        </Button>
+
+        <Button x:Name="Btn_Portugues"  Height="32"   Width="32" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" BorderThickness="0" Click="Btn_Portugues_Click"  Grid.Column="3">
+            <Image  Source="pack://siteoforigin:,,,/Resources/Brazil_32.png" Stretch="Fill" />
+        </Button>
+        <Button x:Name="Btn_Frances"  Height="32"   Width="32" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" BorderThickness="0" Click="Btn_Frances_Click"  Grid.Column="4" >
+            <Image  Source="pack://siteoforigin:,,,/Resources/Francia_32.png" Stretch="Fill" />
+        </Button>
+
+    </Grid>
+</UserControl>

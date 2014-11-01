@@ -1,0 +1,254 @@
+.igeb_CaribbeanControl
+{
+	background-color:Transparent;
+	font-size:xx-small;
+	font-family: Segoe UI, Verdana, Helvetica, sans-serif;
+	border:solid 1px #3A74D7;
+	border-top-width:0px;
+	overflow-x: hidden;
+	_overflow: hidden!important;
+	color:Black;
+}
+
+
+.igeb_CaribbeanGroup
+{
+	background-repeat:repeat-x;
+	background-image: url(images/igeb_GroupBg.png);
+	display: block;
+	height: 30px;
+	overflow: hidden;
+	line-height: 30px;
+	color:#333333;
+	vertical-align:middle;
+}
+
+
+.igeb_CaribbeanGroupSelected
+{
+	background-repeat:repeat-x;
+	background-position:0px -30px ;
+	background-image: url(images/igeb_GroupBg.png);
+	font-weight:bold;
+	color:White;
+}
+
+
+.igeb_CaribbeanGroupActive
+{
+	background-repeat:repeat-x;
+	background-position:0px -30px ;
+	background-image: url(images/igeb_GroupBg.png);
+	font-weight:bold;
+	color:White;
+}
+
+
+.igeb_CaribbeanGroupHover
+{
+	background-repeat:repeat-x;
+	background-position:0px -30px ;
+	background-image: url(images/igeb_GroupBg.png);
+	font-weight:bold;
+	color:White;
+}
+
+
+.igeb_CaribbeanItem
+{
+	background-color:White;
+	line-height: 22px;
+}
+
+
+.igeb_CaribbeanItemImage
+{
+	padding-top:5px;
+	padding-right:5px;
+	padding-left:0px;
+}
+
+
+.igeb_CaribbeanItemSelected
+{
+	background-color:#79C8F2;
+}
+
+
+.igeb_CaribbeanItemActive
+{
+	background-color:#79C8F2;
+}
+
+
+.igeb_CaribbeanItemHover
+{
+	background-color:#79C8F2;
+}
+
+
+.igeb_CaribbeanItemDisabled
+{
+}
+
+
+.igeb_CaribbeanGroupContents
+{
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	list-style: none;
+}
+
+
+.igeb_CaribbeanGroupLabel
+{
+	font-size:12px;
+	font-family: Segoe UI, Verdana, Sans-Serif;
+	margin-left:5px;
+	padding-left:5px;
+	text-decoration:none;
+}
+
+
+.igeb_CaribbeanGroupDisabled
+{
+	background-repeat:repeat-x;
+	background-position:0px -60px ;
+	background-image: url(images/igeb_GroupBg.png);
+	color:Gray;
+}
+
+
+.igeb_CaribbeanGroupExpanderImage
+{
+	margin-top:5px;
+	margin-right:5px;
+	float: right;
+}
+
+
+.igeb_CaribbeanItemLabel
+{
+	font-weight:normal;
+	font-size:12px;
+	font-family: Segoe UI, Verdana, Arial, Sans-Serif;
+	display: block;
+}
+
+
+.igeb_CaribbeanHolder
+{
+}
+
+
+.igeb_CaribbeanGroupLink
+{
+	margin-bottom:0px;
+	padding-bottom:0px;
+	padding-left:6px;
+	display: block;
+	color: inherit;
+	text-decoration:none;
+}
+
+
+.igeb_CaribbeanItemLink
+{
+	padding-top:2px;
+	padding-bottom:2px;
+	display: block;
+	color:#333333;
+	text-decoration:none;
+}
+
+
+.igeb_CaribbeanItemParent
+{
+	background-repeat:no-repeat;
+	background-image: url(images/igeb_Bullet.png);
+}
+
+
+.igeb_CaribbeanGroupHover a
+{
+	color:White;
+}
+
+
+.igeb_CaribbeanGroup a
+{
+	color:#333333;
+}
+
+
+.igeb_CaribbeanItemContents
+{
+	margin-left:0px;
+	padding-left:0px;
+	list-style: none;
+}
+
+
+/* IE 7 fix to icon bad alignment*/
+.igeb_CaribbeanItem ,.igeb_CaribbeanItemActive ,.igeb_CaribbeanItemSelected
+{
+	min-height: 30px;
+	_height: 30px;
+}
+
+
+.igeb_CaribbeanGroupActive a
+{
+	color:White;
+}
+
+
+.igeb_CaribbeanGroup a visited
+{
+	color:#333333;
+}
+
+
+.igeb_ItemImage
+{
+	padding-top:5px;
+	padding-right:5px;
+	padding-left:0px;
+}
+
+
+.igeb_CaribbeanGroupSelected a visited
+{
+	color:White;
+}
+
+
+.igeb_CaribbeanGroupHover a visited
+{
+	color:White;
+}
+
+
+.igeb_CaribbeanGroupSelected a
+{
+	color:White;
+}
+
+
+/* IE 7 Disabled item fix */
+.igeb_CaribbeanItemDisabled a visited, .igeb_CaribbeanItemDisabled a
+{
+	color:Gray;
+}
+
+
+.igeb_CaribbeanGroupActive a visited
+{
+	color:White;
+}
+
+

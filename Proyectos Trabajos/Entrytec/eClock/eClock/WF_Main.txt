@@ -1,0 +1,372 @@
+<%@ Register TagPrefix="flashmovie" Namespace="Osmosis.Web.UI.Controls" Assembly="FlashMovie" %>
+
+<%@ Page Language="c#" MasterPageFile="~/MasterPage.master" CodeFile="WF_Main.aspx.cs"
+    AutoEventWireup="True" Inherits="eClock.WF_Main" %>
+
+<%@ Register TagPrefix="igmisc" Namespace="Infragistics.WebUI.Misc" Assembly="Infragistics2.WebUI.Misc.v8.3, Version=8.3.20083.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="ignavbar" Namespace="Infragistics.WebUI.WebNavBar" Assembly="Infragistics2.WebUI.WebNavBar.v8.3, Version=8.3.20083.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="igtbar" Namespace="Infragistics.WebUI.UltraWebToolbar" Assembly="Infragistics2.WebUI.UltraWebToolbar.v8.3, Version=8.3.20083.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="igtbl" Namespace="Infragistics.WebUI.UltraWebGrid" Assembly="Infragistics2.WebUI.UltraWebGrid.v8.3, Version=8.3.20083.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="ignav" Namespace="Infragistics.WebUI.UltraWebNavigator" Assembly="Infragistics2.WebUI.UltraWebNavigator.v8.3, Version=8.3.20083.1009, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="uc1" TagName="WC_Menu" Src="WC_Menu.ascx" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <% System.Web.HttpBrowserCapabilities browser = Request.Browser;
+    %>
+
+    <script id="igClientScript" type="text/javascript" src="Imagenes.Main/Preview.js"></script>
+
+    <script type="text/javascript" src="ieupdate.js"></script>
+
+    <table style="width: 921px; height: 400px; background-image: url(Imagenes.Main/Fondo.png);">
+        <tr>
+            <%if (browser.Id == "mozillafirefox")
+              {%>
+            <td style="width: 410px;" align="left" valign="top">
+                <% }
+                   else
+                   {%>
+                <td style="width: 360px;" align="left" valign="top">
+                    <%} %>
+                    <% 
+                        if (browser.Id == "mozillafirefox")
+                        {%>
+                    <div style="padding-top: 85px; height: 307px">
+                        <% }
+                           else
+                           {
+                               if (browser.Version == "7.0")
+                               { %>
+                        <div style="padding-top: 80px; height: 307px">
+                            <% }
+                               else
+                               { %>
+                            <div style="padding-top: 50px; height: 307px">
+                                <% }
+                               }%>
+                                <div style="padding-left: 25px; width: 290px; height: 64px">
+                                    <table style="width: 235px">
+                                        <tr>
+                                            <td valign="top" rowspan="3">
+                                                <ignav:UltraWebMenu ID="MenuEmpleados" runat="server" EnhancedRendering="True" Height="64px"
+                                                    JavaScriptFilename="" JavaScriptFileNameCommon="" LeafItemImageUrl="" ParentItemImageUrl=""
+                                                    StyleSetName="" Width="64px" OnMenuItemClicked="MenuEmpleados_MenuItemClicked" SeparatorClass="">
+                                                    <IslandStyle Cursor="Default" CustomRules="text-align: left" Font-Bold="True">
+                                                    </IslandStyle>
+                                                    <HoverItemStyle Cursor="Hand" ForeColor="White" Font-Bold="False" CustomRules="text-align: left"
+                                                        Font-Size="11pt" Font-Names="Arial Black">
+                                                    </HoverItemStyle>
+                                                    <Images>
+                                                        <BackgroundImage Url="./Imagenes.Main/Empleados.png" />
+                                                        <SubMenuImage Url="ig_menuTri.gif" />
+                                                    </Images>
+                                                    <ItemStyle CustomRules="text-align: left" ForeColor="White" Font-Names="Arial" />
+                                                    <Items>
+                                                        <ignav:Item Text="&amp;nbsp;&amp;nbsp;&amp;nbsp;">
+                                                            <Items>
+                                                                <ignav:Item Text="Nuevo Empleado" TargetUrl="WF_EmpleadosEd.aspx" ImageUrl="./Imagenes.Main/IconosMenu/E_Nuevo.png">
+                                                                    <Style Font-Bold="True"></Style>
+                                                                    <Images>
+                                                                        <DefaultImage Url="./Imagenes.Main/IconosMenu/E_Nuevo.png" />
+                                                                    </Images>
+                                                                </ignav:Item>
+                                                                <ignav:Item Text="Listado de Empleados" TargetUrl="WF_EmpleadosN.aspx" ImageUrl="./Imagenes.Main/IconosMenu/E_Listado.png">
+                                                                    <Style Font-Bold="True"></Style>
+                                                                    <Images>
+                                                                        <DefaultImage Url="./Imagenes.Main/IconosMenu/E_Listado.png" />
+                                                                    </Images>
+                                                                </ignav:Item>
+                                                                <ignav:Item Text="Imprimir Empleados" TargetUrl="WFR_Empleados.aspx?Reporte=1" ImageUrl="./Imagenes.Main/IconosMenu/E_Imprimir.png">
+                                                                    <Style Font-Bold="True"></Style>
+                                                                    <Images>
+                                                                        <DefaultImage Url="./Imagenes.Main/IconosMenu/E_Imprimir.png" />
+                                                                    </Images>
+                                                                </ignav:Item>
+                                                                <ignav:Item Text="Pegar desde Excel" TargetUrl="WF_Importacion.aspx" ImageUrl="./Imagenes.Main/IconosMenu/E_Excel.png">
+                                                                    <Style Font-Bold="True"></Style>
+                                                                    <Images>
+                                                                        <DefaultImage Url="./Imagenes.Main/IconosMenu/E_Excel.png" />
+                                                                    </Images>
+                                                                </ignav:Item>
+                                                            </Items>
+                                                        </ignav:Item>
+                                                    </Items>
+                                                    <DisabledStyle Font-Names="MS Sans Serif" Font-Size="8pt" ForeColor="Gray" BorderStyle="Ridge"
+                                                        BorderWidth="1px" CustomRules="text-align: left">
+                                                        <BorderDetails ColorBottom="128, 128, 255" ColorLeft="White" ColorRight="128, 128, 255"
+                                                            ColorTop="White" StyleBottom="Ridge" StyleLeft="Ridge" StyleRight="Ridge" StyleTop="Ridge" />
+                                                    </DisabledStyle>
+                                                    <Levels>
+                                                        <ignav:Level Index="0" />
+                                                        <ignav:Level Index="1" />
+                                                    </Levels>
+                                                    <SeparatorStyle CssClass="SeparatorClass" CustomRules="background-repeat:no-repeat;" />
+                                                    <ExpandEffects Delay="100" Duration="200" RemovalDelay="500" ShadowWidth="3" ShadowColor="Black"
+                                                        Type="Slide" />
+                                                    <MenuClientSideEvents ItemHover="ItemHover" SubMenuDisplay="SubMenuDisplay" InitializeMenu="" ItemChecked="" ItemClick="" />
+                                                </ignav:UltraWebMenu>
+                                            </td>
+                                            <td colspan="2" style="width: 250px; padding-top: 20px;" valign="top">
+                                                <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="15pt" ForeColor="White"
+                                                    Text="Empleados"></asp:Label></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="" valign="top">
+                                                <div style="width: 64px; padding-left: 50px; padding-top: 10px; height: 64px;">
+                                                    <ignav:UltraWebMenu ID="MenuTurnos" runat="server" EnhancedRendering="True" Height="64px"
+                                                        JavaScriptFilename="" JavaScriptFileNameCommon="" LeafItemImageUrl="" ParentItemImageUrl=""
+                                                        StyleSetName="" Width="64px" ForeColor="Transparent" OnMenuItemClicked="MenuTurnos_MenuItemClicked">
+                                                        <IslandStyle BackColor="Transparent" Cursor="Default" CustomRules="text-align: left"
+                                                            Font-Bold="True">
+                                                        </IslandStyle>
+                                                        <HoverItemStyle Cursor="Hand" ForeColor="White" Font-Bold="False" Font-Names="Arial Black"
+                                                            CustomRules="text-align: left" Font-Size="11pt">
+                                                        </HoverItemStyle>
+                                                        <Images>
+                                                            <BackgroundImage Url="./Imagenes.Main/Turnos.png" />
+                                                            <SubMenuImage Url="ig_menuTri.gif" />
+                                                        </Images>
+                                                        <ItemStyle Cursor="Default" CustomRules="text-align: left" Font-Names="Arial" ForeColor="White" />
+                                                        <Items>
+                                                            <ignav:Item Text="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;">
+                                                                <Items>
+                                                                    <ignav:Item Text="Captura Express" TargetUrl="WF_CreacionTurnosExpress.aspx" ImageUrl="./Imagenes.Main/IconosMenu/T_CapturaExpress.png">
+                                                                        <Style Font-Bold="True"></Style>
+                                                                        <Images>
+                                                                            <DefaultImage Url="./Imagenes.Main/IconosMenu/T_CapturaExpress.png" />
+                                                                        </Images>
+                                                                    </ignav:Item>
+                                                                    <ignav:Item Text="Nuevo Turno" TargetUrl="WF_TurnosE.aspx?Parametros=NUEVO" ImageUrl="./Imagenes.Main/IconosMenu/T_Nuevo.png">
+                                                                        <Style Font-Bold="True"></Style>
+                                                                        <Images>
+                                                                            <DefaultImage Url="./Imagenes.Main/IconosMenu/T_Nuevo.png" />
+                                                                        </Images>
+                                                                    </ignav:Item>
+                                                                    <ignav:Item Text="Asignaci&#243;n de Turnos" TargetUrl="WF_TurnosEmpleadosE.aspx"
+                                                                        ImageUrl="./Imagenes.Main/IconosMenu/T_Asignacion.png">
+                                                                        <Style Font-Bold="True"></Style>
+                                                                        <Images>
+                                                                            <DefaultImage Url="./Imagenes.Main/IconosMenu/T_Asignacion.png" />
+                                                                        </Images>
+                                                                    </ignav:Item>
+                                                                    <ignav:Item Text="Asignaci&#243;n Express" TargetUrl="WF_TurnosAsignacionExpress.aspx"
+                                                                        ImageUrl="./Imagenes.Main/IconosMenu/T_AsignacionExpress.png">
+                                                                        <Style Font-Bold="True"></Style>
+                                                                        <Images>
+                                                                            <DefaultImage Url="./Imagenes.Main/IconosMenu/T_AsignacionExpress.png" />
+                                                                        </Images>
+                                                                    </ignav:Item>
+                                                                    <ignav:Item Text="Asignaci&#243;n Avanzada" TargetUrl="WF_PersonasSemana.aspx?Parametros=Turnos"
+                                                                        ImageUrl="./Imagenes.Main/IconosMenu/T_AsignacionAvanzada.png">
+                                                                        <Style Font-Bold="True"></Style>
+                                                                        <Images>
+                                                                            <DefaultImage Url="./Imagenes.Main/IconosMenu/T_AsignacionAvanzada.png" />
+                                                                        </Images>
+                                                                    </ignav:Item>
+                                                                </Items>
+                                                                <Style Font-Size="15pt"></Style>
+                                                            </ignav:Item>
+                                                        </Items>
+                                                        <TopLevelLeafItemStyle BackColor="CornflowerBlue">
+                                                        </TopLevelLeafItemStyle>
+                                                        <DisabledStyle Font-Names="MS Sans Serif" Font-Size="8pt" ForeColor="Gray" CustomRules="text-align: left">
+                                                        </DisabledStyle>
+                                                        <Levels>
+                                                            <ignav:Level Index="0" />
+                                                            <ignav:Level Index="1" />
+                                                        </Levels>
+                                                        <SeparatorStyle BackgroundImage="ig_menuSep.gif" CssClass="SeparatorClass" CustomRules="background-repeat:repeat-x; " />
+                                                        <ExpandEffects Delay="100" Duration="200" RemovalDelay="500" ShadowColor="Black"
+                                                            Type="Slide" ShadowWidth="3" />
+                                                        <MenuClientSideEvents ItemHover="ItemHover" SubMenuDisplay="SubMenuDisplay" />
+                                                    </ignav:UltraWebMenu>
+                                                    &nbsp; &nbsp;</div>
+                                            </td>
+                                            <td style="padding-top: 30px" valign="top">
+                                                <asp:Label ID="Label2" runat="server" Font-Names="Arial" Font-Size="15pt" Text="Turnos"
+                                                    ForeColor="White"></asp:Label></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <% 
+                                    if (browser.Id == "mozillafirefox")
+                                    {%>
+                                <div style="padding-left: 225px; width: 64px; padding-top: 55px;">
+                                    <% }
+                                       else
+                                       {
+                                           if (browser.Version == "7.0")
+                                           {
+                                    %>
+                                    <div style="padding-left: 225px; width: 64px; padding-top: 55px;">
+                                        <% }
+                                           else
+                                           { %>
+                                        <div style="padding-left: 225px; width: 64px;">
+                                            <% }
+                                           }%>
+                                            <table style="width: 71px">
+                                                <tr>
+                                                    <td valign="top">
+                                                        <ignav:UltraWebMenu ID="MenuAsistencia" runat="server" EnhancedRendering="True" Height="64px"
+                                                            JavaScriptFilename="" JavaScriptFileNameCommon="" LeafItemImageUrl="" ParentItemImageUrl=""
+                                                            StyleSetName="" Width="64px" ForeColor="Transparent" OnMenuItemClicked="MenuAsistencia_MenuItemClicked">
+                                                            <IslandStyle BackColor="Transparent" Cursor="Default" CustomRules="text-align: left"
+                                                                Font-Bold="True">
+                                                            </IslandStyle>
+                                                            <HoverItemStyle Cursor="Hand" ForeColor="White" Font-Bold="True" CustomRules="text-align: left"
+                                                                Font-Names="Arial Black" Font-Size="11pt">
+                                                            </HoverItemStyle>
+                                                            <Images>
+                                                                <BackgroundImage Url="./Imagenes.Main/Asistencia.png" />
+                                                                <SubMenuImage Url="ig_menuTri.gif" />
+                                                            </Images>
+                                                            <ItemStyle Cursor="Default" CustomRules="text-align: left" Font-Bold="False" Font-Names="Arial"
+                                                                ForeColor="White" />
+                                                            <Items>
+                                                                <ignav:Item Text="&amp;nbsp;&amp;nbsp;&amp;nbsp;">
+                                                                    <Items>
+                                                                        <ignav:Item Text="Faltas y Retardos" TargetUrl="WF_Inasistencias.aspx" ImageUrl="./Imagenes.Main/IconosMenu/A_Faltas.png">
+                                                                            <Images>
+                                                                                <DefaultImage Url="./Imagenes.Main/IconosMenu/A_Faltas.png" />
+                                                                            </Images>
+                                                                        </ignav:Item>
+                                                                        <ignav:Item Text="Asistencia Anual" TargetUrl="WF_Personas_Diario.aspx" ImageUrl="./Imagenes.Main/IconosMenu/A_AsistenciaAnual.png">
+                                                                            <Images>
+                                                                                <DefaultImage Url="./Imagenes.Main/IconosMenu/A_AsistenciaAnual.png" />
+                                                                            </Images>
+                                                                        </ignav:Item>
+                                                                        <ignav:Item Text="Justificar" TargetUrl="WF_IncidenciasE.aspx" ImageUrl="./Imagenes.Main/IconosMenu/A_Justificar.png">
+                                                                            <Images>
+                                                                                <DefaultImage Url="./Imagenes.Main/IconosMenu/A_Justificar.png" />
+                                                                            </Images>
+                                                                        </ignav:Item>
+                                                                        <ignav:Item Text="Asistencia Semanal" ImageUrl="./Imagenes.Main/IconosMenu/A_AsistenciaSemanal.png"
+                                                                            TargetUrl="WF_PersonasSemana.aspx?Parametros=Asistencia">
+                                                                            <Images>
+                                                                                <DefaultImage Url="./Imagenes.Main/IconosMenu/A_AsistenciaSemanal.png" />
+                                                                            </Images>
+                                                                        </ignav:Item>
+                                                                        <ignav:Item Text="Autorizar Horas Extra" TargetUrl="WF_TiempoExtra.aspx" ImageUrl="./Imagenes.Main/IconosMenu/A_AutorizarHrsEx.png">
+                                                                            <Images>
+                                                                                <DefaultImage Url="./Imagenes.Main/IconosMenu/A_AutorizarHrsEx.png" />
+                                                                            </Images>
+                                                                        </ignav:Item>
+                                                                    </Items>
+                                                                    <Style Font-Size="15pt"></Style>
+                                                                </ignav:Item>
+                                                            </Items>
+                                                            <TopLevelLeafItemStyle BackColor="CornflowerBlue">
+                                                            </TopLevelLeafItemStyle>
+                                                            <DisabledStyle Font-Names="MS Sans Serif" Font-Size="8pt" ForeColor="Gray" CustomRules="text-align: left">
+                                                            </DisabledStyle>
+                                                            <Levels>
+                                                                <ignav:Level Index="0" />
+                                                                <ignav:Level Index="1" />
+                                                            </Levels>
+                                                            <SeparatorStyle BackgroundImage="ig_menuSep.gif" CssClass="SeparatorClass" CustomRules="background-repeat:repeat-x; " />
+                                                            <ExpandEffects Delay="100" Duration="200" RemovalDelay="500" ShadowWidth="3" ShadowColor="Black"
+                                                                Type="Slide" />
+                                                            <MenuClientSideEvents ItemHover="ItemHover" SubMenuDisplay="SubMenuDisplay" />
+                                                        </ignav:UltraWebMenu>
+                                                    </td>
+                                                    <td style="padding-top: 20px;" valign="top">
+                                                        <asp:Label ID="Label3" runat="server" Font-Names="Arial" Font-Size="15pt" ForeColor="White"
+                                                            Text="Asistencia"></asp:Label></td>
+                                                </tr>
+                                            </table>
+                                            &nbsp; &nbsp;
+                                        </div>
+                                        <div style="padding-left: 255px; width: 64px; padding-top: 15px; height: 64px">
+                                            <table style="width: 88px">
+                                                <tr>
+                                                    <td>
+                                                        <ignav:UltraWebMenu ID="MenuReportes" runat="server" EnhancedRendering="True" Height="64px"
+                                                            JavaScriptFilename="" JavaScriptFileNameCommon="" LeafItemImageUrl="" ParentItemImageUrl=""
+                                                            StyleSetName="" Width="64px" ForeColor="Transparent" OnMenuItemClicked="MenuReportes_MenuItemClicked"
+                                                            SeparatorClass="">
+                                                            <IslandStyle BackColor="Transparent" Cursor="Default" CustomRules="text-align: left"
+                                                                Font-Bold="True">
+                                                            </IslandStyle>
+                                                            <HoverItemStyle Cursor="Hand" ForeColor="White" Font-Bold="False" CustomRules="text-align: left"
+                                                                Font-Names="Arial Black" Font-Size="11pt">
+                                                            </HoverItemStyle>
+                                                            <Images>
+                                                                <BackgroundImage Url="./Imagenes.Main/Reportes.png" />
+                                                                <SubMenuImage Url="ig_menuTri.gif" />
+                                                            </Images>
+                                                            <ItemStyle Cursor="Default" CustomRules="text-align: left" Font-Bold="True" Font-Names="Arial"
+                                                                ForeColor="White" />
+                                                            <Items>
+                                                                <ignav:Item Text="&amp;nbsp;&amp;nbsp;&amp;nbsp;" TargetUrl="WFR_ComidasTiempoDetallado.aspx">
+                                                                    <Items>
+                                                                        <ignav:Item Text="Asistecia Detallada" TargetUrl="WFR_ComidasTiempoDetallado.aspx"
+                                                                            ImageUrl="./Imagenes.Main/IconosMenu/R_AsistenciaDetallada.png">
+                                                                            <Images>
+                                                                                <DefaultImage Url="./Imagenes.Main/IconosMenu/R_AsistenciaDetallada.png" />
+                                                                            </Images>
+                                                                        </ignav:Item>
+                                                                        <ignav:Item Text="Asistencias" TargetUrl="WFR_Asistencia.aspx?opc=1" ImageUrl="./Imagenes.Main/IconosMenu/R_Asistencias.png">
+                                                                            <Images>
+                                                                                <DefaultImage Url="./Imagenes.Main/IconosMenu/R_Asistencias.png" />
+                                                                            </Images>
+                                                                        </ignav:Item>
+                                                                        <ignav:Item Text="Asistencia Mensual" TargetUrl="WFR_EmpleadosStatus_B.aspx?opc=1"
+                                                                            ImageUrl="./Imagenes.Main/IconosMenu/R_AsistenciaMensual.png">
+                                                                            <Images>
+                                                                                <DefaultImage Url="./Imagenes.Main/IconosMenu/R_AsistenciaMensual.png" />
+                                                                            </Images>
+                                                                        </ignav:Item>
+                                                                        <ignav:Item Text="Gr&#225;fica de Asistencia por Centro de Costos" ImageUrl="./Imagenes.Main/IconosMenu/R_Grafica.png"
+                                                                            TargetUrl="WFR_GraficasGrupo.aspx?Grupo=1">
+                                                                            <Images>
+                                                                                <DefaultImage Url="./Imagenes.Main/IconosMenu/R_Grafica.png" />
+                                                                            </Images>
+                                                                        </ignav:Item>
+                                                                        <ignav:Item Text="Accesos por D&#237;a" TargetUrl="WFR_AccesosTerminalDetallado.aspx"
+                                                                            ImageUrl="./Imagenes.Main/IconosMenu/R_Accesos.png">
+                                                                            <Images>
+                                                                                <DefaultImage Url="./Imagenes.Main/IconosMenu/R_Accesos.png" />
+                                                                            </Images>
+                                                                        </ignav:Item>
+                                                                        <ignav:Item Text="Horas Extra Detallado" TargetUrl="WFR_HorasExtrasDetallado.aspx"
+                                                                            ImageUrl="./Imagenes.Main/IconosMenu/R_HorasExtras.png">
+                                                                            <Images>
+                                                                                <DefaultImage Url="./Imagenes.Main/IconosMenu/R_HorasExtras.png" />
+                                                                            </Images>
+                                                                        </ignav:Item>
+                                                                    </Items>
+                                                                    <Style Font-Size="15pt"></Style>
+                                                                </ignav:Item>
+                                                            </Items>
+                                                            <TopLevelLeafItemStyle BackColor="CornflowerBlue">
+                                                            </TopLevelLeafItemStyle>
+                                                            <DisabledStyle Font-Names="MS Sans Serif" Font-Size="8pt" ForeColor="Gray" CustomRules="text-align: left">
+                                                            </DisabledStyle>
+                                                            <Levels>
+                                                                <ignav:Level Index="0" />
+                                                                <ignav:Level Index="1" />
+                                                            </Levels>
+                                                            <SeparatorStyle BackgroundImage="ig_menuSep.gif" CssClass="SeparatorClass" CustomRules="background-repeat:repeat-x; " />
+                                                            <ExpandEffects Delay="100" Duration="200" RemovalDelay="500" ShadowWidth="3" ShadowColor="Black"
+                                                                Type="Slide" />
+                                                            <MenuClientSideEvents ItemHover="ItemHover" SubMenuDisplay="SubMenuDisplay" InitializeMenu=""
+                                                                ItemChecked="" ItemClick="" />
+                                                        </ignav:UltraWebMenu>
+                                                    </td>
+                                                    <td valign="top" style="padding-top: 20px">
+                                                        <asp:Label ID="Label4" runat="server" Font-Names="Arial" Font-Size="15pt" ForeColor="White"
+                                                            Text="Reportes"></asp:Label></td>
+                                                </tr>
+                                            </table>
+                                            &nbsp;&nbsp;
+                                        </div>
+                                    </div>
+                                </div>
+                </td>
+                <td style="height: 122px; width: 50px;" valign="top" align="left">
+                    <div style="padding-top: 38px; height: 57%; padding-left: 9px;">
+                        <img id="vistaPrevia" style="width: 478px; height: 348px; background-image: url(Imagenes.Main/Default.jpg);" /></div>
+                </td>
+        </tr>
+    </table>
+</asp:Content>

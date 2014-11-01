@@ -1,0 +1,250 @@
+﻿@{
+    ViewBag.Title = "Asistencias";
+}
+
+<h2>@ViewBag.Persona</h2>
+
+@if (ViewBag.Asistencias != null)
+{
+    bool MostrarHorasExtras = false;
+    bool MostrarComidas = false;
+    foreach (eClockBase.Modelos.Asistencias.Model_Asistencia_Lineal_N Objeto in ViewBag.Asistencias)
+    {
+        if (Objeto.PHEX)
+        {
+            MostrarHorasExtras = true;
+        }
+        if (Objeto.PCOMI)
+        {
+            MostrarComidas = true;
+        }
+    }
+    
+    <table data-role="table" id="table-column-toggle" data-mode="reflow" class="ui-responsive">
+        <thead>
+            <tr class="ui-bar-d">
+
+                <th>Movie Title</th>
+                <th data-priority="1">
+                    <abbr title="Rotten Tomato Rating">Rating</abbr></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (eClockBase.Modelos.Asistencias.Model_Asistencia_Lineal_N Objeto in ViewBag.Asistencias)
+            {
+                <tr>
+                    <th>
+                        <input type="checkbox" name="Chba_@Objeto.ID" id="Chba_@Objeto.ID">
+
+                        <label for="Chba_@Objeto.ID">@Objeto.FECHA.ToShortDateString()  @eClockBase.CeC.FechaHora2Hora(Objeto.E)
+                            - 
+                @if (MostrarComidas)
+                {
+                        
+                    @(eClockBase.CeC.FechaHora2Hora(Objeto.CS) + " - " + eClockBase.CeC.FechaHora2Hora(Objeto.CR) + " - ")
+                }
+
+                            @eClockBase.CeC.FechaHora2Hora(Objeto.S)
+                            @Objeto.TURNO
+                            @Objeto.INC
+
+                        </label>
+
+                    </th>
+                    <td><a href="#PppInfc@Objeto.ID" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Saber más">Saber más</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+    
+    <div class="ui-field-contain">
+        @foreach (eClockBase.Modelos.Asistencias.Model_Asistencia_Lineal_N Objeto in ViewBag.Asistencias)
+        {
+            <fieldset data-role="controlgroup" data-type="horizontal">
+
+                <a href="#PppInfc@Objeto.ID" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Saber más">Saber más</a>
+                <div data-role="popup" id="PppInfc@Objeto.ID" class="ui-content" data-theme="a" style="max-width: 350px;">
+                    <p>Here is a <strong>tiny popup</strong> being used like a tooltip. The text will wrap to multiple lines as needed.</p>
+                </div>
+
+                <input type="checkbox" name="Chb_@Objeto.ID" id="Chbc_@Objeto.ID">
+
+                <label for="Chbc_@Objeto.ID">@Objeto.FECHA.ToShortDateString()  @eClockBase.CeC.FechaHora2Hora(Objeto.E)
+                    - 
+                @if (MostrarComidas)
+                {
+                        
+                    @(eClockBase.CeC.FechaHora2Hora(Objeto.CS) + " - " + eClockBase.CeC.FechaHora2Hora(Objeto.CR) + " - ")
+                }
+
+                    @eClockBase.CeC.FechaHora2Hora(Objeto.S)
+                    @Objeto.TURNO
+                    @Objeto.INC
+
+                </label>
+            </fieldset>
+
+        }
+    </div>
+    
+    <ul data-role="listview" data-inset="false">
+        @foreach (eClockBase.Modelos.Asistencias.Model_Asistencia_Lineal_N Objeto in ViewBag.Asistencias)
+        {
+            <li>
+                <a href="#">
+
+                    <input type="checkbox" name="Chb_@Objeto.ID" id="Chbb_@Objeto.ID">
+
+                    <label for="Chbb_@Objeto.ID">@Objeto.FECHA.ToShortDateString()  @eClockBase.CeC.FechaHora2Hora(Objeto.E)
+                        - 
+                @if (MostrarComidas)
+                {
+                        
+                    @(eClockBase.CeC.FechaHora2Hora(Objeto.CS) + " - " + eClockBase.CeC.FechaHora2Hora(Objeto.CR) + " - ")
+                }
+
+                        @eClockBase.CeC.FechaHora2Hora(Objeto.S)
+                        @Objeto.TURNO
+                        @Objeto.INC
+
+                    </label>
+
+                </a>
+                <a href="#PppInf@Objeto.ID" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Learn more">Saber mas</a>
+                <div data-role="popup" id="PppInf@Objeto.ID" class="ui-content" data-theme="a" style="max-width: 350px;">
+                    <p>Here is a <strong>tiny popup</strong> being used like a tooltip. The text will wrap to multiple lines as needed.</p>
+                </div>
+            </li>
+            
+
+        }
+
+    </ul>
+    
+    
+    <form>
+        <fieldset data-role="controlgroup">
+            <legend>@ViewBag.Persona</legend>
+            @foreach (eClockBase.Modelos.Asistencias.Model_Asistencia_Lineal_N Objeto in ViewBag.Asistencias)
+            {
+                <input type="checkbox" name="Chb_@Objeto.ID" id="Chb_@Objeto.ID">
+                <label for="Chb_@Objeto.ID">@Objeto.FECHA.ToShortDateString()  @eClockBase.CeC.FechaHora2Hora(Objeto.E)
+                    - 
+                @if (MostrarComidas)
+                {
+                        
+                    @(eClockBase.CeC.FechaHora2Hora(Objeto.CS) + " - " + eClockBase.CeC.FechaHora2Hora(Objeto.CR) + " - ")
+                }
+
+                    @eClockBase.CeC.FechaHora2Hora(Objeto.S)
+                    <br />                    
+                    @Objeto.INC @Objeto.TURNO
+
+                    <a href="#PppInfo@Objeto.ID" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Learn more">Saber mas</a>
+                </label>
+                <div data-role="popup" id="PppInfo@Objeto.ID" class="ui-content" data-theme="a" style="max-width: 350px;">
+                    <p>Here is a <strong>tiny popup</strong> being used like a tooltip. The text will wrap to multiple lines as needed.</p>
+                </div>
+               
+            }
+
+        </fieldset>
+    </form>
+    
+
+    
+    <table data-role="table" id="asistencias-table" data-mode="reflow" class="ui-responsive">
+        <thead>
+            <tr>
+                <th data-priority="1"></th>
+                <th data-priority="2">Fecha</th>
+                <th data-priority="3">Entrada</th>
+                @if (MostrarComidas)
+                {
+                    <th data-priority="4">
+                        <abbr title="Salida a comer">Sal. Com.</abbr></th>
+                    <th data-priority="4">
+                        <abbr title="Regreso de comer">Reg. Com.</abbr></th>
+                }
+                <th data-priority="5">Salida</th>
+                <th data-priority="6">Turno</th>
+                <th data-priority="6">Incidencia</th>
+                @if (MostrarComidas)
+                {
+                    <th data-priority="6">
+                        <abbr title="Incidencia de comida">Inc. Com.</abbr></th>
+                }
+                <th data-priority="5">
+                    <abbr title="Tiempo Trabajado">Trabajado</abbr></th>
+                <th data-priority="6">
+                    <abbr title="Tiempo de retardo">Retardo</abbr></th>
+                <th data-priority="6">
+                    <abbr title="Tiempo trabajado menos salidas (a comer)">Estancia</abbr></th>
+                @if (MostrarComidas)
+                {
+                    <th data-priority="6">
+                        <abbr title="Tiempo de comida">Comida</abbr></th>
+                }
+
+                @if (MostrarHorasExtras)
+                {
+                    <th data-priority="5">
+                        <abbr title="Tiempo extra Trabajado">Extra Trabajado</abbr></th>
+                    <th data-priority="6">
+                        <abbr title="Tiempo extra calculado">Extra Calculado</abbr></th>
+                    <th data-priority="5">
+                        <abbr title="Tiempo extra autorizado">Autorizadas</abbr></th>
+                    <th data-priority="6">
+                        <abbr title="horas extras dobles">Dobles</abbr></th>
+                    <th data-priority="5">
+                        <abbr title="Horas extras triples">Triples</abbr></th>
+      
+                }
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (eClockBase.Modelos.Asistencias.Model_Asistencia_Lineal_N Objeto in ViewBag.Asistencias)
+            {
+                <tr>
+                    <td></td>
+                    <th>
+                        <label>
+                            <input type="checkbox" name="Chb_@Objeto.ID">@Objeto.FECHA.ToShortDateString()</label>
+                    </th>
+                    <th>@Objeto.E.ToShortTimeString()</th>
+                    @if (MostrarComidas)
+                    {
+                        <th>@Objeto.CS.ToShortTimeString()</th>
+                        <th>@Objeto.CR.ToShortTimeString()</th>
+                    }
+                    <th>@Objeto.S.ToShortTimeString()</th>
+                    <th>@Objeto.TURNO</th>
+                    <th>@Objeto.INC</th>
+                    @if (MostrarComidas)
+                    {
+                        <th>@Objeto.IC</th>
+                    }
+                    <th>@Objeto.TT.ToShortTimeString()</th>
+                    <th>@Objeto.TDE.ToShortTimeString()</th>
+                    <th>@Objeto.TE.ToShortTimeString()</th>
+                    @if (MostrarComidas)
+                    {
+                        <th>@Objeto.TC.ToShortTimeString()</th>
+                    }
+                    @if (MostrarHorasExtras)
+                    {
+                        <th>@Objeto.HEC.ToShortTimeString()</th>
+                        <th>@Objeto.HES.ToShortTimeString()</th>
+                        <th>@Objeto.HEA.ToShortTimeString()</th>
+                        <th>@Objeto.HED.ToShortTimeString()</th>
+                        <th>@Objeto.HET.ToShortTimeString()</th>
+                    }
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
+

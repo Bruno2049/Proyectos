@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:50723/S_Incidencias.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:50723/S_Incidencias.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="S_Incidencias_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="DoWork" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_ObtenTiposIncidenciasMenu_InputMessage">
+    <wsdl:part name="parameters" element="ObtenTiposIncidenciasMenu" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_ObtenTiposIncidenciasMenu_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenTiposIncidenciasMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_TipoIncidenciaAgrega_InputMessage">
+    <wsdl:part name="parameters" element="TipoIncidenciaAgrega" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_TipoIncidenciaAgrega_OutputMessage">
+    <wsdl:part name="parameters" element="TipoIncidenciaAgregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_CreaIncidencia_InputMessage">
+    <wsdl:part name="parameters" element="CreaIncidencia" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_CreaIncidencia_OutputMessage">
+    <wsdl:part name="parameters" element="CreaIncidenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_AsignaIncidenciaPersona_InputMessage">
+    <wsdl:part name="parameters" element="AsignaIncidenciaPersona" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_AsignaIncidenciaPersona_OutputMessage">
+    <wsdl:part name="parameters" element="AsignaIncidenciaPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_CargaIncidencias_InputMessage">
+    <wsdl:part name="parameters" element="CargaIncidencias" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_CargaIncidencias_OutputMessage">
+    <wsdl:part name="parameters" element="CargaIncidenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_AsignaIncidenciaPersonasDiario_InputMessage">
+    <wsdl:part name="parameters" element="AsignaIncidenciaPersonasDiario" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_AsignaIncidenciaPersonasDiario_OutputMessage">
+    <wsdl:part name="parameters" element="AsignaIncidenciaPersonasDiarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_StatusVacaciones_InputMessage">
+    <wsdl:part name="parameters" element="StatusVacaciones" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_StatusVacaciones_OutputMessage">
+    <wsdl:part name="parameters" element="StatusVacacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_SolicitaIncidencia_InputMessage">
+    <wsdl:part name="parameters" element="SolicitaIncidencia" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_SolicitaIncidencia_OutputMessage">
+    <wsdl:part name="parameters" element="SolicitaIncidenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_SolicitaVacaciones_InputMessage">
+    <wsdl:part name="parameters" element="SolicitaVacaciones" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_SolicitaVacaciones_OutputMessage">
+    <wsdl:part name="parameters" element="SolicitaVacacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_StatusDias_InputMessage">
+    <wsdl:part name="parameters" element="StatusDias" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_StatusDias_OutputMessage">
+    <wsdl:part name="parameters" element="StatusDiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_StatusHoras_InputMessage">
+    <wsdl:part name="parameters" element="StatusHoras" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_StatusHoras_OutputMessage">
+    <wsdl:part name="parameters" element="StatusHorasResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_StatusRegla_InputMessage">
+    <wsdl:part name="parameters" element="StatusRegla" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_StatusRegla_OutputMessage">
+    <wsdl:part name="parameters" element="StatusReglaResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_StatusReglaHoras_InputMessage">
+    <wsdl:part name="parameters" element="StatusReglaHoras" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_StatusReglaHoras_OutputMessage">
+    <wsdl:part name="parameters" element="StatusReglaHorasResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_ObtenerSaldos_InputMessage">
+    <wsdl:part name="parameters" element="ObtenerSaldos" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_ObtenerSaldos_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenerSaldosResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_ObtenerHistorial_InputMessage">
+    <wsdl:part name="parameters" element="ObtenerHistorial" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_ObtenerHistorial_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenerHistorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_CorrigeMovimientoInventario_InputMessage">
+    <wsdl:part name="parameters" element="CorrigeMovimientoInventario" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_CorrigeMovimientoInventario_OutputMessage">
+    <wsdl:part name="parameters" element="CorrigeMovimientoInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_ObtenIncidencias_InputMessage">
+    <wsdl:part name="parameters" element="ObtenIncidencias" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_ObtenIncidencias_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenIncidenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_EnviaANomina_InputMessage">
+    <wsdl:part name="parameters" element="EnviaANomina" />
+  </wsdl:message>
+  <wsdl:message name="S_Incidencias_EnviaANomina_OutputMessage">
+    <wsdl:part name="parameters" element="EnviaANominaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="S_Incidencias">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/DoWork" message="S_Incidencias_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/DoWorkResponse" message="S_Incidencias_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTiposIncidenciasMenu">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/ObtenTiposIncidenciasMenu" message="S_Incidencias_ObtenTiposIncidenciasMenu_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/ObtenTiposIncidenciasMenuResponse" message="S_Incidencias_ObtenTiposIncidenciasMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoIncidenciaAgrega">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/TipoIncidenciaAgrega" message="S_Incidencias_TipoIncidenciaAgrega_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/TipoIncidenciaAgregaResponse" message="S_Incidencias_TipoIncidenciaAgrega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreaIncidencia">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/CreaIncidencia" message="S_Incidencias_CreaIncidencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/CreaIncidenciaResponse" message="S_Incidencias_CreaIncidencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaIncidenciaPersona">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/AsignaIncidenciaPersona" message="S_Incidencias_AsignaIncidenciaPersona_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/AsignaIncidenciaPersonaResponse" message="S_Incidencias_AsignaIncidenciaPersona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaIncidencias">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/CargaIncidencias" message="S_Incidencias_CargaIncidencias_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/CargaIncidenciasResponse" message="S_Incidencias_CargaIncidencias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaIncidenciaPersonasDiario">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/AsignaIncidenciaPersonasDiario" message="S_Incidencias_AsignaIncidenciaPersonasDiario_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/AsignaIncidenciaPersonasDiarioResponse" message="S_Incidencias_AsignaIncidenciaPersonasDiario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StatusVacaciones">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/StatusVacaciones" message="S_Incidencias_StatusVacaciones_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/StatusVacacionesResponse" message="S_Incidencias_StatusVacaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitaIncidencia">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/SolicitaIncidencia" message="S_Incidencias_SolicitaIncidencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/SolicitaIncidenciaResponse" message="S_Incidencias_SolicitaIncidencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitaVacaciones">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/SolicitaVacaciones" message="S_Incidencias_SolicitaVacaciones_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/SolicitaVacacionesResponse" message="S_Incidencias_SolicitaVacaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StatusDias">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/StatusDias" message="S_Incidencias_StatusDias_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/StatusDiasResponse" message="S_Incidencias_StatusDias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StatusHoras">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/StatusHoras" message="S_Incidencias_StatusHoras_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/StatusHorasResponse" message="S_Incidencias_StatusHoras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StatusRegla">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/StatusRegla" message="S_Incidencias_StatusRegla_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/StatusReglaResponse" message="S_Incidencias_StatusRegla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StatusReglaHoras">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/StatusReglaHoras" message="S_Incidencias_StatusReglaHoras_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/StatusReglaHorasResponse" message="S_Incidencias_StatusReglaHoras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSaldos">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/ObtenerSaldos" message="S_Incidencias_ObtenerSaldos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/ObtenerSaldosResponse" message="S_Incidencias_ObtenerSaldos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerHistorial">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/ObtenerHistorial" message="S_Incidencias_ObtenerHistorial_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/ObtenerHistorialResponse" message="S_Incidencias_ObtenerHistorial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CorrigeMovimientoInventario">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/CorrigeMovimientoInventario" message="S_Incidencias_CorrigeMovimientoInventario_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/CorrigeMovimientoInventarioResponse" message="S_Incidencias_CorrigeMovimientoInventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenIncidencias">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/ObtenIncidencias" message="S_Incidencias_ObtenIncidencias_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/ObtenIncidenciasResponse" message="S_Incidencias_ObtenIncidencias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviaANomina">
+      <wsdl:input wsaw:Action="urn:S_Incidencias/EnviaANomina" message="S_Incidencias_EnviaANomina_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Incidencias/EnviaANominaResponse" message="S_Incidencias_EnviaANomina_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

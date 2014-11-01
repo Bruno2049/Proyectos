@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Historial de Mensajes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div data-role="header">
+    <button class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-check">Actualizar</button>
+    <h2>Historial</h2>
+    <a href="@Url.Action("NuevoMsj", "Mensajes")" data-icon="action" class="ui-btn-right">Nuevo mensaje</a>
+</div>
+<div>
+    @CeC_Listado.MuestraListado(ViewBag.Lista, "Selecciona un contacto y continua la conversacion", "Redirige")
+    @if (ViewBag.Lista.Count == 0)
+    { 
+        <ul>
+            <li>
+                <h4>Por el momento no tienes una conversacion pendiente</h4>
+            </li>
+        </ul>
+    }
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        function Redirige(Llave) {
+            if (Llave != null) {
+                var Url = '@Url.Action("Detalles", "Mensajes")/' + Llave + ".html";
+                $.mobile.changePage(Url, { transition: "slide", reloadPage: true });
+            }
+        }
+    </script>
+}

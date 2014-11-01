@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bc143143-a15f-46db-9662-14281181c8a5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50723/S_Suscripciones.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="S_Suscripciones.xsd" MetadataType="Schema" ID="b0b45123-32f3-4afd-b3d6-65c732c1fdd7" SourceId="1" SourceUrl="http://localhost:50723/S_Suscripciones.svc?xsd=xsd1" />
+    <MetadataFile FileName="S_Suscripciones1.xsd" MetadataType="Schema" ID="8ee3ab17-bc8f-4bd3-9aff-f59d8827e686" SourceId="1" SourceUrl="http://localhost:50723/S_Suscripciones.svc?xsd=xsd0" />
+    <MetadataFile FileName="S_Suscripciones.wsdl" MetadataType="Wsdl" ID="4abe5799-eb75-4dbc-9fa2-300dac8f24c3" SourceId="1" SourceUrl="http://localhost:50723/S_Suscripciones.svc?wsdl" />
+    <MetadataFile FileName="S_Suscripciones1.wsdl" MetadataType="Wsdl" ID="18d1c438-a606-4182-9491-7f2f1b1a2e34" SourceId="1" SourceUrl="http://localhost:50723/S_Suscripciones.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="S_Suscripciones.disco" MetadataType="Disco" ID="02be4315-a4a3-4724-b19e-844c6d8f0729" SourceId="1" SourceUrl="http://localhost:50723/S_Suscripciones.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="89c19180-5b46-4b4f-b748-9b400808bea2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50723/S_Turnos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="S_Turnos.wsdl" MetadataType="Wsdl" ID="15be4ac6-79db-449f-bdae-b61008edf57e" SourceId="1" SourceUrl="http://localhost:50723/S_Turnos.svc?wsdl" />
+    <MetadataFile FileName="S_Turnos.xsd" MetadataType="Schema" ID="4c119fb1-95b9-4607-b94d-734d3f28ed78" SourceId="1" SourceUrl="http://localhost:50723/S_Turnos.svc?xsd=xsd1" />
+    <MetadataFile FileName="S_Turnos.disco" MetadataType="Disco" ID="541d6117-7aac-43c7-b695-1dad90fba91e" SourceId="1" SourceUrl="http://localhost:50723/S_Turnos.svc?disco" />
+    <MetadataFile FileName="S_Turnos1.xsd" MetadataType="Schema" ID="8dcaa425-5f59-4f87-930c-aa608277fca5" SourceId="1" SourceUrl="http://localhost:50723/S_Turnos.svc?xsd=xsd0" />
+    <MetadataFile FileName="S_Turnos1.wsdl" MetadataType="Wsdl" ID="67bc7c5e-e06e-4ff5-97a5-0f4e5984667a" SourceId="1" SourceUrl="http://localhost:50723/S_Turnos.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

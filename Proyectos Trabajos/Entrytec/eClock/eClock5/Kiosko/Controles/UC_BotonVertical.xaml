@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Kiosko.Controles.UC_BotonVertical"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+
+             mc:Ignorable="d"  FontFamily="{DynamicResource FontKiosko}" Foreground="White" d:DesignWidth="221" d:DesignHeight="271"  >
+    <Grid x:Name="Grd_Main"  >
+        <Button  Background="Red"  x:Name="Btn_Main" Foreground="White" Click="Btn_Main_Click" BorderThickness="0" >
+            <Grid Margin="0,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="Img_Boton" Source="pack://siteoforigin:,,,/Resources/icono.png" Margin="10,0,10,10" HorizontalAlignment="Center"   />
+                <TextBlock x:Name="Lbl_Boton" TextWrapping="Wrap" Text="Calendario de actividades" FontSize="36"   TextTrimming="WordEllipsis"    HorizontalAlignment="Center" Grid.Row="2"   />
+
+            </Grid>
+        </Button>
+        <Grid Width="32" Height="32" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5">
+            <Ellipse x:Name="Elipse"   StrokeThickness="3" Stroke="White"    />
+            <TextBlock  x:Name="Lbl_Num_Día"  Text="31" HorizontalAlignment="Center" VerticalAlignment="Center"   FontSize="18"/>
+        </Grid>
+
+    </Grid>
+</UserControl>

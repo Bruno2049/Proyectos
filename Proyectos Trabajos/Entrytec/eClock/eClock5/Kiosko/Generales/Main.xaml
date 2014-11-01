@@ -1,0 +1,61 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controles="clr-namespace:Kiosko.Controles" xmlns:eClock5="clr-namespace:eClock5" x:Class="Kiosko.Generales.Main" 
+             mc:Ignorable="d" 
+             d:DesignHeight="753" d:DesignWidth="1436.5" FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoFontDia}" >
+    <Grid Background="#FFE2E2E2">
+        <Grid Margin="300,64,210,10" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60*" />
+                <RowDefinition Height="100*" />
+                <RowDefinition Height="60*" />
+            </Grid.RowDefinitions>
+            <Grid  Grid.Row="1" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Controles:UC_BotonVertical x:Name="Btn_Vacaciones" Texto="Vacaciones" NoAlertas="1" ColorFondo="#FFEA6D19" Imagen="pack://siteoforigin:,,,/Resources/Vacaciones.png" Margin="{DynamicResource MargenGeneralCorto}" Click="Btn_Vacaciones_Click" />
+                <Controles:UC_BotonVertical x:Name="Btn_Tramites" Grid.Column="1" Texto="Trámites" NoAlertas="-1" ColorFondo="#FF2873B6" Imagen="pack://siteoforigin:,,,/Resources/Documentos.png" Margin="{DynamicResource MargenGeneralCorto}" Click="Btn_Tramites_Click"/>
+                <Controles:UC_BotonVertical x:Name="Btn_CalendarioActividades" Grid.Column="2" Texto="Actividades" NoAlertas="23" ColorFondo="#FF94B713" Imagen="pack://siteoforigin:,,,/Resources/Calendario.png" Margin="{DynamicResource MargenGeneralCorto}" Click="Btn_CalendarioActividades_Click"/>
+            </Grid>
+            <Controles:UC_Boton x:Name="Btn_Permisos" ColorFondo="#FF52B8BD" Texto="Permisos" NoAlertas="5" Imagen="pack://siteoforigin:,,,/Resources/Permisos.png" Margin="{DynamicResource MargenGeneralCorto}" Click="Btn_Permisos_Click" />
+            <Controles:UC_Boton x:Name="Btn_Asistencia" Grid.Row="2" ColorFondo="#FFE1276D" Texto="Asistencia" NoAlertas="10" Imagen="pack://siteoforigin:,,,/Resources/Asistencia.png" Margin="{DynamicResource MargenGeneralCorto}"  Click="Btn_Asistencia_Click"/>
+            <Controles:UC_Boton x:Name="Btn_Mensajes"  Grid.Column="1" ColorFondo="#FFE1123C" Texto="Mensajes" NoAlertas="2" Imagen="pack://siteoforigin:,,,/Resources/icono.png" Margin="{DynamicResource MargenGeneralCorto}" Click="Btn_Mensajes_Click" />
+            <Controles:UC_Boton x:Name="Btn_Nomina"  Grid.Column="1" Grid.Row="2" ColorFondo="#FFE8B100" Texto="Nómina" NoAlertas="1" Imagen="pack://siteoforigin:,,,/Resources/Nomina.png" Margin="{DynamicResource MargenGeneralCorto}" Click="Btn_Nomina_Click" />
+
+        </Grid>
+        <Controles:UC_Banner x:Name="Banner" HorizontalAlignment="Right" Margin="{DynamicResource MargenBanner}" Width="{DynamicResource AnchoBanner}"/>
+
+        <eClock5:UC_ToolBar Height="{DynamicResource AltoToolBar}" VerticalAlignment="Top" Margin="300,0,0,0" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" Width="Auto" >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Etiqueta="Salir" Imagen="pack://siteoforigin:,,,/Resources/Regresar_64.png" Nombre="Btn_Regresar"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <Grid  HorizontalAlignment="Left" Width="280" Margin="10,10,0,10">
+
+            <Controles:UC_Boton x:Name="Btn_Configuracion"   ColorFondo="#FFCBC4C4" Imagen="pack://siteoforigin:,,,/Resources/Configuracion.png" Texto="Cambiar Contraseña" NoAlertas="-1" VerticalAlignment="Bottom" Height="132" Click="Btn_Configuracion_Click" />
+
+            <StackPanel   >
+                <Image x:Name="Img_Foto" Height="280" HorizontalAlignment="Center" VerticalAlignment="Top"  />
+                <TextBlock   x:Name="Lbl_NombreEmpleado"  Text="Nombre Completo" VerticalAlignment="Center" Foreground="#FF070091" FontSize="24" TextAlignment="Center" TextWrapping="WrapWithOverflow" />
+                <TextBlock  x:Name="Lbl_NumEmpleado" Text="345678" VerticalAlignment="Center"  Grid.Row="1" Foreground="#FF070091" FontSize="24" TextAlignment="Center" />
+                <Rectangle Height="50"/>
+                <Rectangle Height="2" Fill="{DynamicResource GrisObscuro}" Stroke="{DynamicResource GrisObscuro}"/>
+                <TextBlock x:Name="Lbl_UltimaSesion"  Text="09/julio/2013 7:00pm" VerticalAlignment="Center" Foreground="#FF070091" FontSize="24" TextAlignment="Center" HorizontalAlignment="Center" />
+                <TextBlock  Text="Ultima sesión" VerticalAlignment="Center" Foreground="#FF070091" FontSize="16" TextAlignment="Center"  />
+                <Rectangle Height="2" Fill="{DynamicResource GrisObscuro}" Stroke="{DynamicResource GrisObscuro}"/>
+            </StackPanel>
+        </Grid>
+
+
+    </Grid>
+</UserControl>

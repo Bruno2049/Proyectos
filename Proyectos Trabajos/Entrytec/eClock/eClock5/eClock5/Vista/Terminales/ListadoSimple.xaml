@@ -1,0 +1,29 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:local="clr-namespace:eClock5.Vista.Terminales" x:Class="eClock5.Vista.Terminales.ListadoSimple" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" IsVisibleChanged="UserControl_IsVisibleChanged">
+    <Grid Background="{DynamicResource Blanco_Brush}">
+
+        <eClock5:UC_ToolBar x:Name="ToolBar" VerticalAlignment="Top" Width="Auto" Height="{DynamicResource AltoToolBar}" OnEventClickToolBar="ToolBar_OnEventClickToolBar_1" >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Etiqueta="Nuevo" Imagen="pack://siteoforigin:,,,/Resources/Nuevo_64.png" Nombre="Btn_Nuevo" Alineacion="Derecha"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Borrar" Imagen="pack://siteoforigin:,,,/Resources/Borrar_64.png" Mostrar="SoloSeleccionados" Nombre="Btn_Borrar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png" Nombre="Btn_Guardar"/>
+
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <ListBox x:Name="Lst_Datos" Margin="{DynamicResource MargenAltoToolBar}" SelectionChanged="Lst_Datos_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <!-- < x:Name="AsistenciaHorizontal"   DataContext="{Binding}" NoSeleccionadosCambio="UC_AsistenciaHorizontal_NoSeleccionadosCambio_1" CambioSeleccionado="UC_AsistenciaHorizontal_CambioSeleccionado_1"  />-->
+                    <local:UC_Terminal x:Name="Term_Datos"  DataContext="{Binding}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            
+        </ListBox>
+    </Grid>
+</UserControl>

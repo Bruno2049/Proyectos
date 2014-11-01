@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Recuperar contraseña";
+}
+
+<p>Si no recuerda su contraseña, esta le puede ser enviada a su correo electrónico, 
+    o de lo contrario puede pasar a capital humano o con su supervisor para obtener una nueva</p>
+ @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary()
+
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">Detalles</li>
+
+                <li data-role="fieldcontain">
+                    <label for="eMail">Correo electrónico</label>
+                    <input type="email" name="eMail" id="eMail"  />
+                </li>
+
+                <li data-role="fieldcontain">
+                    <input type="submit" value="Recuperar contraseña" />
+                </li>
+            </ul>
+        }

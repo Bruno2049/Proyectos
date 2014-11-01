@@ -1,0 +1,412 @@
+/*
+
+Main control CSS class
+*/
+.igdd_CaribbeanControl
+{
+}
+
+
+/*
+ Main Control CSS class when it's disabled
+*/
+.igdd_CaribbeanControlDisabled
+{
+}
+
+
+/*
+ Main control css class on hover
+*/
+.igdd_CaribbeanControlHover
+{
+	background-color:#E0F8FE;
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanControlFocus
+{
+	background-color:#E0F8FE;
+	border:solid 1px #011161;
+	table-layout: fixed;
+}
+
+
+.igdd_CaribbeanControlArea
+{
+	border:solid 1px #011161;
+	table-layout: fixed;
+}
+
+
+/*
+CSS class for the actual input field (<input type="text" />)
+*/
+.igdd_CaribbeanValueDisplay
+{
+	background-color:Transparent;
+	font-weight:normal;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-width:0px;
+	width: 100%;
+	z-index: 0;
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanValueDisplayHover
+{
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanValueDisplayFocus
+{
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanValueDisplayDisabled
+{
+    background-color:Transparent;
+    border:0px;
+    font-family:Verdana,Arial,Helvetica,sans-serif;
+    font-size:10pt;
+    font-weight:normal;
+    width:100%;
+    z-index:0
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanValueDisplayReadOnly
+{
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanDropDownList
+{
+	background-color:White;
+	font-size:10pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin:0px;
+	padding:1px;
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanDropDownListHover
+{
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanDropDownListReadOnly
+{
+}
+
+
+/*
+	
+*/
+.igdd_CaribbeanDropDownListContainer
+{
+	background-color:White;
+	border:solid 1px #011161;
+	float: left;
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanDropDownListContainerHover
+{
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanDropDownButton
+{
+	width: 17px;
+	z-index: 9999;
+}
+
+.igdd_CaribbeanDropDownButton img 
+{
+    display:block;
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanDropDownButtonHover
+{
+}
+
+
+/*
+CSS class that controls the style of the LI items in the list
+*/
+.igdd_CaribbeanListItem
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border:solid 1px Transparent;
+	padding:3px 5px 3px 5px;
+	list-style-type: none;
+	width: auto;
+	min-height: 15px;
+	height: auto !important;
+	cursor:pointer;
+}
+	/* IE 6 fix */
+	.ie6 .igdd_CaribbeanListItem {
+		border:solid 1px white;
+	}
+
+/*
+
+*/
+.igdd_CaribbeanListItemActive
+{
+	background-color:#8BE2FA;
+	border:solid 1px #2B6DB3;
+	list-style-type: none;
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanListItemHover
+{
+	background-color:#8BE2FA;
+	list-style-type: none;
+}
+	/* IE 6 fix */
+	.ie6 .igdd_CaribbeanListItemHover {
+		border:solid 1px white;
+	}
+
+/*
+
+*/
+.igdd_CaribbeanListItemSelected
+{
+	background-color:#EEEEEE;
+	list-style-type: none;
+	color:#8BE2FA;
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanListItemDisabled
+{
+	list-style-type: none;
+	width: auto;
+	cursor:default;
+}
+
+
+/*
+Applied to the whole pager
+*/
+.igdd_CaribbeanPager
+{
+	background-color:#F4FDFF;
+	border-top:solid 1px #011161;
+	vertical-align:middle;
+}
+
+
+/*
+Loading message container
+*/
+.igdd_CaribbeanLoadingItemsMessage
+{
+	background-color:#011161;
+	font-weight:bold;
+	font-size:10pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin:1px 0px 0px 1px;
+	padding:3px;
+	color:White;
+}
+
+
+/*
+Styles the current page link only
+*/
+.igdd_CaribbeanPageCurrent
+{
+	font-size:8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin-top:5px;
+	margin-right:3px;
+	float: left;
+	cursor:pointer;
+	color:#4D8BDD;
+	text-decoration:underline;
+	vertical-align:middle;
+}
+
+
+/*
+Styles all page links in general 
+*/
+.igdd_CaribbeanPageLink
+{
+	font-size:8pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin-top:5px;
+	margin-right:3px;
+	float: left;
+	cursor:pointer;
+	color:#011161;
+	vertical-align:middle;
+}
+
+
+.igdd_CaribbeanListItem a:hover
+{
+}
+
+
+/*
+For Disabled=True
+*/
+.igdd_CaribbeanListItemDisabled a:link
+{
+	cursor:default;
+	color:#BBBBBB;
+}
+
+
+/*
+ CSS class for the table that accomodates the value display and the drop down button, and which is a 
+ child of the main control (div)
+*/
+.igdd_CaribbeanValueDisplayTable
+{
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanListItemFocus
+{
+	list-style-type: none;
+	width: auto;
+}
+
+
+.igdd_CaribbeanListItemActive a:link
+{
+	color:White;
+	text-decoration:none;
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanDropDownListDisabled
+{
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanDropDownListFocus
+{
+}
+
+
+.igdd_CaribbeanListItem a:visited
+{
+	color:#333333;
+	text-decoration:none;
+}
+
+
+/*
+	
+*/
+.igdd_CaribbeanDropDownButtonFocus
+{
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanDropDownButtonDisabled
+{
+}
+
+
+/*
+Styling for anchor when hovered anywhere on ListItem
+*/
+.igdd_CaribbeanListItemHover a:link
+{
+	color:White;
+	text-decoration:none;
+}
+
+
+/*
+pseudo class used so Value Display input does not have focus
+glow in some browsers like GoogleChrome or AppleSafari
+*/
+input:focus
+{
+	outline: none;
+}
+
+
+.igdd_CaribbeanListItem a:link
+{
+	color:#333333;
+	text-decoration:none;
+}
+
+
+.igdd_CaribbeanListItem a:active
+{
+}
+
+
+/*
+
+*/
+.igdd_CaribbeanDropDownListContainerFocus
+{
+}
+
+

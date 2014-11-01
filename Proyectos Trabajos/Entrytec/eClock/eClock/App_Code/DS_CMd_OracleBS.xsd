@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_CMd_OracleBS" targetNamespace="http://tempuri.org/DS_CMd_OracleBS.xsd" xmlns:mstns="http://tempuri.org/DS_CMd_OracleBS.xsd" xmlns="http://tempuri.org/DS_CMd_OracleBS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_CMd_OracleBS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DS_CMd_OracleBS" msprop:Generator_UserDSName="DS_CMd_OracleBS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ArchivoPlano" msprop:Generator_TableClassName="ArchivoPlanoDataTable" msprop:Generator_TableVarName="tableArchivoPlano" msprop:Generator_TablePropName="ArchivoPlano" msprop:Generator_RowDeletingName="ArchivoPlanoRowDeleting" msprop:Generator_UserTableName="ArchivoPlano" msprop:Generator_RowChangingName="ArchivoPlanoRowChanging" msprop:Generator_RowEvHandlerName="ArchivoPlanoRowChangeEventHandler" msprop:Generator_RowDeletedName="ArchivoPlanoRowDeleted" msprop:Generator_RowEvArgName="ArchivoPlanoRowChangeEvent" msprop:Generator_RowChangedName="ArchivoPlanoRowChanged" msprop:Generator_RowClassName="ArchivoPlanoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUM_EMPLEADO" msdata:Caption="Es el número de empleado al cual se asocia la incapacidad" msprop:Generator_ColumnVarNameInTable="columnNUM_EMPLEADO" msprop:Generator_ColumnPropNameInRow="NUM_EMPLEADO" msprop:Generator_ColumnPropNameInTable="NUM_EMPLEADOColumn" msprop:Generator_UserColumnName="NUM_EMPLEADO" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="NOMBRE_INCIDENCIA" msdata:Caption="Categoría de la Incapacidad" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_INCIDENCIA" msprop:Generator_ColumnPropNameInRow="NOMBRE_INCIDENCIA" msprop:Generator_ColumnPropNameInTable="NOMBRE_INCIDENCIAColumn" msprop:Generator_UserColumnName="NOMBRE_INCIDENCIA" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="FECHA_APLICA" msdata:Caption="Fecha en la cual se realiza el registro de la incidencia en la aplicación" msprop:Generator_ColumnVarNameInTable="columnFECHA_APLICA" msprop:Generator_ColumnPropNameInRow="FECHA_APLICA" msprop:Generator_ColumnPropNameInTable="FECHA_APLICAColumn" msprop:Generator_UserColumnName="FECHA_APLICA" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="FECHA_INICIO" msdata:Caption="Fecha de inicio de la incapacidad" msprop:Generator_ColumnVarNameInTable="columnFECHA_INICIO" msprop:Generator_ColumnPropNameInRow="FECHA_INICIO" msprop:Generator_ColumnPropNameInTable="FECHA_INICIOColumn" msprop:Generator_UserColumnName="FECHA_INICIO" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="TOTAL_DIAS" msdata:Caption="Numero de días que aplica la incapacidad" msprop:Generator_ColumnVarNameInTable="columnTOTAL_DIAS" msprop:Generator_ColumnPropNameInRow="TOTAL_DIAS" msprop:Generator_ColumnPropNameInTable="TOTAL_DIASColumn" msprop:Generator_UserColumnName="TOTAL_DIAS" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="FECHA_FIN" msdata:Caption="Fecha de finalización de la incapacidad" msprop:Generator_ColumnVarNameInTable="columnFECHA_FIN" msprop:Generator_ColumnPropNameInRow="FECHA_FIN" msprop:Generator_ColumnPropNameInTable="FECHA_FINColumn" msprop:Generator_UserColumnName="FECHA_FIN" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="FOLIO_IMSS" msdata:Caption="Folio de la incapacidad. Que otorga IMSS" msprop:Generator_ColumnVarNameInTable="columnFOLIO_IMSS" msprop:Generator_ColumnPropNameInRow="FOLIO_IMSS" msprop:Generator_ColumnPropNameInTable="FOLIO_IMSSColumn" msprop:Generator_UserColumnName="FOLIO_IMSS" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="INCAPACIDAD_RELACIONADA" msdata:Caption="&quot;Si no tiene una incapacidad relacionada, se deja en blanco" msprop:Generator_ColumnVarNameInTable="columnINCAPACIDAD_RELACIONADA" msprop:Generator_ColumnPropNameInRow="INCAPACIDAD_RELACIONADA" msprop:Generator_ColumnPropNameInTable="INCAPACIDAD_RELACIONADAColumn" msprop:Generator_UserColumnName="INCAPACIDAD_RELACIONADA" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="DIAS_SUBSIDIO" msdata:Caption="Total de días de subsidio que se otorgan" msprop:Generator_ColumnVarNameInTable="columnDIAS_SUBSIDIO" msprop:Generator_ColumnPropNameInRow="DIAS_SUBSIDIO" msprop:Generator_ColumnPropNameInTable="DIAS_SUBSIDIOColumn" msprop:Generator_UserColumnName="DIAS_SUBSIDIO" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="CONSECUENCIA_DE_INCAPACIDAD" msdata:Caption="Valor que indica si la incapacidad tiene alguna consecuencia para el empleado (recaída, fallecimiento, ninguna, etc.)" msprop:Generator_ColumnVarNameInTable="columnCONSECUENCIA_DE_INCAPACIDAD" msprop:Generator_ColumnPropNameInRow="CONSECUENCIA_DE_INCAPACIDAD" msprop:Generator_ColumnPropNameInTable="CONSECUENCIA_DE_INCAPACIDADColumn" msprop:Generator_UserColumnName="CONSECUENCIA_DE_INCAPACIDAD" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="VALOR_INCAPACIDAD" msdata:Caption="Valor que indica si es una incapacidad Inicial, Consecutiva, o única" msprop:Generator_ColumnVarNameInTable="columnVALOR_INCAPACIDAD" msprop:Generator_ColumnPropNameInRow="VALOR_INCAPACIDAD" msprop:Generator_ColumnPropNameInTable="VALOR_INCAPACIDADColumn" msprop:Generator_UserColumnName="VALOR_INCAPACIDAD" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="DESCRIPCION" msdata:Caption="Control de Incapacidad" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_UserColumnName="DESCRIPCION" type="xs:string" default="" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

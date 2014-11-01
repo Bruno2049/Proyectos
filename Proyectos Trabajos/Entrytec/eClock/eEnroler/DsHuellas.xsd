@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsHuellas" targetNamespace="http://tempuri.org/DsHuellas.xsd" xmlns:mstns="http://tempuri.org/DsHuellas.xsd" xmlns="http://tempuri.org/DsHuellas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsHuellas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsHuellas" msprop:Generator_DataSetName="DsHuellas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Huellas" msprop:Generator_UserTableName="Huellas" msprop:Generator_RowDeletedName="HuellasRowDeleted" msprop:Generator_RowChangedName="HuellasRowChanged" msprop:Generator_RowClassName="HuellasRow" msprop:Generator_RowChangingName="HuellasRowChanging" msprop:Generator_RowEvArgName="HuellasRowChangeEvent" msprop:Generator_RowEvHandlerName="HuellasRowChangeEventHandler" msprop:Generator_TableClassName="HuellasDataTable" msprop:Generator_TableVarName="tableHuellas" msprop:Generator_RowDeletingName="HuellasRowDeleting" msprop:Generator_TablePropName="Huellas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HuellaID" msprop:Generator_UserColumnName="HuellaID" msprop:Generator_ColumnPropNameInRow="HuellaID" msprop:Generator_ColumnVarNameInTable="columnHuellaID" msprop:Generator_ColumnPropNameInTable="HuellaIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="HuellaTexto" msprop:Generator_UserColumnName="HuellaTexto" msprop:Generator_ColumnPropNameInRow="HuellaTexto" msprop:Generator_ColumnVarNameInTable="columnHuellaTexto" msprop:Generator_ColumnPropNameInTable="HuellaTextoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Huella_Huella1" msprop:Generator_UserColumnName="Huella_Huella1" msprop:Generator_ColumnPropNameInRow="Huella_Huella1" msprop:Generator_ColumnVarNameInTable="columnHuella_Huella1" msprop:Generator_ColumnPropNameInTable="Huella_Huella1Column" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Huella_Huella2" msdata:Caption="Huella_Huella1" msprop:Generator_UserColumnName="Huella_Huella2" msprop:Generator_ColumnPropNameInRow="Huella_Huella2" msprop:Generator_ColumnVarNameInTable="columnHuella_Huella2" msprop:Generator_ColumnPropNameInTable="Huella_Huella2Column" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Huella_Huella3" msprop:Generator_UserColumnName="Huella_Huella3" msprop:Generator_ColumnPropNameInRow="Huella_Huella3" msprop:Generator_ColumnVarNameInTable="columnHuella_Huella3" msprop:Generator_ColumnPropNameInTable="Huella_Huella3Column" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

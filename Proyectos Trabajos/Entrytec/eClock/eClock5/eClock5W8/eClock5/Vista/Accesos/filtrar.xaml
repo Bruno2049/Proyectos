@@ -1,0 +1,23 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.Vista.Accesos.Filtrar" 
+             mc:Ignorable="d" 
+             d:DesignHeight="572.466" d:DesignWidth="706.254">
+    <Grid>
+        <eClock5:UC_ToolBar VerticalAlignment="Top" Width="Auto" Height="{StaticResource AltoToolBar}">
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Izquierda" Etiqueta="Regresar" Imagen="/eClock5;component/Resources/Regresar_64.png" Nombre="Btn_Regresar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Filtrar" Imagen="/eClock5;component/Resources/Filtro_64.png" Nombre="Btn_Filtrar"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <Rectangle Fill="{StaticResource AzulClaro_Brush}" Height="{StaticResource AltoToolBar}" Margin="0,48,0,0" Stroke="{StaticResource AzulClaro_Brush}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,62,0,0" TextWrapping="Wrap" Text="Tipos de Terminales" VerticalAlignment="Top" Foreground="{StaticResource Blanco_Brush}" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeSubTitulo}"/>
+        <Rectangle Fill="{StaticResource AzulClaro_Brush}" Height="{StaticResource AltoToolBar}" Margin="0,295,0,0" Stroke="{StaticResource AzulClaro_Brush}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,308,0,0" TextWrapping="Wrap" Text="Tipos de Acceso" Foreground="{StaticResource Blanco_Brush}" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeSubTitulo}" Height="21" VerticalAlignment="Top"/>
+        <Controles:UC_Multiseleccion Margin="38,101,58,0" CampoLlave="TERMINAL_ID" CampoNombre="TERMINAL_NOMBRE" CampoDescripcion="MODELO_TERMINAL_ID" Tabla="EC_TERMINALES" Height="165" VerticalAlignment="Top"/>
+        <Controles:UC_Multiseleccion Margin="38,348,58,0" CampoLlave="TIPO_ACCESO_ID" CampoNombre="TIPO_ACCESO_NOMBRE" CampoDescripcion="TIPO_ACCESO_COLOR" Tabla="EC_TIPO_ACCESOS" Height="203" VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>

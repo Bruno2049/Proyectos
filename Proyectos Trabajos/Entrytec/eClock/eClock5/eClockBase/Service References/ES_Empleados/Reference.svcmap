@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="26ce7c6c-8ffa-4a61-b1fe-fa4a1f26c818" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bishop.entrytec.com.mx/S_Empleados.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="S_Empleados2.wsdl" MetadataType="Wsdl" ID="994bd76d-e834-4f7d-9942-e9c7c1b26af5" SourceId="1" SourceUrl="http://bishop.entrytec.com.mx/S_Empleados.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="S_Empleados1.disco" MetadataType="Disco" ID="dfe4cb51-84dc-4526-a4bf-06a442951e09" SourceId="1" SourceUrl="http://bishop.entrytec.com.mx/S_Empleados.svc?disco" />
+    <MetadataFile FileName="S_Empleados2.xsd" MetadataType="Schema" ID="7f46513f-62e9-4fe4-9220-8c9988400374" SourceId="1" SourceUrl="http://bishop.entrytec.com.mx/S_Empleados.svc?xsd=xsd0" />
+    <MetadataFile FileName="S_Empleados21.xsd" MetadataType="Schema" ID="e0e7a626-0140-4c88-8761-372abc187955" SourceId="1" SourceUrl="http://bishop.entrytec.com.mx/S_Empleados.svc?xsd=xsd1" />
+    <MetadataFile FileName="S_Empleados21.wsdl" MetadataType="Wsdl" ID="cc262f54-b15f-44b5-9550-db608ad09f4d" SourceId="1" SourceUrl="http://bishop.entrytec.com.mx/S_Empleados.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

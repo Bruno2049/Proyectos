@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="PAEEEM_FPROD">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=10.55.210.27;Initial Catalog=Paem_dev</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>416ff7c8-5453-440b-911b-b306375554a8</DataSourceID>
+</RptDataSource>

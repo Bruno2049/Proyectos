@@ -1,0 +1,41 @@
+﻿.igfeb_CaribbeanControl
+{
+	background-color: Transparent;
+}
+
+.igfeb_CaribbeanControlHover
+{
+				
+				
+}
+
+.igfeb_CaribbeanFishEyeItemLabel
+{
+}
+
+.igfeb_CaribbeanFishEyeItem
+{
+}
+
+.igfeb_CaribbeanFishEyeItemHover
+{			
+}
+
+.igfeb_CaribbeanFishEyeItemDisabled
+{
+				
+				
+}
+
+.igfeb_CaribbeanControlFocus
+{
+				
+				
+}
+
+.igfeb_CaribbeanFishEyeItemSelected
+{
+	background-position: bottom;
+	background-image: url(images/igfeb_itemselected.png);	
+	background-repeat:  no-repeat;
+}

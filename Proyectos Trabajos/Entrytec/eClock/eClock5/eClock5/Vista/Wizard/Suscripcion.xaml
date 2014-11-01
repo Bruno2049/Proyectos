@@ -1,0 +1,48 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Suscripciones="clr-namespace:eClock5.Vista.Suscripciones" x:Class="eClock5.Vista.Wizard.Suscripcion"
+            xmlns:Modelos="clr-namespace:eClockBase.Modelos;assembly=eClockBase" xmlns:eClock5="clr-namespace:eClock5" xmlns:Wizard="clr-namespace:eClockBase.Modelos.Wizard;assembly=eClockBase"  
+             mc:Ignorable="d"   xmlns:Controles="clr-namespace:eClock5.Controles"
+             d:DesignHeight="375" d:DesignWidth="570" IsVisibleChanged="UserControl_IsVisibleChanged">
+    <Grid>
+        <Controles:UC_WizardTitulo VerticalAlignment="Top" Titulo="Su empresa" SubTitulo="Capture los datos de su empresa, algunos serán usados en los reportes"/>
+        <Grid Margin="0,80,0,0"  Background="{DynamicResource Blanco_Brush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37*" />
+                <RowDefinition Height="37*" />
+                <RowDefinition Height="37*" />
+                <RowDefinition Height="37*"  />
+                <RowDefinition Height="37*" />
+                <RowDefinition Height="36*"/>
+                <RowDefinition Height="37*"/>
+                <RowDefinition Height="37*"  />
+
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="Lbl_Nombre" Grid.Column="0"  Text="Contrato/Suscripcion" Style="{DynamicResource TextBlockEtiquetaStyle}"  />
+            <TextBox x:Name="Tbx_Nombre" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}" IsEnabled="False"  />
+            <TextBlock x:Name="Lbl_Razon" Grid.Column="0"  Text="Razon Social" Style="{DynamicResource TextBlockEtiquetaStyle}" Grid.Row="1"  />
+            <TextBox x:Name="Tbx_Razon" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}" Grid.Row="1"   />
+            <TextBlock x:Name="Lbl_RFC" Grid.Column="0" Grid.Row="2"  Text="RFC" Style="{DynamicResource TextBlockEtiquetaStyle}"  />
+            <TextBox x:Name="Tbx_RFC" Grid.Column="1"  Grid.Row="2" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+            <TextBlock x:Name="Lbl_Direccion_1" Grid.Column="0" Grid.Row="3"  Text="Calle y Numero" Style="{DynamicResource TextBlockEtiquetaStyle}"  />
+            <TextBox x:Name="Tbx_Direccion_1" Grid.Column="1"  Grid.Row="3" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+            <TextBlock x:Name="Lbl_CP" Grid.Column="0" Grid.Row="4"  Text="Código Postal" Style="{DynamicResource TextBlockEtiquetaStyle}"  />
+            <TextBox x:Name="Tbx_CP" Grid.Column="1"  Grid.Row="4" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+            <TextBlock x:Name="Lbl_Ciudad" Grid.Column="0" Grid.Row="5"  Text="Ciudad" Style="{DynamicResource TextBlockEtiquetaStyle}"  />
+            <TextBox x:Name="Tbx_Ciudad" Grid.Column="1"  Grid.Row="5" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+            <TextBlock x:Name="Lbl_Estado" Grid.Column="0" Grid.Row="6"  Text="Estado" Style="{DynamicResource TextBlockEtiquetaStyle}"  />
+            <TextBox x:Name="Tbx_Estado" Grid.Column="1"  Grid.Row="6" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+            <TextBlock x:Name="Lbl_Pais" Grid.Column="0" Grid.Row="7"  Text="Pais" Style="{DynamicResource TextBlockEtiquetaStyle}"  />
+            <TextBox x:Name="Tbx_Pais" Grid.Column="1"  Grid.Row="7" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+
+        </Grid>
+    </Grid>
+</UserControl>

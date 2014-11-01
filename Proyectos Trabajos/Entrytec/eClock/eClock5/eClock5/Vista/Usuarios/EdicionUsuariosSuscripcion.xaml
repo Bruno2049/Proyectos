@@ -1,0 +1,85 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" 
+             xmlns:Modelos="clr-namespace:eClockBase.Modelos;assembly=eClockBase" 
+             xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.Vista.Usuarios.EdicionUsuariosSuscripcion" 
+             mc:Ignorable="d" 
+             d:DesignHeight="515.545" d:DesignWidth="853.045" Background="{DynamicResource Blanco_Brush}" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource Blanco_Brush}" Loaded="UserControl_Loaded_1" IsVisibleChanged="UserControl_IsVisibleChanged">
+
+    <Grid>
+        <eClock5:UC_ToolBar VerticalAlignment="Top"  Width="Auto" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar"  >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png" Nombre="Btn_Guardar" />
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <ScrollViewer Margin="{DynamicResource MargenAltoToolBar}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="xGrid" Grid.Column="1" VerticalAlignment="Center" Background="{DynamicResource AzulClaro_Brush}" >
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="Lbl_USUARIO_ID" Text="Usuario_ID" TextWrapping="Wrap" Grid.Row="0" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+                    <TextBlock x:Name="Lbl_PERFIL_ID" Text="Perfil" TextWrapping="Wrap" Grid.Row="1" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+                    <TextBlock x:Name="Lbl_USUARIO_USUARIO" Text="Usuario" TextWrapping="Wrap" Grid.Row="2" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+                    <TextBlock x:Name="Lbl_USUARIO_NOMBRE" Text="Nombre Completo" TextWrapping="Wrap" Grid.Row="3" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+                    <TextBlock x:Name="Lbl_USUARIO_DESCRIPCION" Text="Descripción" TextWrapping="Wrap" Grid.Row="4" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+                    <TextBlock x:Name="Lbl_USUARIO_CLAVE" Text="Contraseña" TextWrapping="Wrap" Grid.Row="5" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+                    <TextBlock x:Name="Lbl_USUARIO_CLAVE_Cnf" Text="Confirmacion de Contraseña" TextWrapping="Wrap" Grid.Row="6" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+                    <TextBlock x:Name="Lbl_USUARIO_CLAVE_NoCoincide" Text="La clave no coincide con la contraseña" TextWrapping="Wrap" Grid.Row="7" Style="{DynamicResource TextBlockErrorStyle}" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="Lbl_USUARIO_EMAIL" Text="eMail" TextWrapping="Wrap" Grid.Row="8" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+                    <TextBlock x:Name="Lbl_USUARIO_ESSUP" Text="Es Supervisor?" TextWrapping="Wrap" Grid.Row="9" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+                    <TextBlock x:Name="Lbl_USUARIO_ESEMP" Text="Es Empleado?" TextWrapping="Wrap" Grid.Row="10" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+                    <TextBlock x:Name="Lbl_PERSONA_ID" Text="Ligado a la persona" TextWrapping="Wrap" Grid.Row="11" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+                    <TextBlock x:Name="Lbl_USUARIO_BORRADO" Text="Inactivo" TextWrapping="Wrap" Grid.Row="12" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+
+
+
+                    <TextBox  x:Name="Tbx_USUARIO_ID" IsEnabled="False"  Grid.Column="1" TabIndex="10" Grid.Row="0" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+                    <Controles:UC_Combo x:Name="Cbx_PERFIL_ID" Grid.Column="1" Grid.Row="1" Tabla="EC_PERFILES" CampoLlave="PERFIL_ID" CampoNombre="PERFIL_NOMBRE" Filtro="PERFIL_ID IN (4,5,6,7)" Margin="{DynamicResource MargenTextBoxCaptura}" />
+                    <TextBox  x:Name="Tbx_USUARIO_USUARIO"  Grid.Column="1" TabIndex="10" Grid.Row="2" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+                    <TextBox  x:Name="Tbx_USUARIO_NOMBRE"  Grid.Column="1" TabIndex="10" Grid.Row="3" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+                    <TextBox  x:Name="Tbx_USUARIO_DESCRIPCION"  Grid.Column="1" TabIndex="10" Grid.Row="4" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+                    <PasswordBox x:Name="Tbx_USUARIO_CLAVE"  Grid.Column="1" TabIndex="10" Grid.Row="5" Margin="{DynamicResource MargenTextBoxCaptura}" PasswordChanged="PasswordChanged"  ></PasswordBox>
+                    <PasswordBox x:Name="Tbx_USUARIO_CLAVE_Cnf"  Grid.Column="1" TabIndex="10" Grid.Row="6" Margin="{DynamicResource MargenTextBoxCaptura}"  PasswordChanged="PasswordChanged"  ></PasswordBox>
+                    <TextBox  x:Name="Tbx_USUARIO_EMAIL"  Grid.Column="1" TabIndex="10" Grid.Row="8" Margin="{DynamicResource MargenTextBoxCaptura}"  />
+                    <CheckBox x:Name="Chb_USUARIO_ESSUP"  Grid.Column="1" Grid.Row="9" Margin="{DynamicResource MargenTextBoxCaptura}" Unchecked="Checado" Checked="Checado"  />
+                    <CheckBox x:Name="Chb_USUARIO_ESEMP"  Grid.Column="1" Grid.Row="10" Margin="{DynamicResource MargenTextBoxCaptura}" Unchecked="Checado" Checked="Checado"   />
+                    <Controles:UC_Combo x:Name="Cbx_PERSONA_ID" Grid.Column="1" TabIndex="10" Grid.Row="11" Tabla="EC_PERSONAS" CampoLlave="PERSONA_ID" CampoNombre="PERSONA_NOMBRE" Filtro="" CampoDescripcion="AGRUPACION_NOMBRE" CampoAdicional="PERSONA_LINK_ID" Margin="{DynamicResource MargenTextBoxCaptura}" />
+                    <CheckBox x:Name="Chb_USUARIO_BORRADO"  Grid.Column="1" Grid.Row="12" Margin="{DynamicResource MargenTextBoxCaptura}"   />
+
+                </Grid>
+            </Grid>
+
+        </ScrollViewer>
+    </Grid>
+
+
+
+
+</UserControl>

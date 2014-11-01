@@ -1,0 +1,319 @@
+LogMsg->"" Fecha y hora de compilacion 23/03/2014 03:15:54 p.m. 23/03/2014 09:58:48 a.m.
+Debug->"" Recursos.Inicia(this); 23/03/2014 09:58:48 a.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 23/03/2014 09:58:49 a.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 23/03/2014 09:58:49 a.m.
+Debug->"" Ejecuta(ArchivoNombre);PermisosDa.bat 23/03/2014 09:58:51 a.m.
+LogMsg->"" Log 23/03/2014 09:58:56 a.m.
+LogMsg->"" Guardando... 23/03/2014 09:58:56 a.m.
+LogMsg->"" Nuevo 23/03/2014 09:58:56 a.m.
+LogMsg->"" Mensaje 23/03/2014 09:58:56 a.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 23/03/2014 09:59:01 a.m.
+LogMsg->"" Fecha y hora de compilacion 31/03/2014 04:15:58 p.m. 31/03/2014 10:16:06 a.m.
+Debug->"" Recursos.Inicia(this); 31/03/2014 10:16:06 a.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 31/03/2014 10:16:07 a.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 31/03/2014 10:16:07 a.m.
+Debug->"" Ejecuta(ArchivoNombre);PermisosDa.bat 31/03/2014 10:16:10 a.m.
+LogMsg->"" Log 31/03/2014 10:16:13 a.m.
+LogMsg->"" Fecha y hora de compilacion 31/03/2014 04:15:58 p.m. 31/03/2014 10:25:33 a.m.
+Debug->"" Recursos.Inicia(this); 31/03/2014 10:25:33 a.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 31/03/2014 10:25:33 a.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 31/03/2014 10:25:33 a.m.
+Debug->"" Ejecuta(ArchivoNombre);PermisosDa.bat 31/03/2014 10:25:34 a.m.
+LogMsg->"" Log 31/03/2014 10:25:36 a.m.
+LogMsg->"" Guardando... 31/03/2014 10:25:36 a.m.
+LogMsg->"" Nuevo 31/03/2014 10:25:36 a.m.
+LogMsg->"" Mensaje 31/03/2014 10:25:36 a.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 31/03/2014 10:26:09 a.m.
+LogMsg->"" Fecha y hora de compilacion 31/03/2014 04:15:58 p.m. 31/03/2014 10:26:29 a.m.
+Debug->"" Recursos.Inicia(this); 31/03/2014 10:26:29 a.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 31/03/2014 10:26:29 a.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 31/03/2014 10:26:29 a.m.
+LogMsg->"" Log 31/03/2014 10:26:31 a.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 31/03/2014 10:26:38 a.m.
+Error->""  
+ Msg = La cadena de entrada no tiene el formato correcto.
+ StackTrace =    en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value, IFormatProvider provider)
+   en Newtonsoft.Json.JsonTextReader.ParseNumber()
+   en Newtonsoft.Json.JsonTextReader.ParseValue()
+   en Newtonsoft.Json.JsonTextReader.ReadInternal()
+   en Newtonsoft.Json.JsonReader.ReadAsInt32Internal()
+   en Newtonsoft.Json.JsonTextReader.ReadAsInt32()
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.ReadForType(JsonReader reader, JsonContract contract, Boolean hasConverter)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IWrappedCollection wrappedList, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   en Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   en Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   en eClockBase.Controladores.CeC_ZLib.Json2Object[T](String value) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Controladores\CeC_ZLib.cs:línea 46
+   en eClockBase.Controladores.Incidencias.m_S_Incidencias_ObtenerHistorialCompleted(Object sender, ObtenerHistorialCompletedEventArgs e) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Controladores\Incidencias.cs:línea 425 31/03/2014 10:27:31 a.m.
+Error->""  
+ Msg = La cadena de entrada no tiene el formato correcto.
+ StackTrace =    en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value, IFormatProvider provider)
+   en Newtonsoft.Json.JsonTextReader.ParseNumber()
+   en Newtonsoft.Json.JsonTextReader.ParseValue()
+   en Newtonsoft.Json.JsonTextReader.ReadInternal()
+   en Newtonsoft.Json.JsonReader.ReadAsInt32Internal()
+   en Newtonsoft.Json.JsonTextReader.ReadAsInt32()
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.ReadForType(JsonReader reader, JsonContract contract, Boolean hasConverter)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IWrappedCollection wrappedList, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   en Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   en Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   en eClockBase.Controladores.CeC_ZLib.Json2Object[T](String value) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Controladores\CeC_ZLib.cs:línea 46
+   en eClockBase.Controladores.Incidencias.m_S_Incidencias_ObtenerHistorialCompleted(Object sender, ObtenerHistorialCompletedEventArgs e) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Controladores\Incidencias.cs:línea 425 31/03/2014 10:27:36 a.m.
+Error->""  
+ Msg = La cadena de entrada no tiene el formato correcto.
+ StackTrace =    en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value, IFormatProvider provider)
+   en Newtonsoft.Json.JsonTextReader.ParseNumber()
+   en Newtonsoft.Json.JsonTextReader.ParseValue()
+   en Newtonsoft.Json.JsonTextReader.ReadInternal()
+   en Newtonsoft.Json.JsonReader.ReadAsInt32Internal()
+   en Newtonsoft.Json.JsonTextReader.ReadAsInt32()
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.ReadForType(JsonReader reader, JsonContract contract, Boolean hasConverter)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IWrappedCollection wrappedList, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   en Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   en Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   en Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   en eClockBase.Controladores.CeC_ZLib.Json2Object[T](String value) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Controladores\CeC_ZLib.cs:línea 46
+   en eClockBase.Controladores.Incidencias.m_S_Incidencias_ObtenerHistorialCompleted(Object sender, ObtenerHistorialCompletedEventArgs e) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Controladores\Incidencias.cs:línea 425 31/03/2014 10:27:39 a.m.
+LogMsg->"" Fecha y hora de compilacion 31/03/2014 04:15:58 p.m. 31/03/2014 10:29:55 a.m.
+Debug->"" Recursos.Inicia(this); 31/03/2014 10:29:55 a.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 31/03/2014 10:29:55 a.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 31/03/2014 10:29:55 a.m.
+LogMsg->"" Log 31/03/2014 10:29:56 a.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 31/03/2014 10:30:13 a.m.
+Error->""  
+ Msg = Referencia a objeto no establecida como instancia de un objeto.
+ StackTrace =    en eClockBase.Controladores.CeC_ZLib.ZJson2Json(String ZJson) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Controladores\CeC_ZLib.cs:línea 24
+   en eClockBase.Controladores.CeC_ZLib.Json2Object[T](String value) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Controladores\CeC_ZLib.cs:línea 45
+   en eClockBase.Controladores.Incidencias.m_S_Incidencias_ObtenerHistorialCompleted(Object sender, ObtenerHistorialCompletedEventArgs e) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Controladores\Incidencias.cs:línea 425 31/03/2014 10:30:31 a.m.
+LogMsg->"" Fecha y hora de compilacion 07/06/2014 09:31:05 p.m. 07/06/2014 04:31:11 p.m.
+Debug->"" Recursos.Inicia(this); 07/06/2014 04:31:11 p.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 07/06/2014 04:31:12 p.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 07/06/2014 04:31:12 p.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 07/06/2014 04:31:38 p.m.
+LogMsg->"" Fecha y hora de compilacion 07/06/2014 09:31:05 p.m. 07/06/2014 04:49:06 p.m.
+Debug->"" Recursos.Inicia(this); 07/06/2014 04:49:06 p.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 07/06/2014 04:49:07 p.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 07/06/2014 04:49:07 p.m.
+LogMsg->"" Log 07/06/2014 04:49:32 p.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 07/06/2014 04:49:35 p.m.
+LogMsg->"" Fecha y hora de compilacion 07/06/2014 09:31:05 p.m. 07/06/2014 04:50:26 p.m.
+Debug->"" Recursos.Inicia(this); 07/06/2014 04:50:26 p.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 07/06/2014 04:50:26 p.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 07/06/2014 04:50:26 p.m.
+LogMsg->"" Log 07/06/2014 04:50:32 p.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 07/06/2014 04:50:43 p.m.
+LogMsg->"" Fecha y hora de compilacion 07/06/2014 09:31:05 p.m. 07/06/2014 04:51:51 p.m.
+Debug->"" Recursos.Inicia(this); 07/06/2014 04:51:51 p.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 07/06/2014 04:51:51 p.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 07/06/2014 04:51:51 p.m.
+LogMsg->"" Log 07/06/2014 04:51:54 p.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 07/06/2014 04:53:18 p.m.
+LogMsg->"" Fecha y hora de compilacion 07/06/2014 09:31:05 p.m. 07/06/2014 04:58:49 p.m.
+Debug->"" Recursos.Inicia(this); 07/06/2014 04:58:50 p.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 07/06/2014 04:58:50 p.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 07/06/2014 04:58:50 p.m.
+LogMsg->"" Log 07/06/2014 04:58:56 p.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 07/06/2014 04:59:11 p.m.
+LogMsg->"" CreaVista 07/06/2014 04:59:25 p.m.
+LogMsg->"" CreaVista 07/06/2014 04:59:31 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:01:00 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:01:21 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:01:55 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:01:58 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:00 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:02 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:08 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:10 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:13 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:19 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:21 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:29 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:32 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:35 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:37 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:40 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:44 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:46 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:50 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:53 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:02:58 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:03:09 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:03:12 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:03:14 p.m.
+LogMsg->"" CreaVista 07/06/2014 05:03:16 p.m.
+LogMsg->"" Fecha y hora de compilacion 07/06/2014 09:31:05 p.m. 07/06/2014 05:04:49 p.m.
+Debug->"" Recursos.Inicia(this); 07/06/2014 05:04:49 p.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 07/06/2014 05:04:49 p.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 07/06/2014 05:04:49 p.m.
+LogMsg->"" Log 07/06/2014 05:04:51 p.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 07/06/2014 05:05:14 p.m.
+Error->""  
+ Msg = Excepción durante la operación. El resultado no es válido. Compruebe la excepción InnerException para obtener más detalles.
+ StackTrace =    en System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary()
+   en eClockBase.ES_Reportes.ObtenListadoCompletedEventArgs.get_Result() en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Reportes\Reference.cs:línea 56
+   en eClockBase.Controladores.Reportes.<>c__DisplayClass1.<ObtenListado>b__0(Object sender, ObtenListadoCompletedEventArgs e) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Controladores\Reportes.cs:línea 48 07/06/2014 05:08:34 p.m.
+LogMsg->"" Fecha y hora de compilacion 07/06/2014 09:31:05 p.m. 04/09/2014 11:55:11 p.m.
+Debug->"" Recursos.Inicia(this); 04/09/2014 11:55:11 p.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 04/09/2014 11:55:12 p.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 04/09/2014 11:55:12 p.m.
+LogMsg->"" Fecha y hora de compilacion 07/06/2014 09:31:05 p.m. 04/09/2014 11:58:52 p.m.
+Debug->"" Recursos.Inicia(this); 04/09/2014 11:58:52 p.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 04/09/2014 11:58:52 p.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 04/09/2014 11:58:52 p.m.
+LogMsg->"" Log 04/09/2014 11:58:55 p.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 04/09/2014 11:59:06 p.m.
+Error->""  
+ Msg = Referencia a objeto no establecida como instancia de un objeto.
+ StackTrace =    en eClockBase.Controladores.CeC_ZLib.Normaliza(String Cadena) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Controladores\CeC_ZLib.cs:línea 44
+   en eClockBase.Controladores.CeC_ZLib.Json2Object[T](String value) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Controladores\CeC_ZLib.cs:línea 49
+   en eClockBase.Controladores.Asistencias.m_S_Asistencias_ObtenAsistenciaHorizontalNCompleted(Object sender, ObtenAsistenciaHorizontalNCompletedEventArgs e) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Controladores\Asistencias.cs:línea 297 05/09/2014 12:01:08 a.m.
+LogMsg->"" Fecha y hora de compilacion 07/06/2014 09:31:05 p.m. 06/09/2014 12:44:00 p.m.
+Debug->"" Recursos.Inicia(this); 06/09/2014 12:44:00 p.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 06/09/2014 12:44:03 p.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 06/09/2014 12:44:03 p.m.
+LogMsg->"" Log 06/09/2014 12:44:12 p.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 06/09/2014 12:44:24 p.m.
+Error->""  
+ Msg = Excepción durante la operación. El resultado no es válido. Compruebe la excepción InnerException para obtener más detalles.
+ StackTrace =    en System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary()
+   en eClockBase.ES_Reportes.ObtenListadoCompletedEventArgs.get_Result() en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Reportes\Reference.cs:línea 56
+   en eClockBase.Controladores.Reportes.<>c__DisplayClass1.<ObtenListado>b__0(Object sender, ObtenListadoCompletedEventArgs e) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Controladores\Reportes.cs:línea 48 06/09/2014 12:52:31 p.m.
+LogMsg->"" Fecha y hora de compilacion 07/06/2014 09:31:05 p.m. 02/10/2014 02:08:10 p.m.
+Debug->"" Recursos.Inicia(this); 02/10/2014 02:08:10 p.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 02/10/2014 02:08:11 p.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 02/10/2014 02:08:11 p.m.
+LogMsg->"" Log 02/10/2014 02:08:30 p.m.
+LogMsg->""    en System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   en System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   en System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   en System.ServiceModel.ClientBase`1.ChannelBase`1.EndInvoke(String methodName, Object[] args, IAsyncResult result)
+   en eClockBase.ES_Localizaciones.S_LocalizacionesClient.S_LocalizacionesClientChannel.EndObtenEtiquetasAyuda(IAsyncResult result) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Localizaciones\Reference.cs:línea 631
+   en eClockBase.ES_Localizaciones.S_LocalizacionesClient.eClockBase.ES_Localizaciones.S_Localizaciones.EndObtenEtiquetasAyuda(IAsyncResult result) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Localizaciones\Reference.cs:línea 422
+   en eClockBase.ES_Localizaciones.S_LocalizacionesClient.OnEndObtenEtiquetasAyuda(IAsyncResult result) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Localizaciones\Reference.cs:línea 433
+   en System.ServiceModel.ClientBase`1.OnAsyncCallCompleted(IAsyncResult result) 02/10/2014 02:08:30 p.m.
+Error->""  
+ Msg = Excepción durante la operación. El resultado no es válido. Compruebe la excepción InnerException para obtener más detalles.
+ StackTrace =    en System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary()
+   en eClockBase.ES_Localizaciones.ObtenEtiquetasAyudaCompletedEventArgs.get_Result() en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Localizaciones\Reference.cs:línea 118
+   en eClockBase.Controladores.Localizaciones.<>c__DisplayClass10.<ObtenEtiquetasAyuda>b__f(Object sender, ObtenEtiquetasAyudaCompletedEventArgs e) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Controladores\Localizaciones.cs:línea 173 02/10/2014 02:08:30 p.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 02/10/2014 02:09:35 p.m.
+LogMsg->"" Fecha y hora de compilacion 07/06/2014 09:31:05 p.m. 19/10/2014 09:27:41 a.m.
+Debug->"" Recursos.Inicia(this); 19/10/2014 09:27:41 a.m.
+Debug->"" Sesion = CeC_Sesion.ObtenSesion(this); 19/10/2014 09:27:48 a.m.
+Debug->"" eClockBase.Controladores.Localizaciones.sObtenEtiquetasAyuda(Sesion); 19/10/2014 09:27:48 a.m.
+LogMsg->"" Log 19/10/2014 09:28:47 a.m.
+LogMsg->""    en System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   en System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   en System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   en System.ServiceModel.ClientBase`1.ChannelBase`1.EndInvoke(String methodName, Object[] args, IAsyncResult result)
+   en eClockBase.ES_Localizaciones.S_LocalizacionesClient.S_LocalizacionesClientChannel.EndObtenEtiquetasAyuda(IAsyncResult result) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Localizaciones\Reference.cs:línea 631
+   en eClockBase.ES_Localizaciones.S_LocalizacionesClient.eClockBase.ES_Localizaciones.S_Localizaciones.EndObtenEtiquetasAyuda(IAsyncResult result) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Localizaciones\Reference.cs:línea 422
+   en eClockBase.ES_Localizaciones.S_LocalizacionesClient.OnEndObtenEtiquetasAyuda(IAsyncResult result) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Localizaciones\Reference.cs:línea 433
+   en System.ServiceModel.ClientBase`1.OnAsyncCallCompleted(IAsyncResult result) 19/10/2014 09:28:47 a.m.
+Error->""  
+ Msg = Excepción durante la operación. El resultado no es válido. Compruebe la excepción InnerException para obtener más detalles.
+ StackTrace =    en System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary()
+   en eClockBase.ES_Localizaciones.ObtenEtiquetasAyudaCompletedEventArgs.get_Result() en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Localizaciones\Reference.cs:línea 118
+   en eClockBase.Controladores.Localizaciones.<>c__DisplayClass10.<ObtenEtiquetasAyuda>b__f(Object sender, ObtenEtiquetasAyudaCompletedEventArgs e) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClockBase\Controladores\Localizaciones.cs:línea 173 19/10/2014 09:28:48 a.m.
+Error->""  
+ Msg = No se puede encontrar una parte de la ruta de acceso 'eClockSync\eClockSync.exe.xml'.
+ StackTrace =    en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   en System.IO.File.Copy(String sourceFileName, String destFileName)
+   en eClock5.Clases.CeC_eClockSync.GuardaConfig(CeC_SesionBase Sesion) en c:\Desarrollo\Entrytec\eClock\Código Fuente\eClock5\eClock5\Clases\CeC_eClockSync.cs:línea 29 19/10/2014 09:29:12 a.m.

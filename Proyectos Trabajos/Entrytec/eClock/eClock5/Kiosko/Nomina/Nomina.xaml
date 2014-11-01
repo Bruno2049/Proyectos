@@ -1,0 +1,39 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:Kiosko.Controles" x:Class="Kiosko.Nomina.Nomina" 
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1366"  FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoFontEtiquetas}" Foreground="White" Loaded="UserControl_Loaded_2" >
+    <Grid>
+
+        <eClock5:UC_ToolBar x:Name="ToolBar" Height="{DynamicResource AltoToolBar}" Titulo="Revisar Nómina" VerticalAlignment="Top"  OnEventClickToolBar="ToolBar_OnEventClickToolBar" BotonesCreados="ToolBar_BotonesCreados">
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Etiqueta="Regresar" Imagen="pack://siteoforigin:,,,/Resources/Regresar-64.png" Nombre="Btn_Regresar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Acceder" Imagen="pack://siteoforigin:,,,/Resources/Siguiente-64.png" Nombre="Btn_Siguiente" Default="True" />
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+
+        <Controles:UC_Banner  Margin="{DynamicResource MargenBanner}" Width="{DynamicResource AnchoBanner}" HorizontalAlignment="Right"/>
+        
+           
+
+        <Grid  Margin="10,74,200,345"  >
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  />
+                <ColumnDefinition  />
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Lbl_Contrasena" Text="Contraseña:" Grid.Row="1" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+            <PasswordBox x:Name="Tbx_Contrasena" Grid.Column="1" Margin="5" Grid.Row="1" FontSize="24" />
+            <TextBlock x:Name="Lbl_ContratoNomina" Text="Para efectuar el procedimiento de revisión de nómina debe ingresar primeramente su contraseña y proceder." TextTrimming="CharacterEllipsis" TextWrapping="WrapWithOverflow" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="{DynamicResource MargenGeneral}" HorizontalAlignment="Center" FontSize="{DynamicResource FontSizeTitulo}"  />
+        </Grid>
+
+        <Controles:UC_Teclado x:Name="Teclado" VerticalAlignment="Bottom" Margin="0,0,200,0" Height="340" />
+        
+    </Grid>
+</UserControl>

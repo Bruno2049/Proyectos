@@ -1,0 +1,25 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:eClock5="clr-namespace:eClock5" x:Class="eClock5.Vista.Turnos.ImportacionDeAsiganacionDeTurnos" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeParrafo}" mc:Ignorable="d" Width="Auto" Height="Auto" d:DesignWidth="926" d:DesignHeight="615">
+    <Grid Background="{StaticResource Blanco_Brush}">
+        <TextBlock x:Name="Lbl_Turno" HorizontalAlignment="Left" Height="30" Margin="10,62,0,0" TextWrapping="Wrap" Text="El formato que se utilizara para realizar la importación será:" VerticalAlignment="Top" Foreground="{StaticResource AzulClaro_Brush}"/>
+        <TextBlock  x:Name="Lbl_Turno1"  HorizontalAlignment="Left"  Margin="20,97,0,0" TextWrapping="Wrap" Text="9 dígitos para el número de empleado, se debe agregar ceros a la izquierda para completar los nueve dígitos." VerticalAlignment="Top" Height="30" Foreground="{StaticResource AzulClaro_Brush}"/>
+        <TextBlock x:Name="Lbl_Turno2"  HorizontalAlignment="Left" Height="30" Margin="20,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="{StaticResource AzulClaro_Brush}"><Run Text="Nombre del turno, verificandoi que este exactamente escrito como se encuentra dado de alta en el sistema."/></TextBlock>
+        <TextBlock x:Name="Lbl_Turno3"  HorizontalAlignment="Left" Height="30" Margin="20,167,0,0" TextWrapping="Wrap" Text="Fecha de inicio de asignación DD/MM/YYYY." VerticalAlignment="Top" Foreground="{StaticResource AzulClaro_Brush}"/>
+        <TextBlock x:Name="Lbl_Turno4"  HorizontalAlignment="Left" Height="30" Margin="20,197,0,0" TextWrapping="Wrap" Text="Fecha de fin de asignación DD/MM/YYYY" VerticalAlignment="Top" Foreground="{StaticResource AzulClaro_Brush}"/>
+        <TextBlock x:Name="Lbl_Turno5"  HorizontalAlignment="Left" Height="30" Margin="20,232,0,0" TextWrapping="Wrap" Text="Los campos deberán estar separados por coma (,). Se puede usar MS Exel y guardar el archivo como CSV." VerticalAlignment="Top" Foreground="{StaticResource AzulClaro_Brush}"/>
+        <TextBlock  x:Name="Lbl_Turno6" HorizontalAlignment="Left" Height="30" Margin="20,267,0,0" TextWrapping="Wrap" Text="Se usara una linea por reguistro." VerticalAlignment="Top" Foreground="{StaticResource AzulClaro_Brush}"/>
+        <TextBlock x:Name="Lbl_Turno7"  HorizontalAlignment="Left" Height="30" Margin="20,302,0,0" TextWrapping="Wrap" Text="Ejemplo:" VerticalAlignment="Top" Foreground="{StaticResource AzulClaro_Brush}"/>
+        <TextBlock x:Name="Lbl_Turno8"  HorizontalAlignment="Left" Height="30" Margin="36,337,0,0" TextWrapping="Wrap" Text="Para el templeado numero 125 se tienen los datos siguientes: Empleado= 125, Turno= Matutino, Fecha de inicio= 25/ 03/2013" VerticalAlignment="Top" Foreground="{StaticResource AzulClaro_Brush}"/>
+        <TextBlock x:Name="Lbl_Turno9" HorizontalAlignment="Left" Height="30" Margin="36,372,0,0" TextWrapping="Wrap" Text="Se debe hacer de este modo" VerticalAlignment="Top" Foreground="{StaticResource AzulClaro_Brush}"/>
+        <TextBlock x:Name="Lbl_Turno10"  HorizontalAlignment="Left" Height="30"  Margin="36,407,0,0" TextWrapping="Wrap" Text="000000125, matutino,25/03/2013, 30/03/2013" VerticalAlignment="Top" Foreground="{StaticResource AzulClaro_Brush}"/>
+        
+        
+        <eClock5:UC_ToolBar  Width="Auto" Margin="0,0,0,525"/>
+        <Rectangle Fill="{StaticResource AzulClaro_Brush}" Height="121" Margin="10,472,10,0" Stroke="Black" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Lbl_Incidencias10" Margin="26,506,0,0" TextWrapping="Wrap" Text="1. Seleccione el archivo de acceso que desea importar" VerticalAlignment="Top" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeParrafo}" Foreground="{StaticResource Blanco_Brush}" Height="32" HorizontalAlignment="Left" Width="348"/>
+        <TextBox x:Name="Tbx_Examinar" Height="23" Margin="379,506,123,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+        <Button x:Name="Btn_Examinar" Content="Examinar" Margin="0,510,30,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="88" Click="Btn_Examinar_Click"/>
+        <TextBlock x:Name="Lbl_Incidencias11" Margin="26,541,0,0" TextWrapping="Wrap" Text="2. De clic en importar" VerticalAlignment="Top" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeParrafo}" Foreground="{StaticResource Blanco_Brush}" Height="32" HorizontalAlignment="Left" Width="401"/>
+        <Button x:Name="Btn_Importar" Content="Importar" Margin="0,554,128,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="105"/>
+
+    </Grid>
+</UserControl>

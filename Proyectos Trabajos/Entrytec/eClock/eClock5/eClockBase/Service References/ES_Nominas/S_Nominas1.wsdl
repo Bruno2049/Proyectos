@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:50723/S_Nominas.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:50723/S_Nominas.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="S_Nominas_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="DoWork" />
+  </wsdl:message>
+  <wsdl:message name="S_Nominas_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Nominas_ObtenDatosRecibo_InputMessage">
+    <wsdl:part name="parameters" element="ObtenDatosRecibo" />
+  </wsdl:message>
+  <wsdl:message name="S_Nominas_ObtenDatosRecibo_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenDatosReciboResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Nominas_ConfirmaReciboNominaImpreso_InputMessage">
+    <wsdl:part name="parameters" element="ConfirmaReciboNominaImpreso" />
+  </wsdl:message>
+  <wsdl:message name="S_Nominas_ConfirmaReciboNominaImpreso_OutputMessage">
+    <wsdl:part name="parameters" element="ConfirmaReciboNominaImpresoResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Nominas_ImportaRecibos_InputMessage">
+    <wsdl:part name="parameters" element="ImportaRecibos" />
+  </wsdl:message>
+  <wsdl:message name="S_Nominas_ImportaRecibos_OutputMessage">
+    <wsdl:part name="parameters" element="ImportaRecibosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="S_Nominas">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="urn:S_Nominas/DoWork" message="S_Nominas_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Nominas/DoWorkResponse" message="S_Nominas_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDatosRecibo">
+      <wsdl:input wsaw:Action="urn:S_Nominas/ObtenDatosRecibo" message="S_Nominas_ObtenDatosRecibo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Nominas/ObtenDatosReciboResponse" message="S_Nominas_ObtenDatosRecibo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmaReciboNominaImpreso">
+      <wsdl:input wsaw:Action="urn:S_Nominas/ConfirmaReciboNominaImpreso" message="S_Nominas_ConfirmaReciboNominaImpreso_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Nominas/ConfirmaReciboNominaImpresoResponse" message="S_Nominas_ConfirmaReciboNominaImpreso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportaRecibos">
+      <wsdl:input wsaw:Action="urn:S_Nominas/ImportaRecibos" message="S_Nominas_ImportaRecibos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Nominas/ImportaRecibosResponse" message="S_Nominas_ImportaRecibos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

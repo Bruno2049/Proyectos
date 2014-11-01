@@ -1,0 +1,283 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controles="clr-namespace:eClock5.Controles" xmlns:igWindows="http://infragistics.com/Windows" xmlns:eClock5="clr-namespace:eClock5" x:Class="eClock5.Vista.Turnos.Edicion" 
+             mc:Ignorable="d" Background="{DynamicResource Blanco_Brush}" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource Blanco_Brush}" d:DesignHeight="600" d:DesignWidth="900" >
+    <Grid x:Name="XGrid_EC_TURNOS"  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{DynamicResource AltoToolBarGrid}" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="270" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <eClock5:UC_ToolBar VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" Width="Auto"  >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="/eClock5;component/Resources/Guardar_64.png" Nombre="Btn_Guardar" />
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <Grid x:Name="XGrid_TurnoDatos" Grid.Row="1"  Background="{DynamicResource AzulClaro_Brush}" Margin="10,10,10,0" Height="Auto" Width="Auto" VerticalAlignment="Top"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" x:Name="R_DetalesTurno"/>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="25" x:Name="R_Nombre"/>
+                <RowDefinition Height="25" x:Name="R_Color"/>
+                <RowDefinition Height="25" x:Name="R_Grupos"/>
+                <RowDefinition Height="30" x:Name="R_GeneraAsistencia"/>
+                <RowDefinition Height="Auto" x:Name="R_Horario_Jornada"/>
+                <RowDefinition Height="25" x:Name="R_Bloque"/>
+                <RowDefinition Height="25" x:Name="R_Tolerancia"/>
+                <RowDefinition Height="25" x:Name="R_Tolerancia2"/>
+                <RowDefinition Height="25" x:Name="R_Tolerancia3"/>
+                <RowDefinition Height="25" x:Name="Tolerancia4"/>
+                <RowDefinition Height="25" x:Name="R_ToleranciaComida"/>
+                <RowDefinition Height="25" x:Name="R_HorasExtras"/>
+                <RowDefinition Height="25" x:Name="R_MismaHora"/>
+                <RowDefinition Height="25" x:Name="R_Restringir"/>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="30" x:Name="HorarioComidaTitulo"/>
+                <RowDefinition Height="Auto" x:Name="HorarioComida"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="C_TurnosTextBlock" />
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Lbl_EC_TURNOS" Text="Detalles del Turno" Grid.Column="0" Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}" FontSize="{DynamicResource FontSizeSubTitulo}" Margin="24,0" />
+            <TextBlock x:Name="Lbl_TURNO_NOMBRE" Text="Nombre: " Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}"  Height="25" Margin="10,0,0,0" Width="57" />
+            <TextBox x:Name="Tbx_TURNO_NOMBRE" Grid.Column="0" Grid.Row="2" Margin="67,5,10,5"/>
+            <TextBlock x:Name="Lbl_TURNO_COLOR" Text="Color: " Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}" Height="25" Margin="10,0,0,0" Width="41" />
+            <TextBox x:Name="Tbx_TURNO_COLOR" Grid.Column="0" Grid.Row="3" Grid.RowSpan="1" Margin="67,5,10,5" />
+            <TextBlock x:Name="Lbl_TURNO_GRUPOS" Text="Grupo: " Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}" Height="25" Margin="10,0,0,0" Width="46" />
+            <TextBox x:Name="Tbx_TURNO_GRUPOS" Grid.Column="0" Grid.Row="4" Grid.RowSpan="1" Margin="67,5,10,5" />
+            <CheckBox x:Name="Chb_TURNO_ASISTENCIA" Content="El Turno Genera Asistencia" Grid.Column="0" Grid.Row="5"  HorizontalAlignment="Left" VerticalAlignment="Center" Grid.RowSpan="1" Foreground="{DynamicResource Blanco_Brush}" Margin="5" Width="Auto" Height="Auto"/>
+            <StackPanel Grid.Column="0" Grid.Row="6" Grid.RowSpan="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" Width="Auto" Height="Auto">
+                <RadioButton x:Name="Rbn_Horario" Content="Por Horario" Checked="Rbn_Horario_Checked" IsEnabled="True" Foreground="{DynamicResource Blanco_Brush}" Height="20" />
+                <RadioButton x:Name="Rbn_Jornada" Content="Por Jornada de Trabajo" Checked="Rbn_Jornada_Checked" Foreground="{DynamicResource Blanco_Brush}" Height="20"/>
+            </StackPanel>
+            <TextBlock x:Name="Lbl_TURNO_DIA_HBLOQUE" Text="Bloque" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}" Width="Auto" Height="Auto" Margin="10,0,0,0"/>
+            <Controles:UC_DateTimePicker x:Name="DT_TURNO_DIA_HBLOQUE" Grid.Row="7" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Center"  Margin="66,8,0,5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  Width="Auto" />
+            <TextBlock x:Name="Lbl_TURNO_DIA_HERETARDO" Text="Minutos para Retardo" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}" Margin="10,0,0,0" Width="Auto" Height="Auto" />
+            <Controles:UC_DateTimePicker x:Name="DT_TURNO_DIA_HERETARDO" Grid.Row="8" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Center"  Margin="209,7,0,6" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  Width="Auto" />
+            <TextBlock x:Name="Lbl_TURNO_DIA_HERETARDO_B" Text="Minutos para Retardo Mínimo" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}" Margin="10,0,0,0" Width="Auto" Height="Auto" />
+            <Controles:UC_DateTimePicker x:Name="DT_TURNO_DIA_HERETARDO_B" Grid.Row="9" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Center"  Margin="209,7,0,6" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  Width="Auto" />
+            <TextBlock x:Name="Lbl_TURNO_DIA_HERETARDO_C" Text="Minutos para Retardo Máximo" Grid.Column="0" Grid.Row="10" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}" Margin="10,0,0,0"  Width="Auto" Height="Auto" />
+            <Controles:UC_DateTimePicker x:Name="DT_TURNO_DIA_HERETARDO_C" Grid.Row="10" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Center"  Margin="209,7,0,6" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  Width="Auto" />
+            <TextBlock x:Name="Lbl_TURNO_DIA_HERETARDO_D" Text="Minutos para Retardo Superior" Grid.Column="0" Grid.Row="11" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}" Margin="10,0,0,0"  Width="Auto" Height="Auto" />
+            <Controles:UC_DateTimePicker x:Name="DT_TURNO_DIA_HERETARDO_D" Grid.Row="11" HorizontalContentAlignment="Center" VerticalAlignment="Center"  Margin="210,7,0,6" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  Width="33" HorizontalAlignment="Left" />
+            <TextBlock x:Name="Lbl_TURNO_DIA_HCTOLERA" Text="Tolerancia Regreso Comida" Grid.Column="0" Grid.Row="12" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}" Margin="10,0,0,0"  Width="Auto" Height="Auto" />
+            <Controles:UC_DateTimePicker x:Name="DT_TURNO_DIA_HCTOLERA" Grid.Row="12" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Center"  Margin="209,7,0,6" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  Width="Auto" RenderTransformOrigin="-1.662,0.417" />
+            <CheckBox x:Name="Chb_TURNO_PHEXTRAS" Content="Permite Tiempo Extra" Grid.Column="0" Grid.Row="13" Grid.RowSpan="1" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}" Margin="10,5,0,5"  Width="Auto" Height="Auto" />
+            <CheckBox x:Name="Chb_MismoHorario" Content="Mismo Horario Para Cada Día" Grid.Column="0" Grid.Row="14" Grid.RowSpan="1" Checked="Chb_MismoHorario_Checked" HorizontalAlignment="Left" VerticalAlignment="Center" Unchecked="Chb_MismoHorario_Unchecked" Foreground="{DynamicResource Blanco_Brush}" Margin="10,5,0,5" />
+            <CheckBox x:Name="Chb_RestringeAcceso" Content="Restringir Acceso" Grid.Column="0" Grid.Row="15" Grid.RowSpan="1" HorizontalAlignment="Left" VerticalAlignment="Center" Checked="Chb_RestringeAcceso_Checked" Unchecked="Chb_RestringeAcceso_Unchecked" Foreground="{DynamicResource Blanco_Brush}" Margin="10,5,0,5" />
+            <TextBlock x:Name="Lbl_HorarioComer" Text="Horario para comer" Grid.Column="0" Grid.Row="17" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}" Margin="10,0,0,0" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeSubTitulo}" />
+            <StackPanel Grid.Column="0" Grid.Row="18" HorizontalAlignment="Left" Margin="5,5,0,0" Height="77" VerticalAlignment="Top" >
+                <RadioButton x:Name="Rbn_SinComida" Content="Sin Comida" Checked="Rbn_SinComida_Checked" Foreground="{DynamicResource Blanco_Brush}"  Width="Auto" Height="20" />
+                <RadioButton x:Name="Rbn_ComidaPorTiempo" Content="Por Tiempo" Checked="Rbn_PorTiempo_Checked" Foreground="{DynamicResource Blanco_Brush}"  Width="Auto" Height="20" />
+                <RadioButton x:Name="Rbn_ComidaHorarioFijo" Content="Horario Fijo" Checked="Rbn_HorarioFijo_Checked" Foreground="{DynamicResource Blanco_Brush}"  Width="Auto" Height="20" />
+                <RadioButton x:Name="Rbn_ComidaAvanzado" Content="Avanzado" Checked="Rbn_Avanzado_Checked" Foreground="{DynamicResource Blanco_Brush}"  Width="Auto" Height="20" />
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="XGrid_EC_TURNOS_DIA" Grid.Column="2" Grid.Row="1"  Background="{DynamicResource AzulClaro_Brush}"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" Width="Auto" Height="Auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="48px" x:Name="R_Configuracion"/>
+                <RowDefinition Height="5px" />
+                <RowDefinition Height="40px" x:Name="R_EtiquetasDia"/>
+                <RowDefinition Height="25px" x:Name="R_Lunes"/>
+                <RowDefinition Height="25px" x:Name="R_Martes"/>
+                <RowDefinition Height="25px" x:Name="R_Miercoles"/>
+                <RowDefinition Height="25px" x:Name="R_Jueves"/>
+                <RowDefinition Height="25px" x:Name="R_Viernes"/>
+                <RowDefinition Height="25px" x:Name="R_Sabado"/>
+                <RowDefinition Height="25px" x:Name="R_Domingo"/>
+                <RowDefinition Height="25px" x:Name="R_MismoHorarioDias"  />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="C_Dia" Width="Auto"/>
+                <ColumnDefinition x:Name="C_EntradaMinima" Width="Auto"/>
+                <ColumnDefinition x:Name="C_Entrada" Width="Auto"/>
+                <ColumnDefinition x:Name="C_EntradaMaxima" Width="Auto"/>
+                <ColumnDefinition x:Name="C_SalidaComida" Width="Auto"/>
+                <ColumnDefinition x:Name="C_RegresoComida" Width="Auto"/>
+                <ColumnDefinition x:Name="C_TiempoComida" Width="Auto"/>
+                <ColumnDefinition x:Name="C_SalidaMinima" Width="Auto"/>
+                <ColumnDefinition x:Name="C_Salida" Width="Auto"/>
+                <ColumnDefinition x:Name="C_SalidaMaxima" Width="Auto"/>
+                <ColumnDefinition x:Name="C_Jornada" Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Lbl_EC_TURNOS_DIA_Config" Text="Configuración" Grid.Row="0" Grid.ColumnSpan="11" VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" FontSize="{DynamicResource FontSizeSubTitulo}"/>
+            <TextBlock x:Name="Lbl_Dia" Text="Día" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_EntradaMinima"  Text="Entrada &#xA;Mínima" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_Entrada" Text="Entrada" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_EntradaMaxima" Text="Entrada &#xA;Máxima" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_SalidaComida" Text="Salida &#xA;Comida" Grid.Column="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_RegresoComida" Text="Regreso &#xA;Comida" Grid.Column="5" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_TiempoComida" Text="Tiempo &#xA;Comida" Grid.Column="6" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_SalinaMinima"  Text="Salida &#xA;Mínima" Grid.Column="7" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_Salida"  Text="Salida" Grid.Column="8" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}"/>
+            <TextBlock x:Name="Lbl_SalidaMaxima"  Text="Salida &#xA;Máxima" Grid.Column="9" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_Jornada"  Text="Jornada" Grid.Column="10" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+
+            <CheckBox x:Name="Chb_Lunes" Content="Lunes" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="0" Foreground="{DynamicResource Blanco_Brush}" Margin="0,0,0,5" Unchecked="Chb_Lunes_UnChecked"/>
+            <CheckBox x:Name="Chb_Martes" Content="Martes" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Foreground="{DynamicResource Blanco_Brush}" Unchecked="Chb_Martes_UnChecked"/>
+            <CheckBox x:Name="Chb_Miercoles" Content="Miércoles" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Foreground="{DynamicResource Blanco_Brush}" Unchecked="Chb_Miercoles_UnChecked"/>
+            <CheckBox x:Name="Chb_Jueves" Content="Jueves" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="6" Grid.Column="0" Foreground="{DynamicResource Blanco_Brush}" Unchecked="Chb_Jueves_UnChecked"/>
+            <CheckBox x:Name="Chb_Viernes" Content="Viernes" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="7" Grid.Column="0" Foreground="{DynamicResource Blanco_Brush}" Unchecked="Chb_Viernes_UnChecked"/>
+            <CheckBox x:Name="Chb_Sabado" Content="Sabado" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="8" Grid.Column="0" Foreground="{DynamicResource Blanco_Brush}" Unchecked="Chb_Sabado_UnChecked"/>
+            <CheckBox x:Name="Chb_Domingo" Content="Domingo" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="9" Grid.Column="0" Foreground="{DynamicResource Blanco_Brush}" Unchecked="Chb_Domingo_UnChecked"/>
+
+            <Controles:UC_DateTimePicker x:Name="DT_LunesEntradaMinima" Grid.Column= "1" Grid.Row= "3" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MartesEntradaMinima" Grid.Column= "1" Grid.Row= "4" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MiercolesEntradaMinima" Grid.Column= "1" Grid.Row= "5" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_JuevesEntradaMinima" Grid.Column= "1" Grid.Row= "6" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_ViernesEntradaMinima" Grid.Column= "1" Grid.Row= "7" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_SabadoEntradaMinima" Grid.Column= "1" Grid.Row= "8" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_DomingoEntradaMinima" Grid.Column= "1" Grid.Row= "9" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_LunesEntrada" Grid.Column= "2" Grid.Row= "3" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MartesEntrada" Grid.Column= "2" Grid.Row= "4" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MiercolesEntrada" Grid.Column= "2" Grid.Row= "5" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_JuevesEntrada" Grid.Column= "2" Grid.Row= "6" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_ViernesEntrada" Grid.Column= "2" Grid.Row= "7" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_SabadoEntrada" Grid.Column= "2" Grid.Row= "8" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_DomingoEntrada" Grid.Column= "2" Grid.Row= "9" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_LunesEntradaMaxima" Grid.Column= "3" Grid.Row= "3" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MartesEntradaMaxima" Grid.Column= "3" Grid.Row= "4" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MiercolesEntradaMaxima" Grid.Column= "3" Grid.Row= "5" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_JuevesEntradaMaxima" Grid.Column= "3" Grid.Row= "6" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_ViernesEntradaMaxima" Grid.Column= "3" Grid.Row= "7" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_SabadoEntradaMaxima" Grid.Column= "3" Grid.Row= "8" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_DomingoEntradaMaxima" Grid.Column= "3" Grid.Row= "9" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_LunesSalidaComida" Grid.Column= "4" Grid.Row= "3" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MartesSalidaComida" Grid.Column= "4" Grid.Row= "4" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MiercolesSalidaComida" Grid.Column= "4" Grid.Row= "5" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_JuevesSalidaComida" Grid.Column= "4" Grid.Row= "6" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_ViernesSalidaComida" Grid.Column= "4" Grid.Row= "7" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_SabadoSalidaComida" Grid.Column= "4" Grid.Row= "8" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_DomingoSalidaComida" Grid.Column= "4" Grid.Row= "9" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_LunesRegresoComida" Grid.Column= "5" Grid.Row= "3" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MartesRegresoComida" Grid.Column= "5" Grid.Row= "4" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MiercolesRegresoComida" Grid.Column= "5" Grid.Row= "5" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_JuevesRegresoComida" Grid.Column= "5" Grid.Row= "6" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_ViernesRegresoComida" Grid.Column= "5" Grid.Row= "7" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_SabadoRegresoComida" Grid.Column= "5" Grid.Row= "8" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_DomingoRegresoComida" Grid.Column= "5" Grid.Row= "9" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_LunesTiempoComida" Grid.Column= "6" Grid.Row= "3" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MartesTiempoComida" Grid.Column= "6" Grid.Row= "4" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MiercolesTiempoComida" Grid.Column= "6" Grid.Row= "5" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_JuevesTiempoComida" Grid.Column= "6" Grid.Row= "6" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_ViernesTiempoComida" Grid.Column= "6" Grid.Row= "7" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_SabadoTiempoComida" Grid.Column= "6" Grid.Row= "8" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_DomingoTiempoComida" Grid.Column= "6" Grid.Row= "9" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_LunesSalidaMinima" Grid.Column= "7" Grid.Row= "3" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MartesSalidaMinima" Grid.Column= "7" Grid.Row= "4" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MiercolesSalidaMinima" Grid.Column= "7" Grid.Row= "5" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_JuevesSalidaMinima" Grid.Column= "7" Grid.Row= "6" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_ViernesSalidaMinima" Grid.Column= "7" Grid.Row= "7" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_SabadoSalidaMinima" Grid.Column= "7" Grid.Row= "8" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_DomingoSalidaMinima" Grid.Column= "7" Grid.Row= "9" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_LunesSalida" Grid.Column= "8" Grid.Row= "3" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MartesSalida" Grid.Column= "8" Grid.Row= "4" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MiercolesSalida" Grid.Column= "8" Grid.Row= "5" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_JuevesSalida" Grid.Column= "8" Grid.Row= "6" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_ViernesSalida" Grid.Column= "8" Grid.Row= "7" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_SabadoSalida" Grid.Column= "8" Grid.Row= "8" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_DomingoSalida" Grid.Column= "8" Grid.Row= "9" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_LunesSalidaMaxima" Grid.Column= "9" Grid.Row= "3" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MartesSalidaMaxima" Grid.Column= "9" Grid.Row= "4" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MiercolesSalidaMaxima" Grid.Column= "9" Grid.Row= "5" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_JuevesSalidaMaxima" Grid.Column= "9" Grid.Row= "6" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_ViernesSalidaMaxima" Grid.Column= "9" Grid.Row= "7" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_SabadoSalidaMaxima" Grid.Column= "9" Grid.Row= "8" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_DomingoSalidaMaxima" Grid.Column= "9" Grid.Row= "9" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_LunesJornada" Grid.Column= "10" Grid.Row= "3" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MartesJornada" Grid.Column= "10" Grid.Row= "4" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_MiercolesJornada" Grid.Column= "10" Grid.Row= "5" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_JuevesJornada" Grid.Column= "10" Grid.Row= "6" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_ViernesJornada" Grid.Column= "10" Grid.Row= "7" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_SabadoJornada" Grid.Column= "10" Grid.Row= "8" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_DomingoJornada" Grid.Column= "10" Grid.Row= "9" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+
+            <!--<TextBlock x:Name="Lbl_Horario" Content="Horario" Grid.Column="0" Grid.Row="10" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}"/>-->
+
+            <!--<Controles:UC_DateTimePicker x:Name="DT_HorarioEntradaMinima" Grid.Column= "1" Grid.Row="10" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioEntrada" Grid.Column= "2" Grid.Row="10" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioEntradaMaxima" Grid.Column= "3" Grid.Row="10" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioSalidaComida" Grid.Column= "4" Grid.Row="10" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioRegresoComida" Grid.Column= "5" Grid.Row="10" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioTiempoComida" Grid.Column= "6" Grid.Row="10" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioSalidaMinima" Grid.Column= "7" Grid.Row="10" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioSalida" Grid.Column= "8" Grid.Row="10" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioSalidaMaxima" Grid.Column= "9" Grid.Row="10" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioJornada" Grid.Column= "10" Grid.Row="10" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />-->
+        </Grid>
+        <Grid x:Name="XGrid_MismoHorarioDias" VerticalAlignment="Top" Background="{DynamicResource AzulClaro_Brush}" HorizontalAlignment="Left" Grid.Column="2" Grid.Row="1" Margin="5"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" x:Name="XGrid_MismoHorarioDias_Config"/>
+                <RowDefinition Height="45" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Lbl_XGrid_MismoHorarioDias_Config" Text="Configuración" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="11" Foreground="{DynamicResource Blanco_Brush}" FontSize="{DynamicResource FontSizeSubTitulo}"/>
+
+            <Grid x:Name="XGrid_MismoHorarioDias_checkbox" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.ColumnSpan="11">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="80" />
+                </Grid.ColumnDefinitions>
+                <CheckBox x:Name="Chb_HorarioLunes" Content="Lunes" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Foreground="{DynamicResource Blanco_Brush}"/>
+                <CheckBox x:Name="Chb_HorarioMartes" Content="Martes" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" Foreground="{DynamicResource Blanco_Brush}"/>
+                <CheckBox x:Name="Chb_HorarioMiercoles" Content="Miércoles" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="2" Grid.Row="0" Foreground="{DynamicResource Blanco_Brush}"/>
+                <CheckBox x:Name="Chb_HorarioJueves" Content="Jueves" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Foreground="{DynamicResource Blanco_Brush}"/>
+                <CheckBox x:Name="Chb_HorarioViernes" Content="Viernes" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Foreground="{DynamicResource Blanco_Brush}"/>
+                <CheckBox x:Name="Chb_HorarioSabado" Content="Sabado" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" Foreground="{DynamicResource Blanco_Brush}" />
+                <CheckBox x:Name="Chb_HorarioDomingo" Content="Domingo" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Foreground="{DynamicResource Blanco_Brush}"/>
+            </Grid>
+
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioEntradaMinima" Grid.Column= "1" Grid.Row="2" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioEntrada" Grid.Column= "2" Grid.Row="2" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioEntradaMaxima" Grid.Column= "3" Grid.Row="2" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioSalidaComida" Grid.Column= "4" Grid.Row="2" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioRegresoComida" Grid.Column= "5" Grid.Row="2" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioTiempoComida" Grid.Column= "6" Grid.Row="2" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioSalidaMinima" Grid.Column= "7" Grid.Row="2" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioSalida" Grid.Column= "8" Grid.Row="2" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioSalidaMaxima" Grid.Column= "9" Grid.Row="2" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="hh:mm tt"  />
+            <Controles:UC_DateTimePicker x:Name="DT_HorarioJornada" Grid.Column= "10" Grid.Row="2" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="Auto" Margin="5" Checked="True" ShowDropDown="False" ShowCheckBox="False" Format="Custom" CustomFormat="HH:mm"  />
+
+            <TextBlock x:Name="Lbl_Horario" Text="Horario" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource Blanco_Brush}"/>
+            <TextBlock x:Name="Lbl_EntradaMinimaHorario"  Text="Entrada &#xA;Mínima" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_EntradaHorario" Text="Entrada" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_EntradaMaximaHorario" Text="Entrada &#xA;Máxima" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_SalidaComidaHorario" Text="Salida &#xA;Comida" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_RegresoComidaHorario" Text="Regreso &#xA;Comida" Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_TiempoComidaHorario" Text="Tiempo &#xA;Comida" Grid.Column="6" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_SalinaMinimaHorario"  Text="Salida &#xA;Mínima" Grid.Column="7" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_SalidaHorario"  Text="Salida" Grid.Column="8" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}"/>
+            <TextBlock x:Name="Lbl_SalidaMaximaHorario"  Text="Salida &#xA;Máxima" Grid.Column="9" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+            <TextBlock x:Name="Lbl_JornadaHorario"  Text="Jornada" Grid.Column="10" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{DynamicResource Blanco_Brush}" />
+        </Grid>
+
+    </Grid>
+</UserControl>

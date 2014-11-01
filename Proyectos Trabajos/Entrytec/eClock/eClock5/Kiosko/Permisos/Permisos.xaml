@@ -1,0 +1,70 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controles="clr-namespace:Kiosko.Controles" xmlns:eClock5="clr-namespace:eClock5" xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Kiosko.Permisos.Permisos" 
+             mc:Ignorable="d" d:DesignHeight="804" d:DesignWidth="1402" FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoFontEtiquetas}" Foreground="White" Loaded="UserControl_Loaded_1">
+    <UserControl.Resources>
+        <System:Double x:Key="TamanoCirculo">48</System:Double>
+    </UserControl.Resources>
+
+    <Grid x:Name="Grd_Main">
+
+        <eClock5:UC_ToolBar x:Name="ToolBar"  VerticalAlignment="Top" Height="{DynamicResource AltoToolBar}" Titulo="Permisos" OnEventClickToolBar="ToolBar_OnEventClickToolBar">
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Etiqueta="Regresar" Imagen="pack://siteoforigin:,,,/Resources/Regresar-64.png" Nombre="Btn_Regresar" Mostrar="NoSeleccionados"/>
+                <eClock5:UC_ToolBar_Control Etiqueta=""  Mostrar="SoloSeleccionados" Nombre="Btn_DeSeleccionar" Imagen="pack://siteoforigin:,,,/Resources/Seleccionados_64.png"/>
+                <eClock5:UC_ToolBar_Control Etiqueta="{}{0} Seleccionados" Mostrar="SoloSeleccionados" Nombre="Btn_DeSeleccionar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Siguiente" Mostrar="SoloSeleccionados" Imagen="pack://siteoforigin:,,,/Resources/Siguiente-64.png" Nombre="Btn_Siguiente"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <Controles:UC_Banner HorizontalAlignment="Right" Margin="0,64,0,0" Width="{DynamicResource AnchoBanner}"/>
+        
+        <Grid Margin="{DynamicResource MargenGridCentral}"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="77"/>
+                <RowDefinition />
+                <!--<RowDefinition Height="20"/>-->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="863*" />
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="296*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Margin="{DynamicResource MargenGeneral}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="58" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                </Grid.RowDefinitions>                
+                <Rectangle Fill="#FFF4F4F5" Grid.ColumnSpan="2" Grid.RowSpan="6" />
+                <Controles:UC_Dia x:Name="D_Minimo" Grid.Row="0" ColorDia="{StaticResource DiasPocoProbables}" Height="{DynamicResource TamanoCirculo}"  Width="{DynamicResource TamanoCirculo}"/>
+                <Controles:UC_Dia x:Name="D_Alerta"  Grid.Row="1" ColorDia="{StaticResource DiasPosibles}"  Width="{DynamicResource TamanoCirculo}" Height="{DynamicResource TamanoCirculo}"  />
+                <Controles:UC_Dia x:Name="D_Aceptable" Grid.Row="2" ColorDia="{StaticResource DiasAutorizados}"  Width="{DynamicResource TamanoCirculo}" Height="{DynamicResource TamanoCirculo}" />                
+                <Controles:UC_Dia x:Name="D_Solicitado"  Grid.Row="5" ColorDia="{StaticResource DiasSolicitados}" Width="{DynamicResource TamanoCirculo}" Height="{DynamicResource TamanoCirculo}" />
+                <Controles:UC_Dia  Grid.Row="3" ColorSeleccion="{StaticResource DiasSeleccionados}" Seleccionado="True"  Width="{DynamicResource TamanoCirculo}" Height="{DynamicResource TamanoCirculo}" />
+                <Controles:UC_Dia x:Name="D_Festivo"  Grid.Row="4" ColorDia="{StaticResource DiasFestivos}"  Width="{DynamicResource TamanoCirculo}" Height="{DynamicResource TamanoCirculo}" />
+                <TextBlock Grid.Column="1"  Grid.Row="0"  Text="Días denegados" Style="{DynamicResource TextBlockDescripcionesDiasStyle}"  />
+                <TextBlock Grid.Column="1"  Grid.Row="1"  Text="Días poco probables" Style="{DynamicResource TextBlockDescripcionesDiasStyle}" />
+                <TextBlock Grid.Column="1"  Grid.Row="2"  Text="Permisos Autorizados" Style="{DynamicResource TextBlockDescripcionesDiasStyle}" />
+                <TextBlock Grid.Column="1"  Grid.Row="3"  Text="Días seleccionados para solicitar" Style="{DynamicResource TextBlockDescripcionesDiasStyle}" />
+                <TextBlock Grid.Column="1"  Grid.Row="4"  Text="Días solicitados" Style="{DynamicResource TextBlockDescripcionesDiasStyle}"  />
+                <TextBlock Grid.Column="1"  Grid.Row="5"  Text="Días festivos" Style="{DynamicResource TextBlockDescripcionesDiasStyle}"  />
+            </Grid>
+            <!--<ProgressBar Name="Bar_Solicitudes" Value="0" Grid.Row="2" Grid.ColumnSpan="1"/>-->
+            <TextBlock  x:Name="Lbl_SemaforoDeColores" Text="Significado de colores para los días de calendario" TextWrapping="WrapWithOverflow" Grid.Column="2"/>            
+            <Controles:UC_Mes x:Name="Calendario" SeleccionadoChanged="UC_Mes_SeleccionadoChanged" Grid.Row="1" Grid.Column="0" MesChanged="Calendario_MesChanged"/>
+            <TextBlock TextWrapping="WrapWithOverflow"  Text="Toque para seleccionar los días que desea solicitar como permisos" Grid.ColumnSpan="2"  />            
+        </Grid>
+        
+    </Grid>
+</UserControl>

@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Acordion";
+}
+
+<h2>Acordion</h2>
+
+<div data-role="collapsible-set">
+	<div data-role="collapsible" data-collapsed="false">
+	<h3>Empleados</h3>
+        @CeC_Empleados.MuestraAgrupacion(ViewBag.Arbol)
+	</div>
+	
+	<div data-role="collapsible">
+	<h3>Configuración</h3>
+	<p>I'm the collapsible set content for section B.</p>
+	</div>
+	
+</div>
+	

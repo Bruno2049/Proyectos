@@ -1,0 +1,112 @@
+.igte_CaribbeanEditWithButtons
+{
+	font-size: 10px;
+	font-family: Segoe UI, Verdana, Arial, Sans-Serif;
+	background-color: #e6f5fc;
+	height:20px;
+	width: 130px;
+	border:solid 1px #4189CB;
+	outline: 0;
+}
+
+
+.igte_CaribbeanEdit
+{
+	font-size: 12px;
+	font-family: Segoe UI, Verdana, Arial, Sans-Serif;
+	background-color: #e6f5fc;
+	border:solid 1px #4189CB;
+	outline:0;
+}
+
+.igte_CaribbeanTextArea
+{
+	font-size: 12px;
+	font-family: Segoe UI, Verdana, Arial, Sans-Serif;
+	background-color: #e6f5fc;
+	border:solid 1px #4189CB;
+	outline:0;
+	resize:none;
+}
+
+.igte_CaribbeanEditInContainer
+{
+	font-size: 12px;
+	font-family: Segoe UI, Verdana, Arial, Sans-Serif;
+	background-color: Transparent;
+	border-width:0px;
+	outline:0;
+}
+
+.igte_CaribbeanFocus
+{
+	background-image: none;
+	background-color: #FFFFFF;
+	border-color:#15336a;
+}
+
+.igte_CaribbeanHover
+{
+	border-color:#15336a;
+}
+
+.igte_CaribbeanInner
+{
+}
+
+.igte_CaribbeanInnerFocus
+{
+}
+
+.igte_CaribbeanInnerHover
+{
+}
+
+.igte_CaribbeanButtonSize
+{
+	width:15px;
+	height:100%;
+}
+
+.igte_CaribbeanButton
+{
+	background-color: #3d75d8;
+	background-image: url(images/igte_spinbuttonbg.gif);
+	background-repeat: repeat-x;
+	line-height:normal;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.igte_CaribbeanButtonFocus
+{
+}
+
+.igte_CaribbeanNullText
+{
+	color: #777777;
+}
+
+.igte_CaribbeanButtonHover
+{
+	background-color: #15336a;
+	background-image: url(images/igte_spinbuttonbghover.gif);
+}
+
+
+.igte_CaribbeanButtonPressed
+{
+	background-color: #15336a;
+	background-image: url(images/igte_spinbuttonbgpressed.gif);
+}
+
+
+.igte_CaribbeanButtonDisabled
+{
+	background-image: none;
+	background-color: #CCCCCC;
+}
+
+.igte_CaribbeanButtonImg
+{
+}

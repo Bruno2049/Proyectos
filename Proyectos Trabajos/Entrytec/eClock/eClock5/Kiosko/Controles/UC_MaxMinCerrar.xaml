@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Kiosko.Controles.UC_MaxMinCerrar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="24" d:DesignWidth="64" Loaded="UserControl_Loaded" MouseDown="UserControl_MouseDown" MouseUp="UserControl_MouseUp" MouseDoubleClick="UserControl_MouseDoubleClick">
+    <Grid x:Name="Grd_Main" Width="64" Height="24"  HorizontalAlignment="Right" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Btn_Minimizar" Click="Btn_Minimizar_Click" Background="{x:Null}" BorderBrush="{x:Null}" >
+            <Image Source="pack://siteoforigin:,,,/Resources/Minimizar_24.png" />
+        </Button>
+        <Button  Grid.Column="1"  x:Name="Btn_Maximisar" Click="Btn_Maximisar_Click" Background="{x:Null}" BorderBrush="{x:Null}" Visibility="Collapsed">
+            <Image Source="pack://siteoforigin:,,,/Resources/Maximizar_Pantalla_24.png" />
+        </Button>
+        <Button  Grid.Column="2" x:Name="Btn_Cerrar" Click="Btn_Cerrar_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Image Source="pack://siteoforigin:,,,/Resources/Cerrar_24.png" />
+        </Button>
+        <Button x:Name="Btn_Minipantalla" Grid.Column="1" Click="Btn_Minipantalla_Click" Background="{x:Null}" BorderBrush="{x:Null}"  >
+            <Image Source="pack://siteoforigin:,,,/Resources/Mini_Pantalla_24.png" />
+        </Button>
+    </Grid>
+</UserControl>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_ExportacionNOI" targetNamespace="http://tempuri.org/DS_ExportacionNOI.xsd" xmlns:mstns="http://tempuri.org/DS_ExportacionNOI.xsd" xmlns="http://tempuri.org/DS_ExportacionNOI.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EC_TIPO_INC_SISTableAdapter" GeneratorDataComponentClassName="EC_TIPO_INC_SISTableAdapter" Name="EC_TIPO_INC_SIS" UserDataComponentName="EC_TIPO_INC_SISTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="maquinter.dbo.EC_TIPO_INC_SIS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT TIPO_INC_SIS_ID, TIPO_INC_SIS_NOMBRE, TIPO_INC_SIS_ABR FROM EC_TIPO_INC_SIS WHERE (TIPO_INC_SIS_ID &gt; 0)</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TIPO_INC_SIS_NOMBRE" DataSetColumn="TIPO_INC_SIS_NOMBRE" />
+              <Mapping SourceColumn="TIPO_INC_SIS_ABR" DataSetColumn="TIPO_INC_SIS_ABR" />
+              <Mapping SourceColumn="TIPO_INC_SIS_ID" DataSetColumn="TIPO_INC_SIS_ID" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EC_TIPO_INCIDENCIASTableAdapter" GeneratorDataComponentClassName="EC_TIPO_INCIDENCIASTableAdapter" Name="EC_TIPO_INCIDENCIAS" UserDataComponentName="EC_TIPO_INCIDENCIASTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="maquinter.dbo.EC_TIPO_INCIDENCIAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT TIPO_INCIDENCIA_ID ,TIPO_INCIDENCIA_NOMBRE, TIPO_INCIDENCIA_ABR FROM EC_TIPO_INCIDENCIAS WHERE (TIPO_INCIDENCIA_ID &gt; 0) and tipo_incidencia_borrado = 0</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TIPO_INCIDENCIA_NOMBRE" DataSetColumn="TIPO_INCIDENCIA_NOMBRE" />
+              <Mapping SourceColumn="TIPO_INCIDENCIA_ABR" DataSetColumn="TIPO_INCIDENCIA_ABR" />
+              <Mapping SourceColumn="TIPO_INCIDENCIA_ID" DataSetColumn="TIPO_INCIDENCIA_ID" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="CeT_DataTable" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IncidenciasPersonasTableAdapter" GeneratorDataComponentClassName="IncidenciasPersonasTableAdapter" Name="IncidenciasPersonas" UserDataComponentName="IncidenciasPersonasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        (EC_PERSONAS_DATOS.999999)ID, EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA, EC_TIPO_INCIDENCIAS.TIPO_INCIDENCIA_ID, 
+                         EC_TIPO_INC_SIS.TIPO_INC_SIS_ID
+FROM            EC_PERSONAS_DIARIO INNER JOIN
+                         EC_PERSONAS ON EC_PERSONAS_DIARIO.PERSONA_ID = EC_PERSONAS.PERSONA_ID INNER JOIN
+                         EC_INCIDENCIAS ON EC_PERSONAS_DIARIO.INCIDENCIA_ID = EC_INCIDENCIAS.INCIDENCIA_ID INNER JOIN
+                         EC_TIPO_INCIDENCIAS ON EC_INCIDENCIAS.TIPO_INCIDENCIA_ID = EC_TIPO_INCIDENCIAS.TIPO_INCIDENCIA_ID INNER JOIN
+                         EC_TIPO_INC_SIS ON EC_PERSONAS_DIARIO.TIPO_INC_SIS_ID = EC_TIPO_INC_SIS.TIPO_INC_SIS_ID INNER JOIN
+                         EC_PERSONAS_DATOS ON EC_PERSONAS.PERSONA_LINK_ID = EC_PERSONAS_DATOS.PERSONA_LINK_ID
+WHERE        (EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA &gt;= ?) AND (EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA &lt; ?) AND 
+                         (EC_PERSONAS_DIARIO.TIPO_INC_SIS_ID &gt; 0) AND (EC_PERSONAS.PERSONA_BORRADO = 0)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param1" ColumnName="PERSONA_DIARIO_FECHA" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="PERSONA_DIARIO_FECHA" Precision="0" ProviderType="DBTimeStamp" Scale="0" Size="8" SourceColumn="PERSONA_DIARIO_FECHA" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="Param2" ColumnName="PERSONA_DIARIO_FECHA" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="PERSONA_DIARIO_FECHA1" Precision="0" ProviderType="DBTimeStamp" Scale="0" Size="8" SourceColumn="PERSONA_DIARIO_FECHA" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PERSONA_LINK_ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="PERSONA_DIARIO_FECHA" DataSetColumn="PERSONA_DIARIO_FECHA" />
+              <Mapping SourceColumn="TIPO_INCIDENCIA_ID" DataSetColumn="TIPO_INCIDENCIA_ID" />
+              <Mapping SourceColumn="TIPO_INC_SIS_ID" DataSetColumn="TIPO_INC_SIS_ID" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_ExportacionNOI" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_ExportacionNOI" msprop:Generator_DataSetName="DS_ExportacionNOI">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EC_TIPO_INC_SIS" msprop:Generator_UserTableName="EC_TIPO_INC_SIS" msprop:Generator_RowDeletedName="EC_TIPO_INC_SISRowDeleted" msprop:Generator_TableClassName="EC_TIPO_INC_SISDataTable" msprop:Generator_RowChangedName="EC_TIPO_INC_SISRowChanged" msprop:Generator_RowClassName="EC_TIPO_INC_SISRow" msprop:Generator_RowChangingName="EC_TIPO_INC_SISRowChanging" msprop:Generator_RowEvArgName="EC_TIPO_INC_SISRowChangeEvent" msprop:Generator_RowEvHandlerName="EC_TIPO_INC_SISRowChangeEventHandler" msprop:Generator_TablePropName="EC_TIPO_INC_SIS" msprop:Generator_TableVarName="tableEC_TIPO_INC_SIS" msprop:Generator_RowDeletingName="EC_TIPO_INC_SISRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPO_INC_SIS_NOMBRE" msprop:Generator_UserColumnName="TIPO_INC_SIS_NOMBRE" msprop:Generator_ColumnPropNameInRow="TIPO_INC_SIS_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnTIPO_INC_SIS_NOMBRE" msprop:Generator_ColumnPropNameInTable="TIPO_INC_SIS_NOMBREColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_INC_SIS_ABR" msprop:Generator_UserColumnName="TIPO_INC_SIS_ABR" msprop:Generator_ColumnPropNameInRow="TIPO_INC_SIS_ABR" msprop:Generator_ColumnVarNameInTable="columnTIPO_INC_SIS_ABR" msprop:Generator_ColumnPropNameInTable="TIPO_INC_SIS_ABRColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Codigo" msprop:Generator_UserColumnName="Codigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_INC_SIS_ID" msprop:Generator_UserColumnName="TIPO_INC_SIS_ID" msprop:Generator_ColumnPropNameInRow="TIPO_INC_SIS_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_INC_SIS_ID" msprop:Generator_ColumnPropNameInTable="TIPO_INC_SIS_IDColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_TIPO_INCIDENCIAS" msprop:Generator_UserTableName="EC_TIPO_INCIDENCIAS" msprop:Generator_RowDeletedName="EC_TIPO_INCIDENCIASRowDeleted" msprop:Generator_TableClassName="EC_TIPO_INCIDENCIASDataTable" msprop:Generator_RowChangedName="EC_TIPO_INCIDENCIASRowChanged" msprop:Generator_RowClassName="EC_TIPO_INCIDENCIASRow" msprop:Generator_RowChangingName="EC_TIPO_INCIDENCIASRowChanging" msprop:Generator_RowEvArgName="EC_TIPO_INCIDENCIASRowChangeEvent" msprop:Generator_RowEvHandlerName="EC_TIPO_INCIDENCIASRowChangeEventHandler" msprop:Generator_TablePropName="EC_TIPO_INCIDENCIAS" msprop:Generator_TableVarName="tableEC_TIPO_INCIDENCIAS" msprop:Generator_RowDeletingName="EC_TIPO_INCIDENCIASRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPO_INCIDENCIA_NOMBRE" msprop:Generator_UserColumnName="TIPO_INCIDENCIA_NOMBRE" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIA_NOMBRE" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIA_NOMBREColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_INCIDENCIA_ABR" msprop:Generator_UserColumnName="TIPO_INCIDENCIA_ABR" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIA_ABR" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIA_ABR" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIA_ABRColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Codigo" msprop:Generator_UserColumnName="Codigo" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_ColumnPropNameInRow="Codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_INCIDENCIA_ID" msprop:Generator_UserColumnName="TIPO_INCIDENCIA_ID" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIA_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIA_ID" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIA_IDColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IncidenciasPersonas" msprop:Generator_UserTableName="IncidenciasPersonas" msprop:Generator_RowDeletedName="IncidenciasPersonasRowDeleted" msprop:Generator_TableClassName="IncidenciasPersonasDataTable" msprop:Generator_RowChangedName="IncidenciasPersonasRowChanged" msprop:Generator_RowClassName="IncidenciasPersonasRow" msprop:Generator_RowChangingName="IncidenciasPersonasRowChanging" msprop:Generator_RowEvArgName="IncidenciasPersonasRowChangeEvent" msprop:Generator_RowEvHandlerName="IncidenciasPersonasRowChangeEventHandler" msprop:Generator_TablePropName="IncidenciasPersonas" msprop:Generator_TableVarName="tableIncidenciasPersonas" msprop:Generator_RowDeletingName="IncidenciasPersonasRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:decimal" />
+              <xs:element name="PERSONA_DIARIO_FECHA" msprop:Generator_UserColumnName="PERSONA_DIARIO_FECHA" msprop:Generator_ColumnPropNameInRow="PERSONA_DIARIO_FECHA" msprop:Generator_ColumnVarNameInTable="columnPERSONA_DIARIO_FECHA" msprop:Generator_ColumnPropNameInTable="PERSONA_DIARIO_FECHAColumn" type="xs:dateTime" />
+              <xs:element name="TIPO_INCIDENCIA_ID" msprop:Generator_UserColumnName="TIPO_INCIDENCIA_ID" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIA_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIA_ID" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIA_IDColumn" type="xs:decimal" />
+              <xs:element name="TIPO_INC_SIS_ID" msprop:Generator_UserColumnName="TIPO_INC_SIS_ID" msprop:Generator_ColumnPropNameInRow="TIPO_INC_SIS_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_INC_SIS_ID" msprop:Generator_ColumnPropNameInTable="TIPO_INC_SIS_IDColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_TIPO_INC_SIS" />
+      <xs:field xpath="mstns:TIPO_INC_SIS_ID" />
+    </xs:unique>
+    <xs:unique name="EC_TIPO_INCIDENCIAS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_TIPO_INCIDENCIAS" />
+      <xs:field xpath="mstns:TIPO_INCIDENCIA_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

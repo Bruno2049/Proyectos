@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="eClock5.Vista.Wizard.Bienvenida"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignHeight="395" d:DesignWidth="570">
+    <Grid>
+        <Rectangle Fill="{StaticResource AzulOscuro_Brush}" Stroke="{StaticResource AzulOscuro_Brush}" HorizontalAlignment="Left" Width="183"/>
+        <TextBlock x:Name="Lbl_Bienvenido" Height="58" Margin="212,91,0,0" TextWrapping="Wrap" Text="Bienvenido al asistente de configuración de eClock." VerticalAlignment="Top" HorizontalAlignment="Left" Width="339" FontSize="{StaticResource FontSizeTitulo}"/>
+        <Image Margin="31,10,0,0" Source="/eClock5;component/Resources/eClock.png" Height="65" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115"/>
+        <TextBlock x:Name="Lbl_PulseSiguiente" Margin="212,184,0,0" TextWrapping="Wrap" Text="Pulse siguiente para comenzar." VerticalAlignment="Top" HorizontalAlignment="Left" Width="339" FontSize="{StaticResource FontSizeParrafo}"/>
+        <Image   Height="145" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="163"  Margin="10,0,0,10" Source="/eClock5;component/Resources/WizardBienvenida.png"  />
+    </Grid>
+</UserControl>

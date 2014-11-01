@@ -1,0 +1,57 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:Kiosko.Controles" x:Class="Kiosko.Generales.Registro" 
+             mc:Ignorable="d"  d:DesignHeight="768" d:DesignWidth="1366"  Background="{DynamicResource BrushFondoApp}"  Foreground="{DynamicResource ColorFuente}" FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoFontEtiquetas}" Loaded="UserControl_Loaded">
+    <Grid>
+        <Controles:UC_Teclado x:Name="Teclado"   Style="{DynamicResource TecladoBannerDerStyle}" />
+        <Controles:UC_Banner HorizontalAlignment="Right" Margin="{DynamicResource MargenBanner}" Width="{DynamicResource AnchoBanner}"/>
+        
+        <eClock5:UC_ToolBar x:Name="ToolBar"      Height="{DynamicResource AltoToolBar}" VerticalAlignment="Top" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" Titulo="Registro en Kiosco" BotonesCreados="ToolBar_BotonesCreados" >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Etiqueta="Regresar" Imagen="pack://siteoforigin:,,,/Resources/Regresar-64.png" Nombre="Btn_Regresar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Registrarse" Imagen="pack://siteoforigin:,,,/Resources/Siguiente-64.png" Nombre="Btn_Siguiente" Default="True" />
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+
+        
+
+        <Grid  HorizontalAlignment="Center" Width="600"  VerticalAlignment="Top" Margin="0,80,200,0" >
+            <Grid.RowDefinitions>
+
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition/>
+                <RowDefinition  />
+                <RowDefinition />
+                <RowDefinition  />
+                <RowDefinition  />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock  x:Name="Lbl_Numempleado" Text="No. de empleado"  Grid.Row="1" Style="{DynamicResource TextBlockEtiquetaStyle}"   />
+            <TextBlock  x:Name="Lbl_Contrasena" Grid.Row="2"  Text="Contraseña" Style="{DynamicResource TextBlockEtiquetaStyle}"  />
+            <TextBlock  x:Name="Lbl_ConfirmarContrasena" Grid.Row="3" Text="Confirmar contraseña" Style="{DynamicResource TextBlockEtiquetaStyle}"   />
+            <TextBlock  x:Name="Lbl_CorreoElectronico" Grid.Row="4"  Text="Correo electrónico" Style="{DynamicResource TextBlockEtiquetaStyle}"   />
+            <TextBlock  x:Name="Lbl_ConfirmarCorreoElectronico" Grid.Row="5" Text="Confirmar correo electrónico" Style="{DynamicResource TextBlockEtiquetaStyle}"  />
+            <TextBox  x:Name="Txt_Numempleado"  Grid.Column="1"      TabIndex="10"  TextChanged="TextoCambio" Grid.Row="1" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            <PasswordBox  x:Name="Txt_Contrasena" Grid.Column="1"   Grid.Row="2"   VerticalAlignment="Center" TabIndex="11"  PasswordChanged="TextoCambio" Margin="{DynamicResource MargenTextBoxCaptura}" />
+            <PasswordBox  x:Name="Txt_ConfirmarContrasena" Grid.Column="1"  Grid.Row="3"   TabIndex="12"  PasswordChanged="TextoCambio"  Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            <TextBox x:Name="Txt_CorreoElectronico" Grid.Column="1"    Grid.Row="4"   TabIndex="13"  TextChanged="TextoCambio" Margin="{DynamicResource MargenTextBoxCaptura}" />
+            <TextBox x:Name="TXt_ConfirmarCorreoElectronico" Grid.Column="1" Grid.Row="5"  TabIndex="14"  TextChanged="TextoCambio" Margin="{DynamicResource MargenTextBoxCaptura}" />
+            <StackPanel Grid.Row="6" Grid.ColumnSpan="2"  >
+                <TextBlock x:Name="Lbl_NoEmpleado"  Text="* Requiere Ingresar un no. de empleado"  Style="{DynamicResource TextBlockErrorStyle}"/>
+                <TextBlock x:Name="Lbl_NoClave"  Text="* Se requiere contraseña" Style="{DynamicResource TextBlockErrorStyle}"  />
+                <TextBlock x:Name="Lbl_CveNoCoincide"   Text="* Contraseña y confirmación no coinciden" Style="{DynamicResource TextBlockErrorStyle}"  />
+                <TextBlock x:Name="Lbl_eMailNoCoincide" Text="* Correo electrónico y confirmación no coinciden" Style="{DynamicResource TextBlockErrorStyle}"  />
+
+            </StackPanel>
+        </Grid>
+
+
+    </Grid>
+</UserControl>

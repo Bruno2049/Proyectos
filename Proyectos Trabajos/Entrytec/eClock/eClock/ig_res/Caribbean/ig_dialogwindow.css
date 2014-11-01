@@ -1,0 +1,177 @@
+.igdw_CaribbeanControl
+{
+	background-color:Transparent;
+	border-width:0px;
+}
+
+
+.igdw_CaribbeanHeaderArea
+{
+	font-weight:bold;
+	border-width:0px;
+	height: 34px;
+	cursor:default;
+	color:White;
+}
+
+
+.igdw_CaribbeanBodyContent
+{
+	border:solid 0px #999999;
+}
+
+
+.igdw_CaribbeanHeaderButton
+{
+	margin:4px 3px 3px 3px;
+	cursor:pointer;
+}
+
+
+.igdw_CaribbeanHeaderCaption
+{
+	font-weight:normal;
+	font-size:x-small;
+	color:White;
+}
+
+
+.igdw_CaribbeanHeaderButtonArea
+{
+	vertical-align:top;
+}
+
+
+.igdw_CaribbeanHeaderImage
+{
+	background-image: url(images/igdw_top.gif);
+	cursor:default;
+}
+
+
+.igdw_CaribbeanModalBackground
+{
+	background-color:White;
+	filter: alpha(opacity : 50);
+	opacity: 0.5;
+	z-index: 99999;
+}
+
+
+.igdw_CaribbeanResizingHandle
+{
+	cursor:se-resize;
+}
+
+
+/* used only when header visible */
+.igdw_CaribbeanHeaderCornerLeft
+{
+	background-repeat:no-repeat;
+	background-position:top left ;
+	background-image: url(./images/igdw_TopLeft.gif);
+	font-size:1px;
+	width: 6px;
+}
+
+
+/* used only when header visible */
+.igdw_CaribbeanHeaderContent
+{
+	background-image: url(./images/igdw_top.gif);
+}
+
+
+/* used only when header visible */
+.igdw_CaribbeanHeaderCornerRight
+{
+	background-position:top right ;
+	background-image: url(./images/igdw_TopRight.gif);
+	font-size:1px;
+	width: 6px;
+}
+
+
+/* used only when header hidden */
+.igdw_CaribbeanBodyCornerTopLeft
+{
+	background-position:top left ;
+	background-image: url(./images/igdw_TopLeftHidden.gif);
+	font-size:1px;
+	width: 6px;
+	height: 16px;
+}
+
+
+/* used only when header hidden */
+.igdw_CaribbeanBodyEdgeTop
+{
+	background-image: url(./images/igdw_topHidden.gif);
+	font-size:1px;
+}
+
+
+/* used only when header hidden */
+.igdw_CaribbeanBodyCornerTopRight
+{
+	background-repeat:no-repeat;
+	background-position:top right ;
+	background-image: url(./images/igdw_TopRightHidden.gif);
+	font-size:1px;
+	width: 6px;
+	height: 16px;
+}
+
+
+.igdw_CaribbeanBodyEdgeLeft
+{
+	background-position:top left ;
+	background-image: url(./images/igdw_EdgeLeft.gif);
+	font-size:1px;
+	width: 6px;
+}
+
+
+.igdw_CaribbeanBodyEdgeRight
+{
+	background-position:top right ;
+	background-image: url(./images/igdw_EdgeRight.gif);
+	font-size:1px;
+	width: 6px;
+}
+
+
+.igdw_CaribbeanBodyCornerBottomLeft
+{
+	background-image: url(./images/igdw_BottomLeft.gif);
+	font-size:1px;
+	width: 6px;
+	height: 6px;
+}
+
+
+.igdw_CaribbeanBodyContentArea
+{
+	background-color:White;
+	vertical-align:top;
+}
+
+
+.igdw_CaribbeanBodyCornerBottomRight
+{
+	background-image: url(./images/igdw_BottomRight.gif);
+	background-position:right top;	
+	font-size:1px;
+	width: 6px;
+	height: 6px;
+}
+
+
+.igdw_CaribbeanBodyEdgeBottom
+{
+	background-image: url(./images/igdw_Bottom.gif);
+	font-size:1px;
+	height: 6px;
+}
+
+

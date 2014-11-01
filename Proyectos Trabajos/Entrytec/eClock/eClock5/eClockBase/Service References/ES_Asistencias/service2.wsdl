@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="S_Asistencias_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="DoWork" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaGrafica_InputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaGrafica" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaGrafica_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaGraficaResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistencia_InputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistencia" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistencia_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaLineal_InputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaLineal" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaLineal_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaLinealResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaLinealN_InputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaLinealN" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaLinealN_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaLinealNResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaLinealV5_InputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaLinealV5" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaLinealV5_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaLinealV5Response" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaHorizontal_InputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaHorizontal" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaHorizontal_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaHorizontalResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaHorizontalN_InputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaHorizontalN" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaHorizontalN_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaHorizontalNResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaSemanal_InputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaSemanal" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaSemanal_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaSemanalResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenHorasExtras_InputMessage">
+    <wsdl:part name="parameters" element="ObtenHorasExtras" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenHorasExtras_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenHorasExtrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_AplicaHorasExtras_InputMessage">
+    <wsdl:part name="parameters" element="AplicaHorasExtras" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_AplicaHorasExtras_OutputMessage">
+    <wsdl:part name="parameters" element="AplicaHorasExtrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_QuitaHorasExtras_InputMessage">
+    <wsdl:part name="parameters" element="QuitaHorasExtras" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_QuitaHorasExtras_OutputMessage">
+    <wsdl:part name="parameters" element="QuitaHorasExtrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaTotalesSaldos_InputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaTotalesSaldos" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaTotalesSaldos_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaTotalesSaldosResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaTotales_InputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaTotales" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenAsistenciaTotales_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenAsistenciaTotalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenTiempos_InputMessage">
+    <wsdl:part name="parameters" element="ObtenTiempos" />
+  </wsdl:message>
+  <wsdl:message name="S_Asistencias_ObtenTiempos_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenTiemposResponse" />
+  </wsdl:message>
+  <wsdl:portType name="S_Asistencias">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/DoWork" message="S_Asistencias_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/DoWorkResponse" message="S_Asistencias_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenAsistenciaGrafica">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/ObtenAsistenciaGrafica" message="S_Asistencias_ObtenAsistenciaGrafica_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/ObtenAsistenciaGraficaResponse" message="S_Asistencias_ObtenAsistenciaGrafica_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenAsistencia">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/ObtenAsistencia" message="S_Asistencias_ObtenAsistencia_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/ObtenAsistenciaResponse" message="S_Asistencias_ObtenAsistencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenAsistenciaLineal">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/ObtenAsistenciaLineal" message="S_Asistencias_ObtenAsistenciaLineal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/ObtenAsistenciaLinealResponse" message="S_Asistencias_ObtenAsistenciaLineal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenAsistenciaLinealN">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/ObtenAsistenciaLinealN" message="S_Asistencias_ObtenAsistenciaLinealN_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/ObtenAsistenciaLinealNResponse" message="S_Asistencias_ObtenAsistenciaLinealN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenAsistenciaLinealV5">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/ObtenAsistenciaLinealV5" message="S_Asistencias_ObtenAsistenciaLinealV5_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/ObtenAsistenciaLinealV5Response" message="S_Asistencias_ObtenAsistenciaLinealV5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenAsistenciaHorizontal">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/ObtenAsistenciaHorizontal" message="S_Asistencias_ObtenAsistenciaHorizontal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/ObtenAsistenciaHorizontalResponse" message="S_Asistencias_ObtenAsistenciaHorizontal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenAsistenciaHorizontalN">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/ObtenAsistenciaHorizontalN" message="S_Asistencias_ObtenAsistenciaHorizontalN_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/ObtenAsistenciaHorizontalNResponse" message="S_Asistencias_ObtenAsistenciaHorizontalN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenAsistenciaSemanal">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/ObtenAsistenciaSemanal" message="S_Asistencias_ObtenAsistenciaSemanal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/ObtenAsistenciaSemanalResponse" message="S_Asistencias_ObtenAsistenciaSemanal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenHorasExtras">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/ObtenHorasExtras" message="S_Asistencias_ObtenHorasExtras_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/ObtenHorasExtrasResponse" message="S_Asistencias_ObtenHorasExtras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AplicaHorasExtras">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/AplicaHorasExtras" message="S_Asistencias_AplicaHorasExtras_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/AplicaHorasExtrasResponse" message="S_Asistencias_AplicaHorasExtras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuitaHorasExtras">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/QuitaHorasExtras" message="S_Asistencias_QuitaHorasExtras_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/QuitaHorasExtrasResponse" message="S_Asistencias_QuitaHorasExtras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenAsistenciaTotalesSaldos">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/ObtenAsistenciaTotalesSaldos" message="S_Asistencias_ObtenAsistenciaTotalesSaldos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/ObtenAsistenciaTotalesSaldosResponse" message="S_Asistencias_ObtenAsistenciaTotalesSaldos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenAsistenciaTotales">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/ObtenAsistenciaTotales" message="S_Asistencias_ObtenAsistenciaTotales_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/ObtenAsistenciaTotalesResponse" message="S_Asistencias_ObtenAsistenciaTotales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenTiempos">
+      <wsdl:input wsaw:Action="urn:S_Asistencias/ObtenTiempos" message="S_Asistencias_ObtenTiempos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Asistencias/ObtenTiemposResponse" message="S_Asistencias_ObtenTiempos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "eClock";
+}
+
+@section Header {
+    @Html.ActionLink("Regresar", "Index", "Home", null, new { data_icon = "arrow-l", data_rel = "back", data_transition = "slide", data_iconpos = "notext" })
+    <h1>@ViewBag.Title</h1>
+    <a href="#" onclick="location.reload(); return false;" data-icon="refresh" data-iconpos="notext" class="ui-btn-right" data-inline="true" data-role="button" data-transition="slide">Recargar</a>
+}
+
+@helper MuestraAgrupacion(eClockBase.Modelos.Personas.Model_Arbol Arbol)
+{
+    if (Arbol == null)
+    {
+        return;
+    }
+@*
+    <div data-role="collapsible-set">
+        @foreach(eClockBase.Modelos.Personas.Model_Arbol Agrupacion in Arbol.Agrupaciones)
+        {
+            <div data-role="collapsible" >
+                <h3>@Agrupacion.Agrupacion <a href="/Home/Agrupacion/@Agrupacion.AGRUPACION_NOMBRE" data-rel="dialog" data-transition="fade"> Ir a...</a></h3>
+@MuestraAgrupacion(Agrupacion)
+            </div>
+        }
+    </div>
+    <ul data-role="listview" data-theme="b" >
+        @foreach(eClockBase.Modelos.Personas.Model_ArbolPersona Persona in Arbol.Personas)
+        {
+            <li><a href="/Home/Empleado/@Persona.PERSONA_ID">@Persona.PERSONA_NOMBRE (@Persona.PERSONA_LINK_ID)</a> </li>
+        }
+    </ul>
+    
+    *@
+    
+    <ul data-role="listview" data-theme="b" data-shadow="false" data-inset="true" data-corners="false">
+        <li data-icon="check"><a href="@eClockMobile.BaseModificada.CeC.HtmlAgrega("/Home/Agrupacion/" + Arbol.AGRUPACION_NOMBRE)">Seleccionar todos</a></li>
+        @foreach (eClockBase.Modelos.Personas.Model_Arbol Agrupacion in Arbol.Agrupaciones)
+        {
+            <li data-role="collapsible" data-iconpos="right" data-shadow="false" data-corners="false">
+                <h2>@Agrupacion.Agrupacion</h2>
+
+                @MuestraAgrupacion(Agrupacion)
+            </li>
+        }
+        @foreach (eClockBase.Modelos.Personas.Model_ArbolPersona Persona in Arbol.Personas)
+        {
+            <li>
+                @*                <a href="@eClockMobile.BaseModificada.CeC.HtmlAgrega("/Home/Empleado/"+Persona.PERSONA_ID)">@Persona.PERSONA_NOMBRE (@Persona.PERSONA_LINK_ID) </a>*@
+                <a href="#" onclick="return MuestraEmpleado(@Persona.PERSONA_ID);">@Persona.PERSONA_NOMBRE (@Persona.PERSONA_LINK_ID) </a>
+            </li>
+        }
+    </ul>
+    
+}
+<ul data-role="listview" data-theme="b" data-shadow="false" data-inset="true" data-corners="false">
+    <li>
+        <a href="@Url.Action("Kiosco", "Home")">
+            <img src="/Personas/Foto/@(ViewBag.PERSONA_ID.ToString() + "_80x80.jpg")" ><h2>Bienvenido</h2>
+            <p>@ViewBag.USUARIO_NOMBRE</p>
+        </a>
+    </li>
+</ul>
+<div data-role="collapsible-set">
+    <div data-role="collapsible" data-collapsed="false">
+        <h3>Empleados</h3>
+        @MuestraAgrupacion(ViewBag.Arbol)
+    </div>
+
+
+</div>
+
+@section scripts
+{
+    <script>
+        function MuestraEmpleado(PersonaID) {
+            var Url = '/Home/Empleado/' + PersonaID + ".html";
+            $.mobile.changePage(Url, { transition: "slide", reloadPage: true });
+            return false;
+        }
+        function MuestraAgrupacion(Agrupacion) {
+        }
+    </script>
+}

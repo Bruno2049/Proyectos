@@ -1,0 +1,561 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:eClock5" xmlns:Turnos="clr-namespace:eClock5.Vista.Turnos" xmlns:Controles="clr-namespace:eClock5.Controles" 
+    xmlns:HorasExtras="clr-namespace:eClock5.Vista.HorasExtras"
+    xmlns:DiasFestivos="clr-namespace:eClock5.Vista.DiasFestivos" xmlns:Perfiles="clr-namespace:eClock5.Vista.Perfiles" xmlns:Empleados="clr-namespace:eClock5.Vista.Empleados" xmlns:Asistencias="clr-namespace:eClock5.Vista.Asistencias" xmlns:Usuarios="clr-namespace:eClock5.Vista.Usuarios" xmlns:Suscripciones="clr-namespace:eClock5.Vista.Suscripciones" xmlns:TiposIncidencias="clr-namespace:eClock5.Vista.TiposIncidencias" xmlns:Terminales="clr-namespace:eClock5.Vista.Terminales" xmlns:Configuracion="clr-namespace:eClock5.Vista.Configuracion" xmlns:Sitios="clr-namespace:eClock5.Vista.Sitios" xmlns:Monedero="clr-namespace:eClock5.Vista.Monedero" xmlns:Periodos="clr-namespace:eClock5.Vista.Periodos" xmlns:Accesos="clr-namespace:eClock5.Vista.Accesos" xmlns:eClock="clr-namespace:eClock5.Vista.eClock" xmlns:Actividades="clr-namespace:eClock5.Vista.Actividades" xmlns:Tramites="clr-namespace:eClock5.Vista.Tramites" xmlns:Publicidad="clr-namespace:eClock5.Vista.Publicidad" xmlns:Licencias="clr-namespace:eClock5.Vista.Licencias" xmlns:Campos="clr-namespace:eClock5.Vista.Campos" xmlns:Localizaciones="clr-namespace:eClock5.Vista.Localizaciones" xmlns:Disenos="clr-namespace:eClock5.Vista.Disenos" xmlns:Nomina="clr-namespace:eClock5.Vista.Nomina" xmlns:Reportes="clr-namespace:eClock5.Vista.Reportes" xmlns:TablasSuscripcion="clr-namespace:eClock5.Vista.TablasSuscripcion" x:Class="eClock5.eClock"
+        Title="eClock" Height="768" Width="1024" WindowState="Maximized"  FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" WindowStyle="None">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="500*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <local:UC_Acordion Grid.Row="1" x:Name="Acordion" Loaded="Acordion_Loaded" >
+            <local:UC_Acordion.Secciones>
+                <local:UC_Acordion_Seccion Etiqueta="Empleados" Nombre="Empleados">
+                    <local:UC_Acordion_Seccion.Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Todos los empleados" Nombre="Btn_Empleados" >
+                            <local:UC_Acordion_Herencia.Herencia>
+                                <local:UC_Acordion_Herencia Etiqueta="Agrupación" CampoLlave="PERSONA_ID" CampoNombre="PERSONA_NOMBRE" CampoDescripcion="AGRUPACION_NOMBRE" CampoAdicional="PERSONA_LINK_ID" Tabla="EC_PERSONAS" Nombre="Btn_Agrupación" Filtro="PERSONA_ID IN (SELECT PERSONA_ID FROM EC_PERSONAS, EC_USUARIOS_PERMISOS WHERE USUARIO_ID = @USUARIO_ID AND EC_PERSONAS.SUSCRIPCION_ID = EC_USUARIOS_PERMISOS.SUSCRIPCION_ID AND  AGRUPACION_NOMBRE LIKE USUARIO_PERMISO+'%' AND TIPO_PERSONA_ID = 1)">
+                                    <local:UC_Acordion_Herencia.Herencia>
+                                        <local:UC_Acordion_Herencia Etiqueta="Personas" Nombre="Btn_Personas">
+                                            <local:UC_Acordion_Herencia.Pestanas>
+                                                <local:UC_Acordion_Pestanas Etiqueta="Asistencias" Nombre="Btn_Asistencias" Permisos="S.Asistencias.Consultar">
+                                                    <local:UC_Acordion_Pestanas.Vista>
+                                                        <Asistencias:Listado/>
+                                                    </local:UC_Acordion_Pestanas.Vista>
+                                                </local:UC_Acordion_Pestanas>
+                                                <local:UC_Acordion_Pestanas Etiqueta="Accesos" Nombre="Btn_Accesos" Permisos="S.Accesos.Consultar">
+                                                    <local:UC_Acordion_Pestanas.Vista>
+                                                        <Accesos:Listado/>
+                                                    </local:UC_Acordion_Pestanas.Vista>
+                                                </local:UC_Acordion_Pestanas>
+                                                <local:UC_Acordion_Pestanas Etiqueta="Horas extras" Nombre="Btn_HorasExtras" Permisos="S.HorasExtras.Listar">
+                                                    <local:UC_Acordion_Pestanas.Vista>
+                                                        <HorasExtras:Listado/>
+                                                    </local:UC_Acordion_Pestanas.Vista>
+                                                </local:UC_Acordion_Pestanas>
+                                                <local:UC_Acordion_Pestanas Etiqueta="Comida" Nombre="Btn_Comida" Permisos="S.CobroComidas.ListarComidas">
+                                                    <local:UC_Acordion_Pestanas.Vista>
+                                                        <Accesos:Listado/>
+                                                    </local:UC_Acordion_Pestanas.Vista>
+                                                </local:UC_Acordion_Pestanas>
+                                                <local:UC_Acordion_Pestanas Etiqueta="Monedero" Nombre="Btn_Monedero" Permisos="S.Monedero.Listar">
+                                                    <local:UC_Acordion_Pestanas.Vista>
+                                                        <Accesos:Listado/>
+                                                    </local:UC_Acordion_Pestanas.Vista>
+                                                </local:UC_Acordion_Pestanas>
+                                                <local:UC_Acordion_Pestanas Etiqueta="Edicion" Nombre="Btn_Edicion" Permisos="S.Empleados.Edicion">
+                                                    <local:UC_Acordion_Pestanas.Vista>
+                                                        <Empleados:EdicionEmpleados/>
+                                                    </local:UC_Acordion_Pestanas.Vista>
+                                                </local:UC_Acordion_Pestanas>
+                                                <local:UC_Acordion_Pestanas Etiqueta="Recibos de Nómina" Nombre="Btn_RecNomina" Permisos="S.Nomina.Consulta">
+                                                    <local:UC_Acordion_Pestanas.Vista>
+                                                        <Nomina:Recibos_Emp/>
+                                                    </local:UC_Acordion_Pestanas.Vista>
+                                                </local:UC_Acordion_Pestanas>
+                                            </local:UC_Acordion_Herencia.Pestanas>
+                                        </local:UC_Acordion_Herencia>
+                                    </local:UC_Acordion_Herencia.Herencia>
+                                    <local:UC_Acordion_Herencia.Pestanas>
+                                        <local:UC_Acordion_Pestanas Etiqueta="Asistencias" Nombre="Btn_Asistencias" Permisos="S.Asistencias.Consultar">
+                                            <local:UC_Acordion_Pestanas.Vista>
+                                                <Asistencias:Listado/>
+                                            </local:UC_Acordion_Pestanas.Vista>
+                                        </local:UC_Acordion_Pestanas>
+                                        <local:UC_Acordion_Pestanas Etiqueta="Accesos" Nombre="Btn_Accesos" Permisos="S.Accesos.Consultar">
+                                            <local:UC_Acordion_Pestanas.Vista>
+                                                <Accesos:Listado/>
+                                            </local:UC_Acordion_Pestanas.Vista>
+                                        </local:UC_Acordion_Pestanas>
+                                        <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Todos" Permisos="S.Empleados.ListarEmpleados">
+                                            <local:UC_Acordion_Pestanas.Vista>
+                                                <Empleados:ListadoPersonas/>
+                                            </local:UC_Acordion_Pestanas.Vista>
+                                        </local:UC_Acordion_Pestanas>
+                                        <local:UC_Acordion_Pestanas Etiqueta="Horas extras" Nombre="Btn_HorasExtras" Permisos="S.HorasExtras.Listar">
+                                            <local:UC_Acordion_Pestanas.Vista>
+                                                <HorasExtras:Listado/>
+                                            </local:UC_Acordion_Pestanas.Vista>
+                                        </local:UC_Acordion_Pestanas>
+                                        <local:UC_Acordion_Pestanas Etiqueta="Comida" Nombre="Btn_Comida" Permisos="S.CobroComidas.ListarComidas">
+                                            <local:UC_Acordion_Pestanas.Vista>
+                                                <Accesos:Listado/>
+                                            </local:UC_Acordion_Pestanas.Vista>
+                                        </local:UC_Acordion_Pestanas>
+                                        <local:UC_Acordion_Pestanas Etiqueta="Monedero" Nombre="Btn_Monedero" Permisos="S.Monedero.Listar">
+                                            <local:UC_Acordion_Pestanas.Vista>
+                                                <Accesos:Listado/>
+                                            </local:UC_Acordion_Pestanas.Vista>
+                                        </local:UC_Acordion_Pestanas>
+                                        <local:UC_Acordion_Pestanas Etiqueta="Supervisores" Nombre="Btn_Supervisores" Permisos="S.Usuarios.Suscripcion.AsignarAgrupaciones">
+                                            <local:UC_Acordion_Pestanas.Vista>
+                                                <Empleados:Supervisores/>
+                                            </local:UC_Acordion_Pestanas.Vista>
+                                        </local:UC_Acordion_Pestanas>
+                                        <local:UC_Acordion_Pestanas Etiqueta="Recibos de Nómina" Nombre="Btn_RecNomina" Permisos="S.Nomina.Consulta">
+                                            <local:UC_Acordion_Pestanas.Vista>
+                                                <Nomina:Recibos/>
+                                            </local:UC_Acordion_Pestanas.Vista>
+                                        </local:UC_Acordion_Pestanas>
+                                    </local:UC_Acordion_Herencia.Pestanas>
+                                </local:UC_Acordion_Herencia>
+                            </local:UC_Acordion_Herencia.Herencia>
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Asistencias" Nombre="Btn_Asistencias" Permisos="S.Asistencias.Consultar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Asistencias:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Accesos" Nombre="Btn_Accesos" Permisos="S.Accesos.Consultar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Accesos:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Todos" Permisos="S.Empleados.ListarEmpleados">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Empleados:ListadoPersonas/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Horas extras" Nombre="Btn_HorasExtras" Permisos="S.HorasExtras.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <HorasExtras:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Comida" Nombre="Btn_Comida" Permisos="S.CobroComidas.ListarComidas">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Accesos:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Monedero" Nombre="Btn_Monedero" Permisos="S.Monedero.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Accesos:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Supervisores" Nombre="Btn_Supervisores" Permisos="S.Usuarios.Suscripcion.AsignarAgrupaciones">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Empleados:Supervisores/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Recibos de Nómina" Nombre="Btn_RecNomina" Permisos="S.Nomina.Consulta">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Nomina:Recibos/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                    </local:UC_Acordion_Seccion.Herencia>
+                </local:UC_Acordion_Seccion>
+                <local:UC_Acordion_Seccion Etiqueta="Configuración" Nombre="Configuracion">
+                    <local:UC_Acordion_Seccion.Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Tipos de Incidencias" Nombre="Btn_TiposIncidencias" >
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Listado" Permisos="S.TipoIncidencia.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <TiposIncidencias:ListadoTipoIncidencias/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Extras" Nombre="Btn_Extras" Permisos="S.TipoIncidencia.Extra.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <TiposIncidencias:ListadoTipoIncidenciasExInc/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Reglas" Nombre="Btn_Reglas" Permisos="S.TipoIncidencia.Reglas.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <TiposIncidencias:ListadoTipoIncidenciasR/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Sistema" Nombre="Btn_Sistema" Permisos="S.ConfiguracionGral">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <TiposIncidencias:ListadoTipoIncidenciasSistema/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Comida" Nombre="Btn_Comida" Permisos="S.ConfiguracionGral">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <TiposIncidencias:ListadoTipoIncidenciasComidaSistema/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Accesos" Nombre="Btn_Accesos" Permisos="S.TipoIncidencia.Accesos.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <TiposIncidencias:ListadoAccesos/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Reportes" Nombre="Btn_Reportes" Permisos="S.Reportes">
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Definición" Nombre="Btn_Definicion" Permisos="S.Reportes">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Reportes:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Servidor" Nombre="Btn_Servidor" Permisos="S.Reportes.Servidor.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Reportes:ListadoReportesServidor/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Turnos" Nombre="Btn_Turnos" >
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Listado" Permisos="S.Turnos.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Turnos:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Asignación por fecha" Nombre="Btn_AsignaciónporFecha" Permisos="S.Turnos.AsignacionPersona">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Turnos:AsignacionPorFechas/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Asignación por  importación" Nombre="Btn_AsignaciónPorImportación" Permisos="S.Turnos.ImportacionAsignacion">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Turnos:ImportacionDeAsiganacionDeTurnos/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Terminales" Nombre="Btn_Terminales" >
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_ListadoTerminales" Permisos="S.Terminales.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Terminales:ListadoTerminales/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Modelos Terminales" Nombre="Btn_ModelosTerminales" Permisos="S.ConfiguracionGral">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Terminales:ListadoModelosTerminales/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Modelos"  Nombre="Btn_Modelos" Permisos="S.ConfiguracionGral">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Terminales:ListadoModelos/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>                                
+                                <local:UC_Acordion_Pestanas Etiqueta="Suscripcion" Nombre="Btn_Suscripcion" Permisos="S.Terminales.Suscripcion">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Terminales:ListadoTerminalesSuscripcion/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+
+                        <local:UC_Acordion_Herencia Etiqueta="Días Festivos" Nombre="Btn_DiasFestivos" >
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Listado" Permisos="S.DiaFestivo.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <DiasFestivos:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Calendario dias festivos" Nombre="Btn_CalendarioDiasFestivos" Permisos="S.DiaFestivo.Calendario.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <DiasFestivos:ListadoCalendariosDF/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+
+                        <local:UC_Acordion_Herencia Etiqueta="Diseños" Nombre="Btn_Disenos">
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Disenos" Permisos="S.Disenos.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Disenos:ListadoDISENOS/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+
+                        <local:UC_Acordion_Herencia Etiqueta="Usuarios" Nombre="Btn_Usuarios" >
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Usuarios" Permisos="S.Usuarios.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Usuarios:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Suscripción" Nombre="Btn_Suscripcion" Permisos="S.Usuarios.Suscripcion.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Usuarios:ListadoUsuariosSuscripcion/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Sitios" Nombre="Btn_Sitios" >
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Listado" Permisos="S.Sitios.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Sitios:ListadoSitios/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+
+                        <local:UC_Acordion_Herencia Etiqueta="Suscripciones" Nombre="Btn_Suscripciones" >
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Listadodesuscripcion" Permisos="S.Suscripciones.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Suscripciones:ListadoSuscripcion/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+
+                                <local:UC_Acordion_Pestanas Etiqueta="Precios de suscripciones" Nombre="Btn_PreciosDeSuscripciones" Permisos="S.Suscripciones.DefinirPrecio">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Suscripciones:ListadoSuscripPrecios/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Perfiles" Nombre="Btn_Perfiles">
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Listado" Permisos="S.Perfil.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Perfiles:ListadoPerfiles/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Periodos" Nombre="Btn_Periodos">
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Abiertos" Nombre="Btn_Abiertos" Permisos="S.Periodos.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Periodos:Abiertos/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Nombres" Nombre="Btn_Nombres" Permisos="S.Periodos.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Periodos:ListadoPeriodosN/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Todos" Permisos="S.Periodos.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Periodos:ListadoPeriodos/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Nomina" Nombre="Btn_Nomina" Permisos="S.Nomina">
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Todos" Permisos="S.Nomina.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Nomina:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                
+                                <local:UC_Acordion_Pestanas Etiqueta="Recibos" Nombre="Btn_Recibos" Permisos="S.Nomina.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Nomina:ListadoRecNomina/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Movimientos" Nombre="Btn_Movimientos" Permisos="S.Nomina.Movimientos.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Nomina:ListadoMovimientos/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Monedero" Nombre="Btn_Mondero">
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Recompensas" Nombre="Btn_Recompensas" Permisos="S.Monedero.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Monedero:ListadoRecompensas/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Promociones" Nombre="Btn_Promociones" Permisos="S.Monedero.Promociones.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Monedero:ListadoPromociones/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Productos" Nombre="Btn_Productos" Permisos="S.Monedero.ListarProducto">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Monedero:ListadoProductos/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+
+                        <local:UC_Acordion_Herencia Etiqueta="Campos" Nombre="Btn_Campos" Permisos="S.ConfiguracionSuscripcion">
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Todos" Permisos="S.ConfiguracionGral">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Campos:ListadoCampos/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Empleados" Nombre="Btn_Empleados" Permisos="S.ConfiguracionSuscripcion">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Campos:ListadoCamposEmpleados/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Mascaras" Nombre="Btn_Mascaras" Permisos="S.ConfiguracionGral">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Campos:ListadoMascaras/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Organizacion de Empleados" Nombre="Btn_Organizacionempleados" Permisos="S.ConfiguracionSuscripcion">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Campos:ReagruparEmpleados/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Tablas" Nombre="Btn_Tablas" Permisos="S.ConfiguracionGral">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Campos:ListadoTablas/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Tablas de Suscripción" Nombre="Btn_TablasSuscripción" >
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Todos" Permisos="S.TablasSuscripcion.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <TablasSuscripcion:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Datos" Nombre="Btn_Datos" Permisos="S.TablasSuscripcion.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <TablasSuscripcion:ListadoContenidos/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+
+                        <local:UC_Acordion_Herencia Etiqueta="Licencias" Nombre="Btn_Licencias">
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Todos" Permisos="S.Licencias.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Licencias:ListadoLicencias/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Distribuidores" Nombre="Btn_Distribuidores" Permisos="S.Licencias.Distibuidores.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Licencias:ListadoLicenciasDistribuidores/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+
+                        <local:UC_Acordion_Herencia Etiqueta="Localizaciones" Nombre="Btn_Localizaciones">
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn__Todos" Permisos="S.Localizaciones.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Localizaciones:ListadoLocalizaciones/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+
+                        <local:UC_Acordion_Herencia Etiqueta="Actividades" Nombre="Btn_Actividades" >
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Todos" Permisos="S.Actividades.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Actividades:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Inscripciones" Nombre="Btn_Inscripcione" Permisos="S.Actividades.Inscripciones.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Actividades:ListadoActividadesIns/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+
+                        <local:UC_Acordion_Herencia Etiqueta="Tramites" Nombre="Btn_Tramites"  >
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Todos" Permisos="S.Tramites.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Tramites:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Tipo de tramite" Nombre="Btn_Tipodetramite" Permisos="S.Tramites.Tipo.Listar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Tramites:ListadoTipoTramite/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Publicidad" Nombre="Btn_Publicidad" >
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Todos" Nombre="Btn_Todos" Permisos="S.Publicidad.Listar" >
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Publicidad:Listado/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                        <local:UC_Acordion_Herencia Etiqueta="Configuración" Nombre="Btn_Configuración" >
+                            <local:UC_Acordion_Herencia.Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="General" Nombre="Btn_General" Permisos="S.ConfiguracionUsuario">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Configuracion:MiConfiguracion/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Alertas Mail" Nombre="Btn_AlertasMail" Permisos="S.ConfiguracionUsuario">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Configuracion:AlertasMail/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="SMTP" Nombre="Btn_SMTP" Permisos="S.ConfiguracionGral">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Configuracion:Smpt/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Avanzada" Nombre="Btn_ConfigUsuario" Permisos="S.ConfiguracionGral">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Configuracion:ListadoConfiguracionUsuario/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Sincronizador" Nombre="Btn_Sincronizador" Permisos="S.ConfiguracionUsuario">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Configuracion:Sincronizador/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+
+                                <local:UC_Acordion_Pestanas Etiqueta="Interfaz Nomina" Nombre="Btn_InterfazNomina" Permisos="S.ConfiguracionSuscripcion">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Configuracion:Nomina/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                                <local:UC_Acordion_Pestanas Etiqueta="Kiosco" Nombre="Btn_Kiosko" Permisos="S.Kiosko.Configurar">
+                                    <local:UC_Acordion_Pestanas.Vista>
+                                        <Configuracion:Kiosco/>
+                                    </local:UC_Acordion_Pestanas.Vista>
+                                </local:UC_Acordion_Pestanas>
+                            </local:UC_Acordion_Herencia.Pestanas>
+                        </local:UC_Acordion_Herencia>
+                    </local:UC_Acordion_Seccion.Herencia>
+                </local:UC_Acordion_Seccion>
+            </local:UC_Acordion.Secciones>
+        </local:UC_Acordion>
+        <Rectangle Fill="{DynamicResource AzulOscuro_Brush}" Grid.ColumnSpan="2" Stroke="Black" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown_1"/>
+
+        <Controles:UC_Pestanas x:Name="Pestanas" Grid.Column="1" VerticalAlignment="Bottom" Width="Auto" OnEventClickPestana="UC_Pestanas_OnEventClickPestana_1"/>
+        <GridSplitter Width="4" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1"/>
+        <Grid x:Name="Pnl" Grid.Column="1" Grid.Row="1" Margin="4,0,0,0" >
+            <eClock:LiveTiles x:Name="Btn_LiveTiles" />
+        </Grid>
+
+        <TextBlock x:Name="Lbl_Estado" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="Cargando" VerticalAlignment="Top" Grid.ColumnSpan="2" Background="{DynamicResource AzulClaro_Brush}" Foreground="{DynamicResource Blanco_Brush}"/>
+        <Button x:Name="Btn_Minimizar"  HorizontalAlignment="Right"  Margin="0,0,76,0" VerticalAlignment="Top" Width="24" Grid.Column="1" Click="Btn_Minimizar_Click" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Image Source="pack://siteoforigin:,,,/Resources/Minimizar_24.png"/>
+        </Button>
+        <Button x:Name="Btn_Mini_Pantalla" HorizontalAlignment="Right"  Margin="0,0,37,0" VerticalAlignment="Top" Width="24" Grid.Column="1" Click="Btn_Mini_Pantalla_Click" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" >
+            <Image   Source="pack://siteoforigin:,,,/Resources/Mini_Pantalla_24.png" />
+        </Button>
+        <Button x:Name="Btn_Cerrar" Width="24" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1" Margin="0,0,0,0" Click="Btn_Cerrar_Click" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Image Source="pack://siteoforigin:,,,/Resources/Cerrar_24.png"/>
+        </Button>
+        <Button x:Name="Btn_Maximisar"  HorizontalAlignment="Right"  Margin="0,0,37,0" VerticalAlignment="Top" Width="24"  Grid.Column="1" Click="Btn_Maximisar_Click"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Image Source="pack://siteoforigin:,,,/Resources/Maximizar_Pantalla_24.png"/>
+        </Button>
+        <Button x:Name="Btn_Logo" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="Btn_Logo_Click" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Image Source="pack://siteoforigin:,,,/Resources/eClock.png" Margin="4"/>
+        </Button>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="www.eClock.com.mx" VerticalAlignment="Bottom" Foreground="{DynamicResource Negro_Brush}" Grid.ColumnSpan="2" Grid.Row="1"/>
+
+    </Grid>
+
+</Window>

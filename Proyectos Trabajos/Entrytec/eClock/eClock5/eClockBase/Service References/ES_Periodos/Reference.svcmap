@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="37f7bb14-daa6-4a5e-8afe-a708c37d9623" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50723/S_Periodos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="S_Periodos.disco" MetadataType="Disco" ID="0e98eda5-adf6-4178-9e3e-76a603bb8292" SourceId="1" SourceUrl="http://localhost:50723/S_Periodos.svc?disco" />
+    <MetadataFile FileName="S_Periodos.wsdl" MetadataType="Wsdl" ID="796ee7d5-f549-433a-8df8-bf352000baed" SourceId="1" SourceUrl="http://localhost:50723/S_Periodos.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="S_Periodos.xsd" MetadataType="Schema" ID="29630ebd-7fbd-4d7a-8cc3-050cd17a2225" SourceId="1" SourceUrl="http://localhost:50723/S_Periodos.svc?xsd=xsd1" />
+    <MetadataFile FileName="S_Periodos1.wsdl" MetadataType="Wsdl" ID="ecf1e4a6-c6da-486b-869f-f17c6d2ed2d1" SourceId="1" SourceUrl="http://localhost:50723/S_Periodos.svc?wsdl" />
+    <MetadataFile FileName="S_Periodos1.xsd" MetadataType="Schema" ID="749666be-204d-4315-b617-8420ebd918b9" SourceId="1" SourceUrl="http://localhost:50723/S_Periodos.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    @Styles.Render("~/Content/mobileCss", "~/Content/css", "~/Content/eClock")
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+
+    @Scripts.Render("~/bundles/jquerymobile")
+    @RenderSection("scriptsHeader", required: false)
+</head>
+
+<body>
+    <div data-role="page" data-theme="b"
+        @if (IsSectionDefined("Page"))
+        {@RenderSection("Page") } >
+        <div data-role="header" data-position="fixed">
+
+
+            @Html.Partial("_LoginPartial")
+            <h1>@ViewBag.Title</h1>
+
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right ui-btn-inline ui-mini ">
+                @if (!eClockMobile.BaseModificada.CeC_Sesion.EsKiosco)
+                {
+                    <a href="#" onclick="return MostrarTurnos();" data-icon="tiempo" data-iconpos="notext" data-inline="true" data-role="button" data-transition="slide">Inicio</a>
+                }
+                <a href="#" onclick="return MostrarTiposIncidencias();" data-icon="justificar" data-iconpos="notext" data-inline="true" data-rel="back" data-role="button" data-transition="slide">Regresar</a>
+                @*                    <a href="#" onclick="return AsignarTurno();" id="Turno" data-role = "button" data-icon="tiempo" data-iconpos = "notext" data-transition = "slide"  data-inline = "true"  ></a>
+                    <a href="#" onclick="return Justificar();" id="Justificar" data-role = "button" data-icon="justificar" data-iconpos = "notext" data-transition = "slide"  data-inline = "true"  ></a>
+                    @*
+                    @Html.ActionLink("Inicio", "eClock", "Home", routeValues: null, htmlAttributes: new { data_icon = "tiempo", data_transition = "slide", data_iconpos = "notext", data_role = "button", data_inline = "true", data_mini = "true" })
+                    @Html.ActionLink("Regresar", "Index", "Home", null, new { data_icon = "justificar", data_rel = "back", data_transition = "slide", data_iconpos = "notext", data_role = "button", data_inline = "true", data_mini = "true" , id="Justificar"})
+                    *@
+            </div>
+        </div>
+        @helper MuestraListado(List<eClockBase.Modelos.Model_TIPO_INCIDENCIAS> Listado, string Titulo, string FuncionJScript = "ML_Click")
+{
+    
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">@Titulo</li>
+                @if (Listado != null)
+                {
+                    foreach (eClockBase.Modelos.Model_TIPO_INCIDENCIAS Elemento in Listado)
+                    {
+                        int MostrarPopUp = 0;
+                    <li>
+                        @*                        <a href="#" onclick="@FuncionJScript (@Elemento.TIPO_INCIDENCIA_ID,'@Elemento.TIPO_INCIDENCIA_CAMPOS',@Elemento.TIPO_INCIDENCIA_HORAS.ToString(),@Elemento.TIPO_INCIDENCIA_REGLAS.ToString());return false;">*@
+
+                        @if (Elemento.TIPO_INCIDENCIA_CAMPOS != null && Elemento.TIPO_INCIDENCIA_CAMPOS != "" && Elemento.TIPO_INCIDENCIA_CAMPOS != "[]"
+                            || Elemento.TIPO_INCIDENCIA_HORAS || Elemento.TIPO_INCIDENCIA_REGLAS)
+                        {
+                            MostrarPopUp = 1;
+                        }
+                        <a href="#" onclick="@FuncionJScript (@Elemento.TIPO_INCIDENCIA_ID,@MostrarPopUp);return false;">
+                            <h2>@Elemento.TIPO_INCIDENCIA_NOMBRE</h2>
+
+                        </a>
+                        <div id="DivTID_@Elemento.TIPO_INCIDENCIA_ID"></div>
+                    </li>
+                    }
+                }
+            </ul>
+        }
+
+
+        <div data-role="content">
+            @RenderBody()
+            <div data-role="popup" id="Ppp_Turnos" class="ui-content" data-theme="a">
+                <fieldset data-role="controlgroup" name="Tipo" id="Tipo">
+                    <legend>Asignar a:</legend>
+                    <input type="radio" name="radio-choice-1" id="radio-choice-1" value="0" checked="checked">
+                    <label for="radio-choice-1">Solo a días seleccionados</label>
+                    <input type="radio" name="radio-choice-1" id="radio-choice-2" value="1">
+                    <label for="radio-choice-2">Como horario predeterminado</label>
+                </fieldset>
+                <h2>Seleccione el turno a ser asignado</h2>
+                @CeC_Listado.MuestraListado(ViewBag.Turnos, "Turnos", "AsignaTurno")
+            </div>
+
+            <div data-role="popup" id="Ppp_TipoIncidencias" class="ui-content" data-theme="a">
+                <h2>Seleccione el tipo de incidencia a ser asignada</h2>
+                @MuestraListado(ViewBag.TipoIncidencias, "Tipos de incidencias", "Justifica")
+                <a href="#" class="ui-shadow ui-btn ui-corner-all" onclick="Justifica(0,0);return false;">Borrar Justificación</a>
+            </div>
+
+            <div data-role="popup" id="Ppp_NoDias" class="ui-content" data-theme="a">
+                <h2>Atención</h2>
+                <p>No ha seleccionado ningun día</p>
+            </div>
+            <div data-role="popup" id="Ppp_Error" class="ui-content" data-theme="a">
+                <h2>Atención</h2>
+                <p>No se pudo asignar, puede ser porque el periodo ya se encuentra cerrado o hay error de comunicación</p>
+            </div>
+
+            <div data-role="popup" id="Ppp_TipoIncAdv" class="ui-content" data-theme="a">
+                <h2>Atención</h2>
+                <p>No se pudo asignar, puede ser porque el periodo ya se encuentra cerrado o hay error de comunicación</p>
+            </div>
+        </div>
+
+        @RenderSection("scripts", required: false)
+        <script>
+            var Seleccionados = "";
+            function MostrarTiposIncidencias() {
+                Seleccionados = ObtenSeleccionados();
+                if (Seleccionados != "")
+                    $("#Ppp_TipoIncidencias").popup("open");
+                return false;
+            }
+
+            function MostrarTurnos() {
+                Seleccionados = ObtenSeleccionados();
+                if (Seleccionados != "")
+                    $("#Ppp_Turnos").popup("open");
+                return false;
+            }
+
+
+            function ObtenSeleccionados() {
+
+                var $b = $('input[type=checkbox]');
+                var Elementos = $b.filter(':checked')
+                var NoSelec = Elementos.length;
+
+                var Final = ""
+                if (NoSelec > 0) {
+                    Actualizar = 1;
+                    for (var Cont = 0; Cont < NoSelec; Cont++) {
+                        var NombreC = Elementos[Cont].name;
+
+                        if (NombreC.length > 5 && NombreC.substring(0, 5) == "CPID_")
+                            Final += NombreC.substring(5) + ",";
+                    }
+                    return Final;
+                }
+                if (Final == "") {
+                    $("#Ppp_NoDias").popup("open");
+
+                }
+                return Final;
+            }
+            function MuestraLoading(Texto) {
+                $.mobile.loading('show', {
+                    text: Texto,
+                    textVisible: true
+                });
+            }
+            function AsignaTurno(TurnoID) {
+                var Tipo = $("#Tipo :radio:checked").val();
+                $("#Ppp_Turnos").popup("close");
+                MuestraLoading("Asignando Turno...");
+
+                $.ajax({
+                    type: 'POST',
+                    url: "@Url.Action("AsignaTurno")",
+                    @*dataType: "json",
+                    contentType: "application/json; charset=utf-8",*@
+                    data: {
+                        PersonasDiarioIDs: Seleccionados,
+                        TurnoID: '' + TurnoID,
+                        Tipo: '' + Tipo
+                    },
+                    success: function (data) {
+                        if (data > 0)
+                            location.reload();
+                        else {
+                            $.mobile.loading("hide");
+
+                            $("#Ppp_Error").popup("open");
+                        }
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        $.mobile.loading("hide");
+                        alert("Error: " + xhr.status + thrownError);
+
+                    }
+                });
+            }
+
+            @*function Justifica(TipoIncidenciaID, TipoIncidenciaCampos, TipoIncidenciaHoras, TipoIncidenciaReglas) {*@
+            function Justifica(TipoIncidenciaID, PopUp) {
+
+                if (PopUp == 0) {
+                    $("#Ppp_TipoIncidencias").popup("close");
+                    FinJustifica(TipoIncidenciaID, '');
+                }
+                else {
+                    var DivExtras = $("#DivTID_" + TipoIncidenciaID);
+                    if (DivExtras.text() != '')
+                        return;
+                    //$("#DivTID_" + TipoIncidenciaID).append('<object type="text/html" data="@Url.Action("JustificacionAdv")" width="400" height="400"></object>');
+
+                    //return;
+
+                    //alert($("#pTID_" + TipoIncidenciaID).text());
+                    MuestraLoading("Cargando opciones avanzadas");
+                    //$("#Ppp_NoDias").popup("open");
+                    //$("#Ppp_TipoIncAdv").popup("open");
+                    $.ajax({
+                        type: 'POST',
+                        url: "@Url.Action("JustificaAdv")",
+
+                        data: {
+                            'PersonasDiarioIDs': Seleccionados,
+                            'TipoIncidenciaID': TipoIncidenciaID
+                        },
+                        success: function (data) {
+                            $.mobile.loading("hide");
+                            DivExtras.append(data);
+                            DivExtras.trigger('create');
+                            // Div.trigger('create');
+                            //$("#pTID_" + TipoIncidenciaID).replaceWith(data);
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            $.mobile.loading("hide");
+                            alert("Error: " + xhr.status + thrownError);
+
+                        }
+                    });
+
+
+                }
+            }
+            function AplicaJustificacion(TipoIncidenciaID)
+            {
+                var DivExtras = $("#DivTID_" + TipoIncidenciaID);
+                var $form_elements = DivExtras.find(":input");
+                var Comentario = "";
+                debugger;
+                for (var Cont = 0; Cont < $form_elements.length; Cont++) {
+                    if (Comentario != "")
+                        Comentario += ",";
+                    //Comentario += '"' + $form_elements[Cont].name + '":"' + $('#' + $form_elements[Cont].name).val() + '"';
+                    Comentario += '"' + $form_elements[Cont].name + '":"' + $form_elements[Cont].value + '"';
+                }
+                Comentario = "{" + Comentario + "}";
+                $("#Ppp_TipoIncidencias").popup("close");
+                FinJustifica(TipoIncidenciaID, Comentario);
+            }
+
+            function FinJustifica(TipoIncidenciaID, Comentario) {
+
+                var Tipo = $("#Tipo :radio:checked").val();
+                @if (eClockMobile.BaseModificada.CeC_Sesion.EsKiosco)
+                {
+                    @:MuestraLoading("Solicitando Justificacion...");                 
+                }
+                else
+                { 
+                    @:MuestraLoading("Justificando...");
+                }
+
+                $.ajax({
+                    type: 'POST',
+                    url: "@Url.Action("Justifica")",
+
+                    data: {
+                        'PersonasDiarioIDs': Seleccionados,
+                        'TipoIncidenciaID': TipoIncidenciaID,
+                        'Comentarios': Comentario
+                    },
+                    success: function (data) {
+                        if (data > 0)
+                            location.reload();
+                        else {
+                            $.mobile.loading("hide");
+
+                            $("#Ppp_Error").popup("open");
+                        }
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        $.mobile.loading("hide");
+                        alert("Error: " + xhr.status + thrownError);
+
+                    }
+                });
+            }
+        </script>
+    </div>
+
+</body>
+</html>

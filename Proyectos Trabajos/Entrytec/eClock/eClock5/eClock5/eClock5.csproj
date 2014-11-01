@@ -1,0 +1,1922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8584535C-0380-41FD-865A-4A1D3ED1FC15}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eClock5</RootNamespace>
+    <AssemblyName>eClock5</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20621.0</ExpressionBlendVersion>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NOMBRE_EN_TOOLTIP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\eClock5.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NOMBRE_EN_TOOLTIP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug Win7|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug Win7\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NOMBRE_EN_TOOLTIP</DefineConstants>
+    <DocumentationFile>bin\Debug\eClock5.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWin7|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWin7\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NOMBRE_EN_TOOLTIP</DefineConstants>
+    <DocumentationFile>bin\Debug\eClock5.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BaseModificada\CeC.cs" />
+    <Compile Include="BaseModificada\CeC_BD.cs" />
+    <Compile Include="BaseModificada\CeC_Sesion.cs" />
+    <Compile Include="BaseModificada\CeC_StreamFile.cs" />
+    <Compile Include="BaseModificada\Localizaciones.cs" />
+    <Compile Include="Clases\CeC_AppConfigW.cs" />
+    <Compile Include="Clases\CeC_BD.cs" />
+    <Compile Include="Clases\CeC_Control.cs" />
+    <Compile Include="Clases\CeC_eClockSync.cs" />
+    <Compile Include="Clases\CeC_Registro.cs" />
+    <Compile Include="Clases\Interfaces\Interfaz.cs" />
+    <Compile Include="Clases\Interfaces\OracleBS.cs" />
+    <Compile Include="Clases\Parametros.cs" />
+    <Compile Include="Controles\UC_AsistenciaHorizontal.xaml.cs">
+      <DependentUpon>UC_AsistenciaHorizontal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Btn_LiveTile.xaml.cs">
+      <DependentUpon>UC_Btn_LiveTile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_CamposTextoDiseno.xaml.cs">
+      <DependentUpon>UC_CamposTextoDiseno.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_CamposTextoEdicion.xaml.cs">
+      <DependentUpon>UC_CamposTextoEdicion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Color.xaml.cs">
+      <DependentUpon>UC_Color.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_ColorPicker.xaml.cs">
+      <DependentUpon>UC_ColorPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_ColorPickerDialog.xaml.cs">
+      <DependentUpon>UC_ColorPickerDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Combo.xaml.cs">
+      <DependentUpon>UC_Combo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_DateTimePicker.xaml.cs">
+      <DependentUpon>UC_DateTimePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Direccion.xaml.cs">
+      <DependentUpon>UC_Direccion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Accesos\Importar.xaml.cs">
+      <DependentUpon>Importar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\Historial.xaml.cs">
+      <DependentUpon>Historial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Nomina\Edicion.xaml.cs">
+      <DependentUpon>Edicion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Nomina\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Personas\Edicion.xaml.cs">
+      <DependentUpon>Edicion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_ElegirIdioma.xaml.cs">
+      <DependentUpon>UC_ElegirIdioma.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Exportar.xaml.cs">
+      <DependentUpon>UC_Exportar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Foto.xaml.cs">
+      <DependentUpon>UC_Foto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Horas.xaml.cs">
+      <DependentUpon>UC_Horas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Importar.xaml.cs">
+      <DependentUpon>UC_Importar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Listado1N.xaml.cs">
+      <DependentUpon>UC_Listado1N.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_ListBox.xaml.cs">
+      <DependentUpon>UC_ListBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Multiseleccion.xaml.cs">
+      <DependentUpon>UC_Multiseleccion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_PersonaLinkID.xaml.cs">
+      <DependentUpon>UC_PersonaLinkID.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Pestanas.xaml.cs">
+      <DependentUpon>UC_Pestanas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_RangoFechas.xaml.cs">
+      <DependentUpon>UC_RangoFechas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Reporte.xaml.cs">
+      <DependentUpon>UC_Reporte.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Reportes.xaml.cs">
+      <DependentUpon>UC_Reportes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Reporte_Param.xaml.cs">
+      <DependentUpon>UC_Reporte_Param.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_TextBoxButton.xaml.cs">
+      <DependentUpon>UC_TextBoxButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_TipoAccesoColor.xaml.cs">
+      <DependentUpon>UC_TipoAccesoColor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Wizard.xaml.cs">
+      <DependentUpon>UC_Wizard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_WizardTitulo.xaml.cs">
+      <DependentUpon>UC_WizardTitulo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Diseno.xaml.cs">
+      <DependentUpon>Diseno.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dlg_Prueba.xaml.cs">
+      <DependentUpon>Dlg_Prueba.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="eClock.xaml.cs">
+      <DependentUpon>eClock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.xaml.cs">
+      <DependentUpon>LogIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Acordion.xaml.cs">
+      <DependentUpon>UC_Acordion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Campos.xaml.cs">
+      <DependentUpon>UC_Campos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_Listado.xaml.cs">
+      <DependentUpon>UC_Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UC_ToolBar.xaml.cs">
+      <DependentUpon>UC_ToolBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\eClockSync.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos.cs" />
+    <Compile Include="Vista\Accesos\Edicion.xaml.cs">
+      <DependentUpon>Edicion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Accesos\Filtrar.xaml.cs">
+      <DependentUpon>Filtrar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Accesos\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Actividades\EdicionActividades.xaml.cs">
+      <DependentUpon>EdicionActividades.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Actividades\EdicionActividadesIns.xaml.cs">
+      <DependentUpon>EdicionActividadesIns.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Actividades\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Actividades\ListadoActividadesIns.xaml.cs">
+      <DependentUpon>ListadoActividadesIns.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\AsigncionTurnos.xaml.cs">
+      <DependentUpon>AsigncionTurnos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\EdicionIncidencias.xaml.cs">
+      <DependentUpon>EdicionIncidencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\FiltradoPor.xaml.cs">
+      <DependentUpon>FiltradoPor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\Justificaciones.xaml.cs">
+      <DependentUpon>Justificaciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\ListadoIncidencias.xaml.cs">
+      <DependentUpon>ListadoIncidencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\ReglaJustificacion.xaml.cs">
+      <DependentUpon>ReglaJustificacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\Saldos.xaml.cs">
+      <DependentUpon>Saldos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\SaldosCorreccion.xaml.cs">
+      <DependentUpon>SaldosCorreccion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\SeleccionTiposIncidencias.xaml.cs">
+      <DependentUpon>SeleccionTiposIncidencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\Totales.xaml.cs">
+      <DependentUpon>Totales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asistencias\UC_SaldoXPersona.xaml.cs">
+      <DependentUpon>UC_SaldoXPersona.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Campos\EdicionTablas.xaml.cs">
+      <DependentUpon>EdicionTablas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Campos\ListadoTablas.xaml.cs">
+      <DependentUpon>ListadoTablas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Configuracion\AlertasMail.xaml.cs">
+      <DependentUpon>AlertasMail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Campos\EdicionCampos.xaml.cs">
+      <DependentUpon>EdicionCampos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Empleados\ImportarImagenes.xaml.cs">
+      <DependentUpon>ImportarImagenes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Configuracion\EdicionConfiguracionUsuario.xaml.cs">
+      <DependentUpon>EdicionConfiguracionUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Configuracion\Kiosco.xaml.cs">
+      <DependentUpon>Kiosco.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Configuracion\ListadoConfiguracionUsuario.xaml.cs">
+      <DependentUpon>ListadoConfiguracionUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Configuracion\Nomina.xaml.cs">
+      <DependentUpon>Nomina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Configuracion\Sincronizador.xaml.cs">
+      <DependentUpon>Sincronizador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Diseno\EdicionDisenos.xaml.cs">
+      <DependentUpon>EdicionDisenos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Empleados\Importar.xaml.cs">
+      <DependentUpon>Importar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Personas\Accesos.xaml.cs">
+      <DependentUpon>Accesos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\HorasExtras\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Licencias\EdicionLicencias.xaml.cs">
+      <DependentUpon>EdicionLicencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Licencias\EdicionLicenciasDistribuidores.xaml.cs">
+      <DependentUpon>EdicionLicenciasDistribuidores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Localizaciones\EdicionLocalizaciones.xaml.cs">
+      <DependentUpon>EdicionLocalizaciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Campos\EdicionMascaras.xaml.cs">
+      <DependentUpon>EdicionMascaras.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Campos\ListadoCampos.xaml.cs">
+      <DependentUpon>ListadoCampos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Campos\ListadoCamposEmpleados.xaml.cs">
+      <DependentUpon>ListadoCamposEmpleados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Diseno\ListadoDisenos.xaml.cs">
+      <DependentUpon>ListadoDisenos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Licencias\ListadoLicencias.xaml.cs">
+      <DependentUpon>ListadoLicencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Licencias\ListadoLicenciasDistribuidores.xaml.cs">
+      <DependentUpon>ListadoLicenciasDistribuidores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Localizaciones\ListadoLocalizaciones.xaml.cs">
+      <DependentUpon>ListadoLocalizaciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Campos\ListadoMascaras.xaml.cs">
+      <DependentUpon>ListadoMascaras.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Configuracion\MiConfiguracion.xaml.cs">
+      <DependentUpon>MiConfiguracion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Campos\ReagruparEmpleados.xaml.cs">
+      <DependentUpon>ReagruparEmpleados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Configuracion\Smpt.xaml.cs">
+      <DependentUpon>Smpt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\DiasFestivos\Edicion.xaml.cs">
+      <DependentUpon>Edicion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\DiasFestivos\EdicionCalendariosDF.xaml.cs">
+      <DependentUpon>EdicionCalendariosDF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\DiasFestivos\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\DiasFestivos\ListadoCalendariosDF.xaml.cs">
+      <DependentUpon>ListadoCalendariosDF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\eClock\LiveTiles.xaml.cs">
+      <DependentUpon>LiveTiles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Empleados\EdicionEmpleados.xaml.cs">
+      <DependentUpon>EdicionEmpleados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Empleados\EdicionPersonas.xaml.cs">
+      <DependentUpon>EdicionPersonas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Empleados\EdicionPersonasSHuella.xaml.cs">
+      <DependentUpon>EdicionPersonasSHuella.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Empleados\ListadoPersonas.xaml.cs">
+      <DependentUpon>ListadoPersonas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Empleados\ListadoPersonasSHuella.xaml.cs">
+      <DependentUpon>ListadoPersonasSHuella.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Empleados\Supervisores.xaml.cs">
+      <DependentUpon>Supervisores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Importar\Excel.xaml.cs" />
+    <Compile Include="Vista\Importar\Noi.xaml.cs" />
+    <Compile Include="Vista\Importar\Nomipaq.xaml.cs" />
+    <Compile Include="Vista\Asistencias\ImportacionDeIncidencias.xaml.cs">
+      <DependentUpon>ImportacionDeIncidencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Licencias\NoValida.xaml.cs">
+      <DependentUpon>NoValida.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Localizaciones\Traducciones.xaml.cs">
+      <DependentUpon>Traducciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Migrar\Anviz.xaml.cs" />
+    <Compile Include="Vista\Migrar\Zk.xaml.cs" />
+    <Compile Include="Vista\Monedero\EdicionProductos.xaml.cs">
+      <DependentUpon>EdicionProductos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Monedero\EdicionPromociones.xaml.cs">
+      <DependentUpon>EdicionPromociones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Monedero\EdicionRecompensas.xaml.cs">
+      <DependentUpon>EdicionRecompensas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Monedero\ListadoProductos.xaml.cs">
+      <DependentUpon>ListadoProductos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Monedero\ListadoPromociones.xaml.cs">
+      <DependentUpon>ListadoPromociones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Monedero\ListadoRecompensas.xaml.cs">
+      <DependentUpon>ListadoRecompensas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Nomina\Recibos_Emp.xaml.cs">
+      <DependentUpon>Recibos_Emp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Nomina\EdicionMovimientos.xaml.cs">
+      <DependentUpon>EdicionMovimientos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Nomina\ListadoMovimientos.xaml.cs">
+      <DependentUpon>ListadoMovimientos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Nomina\ImportarRecNomina.xaml.cs">
+      <DependentUpon>ImportarRecNomina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Nomina\Recibos.xaml.cs">
+      <DependentUpon>Recibos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Perfiles\EdicionPerfiles.xaml.cs">
+      <DependentUpon>EdicionPerfiles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Perfiles\ListadoPerfiles.xaml.cs">
+      <DependentUpon>ListadoPerfiles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Perfiles\PerfilRestricciones.xaml.cs">
+      <DependentUpon>PerfilRestricciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Periodos\Abiertos.xaml.cs">
+      <DependentUpon>Abiertos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Periodos\EdicionPeriodos.xaml.cs">
+      <DependentUpon>EdicionPeriodos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Periodos\EdicionPeriodosN.xaml.cs">
+      <DependentUpon>EdicionPeriodosN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Nomina\EdicionRecNomina.xaml.cs">
+      <DependentUpon>EdicionRecNomina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Periodos\EnviarANomina.xaml.cs">
+      <DependentUpon>EnviarANomina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Periodos\ListadoPeriodos.xaml.cs">
+      <DependentUpon>ListadoPeriodos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Periodos\ListadoPeriodosN.xaml.cs">
+      <DependentUpon>ListadoPeriodosN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Nomina\ListadoRecNomina.xaml.cs">
+      <DependentUpon>ListadoRecNomina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\PreNomina\Exportar.xaml.cs">
+      <DependentUpon>Exportar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\PreNomina\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Publicidad\EdicionPublicidad.xaml.cs">
+      <DependentUpon>EdicionPublicidad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Publicidad\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Reportes\Edicion.xaml.cs">
+      <DependentUpon>Edicion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Reportes\EdicionReportesServidor.xaml.cs">
+      <DependentUpon>EdicionReportesServidor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Reportes\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Reportes\ListadoReportesServidor.xaml.cs">
+      <DependentUpon>ListadoReportesServidor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Sitios\EdicionSitios.xaml.cs">
+      <DependentUpon>EdicionSitios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Sitios\ListadoSitios.xaml.cs">
+      <DependentUpon>ListadoSitios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Suscripciones\EdicionSuscripcion.xaml.cs">
+      <DependentUpon>EdicionSuscripcion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Suscripciones\EdicionSuscripcionCliente.xaml.cs">
+      <DependentUpon>EdicionSuscripcionCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Suscripciones\EdicionSuscripPrecios.xaml.cs">
+      <DependentUpon>EdicionSuscripPrecios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Suscripciones\ListadoSuscripcion.xaml.cs">
+      <DependentUpon>ListadoSuscripcion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Suscripciones\ListadoSuscripPrecios.xaml.cs">
+      <DependentUpon>ListadoSuscripPrecios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TablasSuscripcion\Edicion.xaml.cs">
+      <DependentUpon>Edicion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TablasSuscripcion\EdicionContenidos.xaml.cs">
+      <DependentUpon>EdicionContenidos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TablasSuscripcion\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TablasSuscripcion\ListadoContenidos.xaml.cs">
+      <DependentUpon>ListadoContenidos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Terminales\EdicionModelos.xaml.cs">
+      <DependentUpon>EdicionModelos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Terminales\EdicionModelosTerminales.xaml.cs">
+      <DependentUpon>EdicionModelosTerminales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Terminales\EdicionTerminales.xaml.cs">
+      <DependentUpon>EdicionTerminales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Terminales\EdicionTerminalesSuscripcion.xaml.cs">
+      <DependentUpon>EdicionTerminalesSuscripcion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Terminales\ListadoModelos.xaml.cs">
+      <DependentUpon>ListadoModelos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Terminales\ListadoModelosTerminales.xaml.cs">
+      <DependentUpon>ListadoModelosTerminales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Terminales\ListadoSimple.xaml.cs">
+      <DependentUpon>ListadoSimple.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Terminales\ListadoTerminales.xaml.cs">
+      <DependentUpon>ListadoTerminales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Terminales\ListadoTerminalesSuscripcion.xaml.cs">
+      <DependentUpon>ListadoTerminalesSuscripcion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Terminales\UC_Terminal.xaml.cs">
+      <DependentUpon>UC_Terminal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TiposIncidencias\EdicionAccesos.xaml.cs">
+      <DependentUpon>EdicionAccesos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TiposIncidencias\EdicionTipoIncidencias.xaml.cs">
+      <DependentUpon>EdicionTipoIncidencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TiposIncidencias\EdicionTipoIncidenciasComidaSistema.xaml.cs">
+      <DependentUpon>EdicionTipoIncidenciasComidaSistema.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TiposIncidencias\EdicionTipoIncidenciasEx.xaml.cs">
+      <DependentUpon>EdicionTipoIncidenciasEx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TiposIncidencias\EdicionTipoIncidenciasR.xaml.cs">
+      <DependentUpon>EdicionTipoIncidenciasR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TiposIncidencias\EdicionTipoIncidenciasSistema.xaml.cs">
+      <DependentUpon>EdicionTipoIncidenciasSistema.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TiposIncidencias\ListadoAccesos.xaml.cs">
+      <DependentUpon>ListadoAccesos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TiposIncidencias\ListadoTipoIncidencias.xaml.cs">
+      <DependentUpon>ListadoTipoIncidencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TiposIncidencias\ListadoTipoIncidenciasComidaSistema.xaml.cs">
+      <DependentUpon>ListadoTipoIncidenciasComidaSistema.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TiposIncidencias\ListadoTipoIncidenciasEx.xaml.cs">
+      <DependentUpon>ListadoTipoIncidenciasEx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TiposIncidencias\ListadoTipoIncidenciasR.xaml.cs">
+      <DependentUpon>ListadoTipoIncidenciasR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\TiposIncidencias\ListadoTipoIncidenciasSistema.xaml.cs">
+      <DependentUpon>ListadoTipoIncidenciasSistema.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Tramites\EdicionTipoTramite.xaml.cs">
+      <DependentUpon>EdicionTipoTramite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Tramites\EdicionTramites.xaml.cs">
+      <DependentUpon>EdicionTramites.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Tramites\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Tramites\ListadoTipoTramite.xaml.cs">
+      <DependentUpon>ListadoTipoTramite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Turnos\AsignacionPorFechas.xaml.cs">
+      <DependentUpon>AsignacionPorFechas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Turnos\Edicion.xaml.cs">
+      <DependentUpon>Edicion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Turnos\ImportacionDeAsiganacionDeTurnos.xaml.cs">
+      <DependentUpon>ImportacionDeAsiganacionDeTurnos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Turnos\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Turnos\UC_TurnoDia.xaml.cs">
+      <DependentUpon>UC_TurnoDia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Usuarios\Edicion.xaml.cs">
+      <DependentUpon>Edicion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Usuarios\EdicionUsuariosSuscripcion.xaml.cs">
+      <DependentUpon>EdicionUsuariosSuscripcion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Usuarios\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Usuarios\ListadoUsuariosSuscripcion.xaml.cs">
+      <DependentUpon>ListadoUsuariosSuscripcion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Wizard\Bienvenida.xaml.cs">
+      <DependentUpon>Bienvenida.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Wizard\Contratos.xaml.cs">
+      <DependentUpon>Contratos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Wizard\Instalacion.xaml.cs">
+      <DependentUpon>Instalacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Wizard\Licencia.xaml.cs">
+      <DependentUpon>Licencia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Wizard\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Wizard\Sucursal.xaml.cs">
+      <DependentUpon>Sucursal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Wizard\Suscripcion.xaml.cs">
+      <DependentUpon>Suscripcion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Wizard\Terminales.xaml.cs">
+      <DependentUpon>Terminales.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controles\UC_AsistenciaHorizontal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Btn_LiveTile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_CamposTextoDiseno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_CamposTextoEdicion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Color.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_ColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_ColorPickerDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Combo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_DateTimePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UC_Direccion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Accesos\Importar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Asistencias\Historial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Nomina\Edicion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Nomina\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Personas\Edicion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_ElegirIdioma.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Exportar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Foto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Horas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Importar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Listado1N.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_ListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Multiseleccion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_PersonaLinkID.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Pestanas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_RangoFechas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Reporte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Reportes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Reporte_Param.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_TextBoxButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_TipoAccesoColor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Wizard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_WizardTitulo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Diseno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dlg_Prueba.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="eClock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Controles\UC_Acordion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Campos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UC_ToolBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Accesos\Edicion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Accesos\Filtrar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Accesos\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Actividades\EdicionActividades.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Actividades\EdicionActividadesIns.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Actividades\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Actividades\ListadoActividadesIns.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Asistencias\AsigncionTurnos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Asistencias\EdicionIncidencias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Asistencias\FiltradoPor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Asistencias\Justificaciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Asistencias\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Asistencias\ListadoIncidencias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Asistencias\ReglaJustificacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Asistencias\Saldos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Asistencias\SaldosCorreccion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Asistencias\SeleccionTiposIncidencias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Asistencias\Totales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Asistencias\UC_SaldoXPersona.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Campos\EdicionTablas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Campos\ListadoTablas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Configuracion\AlertasMail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Campos\EdicionCampos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Empleados\ImportarImagenes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Configuracion\EdicionConfiguracionUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Configuracion\Kiosco.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Configuracion\ListadoConfiguracionUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Configuracion\Nomina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Configuracion\Sincronizador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Diseno\EdicionDisenos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Empleados\Importar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Personas\Accesos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\HorasExtras\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Licencias\EdicionLicencias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Licencias\EdicionLicenciasDistribuidores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Localizaciones\EdicionLocalizaciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Campos\EdicionMascaras.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Campos\ListadoCampos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Campos\ListadoCamposEmpleados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Diseno\ListadoDisenos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Licencias\ListadoLicencias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Licencias\ListadoLicenciasDistribuidores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Localizaciones\ListadoLocalizaciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Campos\ListadoMascaras.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Configuracion\MiConfiguracion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Campos\ReagruparEmpleados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Configuracion\Smpt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\DiasFestivos\Edicion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\DiasFestivos\EdicionCalendariosDF.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\DiasFestivos\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\DiasFestivos\ListadoCalendariosDF.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\eClock\LiveTiles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Empleados\EdicionEmpleados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Empleados\EdicionPersonas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Empleados\EdicionPersonasSHuella.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Empleados\ListadoPersonas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Empleados\ListadoPersonasSHuella.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Empleados\Supervisores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Importar\Excel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Importar\Noi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Importar\Nomipaq.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Asistencias\ImportacionDeIncidencias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Licencias\NoValida.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Localizaciones\Traducciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Migrar\Anviz.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Migrar\Zk.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Monedero\EdicionProductos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Monedero\EdicionPromociones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Monedero\EdicionRecompensas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Monedero\ListadoProductos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Monedero\ListadoPromociones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Monedero\ListadoRecompensas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Nomina\Recibos_Emp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Nomina\EdicionMovimientos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Nomina\ListadoMovimientos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Nomina\ImportarRecNomina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Nomina\Recibos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Perfiles\EdicionPerfiles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Perfiles\ListadoPerfiles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Perfiles\PerfilRestricciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Periodos\Abiertos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Periodos\EdicionPeriodos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Periodos\EdicionPeriodosN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Nomina\EdicionRecNomina.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Periodos\EnviarANomina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Periodos\ListadoPeriodos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Periodos\ListadoPeriodosN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Nomina\ListadoRecNomina.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\PreNomina\Exportar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\PreNomina\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Publicidad\EdicionPublicidad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Publicidad\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Reportes\Edicion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Reportes\EdicionReportesServidor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Reportes\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Reportes\ListadoReportesServidor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Sitios\EdicionSitios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Sitios\ListadoSitios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Suscripciones\EdicionSuscripcion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Suscripciones\EdicionSuscripcionCliente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Suscripciones\EdicionSuscripPrecios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Suscripciones\ListadoSuscripcion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Suscripciones\ListadoSuscripPrecios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TablasSuscripcion\Edicion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TablasSuscripcion\EdicionContenidos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TablasSuscripcion\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TablasSuscripcion\ListadoContenidos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Terminales\EdicionModelos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Terminales\EdicionModelosTerminales.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Terminales\EdicionTerminales.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Terminales\EdicionTerminalesSuscripcion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Terminales\ListadoModelos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Terminales\ListadoModelosTerminales.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Terminales\ListadoSimple.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Terminales\ListadoTerminales.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Terminales\ListadoTerminalesSuscripcion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Terminales\UC_Terminal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TiposIncidencias\EdicionAccesos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TiposIncidencias\EdicionTipoIncidencias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\TiposIncidencias\EdicionTipoIncidenciasComidaSistema.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TiposIncidencias\EdicionTipoIncidenciasEx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TiposIncidencias\EdicionTipoIncidenciasR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TiposIncidencias\EdicionTipoIncidenciasSistema.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TiposIncidencias\ListadoAccesos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TiposIncidencias\ListadoTipoIncidencias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\TiposIncidencias\ListadoTipoIncidenciasComidaSistema.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TiposIncidencias\ListadoTipoIncidenciasEx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\TiposIncidencias\ListadoTipoIncidenciasR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\TiposIncidencias\ListadoTipoIncidenciasSistema.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Tramites\EdicionTipoTramite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Tramites\EdicionTramites.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Tramites\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Tramites\ListadoTipoTramite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Turnos\AsignacionPorFechas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Turnos\Edicion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Turnos\ImportacionDeAsiganacionDeTurnos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Turnos\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Turnos\UC_TurnoDia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Usuarios\Edicion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Usuarios\EdicionUsuariosSuscripcion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Usuarios\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Usuarios\ListadoUsuariosSuscripcion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Wizard\Bienvenida.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Wizard\Contratos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Wizard\Instalacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Wizard\Licencia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Wizard\Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Wizard\Sucursal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\Wizard\Suscripcion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vista\Wizard\Terminales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="CopiaBinario.bat" />
+    <None Include="eClockSync.exe.config" />
+    <None Include="Ejecutar.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PermisosDa.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eClockBase\eClockBase.csproj">
+      <Project>{f3b19586-0f10-4d70-92d6-da078964644e}</Project>
+      <Name>eClockBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="favicon.ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Acuerdo.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Icon1.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Vista\Agrupaciones\" />
+    <Folder Include="Vista\Ayuda\" />
+    <Folder Include="Vista\Comidas\" />
+    <Folder Include="Vista\Kiosko\" />
+    <Folder Include="Vista\Logs\" />
+    <Folder Include="Vista\Mails\" />
+    <Folder Include="Vista\ModoFoto\" />
+    <Folder Include="Vista\Noticias\" />
+    <Folder Include="Vista\PortalEmpleado\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borrar_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Guardar_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Licencia.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\MenuEscondido_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Regresar_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Seleccionados_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busqueda_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlechaArriba_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlechaIzquierda_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eClock.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CandadoVerde.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogInVerde.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comentarios.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checador.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogInRojo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CandadoRojo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CandadoBlanco.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actualizar_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compatibilidad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Candado_Rojo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_Login.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimizar_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mini_Pantalla_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar_24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximizar_Pantalla_24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mini_Pantalla_24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimizar_24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\España_20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Estados_20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portugal_20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Francia_20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brasil_20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Italia_20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tiempo_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Justificar_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filtro_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlechaArriba_48.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Totales_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Llave_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WizardBienvenida.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnvisLogo_151.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anviz_70.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AsignacionTurnos_252.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AsistenciaJustificación_134.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Atendance_70.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Campos_120.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefinirTurnos_120.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DíaFestivo_122.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eclock_151.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel_70.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Noi_117.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zk_133.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empleados_120.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brazil_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\España_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EstadosUnidos_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Francia_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Italia_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlechaArriba_32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorChart.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relacion1aN_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reportes_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tache_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.ico.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Abajo_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abajo-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arriba_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eClock.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eClockXP.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email_64.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>"$(ProjectDir)CopiaBinario.bat" "$(ProjectDir)" $(OutDir)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:50723/S_Mails.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:50723/S_Mails.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="S_Mails_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="DoWork" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_ObtenChats_InputMessage">
+    <wsdl:part name="parameters" element="ObtenChats" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_ObtenChats_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenChatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_ObtenChatsCon_InputMessage">
+    <wsdl:part name="parameters" element="ObtenChatsCon" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_ObtenChatsCon_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenChatsConResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_ObtenChatsConDesde_InputMessage">
+    <wsdl:part name="parameters" element="ObtenChatsConDesde" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_ObtenChatsConDesde_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenChatsConDesdeResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_ObtenContactos_InputMessage">
+    <wsdl:part name="parameters" element="ObtenContactos" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_ObtenContactos_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenContactosResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_EnviaMensaje_InputMessage">
+    <wsdl:part name="parameters" element="EnviaMensaje" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_EnviaMensaje_OutputMessage">
+    <wsdl:part name="parameters" element="EnviaMensajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_BorraMensajesCon_InputMessage">
+    <wsdl:part name="parameters" element="BorraMensajesCon" />
+  </wsdl:message>
+  <wsdl:message name="S_Mails_BorraMensajesCon_OutputMessage">
+    <wsdl:part name="parameters" element="BorraMensajesConResponse" />
+  </wsdl:message>
+  <wsdl:portType name="S_Mails">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="urn:S_Mails/DoWork" message="S_Mails_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Mails/DoWorkResponse" message="S_Mails_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenChats">
+      <wsdl:input wsaw:Action="urn:S_Mails/ObtenChats" message="S_Mails_ObtenChats_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Mails/ObtenChatsResponse" message="S_Mails_ObtenChats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenChatsCon">
+      <wsdl:input wsaw:Action="urn:S_Mails/ObtenChatsCon" message="S_Mails_ObtenChatsCon_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Mails/ObtenChatsConResponse" message="S_Mails_ObtenChatsCon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenChatsConDesde">
+      <wsdl:input wsaw:Action="urn:S_Mails/ObtenChatsConDesde" message="S_Mails_ObtenChatsConDesde_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Mails/ObtenChatsConDesdeResponse" message="S_Mails_ObtenChatsConDesde_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenContactos">
+      <wsdl:input wsaw:Action="urn:S_Mails/ObtenContactos" message="S_Mails_ObtenContactos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Mails/ObtenContactosResponse" message="S_Mails_ObtenContactos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviaMensaje">
+      <wsdl:input wsaw:Action="urn:S_Mails/EnviaMensaje" message="S_Mails_EnviaMensaje_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Mails/EnviaMensajeResponse" message="S_Mails_EnviaMensaje_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BorraMensajesCon">
+      <wsdl:input wsaw:Action="urn:S_Mails/BorraMensajesCon" message="S_Mails_BorraMensajesCon_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Mails/BorraMensajesConResponse" message="S_Mails_BorraMensajesCon_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

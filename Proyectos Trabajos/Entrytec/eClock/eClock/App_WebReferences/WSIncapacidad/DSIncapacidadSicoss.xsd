@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DSIncapacidadSicoss.xsd" xmlns="http://tempuri.org/DSIncapacidadSicoss.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DSIncapacidadSicoss.xsd" id="DSIncapacidadSicoss" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DSIncapacidadSicoss">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Incapacidad">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Trab_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Folio">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Duracion" type="xs:unsignedByte" />
+              <xs:element name="FechaInicio" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Tipo_IDa" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Causa_IDa" type="xs:unsignedByte" />
+              <xs:element name="Subsidio" type="xs:boolean" />
+              <xs:element minOccurs="0" name="Integrado" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Monto" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Pago" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Accidente1_IDa" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Accidente2_IDa" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Accidente3_IDa" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Accidente4_IDa" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Accidente5_IDa" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Accidente6_IDa" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Accidente7_IDa" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Accidente8_IDa" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Accidente9_IDa" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="FechaInicioNomina" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Rama_ID" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="SubRama_ID" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Tipo_ID" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="SubTipo_ID" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Porcentaje" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="PagoFecha" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Complemento" type="xs:boolean" />
+              <xs:element minOccurs="0" name="RegPat_ID" type="xs:int" />
+              <xs:element minOccurs="0" name="DIFAno" type="xs:short" />
+              <xs:element minOccurs="0" name="DIFPeriodo" type="xs:short" />
+              <xs:element minOccurs="0" name="DIFPago_ID" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="User_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FechaCaptura" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+              <xs:element minOccurs="0" name="Importa" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Incapacidad" />
+      <xs:field xpath="mstns:Trab_ID" />
+      <xs:field xpath="mstns:FechaInicio" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

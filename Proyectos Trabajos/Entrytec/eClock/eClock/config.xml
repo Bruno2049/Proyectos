@@ -1,0 +1,12 @@
+<eClock>
+	<config0 nombre="URL" contenido="http://localhost:49351/eClock/WS_ServicioRDatos.asmx?WSDL"></config0>
+	<config1 nombre= "Imagen_Main" contenido="prueba.jpg"></config1>
+	<config2 nombre= "Imagen_Log" contenido="false"></config2>
+	<config3 nombre= "Imagen_barra" contenido="barracargador120906.swf" topMovie = ""  leftMovie = "-250"></config3>
+	<config4 nombre= "FlashMain" contenido="IsLogo.png" topMovie = ""  leftMovie = "-250"></config4>
+	<config5 nombre= "link1" contenido="WFR_EmpleadosStatus.aspx" topMovie = ""  leftMovie = "-250"></config5>
+	<config6 nombre= "link2" contenido="WF_Tipo_Incidencias.aspx" topMovie = ""  leftMovie = "-250"></config6>
+	<config7 nombre= "link3" contenido="WFR_Asistencia.aspx" topMovie = ""  leftMovie = "-250"></config7>
+	<config8 nombre= "link4" contenido="WFR_AccesoT.aspx" topMovie = ""  leftMovie = "-250"></config8>
+	<config9 nombre= "link5" contenido="WFR_EmpleadosStatus_B.aspx" topMovie = ""  leftMovie = "-250"></config9>
+</eClock>

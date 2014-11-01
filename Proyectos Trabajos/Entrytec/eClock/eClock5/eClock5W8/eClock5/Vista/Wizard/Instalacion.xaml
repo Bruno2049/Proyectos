@@ -1,0 +1,20 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controles="clr-namespace:eClock5.Controles" xmlns:Monedero="clr-namespace:eClock5.Vista.Monedero" xmlns:local="clr-namespace:eClock5.Vista.Wizard" x:Class="eClock5.Vista.Wizard.Instalacion"
+        Title="Instalacion" Height="395" Width="570" Icon="/eClock5;component/favicon.ico.ico">
+    <Grid>
+
+        <Controles:UC_Wizard >
+            <Controles:UC_Wizard.Pasos>
+                <local:Bienvenida />
+                <local:Contratos/>
+                <local:Licencia/>
+                <local:Login/>
+                <local:Suscripcion/>
+                <local:Sucursal/>
+            </Controles:UC_Wizard.Pasos>
+        </Controles:UC_Wizard>
+
+    </Grid>
+</Window>

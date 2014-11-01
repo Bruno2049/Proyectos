@@ -1,0 +1,931 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{383C5F55-829E-4FF7-ABDA-7B4BCF7DA8D8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PAEEEM</RootNamespace>
+    <AssemblyName>PAEEEM</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.3.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\9.0.0.0__b03f5f7f11d50a3a\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\DefaultResource.es-mx.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultResource.es-mx.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\DefaultResource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Captcha\CodeValidator.cs" />
+    <Compile Include="Captcha\GetImgText.ashx.cs">
+      <DependentUpon>GetImgText.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Captcha\Letter.cs" />
+    <Compile Include="Captcha\MyCaptcha.ascx.cs">
+      <DependentUpon>MyCaptcha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Captcha\MyCaptcha.ascx.designer.cs">
+      <DependentUpon>MyCaptcha.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Captcha\SecurityHelper.cs" />
+    <Compile Include="Captcha\Valida.aspx.cs">
+      <DependentUpon>Valida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Captcha\Valida.aspx.designer.cs">
+      <DependentUpon>Valida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CentralModule\AddAndEditProduct.aspx.cs">
+      <DependentUpon>AddAndEditProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CentralModule\AddAndEditProduct.aspx.designer.cs">
+      <DependentUpon>AddAndEditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CentralModule\AddRateandCost.aspx.cs">
+      <DependentUpon>AddRateandCost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CentralModule\AddRateandCost.aspx.designer.cs">
+      <DependentUpon>AddRateandCost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CentralModule\CatalogConfiguration.aspx.cs">
+      <DependentUpon>CatalogConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CentralModule\CatalogConfiguration.aspx.designer.cs">
+      <DependentUpon>CatalogConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CentralModule\CatalogManagement.aspx.cs">
+      <DependentUpon>CatalogManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CentralModule\CatalogManagement.aspx.designer.cs">
+      <DependentUpon>CatalogManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CentralModule\DisposalCenterAuthorization.aspx.cs">
+      <DependentUpon>DisposalCenterAuthorization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CentralModule\DisposalCenterAuthorization.aspx.designer.cs">
+      <DependentUpon>DisposalCenterAuthorization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CentralModule\DisposalPartialCutsApproval.aspx.cs">
+      <DependentUpon>DisposalPartialCutsApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CentralModule\DisposalPartialCutsApproval.aspx.designer.cs">
+      <DependentUpon>DisposalPartialCutsApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CentralModule\DisposalPartialCutsApprovalMonitor.aspx.cs">
+      <DependentUpon>DisposalPartialCutsApprovalMonitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CentralModule\DisposalPartialCutsApprovalMonitor.aspx.designer.cs">
+      <DependentUpon>DisposalPartialCutsApprovalMonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CentralModule\DynamicPageRender.aspx.cs">
+      <DependentUpon>DynamicPageRender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CentralModule\DynamicPageRender.aspx.designer.cs">
+      <DependentUpon>DynamicPageRender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CentralModule\ProductMonitor.aspx.cs">
+      <DependentUpon>ProductMonitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CentralModule\ProductMonitor.aspx.designer.cs">
+      <DependentUpon>ProductMonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CentralModule\RateandCostManager.aspx.cs">
+      <DependentUpon>RateandCostManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CentralModule\RateandCostManager.aspx.designer.cs">
+      <DependentUpon>RateandCostManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CentralModule\SupplierAuthorization.aspx.cs">
+      <DependentUpon>SupplierAuthorization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CentralModule\SupplierAuthorization.aspx.designer.cs">
+      <DependentUpon>SupplierAuthorization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomReports\ReportServerForm.aspx.cs">
+      <DependentUpon>ReportServerForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomReports\ReportServerForm.aspx.designer.cs">
+      <DependentUpon>ReportServerForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalModule\CreditRequestScaned.aspx.cs">
+      <DependentUpon>CreditRequestScaned.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisposalModule\CreditRequestScaned.aspx.designer.cs">
+      <DependentUpon>CreditRequestScaned.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalModule\MaterialRecoveryRegistryMonitor.aspx.designer.cs">
+      <DependentUpon>MaterialRecoveryRegistryMonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalModule\OldProductList.aspx.cs">
+      <DependentUpon>OldProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisposalModule\OldProductList.aspx.designer.cs">
+      <DependentUpon>OldProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalModule\ShowImage.aspx.cs">
+      <DependentUpon>ShowImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisposalModule\ShowImage.aspx.designer.cs">
+      <DependentUpon>ShowImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalModule\UnabledOldEquipmentUploadImage.aspx.cs">
+      <DependentUpon>UnabledOldEquipmentUploadImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisposalModule\UnabledOldEquipmentUploadImage.aspx.designer.cs">
+      <DependentUpon>UnabledOldEquipmentUploadImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegionalModule\AssignDisposalToSupplier.aspx.cs">
+      <DependentUpon>AssignDisposalToSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegionalModule\AssignDisposalToSupplier.aspx.designer.cs">
+      <DependentUpon>AssignDisposalToSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegionalModule\CreditReview.aspx.designer.cs">
+      <DependentUpon>CreditReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegionalModule\DisposalCenterEdit.aspx.designer.cs">
+      <DependentUpon>DisposalCenterEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegionalModule\FinalDisposalActGeneration.aspx.cs">
+      <DependentUpon>FinalDisposalActGeneration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegionalModule\FinalDisposalActGeneration.aspx.designer.cs">
+      <DependentUpon>FinalDisposalActGeneration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalModule\MaterialRecoveryRegistry.aspx.cs">
+      <DependentUpon>MaterialRecoveryRegistry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisposalModule\MaterialRecoveryRegistry.aspx.designer.cs">
+      <DependentUpon>MaterialRecoveryRegistry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalModule\MaterialRecoveryRegistryEdit.aspx.cs">
+      <DependentUpon>MaterialRecoveryRegistryEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisposalModule\MaterialRecoveryRegistryEdit.aspx.designer.cs">
+      <DependentUpon>MaterialRecoveryRegistryEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalModule\MaterialRecoveryRegistryMonitor.aspx.cs">
+      <DependentUpon>MaterialRecoveryRegistryMonitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisposalModule\OldEquipmentReceptionList.aspx.cs">
+      <DependentUpon>OldEquipmentReceptionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisposalModule\OldEquipmentReceptionList.aspx.designer.cs">
+      <DependentUpon>OldEquipmentReceptionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalModule\ProductInformationEdit.aspx.cs">
+      <DependentUpon>ProductInformationEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisposalModule\ProductInformationEdit.aspx.designer.cs">
+      <DependentUpon>ProductInformationEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalModule\ReceiptionOldEquipmentRegistry.aspx.cs">
+      <DependentUpon>ReceiptionOldEquipmentRegistry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisposalModule\ReceiptionOldEquipmentRegistry.aspx.designer.cs">
+      <DependentUpon>ReceiptionOldEquipmentRegistry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalModule\ReceivedOldEquipmentUploadImage.aspx.cs">
+      <DependentUpon>ReceivedOldEquipmentUploadImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisposalModule\ReceivedOldEquipmentUploadImage.aspx.designer.cs">
+      <DependentUpon>ReceivedOldEquipmentUploadImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalModule\UnableOldEquipmentRegistry.aspx.cs">
+      <DependentUpon>UnableOldEquipmentRegistry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisposalModule\UnableOldEquipmentRegistry.aspx.designer.cs">
+      <DependentUpon>UnableOldEquipmentRegistry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LibRef\UploadImageReview.aspx.cs">
+      <DependentUpon>UploadImageReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LibRef\UploadImageReview.aspx.designer.cs">
+      <DependentUpon>UploadImageReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionalModule\AssignProductToSupplier.aspx.cs">
+      <DependentUpon>AssignProductToSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegionalModule\AssignProductToSupplier.aspx.designer.cs">
+      <DependentUpon>AssignProductToSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegionalModule\AssignTechnologiesToDisposal.aspx.cs">
+      <DependentUpon>AssignTechnologiesToDisposal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegionalModule\AssignTechnologiesToDisposal.aspx.designer.cs">
+      <DependentUpon>AssignTechnologiesToDisposal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegionalModule\CreditAuthorization.aspx.cs">
+      <DependentUpon>CreditAuthorization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegionalModule\CreditAuthorization.aspx.designer.cs">
+      <DependentUpon>CreditAuthorization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegionalModule\CreditReview.aspx.cs">
+      <DependentUpon>CreditReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegionalModule\DisposalCenterEdit.aspx.cs">
+      <DependentUpon>DisposalCenterEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegionalModule\DisposalCenterMonitor.aspx.cs">
+      <DependentUpon>DisposalCenterMonitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegionalModule\DisposalCenterMonitor.aspx.designer.cs">
+      <DependentUpon>DisposalCenterMonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegionalModule\SupervisionDateRegistry.aspx.cs">
+      <DependentUpon>SupervisionDateRegistry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegionalModule\SupervisionDateRegistry.aspx.designer.cs">
+      <DependentUpon>SupervisionDateRegistry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegionalModule\SupplierAdd.aspx.cs">
+      <DependentUpon>SupplierAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegionalModule\SupplierAdd.aspx.designer.cs">
+      <DependentUpon>SupplierAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegionalModule\SupplierMonitor.aspx.cs">
+      <DependentUpon>SupplierMonitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegionalModule\SupplierMonitor.aspx.designer.cs">
+      <DependentUpon>SupplierMonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierModule\CrediticialHistroyReview.aspx.cs">
+      <DependentUpon>CrediticialHistroyReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplierModule\CrediticialHistroyReview.aspx.designer.cs">
+      <DependentUpon>CrediticialHistroyReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierModule\CreditMonitor.aspx.cs">
+      <DependentUpon>CreditMonitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplierModule\CreditMonitor.aspx.designer.cs">
+      <DependentUpon>CreditMonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierModule\CreditRequest.aspx.cs">
+      <DependentUpon>CreditRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplierModule\CreditRequest.aspx.designer.cs">
+      <DependentUpon>CreditRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierModule\EnterMop.aspx.cs">
+      <DependentUpon>EnterMop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplierModule\EnterMop.aspx.designer.cs">
+      <DependentUpon>EnterMop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierModule\PrintForm.aspx.cs">
+      <DependentUpon>PrintForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplierModule\PrintForm.aspx.designer.cs">
+      <DependentUpon>PrintForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierModule\ValidateCrediticialHistroy.aspx.cs">
+      <DependentUpon>ValidateCrediticialHistroy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplierModule\ValidateCrediticialHistroy.aspx.designer.cs">
+      <DependentUpon>ValidateCrediticialHistroy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModule\PermissionTreeManage.aspx.cs">
+      <DependentUpon>PermissionTreeManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserModule\PermissionTreeManage.aspx.designer.cs">
+      <DependentUpon>PermissionTreeManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModule\RoleAssignment.aspx.cs">
+      <DependentUpon>RoleAssignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserModule\RoleAssignment.aspx.designer.cs">
+      <DependentUpon>RoleAssignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModule\RoleEdit.aspx.cs">
+      <DependentUpon>RoleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserModule\RoleEdit.aspx.designer.cs">
+      <DependentUpon>RoleEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModule\RoleManagement.aspx.cs">
+      <DependentUpon>RoleManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserModule\RoleManagement.aspx.designer.cs">
+      <DependentUpon>RoleManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModule\RolePermissionManager.aspx.cs">
+      <DependentUpon>RolePermissionManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserModule\RolePermissionManager.aspx.designer.cs">
+      <DependentUpon>RolePermissionManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModule\RoleRelation.aspx.cs">
+      <DependentUpon>RoleRelation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserModule\RoleRelation.aspx.designer.cs">
+      <DependentUpon>RoleRelation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModule\UserEdition.aspx.cs">
+      <DependentUpon>UserEdition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserModule\UserEdition.aspx.designer.cs">
+      <DependentUpon>UserEdition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModule\UsersManager.aspx.cs">
+      <DependentUpon>UsersManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserModule\UsersManager.aspx.designer.cs">
+      <DependentUpon>UsersManager.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LsWeb.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PAEEEM.BussinessLayer\PAEEEM.BussinessLayer.csproj">
+      <Project>{B5C84C95-5D68-44F2-886A-7E7668DF2E7F}</Project>
+      <Name>PAEEEM.BussinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.DataAccessLayer\PAEEEM.DataAccessLayer.csproj">
+      <Project>{9E57969E-B38D-4F64-A9E2-8D911E38F106}</Project>
+      <Name>PAEEEM.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.Entities\PAEEEM.Entities.csproj">
+      <Project>{4ABD974D-C681-44BD-8A2B-88133BC5C082}</Project>
+      <Name>PAEEEM.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.Helpers\PAEEEM.Helpers.csproj">
+      <Project>{CC5C065F-75C1-40A7-821F-3B33D97C4BC8}</Project>
+      <Name>PAEEEM.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\DefaultResource.es-mx.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>DefaultResource.es-mx.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Login\ChangePassword.aspx" />
+    <Content Include="Login\ForgetPassword.aspx" />
+    <Content Include="Login\Login.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SupplierModule\Resources\Css\GridView.css" />
+    <Content Include="SupplierModule\Resources\Css\Pager.css" />
+    <Content Include="SupplierModule\Resources\Css\Site.css" />
+    <Content Include="SupplierModule\Resources\Css\StyleSheet.css" />
+    <Content Include="SupplierModule\Resources\Css\Table.css" />
+    <Content Include="SupplierModule\Resources\Images\LeftLine.jpg" />
+    <Content Include="SupplierModule\Resources\Images\MiddleLine.jpg" />
+    <Content Include="Site.Master" />
+    <Content Include="UserModule\PermissionTreeManage.aspx" />
+    <Content Include="UserModule\RoleAssignment.aspx" />
+    <Content Include="UserModule\RoleEdit.aspx" />
+    <Content Include="UserModule\RoleManagement.aspx" />
+    <Content Include="UserModule\RolePermissionManager.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit.dll" />
+    <Content Include="App_GlobalResources\DefaultResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DefaultResource.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Captcha\MyCaptcha.ascx" />
+    <Content Include="Captcha\Valida.aspx" />
+    <Content Include="CentralModule\AddRateandCost.aspx" />
+    <Content Include="CentralModule\RateandCostManager.aspx" />
+    <Content Include="LibRef\AspNetPager.dll" />
+    <Content Include="RegionalModule\CreditAuthorization.aspx" />
+    <Content Include="RegionalModule\CreditReview.aspx" />
+    <Content Include="SupplierModule\Resources\Css\Master.css" />
+    <Content Include="SupplierModule\Resources\Images\btn.gif" />
+    <Content Include="SupplierModule\Resources\Images\page.gif" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\calendar.js" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\config.js" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\lang\en.js" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\lang\zh-cn.js" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\lang\zh-tw.js" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\My97DatePicker.htm" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\skin\datePicker.gif" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\skin\default\datepicker.css" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\skin\default\img.gif" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\skin\WdatePicker.css" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\skin\whyGreen\bg.jpg" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\skin\whyGreen\datepicker.css" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\skin\whyGreen\img.gif" />
+    <Content Include="SupplierModule\Resources\Script\Calendar\WdatePicker.js" />
+    <Content Include="SupplierModule\CrediticialHistroyReview.aspx" />
+    <Content Include="SupplierModule\CreditMonitor.aspx" />
+    <Content Include="SupplierModule\CreditRequest.aspx" />
+    <Content Include="SupplierModule\EnterMop.aspx" />
+    <Content Include="SupplierModule\PrintForm.aspx" />
+    <Content Include="SupplierModule\ValidateCrediticialHistroy.aspx" />
+    <Content Include="UserModule\RoleRelation.aspx" />
+    <Content Include="UserModule\UserEdition.aspx" />
+    <Content Include="UserModule\UsersManager.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Captcha\GetImgText.ashx" />
+    <Content Include="Captcha\images\captcha1.gif" />
+    <Content Include="Captcha\images\captcha1.png" />
+    <Content Include="Captcha\images\captcha2.jpg" />
+    <Content Include="Captcha\images\captcha3.jpg" />
+    <Content Include="CentralModule\AddAndEditProduct.aspx" />
+    <Content Include="CentralModule\CatalogConfiguration.aspx" />
+    <Content Include="CentralModule\CatalogManagement.aspx" />
+    <Content Include="CentralModule\DisposalCenterAuthorization.aspx" />
+    <Content Include="CentralModule\DisposalPartialCutsApproval.aspx" />
+    <Content Include="CentralModule\DisposalPartialCutsApprovalMonitor.aspx" />
+    <Content Include="CentralModule\DynamicPageRender.aspx" />
+    <Content Include="CentralModule\images\bolita.png" />
+    <Content Include="CentralModule\images\bolitaverde.png" />
+    <Content Include="CentralModule\images\btn.png" />
+    <Content Include="CentralModule\images\fondo2.png" />
+    <Content Include="CentralModule\images\fondo3.png" />
+    <Content Include="CentralModule\images\fondo4.png" />
+    <Content Include="CentralModule\images\login.png" />
+    <Content Include="CentralModule\images\pleca3.png" />
+    <Content Include="CentralModule\images\t_monitor_prod.png" />
+    <Content Include="CentralModule\ProductMonitor.aspx" />
+    <Content Include="CentralModule\SupplierAuthorization.aspx" />
+    <Content Include="CustomReports\ReportServerForm.aspx" />
+    <Content Include="DisposalModule\CreditRequestScaned.aspx" />
+    <Content Include="DisposalModule\images\analizador_gases.png" />
+    <Content Include="DisposalModule\images\datos_empresa.png" />
+    <Content Include="DisposalModule\images\domicilio_fiscal.png" />
+    <Content Include="DisposalModule\images\domicilio_negocio.png" />
+    <Content Include="DisposalModule\images\horario_atencion.png" />
+    <Content Include="DisposalModule\images\informacion_encargado.png" />
+    <Content Include="DisposalModule\images\informacion_general.png" />
+    <Content Include="DisposalModule\images\informacion_representante.png" />
+    <Content Include="DisposalModule\images\t_equipos2.png" />
+    <Content Include="DisposalModule\images\t_equipos20.png" />
+    <Content Include="DisposalModule\images\t_equipos21.png" />
+    <Content Include="DisposalModule\images\t_equipos22.png" />
+    <Content Include="DisposalModule\OldProductList.aspx" />
+    <Content Include="DisposalModule\ShowImage.aspx" />
+    <Content Include="DisposalModule\UnabledOldEquipmentUploadImage.aspx" />
+    <Content Include="images\bll1.png" />
+    <Content Include="images\busqueda_camera.png" />
+    <Content Include="images\busqueda_equipos_inhabilitados.png" />
+    <Content Include="images\busqueda_equipos_inhabilitados1.png" />
+    <Content Include="images\busqueda_equipos_recibidos.png" />
+    <Content Include="images\busqueda_equipos_recibidos1.png" />
+    <Content Include="images\busqueda_inhabilitacion.png" />
+    <Content Include="images\busqueda_INH_2.png" />
+    <Content Include="images\disposal_center.png" />
+    <Content Include="images\edicion_borrador.png" />
+    <Content Include="images\im1.png" />
+    <Content Include="images\logos.png" />
+    <Content Include="images\ps1.png" />
+    <Content Include="images\ps2.png" />
+    <Content Include="images\ps3.png" />
+    <Content Include="images\ps4.png" />
+    <Content Include="images\ps5.png" />
+    <Content Include="images\ps6.png" />
+    <Content Include="images\ps7.png" />
+    <Content Include="images\RECEPCION_EQUIPOS.png" />
+    <Content Include="images\supplieradd.png" />
+    <Content Include="images\supplierMonitor.png" />
+    <Content Include="images\t_autorizacion_centros.png" />
+    <Content Include="images\t_autorizacion_centros_acopioydestruccion.png" />
+    <Content Include="images\t_boletas.png" />
+    <Content Include="images\t_catalogo.png" />
+    <Content Include="images\t_equipos_recuperacion.png" />
+    <Content Include="images\t_esei.png" />
+    <Content Include="images\t_gestion.png" />
+    <Content Include="images\t_inhabilitacion_equipos.png" />
+    <Content Include="images\t_permisos.png" />
+    <Content Include="images\t_registro_recuperacion3.png" />
+    <Content Include="RegionalModule\AssignDisposalToSupplier.aspx" />
+    <Content Include="RegionalModule\FinalDisposalActGeneration.aspx" />
+    <Content Include="DisposalModule\images\Image1.png" />
+    <Content Include="DisposalModule\images\Image2.png" />
+    <Content Include="DisposalModule\MaterialRecoveryRegistry.aspx" />
+    <Content Include="DisposalModule\images\t_equipos1.png" />
+    <Content Include="DisposalModule\MaterialRecoveryRegistryEdit.aspx" />
+    <Content Include="DisposalModule\MaterialRecoveryRegistryMonitor.aspx" />
+    <Content Include="DisposalModule\OldEquipmentReceptionList.aspx" />
+    <Content Include="DisposalModule\ProductInformationEdit.aspx" />
+    <Content Include="DisposalModule\ReceiptionOldEquipmentRegistry.aspx" />
+    <Content Include="DisposalModule\ReceivedOldEquipmentUploadImage.aspx" />
+    <Content Include="DisposalModule\UnableOldEquipmentRegistry.aspx" />
+    <Content Include="LibRef\UploadImageReview.aspx" />
+    <Content Include="EmailTemplate\ActivateTemplate.html" />
+    <Content Include="EmailTemplate\De-activateTemplate.html" />
+    <Content Include="EmailTemplate\ForgetPasswordTemplate.html" />
+    <Content Include="images\arbol.png" />
+    <Content Include="images\azul.png" />
+    <Content Include="images\bolita.png" />
+    <Content Include="images\bolitaverde.png" />
+    <Content Include="images\btn.png" />
+    <Content Include="images\btn1.png" />
+    <Content Include="images\foco_03.png" />
+    <Content Include="images\fondo2.png" />
+    <Content Include="images\fondo3.png" />
+    <Content Include="images\fondo4.png" />
+    <Content Include="images\login.png" />
+    <Content Include="images\mariposa.png" />
+    <Content Include="images\mas.png" />
+    <Content Include="images\morado.png" />
+    <Content Include="images\naranja.png" />
+    <Content Include="images\noticias.png" />
+    <Content Include="images\pleca3.png" />
+    <Content Include="images\progress.gif" />
+    <Content Include="images\tabla.png" />
+    <Content Include="images\top.png" />
+    <Content Include="images\top1.png" />
+    <Content Include="images\verde.png" />
+    <Content Include="RegionalModule\AssignProductToSupplier.aspx" />
+    <Content Include="RegionalModule\AssignTechnologiesToDisposal.aspx" />
+    <Content Include="RegionalModule\DisposalCenterEdit.aspx" />
+    <Content Include="RegionalModule\DisposalCenterMonitor.aspx" />
+    <Content Include="RegionalModule\images\bolita.png" />
+    <Content Include="RegionalModule\images\bolitaverde.png" />
+    <Content Include="RegionalModule\images\btn.png" />
+    <Content Include="RegionalModule\images\t_actas.png" />
+    <Content Include="RegionalModule\images\t_equipos2.png" />
+    <Content Include="RegionalModule\images\t_equipos3.png" />
+    <Content Include="RegionalModule\images\t_supplierMonitor.png" />
+    <Content Include="RegionalModule\images\fondo2.png" />
+    <Content Include="RegionalModule\images\fondo3.png" />
+    <Content Include="RegionalModule\images\fondo4.png" />
+    <Content Include="RegionalModule\images\login.png" />
+    <Content Include="RegionalModule\images\pleca3.png" />
+    <Content Include="RegionalModule\images\t_equipos1.png" />
+    <Content Include="RegionalModule\images\t_informacion.png" />
+    <Content Include="RegionalModule\images\t_solicitud.png" />
+    <Content Include="RegionalModule\SupervisionDateRegistry.aspx" />
+    <Content Include="RegionalModule\SupplierAdd.aspx" />
+    <Content Include="RegionalModule\SupplierMonitor.aspx" />
+    <Content Include="Resources\Css\GridView.css" />
+    <Content Include="Resources\Css\Master.css" />
+    <Content Include="Resources\Css\PageMask.css" />
+    <Content Include="Resources\Css\Pager.css" />
+    <Content Include="Resources\Css\Site.css" />
+    <Content Include="Resources\Css\StyleSheet.css" />
+    <Content Include="Resources\Css\Table.css" />
+    <Content Include="Resources\Images\antiguedad.png" />
+    <Content Include="Resources\Images\arbol.png" />
+    <Content Include="Resources\Images\azul.png" />
+    <Content Include="Resources\Images\bde.png" />
+    <Content Include="Resources\Images\bolita.png" />
+    <Content Include="Resources\Images\bolitaverde.png" />
+    <Content Include="Resources\Images\btn.gif" />
+    <Content Include="Resources\Images\btn.png" />
+    <Content Include="Resources\Images\btn1.png" />
+    <Content Include="Resources\Images\btn_p.png" />
+    <Content Include="Resources\Images\cantidad.png" />
+    <Content Include="Resources\Images\capacidad.png" />
+    <Content Include="Resources\Images\centro1.png" />
+    <Content Include="Resources\Images\CentroDisposicion.png" />
+    <Content Include="Resources\Images\color.png" />
+    <Content Include="Resources\Images\foco_03.png" />
+    <Content Include="Resources\Images\fondo2.png" />
+    <Content Include="Resources\Images\fondo3.png" />
+    <Content Include="Resources\Images\fondo4.png" />
+    <Content Include="Resources\Images\LeftLine.jpg" />
+    <Content Include="Resources\Images\login.png" />
+    <Content Include="Resources\Images\marca.png" />
+    <Content Include="Resources\Images\marca1.png" />
+    <Content Include="Resources\Images\mariposa.png" />
+    <Content Include="Resources\Images\mas.png" />
+    <Content Include="Resources\Images\MiddleLine.jpg" />
+    <Content Include="Resources\Images\modelo.png" />
+    <Content Include="Resources\Images\modelo1.png" />
+    <Content Include="Resources\Images\morado.png" />
+    <Content Include="Resources\Images\naranja.png" />
+    <Content Include="Resources\Images\noticias.png" />
+    <Content Include="Resources\Images\numero1.png" />
+    <Content Include="Resources\Images\NumeroUnidades.png" />
+    <Content Include="Resources\Images\page.gif" />
+    <Content Include="Resources\Images\peso.png" />
+    <Content Include="Resources\Images\pleca3.png" />
+    <Content Include="Resources\Images\plus.png" />
+    <Content Include="Resources\Images\sub.png" />
+    <Content Include="Resources\Images\tabla.png" />
+    <Content Include="Resources\Images\tec2.png" />
+    <Content Include="Resources\Images\Tecnologia.png" />
+    <Content Include="Resources\Images\tipo.png" />
+    <Content Include="Resources\Images\tipo1.png" />
+    <Content Include="Resources\Images\top.png" />
+    <Content Include="Resources\Images\top1.png" />
+    <Content Include="Resources\Images\t_aprovacion.png" />
+    <Content Include="Resources\Images\unitario.png" />
+    <Content Include="Resources\Images\verde.png" />
+    <Content Include="Resources\Script\Calendar\calendar.js" />
+    <Content Include="Resources\Script\Calendar\config.js" />
+    <Content Include="Resources\Script\Calendar\lang\en.js" />
+    <Content Include="Resources\Script\Calendar\lang\zh-cn.js" />
+    <Content Include="Resources\Script\Calendar\lang\zh-tw.js" />
+    <Content Include="Resources\Script\Calendar\My97DatePicker.htm" />
+    <Content Include="Resources\Script\Calendar\skin\datePicker.gif" />
+    <Content Include="Resources\Script\Calendar\skin\default\datepicker.css" />
+    <Content Include="Resources\Script\Calendar\skin\default\img.gif" />
+    <Content Include="Resources\Script\Calendar\skin\WdatePicker.css" />
+    <Content Include="Resources\Script\Calendar\skin\whyGreen\bg.jpg" />
+    <Content Include="Resources\Script\Calendar\skin\whyGreen\datepicker.css" />
+    <Content Include="Resources\Script\Calendar\skin\whyGreen\img.gif" />
+    <Content Include="Resources\Script\Calendar\WdatePicker.js" />
+    <Content Include="Resources\Script\PageMask.js" />
+    <Content Include="SupplierModule\images\datos_empresa.png" />
+    <Content Include="SupplierModule\images\domicilio_fiscal.png" />
+    <Content Include="SupplierModule\images\domicilio_negocio.png" />
+    <Content Include="SupplierModule\images\informacion_financiera.png" />
+    <Content Include="SupplierModule\images\informacion_general.png" />
+    <Content Include="SupplierModule\images\informacion_responsable.png" />
+    <Content Include="SupplierModule\images\t_edicioncredito.png" />
+    <Content Include="SupplierModule\images\t_validar_servicio.png" />
+    <Content Include="SupplierModule\Resources\Css\PageMask.css" />
+    <Content Include="SupplierModule\Resources\Images\antiguedad.png" />
+    <Content Include="SupplierModule\Resources\Images\arbol.png" />
+    <Content Include="SupplierModule\Resources\Images\azul.png" />
+    <Content Include="SupplierModule\Resources\Images\bde.png" />
+    <Content Include="SupplierModule\Resources\Images\bolita.png" />
+    <Content Include="SupplierModule\Resources\Images\bolitaverde.png" />
+    <Content Include="SupplierModule\Resources\Images\btn.png" />
+    <Content Include="SupplierModule\Resources\Images\btn1.png" />
+    <Content Include="SupplierModule\Resources\Images\btn_p.png" />
+    <Content Include="SupplierModule\Resources\Images\cantidad.png" />
+    <Content Include="SupplierModule\Resources\Images\capacidad.png" />
+    <Content Include="SupplierModule\Resources\Images\centro1.png" />
+    <Content Include="SupplierModule\Resources\Images\CentroDisposicion.png" />
+    <Content Include="SupplierModule\Resources\Images\color.png" />
+    <Content Include="SupplierModule\Resources\Images\foco_03.png" />
+    <Content Include="SupplierModule\Resources\Images\fondo2.png" />
+    <Content Include="SupplierModule\Resources\Images\fondo3.png" />
+    <Content Include="SupplierModule\Resources\Images\fondo4.png" />
+    <Content Include="SupplierModule\Resources\Images\login.png" />
+    <Content Include="SupplierModule\Resources\Images\marca.png" />
+    <Content Include="SupplierModule\Resources\Images\marca1.png" />
+    <Content Include="SupplierModule\Resources\Images\mariposa.png" />
+    <Content Include="SupplierModule\Resources\Images\mas.png" />
+    <Content Include="SupplierModule\Resources\Images\modelo.png" />
+    <Content Include="SupplierModule\Resources\Images\modelo1.png" />
+    <Content Include="SupplierModule\Resources\Images\morado.png" />
+    <Content Include="SupplierModule\Resources\Images\naranja.png" />
+    <Content Include="SupplierModule\Resources\Images\noticias.png" />
+    <Content Include="SupplierModule\Resources\Images\numero1.png" />
+    <Content Include="SupplierModule\Resources\Images\NumeroUnidades.png" />
+    <Content Include="SupplierModule\Resources\Images\peso.png" />
+    <Content Include="SupplierModule\Resources\Images\pleca3.png" />
+    <Content Include="SupplierModule\Resources\Images\plus.png" />
+    <Content Include="SupplierModule\Resources\Images\sub.png" />
+    <Content Include="SupplierModule\Resources\Images\tabla.png" />
+    <Content Include="SupplierModule\Resources\Images\tec2.png" />
+    <Content Include="SupplierModule\Resources\Images\Tecnologia.png" />
+    <Content Include="SupplierModule\Resources\Images\tipo.png" />
+    <Content Include="SupplierModule\Resources\Images\tipo1.png" />
+    <Content Include="SupplierModule\Resources\Images\top.png" />
+    <Content Include="SupplierModule\Resources\Images\top1.png" />
+    <Content Include="SupplierModule\Resources\Images\t_aprovacion.png" />
+    <Content Include="SupplierModule\Resources\Images\unitario.png" />
+    <Content Include="SupplierModule\Resources\Images\verde.png" />
+    <Content Include="SupplierModule\Resources\Script\PageMask.js" />
+    <Content Include="SupplierModule\images\arrow.png" />
+    <Content Include="SupplierModule\images\asignacion.png" />
+    <Content Include="SupplierModule\images\bolita.png" />
+    <Content Include="SupplierModule\images\bolitaverde.png" />
+    <Content Include="SupplierModule\images\btn.png" />
+    <Content Include="SupplierModule\images\bullet_blue.png" />
+    <Content Include="SupplierModule\images\fondo2.png" />
+    <Content Include="SupplierModule\images\fondo3.png" />
+    <Content Include="SupplierModule\images\fondo4.png" />
+    <Content Include="SupplierModule\images\login.png" />
+    <Content Include="SupplierModule\images\notice.png" />
+    <Content Include="SupplierModule\images\pleca3.png" />
+    <Content Include="SupplierModule\images\rol.png" />
+    <Content Include="SupplierModule\images\t1.png" />
+    <Content Include="SupplierModule\images\t10.png" />
+    <Content Include="SupplierModule\images\t11.png" />
+    <Content Include="SupplierModule\images\t12.png" />
+    <Content Include="SupplierModule\images\t2.png" />
+    <Content Include="SupplierModule\images\t3.png" />
+    <Content Include="SupplierModule\images\t4.png" />
+    <Content Include="SupplierModule\images\t5.png" />
+    <Content Include="SupplierModule\images\t6.png" />
+    <Content Include="SupplierModule\images\t7.png" />
+    <Content Include="SupplierModule\images\t8.png" />
+    <Content Include="SupplierModule\images\Tecnologia.png" />
+    <Content Include="SupplierModule\images\t_administracion.png" />
+    <Content Include="SupplierModule\images\t_administrador.png" />
+    <Content Include="SupplierModule\images\t_admon.png" />
+    <Content Include="SupplierModule\images\t_admusuarios.png" />
+    <Content Include="SupplierModule\images\t_alta.png" />
+    <Content Include="SupplierModule\images\t_altatarifa.png" />
+    <Content Include="SupplierModule\images\t_altausu.png" />
+    <Content Include="SupplierModule\images\t_arbol.png" />
+    <Content Include="SupplierModule\images\t_asignacion.png" />
+    <Content Include="SupplierModule\images\t_edicion.png" />
+    <Content Include="SupplierModule\images\t_equipos.png" />
+    <Content Include="SupplierModule\images\t_informacion.png" />
+    <Content Include="SupplierModule\images\t_monitor.png" />
+    <Content Include="SupplierModule\images\t_navegacion.png" />
+    <Content Include="SupplierModule\images\t_nodo.png" />
+    <Content Include="SupplierModule\images\t_permisos.png" />
+    <Content Include="SupplierModule\images\t_presupuesto2.png" />
+    <Content Include="SupplierModule\images\t_relacion.png" />
+    <Content Include="SupplierModule\images\t_solicitud.png" />
+    <Content Include="SupplierModule\images\t_solicitud2.png" />
+    <Content Include="SupplierModule\images\t_validar.png" />
+    <Content Include="SupplierModule\images\usuarios.png" />
+    <Content Include="UserModule\images\bolita.png" />
+    <Content Include="UserModule\images\bolitaverde.png" />
+    <Content Include="UserModule\images\btn.png" />
+    <Content Include="UserModule\images\fondo2.png" />
+    <Content Include="UserModule\images\fondo3.png" />
+    <Content Include="UserModule\images\fondo4.png" />
+    <Content Include="UserModule\images\login.png" />
+    <Content Include="UserModule\images\pleca3.png" />
+    <Content Include="UserModule\images\plus.gif" />
+    <Content Include="UserModule\images\plus.png" />
+    <Content Include="UserModule\images\tabla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>50797</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

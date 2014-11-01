@@ -1,0 +1,10 @@
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Comprime_ePrint\ComprimeArchivos\bin\Debug\ComprimeArchivos.exe
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Comprime_ePrint\ComprimeArchivos\bin\Debug\ComprimeArchivos.pdb
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Comprime_ePrint\ComprimeArchivos\bin\Debug\ZISCard.dll
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Comprime_ePrint\ComprimeArchivos\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Comprime_ePrint\ComprimeArchivos\obj\Debug\ComprimeArchivos.Form1.resources
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Comprime_ePrint\ComprimeArchivos\obj\Debug\ComprimeArchivos.Properties.Resources.resources
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Comprime_ePrint\ComprimeArchivos\obj\Debug\ComprimeArchivos.csproj.GenerateResource.Cache
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Comprime_ePrint\ComprimeArchivos\obj\Debug\ComprimeArchivos.exe.licenses
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Comprime_ePrint\ComprimeArchivos\obj\Debug\ComprimeArchivos.exe
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Comprime_ePrint\ComprimeArchivos\obj\Debug\ComprimeArchivos.pdb

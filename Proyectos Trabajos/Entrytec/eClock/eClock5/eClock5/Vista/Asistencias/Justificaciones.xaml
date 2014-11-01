@@ -1,0 +1,66 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.Vista.Asistencias.Justificaciones" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="554" Background="{DynamicResource AzulClaro_Brush}" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Loaded="UserControl_Loaded" Foreground="{DynamicResource Blanco_Brush}">
+    <Grid>
+        <eClock5:UC_ToolBar Width="Auto" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar"  VerticalAlignment="Top" Background="{DynamicResource Blanco_Brush}" >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Borrar" Imagen="pack://siteoforigin:,,,/Resources/Borrar_64.png" Nombre="Btn_Borrar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png" Nombre="Btn_Guardar"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <StackPanel Margin="{DynamicResource MargenAltoToolBar}">
+            <StackPanel Margin="{DynamicResource MargenGeneral}">
+                <TextBlock x:Name="Lbl_MostrarTipoIncidencia" Style="{DynamicResource TextBlockSubTitulo}" Text="Tipo Incidencia:" ></TextBlock>
+                <Controles:UC_ListBox  x:Name="Lbx_TipoIncidencia" Tabla="" CampoLlave="TIPO_INCIDENCIA_ID" CampoNombre="TIPO_INCIDENCIA_NOMBRE" Height="200" CampoAdicional="TIPO_INCIDENCIA_CAMPOS" CampoDescripcion="" SelectionChanged="Lbx_TipoIncidencia_SelectionChanged" />
+            </StackPanel>
+            <TextBlock x:Name="Lbl_ErrorPeriodo" Text="No se pudo justificar, verifique que el periodo se encuentre abierto y exista conexión, e intente nuevamente" Style="{DynamicResource TextBlockErrorStyle}"></TextBlock>
+            <TextBlock x:Name="Lbl_NoUsableVariosDias" Text="No se puede usar este tipo de incidencia en más de un día" Style="{DynamicResource TextBlockErrorStyle}"></TextBlock>
+            <StackPanel x:Name="Stp_Saldos" Margin="{DynamicResource MargenGeneral}" >
+            </StackPanel>
+            <StackPanel x:Name="Stp_PorHoras" Margin="{DynamicResource MargenGeneral}" MaxWidth="450">
+                <TextBlock x:Name="Lbl_PorHoras"  Text="Por Horario:" Style="{DynamicResource TextBlockSubTitulo}"></TextBlock>
+                <Grid Margin="{DynamicResource MargenGeneral}" HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <RadioButton x:Name="Rbt_Salida" Grid.Column="0" Content="Justificar Salida" IsChecked="True" Foreground="{DynamicResource Blanco_Brush}" Checked="Rbt_Salida_Checked" Margin="{DynamicResource MargenGeneralCorto}" ></RadioButton>
+                    <RadioButton x:Name="Rbt_Entrada" Grid.Column="1" Content="Justificar Entrada" Foreground="{DynamicResource Blanco_Brush}" Checked="Rbt_Entrada_Checked"  Margin="{DynamicResource MargenGeneralCorto}" ></RadioButton>
+                    <RadioButton x:Name="Rbt_Intervalo" Grid.Column="2" Content="Justificar Intervalo" Foreground="{DynamicResource Blanco_Brush}" Checked="Rbt_Intervalo_Checked" Margin="{DynamicResource MargenGeneralCorto}"  ></RadioButton>
+                </Grid>
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="Lbl_HoraInicio" Text="Hora de Inicio:" Style="{DynamicResource TextBlockEtiquetaStyle}"></TextBlock>
+                    <Controles:UC_Horas x:Name="Tbx_HoraInicio" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}" ValorCambio="HoraValorCambio"></Controles:UC_Horas>
+                    <TextBlock x:Name="Lbl_HoraFin" Text="Hora de Fin:" Style="{DynamicResource TextBlockEtiquetaStyle}" Grid.Column="2" ></TextBlock>
+                    <Controles:UC_Horas x:Name="Tbx_HoraFin" Grid.Column="3" ValorCambio="HoraValorCambio" Margin="{DynamicResource MargenTextBoxCaptura}"></Controles:UC_Horas>
+                    <TextBlock x:Name="Lbl_TurnoEntrada" Text="Entrada del Turno:" Grid.Row="1" Style="{DynamicResource TextBlockEtiquetaStyle}"></TextBlock>
+                    <Controles:UC_Horas x:Name="Tbx_TurnoEntrada" Grid.Column="1" Grid.Row="1" Margin="{DynamicResource MargenTextBoxCaptura}" IsEnabled="False"></Controles:UC_Horas>
+                    <TextBlock x:Name="Lbl_TurnoSalida" Text="Salida del Turno:" Grid.Row="1" Style="{DynamicResource TextBlockEtiquetaStyle}" Grid.Column="2" ></TextBlock>
+                    <Controles:UC_Horas x:Name="Tbx_TurnoSalida" Grid.Column="3" Grid.Row="1" Margin="{DynamicResource MargenTextBoxCaptura}" IsEnabled="False"></Controles:UC_Horas>
+
+                </Grid>
+                <TextBlock x:Name="Lbl_EntradaMayor" Text="* La hora de inicio no puede ser mayor que la hora de fin" Style="{DynamicResource TextBlockErrorStyle}"></TextBlock>
+            </StackPanel>
+
+            <Controles:UC_CamposTextoEdicion x:Name="Campos" MaxWidth="450"></Controles:UC_CamposTextoEdicion>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

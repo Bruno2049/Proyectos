@@ -1,0 +1,34 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" x:Class="eClock5.Vista.Asistencias.ImportacionDeIncidencias" 
+             mc:Ignorable="d" 
+             d:DesignHeight="613.017" d:DesignWidth="862.069" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Background="{DynamicResource Blanco_Brush}">
+    <Grid  Width="Auto" Height="Auto">
+        <eClock5:UC_ToolBar Width="Auto"  VerticalAlignment="Top" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png" Nombre="Btn_Guardar"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <TextBlock x:Name="Lbl_Incidencias" Margin="10,49,0,0" TextWrapping="Wrap" Text="El formato que se usará para realizar la importación será" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulClaro_Brush}" Height="32" HorizontalAlignment="Left" Width="614"/>
+        <TextBlock x:Name="Lbl_Incidencias1" Margin="26,90,0,0" TextWrapping="Wrap" Text="9 digitos para el número de empleado." VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulClaro_Brush}" Height="32" HorizontalAlignment="Left" Width="431"/>
+        <TextBlock x:Name="Lbl_Incidencias2" Margin="26,122,0,0" TextWrapping="Wrap" Text="10 digitos para la fecha." VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulClaro_Brush}" Height="32" HorizontalAlignment="Left" Width="582"/>
+        <TextBlock x:Name="Lbl_Incidencias3" Margin="26,159,0,0" TextWrapping="Wrap" Text="Hasta 2 caracteres para la abreviatura (Solo informativo)." VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulClaro_Brush}" Height="32" HorizontalAlignment="Left" Width="581"/>
+        <TextBlock x:Name="Lbl_Incidencias4" Margin="26,196,0,0" TextWrapping="Wrap" Text="Hasta 256 caracteres para el tipo de incidencias" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulClaro_Brush}" Height="32" HorizontalAlignment="Left" Width="581"/>
+        <TextBlock x:Name="Lbl_Incidencias5" Margin="26,233,0,0" TextWrapping="Wrap" Text="Hasta 256 caracteres para la dscripcion de la incidencia" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulClaro_Brush}" Height="32" HorizontalAlignment="Left" Width="581"/>
+        <TextBlock x:Name="Lbl_Incidencias6" HorizontalAlignment="Left" Margin="10,283,0,0" TextWrapping="Wrap" Text="Ejemplo" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulClaro_Brush}" Height="30" Width="87"/>
+        <TextBlock x:Name="Lbl_Incidencias7" Margin="10,318,0,0" TextWrapping="Wrap" Text="Empleado = 125, Fecha= 25/03/2009, Abreviatura=PG, Tipo de incidencia= Permiso sin goce, Descripcion= Tramites personales " VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulClaro_Brush}" Height="45" HorizontalAlignment="Left" Width="829"/>
+        <TextBlock x:Name="Lbl_Incidencias8" Margin="26,368,0,0" TextWrapping="Wrap" Text="000000125|2009/03/25|PG|Permiso sin goce|Tramites personales" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulClaro_Brush}" Height="32" HorizontalAlignment="Left" Width="520"/>
+        <TextBlock x:Name="Lbl_Incidencias9" Margin="26,405,0,0" TextWrapping="Wrap" Text="Nota: Tambien es aceptado el formato CSV de Holiday System" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulClaro_Brush}" Height="32" HorizontalAlignment="Left" Width="553"/>
+
+        
+        <Rectangle Fill="{DynamicResource AzulClaro_Brush}" Height="121" Margin="10,472,23,0" Stroke="Black" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Lbl_Incidencias10" Margin="26,508,0,0" TextWrapping="Wrap" Text="1. Seleccione el archivo de acceso que desea importar" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource Blanco_Brush}" Height="30" HorizontalAlignment="Left" Width="351"/>
+        <TextBox x:Name="Tbx_Examinar" Height="23" Margin="382,502,129,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+        <Button x:Name="Btn_Examinar" Content="Examinar" Margin="0,506,35,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="88" Click="Btn_Examinar_Click"/>
+        <TextBlock x:Name="Lbl_Incidencias11" Margin="26,543,0,0" TextWrapping="Wrap" Text="2. De clic en Guardar" VerticalAlignment="Top" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource Blanco_Brush}" Height="32" HorizontalAlignment="Left" Width="314"/>
+
+    </Grid>
+</UserControl>

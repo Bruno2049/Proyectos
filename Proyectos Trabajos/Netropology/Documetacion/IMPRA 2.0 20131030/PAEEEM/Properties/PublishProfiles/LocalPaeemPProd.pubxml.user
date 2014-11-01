@@ -1,0 +1,1147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>G:\paeeem_orig_01_07</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AjaxControlToolkit/AjaxControlToolkit.dll">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="App_GlobalResources/DefaultResource.es-mx.resx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="App_GlobalResources/DefaultResource.resx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="bin/AspNetPager.dll">
+      <publishTime>11/15/2013 12:37:56</publishTime>
+    </File>
+    <File Include="bin/PAEEEM.BussinessLayer.dll">
+      <publishTime>07/01/2014 18:50:37</publishTime>
+    </File>
+    <File Include="bin/PAEEEM.DataAccessLayer.dll">
+      <publishTime>07/01/2014 18:50:36</publishTime>
+    </File>
+    <File Include="bin/PAEEEM.dll">
+      <publishTime>07/01/2014 18:50:39</publishTime>
+    </File>
+    <File Include="bin/PAEEEM.Entities.dll">
+      <publishTime>05/14/2014 10:53:17</publishTime>
+    </File>
+    <File Include="bin/PAEEEM.Helpers.dll">
+      <publishTime>05/14/2014 10:53:10</publishTime>
+    </File>
+    <File Include="bin/PAEEEM.Helpers.XmlSerializers.dll">
+      <publishTime>05/14/2014 10:53:17</publishTime>
+    </File>
+    <File Include="Captcha/GetImgText.ashx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Captcha/images/captcha1.gif">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Captcha/images/captcha1.png">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Captcha/images/captcha2.jpg">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Captcha/images/captcha3.jpg">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Captcha/MyCaptcha.ascx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Captcha/Valida.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/AddAndEditProduct.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/AddRateandCost.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/CatalogConfiguration.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/CatalogManagement.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/DisposalCenterAuthorization.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/DisposalPartialCutsApproval.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/DisposalPartialCutsApprovalMonitor.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/DynamicPageRender.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/images/bolita.png">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/images/bolitaverde.png">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/images/btn.png">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/images/fondo2.png">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/images/fondo3.png">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/images/fondo4.png">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/images/login.png">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/images/pleca3.png">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/images/t_monitor_prod.png">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/ProductMonitor.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/RateandCostManager.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CentralModule/SupplierAuthorization.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="CustomReports/ReportServerForm.aspx">
+      <publishTime>11/15/2013 12:37:56</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="DisposalModule/CreditRequestScaned.aspx">
+      <publishTime>11/15/2013 12:38:02</publishTime>
+    </File>
+    <File Include="DisposalModule/images/analizador_gases.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/datos_empresa.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/domicilio_fiscal.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/domicilio_negocio.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/horario_atencion.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/Image1.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/Image2.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/informacion_encargado.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/informacion_general.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/informacion_representante.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/t_equipos1.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/t_equipos2.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/t_equipos20.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/t_equipos21.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/images/t_equipos22.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/MaterialRecoveryRegistry.aspx">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/MaterialRecoveryRegistryEdit.aspx">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/MaterialRecoveryRegistryMonitor.aspx">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/OldEquipmentReceptionList.aspx">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/OldProductList.aspx">
+      <publishTime>11/15/2013 12:38:02</publishTime>
+    </File>
+    <File Include="DisposalModule/ProductInformationEdit.aspx">
+      <publishTime>11/15/2013 12:38:02</publishTime>
+    </File>
+    <File Include="DisposalModule/ReceiptionOldEquipmentRegistry.aspx">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/ReceivedOldEquipmentUploadImage.aspx">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/ShowImage.aspx">
+      <publishTime>11/15/2013 12:38:02</publishTime>
+    </File>
+    <File Include="DisposalModule/UnabledOldEquipmentUploadImage.aspx">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="DisposalModule/UnableOldEquipmentRegistry.aspx">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="EmailTemplate/ActivateTemplate.html">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="EmailTemplate/De-activateTemplate.html">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="EmailTemplate/ForgetPasswordTemplate.html">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/15/2013 12:37:56</publishTime>
+    </File>
+    <File Include="images/arbol.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/azul.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/bll1.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/bolita.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/bolitaverde.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/btn.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/btn1.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/busqueda_camera.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/busqueda_equipos_inhabilitados.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/busqueda_equipos_inhabilitados1.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/busqueda_equipos_recibidos.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/busqueda_equipos_recibidos1.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/busqueda_inhabilitacion.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/busqueda_INH_2.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/disposal_center.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/edicion_borrador.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/foco_03.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/fondo2.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/fondo3.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/fondo4.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/im1.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/login.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/logos.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/mariposa.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/mas.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/morado.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/naranja.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/noticias.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/pleca3.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/progress.gif">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/ps1.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/ps2.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/ps3.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/ps4.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/ps5.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/ps6.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/ps7.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/RECEPCION_EQUIPOS.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/supplieradd.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/supplierMonitor.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/tabla.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/top.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/top1.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/t_autorizacion_centros.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/t_autorizacion_centros_acopioydestruccion.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/t_boletas.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/t_catalogo.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/t_equipos_recuperacion.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/t_esei.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/t_gestion.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/t_inhabilitacion_equipos.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/t_permisos.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/t_registro_recuperacion3.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="images/verde.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="LibRef/AspNetPager.dll">
+      <publishTime>11/15/2013 12:37:56</publishTime>
+    </File>
+    <File Include="LibRef/UploadImageReview.aspx">
+      <publishTime>11/15/2013 12:37:56</publishTime>
+    </File>
+    <File Include="Login/ChangePassword.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="Login/ForgetPassword.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="Login/Login.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="LsWeb.config">
+      <publishTime>06/27/2014 12:05:11</publishTime>
+    </File>
+    <File Include="RegionalModule/AssignDisposalToSupplier.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/AssignProductToSupplier.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/AssignTechnologiesToDisposal.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/CreditAuthorization.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/CreditReview.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/DisposalCenterEdit.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/DisposalCenterMonitor.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/FinalDisposalActGeneration.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/bolita.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/bolitaverde.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/btn.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/fondo2.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/fondo3.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/fondo4.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/login.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/pleca3.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/t_actas.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/t_equipos1.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/t_equipos2.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/t_equipos3.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/t_informacion.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/t_solicitud.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/images/t_supplierMonitor.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/SupervisionDateRegistry.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/SupplierAdd.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="RegionalModule/SupplierMonitor.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="Resources/Css/GridView.css">
+      <publishTime>11/15/2013 12:38:14</publishTime>
+    </File>
+    <File Include="Resources/Css/Master.css">
+      <publishTime>11/15/2013 12:38:14</publishTime>
+    </File>
+    <File Include="Resources/Css/PageMask.css">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Css/Pager.css">
+      <publishTime>11/15/2013 12:38:14</publishTime>
+    </File>
+    <File Include="Resources/Css/Site.css">
+      <publishTime>11/15/2013 12:38:14</publishTime>
+    </File>
+    <File Include="Resources/Css/StyleSheet.css">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Css/Table.css">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/antiguedad.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/arbol.png">
+      <publishTime>11/15/2013 12:38:08</publishTime>
+    </File>
+    <File Include="Resources/Images/azul.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/bde.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/bolita.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/bolitaverde.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/btn.gif">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/btn.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/btn1.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/btn_p.png">
+      <publishTime>11/15/2013 12:38:08</publishTime>
+    </File>
+    <File Include="Resources/Images/cantidad.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/capacidad.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/centro1.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/CentroDisposicion.png">
+      <publishTime>11/15/2013 12:38:08</publishTime>
+    </File>
+    <File Include="Resources/Images/color.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/foco_03.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/fondo2.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/fondo3.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/fondo4.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/LeftLine.jpg">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/login.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/marca.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/marca1.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/mariposa.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/mas.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/MiddleLine.jpg">
+      <publishTime>11/15/2013 12:38:08</publishTime>
+    </File>
+    <File Include="Resources/Images/modelo.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/modelo1.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/morado.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/naranja.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/noticias.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/numero1.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/NumeroUnidades.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/page.gif">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/peso.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/pleca3.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/plus.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/sub.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/tabla.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/tec2.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/Tecnologia.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/tipo.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/tipo1.png">
+      <publishTime>11/15/2013 12:38:08</publishTime>
+    </File>
+    <File Include="Resources/Images/top.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/top1.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Images/t_aprovacion.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/unitario.png">
+      <publishTime>11/15/2013 12:38:12</publishTime>
+    </File>
+    <File Include="Resources/Images/verde.png">
+      <publishTime>11/15/2013 12:38:10</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/calendar.js">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/config.js">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/lang/en.js">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/lang/zh-cn.js">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/lang/zh-tw.js">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/My97DatePicker.htm">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/skin/datePicker.gif">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/skin/default/datepicker.css">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/skin/default/img.gif">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/skin/WdatePicker.css">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/skin/whyGreen/bg.jpg">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/skin/whyGreen/datepicker.css">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/skin/whyGreen/img.gif">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/Calendar/WdatePicker.js">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Resources/Script/PageMask.js">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="SupplierModule/CrediticialHistroyReview.aspx">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/CreditMonitor.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/CreditRequest.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/EnterMop.aspx">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/arrow.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/asignacion.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/bolita.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/bolitaverde.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/btn.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/bullet_blue.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/datos_empresa.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/domicilio_fiscal.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/domicilio_negocio.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/fondo2.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/fondo3.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/fondo4.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/informacion_financiera.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/informacion_general.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/informacion_responsable.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/login.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/notice.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/pleca3.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/rol.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t1.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t10.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t11.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t12.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t2.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t3.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t4.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t5.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t6.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t7.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t8.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/Tecnologia.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_administracion.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_administrador.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_admon.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_admusuarios.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_alta.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_altatarifa.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_altausu.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_arbol.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_asignacion.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_edicion.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_edicioncredito.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_equipos.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_informacion.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_monitor.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_navegacion.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_nodo.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_permisos.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_presupuesto2.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_relacion.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_solicitud.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_solicitud2.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_validar.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/t_validar_servicio.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/images/usuarios.png">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/PrintForm.aspx">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Css/GridView.css">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Css/Master.css">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Css/PageMask.css">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Css/Pager.css">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Css/Site.css">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Css/StyleSheet.css">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Css/Table.css">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/antiguedad.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/arbol.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/azul.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/bde.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/bolita.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/bolitaverde.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/btn.gif">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/btn.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/btn1.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/btn_p.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/cantidad.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/capacidad.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/centro1.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/CentroDisposicion.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/color.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/foco_03.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/fondo2.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/fondo3.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/fondo4.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/LeftLine.jpg">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/login.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/marca.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/marca1.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/mariposa.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/mas.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/MiddleLine.jpg">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/modelo.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/modelo1.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/morado.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/naranja.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/noticias.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/numero1.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/NumeroUnidades.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/page.gif">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/peso.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/pleca3.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/plus.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/sub.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/tabla.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/tec2.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/Tecnologia.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/tipo.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/tipo1.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/top.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/top1.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/t_aprovacion.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/unitario.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Images/verde.png">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/calendar.js">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/config.js">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/lang/en.js">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/lang/zh-cn.js">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/lang/zh-tw.js">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/My97DatePicker.htm">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/skin/datePicker.gif">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/skin/default/datepicker.css">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/skin/default/img.gif">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/skin/WdatePicker.css">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/skin/whyGreen/bg.jpg">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/skin/whyGreen/datepicker.css">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/skin/whyGreen/img.gif">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/Calendar/WdatePicker.js">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/Resources/Script/PageMask.js">
+      <publishTime>11/15/2013 12:37:58</publishTime>
+    </File>
+    <File Include="SupplierModule/ValidateCrediticialHistroy.aspx">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+    <File Include="UserModule/images/bolita.png">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/images/bolitaverde.png">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/images/btn.png">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/images/fondo2.png">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/images/fondo3.png">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/images/fondo4.png">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/images/login.png">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/images/pleca3.png">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/images/plus.gif">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/images/plus.png">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/images/tabla.png">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/PermissionTreeManage.aspx">
+      <publishTime>11/15/2013 12:38:06</publishTime>
+    </File>
+    <File Include="UserModule/RoleAssignment.aspx">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/RoleEdit.aspx">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/RoleManagement.aspx">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/RolePermissionManager.aspx">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/RoleRelation.aspx">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/UserEdition.aspx">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="UserModule/UsersManager.aspx">
+      <publishTime>11/15/2013 12:38:04</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/15/2013 12:38:00</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

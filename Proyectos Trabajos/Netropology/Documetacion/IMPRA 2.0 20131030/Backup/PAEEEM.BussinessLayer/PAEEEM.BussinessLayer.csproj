@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5C84C95-5D68-44F2-886A-7E7668DF2E7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PAEEEM.BussinessLayer</RootNamespace>
+    <AssemblyName>PAEEEM.BussinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CentralModule\CAT_ESTADOBLL.cs" />
+    <Compile Include="CentralModule\CAT_TARIFABLL.cs" />
+    <Compile Include="CentralModule\K_TARIFA_COSTOBLL.cs" />
+    <Compile Include="DisposalModule\K_CORTE_PARCIALBLL.cs" />
+    <Compile Include="DisposalModule\K_INHABILITACIONBLL.cs" />
+    <Compile Include="DisposalModule\K_INHABILITACION_PRODUCTOBLL.cs" />
+    <Compile Include="DisposalModule\K_RECUPERACIONBLL.cs" />
+    <Compile Include="DisposalModule\K_RECUPERACION_PRODUCTOBLL.cs" />
+    <Compile Include="DisposalModule\K_RECUP_RESIDUOSBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionalModule\CAT_ESTATUS_CREDITOBLL.cs" />
+    <Compile Include="RegionalModule\CAT_PROVEEDORBLL.cs" />
+    <Compile Include="RegionalModule\CAT_TECNOLOGIABLL.cs" />
+    <Compile Include="RegionalModule\K_CAT_PROVEEDOR_CAT_CENTRO_DISPBLL.cs" />
+    <Compile Include="RegionalModule\K_CENTRO_DISP_TECNOLOGIABLL.cs" />
+    <Compile Include="RegionalModule\K_CREDITOBLL.cs" />
+    <Compile Include="SupplierModule\CAT_CENTRO_DISPBLL.cs" />
+    <Compile Include="SupplierModule\CAT_DELEG_MUNICIPIOBLL.cs" />
+    <Compile Include="SupplierModule\CAT_FABRICANTEBLL.cs" />
+    <Compile Include="SupplierModule\CAT_IDENTIFICACIONBLL.cs" />
+    <Compile Include="SupplierModule\CAT_PRODUCTOBLL.cs" />
+    <Compile Include="SupplierModule\CAT_PROGRAMABLL.cs" />
+    <Compile Include="SupplierModule\CAT_REGIMEN_CONYUGALBLL.cs" />
+    <Compile Include="SupplierModule\CAT_TECNOLOGIABLL.cs" />
+    <Compile Include="SupplierModule\CAT_TIPO_ACREDITACIONBLL.cs" />
+    <Compile Include="SupplierModule\CAT_TIPO_INDUSTRIABLL.cs" />
+    <Compile Include="SupplierModule\CAT_TIPO_PROPIEDADBLL.cs" />
+    <Compile Include="SupplierModule\CAT_TIPO_SOCIEDADBLL.cs" />
+    <Compile Include="SupplierModule\K_CREDITO_SUSTITUCIONBLL.cs" />
+    <Compile Include="SupplierModule\K_PROGRAMA_COSTOBLL.cs" />
+    <Compile Include="SupplierModule\K_PROGRAMA_DESCUENTOBLL.cs" />
+    <Compile Include="SupplierModule\K_PROVEEDOR_PRODUCTOBLL.cs" />
+    <Compile Include="UserModule\US_NAVEGACIONBLL.cs" />
+    <Compile Include="UserModule\US_OPERACIONBLL.cs" />
+    <Compile Include="UserModule\US_PERMISOBLL.cs" />
+    <Compile Include="UserModule\US_ROLBLL.cs" />
+    <Compile Include="UserModule\US_ROL_PERMISOBLL.cs" />
+    <Compile Include="UserModule\US_USUARIOBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PAEEEM.DataAccessLayer\PAEEEM.DataAccessLayer.csproj">
+      <Project>{9E57969E-B38D-4F64-A9E2-8D911E38F106}</Project>
+      <Name>PAEEEM.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.Entities\PAEEEM.Entities.csproj">
+      <Project>{4ABD974D-C681-44BD-8A2B-88133BC5C082}</Project>
+      <Name>PAEEEM.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PAEEEM.Helpers\PAEEEM.Helpers.csproj">
+      <Project>{CC5C065F-75C1-40A7-821F-3B33D97C4BC8}</Project>
+      <Name>PAEEEM.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

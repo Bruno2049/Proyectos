@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Reporte_Faltas" targetNamespace="http://www.tempuri.org/DS_Reporte_Faltas.xsd" xmlns:mstns="http://www.tempuri.org/DS_Reporte_Faltas.xsd" xmlns="http://www.tempuri.org/DS_Reporte_Faltas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Reporte_Faltas" msdata:IsDataSet="true" msdata:Locale="es-MX" msprop:Generator_UserDSName="DS_Reporte_Faltas" msprop:Generator_DataSetName="DS_Reporte_Faltas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Faltas" msprop:Generator_UserTableName="Faltas" msprop:Generator_RowDeletedName="FaltasRowDeleted" msprop:Generator_TableClassName="FaltasDataTable" msprop:Generator_RowChangedName="FaltasRowChanged" msprop:Generator_RowClassName="FaltasRow" msprop:Generator_RowChangingName="FaltasRowChanging" msprop:Generator_RowEvArgName="FaltasRowChangeEvent" msprop:Generator_RowEvHandlerName="FaltasRowChangeEventHandler" msprop:Generator_TablePropName="Faltas" msprop:Generator_TableVarName="tableFaltas" msprop:Generator_RowDeletingName="FaltasRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SUSCRIPCION_NOMBRE" msprop:Generator_UserColumnName="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInRow="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnSUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInTable="SUSCRIPCION_NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PERSONA_LINK_ID" msprop:Generator_UserColumnName="PERSONA_LINK_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_LINK_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_LINK_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_LINK_IDColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PERSONA_NOMBRE" msprop:Generator_UserColumnName="PERSONA_NOMBRE" msprop:Generator_ColumnPropNameInRow="PERSONA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnPERSONA_NOMBRE" msprop:Generator_ColumnPropNameInTable="PERSONA_NOMBREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NODIAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NODIAS" msprop:Generator_ColumnPropNameInRow="NODIAS" msprop:Generator_ColumnVarNameInTable="columnNODIAS" msprop:Generator_ColumnPropNameInTable="NODIASColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="F1" msprop:Generator_UserColumnName="F1" msprop:Generator_ColumnPropNameInRow="F1" msprop:Generator_ColumnVarNameInTable="columnF1" msprop:Generator_ColumnPropNameInTable="F1Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="F2" msprop:Generator_UserColumnName="F2" msprop:Generator_ColumnPropNameInRow="F2" msprop:Generator_ColumnVarNameInTable="columnF2" msprop:Generator_ColumnPropNameInTable="F2Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="F3" msprop:Generator_UserColumnName="F3" msprop:Generator_ColumnPropNameInRow="F3" msprop:Generator_ColumnVarNameInTable="columnF3" msprop:Generator_ColumnPropNameInTable="F3Column" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

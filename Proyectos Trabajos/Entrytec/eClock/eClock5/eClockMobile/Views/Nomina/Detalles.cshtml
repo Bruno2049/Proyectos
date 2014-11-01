@@ -1,0 +1,260 @@
+﻿@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header
+{
+    @Html.Partial("_LoginPartial")
+    <h1>Detalles del recibo</h1>
+    <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right ui-btn-inline ui-mini ">
+        <a href="#" onclick="EnviarMail();return false;" data-icon="mail" data-iconpos="notext" data-inline="true" data-rel="back" data-role="button" data-transition="slide">Envia a correo</a>
+    </div>
+}
+
+<div>
+    <table border="1">
+        <tr>
+            <h3 id="Lbl_Nomina">Informacion del Empleado </h3>
+        </tr>
+        <tr>
+            <td>
+                <label id="Lbl_Empresa">Empresa: </label>
+            </td>
+            <td>
+                <label id="Lbl_EmpresaRes">@ViewBag.RecNominaAmpliado.COMPANIA</label></td>
+        </tr>
+        <tr>
+            <td>
+                <label id="Lbl_PersonaNombre">Nombre Empleado: </label>
+            </td>
+            <td>
+                <label id="Lbl_PersonaNombreRes">@ViewBag.RecNominaAmpliado.PERSONA_NOMBRE</label></td>
+        </tr>
+        <tr>
+            <td>
+                <label id="Lbl_Area">Area: </label>
+            </td>
+            <td>
+                <label id="Lbl_AreaRes">@ViewBag.RecNominaAmpliado.AREA</label></td>
+        </tr>
+        <tr>
+            <td>
+                <label id="Lbl_Imss">IMSS: </label>
+            </td>
+            <td>
+                <label id="Lbl_ImssRes">@ViewBag.RecNominaAmpliado.IMSS</label></td>
+        </tr>
+        <tr>
+            <td>
+                <label id="Lbl_Puesto">Puesto: </label>
+            </td>
+            <td>
+                <label id="Lbl_PuestoRes">@ViewBag.RecNominaAmpliado.PUESTO</label></td>
+        </tr>
+        <tr>
+            <td>
+                <label id="Lbl_CURP">CURP: </label>
+            </td>
+            <td>
+                <label id="Lbl_CURPRes">@ViewBag.RecNominaAmpliado.CURP</label></td>
+        </tr>
+        <tr>
+            <td>
+                <label id="Lbl_RFC">RFC: </label>
+            </td>
+            <td>
+                <label id="Lbl_RFCRes">@ViewBag.RecNominaAmpliado.RFC</label></td>
+        </tr>
+    </table>
+
+    @if (ViewBag.RecNominaPercepciones != null)
+    { 
+        <table border="1">
+            <tr>
+                <h3 id="Lbl_Persepciones">Persepciones</h3>
+            </tr>
+            <tr>
+                <td>
+                    <label>Clv</label></td>
+                <td>
+                    <label>Consepto</label></td>
+                <td>
+                    <label>Hrs o Dias</label></td>
+                <td>
+                    <label>Importe</label></td>
+            </tr>
+            @*<tr>
+                <th>
+                    <b class="ui-table-cell-label">Clv</b></th>
+                <th>
+                    <label>Consepto</label></th>
+                <th>
+                    <label>Hrs o Dias</label></th>
+                <th>
+                    <label>Importe</label></th>
+            </tr>*@
+            @foreach (eClockBase.Modelos.Model_REC_NOMI_MOV Item in ViewBag.RecNominaPercepciones)
+            {
+                <tr>
+                    <td>
+                        <label>@Item.REC_NOMI_MOV_CVE</label></td>
+                    <td>
+                        <label>@Item.REC_NOMI_MOV_CONCEPTO</label></td>
+                    <td>
+                        <label>@Item.REC_NOMI_MOV_UNIDAD</label></td>
+                    <td>
+                        <label>@Item.REC_NOMI_MOV_IMPORTE</label></td>
+                </tr>
+		 
+            }
+        </table>
+    }
+
+    @if (ViewBag.RecNominaDeducciones != null || ViewBag.RecNominaDeducciones.Count > 1)
+    { 
+        <table border="1">
+            <tr>
+                <h3 id="Lbl_Deducciones">Deducciones </h3>
+            </tr>
+            <tr>
+                <td>
+                    <label>Clv</label></td>
+                <td>
+                    <label>Consepto</label></td>
+                <td>
+                    <label>Hrs o Dias</label></td>
+                <td>
+                    <label>Importe</label></td>
+                <td>
+                    <label>Acomulado</label></td>
+            </tr>
+            @foreach (eClockBase.Modelos.Model_REC_NOMI_MOV Item in ViewBag.RecNominaDeducciones)
+            {
+                <tr>
+                    <td>
+                        <label>@Item.REC_NOMI_MOV_CVE</label></td>
+                    <td>
+                        <label>@Item.REC_NOMI_MOV_CONCEPTO</label></td>
+                    <td>
+                        <label>@Item.REC_NOMI_MOV_UNIDAD</label></td>
+                    <td>
+                        <label>@Item.REC_NOMI_MOV_IMPORTE</label></td>
+                    <td>
+                        <label>@Item.REC_NOMI_MOV_SALDO</label></td>
+                </tr>
+		 
+            }
+        </table>
+        
+        <table border="1">
+            <tr>
+                <h3>Adicionales</h3>
+            </tr>
+            <tr>
+                <td>
+                    <label>Vales: </label>
+                </td>
+                <td>
+                    <label>@ViewBag.RecNominaAmpliado.REC_NOMINA_VALES</label></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Dias pagados: </label>
+                </td>
+                <td>
+                    <label>@ViewBag.RecNominaAmpliado.REC_NOMINA_DIASPAG</label></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Descuentos Trabajados: </label>
+                </td>
+                <td>
+                    <label>@ViewBag.RecNominaAmpliado.REC_NOMINA_DESCTRAB</label></td>
+
+            </tr>
+            <tr>
+
+                <td>
+                    <label>Horas Extra: </label>
+                </td>
+                <td>
+                    <label>@ViewBag.RecNominaAmpliado.REC_NOMINA_HEXTRAS</label></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Neto a pagar: </label>
+                </td>
+                <td>
+                    <label>@ViewBag.RecNominaAmpliado.REC_NOMINA_N_PAGAR</label></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Fecha Inicio: </label>
+                </td>
+                <td>
+                    <label>@ViewBag.RecNominaAmpliado.REC_NOMINA_FINICIO</label></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Fecha Final: </label>
+                </td>
+                <td>
+                    <label>@ViewBag.RecNominaAmpliado.REC_NOMINA_FFIN</label></td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label>Fecha Final: </label>
+                </td>
+                <td>
+                    <label>@ViewBag.RecNominaAmpliado.REC_NOMINA_FFIN</label></td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label>Fecha Generacion: </label>
+                </td>
+                <td>
+                    <label>@ViewBag.RecNominaAmpliado.REC_NOMINA_FECHA_GEN</label></td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label>Comentarios: </label>
+                </td>
+                <td>
+                    <label>@ViewBag.RecNominaAmpliado.REC_NOMINA_COMENTARIOS</label></td>
+
+            </tr>
+        </table>
+    }
+
+
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        function EnviarMail() {
+            $.ajax({
+                url: '@Url.Action("BorrarMensajes", "Mensajes")',
+                type: 'POST',
+                data: {
+                    'id': "@ViewBag.id"
+                },
+                success: function (Resultado) {
+                    $("#BorrarM").popup("open");
+                    Recargar();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+
+                    alert("Error: " + xhr.status + thrownError);
+
+                }
+            });
+        }
+    </script>
+}

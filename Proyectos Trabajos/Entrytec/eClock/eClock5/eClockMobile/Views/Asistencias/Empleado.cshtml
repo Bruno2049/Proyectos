@@ -1,0 +1,152 @@
+﻿@{
+    ViewBag.Title = "Asistencias de Empleado";
+    Layout = "~/Views/Asistencias/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Persona</h2>
+
+@if (ViewBag.Asistencias != null)
+{
+    bool MostrarHorasExtras = false;
+    bool MostrarComidas = false;
+    foreach (eClockBase.Modelos.Asistencias.Model_Asistencia_Lineal_N Objeto in ViewBag.Asistencias)
+    {
+        if (Objeto.PHEX)
+        {
+            MostrarHorasExtras = true;
+        }
+        if (Objeto.PCOMI)
+        {
+            MostrarComidas = true;
+        }
+    }
+    <ul data-role="listview" data-inset="false" id="Lst_Asistencia">
+        @foreach (eClockBase.Modelos.Asistencias.Model_Asistencia_Lineal_N Objeto in ViewBag.Asistencias)
+        {
+            <li>
+                <a href="#" style="padding: 0px 10px 0px 20px; -webkit-border-radius: 0px">
+                    <img src="@Url.Action("Color","Shared")/@(Objeto.IC.ToString()+".jpg")">
+                    <input type="checkbox" name="CPID_@Objeto.ID" id="CPID_@Objeto.ID" >
+
+                    <label for="CPID_@Objeto.ID" style="padding: 0px 0px 0px 40px; -webkit-border-radius: 0px">@Objeto.FECHA.ToShortDateString()  @eClockBase.CeC.FechaHora2Hora(Objeto.E)
+                        - 
+                @if (MostrarComidas)
+                {
+                        
+                    @(eClockBase.CeC.FechaHora2Hora(Objeto.CS) + " - " + eClockBase.CeC.FechaHora2Hora(Objeto.CR) + " - ")
+                }
+
+                        @eClockBase.CeC.FechaHora2Hora(Objeto.S)
+                        <br />
+                        @Objeto.INC
+                        / 
+                        @Objeto.TURNO
+
+                    </label>
+
+                </a>
+                <a href="#PppInf_@Objeto.ID" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Learn more">Saber mas</a>
+                <div data-role="popup" id="PppInf_@Objeto.ID" class="ui-content" data-theme="a" style="max-width: 350px;">
+                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Cerrar</a>
+                    <table id="temp-table">
+                        <thead>
+                            <tr>
+                                <th>Campo</th>
+                                <th>Valor</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Fecha</th>
+                                <td>@Objeto.FECHA.ToShortDateString()</td>
+                            </tr>
+                            <tr>
+                                <th>Entrada</th>
+                                <td>@eClockBase.CeC.FechaHora2Hora(Objeto.E)</td>
+                            </tr>
+                            @if (MostrarComidas)
+                            {
+                                <tr>
+                                    <th>Salida a Comer</th>
+                                    <td>@eClockBase.CeC.FechaHora2Hora(Objeto.CS)</td>
+                                </tr>
+                                <tr>
+                                    <th>Regreso de Comer</th>
+                                    <td>@eClockBase.CeC.FechaHora2Hora(Objeto.CR)</td>
+                                </tr>
+                            }
+
+                            <tr>
+                                <th>Salida</th>
+                                <td>@eClockBase.CeC.FechaHora2Hora(Objeto.S)</td>
+                            </tr>
+                            <tr>
+                                <th>Turno</th>
+                                <td>@Objeto.TURNO</td>
+                            </tr>
+                            <tr>
+                                <th>Incidencia</th>
+                                <td>@Objeto.INC</td>
+                            </tr>
+
+
+                            @if (MostrarComidas)
+                            {
+                                <tr>
+                                    <th>Incidencia de comida</th>
+                                    <td>@Objeto.COMI</td>
+                                </tr>
+                            }
+                            <tr>
+                                <th>Tiempo Trabajado</th>
+                                <td>@eClockBase.CeC.FechaHora2Hora(Objeto.TT)</td>
+                            </tr>
+                            <tr>
+                                <th>Tiempo de retardo</th>
+                                <td>@eClockBase.CeC.FechaHora2Hora(Objeto.TDE)</td>
+                            </tr>
+                            <tr>
+                                <th>Tiempo trabajado menos salidas (a comer)</th>
+                                <td>@eClockBase.CeC.FechaHora2Hora(Objeto.TE)</td>
+                            </tr>
+
+
+                            @if (MostrarComidas)
+                            {
+                                <tr>
+                                    <th>Tiempo de comida</th>
+                                    <td>@eClockBase.CeC.FechaHora2Hora(Objeto.TC)</td>
+                                </tr>   
+                            }
+
+                            @if (MostrarHorasExtras)
+                            {
+                                <tr>
+                                    <th>Tiempo extra Trabajado</th>
+                                    <td>@eClockBase.CeC.FechaHora2Hora(Objeto.HES)</td>
+                                </tr>                                  <tr>
+                                    <th>Tiempo extra Calculado</th>
+                                    <td>@eClockBase.CeC.FechaHora2Hora(Objeto.HEC)</td>
+                                </tr>                                  <tr>
+                                    <th>Tiempo extra Autorizado</th>
+                                    <td>@eClockBase.CeC.FechaHora2Hora(Objeto.HEA)</td>
+                                </tr>                                  <tr>
+                                    <th>Horas Extras Dobles</th>
+                                    <td>@eClockBase.CeC.FechaHora2Hora(Objeto.HED)</td>
+                                </tr>                                  <tr>
+                                    <th>Horas Extras Triples</th>
+                                    <td>@eClockBase.CeC.FechaHora2Hora(Objeto.HET)</td>
+                                </tr>        
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+        }
+    </ul>
+    
+
+}
+
+

@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="eClock5.Vista.Importar.Nomipaq"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="366" d:DesignWidth="460" FontFamily="{DynamicResource EntryTecFont}" Background="{DynamicResource Blanco_Brush}">
+    <Grid>
+        <TextBlock x:Name="Lbl_Nomipaq" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nomipaq" Width="232" VerticalAlignment="Top" FontSize="{DynamicResource AltoToolBar}" Foreground="{DynamicResource AzulOscuro_Brush}"/>
+        <TextBlock x:Name="Lbl_Descripcion" HorizontalAlignment="Left" Margin="10,73,0,0" TextWrapping="Wrap" Text="Para poder realizar un importación de empleados desde &quot;Nomipaq&quot;, capture los datos que se piden a continuación." VerticalAlignment="Top" Width="440" FontSize="{DynamicResource FontSizeParrafo}" Height="66" Foreground="{DynamicResource AzulOscuro_Brush}"/>
+        <Grid Height="153" Margin="10,197,10,0" VerticalAlignment="Top" Background="{DynamicResource AzulClaro_Brush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="150*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Lbl_DireccionDelServidor" HorizontalAlignment="Left" Margin="10,12,0,0" TextWrapping="Wrap" Text="Dirección del servidor" VerticalAlignment="Top" Foreground="{DynamicResource Blanco_Brush}"/>
+            <TextBlock x:Name="Lbl_Usuario" HorizontalAlignment="Left" Margin="10,12,0,0" TextWrapping="Wrap" Text="Usuario" VerticalAlignment="Top" Grid.Row="1" Foreground="{DynamicResource Blanco_Brush}"/>
+            <TextBlock x:Name="Lbl_Contraseña" HorizontalAlignment="Left" Margin="10,12,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Contraseña" VerticalAlignment="Top" Foreground="{DynamicResource Blanco_Brush}" Grid.RowSpan="2"/>
+            <TextBox  x:Name="Tbx_DireccionDelServidor" Height="23" Margin="0,12,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="163" Grid.Column="1"/>
+            <TextBox  x:Name="Tbx_Usuario" Height="23" Margin="0,12,10,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="163" Grid.Column="1"/>
+            <TextBox  x:Name="Tbx_Contraseña" HorizontalAlignment="Right" Height="23" Margin="0,12,10,0" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="163" Grid.Column="1"/>
+            <Button x:Name="Lbl_Prueba" Content="Prueba" Margin="0,16,98,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Grid.Column="1" Grid.Row="3"/>
+            <Button x:Name="Lbl_Siguiente" Content="Importar" Margin="0,16,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Grid.Column="1" Grid.Row="3"/>
+
+        </Grid>
+        <Image Height="58" Margin="0,10,10,0" VerticalAlignment="Top" Source="pack://siteoforigin:,,,/Resources/Nomipac_80.png" Width="80" HorizontalAlignment="Right"/>
+
+    </Grid>
+</UserControl>

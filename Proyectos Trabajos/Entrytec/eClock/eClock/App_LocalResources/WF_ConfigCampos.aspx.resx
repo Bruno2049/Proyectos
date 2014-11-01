@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BMostrarReporteResource1.Text" xml:space="preserve">
+    <value>Mostrar Reporte</value>
+  </data>
+  <data name="BMostrarReporteResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BRestablecerValoresResource1.Text" xml:space="preserve">
+    <value>Restablecer Valores</value>
+  </data>
+  <data name="BRestablecerValoresResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LCorrectoResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LCorrectoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LErrorResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LErrorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Página sin título</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.AllString" xml:space="preserve">
+    <value>(All)</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.ContainsString" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.DoesNotContainString" xml:space="preserve">
+    <value>Does Not Contain</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.DoesNotEndWithString" xml:space="preserve">
+    <value>Does Not End With</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.DoesNotStartWithString" xml:space="preserve">
+    <value>Does Not Start With</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.EmptyString" xml:space="preserve">
+    <value>(Empty)</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.EndsWithString" xml:space="preserve">
+    <value>Ends With</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.EqualsString" xml:space="preserve">
+    <value>Equals</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.GreaterThanOrEqualsString" xml:space="preserve">
+    <value>Greater Than Or Equals</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.GreaterThanString" xml:space="preserve">
+    <value>Greater Than</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.LessThanOrEqualsString" xml:space="preserve">
+    <value>Less Than Or Equals</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.LessThanString" xml:space="preserve">
+    <value>Less Than</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.LikeString" xml:space="preserve">
+    <value>Like</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.NonEmptyString" xml:space="preserve">
+    <value>(NonEmpty)</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.NotEqualsString" xml:space="preserve">
+    <value>Not Equals</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.NotLikeString" xml:space="preserve">
+    <value>Not Like</value>
+  </data>
+  <data name="UltraGridBandResource1.FilterOptions.StartsWithString" xml:space="preserve">
+    <value>Starts With</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="UltraGridColumnResource1.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource1.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource1.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource1.Header.Caption" xml:space="preserve">
+    <value>CAMPO_TE_ORDEN</value>
+  </data>
+  <data name="UltraGridColumnResource1.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource1.HeaderText" xml:space="preserve">
+    <value>CAMPO_TE_ORDEN</value>
+  </data>
+  <data name="UltraGridColumnResource10.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource10.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource10.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource10.Header.Caption" xml:space="preserve">
+    <value>CAMPO_TE_COLUMNA</value>
+  </data>
+  <data name="UltraGridColumnResource10.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource10.HeaderText" xml:space="preserve">
+    <value>CAMPO_TE_COLUMNA</value>
+  </data>
+  <data name="UltraGridColumnResource11.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource11.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource11.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource11.Header.Caption" xml:space="preserve">
+    <value>CAMPO_TE_FILTRO</value>
+  </data>
+  <data name="UltraGridColumnResource11.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource11.HeaderText" xml:space="preserve">
+    <value>CAMPO_TE_FILTRO</value>
+  </data>
+  <data name="UltraGridColumnResource12.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource12.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource12.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource12.Header.Caption" xml:space="preserve">
+    <value>CAMPO_TE_INVISIBLE</value>
+  </data>
+  <data name="UltraGridColumnResource12.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource12.HeaderText" xml:space="preserve">
+    <value>CAMPO_TE_INVISIBLE</value>
+  </data>
+  <data name="UltraGridColumnResource13.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource13.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource13.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource13.Header.Caption" xml:space="preserve">
+    <value>CATALOGO_ID</value>
+  </data>
+  <data name="UltraGridColumnResource13.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource13.HeaderText" xml:space="preserve">
+    <value>CATALOGO_ID</value>
+  </data>
+  <data name="UltraGridColumnResource2.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource2.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource2.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource2.Header.Caption" xml:space="preserve">
+    <value>CAMPO_TE_ES_LLAVE</value>
+  </data>
+  <data name="UltraGridColumnResource2.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource2.HeaderText" xml:space="preserve">
+    <value>CAMPO_TE_ES_LLAVE</value>
+  </data>
+  <data name="UltraGridColumnResource3.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource3.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource3.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource3.Header.Caption" xml:space="preserve">
+    <value>CAMPO_TE_ES_AUTONUM</value>
+  </data>
+  <data name="UltraGridColumnResource3.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource3.HeaderText" xml:space="preserve">
+    <value>CAMPO_TE_ES_AUTONUM</value>
+  </data>
+  <data name="UltraGridColumnResource4.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource4.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource4.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource4.Header.Caption" xml:space="preserve">
+    <value>CAMPO_NOMBRE</value>
+  </data>
+  <data name="UltraGridColumnResource4.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource4.HeaderText" xml:space="preserve">
+    <value>CAMPO_NOMBRE</value>
+  </data>
+  <data name="UltraGridColumnResource5.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource5.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource5.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource5.Header.Caption" xml:space="preserve">
+    <value>CAMPO_ETIQUETA</value>
+  </data>
+  <data name="UltraGridColumnResource5.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource5.HeaderText" xml:space="preserve">
+    <value>CAMPO_ETIQUETA</value>
+  </data>
+  <data name="UltraGridColumnResource6.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource6.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource6.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource6.Header.Caption" xml:space="preserve">
+    <value>CAMPO_LONGITUD</value>
+  </data>
+  <data name="UltraGridColumnResource6.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource6.HeaderText" xml:space="preserve">
+    <value>CAMPO_LONGITUD</value>
+  </data>
+  <data name="UltraGridColumnResource7.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource7.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource7.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource7.Header.Caption" xml:space="preserve">
+    <value>TIPO_DATO_ID</value>
+  </data>
+  <data name="UltraGridColumnResource7.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource7.HeaderText" xml:space="preserve">
+    <value>TIPO_DATO_ID</value>
+  </data>
+  <data name="UltraGridColumnResource8.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource8.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource8.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource8.Header.Caption" xml:space="preserve">
+    <value>MASCARA_ID</value>
+  </data>
+  <data name="UltraGridColumnResource8.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource8.HeaderText" xml:space="preserve">
+    <value>MASCARA_ID</value>
+  </data>
+  <data name="UltraGridColumnResource9.Footer.Caption" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource9.Footer.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource9.FooterText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource9.Header.Caption" xml:space="preserve">
+    <value>CAMPO_ANCHO_GRID</value>
+  </data>
+  <data name="UltraGridColumnResource9.Header.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UltraGridColumnResource9.HeaderText" xml:space="preserve">
+    <value>CAMPO_ANCHO_GRID</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.AddNewBox.Prompt" xml:space="preserve">
+    <value>Add...</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.AllString" xml:space="preserve">
+    <value>(All)</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.ContainsString" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.DoesNotContainString" xml:space="preserve">
+    <value>Does Not Contain</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.DoesNotEndWithString" xml:space="preserve">
+    <value>Does Not End With</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.DoesNotStartWithString" xml:space="preserve">
+    <value>Does Not Start With</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.EmptyString" xml:space="preserve">
+    <value>(Empty)</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.EndsWithString" xml:space="preserve">
+    <value>Ends With</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.EqualsString" xml:space="preserve">
+    <value>Equals</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.GreaterThanOrEqualsString" xml:space="preserve">
+    <value>Greater Than Or Equals</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.GreaterThanString" xml:space="preserve">
+    <value>Greater Than</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.LessThanOrEqualsString" xml:space="preserve">
+    <value>Less Than Or Equals</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.LessThanString" xml:space="preserve">
+    <value>Less Than</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.LikeString" xml:space="preserve">
+    <value>Like</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.NonEmptyString" xml:space="preserve">
+    <value>(NonEmpty)</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.NotEqualsString" xml:space="preserve">
+    <value>Not Equals</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.NotLikeString" xml:space="preserve">
+    <value>Not Like</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.FilterOptionsDefault.StartsWithString" xml:space="preserve">
+    <value>Starts With</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.GroupByBox.Prompt" xml:space="preserve">
+    <value>Arrastre la columna que desea agrupar...</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.Pager.NextText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.DisplayLayout.Pager.PrevText" xml:space="preserve">
+    <value>Prev</value>
+  </data>
+  <data name="UltraWebGrid1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

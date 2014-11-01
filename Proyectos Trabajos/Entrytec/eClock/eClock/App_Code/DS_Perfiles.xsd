@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DS_Perfiles" targetNamespace="http://www.tempuri.org/DS_Perfiles.xsd" xmlns:mstns="http://www.tempuri.org/DS_Perfiles.xsd"
+	xmlns="http://www.tempuri.org/DS_Perfiles.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DS_Perfiles" msdata:IsDataSet="true" msdata:Locale="es-MX">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="EC_PERFILES">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PERFIL_NOMBRE" type="xs:string" />
+							<xs:element name="PERFIL_ID" type="xs:decimal" />
+							<xs:element name="PERFIL_BORRADO" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:EC_PERFILES" />
+			<xs:field xpath="mstns:PERFIL_ID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

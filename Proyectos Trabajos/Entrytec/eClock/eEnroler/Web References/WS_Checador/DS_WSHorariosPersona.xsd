@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DS_WSHorariosPersona.xsd" xmlns="http://tempuri.org/DS_WSHorariosPersona.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DS_WSHorariosPersona.xsd" id="DS_WSHorariosPersona" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DS_WSHorariosPersona">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_Horarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_DIARIO_FECHA" type="xs:dateTime" />
+              <xs:element name="TURNO_DIA_ID" type="xs:decimal" />
+              <xs:element name="TURNO_DIA_HE" type="xs:dateTime" />
+              <xs:element name="TURNO_DIA_HS" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_Personas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_ID" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="CAMPO_LLAVE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PERSONA_NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TURNO_ID" type="xs:decimal" />
+              <xs:element name="TURNO_DIA_ID" type="xs:decimal" />
+              <xs:element name="DIA_SEMANA_ID" type="xs:decimal" />
+              <xs:element name="TERMINAL_ID" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

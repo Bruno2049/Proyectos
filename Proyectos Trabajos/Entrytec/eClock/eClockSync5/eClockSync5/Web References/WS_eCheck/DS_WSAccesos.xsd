@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DS_WSAccesos.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DS_WSAccesos.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DS_WSAccesos.xsd" id="DS_WSAccesos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DS_WSAccesos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_Accesos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_ID" type="xs:decimal" />
+              <xs:element name="TERMINAL_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="ACCESO_FECHAHORA" type="xs:dateTime" />
+              <xs:element name="TIPO_ACCESO_ID" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

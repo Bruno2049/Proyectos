@@ -1,0 +1,53 @@
+﻿body
+{
+}
+.igpb_CaribbeanBaseLabel
+{
+	text-align:left;
+	white-space:nowrap;
+	position:absolute;
+	padding:2px;
+}
+.igpb_CaribbeanBackgroundLabel
+{
+	color:Black;
+}
+.igpb_CaribbeanForegroundLabel
+{
+	color:White;
+}
+.igpb_CaribbeanInnerDiv
+{
+	height:100%;
+	width:100%;
+	position:absolute;
+	overflow:hidden;
+	
+}
+.igpb_CaribbeanFill_Horiz
+{
+	background-image: url(./images/igpb_horizontalFill.gif);
+	background-repeat: repeat-x;
+	background-color: #3D75D8;
+}
+.igpb_CaribbeanFill_Vert
+{
+	background-image: url(./images/igpb_VerticalFill.gif);
+	background-repeat: repeat-y;
+	background-color: #3D75D8;
+}
+.igpb_CaribbeanBackground_Horiz
+{
+}
+.igpb_CaribbeanBackground_Vert
+{
+	
+}
+.igpb_CaribbeanContainer
+{
+	height:100%;
+	width:100%;
+	position:relative;
+	border: solid 1px #001060;
+	overflow: hidden;
+}

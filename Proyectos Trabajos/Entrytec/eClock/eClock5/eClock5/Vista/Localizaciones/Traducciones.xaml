@@ -1,0 +1,75 @@
+﻿<Window x:Class="eClock5.Vista.Localizaciones.Traducciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Traducciones" 
+        Height="370" Width="600" Foreground="{DynamicResource Blanco_Brush}" Loaded="Window_Loaded" >
+    <Grid >
+        <Grid Background="{DynamicResource AzulClaro_Brush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.ColumnSpan="3" HorizontalAlignment="Center" Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <RadioButton x:Name="Rbn_Es" Content="es" Tag="es" Grid.Column="0" Margin="{DynamicResource MargenGeneralCorto}" Checked="Rbn_Checked"/>
+                <RadioButton x:Name="Rbn_En" Content="en" Tag="en" Grid.Column="1" Margin="{DynamicResource MargenGeneralCorto}" Checked="Rbn_Checked"/>
+                <RadioButton x:Name="Rbn_It" Content="it" Tag="it" Grid.Column="2" Margin="{DynamicResource MargenGeneralCorto}" Checked="Rbn_Checked"/>
+                <RadioButton x:Name="Rbn_Fr" Content="fr" Tag="fr" Grid.Column="3" Margin="{DynamicResource MargenGeneralCorto}" Checked="Rbn_Checked"/>
+                <RadioButton x:Name="Rbn_Pt" Content="pt" Tag="pt" Grid.Column="4" Margin="{DynamicResource MargenGeneralCorto}" Checked="Rbn_Checked"/>
+            </Grid>
+            <TextBlock  x:Name="Lbl_LocalizacionID" Grid.Row="1" Grid.Column="0" Text="Localizacion ID" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+            <TextBlock  x:Name="Lbl_Lenguage" Grid.Row="2" Grid.Column="0" Text="Lenguaje" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+            <TextBlock  x:Name="Lbl_Llavereferencia" Grid.Row="3" Grid.Column="0" Text="Referencia Llave" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+            <TextBlock  x:Name="Lbl_TextoPantalla" Grid.Row="4" Grid.Column="0" Text="Texto en Pantalla" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+            <TextBlock  x:Name="Lbl_Descripcion" Grid.Row="5" Grid.Column="0" Text="Descripción" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+            <TextBlock  x:Name="Lbl_Ayuda" Grid.Row="6" Grid.Column="0" Text="Ayuda" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+            <TextBlock  x:Name="Lbl_Imagen" Grid.Row="7" Grid.Column="0" Text="Imagén" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+            <TextBlock  x:Name="Lbl_MenuAlt" Grid.Row="8" Grid.Column="0" Text="MenuAlt" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+            <TextBlock  x:Name="Lbl_HTML" Grid.Row="9" Grid.Column="0" Text="HTML" Style="{DynamicResource TextBlockEtiquetaStyle}"/>
+
+            <TextBox x:Name="Tbx_LocalizacionID" Grid.Row="1" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}" IsEnabled="False"/>
+            <TextBox x:Name="Tbx_Lenguage" Grid.Row="2" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}" IsEnabled="False"/>
+            <TextBox x:Name="Tbx_Llavereferencia" Grid.Row="3" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}" IsEnabled="False"/>
+            <TextBox x:Name="Tbx_TextoPantalla" Grid.Row="4" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            <TextBox x:Name="Tbx_Descripcion" Grid.Row="5" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            <TextBox x:Name="Tbx_Ayuda" Grid.Row="6" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            <TextBox x:Name="Tbx_Imagen" Grid.Row="7" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            <TextBox x:Name="Tbx_MenuAlt" Grid.Row="8" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            <TextBox x:Name="Tbx_HTML" Grid.Row="9" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+
+            <TextBox x:Name="Tbx_LocalizacionID_Ad" Grid.Row="1" Grid.Column="2" Margin="{DynamicResource MargenTextBoxCaptura}" IsEnabled="False"/>
+            <TextBox x:Name="Tbx_Lenguage_Ad" Grid.Row="2" Grid.Column="2" Margin="{DynamicResource MargenTextBoxCaptura}" IsEnabled="False"/>
+            <TextBox x:Name="Tbx_Llavereferencia_Ad" Grid.Row="3" Grid.Column="2" Margin="{DynamicResource MargenTextBoxCaptura}" IsEnabled="False"/>
+            <TextBox x:Name="Tbx_TextoPantalla_Ad" Grid.Row="4" Grid.Column="2" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            <TextBox x:Name="Tbx_Descripcion_Ad" Grid.Row="5" Grid.Column="2" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            <TextBox x:Name="Tbx_Ayuda_Ad" Grid.Row="6" Grid.Column="2" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            <TextBox x:Name="Tbx_Imagen_Ad" Grid.Row="7" Grid.Column="2" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            <TextBox x:Name="Tbx_MenuAlt_Ad" Grid.Row="8" Grid.Column="2" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            <TextBox x:Name="Tbx_HTML_Ad" Grid.Row="9" Grid.Column="2" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+
+            <Button x:Name="Btn_Borrar" Content="Recargar" Grid.Row="10" Grid.Column="1"   Margin="{DynamicResource MargenTextBoxCaptura}" Click="Btn_Borrar_Click"/>
+            <Button x:Name="Btn_Aceptar" Content="Guardar" Grid.Row="10" Grid.Column="2"  Margin="{DynamicResource MargenTextBoxCaptura}" Click="Btn_Aceptar_Click" />
+        </Grid>
+
+    </Grid>
+</Window>

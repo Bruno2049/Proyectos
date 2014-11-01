@@ -1,0 +1,25 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:local="clr-namespace:eClock5.Vista.Nomina" x:Class="eClock5.Vista.Nomina.Listado" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+
+        <eClock5:UC_Listado Tabla="EC_NOMINAS" CampoLlave="NOMINA_ID" CampoNombre="NOMINA_NOMBRE" CampoDescripcion="NOMINA_DESCRIPCION" >
+            <eClock5:UC_Listado.ControlesAdicionales>
+                <eClock5:UC_Listado_OpcionesAdicionales Etiqueta="Importar Recibos de Nómina" Nombre="Btn_ImportarRecNomina">
+                    <eClock5:UC_Listado_OpcionesAdicionales.Control>
+                        <local:ImportarRecNomina/>
+                    </eClock5:UC_Listado_OpcionesAdicionales.Control>
+                </eClock5:UC_Listado_OpcionesAdicionales>
+            </eClock5:UC_Listado.ControlesAdicionales>
+            <eClock5:UC_Listado.ControlEdicion>
+                <local:Edicion/>
+            </eClock5:UC_Listado.ControlEdicion>
+        </eClock5:UC_Listado>
+
+    </Grid>
+</UserControl>

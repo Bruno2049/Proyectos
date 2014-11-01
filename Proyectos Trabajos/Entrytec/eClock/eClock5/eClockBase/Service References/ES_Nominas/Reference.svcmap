@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="65c576d9-68d6-4d2b-82c5-93e693b0269b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50723/S_Nominas.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="S_Nominas.disco" MetadataType="Disco" ID="e9c6a63b-3cea-441d-817d-1ccede743a1c" SourceId="1" SourceUrl="http://localhost:50723/S_Nominas.svc?disco" />
+    <MetadataFile FileName="S_Nominas.wsdl" MetadataType="Wsdl" ID="a3d176ff-cc4f-4579-89c7-35ed88293a81" SourceId="1" SourceUrl="http://localhost:50723/S_Nominas.svc?wsdl" />
+    <MetadataFile FileName="S_Nominas.xsd" MetadataType="Schema" ID="722aefef-8b5b-4a59-862c-fb72c8e2e51a" SourceId="1" SourceUrl="http://localhost:50723/S_Nominas.svc?xsd=xsd0" />
+    <MetadataFile FileName="S_Nominas1.xsd" MetadataType="Schema" ID="705ecdac-6413-4927-8cd5-b640d569f8be" SourceId="1" SourceUrl="http://localhost:50723/S_Nominas.svc?xsd=xsd1" />
+    <MetadataFile FileName="S_Nominas1.wsdl" MetadataType="Wsdl" ID="5a652efa-84ff-4c12-91ed-1ad7441b8f42" SourceId="1" SourceUrl="http://localhost:50723/S_Nominas.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

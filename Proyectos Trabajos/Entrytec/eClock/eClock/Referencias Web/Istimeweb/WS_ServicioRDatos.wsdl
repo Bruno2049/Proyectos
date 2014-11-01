@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="IDOSOFT/eClock/FARMACOS/170983" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="IDOSOFT/eClock/FARMACOS/170983" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="IDOSOFT/eClock/FARMACOS/170983">
+      <s:element name="NombreTurno">
+        <s:complexType />
+      </s:element>
+      <s:element name="NombreTurnoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NombreTurnoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NombreTipoTurno">
+        <s:complexType />
+      </s:element>
+      <s:element name="NombreTipoTurnoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NombreTipoTurnoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecepcionDatos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dato" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecepcionDatosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecepcionDatosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerID">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarRegistros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Datos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarRegistrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GuardarRegistrosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Borrador_Reg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Borrador_RegResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GuardarRegistros_F2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Datos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarRegistros_F2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GuardarRegistros_F2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mandar_Cadena">
+        <s:complexType />
+      </s:element>
+      <s:element name="Mandar_CadenaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mandar_CadenaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="NombreTurnoSoapIn">
+    <wsdl:part name="parameters" element="tns:NombreTurno" />
+  </wsdl:message>
+  <wsdl:message name="NombreTurnoSoapOut">
+    <wsdl:part name="parameters" element="tns:NombreTurnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="NombreTipoTurnoSoapIn">
+    <wsdl:part name="parameters" element="tns:NombreTipoTurno" />
+  </wsdl:message>
+  <wsdl:message name="NombreTipoTurnoSoapOut">
+    <wsdl:part name="parameters" element="tns:NombreTipoTurnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecepcionDatosSoapIn">
+    <wsdl:part name="parameters" element="tns:RecepcionDatos" />
+  </wsdl:message>
+  <wsdl:message name="RecepcionDatosSoapOut">
+    <wsdl:part name="parameters" element="tns:RecepcionDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerID" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarRegistrosSoapIn">
+    <wsdl:part name="parameters" element="tns:GuardarRegistros" />
+  </wsdl:message>
+  <wsdl:message name="GuardarRegistrosSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarRegistrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Borrador_RegSoapIn">
+    <wsdl:part name="parameters" element="tns:Borrador_Reg" />
+  </wsdl:message>
+  <wsdl:message name="Borrador_RegSoapOut">
+    <wsdl:part name="parameters" element="tns:Borrador_RegResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarRegistros_F2SoapIn">
+    <wsdl:part name="parameters" element="tns:GuardarRegistros_F2" />
+  </wsdl:message>
+  <wsdl:message name="GuardarRegistros_F2SoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarRegistros_F2Response" />
+  </wsdl:message>
+  <wsdl:message name="Mandar_CadenaSoapIn">
+    <wsdl:part name="parameters" element="tns:Mandar_Cadena" />
+  </wsdl:message>
+  <wsdl:message name="Mandar_CadenaSoapOut">
+    <wsdl:part name="parameters" element="tns:Mandar_CadenaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_ServicioRDatosSoap">
+    <wsdl:operation name="NombreTurno">
+      <wsdl:input message="tns:NombreTurnoSoapIn" />
+      <wsdl:output message="tns:NombreTurnoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NombreTipoTurno">
+      <wsdl:input message="tns:NombreTipoTurnoSoapIn" />
+      <wsdl:output message="tns:NombreTipoTurnoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionDatos">
+      <wsdl:input message="tns:RecepcionDatosSoapIn" />
+      <wsdl:output message="tns:RecepcionDatosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerID">
+      <wsdl:input message="tns:ObtenerIDSoapIn" />
+      <wsdl:output message="tns:ObtenerIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarRegistros">
+      <wsdl:input message="tns:GuardarRegistrosSoapIn" />
+      <wsdl:output message="tns:GuardarRegistrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Borrador_Reg">
+      <wsdl:input message="tns:Borrador_RegSoapIn" />
+      <wsdl:output message="tns:Borrador_RegSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarRegistros_F2">
+      <wsdl:input message="tns:GuardarRegistros_F2SoapIn" />
+      <wsdl:output message="tns:GuardarRegistros_F2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mandar_Cadena">
+      <wsdl:input message="tns:Mandar_CadenaSoapIn" />
+      <wsdl:output message="tns:Mandar_CadenaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_ServicioRDatosSoap" type="tns:WS_ServicioRDatosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="NombreTurno">
+      <soap:operation soapAction="IDOSOFT/eClock/FARMACOS/170983/NombreTurno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NombreTipoTurno">
+      <soap:operation soapAction="IDOSOFT/eClock/FARMACOS/170983/NombreTipoTurno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionDatos">
+      <soap:operation soapAction="IDOSOFT/eClock/FARMACOS/170983/RecepcionDatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerID">
+      <soap:operation soapAction="IDOSOFT/eClock/FARMACOS/170983/ObtenerID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarRegistros">
+      <soap:operation soapAction="IDOSOFT/eClock/FARMACOS/170983/GuardarRegistros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Borrador_Reg">
+      <soap:operation soapAction="IDOSOFT/eClock/FARMACOS/170983/Borrador_Reg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarRegistros_F2">
+      <soap:operation soapAction="IDOSOFT/eClock/FARMACOS/170983/GuardarRegistros_F2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mandar_Cadena">
+      <soap:operation soapAction="IDOSOFT/eClock/FARMACOS/170983/Mandar_Cadena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_ServicioRDatos">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="WS_ServicioRDatosSoap" binding="tns:WS_ServicioRDatosSoap">
+      <soap:address location="http://localhost/eClock/WS_ServicioRDatos.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

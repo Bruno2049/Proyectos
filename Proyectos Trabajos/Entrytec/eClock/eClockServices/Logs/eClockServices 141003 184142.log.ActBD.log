@@ -1,0 +1,18 @@
+Error: "" Application_Error Descripción: [DBNETLIB][ConnectionOpen (Connect()).]No existe el servidor SQL Server o se ha denegado el acceso al mismo. 
+Origen:Microsoft OLE DB Provider for SQL Server
+ Pila:   en System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   en System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.OleDb.OleDbConnection.Open()
+   en CeC_BD.lEjecutaEscalar(String Comando) en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClockServices\App_Code\CeC_BD.cs:línea 110
+   en CeC_BD.lEjecutaEscalarDateTime(String Comando, DateTime ValorPredeterminado) en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClockServices\App_Code\CeC_BD.cs:línea 272
+   en CeC_BD.EjecutaEscalarDateTime(String Comando, DateTime ValorPredeterminado) en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClockServices\App_Code\CeC_BD.cs:línea 309
+   en CeC_BD.IniciaBase(Boolean Forza) en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClockServices\App_Code\CeC_BD.cs:línea 1115
+   en CeC_BD.IniciaBase() en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClockServices\App_Code\CeC_BD.cs:línea 1016
+   en CeC_BD.IniciaAplicacion() en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClockServices\App_Code\CeC_BD.cs:línea 1903
+   en ASP.global_asax.Application_Start(Object sender, EventArgs e) en c:\Desarrollo\Proyectos\Proyectos Trabajos\Entrytec\eClock\eClockServices\Global.asax:línea 10 03/10/2014 06:42:21 p.m.

@@ -1,0 +1,76 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:eClock5" x:Class="eClock5.UC_Listado" 
+             mc:Ignorable="d" 
+             d:DesignHeight="289" d:DesignWidth="503" FontFamily="{DynamicResource EntryTecFont}" Background="{DynamicResource Blanco_Brush}" Unloaded="UserControl_Unloaded">
+    <ScrollViewer  PanningMode="Both">
+        <Grid Name="Grid">
+
+            <local:UC_ToolBar x:Name="ToolBar" VerticalAlignment="Top" Width="Auto" Height="{DynamicResource AltoToolBar}">
+                <local:UC_ToolBar.Controles>
+                    <local:UC_ToolBar_Control Etiqueta=""  Mostrar="SoloSeleccionados" Nombre="Btn_DeSeleccionar"/>
+                    <local:UC_ToolBar_Control Etiqueta="{}{0} Seleccionados" Mostrar="SoloSeleccionados" Nombre="Btn_DeSeleccionar"/>
+                    <local:UC_ToolBar_Control Etiqueta="Nuevo"  Mostrar="NoSeleccionados" Nombre="Btn_Nuevo" Alineacion="Derecha"/>
+                    <local:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Actualizar"  Mostrar="NoSeleccionados" Nombre="Btn_Actualizar" />
+                    <local:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Borrar"  Mostrar="SoloSeleccionados" Nombre="Btn_Borrar"/>
+                    <local:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="" Nombre="Btn_MenuEscondido">
+                        <local:UC_ToolBar_Control.Controles>
+                            <local:UC_ToolBar_Control Etiqueta="Seleccionar Todos" Nombre="SeleccionarTodos"/>
+                            <local:UC_ToolBar_Control Etiqueta="Importar" Mostrar="NoSeleccionados" Nombre="Btn_Importar"/>
+                        </local:UC_ToolBar_Control.Controles>
+                    </local:UC_ToolBar_Control>
+                </local:UC_ToolBar.Controles>
+            </local:UC_ToolBar>
+
+            <ListBox x:Name="Lst_Datos" Margin="0,48,0,0" BorderThickness="0" HorizontalContentAlignment="Stretch" Style="{DynamicResource ListBoxStyleSeleccionado}" MouseUp="Lst_Datos_MouseUp" MouseDown="Lst_Datos_MouseDown">
+
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True" >
+                                <Setter Property="FontWeight" Value="Bold" />
+                                <Setter Property="Background" Value="Green" />
+                                <Setter Property="Foreground" Value="Black" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True" >
+                                <Setter Property="FontWeight" Value="Bold" />
+                                <Setter Property="Background" Value="Green" />
+                                <Setter Property="Foreground" Value="Black" />
+                            </Trigger>
+                        </Style.Triggers>
+
+                        <Style.Resources>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Green"/>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Red"/>
+                        </Style.Resources>
+
+                    </Style>
+                </ListBox.ItemContainerStyle>
+
+
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,0,0,0" Background="{DynamicResource AzulMuyClaro_Brush}"  >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Margin="0,0,0,0" Grid.Column="0"  Grid.ColumnSpan="2" Width="700">
+                                <TextBlock Text="{Binding Nombre}" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeSubTitulo}" />
+                                <TextBlock Text="{Binding Descripcion}" TextWrapping="Wrap" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" />
+                            </StackPanel>
+                            <TextBlock Text="{Binding Adicional}" Grid.Column="2" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeSubTitle}" HorizontalAlignment="Right" />
+
+
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </Grid>
+    </ScrollViewer>
+</UserControl>

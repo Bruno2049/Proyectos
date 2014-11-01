@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Kiosko.Actividades.Listado"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:Kiosko.Controles"
+            mc:Ignorable="d" 
+            d:DesignHeight="768" d:DesignWidth="1366"  Background="{DynamicResource BrushFondoApp}"  Foreground="{DynamicResource ColorFuente}" FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoFontEtiquetas}" Loaded="UserControl_Loaded">
+
+    <Grid>
+        <Controles:UC_Banner HorizontalAlignment="Right" Margin="{DynamicResource MargenBanner}" Width="{DynamicResource AnchoBanner}"/>
+        <eClock5:UC_ToolBar x:Name="ToolBar" Height="{DynamicResource AltoToolBar}" VerticalAlignment="Top" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" Titulo="Listado de Eventos" >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Etiqueta="Regresar" Imagen="pack://siteoforigin:,,,/Resources/Regresar-64.png" Nombre="Btn_Regresar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Buscar" Imagen="pack://siteoforigin:,,,/Resources/Siguiente-64.png" Nombre="Btn_Siguiente" Default="True" />
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <ScrollViewer Margin="{DynamicResource MargenGridCentral}">
+            <WrapPanel x:Name="Contenedor" />
+        </ScrollViewer>
+        
+
+    </Grid>
+</UserControl>

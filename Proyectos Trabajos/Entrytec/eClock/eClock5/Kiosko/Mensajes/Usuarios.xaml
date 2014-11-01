@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Kiosko.Mensajes.Usuarios"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:Kiosko.Controles" xmlns:local="clr-namespace:Kiosko.Mensajes"
+             mc:Ignorable="d" 
+             d:DesignHeight="804" d:DesignWidth="1402" Loaded="UserControl_Loaded">
+    <Grid>
+        <eClock5:UC_Listado x:Name="Lst_Usuarios" MostrarToolBar="False" Tabla="EC_USUARIOS" CampoLlave="USUARIO_ID" CampoAdicional="PERFIL_ID" SelectionChanged="Lst_Usuarios_SelectionChanged" >
+            <!--<eClock5:UC_Listado.ControlEdicion>
+                <local:Detalles/>
+            </eClock5:UC_Listado.ControlEdicion>-->
+        </eClock5:UC_Listado>
+
+    </Grid>
+</UserControl>

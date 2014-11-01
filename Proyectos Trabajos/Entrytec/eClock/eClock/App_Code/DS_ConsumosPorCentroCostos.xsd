@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_ConsumosPorCentroCostos" targetNamespace="http://tempuri.org/DS_ConsumosPorCentroCostos.xsd" xmlns:mstns="http://tempuri.org/DS_ConsumosPorCentroCostos.xsd" xmlns="http://tempuri.org/DS_ConsumosPorCentroCostos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="CeT_DataTable" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EC_MONEDEROTableAdapter" GeneratorDataComponentClassName="EC_MONEDEROTableAdapter" Name="EC_MONEDERO" UserDataComponentName="EC_MONEDEROTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="US_SICAA.EC_SUSCRIPCION" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>select SUSCRIPCION_NOMBRE,1 as TOTALC,
+1.1 as TOTALCC, '01/01/2008' as FechaI, '02/01/2008' as FechaF   from EC_SUSCRIPCION</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TOTALC" DataSetColumn="TOTALC" />
+              <Mapping SourceColumn="TOTALCC" DataSetColumn="TOTALCC" />
+              <Mapping SourceColumn="SUSCRIPCION_NOMBRE" DataSetColumn="SUSCRIPCION_NOMBRE" />
+              <Mapping SourceColumn="FECHAI" DataSetColumn="FECHAI" />
+              <Mapping SourceColumn="FECHAF" DataSetColumn="FECHAF" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="SELECT TOP (100) PERCENT SUSCRIPCION_NOMBRE, (SELECT COUNT(EC_PERSONAS_COMIDA.PERSONA_COMIDA_ID) AS Expr1 FROM EC_PERSONAS INNER JOIN EC_PERSONAS_COMIDA ON EC_PERSONAS.PERSONA_ID = EC_PERSONAS_COMIDA.PERSONA_ID WHERE (EC_PERSONAS_COMIDA.PERSONA_COMIDA_FECHA &gt;= 888888) AND (EC_PERSONAS_COMIDA.PERSONA_COMIDA_FECHA &lt; 999999) AND (EC_PERSONAS_COMIDA.TIPO_COMIDA_ID = 1) AND (EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID)) + (SELECT COUNT(EC_PERSONAS_COMIDA_1.PERSONA_COMIDA_ID) AS Expr1 FROM EC_PERSONAS AS EC_PERSONAS_1 INNER JOIN EC_PERSONAS_COMIDA AS EC_PERSONAS_COMIDA_1 ON EC_PERSONAS_1.PERSONA_ID = EC_PERSONAS_COMIDA_1.PERSONA_ID WHERE (EC_PERSONAS_COMIDA_1.PERSONA_COMIDA_FECHA &gt;= 888888) AND (EC_PERSONAS_COMIDA_1.PERSONA_COMIDA_FECHA &lt; 999999) AND (EC_PERSONAS_COMIDA_1.TIPO_COMIDA_ID = 2) AND (EC_PERSONAS_1.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID)) AS TOTALC FROM EC_SUSCRIPCION WHERE (SUSCRIPCION_ID &gt; 0)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        SUSCRIPCION_NOMBRE, TOTALC, TOTALC * 777777 AS TOTALCC, 888888 AS FechaI, 999999 AS FechaF
+FROM            (SELECT        TOP (100) PERCENT SUSCRIPCION_NOMBRE,
+                                                        (SELECT        COUNT(EC_PERSONAS_COMIDA.PERSONA_COMIDA_ID) AS Expr1
+                                                          FROM            EC_PERSONAS INNER JOIN
+                                                                                    EC_PERSONAS_COMIDA ON EC_PERSONAS.PERSONA_ID = EC_PERSONAS_COMIDA.PERSONA_ID
+                                                          WHERE        (EC_PERSONAS_COMIDA.PERSONA_COMIDA_FECHA &gt;= 888888) AND 
+                                                                                    (EC_PERSONAS_COMIDA.PERSONA_COMIDA_FECHA &lt; 999999) AND (EC_PERSONAS_COMIDA.TIPO_COMIDA_ID = 1) AND 
+                                                                                    (EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID)) +
+                                                        (SELECT        COUNT(EC_PERSONAS_COMIDA_1.PERSONA_COMIDA_ID) AS Expr1
+                                                          FROM            EC_PERSONAS AS EC_PERSONAS_1 INNER JOIN
+                                                                                    EC_PERSONAS_COMIDA AS EC_PERSONAS_COMIDA_1 ON 
+                                                                                    EC_PERSONAS_1.PERSONA_ID = EC_PERSONAS_COMIDA_1.PERSONA_ID
+                                                          WHERE        (EC_PERSONAS_COMIDA_1.PERSONA_COMIDA_FECHA &gt;= 888888) AND 
+                                                                                    (EC_PERSONAS_COMIDA_1.PERSONA_COMIDA_FECHA &lt; 999999) AND (EC_PERSONAS_COMIDA_1.TIPO_COMIDA_ID = 2) AND 
+                                                                                    (EC_PERSONAS_1.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID)) AS TOTALC
+                          FROM            EC_SUSCRIPCION
+                          WHERE        (SUSCRIPCION_ID &gt; 0)) AS derivedtbl_1</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_ConsumosPorCentroCostos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_ConsumosPorCentroCostos" msprop:Generator_DataSetName="DS_ConsumosPorCentroCostos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EC_MONEDERO" msprop:Generator_UserTableName="EC_MONEDERO" msprop:Generator_RowDeletedName="EC_MONEDERORowDeleted" msprop:Generator_RowChangedName="EC_MONEDERORowChanged" msprop:Generator_RowClassName="EC_MONEDERORow" msprop:Generator_RowChangingName="EC_MONEDERORowChanging" msprop:Generator_RowEvArgName="EC_MONEDERORowChangeEvent" msprop:Generator_RowEvHandlerName="EC_MONEDERORowChangeEventHandler" msprop:Generator_TableClassName="EC_MONEDERODataTable" msprop:Generator_TableVarName="tableEC_MONEDERO" msprop:Generator_RowDeletingName="EC_MONEDERORowDeleting" msprop:Generator_TablePropName="EC_MONEDERO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TOTALC" msdata:ReadOnly="true" msprop:Generator_UserColumnName="TOTALC" msprop:Generator_ColumnVarNameInTable="columnTOTALC" msprop:Generator_ColumnPropNameInRow="TOTALC" msprop:Generator_ColumnPropNameInTable="TOTALCColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOTALCC" msdata:ReadOnly="true" msprop:Generator_UserColumnName="TOTALCC" msprop:Generator_ColumnVarNameInTable="columnTOTALCC" msprop:Generator_ColumnPropNameInRow="TOTALCC" msprop:Generator_ColumnPropNameInTable="TOTALCCColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SUSCRIPCION_NOMBRE" msprop:Generator_UserColumnName="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnSUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInRow="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInTable="SUSCRIPCION_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHAI" msdata:ReadOnly="true" msprop:Generator_UserColumnName="FECHAI" msprop:Generator_ColumnVarNameInTable="columnFECHAI" msprop:Generator_ColumnPropNameInRow="FECHAI" msprop:Generator_ColumnPropNameInTable="FECHAIColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHAF" msdata:ReadOnly="true" msprop:Generator_UserColumnName="FECHAF" msprop:Generator_ColumnVarNameInTable="columnFECHAF" msprop:Generator_ColumnPropNameInRow="FECHAF" msprop:Generator_ColumnPropNameInTable="FECHAFColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="eClock5.Vista.Configuracion.MiConfiguracion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:eClock5.Controles" 
+             mc:Ignorable="d" Background="{DynamicResource Blanco_Brush}" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource Blanco_Brush}"
+             d:DesignHeight="840.5" d:DesignWidth="946" Loaded="UserControl_Loaded" >
+
+    <Grid x:Name="XGridmiconfiguracion" Width="400" Height="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="75" />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Background="{DynamicResource AzulClaro_Brush}">
+            <TextBlock x:Name="Lbl_Cambiocontraseña" Text="Cambio de Contraseña" Style="{DynamicResource TextBlockTitulo}"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15" />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock  x:Name="Lbl_ContrasenaAnt"       Grid.Row="1" Text="Ingrese la contraseña Anterior"  Style="{DynamicResource TextBlockEtiquetaStyle}"   />
+                <TextBlock  x:Name="Lbl_ContrasenaNueva"     Grid.Row="2"  Text="Ingrese la nueva contraseña" Style="{DynamicResource TextBlockEtiquetaStyle}"  />
+                <TextBlock  x:Name="Lbl_ConfirmarContrasena" Grid.Row="3" Text="Confirme la nueva contraseña" Style="{DynamicResource TextBlockEtiquetaStyle}"   />
+
+                <PasswordBox  x:Name="Tbx_ContrasenaAnt"       Grid.Column="1" Grid.Row="1" TabIndex="10" PasswordChanged="TextoCambio" Margin="{DynamicResource MargenGeneralCorto}"/>
+                <PasswordBox  x:Name="Tbx_ContrasenaNueva"     Grid.Column="1" Grid.Row="2" TabIndex="11" PasswordChanged="TextoCambio" Margin="{DynamicResource MargenGeneralCorto}"/>
+                <PasswordBox  x:Name="Tbx_ConfirmarContrasena" Grid.Column="1" Grid.Row="3" TabIndex="12" PasswordChanged="TextoCambio" Margin="{DynamicResource MargenGeneralCorto}"/>
+                <Button x:Name="Btn_Cambiarcontrasena" Content="Cambiar Contraseña" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Style="{DynamicResource ButtonAceptarStyle}" Margin="{DynamicResource BotonAceptarStyle}" Click="Btn_Cambiarcontrasena_Click"/>
+                <StackPanel Grid.Row="5" Grid.ColumnSpan="2" >
+                    <TextBlock x:Name="Lbl_ContrasenaAntError"  Text="* Requiere Ingresar contraseña anterior"  Style="{DynamicResource TextBlockErrorStyle}"/>
+                    <TextBlock x:Name="Lbl_ContrasenaNuevaError"  Text="* Requiere Ingresar contraseña nueva" Style="{DynamicResource TextBlockErrorStyle}"  />
+                    <TextBlock x:Name="Lbl_ConfirmarContrasenaError"   Text="* La contraseña nueva no coincide" Style="{DynamicResource TextBlockErrorStyle}"  />
+                    <TextBlock x:Name="Lbl_ContrasenaSatisfactorio" Text="CAMBIO DE CONTRASEÑA SATISFACTORIO" Style="{DynamicResource TextBlockSatisfactorio}" Visibility="Hidden"/>
+                </StackPanel>
+            </Grid>
+
+
+        </StackPanel>
+
+        <StackPanel  Grid.Row="1" Background="{DynamicResource AzulOscuro_Brush}">
+            <TextBlock x:Name="Lbl_Idioma" Text="Cambio de Idioma" Style="{DynamicResource TextBlockTitulo}"/>
+            <Controles:UC_ElegirIdioma/>
+        </StackPanel>
+        <StackPanel Background="{DynamicResource AzulClaro_Brush}"  Grid.Row="2">
+            <TextBlock x:Name="Lbl_CerrarSesion" Text="Cerrar Sesion" Style="{DynamicResource TextBlockTitulo}"/>
+            <Button x:Name="Btn_CerrarSesion" Content="Cerrar Sesion" Style="{DynamicResource ButtonAceptarStyle}" Margin="{DynamicResource BotonAceptarStyle}" Click="Btn_CerrarSesion_Click"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+            <TextBlock x:Name="Lbl_sFechaCompilacion" Text="Fecha de compilación" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+                <TextBlock x:Name="Lbl_FechaCompilacion" Text="01/01/2006" Margin="{DynamicResource MargenGeneralCorto}"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel x:Name="Spn_Suscripcion" Background="{DynamicResource AzulOscuro_Brush}"  Grid.Row="3" Visibility="Hidden">
+            <TextBlock x:Name="Lbl_CambiarSuscripcion" Grid.Row="0" Grid.Column="1" Text="Cambiar Suscripcion" Style="{DynamicResource TextBlockTitulo}"/>
+            <Controles:UC_Combo x:Name="Cmb_Suscripciones" Tabla="EC_SUSCRIPCION" CampoLlave="SUSCRIPCION_ID" CampoNombre="SUSCRIPCION_NOMBRE" CampoAdicional="SUSCRIPCION_RAZON" CampoDescripcion="SUSCRIPCION_RFC"/>
+            <Button x:Name="Btn_Cambiar" Content="Cambiar" Style="{DynamicResource ButtonAceptarStyle}" Margin="{DynamicResource BotonAceptarStyle}" Click="Btn_Cambiar_Click"/>
+            
+        </StackPanel>
+    </Grid>
+
+
+
+</UserControl>

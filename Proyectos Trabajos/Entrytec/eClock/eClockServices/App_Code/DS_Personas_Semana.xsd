@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Personas_Semana" targetNamespace="http://tempuri.org/DS_Persona_Semana.xsd" xmlns:mstns="http://tempuri.org/DS_Persona_Semana.xsd" xmlns="http://tempuri.org/DS_Persona_Semana.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="ExcludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="CeT_DataTable" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Personas_SemanaTableAdapter" GeneratorDataComponentClassName="Personas_SemanaTableAdapter" Name="Personas_Semana" UserDataComponentName="Personas_SemanaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        EC_PERSONAS.PERSONA_LINK_ID, EC_PERSONAS.PERSONA_NOMBRE, EC_SUSCRIPCION.SUSCRIPCION_NOMBRE, EC_TURNOS.TURNO_NOMBRE, 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA, EC_V_PERSONAS_DIARIO.TURNO_ID AS TURNO_ID_D0, 
+                         EC_V_PERSONAS_DIARIO.TURNO + ' / ' + EC_V_PERSONAS_DIARIO.INCIDENCIA_ABR AS TURNO_D0, 
+                         EC_V_PERSONAS_DIARIO.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO.INCIDENCIA_NOMBRE AS ASISTENCIA_D0, 
+                         EC_V_PERSONAS_DIARIO_1.TURNO_ID AS TURNO_ID_D1, 
+                         EC_V_PERSONAS_DIARIO_1.TURNO + ' / ' + EC_V_PERSONAS_DIARIO_1.INCIDENCIA_ABR AS TURNO_D1, 
+                         EC_V_PERSONAS_DIARIO_1.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO_1.INCIDENCIA_NOMBRE AS ASISTENCIA_D1, 
+                         EC_V_PERSONAS_DIARIO_2.TURNO_ID AS TURNO_ID_D2, 
+                         EC_V_PERSONAS_DIARIO_2.TURNO + ' / ' + EC_V_PERSONAS_DIARIO_2.INCIDENCIA_ABR AS TURNO_D2, 
+                         EC_V_PERSONAS_DIARIO_2.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO_2.INCIDENCIA_NOMBRE AS ASISTENCIA_D2, 
+                         EC_V_PERSONAS_DIARIO_3.TURNO_ID AS TURNO_ID_D3, 
+                         EC_V_PERSONAS_DIARIO_3.TURNO + ' / ' + EC_V_PERSONAS_DIARIO_3.INCIDENCIA_ABR AS TURNO_D3, 
+                         EC_V_PERSONAS_DIARIO_3.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO_3.INCIDENCIA_NOMBRE AS ASISTENCIA_D3, 
+                         EC_V_PERSONAS_DIARIO_4.TURNO_ID AS TURNO_ID_D4, 
+                         EC_V_PERSONAS_DIARIO_4.TURNO + ' / ' + EC_V_PERSONAS_DIARIO_4.INCIDENCIA_ABR AS TURNO_D4, 
+                         EC_V_PERSONAS_DIARIO_4.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO_4.INCIDENCIA_NOMBRE AS ASISTENCIA_D4, 
+                         EC_V_PERSONAS_DIARIO_5.TURNO_ID AS TURNO_ID_D5, 
+                         EC_V_PERSONAS_DIARIO_5.TURNO + ' / ' + EC_V_PERSONAS_DIARIO_5.INCIDENCIA_ABR AS TURNO_D5, 
+                         EC_V_PERSONAS_DIARIO_5.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO_5.INCIDENCIA_NOMBRE AS ASISTENCIA_D5, 
+                         EC_V_PERSONAS_DIARIO_6.TURNO_ID AS TURNO_ID_D6, 
+                         EC_V_PERSONAS_DIARIO_6.TURNO + ' / ' + EC_V_PERSONAS_DIARIO_6.INCIDENCIA_ABR AS TURNO_D6, 
+                         EC_V_PERSONAS_DIARIO_6.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO_6.INCIDENCIA_NOMBRE AS ASISTENCIA_D6
+FROM            EC_PERSONAS_DIARIO INNER JOIN
+                         EC_PERSONAS ON EC_PERSONAS_DIARIO.PERSONA_ID = EC_PERSONAS.PERSONA_ID INNER JOIN
+                         EC_SUSCRIPCION ON EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID INNER JOIN
+                         EC_TURNOS ON EC_PERSONAS.TURNO_ID = EC_TURNOS.TURNO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO ON EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID = EC_V_PERSONAS_DIARIO.PERSONA_DIARIO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO AS EC_V_PERSONAS_DIARIO_1 ON 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID + 1 = EC_V_PERSONAS_DIARIO_1.PERSONA_DIARIO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO AS EC_V_PERSONAS_DIARIO_2 ON 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID + 2 = EC_V_PERSONAS_DIARIO_2.PERSONA_DIARIO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO AS EC_V_PERSONAS_DIARIO_3 ON 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID + 3 = EC_V_PERSONAS_DIARIO_3.PERSONA_DIARIO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO AS EC_V_PERSONAS_DIARIO_4 ON 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID + 4 = EC_V_PERSONAS_DIARIO_4.PERSONA_DIARIO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO AS EC_V_PERSONAS_DIARIO_5 ON 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID + 5 = EC_V_PERSONAS_DIARIO_5.PERSONA_DIARIO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO AS EC_V_PERSONAS_DIARIO_6 ON 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID + 6 = EC_V_PERSONAS_DIARIO_6.PERSONA_DIARIO_ID
+WHERE        (EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA = CONVERT(DATETIME, '2007-10-03 00:00:00', 102)) AND (EC_PERSONAS.PERSONA_BORRADO = 0)
+ORDER BY EC_PERSONAS.PERSONA_NOMBRE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PERSONA_LINK_ID" DataSetColumn="PERSONA_LINK_ID" />
+              <Mapping SourceColumn="PERSONA_NOMBRE" DataSetColumn="PERSONA_NOMBRE" />
+              <Mapping SourceColumn="SUSCRIPCION_NOMBRE" DataSetColumn="SUSCRIPCION_NOMBRE" />
+              <Mapping SourceColumn="TURNO_NOMBRE" DataSetColumn="TURNO_NOMBRE" />
+              <Mapping SourceColumn="PERSONA_DIARIO_FECHA" DataSetColumn="PERSONA_DIARIO_FECHA" />
+              <Mapping SourceColumn="TURNO_ID_D0" DataSetColumn="TURNO_ID_D0" />
+              <Mapping SourceColumn="TURNO_D0" DataSetColumn="TURNO_D0" />
+              <Mapping SourceColumn="ASISTENCIA_D0" DataSetColumn="ASISTENCIA_D0" />
+              <Mapping SourceColumn="TURNO_ID_D1" DataSetColumn="TURNO_ID_D1" />
+              <Mapping SourceColumn="TURNO_D1" DataSetColumn="TURNO_D1" />
+              <Mapping SourceColumn="ASISTENCIA_D1" DataSetColumn="ASISTENCIA_D1" />
+              <Mapping SourceColumn="TURNO_ID_D2" DataSetColumn="TURNO_ID_D2" />
+              <Mapping SourceColumn="TURNO_D2" DataSetColumn="TURNO_D2" />
+              <Mapping SourceColumn="ASISTENCIA_D2" DataSetColumn="ASISTENCIA_D2" />
+              <Mapping SourceColumn="TURNO_ID_D3" DataSetColumn="TURNO_ID_D3" />
+              <Mapping SourceColumn="TURNO_D3" DataSetColumn="TURNO_D3" />
+              <Mapping SourceColumn="ASISTENCIA_D3" DataSetColumn="ASISTENCIA_D3" />
+              <Mapping SourceColumn="TURNO_ID_D4" DataSetColumn="TURNO_ID_D4" />
+              <Mapping SourceColumn="TURNO_D4" DataSetColumn="TURNO_D4" />
+              <Mapping SourceColumn="ASISTENCIA_D4" DataSetColumn="ASISTENCIA_D4" />
+              <Mapping SourceColumn="TURNO_ID_D5" DataSetColumn="TURNO_ID_D5" />
+              <Mapping SourceColumn="TURNO_D5" DataSetColumn="TURNO_D5" />
+              <Mapping SourceColumn="ASISTENCIA_D5" DataSetColumn="ASISTENCIA_D5" />
+              <Mapping SourceColumn="TURNO_ID_D6" DataSetColumn="TURNO_ID_D6" />
+              <Mapping SourceColumn="TURNO_D6" DataSetColumn="TURNO_D6" />
+              <Mapping SourceColumn="ASISTENCIA_D6" DataSetColumn="ASISTENCIA_D6" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByFecha" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFecha" GeneratorSourceName="FillByFecha" GetMethodModifier="Public" GetMethodName="GetDataByFecha" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFecha" UserSourceName="FillByFecha">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EC_PERSONAS.PERSONA_LINK_ID, EC_PERSONAS.PERSONA_NOMBRE, EC_SUSCRIPCION.SUSCRIPCION_NOMBRE, EC_TURNOS.TURNO_NOMBRE, 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA, EC_V_PERSONAS_DIARIO.TURNO_ID AS TURNO_ID_D0, 
+                         EC_V_PERSONAS_DIARIO.TURNO + ' / ' + EC_V_PERSONAS_DIARIO.INCIDENCIA_ABR AS TURNO_D0, 
+                         EC_V_PERSONAS_DIARIO.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO.INCIDENCIA_ABR AS ASISTENCIA_D0, 
+                         EC_V_PERSONAS_DIARIO_1.TURNO_ID AS TURNO_ID_D1, 
+                         EC_V_PERSONAS_DIARIO_1.TURNO + ' / ' + EC_V_PERSONAS_DIARIO_1.INCIDENCIA_ABR AS TURNO_D1, 
+                         EC_V_PERSONAS_DIARIO_1.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO_1.INCIDENCIA_ABR AS ASISTENCIA_D1, 
+                         EC_V_PERSONAS_DIARIO_2.TURNO_ID AS TURNO_ID_D2, 
+                         EC_V_PERSONAS_DIARIO_2.TURNO + ' / ' + EC_V_PERSONAS_DIARIO_2.INCIDENCIA_ABR AS TURNO_D2, 
+                         EC_V_PERSONAS_DIARIO_2.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO_2.INCIDENCIA_ABR AS ASISTENCIA_D2, 
+                         EC_V_PERSONAS_DIARIO_3.TURNO_ID AS TURNO_ID_D3, 
+                         EC_V_PERSONAS_DIARIO_3.TURNO + ' / ' + EC_V_PERSONAS_DIARIO_3.INCIDENCIA_ABR AS TURNO_D3, 
+                         EC_V_PERSONAS_DIARIO_3.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO_3.INCIDENCIA_ABR AS ASISTENCIA_D3, 
+                         EC_V_PERSONAS_DIARIO_4.TURNO_ID AS TURNO_ID_D4, 
+                         EC_V_PERSONAS_DIARIO_4.TURNO + ' / ' + EC_V_PERSONAS_DIARIO_4.INCIDENCIA_ABR AS TURNO_D4, 
+                         EC_V_PERSONAS_DIARIO_4.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO_4.INCIDENCIA_ABR AS ASISTENCIA_D4, 
+                         EC_V_PERSONAS_DIARIO_5.TURNO_ID AS TURNO_ID_D5, 
+                         EC_V_PERSONAS_DIARIO_5.TURNO + ' / ' + EC_V_PERSONAS_DIARIO_5.INCIDENCIA_ABR AS TURNO_D5, 
+                         EC_V_PERSONAS_DIARIO_5.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO_5.INCIDENCIA_ABR AS ASISTENCIA_D5, 
+                         EC_V_PERSONAS_DIARIO_6.TURNO_ID AS TURNO_ID_D6, 
+                         EC_V_PERSONAS_DIARIO_6.TURNO + ' / ' + EC_V_PERSONAS_DIARIO_6.INCIDENCIA_ABR AS TURNO_D6, 
+                         EC_V_PERSONAS_DIARIO_6.ENTRADASALIDA + ' / ' + EC_V_PERSONAS_DIARIO_6.INCIDENCIA_ABR AS ASISTENCIA_D6
+FROM            EC_PERSONAS_DIARIO INNER JOIN
+                         EC_PERSONAS ON EC_PERSONAS_DIARIO.PERSONA_ID = EC_PERSONAS.PERSONA_ID INNER JOIN
+                         EC_SUSCRIPCION ON EC_PERSONAS.SUSCRIPCION_ID = EC_SUSCRIPCION.SUSCRIPCION_ID INNER JOIN
+                         EC_TURNOS ON EC_PERSONAS.TURNO_ID = EC_TURNOS.TURNO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO ON EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID = EC_V_PERSONAS_DIARIO.PERSONA_DIARIO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO AS EC_V_PERSONAS_DIARIO_1 ON 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID + 1 = EC_V_PERSONAS_DIARIO_1.PERSONA_DIARIO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO AS EC_V_PERSONAS_DIARIO_2 ON 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID + 2 = EC_V_PERSONAS_DIARIO_2.PERSONA_DIARIO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO AS EC_V_PERSONAS_DIARIO_3 ON 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID + 3 = EC_V_PERSONAS_DIARIO_3.PERSONA_DIARIO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO AS EC_V_PERSONAS_DIARIO_4 ON 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID + 4 = EC_V_PERSONAS_DIARIO_4.PERSONA_DIARIO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO AS EC_V_PERSONAS_DIARIO_5 ON 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID + 5 = EC_V_PERSONAS_DIARIO_5.PERSONA_DIARIO_ID INNER JOIN
+                         EC_V_PERSONAS_DIARIO AS EC_V_PERSONAS_DIARIO_6 ON 
+                         EC_PERSONAS_DIARIO.PERSONA_DIARIO_ID + 6 = EC_V_PERSONAS_DIARIO_6.PERSONA_DIARIO_ID
+WHERE        (EC_PERSONAS_DIARIO.PERSONA_DIARIO_FECHA = ?) AND (EC_PERSONAS.PERSONA_ID IN (999999))
+ORDER BY EC_PERSONAS.PERSONA_NOMBRE</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="PERSONA_DIARIO_FECHA" DataSourceName="eClockMerck.dbo.EC_PERSONAS_DIARIO" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="PERSONA_DIARIO_FECHA" Precision="0" ProviderType="DBTimeStamp" Scale="0" Size="8" SourceColumn="PERSONA_DIARIO_FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Personas_Semana" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_Personas_Semana" msprop:Generator_DataSetName="DS_Personas_Semana">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Personas_Semana" msprop:Generator_UserTableName="Personas_Semana" msprop:Generator_RowDeletedName="Personas_SemanaRowDeleted" msprop:Generator_RowChangedName="Personas_SemanaRowChanged" msprop:Generator_RowClassName="Personas_SemanaRow" msprop:Generator_RowChangingName="Personas_SemanaRowChanging" msprop:Generator_RowEvArgName="Personas_SemanaRowChangeEvent" msprop:Generator_RowEvHandlerName="Personas_SemanaRowChangeEventHandler" msprop:Generator_TableClassName="Personas_SemanaDataTable" msprop:Generator_TableVarName="tablePersonas_Semana" msprop:Generator_RowDeletingName="Personas_SemanaRowDeleting" msprop:Generator_TablePropName="Personas_Semana">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_LINK_ID" msprop:Generator_UserColumnName="PERSONA_LINK_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_LINK_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_LINK_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_LINK_IDColumn" type="xs:decimal" />
+              <xs:element name="PERSONA_NOMBRE" msprop:Generator_UserColumnName="PERSONA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnPERSONA_NOMBRE" msprop:Generator_ColumnPropNameInRow="PERSONA_NOMBRE" msprop:Generator_ColumnPropNameInTable="PERSONA_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUSCRIPCION_NOMBRE" msprop:Generator_UserColumnName="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnSUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInRow="SUSCRIPCION_NOMBRE" msprop:Generator_ColumnPropNameInTable="SUSCRIPCION_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TURNO_NOMBRE" msprop:Generator_UserColumnName="TURNO_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnTURNO_NOMBRE" msprop:Generator_ColumnPropNameInRow="TURNO_NOMBRE" msprop:Generator_ColumnPropNameInTable="TURNO_NOMBREColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONA_DIARIO_FECHA" msprop:Generator_UserColumnName="PERSONA_DIARIO_FECHA" msprop:Generator_ColumnVarNameInTable="columnPERSONA_DIARIO_FECHA" msprop:Generator_ColumnPropNameInRow="PERSONA_DIARIO_FECHA" msprop:Generator_ColumnPropNameInTable="PERSONA_DIARIO_FECHAColumn" type="xs:dateTime" />
+              <xs:element name="TURNO_ID_D0" msprop:Generator_UserColumnName="TURNO_ID_D0" msprop:Generator_ColumnVarNameInTable="columnTURNO_ID_D0" msprop:Generator_ColumnPropNameInRow="TURNO_ID_D0" msprop:Generator_ColumnPropNameInTable="TURNO_ID_D0Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TURNO_D0" msprop:Generator_UserColumnName="TURNO_D0" msprop:Generator_ColumnVarNameInTable="columnTURNO_D0" msprop:Generator_ColumnPropNameInRow="TURNO_D0" msprop:Generator_ColumnPropNameInTable="TURNO_D0Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASISTENCIA_D0" msprop:Generator_UserColumnName="ASISTENCIA_D0" msprop:Generator_ColumnVarNameInTable="columnASISTENCIA_D0" msprop:Generator_ColumnPropNameInRow="ASISTENCIA_D0" msprop:Generator_ColumnPropNameInTable="ASISTENCIA_D0Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TURNO_ID_D1" msprop:Generator_UserColumnName="TURNO_ID_D1" msprop:Generator_ColumnVarNameInTable="columnTURNO_ID_D1" msprop:Generator_ColumnPropNameInRow="TURNO_ID_D1" msprop:Generator_ColumnPropNameInTable="TURNO_ID_D1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TURNO_D1" msprop:Generator_UserColumnName="TURNO_D1" msprop:Generator_ColumnVarNameInTable="columnTURNO_D1" msprop:Generator_ColumnPropNameInRow="TURNO_D1" msprop:Generator_ColumnPropNameInTable="TURNO_D1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASISTENCIA_D1" msprop:Generator_UserColumnName="ASISTENCIA_D1" msprop:Generator_ColumnVarNameInTable="columnASISTENCIA_D1" msprop:Generator_ColumnPropNameInRow="ASISTENCIA_D1" msprop:Generator_ColumnPropNameInTable="ASISTENCIA_D1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TURNO_ID_D2" msprop:Generator_UserColumnName="TURNO_ID_D2" msprop:Generator_ColumnVarNameInTable="columnTURNO_ID_D2" msprop:Generator_ColumnPropNameInRow="TURNO_ID_D2" msprop:Generator_ColumnPropNameInTable="TURNO_ID_D2Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TURNO_D2" msprop:Generator_UserColumnName="TURNO_D2" msprop:Generator_ColumnVarNameInTable="columnTURNO_D2" msprop:Generator_ColumnPropNameInRow="TURNO_D2" msprop:Generator_ColumnPropNameInTable="TURNO_D2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASISTENCIA_D2" msprop:Generator_UserColumnName="ASISTENCIA_D2" msprop:Generator_ColumnVarNameInTable="columnASISTENCIA_D2" msprop:Generator_ColumnPropNameInRow="ASISTENCIA_D2" msprop:Generator_ColumnPropNameInTable="ASISTENCIA_D2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TURNO_ID_D3" msprop:Generator_UserColumnName="TURNO_ID_D3" msprop:Generator_ColumnVarNameInTable="columnTURNO_ID_D3" msprop:Generator_ColumnPropNameInRow="TURNO_ID_D3" msprop:Generator_ColumnPropNameInTable="TURNO_ID_D3Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TURNO_D3" msprop:Generator_UserColumnName="TURNO_D3" msprop:Generator_ColumnVarNameInTable="columnTURNO_D3" msprop:Generator_ColumnPropNameInRow="TURNO_D3" msprop:Generator_ColumnPropNameInTable="TURNO_D3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASISTENCIA_D3" msprop:Generator_UserColumnName="ASISTENCIA_D3" msprop:Generator_ColumnVarNameInTable="columnASISTENCIA_D3" msprop:Generator_ColumnPropNameInRow="ASISTENCIA_D3" msprop:Generator_ColumnPropNameInTable="ASISTENCIA_D3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TURNO_ID_D4" msprop:Generator_UserColumnName="TURNO_ID_D4" msprop:Generator_ColumnVarNameInTable="columnTURNO_ID_D4" msprop:Generator_ColumnPropNameInRow="TURNO_ID_D4" msprop:Generator_ColumnPropNameInTable="TURNO_ID_D4Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TURNO_D4" msprop:Generator_UserColumnName="TURNO_D4" msprop:Generator_ColumnVarNameInTable="columnTURNO_D4" msprop:Generator_ColumnPropNameInRow="TURNO_D4" msprop:Generator_ColumnPropNameInTable="TURNO_D4Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASISTENCIA_D4" msprop:Generator_UserColumnName="ASISTENCIA_D4" msprop:Generator_ColumnVarNameInTable="columnASISTENCIA_D4" msprop:Generator_ColumnPropNameInRow="ASISTENCIA_D4" msprop:Generator_ColumnPropNameInTable="ASISTENCIA_D4Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TURNO_ID_D5" msprop:Generator_UserColumnName="TURNO_ID_D5" msprop:Generator_ColumnVarNameInTable="columnTURNO_ID_D5" msprop:Generator_ColumnPropNameInRow="TURNO_ID_D5" msprop:Generator_ColumnPropNameInTable="TURNO_ID_D5Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TURNO_D5" msprop:Generator_UserColumnName="TURNO_D5" msprop:Generator_ColumnVarNameInTable="columnTURNO_D5" msprop:Generator_ColumnPropNameInRow="TURNO_D5" msprop:Generator_ColumnPropNameInTable="TURNO_D5Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASISTENCIA_D5" msprop:Generator_UserColumnName="ASISTENCIA_D5" msprop:Generator_ColumnVarNameInTable="columnASISTENCIA_D5" msprop:Generator_ColumnPropNameInRow="ASISTENCIA_D5" msprop:Generator_ColumnPropNameInTable="ASISTENCIA_D5Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TURNO_ID_D6" msprop:Generator_UserColumnName="TURNO_ID_D6" msprop:Generator_ColumnVarNameInTable="columnTURNO_ID_D6" msprop:Generator_ColumnPropNameInRow="TURNO_ID_D6" msprop:Generator_ColumnPropNameInTable="TURNO_ID_D6Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TURNO_D6" msprop:Generator_UserColumnName="TURNO_D6" msprop:Generator_ColumnVarNameInTable="columnTURNO_D6" msprop:Generator_ColumnPropNameInRow="TURNO_D6" msprop:Generator_ColumnPropNameInTable="TURNO_D6Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASISTENCIA_D6" msprop:Generator_UserColumnName="ASISTENCIA_D6" msprop:Generator_ColumnVarNameInTable="columnASISTENCIA_D6" msprop:Generator_ColumnPropNameInRow="ASISTENCIA_D6" msprop:Generator_ColumnPropNameInTable="ASISTENCIA_D6Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CambiosHorario" msprop:Generator_UserTableName="CambiosHorario" msprop:Generator_RowDeletedName="CambiosHorarioRowDeleted" msprop:Generator_RowChangedName="CambiosHorarioRowChanged" msprop:Generator_RowClassName="CambiosHorarioRow" msprop:Generator_RowChangingName="CambiosHorarioRowChanging" msprop:Generator_RowEvArgName="CambiosHorarioRowChangeEvent" msprop:Generator_RowEvHandlerName="CambiosHorarioRowChangeEventHandler" msprop:Generator_TableClassName="CambiosHorarioDataTable" msprop:Generator_TableVarName="tableCambiosHorario" msprop:Generator_RowDeletingName="CambiosHorarioRowDeleting" msprop:Generator_TablePropName="CambiosHorario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_LINK_ID" msprop:Generator_UserColumnName="PERSONA_LINK_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_LINK_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_LINK_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_LINK_IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PERSONA_DIARIO_FECHA" msprop:Generator_UserColumnName="PERSONA_DIARIO_FECHA" msprop:Generator_ColumnVarNameInTable="columnPERSONA_DIARIO_FECHA" msprop:Generator_ColumnPropNameInRow="PERSONA_DIARIO_FECHA" msprop:Generator_ColumnPropNameInTable="PERSONA_DIARIO_FECHAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TURNO_ID" msprop:Generator_UserColumnName="TURNO_ID" msprop:Generator_ColumnVarNameInTable="columnTURNO_ID" msprop:Generator_ColumnPropNameInRow="TURNO_ID" msprop:Generator_ColumnPropNameInTable="TURNO_IDColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Personas_SemanaKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Personas_Semana" />
+      <xs:field xpath="mstns:PERSONA_LINK_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="eClock5.Controles.UC_Combo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="22" DataContextChanged="UserControl_DataContextChanged" >
+    <Grid>
+        <ComboBox Name="Combo" Margin="0,0,0,0" SelectionChanged="Combo_SelectionChanged"/>
+        <Button x:Name="Btn_Agregar" HorizontalAlignment="Right" Margin="0,0,0,0" Width="22" Visibility="Hidden">
+            <Image Source="pack://siteoforigin:,,,/Resources/Nuevo_64.png" />
+        </Button>
+
+    </Grid>
+</UserControl>

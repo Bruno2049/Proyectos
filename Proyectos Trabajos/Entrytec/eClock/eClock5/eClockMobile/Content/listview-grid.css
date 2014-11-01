@@ -1,0 +1,210 @@
+/* A bit custom styling */
+.ecgrid-layout .ui-listview li .ui-btn p {
+	color: #c0c0c0;
+}
+.ecgrid-layout .ui-listview li .ui-btn .ui-li-aside {
+	color: #eee;
+}
+
+/* First breakpoint is 48em (768px). 3 column layout. Tiles 250x250 pixels incl. margin at the breakpoint. */
+@media ( min-width: 20em  ) {
+	.ecgrid-layout .ui-content {
+		padding: .5625em; /* 9px */
+	}
+	.ecgrid-layout .ui-listview li {
+		float: left;
+		width: 50%; /* 33.3333% incl. 2 x 1.2% margin */
+		height: 11.5em; /* 232p */
+		margin: .5625em 1.2%;
+	}
+	.ecgrid-layout .ui-listview li > .ui-btn {
+		-webkit-box-sizing: border-box; /* include padding and border in height so we can set it to 100% */
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		height: 100%;
+	}
+	.ecgrid-layout .ui-listview li.ui-li-has-thumb .ui-li-thumb {
+		height: auto; /* To keep aspect ratio. */
+		max-width: 100%;
+		max-height: none;
+	}
+	/* Make all list items and anchors inherit the border-radius from the UL. */
+	.ecgrid-layout .ui-listview li,
+	.ecgrid-layout .ui-listview li .ui-btn,
+	.ecgrid-layout .ui-listview .ui-li-thumb {
+		-webkit-border-radius: inherit;
+		border-radius: inherit;
+	}
+	/* Hide the icon */
+	.ecgrid-layout .ui-listview .ui-btn-icon-right:after {
+		display: none;
+	}
+	/* Make text wrap. */
+	.ecgrid-layout .ui-listview h2,
+	.ecgrid-layout .ui-listview p {
+		white-space: normal;
+		overflow: visible;
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+	/* Text position */
+	.ecgrid-layout .ui-listview h2 {
+		font-size: 0.75em;
+		margin: 0;
+		padding: .125em 0.5em;
+		bottom: 5%;
+	}
+	.ecgrid-layout .ui-listview p {
+		font-size: 0.50em;
+		margin: 0;
+		padding: 0 0.5em;
+		min-height: 5%;
+		bottom: 0;
+	}
+	/* Semi transparent background and different position if there is a thumb. The button has overflow hidden so we don't need to set border-radius. */
+	.ui-listview .ui-li-has-thumb h2,
+	.ui-listview .ui-li-has-thumb p {
+		background: #111;
+		background: rgba(0,0,0,.8);
+	}
+	.ui-listview .ui-li-has-thumb h2 {
+		bottom: 5%;
+	}
+	.ui-listview .ui-li-has-thumb p {
+		min-height: 5%;
+	}
+	/* ui-li-aside has class .ui-li-desc as well so we have to override some things. */
+	.ecgrid-layout .ui-listview .ui-li-aside {
+		padding: .125em .625em;
+		width: auto;
+		min-height: 0;
+		top: 0;
+		left: auto;
+		bottom: auto;
+		/* Custom styling. */
+		background: #990099;
+		background: rgba(153,0,153,.85);
+		-webkit-border-top-right-radius: inherit;
+		border-top-right-radius: inherit;
+		-webkit-border-bottom-left-radius: inherit;
+		border-bottom-left-radius: inherit;
+		-webkit-border-bottom-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	/* If you want to add shadow, don't kill the focus style. */
+	.ecgrid-layout .ui-listview li {
+		-moz-box-shadow: 0px 0px 9px #111;
+		-webkit-box-shadow: 0px 0px 9px #111;
+		box-shadow: 0px 0px 9px #111;
+	}
+	/* Images mask the hover bg color so we give desktop users feedback by applying the focus style on hover as well. */
+	.ecgrid-layout .ui-listview li > .ui-btn:hover {
+		-moz-box-shadow: 0px 0px 12px #33ccff;
+		-webkit-box-shadow: 0px 0px 12px #33ccff;
+		box-shadow: 0px 0px 12px #33ccff;
+	}
+	/* Animate focus and hover style, and resizing. */
+	.ecgrid-layout .ui-listview li,
+	.ecgrid-layout .ui-listview .ui-btn {
+		-webkit-transition: all 500ms ease;
+		-moz-transition: all 500ms ease;
+		-o-transition: all 500ms ease;
+		-ms-transition: all 500ms ease;
+		transition: all 500ms ease;
+	}
+}
+
+/* Second breakpoint is 63.75em (1020px). 4 column layout. Tiles will be 250x250 pixels incl. margin again at the breakpoint. */
+@media ( min-width: 30em ) {
+	.ecgrid-layout .ui-content {
+		padding: .5625em; /* 9px */
+	}
+
+	.ecgrid-layout .ui-listview {
+		max-width: 100%; 
+		margin: 0 auto;
+	}
+	/* Because of the 1000px max-width the width will always be 230px (and margin left/right 10px),
+	but we stick to percentage values for demo purposes. */
+	.ecgrid-layout .ui-listview li {
+		float: left;
+		width: 30.9333%; /* 33.3333% incl. 2 x 1.2% margin */
+		height: 10.5em; /* 232p */
+		margin: .5625em 1.2%;
+	}
+
+    	/* Text position */
+	.ecgrid-layout .ui-listview h2 {
+		font-size: 1em;
+		margin: 0;
+		padding: .125em 1em;
+		bottom: 5%;
+	}
+	.ecgrid-layout .ui-listview p {
+		font-size: 0.75em;
+		margin: 0;
+		padding: 0 1.25em;
+		min-height: 5%;
+		bottom: 0;
+	}
+}
+
+/* Second breakpoint is 63.75em (1020px). 4 column layout. Tiles will be 250x250 pixels incl. margin again at the breakpoint. */
+@media ( min-width: 48em ) {
+	.ecgrid-layout .ui-content {
+		padding: .5625em; /* 9px */
+	}
+
+	.ecgrid-layout .ui-listview {
+		max-width: 100%; 
+		margin: 0 auto;
+	}
+	/* Because of the 1000px max-width the width will always be 230px (and margin left/right 10px),
+	but we stick to percentage values for demo purposes. */
+	.ecgrid-layout .ui-listview li {
+		float: left;
+		width: 30.9333%; /* 33.3333% incl. 2 x 1.2% margin */
+		height: 14.5em; /* 232p */
+		margin: .5625em 1.2%;
+	}
+
+    .ecgrid-layout .ui-listview h2 {
+		font-size: 1.25em;
+		margin: 0;
+		padding: .125em 1em;
+		bottom: 5%;
+	}
+	.ecgrid-layout .ui-listview p {
+		font-size: 1em;
+		margin: 0;
+		padding: 0 1.25em;
+		min-height: 5%;
+		bottom: 0;
+	}
+
+}
+
+
+/* Second breakpoint is 63.75em (1020px). 4 column layout. Tiles will be 250x250 pixels incl. margin again at the breakpoint. */
+@media ( min-width: 63.75em ) {
+	.ecgrid-layout .ui-content {
+		padding: .625em; /* 10px */
+	}
+	/* Set a max-width for the last breakpoint to prevent too much stretching on large screens.
+	By setting the max-width equal to the breakpoint width minus padding we keep square tiles. */
+	.ecgrid-layout .ui-listview {
+		max-width: 62.5em; /* 1000px */
+		margin: 0 auto;
+	}
+	/* Because of the 1000px max-width the width will always be 230px (and margin left/right 10px),
+	but we stick to percentage values for demo purposes. */
+	.ecgrid-layout .ui-listview li {
+		width: 23%;
+		height: 230px;
+		margin: .625em 1%;
+	}
+}
+
+/* For this demo we used images with a size of 310x310 pixels. Just before the second breakpoint the images reach their max width: 1019px - 2 x 9px padding = 1001px x 30.9333% = ~310px */

@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="eClock5.Vista.Wizard.Login"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"  xmlns:Controles="clr-namespace:eClock5.Controles"
+             d:DesignHeight="395" d:DesignWidth="570" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" Loaded="UserControl_Loaded">
+    <Grid >
+        <Controles:UC_WizardTitulo VerticalAlignment="Top" Titulo="Inicio de sesión" SubTitulo="Introduzca su usuario y contraseña" MouseDoubleClick="UC_WizardTitulo_MouseDoubleClick"/>
+        <RadioButton x:Name="Rbn_Registro" Content="Regístrate" HorizontalAlignment="Left" Margin="49,83,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton x:Name="Rbn_Login" Content="Ya soy usuario" HorizontalAlignment="Left" Margin="272,83,0,0" VerticalAlignment="Top" Checked="Rbn_Login_Checked" Unchecked="Rbn_Login_Unchecked"/>
+        <TextBlock x:Name="Lbl_YaAutentificado" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="Ya Autentificado" VerticalAlignment="Center"/>
+
+        <Grid x:Name="XGrid_NAutentificado" Width="Auto" Margin="0,112,0,0" Background="{DynamicResource Blanco_Brush}" TextInput="XGrid_NAutentificado_TextInput">
+
+            <TextBlock x:Name="Lbl_Nombre" HorizontalAlignment="Left" Margin="45,25,0,0" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top"/>
+            <TextBlock x:Name="Lbl_Email" HorizontalAlignment="Left" Margin="45,65,0,0" TextWrapping="Wrap" Text="Correo Electronico" VerticalAlignment="Top"/>
+            <TextBlock x:Name="Lbl_Contraseña" HorizontalAlignment="Left" Margin="45,105,0,0" TextWrapping="Wrap" Text="Contraseña" VerticalAlignment="Top"/>
+            <TextBlock x:Name="Lbl_ConfirmarContraseña" HorizontalAlignment="Left" Margin="46,145,0,0" TextWrapping="Wrap" Text="Confirmar Contraseña" VerticalAlignment="Top"/>
+            <TextBox x:Name="Tbx_Nombre"  Height="23" Margin="234,25,81,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextChanged="Tbx_Nombre_TextChanged"/>
+            <TextBox x:Name="Tbx_Email" Height="23" Margin="234,65,81,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextChanged="Tbx_Email_TextChanged"/>
+            <PasswordBox x:Name="Tbx_Contraseña" Height="23" Margin="234,105,81,0"   VerticalAlignment="Top" TextInput="Tbx_Contraseña_TextInput" KeyUp="Tbx_Contraseña_KeyUp" />
+            <PasswordBox x:Name="Tbx_ConfirmarContraseña" Height="23" Margin="234,145,81,0"  VerticalAlignment="Top" TextInput="Tbx_ConfirmarContraseña_TextInput" KeyUp="Tbx_ConfirmarContraseña_KeyUp" />
+            <TextBlock x:Name="Lbl_ClaveNoCoincide" Margin="0,173,81,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="{DynamicResource RojoBrush}" HorizontalAlignment="Right" Text="*la contraseña y la confirmación no coinciden" Visibility="Collapsed"/>
+            <TextBlock x:Name="Lbl_CorreoRegistrado" TextWrapping="Wrap" Text="*El Correo electrónico ya se encuentra registrado, intente iniciar sesión" VerticalAlignment="Top" Foreground="{DynamicResource RojoBrush}" HorizontalAlignment="Right" Margin="0,90,81,0" Visibility="Collapsed"/>
+            <TextBlock x:Name="Lbl_ClaveErronea" Margin="0,5,81,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="{DynamicResource RojoBrush}" HorizontalAlignment="Right" Text="*el usuario y contraseña no coinciden" Visibility="Collapsed" />
+            <CheckBox x:Name="Chb_SinContraseña" HorizontalAlignment="Right" Margin="0,146,81,0" VerticalAlignment="Top"  Checked="Chb_SinContraseña_Checked" Unchecked="Chb_SinContraseña_Unchecked" Content="No recuerdo mi contraseña">
+
+            </CheckBox>
+            <Button x:Name="Btn_RecuperarClave" Content="Recuperar contraseña" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,109,0,0"  Click="Btn_RecuperarClave_Click" />
+            <TextBlock x:Name="Lbl_RequiereEMail" Margin="0,90,81,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="{DynamicResource RojoBrush}" HorizontalAlignment="Right" Text="*se requiere el correo electrónico"/>
+            <TextBlock x:Name="Lbl_RequiereClave" Margin="0,130,80,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="{DynamicResource RojoBrush}" HorizontalAlignment="Right" Text="*se requiere contraseña"/>
+            <TextBlock x:Name="Lbl_RequiereNombre" Margin="0,50,80,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="{DynamicResource RojoBrush}" HorizontalAlignment="Right" Text="*se requiere el nombre"/>
+            <Grid x:Name="Grd_Url" Height="50"  VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="80" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="Lbl_URL" Height="23" Text="Url de eClockServices" Style="{DynamicResource TextBlockEtiquetaStyle}" />
+                <TextBox x:Name="Tbx_URL"  Height="23" TextChanged="Tbx_Nombre_TextChanged" Grid.Column="1" Margin="{DynamicResource MargenTextBoxCaptura}"/>
+            </Grid>
+
+
+        </Grid>
+
+
+    </Grid>
+</UserControl>

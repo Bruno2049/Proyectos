@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="eClock5.Controles.UC_AsistenciaHorizontal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="1000"  MouseLeftButtonDown="UserControl_MouseLeftButtonDown_1" LostFocus="UserControl_LostFocus_1" GotFocus="UserControl_GotFocus_1" MouseDown="UserControl_MouseDown_1">
+    <StackPanel Name="Pnl_Vertical" Orientation="Vertical">
+        <StackPanel Name="Panel" Orientation="Horizontal" Height="{DynamicResource AltoToolBar}">
+            
+        </StackPanel>
+        
+    </StackPanel>
+</UserControl>

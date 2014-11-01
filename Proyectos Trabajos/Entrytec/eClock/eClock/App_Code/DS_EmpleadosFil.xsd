@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DS_EmpleadosFil" targetNamespace="http://www.tempuri.org/DS_EmpleadosFil.xsd" xmlns:mstns="http://www.tempuri.org/DS_EmpleadosFil.xsd" xmlns="http://www.tempuri.org/DS_EmpleadosFil.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DS_EmpleadosFil" msdata:IsDataSet="true" msdata:Locale="es-MX">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="EC_PERSONAS_DATOS_DATCCT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DATCCT" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_PERSONAS_DATOS_DATDEP">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DATDEP" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_PERSONAS_DATOS_CNOCVE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CNOCVE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_PERSONAS_DATOS_CIACVE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CIACVE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_PERSONAS_DATOS_NS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NS" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_PERSONAS_DATOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DATDEP" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_PERSONAS_DATOS_DATARE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DATARE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_PERSONAS_DATOS_TERMINALES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TERMINAL_ID" type="xs:decimal" />
+              <xs:element name="TERMINAL_NOMBRE" type="xs:string" />
+              <xs:element name="TERMINAL_BORRADO" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_PERSONAS_DATOS_GRUPOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GRUPO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_PERSONAS_DATOS_TERMINALES" />
+      <xs:field xpath="mstns:TERMINAL_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

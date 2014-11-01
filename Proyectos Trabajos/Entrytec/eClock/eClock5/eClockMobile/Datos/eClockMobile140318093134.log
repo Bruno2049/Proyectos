@@ -1,0 +1,5 @@
+Error->""  
+ Msg = Excepción durante la operación. El resultado no es válido. Compruebe la excepción InnerException para obtener más detalles.
+ StackTrace =    en System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary()
+   en eClockBase.ES_Tramites.NuevoCompletedEventArgs.get_Result() en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Service References\ES_Tramites\Reference.cs:línea 46
+   en eClockBase.Controladores.Tramites.m_S_Tramites_NuevoCompleted(Object sender, NuevoCompletedEventArgs e) en c:\Desarrollo\eClock\Código Fuente\eClock5\eClockBase\Controladores\Tramites.cs:línea 35 18/03/2014 09:33:29 p.m.

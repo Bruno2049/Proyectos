@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="eClock5.Vista.Importar.Excel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignHeight="309.211" d:DesignWidth="450"  Background="{DynamicResource Blanco_Brush}" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" >
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Width="Auto" Margin="10,10,0,0" TextWrapping="Wrap" Text="Excel" VerticalAlignment="Top" FontSize="{DynamicResource AltoToolBar}" Foreground="{DynamicResource AzulOscuro_Brush}"/>
+        <TextBlock x:Name="Lbl_ImportarEmpleados" Margin="10,73,10,0" TextWrapping="Wrap" Text="Desea importar empleados, desde una ubicación de su ordenador mediante una archivo de &quot;Excel&quot;. &#10;&#10;Solo acepta formato .xlsx." VerticalAlignment="Top" Height="76" FontSize="{DynamicResource FontSizeParrafo}" Foreground="{DynamicResource AzulOscuro_Brush}"/>
+        <Image HorizontalAlignment="Right" Height="58" Margin="0,10,10,0" VerticalAlignment="Top" Width="66" Source="pack://siteoforigin:,,,/Resources/Excel_70.png"/>
+        <Grid Height="70" Margin="10,211,10,0" VerticalAlignment="Top" Background="{DynamicResource AzulClaro_Brush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="100*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="80*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Lbl_SeleccionarArchivo" Margin="10,8,0,9" TextWrapping="Wrap" Text="Seleccionar archivo" HorizontalAlignment="Left" VerticalAlignment="Center" Width="133" Height="18" Foreground="{DynamicResource Blanco_Brush}"/>
+            <TextBox x:Name="Tbx_SeleccionarArchivo" HorizontalAlignment="Right" Height="19" Margin="0,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Grid.Column="1"/>
+            <Button x:Name="Btn_Examinar" Content="Examinar" Grid.Column="2" Margin="0,10,17,0" VerticalAlignment="Top" Click="Btn_Examinar_Click" HorizontalAlignment="Right" Width="75"/>
+            <TextBlock x:Name="Lbl_Importar" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="De clic en importar" VerticalAlignment="Top" Height="19" Foreground="{DynamicResource Blanco_Brush}" Width="133"/>
+            <Button x:Name="Btn_Importar" Content="Importar" Grid.Column="1" HorizontalAlignment="Right" Margin="0,10,10,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+        </Grid>
+        
+    </Grid>
+</UserControl>

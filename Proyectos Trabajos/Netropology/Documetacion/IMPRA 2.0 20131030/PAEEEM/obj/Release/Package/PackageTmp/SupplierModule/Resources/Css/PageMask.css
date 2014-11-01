@@ -1,0 +1,22 @@
+﻿
+.LockOff
+{
+	display: none;
+	visibility: hidden;
+}
+
+.LockOn
+{
+	display: block;
+	visibility: visible;
+	position: absolute;
+	z-index: 999;
+
+	/*moz-opacity: .4;
+	khtml-opacity: .4;
+	opacity: .4;
+	filter: alpha(opacity=40);*/
+	background-color: #FFFFFF;
+	text-align: center;
+	padding-top: 20%; /*filter: alpha(opacity=75);   opacity: 0.75; */
+}

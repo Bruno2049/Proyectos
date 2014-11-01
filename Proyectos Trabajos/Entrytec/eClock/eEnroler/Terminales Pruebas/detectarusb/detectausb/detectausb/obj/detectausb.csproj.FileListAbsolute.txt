@@ -1,0 +1,8 @@
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\detectarusb\detectausb\detectausb\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\detectarusb\detectausb\detectausb\obj\Debug\detectausb.Form1.resources
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\detectarusb\detectausb\detectausb\obj\Debug\detectausb.Properties.Resources.resources
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\detectarusb\detectausb\detectausb\obj\Debug\detectausb.csproj.GenerateResource.Cache
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\detectarusb\detectausb\detectausb\bin\Debug\detectausb.exe
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\detectarusb\detectausb\detectausb\bin\Debug\detectausb.pdb
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\detectarusb\detectausb\detectausb\obj\Debug\detectausb.exe
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\detectarusb\detectausb\detectausb\obj\Debug\detectausb.pdb

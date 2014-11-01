@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "PAEEEM", "PAEEEM\PAEEEM.rptproj", "{B8F33843-D2B0-4F0E-99CB-5CB4B91162DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8F33843-D2B0-4F0E-99CB-5CB4B91162DF}.Debug|Default.ActiveCfg = Debug
+		{B8F33843-D2B0-4F0E-99CB-5CB4B91162DF}.Debug|Default.Build.0 = DebugLocal
+		{B8F33843-D2B0-4F0E-99CB-5CB4B91162DF}.Debug|Default.Deploy.0 = DebugLocal
+		{B8F33843-D2B0-4F0E-99CB-5CB4B91162DF}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{B8F33843-D2B0-4F0E-99CB-5CB4B91162DF}.DebugLocal|Default.Build.0 = DebugLocal
+		{B8F33843-D2B0-4F0E-99CB-5CB4B91162DF}.Release|Default.ActiveCfg = Release
+		{B8F33843-D2B0-4F0E-99CB-5CB4B91162DF}.Release|Default.Build.0 = Release
+		{B8F33843-D2B0-4F0E-99CB-5CB4B91162DF}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

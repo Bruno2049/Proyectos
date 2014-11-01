@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="eClock5.Vista.Wizard.Licencia"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" xmlns:Controles="clr-namespace:eClock5.Controles"
+             d:DesignHeight="395" d:DesignWidth="570" FontSize="{DynamicResource FontSizeParrafo}" FontFamily="{DynamicResource EntryTecFont}">
+    <Grid>
+        <Controles:UC_WizardTitulo VerticalAlignment="Top" Titulo="Clave de Producto" SubTitulo="Introduzca su clave de producto"/>
+        <TextBox x:Name="Tbx_Licencia" Height="23" Margin="80,245,30,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="Tbx_Licencia_TextChanged"/>
+        <TextBlock x:Name="Lbl_DescripcionClave" Margin="80,73,30,0" TextWrapping="Wrap" Text="¿Necesita encontrar la clave de producto?&#10;&#10; La clave de producto tiene 23 caracteres y se suele encontrar en el paquete del producto. Si, no la encuentra, comuníquese con su distribuidor o visítenos en nuestra pagina www.eClock.com.mx" VerticalAlignment="Top" Height="91"/>
+        <TextBlock x:Name="Lbl_FormatoLicencia" Margin="80,169,30,0" TextWrapping="Wrap" Text="Tiene este formato:
+                                    
+                    
+                            Clave de producto: XXXXX-XXXXX-XXXXX" VerticalAlignment="Top" Height="51"/>
+        <TextBlock x:Name="Lbl_EscribaSuClave" HorizontalAlignment="Left" Margin="80,225,0,0" TextWrapping="Wrap" Text="Escriba su clave de producto" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="55" Margin="25,64,0,0" VerticalAlignment="Top" Width="52" Source="pack://siteoforigin:,,,/Resources/Llave_64.png"/>
+        <TextBlock x:Name="Lbl_NoValida" HorizontalAlignment="Right" Margin="0,273,30,0" TextWrapping="Wrap" Text="*No válida" VerticalAlignment="Top" Foreground="{DynamicResource RojoBrush}"/>
+        <CheckBox x:Name="Chb_NoTengoClave" Content="No cuento con clave de producto" HorizontalAlignment="Left" Margin="80,274,0,0" VerticalAlignment="Top" Checked="Chb_NoTengoClave_Checked" Unchecked="Chb_NoTengoClave_Unchecked"/>
+        <TextBlock x:Name="Lbl_Incorrecta" Margin="0,225,29,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="{DynamicResource RojoBrush}" HorizontalAlignment="Right" Text="*Error de generación" Visibility="Collapsed"/>
+
+    </Grid>
+</UserControl>

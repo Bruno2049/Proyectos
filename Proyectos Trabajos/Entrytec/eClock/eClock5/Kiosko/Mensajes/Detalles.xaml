@@ -1,0 +1,45 @@
+﻿<UserControl xmlns:Controles="clr-namespace:Kiosko.Controles"  xmlns:eClock5="clr-namespace:eClock5"  x:Class="Kiosko.Mensajes.Detalles"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="804" d:DesignWidth="1402" Loaded="UserControl_Loaded_1" Unloaded="UserControl_Unloaded_1">
+    <Grid x:Name="xGridMensajes">
+
+
+        <eClock5:UC_ToolBar x:Name="ToolBar" Height="{DynamicResource AltoToolBar}" VerticalAlignment="Top" OnEventClickToolBar="ToolBar_OnEventClickToolBar"  Titulo="Detalles" >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Etiqueta="Regresar" Imagen="pack://siteoforigin:,,,/Resources/Regresar-64.png" Nombre="Btn_Regresar"/>
+                <eClock5:UC_ToolBar_Control Etiqueta="" Imagen="pack://siteoforigin:,,,/Resources/Borrar_64.png" Nombre="Btn_Borrar" Alineacion="Derecha"/>
+                <!--<eClock5:UC_ToolBar_Control Etiqueta="" Imagen="pack://siteoforigin:,,,/Resources/Nuevo_64.png" Nombre="Btn_Nuevo" Alineacion="Derecha"/>-->
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+
+        <Controles:UC_Banner HorizontalAlignment="Right" Margin="0,64,0,0" Width="{DynamicResource AnchoBanner}"/>
+
+        <Grid Margin="{DynamicResource MargenGridCentral}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height=".35*" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <eClock5:UC_Listado x:Name="Lst_Chats" Grid.Row="0" MostrarToolBar="False" Width="Auto" Height="Auto" />
+
+            <TextBlock x:Name="Lbl_Comentarios" Grid.Row="1" TextWrapping="Wrap" Text="Mensaje:" Foreground="White" FontSize="26" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,22" Width="250" />
+            <TextBox x:Name="Tbx_Mensaje" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0,10,305,10" Width="627"/>
+            <Button x:Name="Btn_Enviar" Grid.Row="1" Content="Enviar" HorizontalAlignment="Right" Margin="0,10" Width="300" Click="Btn_Enviar_Click" />
+
+
+            <!--<TextBlock x:Name="Lbl_Titulo"      Text="Cargando..." Style="{DynamicResource TextBlockTituloStyle}" Grid.Row="0"/>-->
+            
+            <!--<Controles:UC_CamposTextoEdicion x:Name="Campos" Grid.Row="1" Width="550"/>-->
+            <Controles:UC_Teclado x:Name="Teclado" Grid.Row="2"/>
+        </Grid>
+
+
+
+
+    </Grid>
+</UserControl>

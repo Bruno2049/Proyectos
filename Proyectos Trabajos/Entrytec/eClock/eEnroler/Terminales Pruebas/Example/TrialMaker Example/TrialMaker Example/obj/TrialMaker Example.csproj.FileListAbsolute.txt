@@ -1,0 +1,13 @@
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\obj\Debug\TrialMaker Example.exe
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\obj\Debug\TrialMaker Example.pdb
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\bin\Debug\TrialMaker Example.exe
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\bin\Debug\TrialMaker Example.pdb
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\bin\Debug\FilterControls.dll
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\bin\Debug\SerialBoxes.dll
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\bin\Debug\FilterControls.pdb
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\bin\Debug\SerialBoxes.pdb
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\bin\Debug\SoftwareLocker.pdb
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\obj\Debug\TrialMaker_Example.Form1.resources
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\obj\Debug\TrialMaker_Example.Properties.Resources.resources
+C:\Users\bvargas\Documents\EntryTec\Terminales Pruebas\Example\TrialMaker Example\TrialMaker Example\obj\Debug\TrialMaker Example.csproj.GenerateResource.Cache

@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Tramites";
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+    @(ViewBag.DatosPersona.PERSONA_NOMBRE + "(" + ViewBag.DatosPersona.PERSONA_LINK_ID + ")")
+</h2>
+<ul data-role="listview">
+
+    @if (ViewBag.Tramites != null)
+    {
+        foreach (eClockBase.Controladores.ListadoJson Lista in ViewBag.Tramites)
+        {
+        <li>
+            <a href="#" id="@Lista.Llave" onclick="Redirige(@Lista.Llave,@Lista.Adicional)">@Lista.Nombre
+                <p>@Lista.Descripcion</p>               
+            </a>
+        </li>
+        }
+    }
+    else
+    {
+        <li>
+            <p>Por el momento no hay algun tramite disponible</p>
+        </li>        
+    }
+
+</ul>
+@section scripts
+{
+    <script type="text/javascript">
+
+        function Redirige(Tramite, Campos)
+        {
+            if (Campos == "" || Campos == null) {
+
+                var CamposObtenidos = jQuery.parseJSON(Campos);
+
+                for (var count = 0 ; count < CamposObtenidos.length; count++)
+                {
+                    alert(CamposObtenidos[count]);
+                }
+
+                if (confirm('¿Estas seguro de que deceas solicitar este tramite?')) {
+                    if (Tramite >= 0) {
+                        var Url = '../Nuevo/' + @ViewBag.DatosPersona.PERSONA_ID + ".html?Tramite_ID=" + Tramite;
+                        $.mobile.changePage(Url, { transition: "slide", reloadPage: true });
+                    }
+                }
+
+                else {
+                }
+            }
+        }
+    </script>
+}

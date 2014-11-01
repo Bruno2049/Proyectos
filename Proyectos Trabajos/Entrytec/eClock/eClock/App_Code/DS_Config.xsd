@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DS_Config" targetNamespace="http://www.tempuri.org/DS_Config.xsd" xmlns:mstns="http://www.tempuri.org/DS_Config.xsd" xmlns="http://www.tempuri.org/DS_Config.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DS_Config" msdata:IsDataSet="true" msdata:Locale="es-MX">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TerminalesNombres">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TERMINAL_ID" type="xs:decimal" />
+              <xs:element name="TERMINAL_NOMBRE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_USUARIOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="USUARIO_ID" type="xs:decimal" />
+              <xs:element name="PERFIL_ID" type="xs:decimal" />
+              <xs:element name="USUARIO_USUARIO" type="xs:string" />
+              <xs:element name="USUARIO_NOMBRE" type="xs:string" />
+              <xs:element name="USUARIO_DESCRIPCION" type="xs:string" minOccurs="0" />
+              <xs:element name="USUARIO_CLAVE" type="xs:string" />
+              <xs:element name="USUARIO_BORRADO" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TerminalesNombres" />
+      <xs:field xpath="mstns:TERMINAL_ID" />
+    </xs:unique>
+    <xs:unique name="EC_USUARIOS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_USUARIOS" />
+      <xs:field xpath="mstns:USUARIO_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

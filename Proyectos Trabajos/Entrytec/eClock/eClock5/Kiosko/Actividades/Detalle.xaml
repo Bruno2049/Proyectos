@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="Kiosko.Actividades.Detalle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:Kiosko.Controles" 
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1366"  Background="{DynamicResource BrushFondoApp}"  Foreground="{DynamicResource ColorFuente}" FontFamily="{DynamicResource FontKiosko}" FontSize="{DynamicResource TamanoFontEtiquetas}" Loaded="UserControl_Loaded_1">
+
+    <Grid>
+
+        <Controles:UC_Banner HorizontalAlignment="Right" Margin="{DynamicResource MargenBanner}" Width="{DynamicResource AnchoBanner}"/>
+
+        <eClock5:UC_ToolBar x:Name="ToolBar" Height="{DynamicResource AltoToolBar}" VerticalAlignment="Top" OnEventClickToolBar="UC_ToolBar_OnEventClickToolBar" Titulo="Eventos" >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Etiqueta="Regresar" Imagen="pack://siteoforigin:,,,/Resources/Regresar-64.png" Nombre="Btn_Regresar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Inscribirme" Imagen="pack://siteoforigin:,,,/Resources/Siguiente-64.png" Nombre="Btn_Siguiente" Default="True" />
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+
+
+        <Grid Margin="{DynamicResource MargenGridCentral}" >
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="160"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="50*"  />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="1"  >
+                <Image x:Name="Img_Foto" Source="pack://siteoforigin:,,,/Resources/banner-abajo.png"/>
+             </StackPanel>
+
+            <TextBlock  x:Name="Lbl_Titulo" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Text="" Style="{DynamicResource TextBlockFecha}" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+            <TextBlock  x:Name="Lbl_FechaDesdet" Grid.Column="1" Grid.Row="2" Text="Fecha Inicio:" Style="{DynamicResource TextBlockTituloMesStyle}" />
+            <TextBlock  x:Name="Lbl_FechaDesde" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Text="Cargando..." Style="{DynamicResource TextBlockFecha}" />
+            <TextBlock  x:Name="Lbl_FechaHastat" Grid.Column="2" Grid.Row="2" Text="Fecha Termino:" Style="{DynamicResource TextBlockTituloMesStyle}" />
+            <TextBlock  x:Name="Lbl_FechaHasta" Grid.Column="2" Grid.Row="2" Text="Cargando..." Style="{DynamicResource TextBlockFecha}" />
+            
+            <ScrollViewer Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2">               
+                    <TextBlock  x:Name="Lbl_Descripcion" Text="Cargando..." TextWrapping="Wrap"/>
+            </ScrollViewer>
+
+
+        </Grid>
+
+
+
+
+    </Grid>
+</UserControl>

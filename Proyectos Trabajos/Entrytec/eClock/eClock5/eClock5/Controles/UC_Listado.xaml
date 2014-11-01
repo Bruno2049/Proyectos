@@ -1,0 +1,72 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:eClock5" x:Class="eClock5.UC_Listado" 
+             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300"  FontFamily="{DynamicResource EntryTecFont}" Background="{DynamicResource Blanco_Brush}">
+    <Grid Name="Grid">
+
+        <local:UC_ToolBar x:Name="ToolBar" VerticalAlignment="Top" Width="Auto" Height="{DynamicResource AltoToolBar}" ControlesCreados="ToolBar_ControlesCreados">
+            <local:UC_ToolBar.Controles>
+                <local:UC_ToolBar_Control Etiqueta="Filtrar"  Mostrar="NoSeleccionados" Nombre="Btn_Filtrar" Imagen="pack://siteoforigin:,,,/Resources/Filtro_64.png" ContieneTexto="True"/>
+                <local:UC_ToolBar_Control Etiqueta="" Imagen="pack://siteoforigin:,,,/Resources/Seleccionados_64.png" Mostrar="SoloSeleccionados" Nombre="Btn_DeSeleccionar"/>
+                <local:UC_ToolBar_Control Etiqueta="{}{0} Seleccionados" Mostrar="SoloSeleccionados" Nombre="Btn_DeSeleccionar"/>
+                <local:UC_ToolBar_Control Etiqueta="Nuevo" Imagen="pack://siteoforigin:,,,/Resources/Nuevo_64.png" Mostrar="NoSeleccionados" Nombre="Btn_Nuevo" Alineacion="Derecha"/>
+                <local:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Actualizar"  Mostrar="NoSeleccionados" Nombre="Btn_Actualizar" Imagen="pack://siteoforigin:,,,/Resources/Actualizar_64.png"/>
+                <local:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Borrar" Imagen="pack://siteoforigin:,,,/Resources/Borrar_64.png" Mostrar="SoloSeleccionados" Nombre="Btn_Borrar"/>
+                <local:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Reportes" Imagen="pack://siteoforigin:,,,/Resources/Reportes_64.png" Nombre="Btn_Reportes"/>
+                <local:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="" Imagen="pack://siteoforigin:,,,/Resources/MenuEscondido_64.png" Nombre="Btn_MenuEscondido">
+                    <local:UC_ToolBar_Control.Controles>
+                        <local:UC_ToolBar_Control Etiqueta="Seleccionar Todos" Nombre="Btn_SeleccionarTodos"/>
+                        <local:UC_ToolBar_Control Etiqueta="Mostrar Borrados" Nombre="Btn_MostrarBorrados"/>
+                        <local:UC_ToolBar_Control Etiqueta="Importar" Mostrar="NoSeleccionados" Nombre="Btn_Importar"/>
+                        <local:UC_ToolBar_Control Etiqueta="Exportar" Mostrar="NoSeleccionados" Nombre="Btn_Exportar"/>
+                        <local:UC_ToolBar_Control Etiqueta="Importar Avanzado" Mostrar="NoSeleccionados" Nombre="Btn_ImportarAdv"/>
+                        <local:UC_ToolBar_Control Etiqueta="Exportar Avanzado" Mostrar="NoSeleccionados" Nombre="Btn_ExportarAdv"/>
+                    </local:UC_ToolBar_Control.Controles>
+                </local:UC_ToolBar_Control>
+            </local:UC_ToolBar.Controles>
+        </local:UC_ToolBar>
+
+        <ListBox x:Name="Lst_Datos" Margin="0,48,0,0" BorderThickness="0" HorizontalContentAlignment="Stretch">
+            
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True" >
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Foreground" Value="Black" />
+                        </Trigger>
+                    </Style.Triggers>
+                    <Style.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+                        <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+                    </Style.Resources>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,0,0,0" Background="{DynamicResource AzulMuyClaro_Brush}"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox IsChecked="{Binding Seleccionado}" Checked="CheckBox_Checked_1" Click="CheckBox_Click_1" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <StackPanel Margin="0,0,0,0" Grid.Column="1"  Grid.ColumnSpan="2">
+                            <TextBlock Text="{Binding Nombre}" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeSubTitulo}" />
+                            <TextBlock Text="{Binding Descripcion}" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" />
+                        </StackPanel>
+                        <TextBlock Text="{Binding Adicional}" Grid.Column="2" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" HorizontalAlignment="Right" />
+
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,82 @@
+﻿.igr_CaribbeanControl
+{
+    outline: none;
+	border : 0px none;
+	background:transparent;
+}
+
+.igr_CaribbeanEmptyContainer
+{
+    overflow : hidden;
+}
+
+.igr_CaribbeanSelectedContainer
+{
+    position : relative;
+    overflow : hidden;
+    white-space : nowrap;
+}
+
+.igr_CaribbeanHoveredContainer
+{
+    position : relative;
+    overflow : hidden;
+    white-space : nowrap;
+}
+
+.igr_CaribbeanImageSpan
+{
+    display : inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.igr_CaribbeanImageSpanVert
+{
+    display : block;
+    width: 20px;
+    height: 20px;
+}
+
+.igr_CaribbeanEmptyImg
+{
+    background:transparent url(images/igr_RatingSprite.png) no-repeat;
+    background-position: 0px 0px;
+}
+
+.igr_CaribbeanSelectedImg
+{
+    background:transparent url(images/igr_RatingSprite.png) no-repeat;
+    background-position: -50px 0px;
+}
+
+.igr_CaribbeanHoveredImg
+{
+    background:transparent url(images/igr_RatingSprite.png) no-repeat;
+    background-position: -25px 0px;
+}
+/*
+    These were added for our clients to control the disabled appearence
+*/
+
+.igr_CaribbeanDisabledEmptyImg
+{
+    
+    background:transparent url(images/igr_RatingSprite.png) no-repeat;
+    background-position: -75px 0px;
+}
+
+.igr_CaribbeanDisabledSelectedImg
+{
+    background:transparent url(images/igr_RatingSprite.png) no-repeat;
+    background-position: -100px 0px;
+}
+
+.igr_CaribbeanControlFocus
+{
+    border : 0px none;
+}
+
+.igr_CaribbeanControlDisabled
+{
+}

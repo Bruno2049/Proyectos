@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Asistencias de la Agrupacion";
+    Layout = "~/Views/Asistencias/_Layout.cshtml";
+}
+@if (ViewBag.Asistencias != null)
+{
+    <div class="ui-field-contain">
+        @foreach (eClockBase.Modelos.Asistencias.Reporte_AsistenciaAbr31 Fila in ViewBag.Asistencias)
+        {
+            <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                <legend><a href="#" onclick="Asistencia(@eClockBase.CeC.PersonaDiarioID2PersonaID(Fila.ID));return false;">@(Fila.NOMBRE + "(" + Fila.LINK + ")")</a></legend>
+                <input type="checkbox" name="CPID_@(Fila.ID + 0)" id="CPID_@(Fila.ID + 0)" >
+                <label for="CPID_@(Fila.ID + 0)">@Fila.ABR0</label>
+                <input type="checkbox" name="CPID_@(Fila.ID + 1)" id="CPID_@(Fila.ID + 1)" >
+                <label for="CPID_@(Fila.ID + 1)">@Fila.ABR1</label>
+                <input type="checkbox" name="CPID_@(Fila.ID + 2)" id="CPID_@(Fila.ID + 2)" >
+                <label for="CPID_@(Fila.ID + 2)">@Fila.ABR2</label>
+                <input type="checkbox" name="CPID_@(Fila.ID + 3)" id="CPID_@(Fila.ID + 3)" >
+                <label for="CPID_@(Fila.ID + 3)">@Fila.ABR3</label>
+                <input type="checkbox" name="CPID_@(Fila.ID + 4)" id="CPID_@(Fila.ID + 4)" >
+                <label for="CPID_@(Fila.ID + 4)">@Fila.ABR4</label>
+                <input type="checkbox" name="CPID_@(Fila.ID + 5)" id="CPID_@(Fila.ID + 5)" >
+                <label for="CPID_@(Fila.ID + 5)">@Fila.ABR5</label>
+                <input type="checkbox" name="CPID_@(Fila.ID + 6)" id="CPID_@(Fila.ID + 6)" >
+                <label for="CPID_@(Fila.ID + 6)">@Fila.ABR6</label>
+
+            </fieldset>
+        }
+    </div>
+    
+}
+
+@section scripts
+{
+    <script>
+        function Asistencia(PersonaID) {
+            var dt_FechaInicial = '@eClockBase.CeC.Convierte2DateWeb(eClockMobile.BaseModificada.CeC_Sesion.FechaInicio)' ;
+            var dt_FechaFinal =  '@eClockBase.CeC.Convierte2DateWeb(eClockMobile.BaseModificada.CeC_Sesion.FechaFin)' ;
+            var Url = '/Asistencias/Empleado/' + PersonaID + "?FechaInicial=" + dt_FechaInicial + "&FechaFinal=" + dt_FechaFinal;
+            $.mobile.changePage(Url, { transition: "slide", changeHash: true });
+        }
+    </script>
+}

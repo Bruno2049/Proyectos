@@ -1,0 +1,30 @@
+[Options]
+SmartUpdate=1
+localefile=attcheckin.spa
+Temp-Supervisor_RANGE_User=344
+Temp-Supervisor_RANGE_Dept=1
+Temp-Supervisor_RANGE_D1=2006-5-1 15:46:00
+Temp-Supervisor_RANGE_D2=2006-5-1 15:46:59
+DisplayStatus=0
+DisplayWorkCode=0
+SimpleCalc=0
+Displaynull=1
+Supervisor-Temp_RANGE_User=15
+Supervisor-Temp_RANGE_Dept=1
+Supervisor-Temp_RANGE_D1=2009-06-18 00:00:00
+Supervisor-Temp_RANGE_D2=2009-06-25 23:59:59
+MainFormLeft=0
+MainFormTop=0
+MainFormWidth=1440
+MainFormHeight=870
+LeftMenu=194
+RightInfo=300
+MachinesViewHeight=369
+ViewStyle=3
+[TfAttCalc]
+pnlRecOP_Width=166
+pnlAttAbnormite_Width=140
+pnlAudit_Width=166
+pnlCalc_Width=132
+[DisabledHintIDs]
+HintId_10=1

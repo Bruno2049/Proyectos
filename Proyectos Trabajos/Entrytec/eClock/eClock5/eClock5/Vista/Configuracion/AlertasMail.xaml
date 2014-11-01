@@ -1,0 +1,31 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" x:Class="eClock5.Vista.Configuracion.AlertasMail" 
+             mc:Ignorable="d" d:DesignHeight="500" d:DesignWidth="541" Background="{DynamicResource Blanco_Brush}" >
+    <Grid >
+         <eClock5:UC_ToolBar VerticalAlignment="Top" Width="Auto" Height="48">
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha"  Nombre="Btn_Guardar" Etiqueta="Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png"/>                
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <Grid Margin="34,149,19,95"  HorizontalAlignment="Center" VerticalAlignment="Center" Background="{DynamicResource AzulClaro_Brush}" Width="488">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="200*"/>
+            </Grid.ColumnDefinitions>
+            <CheckBox x:Name="Chb_RetardosEmpleado" Content="Retardos al empleado" Margin="10,34,19,22" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeSubTitulo}" Foreground="{DynamicResource Blanco_Brush}"/>
+            <CheckBox x:Name="Chb_FaltasEmpleado" Content="Faltas a empleado" Margin="10,31,19,38" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeSubTitulo}" Foreground="{DynamicResource Blanco_Brush}" Grid.Row="1"/>
+            <CheckBox x:Name="Chb_TerminalNoResponde" Content="Terminal no responde" Margin="10,32,19,28" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeSubTitulo}" Foreground="{DynamicResource Blanco_Brush}" Grid.Row="2"/>
+            <CheckBox x:Name="Lbl_RetardosASupervisor"  Content="Retardos a supervisor" Margin="10,34,42,33" Foreground="{DynamicResource Blanco_Brush}" FontSize="{DynamicResource FontSizeSubTitulo}" FontFamily="{DynamicResource EntryTecFont}" Grid.Column="1"/>
+            <CheckBox x:Name="Chb_FaltasSupervisor" Content="Faltas a supervisor" Margin="10,30,42,38" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeSubTitulo}" Foreground="{DynamicResource Blanco_Brush}" Grid.Column="1" Grid.Row="1"/>
+          </Grid>
+    </Grid>
+</UserControl>

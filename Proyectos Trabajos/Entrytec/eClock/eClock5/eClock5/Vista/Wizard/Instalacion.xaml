@@ -1,0 +1,22 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controles="clr-namespace:eClock5.Controles" xmlns:Monedero="clr-namespace:eClock5.Vista.Monedero" xmlns:local="clr-namespace:eClock5.Vista.Wizard" x:Class="eClock5.Vista.Wizard.Instalacion"
+        Title="Instalacion" Height="439" Width="604" >
+    <Grid>
+
+        <Controles:UC_Wizard x:Name="Wizard" OnSiguiente="UC_Wizard_OnSiguiente_1" OnCancelar="UC_Wizard_OnCancelar_1" OnFinalizar="UC_Wizard_OnFinalizar_1" Loaded="Wizard_Loaded" >
+            <Controles:UC_Wizard.Pasos>
+                <local:Bienvenida />
+                <local:Contratos/>
+                <local:Login/>
+                <local:Licencia/>
+                <local:Suscripcion/>
+                <local:Sucursal/>
+                <local:Terminales/>
+            </Controles:UC_Wizard.Pasos>
+        </Controles:UC_Wizard>
+        <Controles:UC_ElegirIdioma HorizontalAlignment="Left" Margin="{DynamicResource MargenGeneralCorto}" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Window>

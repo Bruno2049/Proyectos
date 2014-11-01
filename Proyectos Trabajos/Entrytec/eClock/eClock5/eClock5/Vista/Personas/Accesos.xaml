@@ -1,0 +1,16 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.Vista.Personas.Accesos" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Background="{DynamicResource Blanco_Brush}">
+    <Grid>
+
+        <Controles:UC_Listado1N CampoNombreUNO="PERSONA_NOMBRE" CampoLlaveUNO="PERSONA_ID" TablaUNO="EC_PERSONAS" CampoLlaveN="TERMINAL_ID" CampoNombreN="TERMINAL_NOMBRE" CampoDescripcionUNO="AGRUPACION_NOMBRE" CampoAdicionalN="SITIO_NOMBRE" CampoDescripcionN="TERMINAL_DIR" TablaN="EC_V_TERMINALES_EDO" TablaUNOaN="EC_PERSONAS_TERMINALES" CampoAdicionalUNO="PERSONA_LINK_ID" FiltroN="TERMINAL_ID IN (SELECT TERMINAL_ID FROM EC_V_TERMINALES WHERE SUSCRIPCION_ID = @SUSCRIPCION_ID) AND TERMINAL_BORRADO = 0" >
+
+        </Controles:UC_Listado1N>
+
+    </Grid>
+</UserControl>

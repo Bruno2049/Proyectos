@@ -1,0 +1,33 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" x:Class="eClock5.Vista.Configuracion.AlertasMail" 
+             mc:Ignorable="d" d:DesignHeight="500" d:DesignWidth="500" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeSubTitulo}" Background="{StaticResource Blanco_Brush}" Foreground="{StaticResource Blanco_Brush}" >
+    <Grid >
+         <eClock5:UC_ToolBar VerticalAlignment="Top" Width="Auto" Grid.ColumnSpan="3">
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Alineacion="Izquierda" Etiqueta="Atras" Imagen="/eClock5;component/Resources/Regresar_64.png"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="/eClock5;component/Resources/Guardar_64.png"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Mas" Imagen="/eClock5;component/Resources/MenuEscondido_64.png"/>
+            </eClock5:UC_ToolBar.Controles>
+        </eClock5:UC_ToolBar>
+        <Grid Margin="10,91,10,37" Background="{StaticResource AzulClaro_Brush}" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="200*"/>
+            </Grid.ColumnDefinitions>
+            <CheckBox x:Name="Chb_RetardosEmpleado" Content="Retardos al empleado" Margin="10,34,10,50" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeSubTitulo}" Foreground="{StaticResource Blanco_Brush}"/>
+            <CheckBox x:Name="Chb_FaltasEmpleado" Content="Faltas a empleado" Margin="10,31,10,54" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeSubTitulo}" Foreground="{StaticResource Blanco_Brush}" Grid.Row="1"/>
+            <CheckBox x:Name="Chb_TerminalNoResponde" Content="Terminal no responde" Margin="10,32,10,28" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeSubTitulo}" Foreground="{StaticResource Blanco_Brush}" Grid.Row="2"/>
+            <CheckBox x:Name="Lbl_RetardosASupervisor"  Content="Retardos a supervisor" Margin="10,34,10,50" Foreground="{StaticResource Blanco_Brush}" FontSize="{StaticResource FontSizeSubTitulo}" FontFamily="{StaticResource EntryTecFont}" Grid.Column="1"/>
+            <CheckBox x:Name="Chb_FaltasSupervisor" Content="Faltas a supervisor" Margin="10,30,10,54" FontFamily="{StaticResource EntryTecFont}" FontSize="{StaticResource FontSizeSubTitulo}" Foreground="{StaticResource Blanco_Brush}" Grid.Column="1" Grid.Row="1"/>
+          </Grid>
+    </Grid>
+</UserControl>

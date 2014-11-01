@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5b90168a-fdf7-46e4-bb40-e8542239403d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50723/S_Mails.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="S_Mails.wsdl" MetadataType="Wsdl" ID="9849056b-8c59-45e2-9307-2f42afff2601" SourceId="1" SourceUrl="http://localhost:50723/S_Mails.svc?wsdl" />
+    <MetadataFile FileName="S_Mails.xsd" MetadataType="Schema" ID="63fcc8c2-0022-478f-b2f2-f058dea4fe1a" SourceId="1" SourceUrl="http://localhost:50723/S_Mails.svc?xsd=xsd0" />
+    <MetadataFile FileName="S_Mails.disco" MetadataType="Disco" ID="d8425530-ea37-4aa9-a26e-3f4ecc3e7a8f" SourceId="1" SourceUrl="http://localhost:50723/S_Mails.svc?disco" />
+    <MetadataFile FileName="S_Mails1.xsd" MetadataType="Schema" ID="4b178a7f-b7d7-467d-9895-4da380b0f105" SourceId="1" SourceUrl="http://localhost:50723/S_Mails.svc?xsd=xsd1" />
+    <MetadataFile FileName="S_Mails1.wsdl" MetadataType="Wsdl" ID="87918c38-df40-403c-8bea-4fb23e60ef13" SourceId="1" SourceUrl="http://localhost:50723/S_Mails.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

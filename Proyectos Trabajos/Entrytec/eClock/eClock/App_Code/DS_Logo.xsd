@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Logo" targetNamespace="http://tempuri.org/DS_Logo.xsd" xmlns:mstns="http://tempuri.org/DS_Logo.xsd" xmlns="http://tempuri.org/DS_Logo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Logo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_Logo" msprop:Generator_DataSetName="DS_Logo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LogoReportes" msprop:Generator_UserTableName="LogoReportes" msprop:Generator_RowDeletedName="LogoReportesRowDeleted" msprop:Generator_TableClassName="LogoReportesDataTable" msprop:Generator_RowChangedName="LogoReportesRowChanged" msprop:Generator_RowClassName="LogoReportesRow" msprop:Generator_RowChangingName="LogoReportesRowChanging" msprop:Generator_RowEvArgName="LogoReportesRowChangeEvent" msprop:Generator_RowEvHandlerName="LogoReportesRowChangeEventHandler" msprop:Generator_TablePropName="LogoReportes" msprop:Generator_TableVarName="tableLogoReportes" msprop:Generator_RowDeletingName="LogoReportesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

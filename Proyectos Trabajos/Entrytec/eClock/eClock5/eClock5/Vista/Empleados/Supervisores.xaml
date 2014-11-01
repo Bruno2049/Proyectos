@@ -1,0 +1,16 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.Vista.Empleados.Supervisores" 
+             d:DesignHeight="506.625" d:DesignWidth="844.958" mc:Ignorable="d" Loaded="UserControl_Loaded" IsVisibleChanged="UserControl_IsVisibleChanged" Foreground="{DynamicResource Blanco_Brush}">
+    <Grid >
+        <Grid Background="{DynamicResource AzulClaro_Brush}" Margin="10,10,10,0" Height="93" VerticalAlignment="Top">
+            <TextBlock Style="{DynamicResource TextBlockTituloStyle}" Text="Agregar Permiso" VerticalAlignment="Top"/>
+            <TextBlock x:Name="Lbl_Usuario" HorizontalAlignment="Left" Margin="30,54,0,0" TextWrapping="Wrap" Text="Usuario o Correo electrónico" VerticalAlignment="Top" />
+            <TextBox x:Name="Tbx_Usuario" HorizontalAlignment="Left" Height="25" Margin="206,53,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203"/>
+            <TextBlock x:Name="Lbl_TipoPermiso" Margin="0,54,270,0" TextWrapping="Wrap" Text="Tipo de permiso" VerticalAlignment="Top" HorizontalAlignment="Right" />
+            <Controles:UC_Combo x:Name="Cmb_Permisos" Margin="0,53,93,0" VerticalAlignment="Top" Tabla="EC_TIPO_PERMISOS" CampoLlave="TIPO_PERMISO_ID" CampoNombre="TIPO_PERMISO_NOMBRE" Height="25" HorizontalAlignment="Right" Width="173"/>
+            <Button x:Name="Btn_Otorgar" Content="Dar Permiso" HorizontalAlignment="Right" Margin="0,0,10,19" VerticalAlignment="Bottom" Click="Btn_Otorgar_Click" />
+        </Grid>
+        <Button x:Name="Btn_Quitar" Content="Quitar Permiso" HorizontalAlignment="Center" Margin="{DynamicResource MargenGeneral}" VerticalAlignment="Bottom" Click="Btn_Quitar_Click" />
+        <eClock5:UC_Listado x:Name="Lst_Main" Margin="10,108,10,35" MostrarToolBar="False"  CampoLlave="USUARIO_PERMISO_ID" CampoNombre="USUARIO_USUARIO" CampoDescripcion="USUARIO_NOMBRE" CampoAdicional="TIPO_PERMISO_NOMBRE"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,27 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:eClock5" x:Class="eClock5.UC_Campos" 
+             mc:Ignorable="d" Height="287" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" Width="625" Background="{StaticResource Blanco_Brush}">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,48,0,0" BorderBrush="#FFA21616" BorderThickness="5">
+            <Grid x:Name="Grid" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </ScrollViewer>
+
+        <local:UC_ToolBar x:Name="Tb_General"  VerticalAlignment="Top" Width="Auto" Height="{StaticResource AltoToolBar}">
+            <local:UC_ToolBar.Controles>
+                <local:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Borrar" Imagen="/eClock5;component/Resources/Borrar_64.png" Nombre="Btn_Borrar"/>
+                <local:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="/eClock5;component/Resources/Guardar_64.png" Nombre="Btn_Guardar"/>
+            </local:UC_ToolBar.Controles>
+        </local:UC_ToolBar>
+
+    </Grid>
+</UserControl>

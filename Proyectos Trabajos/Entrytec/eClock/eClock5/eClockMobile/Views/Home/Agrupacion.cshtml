@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Agrupacion";
+}
+<h2>@ViewBag.Agrupacion</h2>
+@section Page
+{
+    id="HomeAgrupacion"
+}
+
+@using (Html.BeginForm())
+{
+     @Html.Partial("_Fechas")
+}
+
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        $('#Asistencias').click(function () { Redirige("Asistencias", "Agrupacion"); return false; });
+        $('#AsistenciasFiltradas').click(function () { Redirige("Asistencias", "AgrupacionFiltro"); return false; });
+        $('#SoloFaltasyRetardos').click(function () { Redirige("Asistencias", "AgrupacionFyR"); return false; });
+        $('#Accesos').click(function () { Redirige("Accesos", "Agrupacion"); return false; });
+        $('#Reportes').click(function () { Redirige("Reportes", "Agrupacion"); return false; });
+
+        var dt_FechaInicial;
+        var dt_FechaFinal;
+        function Redirige(controlador, accion) {
+
+            dt_FechaInicial = $('#FechaInicial').val();
+            dt_FechaFinal = $('#FechaFinal').val();
+            @*var Url = '/' + controlador + "/" + accion + "/@ViewBag.Agrupacion?FechaInicial=" + dt_FechaInicial + "&FechaFinal=" + dt_FechaFinal;
+            *@
+            var Url = '/' + controlador + "/" + accion + "/@Uri.EscapeDataString(ViewBag.Agrupacion)?FechaInicial=" + dt_FechaInicial + "&FechaFinal=" + dt_FechaFinal;
+            //alert(Url);
+            $.mobile.changePage(Url, { transition: "slide", reloadPage: true });
+         }
+
+    </script>
+    @*
+    //La intencion es recargar esta pagina al mostrarse nuevamente
+    <script type="text/javascript">
+        var Recargar = 2;
+        $(".selector").on("pagecontainershow", function (event, ui) { alert("pagecontainershow"); });
+        $(document).on('pageinit', '#HomeAgrupacion', function () {
+            //alert('Pageinit');
+            Recargar = 1;
+        });
+
+        $(document).on('pagebeforeshow', '#HomeAgrupacion', function () {
+            //alert('Pagebeforeshow');
+            //Recargar = Recargar - 1;
+            if (Recargar-- <= 0) {
+                alert('location.reload');
+                //location.reload();
+            }
+        });
+    </script>*@
+
+}

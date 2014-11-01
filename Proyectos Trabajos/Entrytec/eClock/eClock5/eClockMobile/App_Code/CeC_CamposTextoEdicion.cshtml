@@ -1,0 +1,54 @@
+﻿@using Newtonsoft.Json;
+@helper CreaVista(string Titulo, string Configuracion, string Valores)
+{
+    <ul data-role="listview" data-inset="true">
+        
+        @if (Titulo != null && Titulo != "")
+        {
+            <li data-role="list-divider">@Titulo</li>
+        }
+        @{
+            List<eClockBase.Modelos.Campos.Model_CampoTexto> m_Configuracion = JsonConvert.DeserializeObject<List<eClockBase.Modelos.Campos.Model_CampoTexto>>(Configuracion);
+            foreach (eClockBase.Modelos.Campos.Model_CampoTexto CampoTexto in m_Configuracion)
+            {
+
+                
+            <li data-role="fieldcontain">
+                <label for="@CampoTexto.Nombre">@CampoTexto.Etiqueta</label>
+                @switch (CampoTexto.TIPO_DATO_ID)
+                {
+                    case 1:
+                    <input type="text" name="@CampoTexto.Nombre" id="@CampoTexto.Nombre" />
+                        break;
+                    case 2:
+                    <input type="number" name="@CampoTexto.Nombre" id="@CampoTexto.Nombre" />
+                        break;
+                    case 8:
+                    <input type="checkbox" name="@CampoTexto.Nombre" id="@CampoTexto.Nombre" />
+                        
+                        break;
+                    case 5:
+                    <input type="date" name="@CampoTexto.Nombre" id="@CampoTexto.Nombre" />
+                        break;
+                    case 7:
+                    <input type="time" name="@CampoTexto.Nombre" id="@CampoTexto.Nombre" />
+                       
+                        break;
+                    case 3:
+                    <input type="number" name="@CampoTexto.Nombre" id="@CampoTexto.Nombre" />
+                        
+                        break;
+                    case 10:
+                    <select name="@CampoTexto.Nombre" id="@CampoTexto.Nombre"></select>
+                        break;
+                    default:
+                    <input type="text" name="@CampoTexto.Nombre" id="@CampoTexto.Nombre" value="No Soportado" />
+                        break;
+                }
+            </li>
+
+            }
+        }
+    </ul>
+
+}

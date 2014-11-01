@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://eclockservices.entrytec.com.mx/S_Sesion.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://eclockservices.entrytec.com.mx/S_Sesion.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://eclockservices.entrytec.com.mx/S_Sesion.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="S_Sesion_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="DoWork" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_CreaSesion_InputMessage">
+    <wsdl:part name="parameters" element="CreaSesion" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_CreaSesion_OutputMessage">
+    <wsdl:part name="parameters" element="CreaSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_ObtenUsuarioID_InputMessage">
+    <wsdl:part name="parameters" element="ObtenUsuarioID" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_ObtenUsuarioID_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenUsuarioIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_ObtenSuscripcionID_InputMessage">
+    <wsdl:part name="parameters" element="ObtenSuscripcionID" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_ObtenSuscripcionID_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenSuscripcionIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_ObtenPerfilID_InputMessage">
+    <wsdl:part name="parameters" element="ObtenPerfilID" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_ObtenPerfilID_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenPerfilIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_CierraSesion_InputMessage">
+    <wsdl:part name="parameters" element="CierraSesion" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_CierraSesion_OutputMessage">
+    <wsdl:part name="parameters" element="CierraSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_ObtenListado_InputMessage">
+    <wsdl:part name="parameters" element="ObtenListado" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_ObtenListado_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenListadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_ObtenDatos_InputMessage">
+    <wsdl:part name="parameters" element="ObtenDatos" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_ObtenDatos_OutputMessage">
+    <wsdl:part name="parameters" element="ObtenDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_GuardaDatos_InputMessage">
+    <wsdl:part name="parameters" element="GuardaDatos" />
+  </wsdl:message>
+  <wsdl:message name="S_Sesion_GuardaDatos_OutputMessage">
+    <wsdl:part name="parameters" element="GuardaDatosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="S_Sesion">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="urn:S_Sesion/DoWork" message="S_Sesion_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Sesion/DoWorkResponse" message="S_Sesion_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreaSesion">
+      <wsdl:input wsaw:Action="urn:S_Sesion/CreaSesion" message="S_Sesion_CreaSesion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Sesion/CreaSesionResponse" message="S_Sesion_CreaSesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenUsuarioID">
+      <wsdl:input wsaw:Action="urn:S_Sesion/ObtenUsuarioID" message="S_Sesion_ObtenUsuarioID_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Sesion/ObtenUsuarioIDResponse" message="S_Sesion_ObtenUsuarioID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSuscripcionID">
+      <wsdl:input wsaw:Action="urn:S_Sesion/ObtenSuscripcionID" message="S_Sesion_ObtenSuscripcionID_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Sesion/ObtenSuscripcionIDResponse" message="S_Sesion_ObtenSuscripcionID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenPerfilID">
+      <wsdl:input wsaw:Action="urn:S_Sesion/ObtenPerfilID" message="S_Sesion_ObtenPerfilID_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Sesion/ObtenPerfilIDResponse" message="S_Sesion_ObtenPerfilID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CierraSesion">
+      <wsdl:input wsaw:Action="urn:S_Sesion/CierraSesion" message="S_Sesion_CierraSesion_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Sesion/CierraSesionResponse" message="S_Sesion_CierraSesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenListado">
+      <wsdl:input wsaw:Action="urn:S_Sesion/ObtenListado" message="S_Sesion_ObtenListado_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Sesion/ObtenListadoResponse" message="S_Sesion_ObtenListado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenDatos">
+      <wsdl:input wsaw:Action="urn:S_Sesion/ObtenDatos" message="S_Sesion_ObtenDatos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Sesion/ObtenDatosResponse" message="S_Sesion_ObtenDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardaDatos">
+      <wsdl:input wsaw:Action="urn:S_Sesion/GuardaDatos" message="S_Sesion_GuardaDatos_InputMessage" />
+      <wsdl:output wsaw:Action="urn:S_Sesion/GuardaDatosResponse" message="S_Sesion_GuardaDatos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

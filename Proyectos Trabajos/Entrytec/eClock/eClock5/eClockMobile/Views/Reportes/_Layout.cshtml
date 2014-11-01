@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    @Styles.Render("~/Content/mobileCss", "~/Content/css", "~/Content/eClock")
+    @*@Styles.Render("~/Content/listview-grid")*@
+    @RenderSection("stylesHeader", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+
+    @Scripts.Render("~/bundles/jquerymobile")
+
+    @RenderSection("scriptsHeader", required: false)
+</head>
+
+<body>
+    <div data-role="page" data-theme="b" class="ecgrid-layout"
+        @if (IsSectionDefined("Page"))
+        {@RenderSection("Page") } >
+        <div data-role="header" data-position="fixed">
+
+            @Html.Partial("_LoginPartial")
+
+            <h1>@ViewBag.Title</h1>
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right ui-btn-inline ui-mini ">
+                @*<a href="#" onclick="return MostrarTurnos();" data-icon="tiempo" data-iconpos="notext" data-inline="true" data-role="button" data-transition="slide">Inicio</a>
+                <a href="#" onclick="return MostrarTiposIncidencias();" data-icon="justificar" data-iconpos="notext" data-inline="true" data-rel="back" data-role="button" data-transition="slide" href="/">Regresar</a>
+                *@
+            </div>
+        </div>
+
+        <div data-role="content">
+            @RenderBody()
+            <ul data-role="listview" data-inset="true">
+                @if (ViewBag.Reportes != null)
+                {
+                    foreach (eClockBase.Modelos.Reportes.Model_Reportes Reporte in ViewBag.Reportes)
+                    {
+                    <li>
+                        <a  href="#" data-icon="gear"  onclick="return Reporte (@Reporte.REPORTE_ID);">
+                            <img src="@Url.Action("Imagen")/@(Reporte.REPORTE_ID + "_80x80.jpg")" class="ui-li-thumb">
+                            <h2>@Reporte.REPORTE_TITULO</h2>
+                            <p>@Reporte.REPORTE_DESCRIP </p>
+                            @*<p class="ui-li-aside">iOS</p>*@
+                        </a>
+                        <a  href="#" data-icon="mail" onclick="return eMail (@Reporte.REPORTE_ID,'@Reporte.REPORTE_TITULO');"></a>
+                    </li>
+                    }
+                }
+            </ul>
+            <div data-role="popup" id="Ppp_MailOK" class="ui-content" data-theme="a">
+                <h2>Atención</h2>
+                <p>Se ha enviado correctamente el reporte a su correo electrónico</p>
+            </div>
+            <div data-role="popup" id="Ppp_MailError" class="ui-content" data-theme="a">
+                <h2>Error</h2>
+                <p>no se pudo enviar el reporte por mail, puede ser por que no hay datos o hay un error de comunicación</p>
+            </div>
+        </div>
+
+        @RenderSection("scripts", required: false)
+        <script>
+
+            function Reporte(ReporteID) {
+                $.mobile.loading('show', {
+                    text: "Procesando Reporte...",
+                    textVisible: true
+                });
+                var Url = "@Url.Action("ReporteAsis")/" + ReporteID + "?PersonaID=@ViewBag.PersonaID&Agrupacion=@Uri.EscapeDataString(ViewBag.Agrupacion)&FechaInicial=@eClockBase.CeC.Convierte2DateWeb(ViewBag.FechaInicial)&FechaFinal=@eClockBase.CeC.Convierte2DateWeb(ViewBag.FechaFinal)";
+                //$.mobile.changePage(Url, { transition: "slide", reloadPage: true });
+                window.location.href = Url;
+                return false;
+            }
+            function eMail(ReporteID, Titulo) {
+                $.mobile.loading('show', {
+                    text: "Enviando Reporte...",
+                    textVisible: true
+                });
+                // var Url = "@Url.Action("ReporteAsis")/" + ReporteID + "?PersonaID=@ViewBag.PersonaID&Agrupacion=@Uri.EscapeDataString(ViewBag.Agrupacion)&FechaInicial=@eClockBase.CeC.Convierte2DateWeb(ViewBag.FechaInicial)&FechaFinal=@eClockBase.CeC.Convierte2DateWeb(ViewBag.FechaFinal)";
+                $.ajax({
+                    type: 'POST',
+                    url: "@Url.Action("eMailAsis")",
+                    @*dataType: "json",
+                    contentType: "application/json; charset=utf-8",*@
+                    data: {
+                        id : ReporteID,
+                        PersonaID: '@(ViewBag.PersonaID)',
+                        Agrupacion: '@(ViewBag.Agrupacion)',
+                        FechaInicial: '@eClockBase.CeC.Convierte2DateWeb(ViewBag.FechaInicial)',
+                        FechaFinal: '@eClockBase.CeC.Convierte2DateWeb(ViewBag.FechaFinal)',
+                        Titulo: '' + Titulo
+                    },
+                    success: function (data) {
+                        $.mobile.loading("hide");
+                        if (data > 0)                            
+                            $("#Ppp_MailOK").popup("open");
+                        else 
+                            $("#Ppp_MailError").popup("open");
+                        
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        $.mobile.loading("hide");
+                        $("#Ppp_MailError").popup("open");
+                    }
+                });
+            }
+        </script>
+    </div>
+
+</body>
+</html>

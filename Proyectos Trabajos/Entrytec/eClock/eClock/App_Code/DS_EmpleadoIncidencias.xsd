@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_EmpleadoIncidencias" targetNamespace="http://tempuri.org/DS_EmpleadoIncidencias.xsd" xmlns:mstns="http://tempuri.org/DS_EmpleadoIncidencias.xsd" xmlns="http://tempuri.org/DS_EmpleadoIncidencias.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_EmpleadoIncidencias" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_EmpleadoIncidencias" msprop:Generator_DataSetName="DS_EmpleadoIncidencias">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EmpleadoIncidencias" msprop:Generator_UserTableName="EmpleadoIncidencias" msprop:Generator_RowDeletedName="EmpleadoIncidenciasRowDeleted" msprop:Generator_RowChangedName="EmpleadoIncidenciasRowChanged" msprop:Generator_RowClassName="EmpleadoIncidenciasRow" msprop:Generator_RowChangingName="EmpleadoIncidenciasRowChanging" msprop:Generator_RowEvArgName="EmpleadoIncidenciasRowChangeEvent" msprop:Generator_RowEvHandlerName="EmpleadoIncidenciasRowChangeEventHandler" msprop:Generator_TableClassName="EmpleadoIncidenciasDataTable" msprop:Generator_TableVarName="tableEmpleadoIncidencias" msprop:Generator_RowDeletingName="EmpleadoIncidenciasRowDeleting" msprop:Generator_TablePropName="EmpleadoIncidencias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMEMPLEADO" msprop:Generator_UserColumnName="NUMEMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNUMEMPLEADO" msprop:Generator_ColumnPropNameInRow="NUMEMPLEADO" msprop:Generator_ColumnPropNameInTable="NUMEMPLEADOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NOMBREEMPLEADO" msprop:Generator_UserColumnName="NOMBREEMPLEADO" msprop:Generator_ColumnVarNameInTable="columnNOMBREEMPLEADO" msprop:Generator_ColumnPropNameInRow="NOMBREEMPLEADO" msprop:Generator_ColumnPropNameInTable="NOMBREEMPLEADOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GRUPO" msprop:Generator_UserColumnName="GRUPO" msprop:Generator_ColumnVarNameInTable="columnGRUPO" msprop:Generator_ColumnPropNameInRow="GRUPO" msprop:Generator_ColumnPropNameInTable="GRUPOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia1" msprop:Generator_UserColumnName="Dia1" msprop:Generator_ColumnVarNameInTable="columnDia1" msprop:Generator_ColumnPropNameInRow="Dia1" msprop:Generator_ColumnPropNameInTable="Dia1Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia2" msprop:Generator_UserColumnName="Dia2" msprop:Generator_ColumnVarNameInTable="columnDia2" msprop:Generator_ColumnPropNameInRow="Dia2" msprop:Generator_ColumnPropNameInTable="Dia2Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia3" msprop:Generator_UserColumnName="Dia3" msprop:Generator_ColumnVarNameInTable="columnDia3" msprop:Generator_ColumnPropNameInRow="Dia3" msprop:Generator_ColumnPropNameInTable="Dia3Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia4" msprop:Generator_UserColumnName="Dia4" msprop:Generator_ColumnVarNameInTable="columnDia4" msprop:Generator_ColumnPropNameInRow="Dia4" msprop:Generator_ColumnPropNameInTable="Dia4Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia5" msprop:Generator_UserColumnName="Dia5" msprop:Generator_ColumnVarNameInTable="columnDia5" msprop:Generator_ColumnPropNameInRow="Dia5" msprop:Generator_ColumnPropNameInTable="Dia5Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia6" msprop:Generator_UserColumnName="Dia6" msprop:Generator_ColumnVarNameInTable="columnDia6" msprop:Generator_ColumnPropNameInRow="Dia6" msprop:Generator_ColumnPropNameInTable="Dia6Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia7" msprop:Generator_UserColumnName="Dia7" msprop:Generator_ColumnVarNameInTable="columnDia7" msprop:Generator_ColumnPropNameInRow="Dia7" msprop:Generator_ColumnPropNameInTable="Dia7Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia8" msprop:Generator_UserColumnName="Dia8" msprop:Generator_ColumnVarNameInTable="columnDia8" msprop:Generator_ColumnPropNameInRow="Dia8" msprop:Generator_ColumnPropNameInTable="Dia8Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia9" msprop:Generator_UserColumnName="Dia9" msprop:Generator_ColumnVarNameInTable="columnDia9" msprop:Generator_ColumnPropNameInRow="Dia9" msprop:Generator_ColumnPropNameInTable="Dia9Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia10" msprop:Generator_UserColumnName="Dia10" msprop:Generator_ColumnVarNameInTable="columnDia10" msprop:Generator_ColumnPropNameInRow="Dia10" msprop:Generator_ColumnPropNameInTable="Dia10Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia11" msprop:Generator_UserColumnName="Dia11" msprop:Generator_ColumnVarNameInTable="columnDia11" msprop:Generator_ColumnPropNameInRow="Dia11" msprop:Generator_ColumnPropNameInTable="Dia11Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia12" msprop:Generator_UserColumnName="Dia12" msprop:Generator_ColumnVarNameInTable="columnDia12" msprop:Generator_ColumnPropNameInRow="Dia12" msprop:Generator_ColumnPropNameInTable="Dia12Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia13" msprop:Generator_UserColumnName="Dia13" msprop:Generator_ColumnVarNameInTable="columnDia13" msprop:Generator_ColumnPropNameInRow="Dia13" msprop:Generator_ColumnPropNameInTable="Dia13Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia14" msprop:Generator_UserColumnName="Dia14" msprop:Generator_ColumnVarNameInTable="columnDia14" msprop:Generator_ColumnPropNameInRow="Dia14" msprop:Generator_ColumnPropNameInTable="Dia14Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia15" msprop:Generator_UserColumnName="Dia15" msprop:Generator_ColumnVarNameInTable="columnDia15" msprop:Generator_ColumnPropNameInRow="Dia15" msprop:Generator_ColumnPropNameInTable="Dia15Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia16" msprop:Generator_UserColumnName="Dia16" msprop:Generator_ColumnVarNameInTable="columnDia16" msprop:Generator_ColumnPropNameInRow="Dia16" msprop:Generator_ColumnPropNameInTable="Dia16Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia17" msprop:Generator_UserColumnName="Dia17" msprop:Generator_ColumnVarNameInTable="columnDia17" msprop:Generator_ColumnPropNameInRow="Dia17" msprop:Generator_ColumnPropNameInTable="Dia17Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia18" msprop:Generator_UserColumnName="Dia18" msprop:Generator_ColumnVarNameInTable="columnDia18" msprop:Generator_ColumnPropNameInRow="Dia18" msprop:Generator_ColumnPropNameInTable="Dia18Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia19" msprop:Generator_UserColumnName="Dia19" msprop:Generator_ColumnVarNameInTable="columnDia19" msprop:Generator_ColumnPropNameInRow="Dia19" msprop:Generator_ColumnPropNameInTable="Dia19Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia20" msprop:Generator_UserColumnName="Dia20" msprop:Generator_ColumnVarNameInTable="columnDia20" msprop:Generator_ColumnPropNameInRow="Dia20" msprop:Generator_ColumnPropNameInTable="Dia20Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia21" msprop:Generator_UserColumnName="Dia21" msprop:Generator_ColumnVarNameInTable="columnDia21" msprop:Generator_ColumnPropNameInRow="Dia21" msprop:Generator_ColumnPropNameInTable="Dia21Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia22" msprop:Generator_UserColumnName="Dia22" msprop:Generator_ColumnVarNameInTable="columnDia22" msprop:Generator_ColumnPropNameInRow="Dia22" msprop:Generator_ColumnPropNameInTable="Dia22Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia23" msprop:Generator_UserColumnName="Dia23" msprop:Generator_ColumnVarNameInTable="columnDia23" msprop:Generator_ColumnPropNameInRow="Dia23" msprop:Generator_ColumnPropNameInTable="Dia23Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia24" msprop:Generator_UserColumnName="Dia24" msprop:Generator_ColumnVarNameInTable="columnDia24" msprop:Generator_ColumnPropNameInRow="Dia24" msprop:Generator_ColumnPropNameInTable="Dia24Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia25" msprop:Generator_UserColumnName="Dia25" msprop:Generator_ColumnVarNameInTable="columnDia25" msprop:Generator_ColumnPropNameInRow="Dia25" msprop:Generator_ColumnPropNameInTable="Dia25Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia26" msprop:Generator_UserColumnName="Dia26" msprop:Generator_ColumnVarNameInTable="columnDia26" msprop:Generator_ColumnPropNameInRow="Dia26" msprop:Generator_ColumnPropNameInTable="Dia26Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia27" msprop:Generator_UserColumnName="Dia27" msprop:Generator_ColumnVarNameInTable="columnDia27" msprop:Generator_ColumnPropNameInRow="Dia27" msprop:Generator_ColumnPropNameInTable="Dia27Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia28" msprop:Generator_UserColumnName="Dia28" msprop:Generator_ColumnVarNameInTable="columnDia28" msprop:Generator_ColumnPropNameInRow="Dia28" msprop:Generator_ColumnPropNameInTable="Dia28Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia29" msprop:Generator_UserColumnName="Dia29" msprop:Generator_ColumnVarNameInTable="columnDia29" msprop:Generator_ColumnPropNameInRow="Dia29" msprop:Generator_ColumnPropNameInTable="Dia29Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia30" msprop:Generator_UserColumnName="Dia30" msprop:Generator_ColumnVarNameInTable="columnDia30" msprop:Generator_ColumnPropNameInRow="Dia30" msprop:Generator_ColumnPropNameInTable="Dia30Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Dia31" msprop:Generator_UserColumnName="Dia31" msprop:Generator_ColumnVarNameInTable="columnDia31" msprop:Generator_ColumnPropNameInRow="Dia31" msprop:Generator_ColumnPropNameInTable="Dia31Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TOTAL_A" msprop:Generator_UserColumnName="TOTAL_A" msprop:Generator_ColumnPropNameInRow="TOTAL_A" msprop:Generator_ColumnVarNameInTable="columnTOTAL_A" msprop:Generator_ColumnPropNameInTable="TOTAL_AColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTAL_R" msprop:Generator_UserColumnName="TOTAL_R" msprop:Generator_ColumnPropNameInRow="TOTAL_R" msprop:Generator_ColumnVarNameInTable="columnTOTAL_R" msprop:Generator_ColumnPropNameInTable="TOTAL_RColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTAL_F" msprop:Generator_UserColumnName="TOTAL_F" msprop:Generator_ColumnPropNameInRow="TOTAL_F" msprop:Generator_ColumnVarNameInTable="columnTOTAL_F" msprop:Generator_ColumnPropNameInTable="TOTAL_FColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTAL_J" msprop:Generator_UserColumnName="TOTAL_J" msprop:Generator_ColumnPropNameInRow="TOTAL_J" msprop:Generator_ColumnVarNameInTable="columnTOTAL_J" msprop:Generator_ColumnPropNameInTable="TOTAL_JColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

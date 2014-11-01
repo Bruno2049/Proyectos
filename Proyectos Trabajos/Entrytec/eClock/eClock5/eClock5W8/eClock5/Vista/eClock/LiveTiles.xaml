@@ -1,0 +1,32 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.Vista.eClock.LiveTiles" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="87*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="87*"/>
+        </Grid.ColumnDefinitions>
+
+        <Controles:UC_Btn_LiveTile BorderThickness="5" Titulo="Migrar"/>
+        <Controles:UC_Btn_LiveTile Grid.Row="1" BorderThickness="5" Numero="4" Titulo="Importar"/>
+        <Controles:UC_Btn_LiveTile Grid.Row="2" BorderThickness="5" Numero="7" Titulo="Asignación Turnos"/>
+        <Controles:UC_Btn_LiveTile Grid.Column="1" BorderThickness="5" Numero="2" Titulo="Campos"/>
+        <Controles:UC_Btn_LiveTile Grid.Row="1" Grid.Column="1" BorderThickness="5" Titulo="Definr Turnos" Numero="5"/>
+        <Controles:UC_Btn_LiveTile Grid.Row="2" Grid.Column="1" BorderThickness="5" Numero="8" Titulo="Días Festivos"/>
+        <Controles:UC_Btn_LiveTile Grid.Column="2" BorderThickness="5" Numero="3" Titulo="Checadores"/>
+        <Controles:UC_Btn_LiveTile Grid.Row="1" Grid.Column="2" BorderThickness="5" Numero="6" Titulo="Empleados"/>
+        <Controles:UC_Btn_LiveTile Grid.Row="2" Grid.Column="2" BorderThickness="5" Numero="9" Titulo="Asistencia Justificaciones"/>
+
+    </Grid>
+</UserControl>

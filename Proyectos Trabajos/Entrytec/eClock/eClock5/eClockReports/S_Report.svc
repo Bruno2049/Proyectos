@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="eClockReports.S_Report" CodeBehind="S_Report.svc.cs" %>

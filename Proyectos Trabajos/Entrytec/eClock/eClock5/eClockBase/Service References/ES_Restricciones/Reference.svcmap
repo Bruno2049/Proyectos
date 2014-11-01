@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="30de91eb-f0dc-44f3-8579-5f0468cc3fd9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50723/S_Restricciones.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="S_Restricciones.disco" MetadataType="Disco" ID="90bd77d8-0668-44e2-bca9-ebb7a2c62943" SourceId="1" SourceUrl="http://localhost:50723/S_Restricciones.svc?disco" />
+    <MetadataFile FileName="S_Restricciones.wsdl" MetadataType="Wsdl" ID="5e4118b4-caa1-4dd8-b453-fb81b73a9ad1" SourceId="1" SourceUrl="http://localhost:50723/S_Restricciones.svc?wsdl" />
+    <MetadataFile FileName="S_Restricciones1.wsdl" MetadataType="Wsdl" ID="ca631142-d03f-4279-aa10-2a820b5382a2" SourceId="1" SourceUrl="http://localhost:50723/S_Restricciones.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="S_Restricciones.xsd" MetadataType="Schema" ID="22e954b4-e131-47fd-abad-79ad4bbd343a" SourceId="1" SourceUrl="http://localhost:50723/S_Restricciones.svc?xsd=xsd0" />
+    <MetadataFile FileName="S_Restricciones1.xsd" MetadataType="Schema" ID="697c251a-bbc3-4963-9556-2596e049f6b2" SourceId="1" SourceUrl="http://localhost:50723/S_Restricciones.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

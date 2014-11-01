@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="eClock">
+</Property><Property Name="Archivo de la solución" Value="S:\Proyectos\EntryTec\eClock\Código Fuente\eClock\eClock.sln">
+</Property><Property Name="Date" Value="sábado, 23 de julio de 2011">
+</Property><Property Name="Time" Value="12:43 p.m.">
+</Property><Property Name="Número de registro" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="eClock.sln" Description="La solución se convirtió correctamente">
+</Event><Event ErrorLevel="3" Project="" Source="eClock.sln" Description="Converted">
+</Event></UpgradeLog>

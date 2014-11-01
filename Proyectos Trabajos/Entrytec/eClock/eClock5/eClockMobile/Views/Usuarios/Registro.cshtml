@@ -1,0 +1,69 @@
+﻿@model eClockMobile.Models.RegistroEmpleadoModel
+
+@{    
+    ViewBag.Title = "Registro";
+}
+
+
+<div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+    <div data-role="collapsible" data-collapsed="false">
+        <h3>¿Soy empleado o colaborador?</h3>
+        <p>En la empresa donde trabajo ya usan eClock</p>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary()
+
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">Detalles</li>
+
+                <li data-role="fieldcontain">
+                    @Html.LabelFor(m => m.Suscripcion)
+                    @Html.TextBoxFor(m => m.Suscripcion)
+                </li>
+
+                <li data-role="fieldcontain">
+                    @Html.LabelFor(m => m.PersonaLinkID)
+                    @Html.TextBoxFor(m => m.PersonaLinkID)
+                </li>
+
+                <li data-role="fieldcontain">
+                    @Html.LabelFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email)
+                </li>
+
+                <li data-role="fieldcontain">
+                    @Html.LabelFor(m => m.ConfirmEmail)
+                    @Html.TextBoxFor(m => m.ConfirmEmail)
+                </li>
+
+                <li data-role="fieldcontain">
+                    @Html.LabelFor(m => m.Password)
+                    @Html.PasswordFor(m => m.Password)
+                </li>
+
+                <li data-role="fieldcontain">
+                    @Html.LabelFor(m => m.ConfirmPassword)
+                    @Html.PasswordFor(m => m.ConfirmPassword)
+                </li>
+
+                <li data-role="fieldcontain">
+                    <input type="submit" value="Registrarse" />
+                </li>
+            </ul>
+        }
+    </div>
+    <div data-role="collapsible">
+        <h3>Instalar en una nueva empresa</h3>
+        <p>
+            Deseo unirme al grupo de empresas que actualmente gozan de eClock.
+            Si no tiene una cuenta contacte a su proveedor o visite <a href="http://eClock.com.mx"></a>.
+        </p>
+    </div>
+
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

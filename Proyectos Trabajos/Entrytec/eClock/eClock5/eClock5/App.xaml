@@ -1,0 +1,371 @@
+﻿<Application
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="eClock5.App"
+             StartupUri="eClock.xaml">
+    <!--StartupUri="Vista/Wizard/instalacion.xaml">-->
+    <!--StartupUri="eClock.xaml">-->
+
+    <Application.Resources>
+
+        <SolidColorBrush x:Key="AzulOscuro_Brush" Color="#FF003250"/>
+        <SolidColorBrush x:Key="AzulClaro_Brush" Color="#FF5170AF"/>
+        <SolidColorBrush x:Key="GrisOscuro_Brush" Color="#FFA09D9E"/>
+        <SolidColorBrush x:Key="GrisMedio_Brush" Color="#FFD1CFD0"/>
+        <SolidColorBrush x:Key="GrisClaro_Brush" Color="#FFE2E1E0"/>
+        <SolidColorBrush x:Key="Blanco_Brush" Color="White"/>
+        <SolidColorBrush x:Key="Negro_Brush" Color="Black"/>
+        <ImageBrush x:Key="FlechaArriba_Brush" ImageSource="pack://siteoforigin:,,,/Resources/FlechaArriba_32.png" Stretch="None" AlignmentY="Bottom"/>
+        <FontFamily x:Key="EntryTecFont">Verdana</FontFamily>
+
+        <System:Double x:Key="AltoToolBar">48</System:Double>
+        <System:Double x:Key="FontSizeParrafo">12</System:Double>
+        <System:Double x:Key="FontSizeSubTitulo">17</System:Double>
+        <System:Double x:Key="FontSizeTitulo">22</System:Double>
+        <TextAlignment x:Key="Titulo_Alineacion">Left</TextAlignment>
+        <TextAlignment x:Key="SubTituloAlineacion">Left</TextAlignment>
+        <Thickness x:Key="MargenAltoToolBar">0,48,0,0</Thickness>
+        <System:Double x:Key="AnchoHoras">60</System:Double>
+        <SolidColorBrush x:Key="AzulMuyClaro_Brush" Color="#FFD2DEF7"/>
+        <System:Double x:Key="AltoWizardTitulo">64</System:Double>
+        <GridLength x:Key="AltoToolBarGrid">48</GridLength>
+        <SolidColorBrush x:Key="RojoBrush" Color="#FFFF1A1A"/>
+        <SolidColorBrush x:Key="ColorFuenteError" Color="#FF7E0000"/>
+
+
+
+
+
+
+
+        <Style x:Key="ToogleButtonPestanasFocusVisualStyle" TargetType="{x:Type Control}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="True" Stroke="{StaticResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ToggleButtonPestanasStyle" TargetType="{x:Type ToggleButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border x:Name="border"
+               BorderThickness="0"
+               Padding="5"
+               CornerRadius="0"
+               Background="{TemplateBinding Background}" >
+                            <Grid >
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="content"/>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Foreground" Value="{StaticResource Blanco_Brush}"/>
+            <Setter Property="FontFamily" Value="{StaticResource EntryTecFont}"/>
+            <Setter Property="FontSize" Value="{StaticResource FontSizeTitulo}"/>
+            <Setter Property="Height" Value="{StaticResource AltoToolBar}"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="UseLayoutRounding" Value="False"/>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="Visibility" Value="Visible"/>
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="FocusVisualStyle" Value="{StaticResource ToogleButtonPestanasFocusVisualStyle}"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource AzulMuyClaro_Brush}"/>
+                    <Setter Property="Foreground" Value="{StaticResource Negro_Brush}"/>
+                </Trigger>
+                <Trigger Property="IsChecked" Value="true">
+                    <Setter Property="Background" Value="{StaticResource FlechaArriba_Brush}"/>
+                    <Setter Property="Foreground" Value="{StaticResource Blanco_Brush}"/>
+                </Trigger>
+
+
+            </Style.Triggers>
+
+        </Style>
+        <Style x:Key="ToggleButtonAcordionStyle" TargetType="{x:Type ToggleButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border x:Name="border"
+               BorderThickness="0"
+               Padding="0,0"
+               CornerRadius="0"
+               Background="{TemplateBinding Background}">
+                            <Grid >
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="content"/>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="{StaticResource GrisClaro_Brush}"/>
+            <Setter Property="Foreground" Value="{StaticResource Negro_Brush}"/>
+            <Setter Property="FontFamily" Value="{StaticResource EntryTecFont}"/>
+            <Setter Property="FontSize" Value="{StaticResource FontSizeTitulo}"/>
+            <Setter Property="Height" Value="{StaticResource AltoToolBar}"/>
+            <Setter Property="Margin" Value="0,0,0,4"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="UseLayoutRounding" Value="False"/>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="Visibility" Value="Visible"/>
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="FocusVisualStyle" Value="{StaticResource ToogleButtonPestanasFocusVisualStyle}"/>
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="true">
+                    <Setter Property="Background" Value="{StaticResource AzulClaro_Brush}"/>
+                    <Setter Property="Foreground" Value="{StaticResource Blanco_Brush}"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource AzulMuyClaro_Brush}"/>
+                    <Setter Property="Foreground" Value="{StaticResource Negro_Brush}"/>
+                </Trigger>
+
+            </Style.Triggers>
+
+        </Style>
+        <Style x:Key="TextBlockEtiquetaStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+
+            <Setter Property="FontFamily" Value="{DynamicResource EntryTecFont}"/>
+            <Setter Property="FontSize" Value="{DynamicResource FontSizeParrafo}"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Thickness x:Key="MargenGeneralCorto">5</Thickness>
+
+        <Thickness x:Key="MargenGeneral">10</Thickness>
+        <Style x:Key="TextBlockErrorStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="Foreground" Value="{DynamicResource ColorFuenteError}"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+
+
+        </Style>
+        <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+        </Style>
+        <Style x:Key="TextBlockCerrarSesion" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontFamily" Value="{DynamicResource EntryTecFont}"/>
+            <Setter Property="FontSize" Value="{DynamicResource FontSizeTitulo}"/>
+        </Style>
+        <Style x:Key="TextBlockTitulo" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontFamily" Value="{DynamicResource EntryTecFont}"/>
+            <Setter Property="FontSize" Value="{DynamicResource FontSizeTitulo}"/>
+        </Style>
+        <Style x:Key="TextBlockTituloStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="FontFamily" Value="{DynamicResource EntryTecFont}"/>
+            <Setter Property="FontSize" Value="{DynamicResource FontSizeTitulo}"/>
+            <Setter Property="Margin" Value="0,10,0,5"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="{DynamicResource Blanco_Brush}"/>
+        </Style>
+        <LinearGradientBrush x:Key="TextBoxBorder" EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
+            <GradientStop Color="#ABADB3" Offset="0.05"/>
+            <GradientStop Color="#E2E3EA" Offset="0.07"/>
+            <GradientStop Color="#E3E9EF" Offset="1"/>
+        </LinearGradientBrush>
+
+        <GridLength x:Key="AltoTextBox">48</GridLength>
+        <Thickness x:Key="MargenTextBoxCaptura">10,5,5,5</Thickness>
+        <Style x:Key="ButtonFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#F3F3F3" Offset="0"/>
+            <GradientStop Color="#EBEBEB" Offset="0.5"/>
+            <GradientStop Color="#DDDDDD" Offset="0.5"/>
+            <GradientStop Color="#CDCDCD" Offset="1"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070"/>
+        <Style x:Key="ButtonAceptarStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+
+        </Style>
+        
+        
+        <Thickness x:Key="BotonAceptarStyle">90,5</Thickness>
+        <SolidColorBrush x:Key="ColorFuenteSatisfactorio" Color="#FF0FE203"/>
+        <Style x:Key="TextBlockSatisfactorio" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="Foreground" Value="{DynamicResource ColorFuenteSatisfactorio}"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="TextBlockTituloWizardStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="FontFamily" Value="{DynamicResource EntryTecFont}"/>
+            <Setter Property="FontSize" Value="{DynamicResource FontSizeTitulo}"/>
+            <Setter Property="Foreground" Value="{DynamicResource Blanco_Brush}"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+        <Style x:Key="TextBlockSubTituloWizardStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="Margin" Value="110,32,0,0"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontFamily" Value="{DynamicResource EntryTecFont}"/>
+            <Setter Property="FontSize" Value="{DynamicResource FontSizeParrafo}"/>
+            <Setter Property="Foreground" Value="{DynamicResource Blanco_Brush}"/>
+
+        </Style>
+        <Style x:Key="TextBoxCampoStyle" BasedOn="{x:Null}" TargetType="{x:Type TextBox}">
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TextBoxBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="TextBlockSubTitulo" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontFamily" Value="{DynamicResource EntryTecFont}"/>
+            <Setter Property="FontSize" Value="{DynamicResource FontSizeSubTitulo}"/>
+        </Style>
+        <Style x:Key="TextBlockCampoStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+
+            <Setter Property="FontFamily" Value="{DynamicResource EntryTecFont}"/>
+            <Setter Property="FontSize" Value="{DynamicResource FontSizeParrafo}"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <SolidColorBrush x:Key="CheckBoxFillNormal" Color="#F4F4F4"/>
+        <SolidColorBrush x:Key="CheckBoxStroke" Color="#8E8F8F"/>
+        <Style x:Key="EmptyCheckBoxFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="1" SnapsToDevicePixels="true" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CheckRadioFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="14,0,0,0" SnapsToDevicePixels="true" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CheckBoxStyle" TargetType="{x:Type CheckBox}">
+            <Setter Property="Foreground" Value="{StaticResource Blanco_Brush}"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource CheckBoxStroke}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FocusVisualStyle" Value="{StaticResource EmptyCheckBoxFocusVisual}"/>
+            <Setter Property="Margin" Value="{StaticResource MargenGeneralCorto}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <BulletDecorator Background="Transparent" SnapsToDevicePixels="true">
+
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" OpacityMask="Black"/>
+                        </BulletDecorator>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasContent" Value="true">
+                                <Setter Property="FocusVisualStyle" Value="{StaticResource CheckRadioFocusVisual}"/>
+                                <Setter Property="Padding" Value="4,0,0,0"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Thickness x:Key="SinBordeThickness">0</Thickness>
+        <Style x:Key="TextBlockNumerosMenu" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="FontSize" Value="120"/>
+            <Setter Property="Foreground" Value="{DynamicResource Blanco_Brush}"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+        </Style>
+        <Style x:Key="TextBlockTitulosMenu" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="0,60,0,0"/>
+            <Setter Property="Foreground" Value="{DynamicResource Blanco_Brush}"/>
+            <Setter Property="FontFamily" Value="{DynamicResource EntryTecFont}"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="TextDecorations" Value="{x:Null}"/>
+        </Style>
+        <Style x:Key="TextBlockDescripcionMenu" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="{DynamicResource Blanco_Brush}"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+        </Style>
+
+
+
+    </Application.Resources>
+</Application>

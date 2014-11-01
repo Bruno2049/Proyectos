@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Mensajes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Contactos</h2>
+@CeC_Listado.MuestraListado(ViewBag.Contactos, "Elije un Contacto y enviale un mensaje", "Redirige")
+
+
+@section scripts
+{
+    <script type="text/javascript">
+        function Redirige(Llave) {
+            if (Llave != null) {
+                var Url = '@Url.Action("Detalles", "Mensajes")/' + Llave + ".html";
+                $.mobile.changePage(Url, { transition: "slide", reloadPage: true });
+            }
+        }
+    </script>
+}

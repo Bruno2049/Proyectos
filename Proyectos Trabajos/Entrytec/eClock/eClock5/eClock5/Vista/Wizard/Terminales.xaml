@@ -1,0 +1,23 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:eClock5="clr-namespace:eClock5" xmlns:Sitios="clr-namespace:eClock5.Vista.Sitios" 
+             xmlns:Controles="clr-namespace:eClock5.Controles"
+             xmlns:Terminales="clr-namespace:eClock5.Vista.Terminales" x:Class="eClock5.Vista.Wizard.Terminales" 
+             mc:Ignorable="d"
+             d:DesignHeight="395" d:DesignWidth="570" FontFamily="{DynamicResource EntryTecFont}" FontSize="{DynamicResource FontSizeParrafo}" IsVisibleChanged="UserControl_IsVisibleChanged">
+    <UserControl.Resources>
+        <Thickness x:Key="MargenWizard">0,64,0,0</Thickness>
+    </UserControl.Resources>
+
+    <Grid>
+        <Controles:UC_WizardTitulo VerticalAlignment="Top" Titulo="Terminales" SubTitulo="Agregue los checadores o terminales que usará en esta sucursal"/>
+
+
+        <Terminales:ListadoSimple x:Name="Lst_Terminales" Margin="{DynamicResource MargenWizard}"/>
+
+
+    </Grid>
+</UserControl>

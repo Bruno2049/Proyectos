@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1"
+    android:background="@android:color/background_light">
+    <TableRow>
+        <TextView
+            android:text="Ingresa tus datos para iniciar sesión"
+            android:id="@+id/Txv_Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="30px"
+            android:layout_span="2"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="#005544" />
+    </TableRow>
+    <TableRow
+        android:minWidth="25px"
+        android:minHeight="25px">
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="Usuario:"
+            android:id="@+id/Txv_Usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#005544" />
+        <EditText
+            android:text=""
+            android:id="@+id/Tbx_Usuario"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="Contraseña: "
+            android:id="@+id/Txv_Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#005544" />
+        <EditText
+            android:text=""
+            android:id="@+id/Tbx_Password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:password="true" />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:text="Ingresar"
+            android:id="@+id/Btn_Ingresar"
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+    </TableRow>
+    <TableRow>
+        <CheckBox
+            android:text="Recordar Sesión"
+            android:id="@+id/Chk_Recordar"
+            android:layout_span="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#005544" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text=""
+            android:id="@+id/Lbl_Estado"
+            android:layout_span="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#005544" />
+    </TableRow>
+</TableLayout>

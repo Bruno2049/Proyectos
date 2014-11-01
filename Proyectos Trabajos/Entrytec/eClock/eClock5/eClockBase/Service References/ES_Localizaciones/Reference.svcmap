@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="042a4909-7204-4bbd-9a80-5e713da00efa" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50723/S_Localizaciones.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="S_Localizaciones.disco" MetadataType="Disco" ID="a960e4af-11c2-4785-b9b0-8d2cfbd6b143" SourceId="1" SourceUrl="http://localhost:50723/S_Localizaciones.svc?disco" />
+    <MetadataFile FileName="S_Localizaciones.wsdl" MetadataType="Wsdl" ID="dcf1de83-79fa-4a10-84d6-d0ebb74b2bfc" SourceId="1" SourceUrl="http://localhost:50723/S_Localizaciones.svc?wsdl" />
+    <MetadataFile FileName="S_Localizaciones.xsd" MetadataType="Schema" ID="8a9ff02b-af0c-4cfa-aa9d-a2be9b299df0" SourceId="1" SourceUrl="http://localhost:50723/S_Localizaciones.svc?xsd=xsd0" />
+    <MetadataFile FileName="S_Localizaciones1.wsdl" MetadataType="Wsdl" ID="108f6200-7136-4233-bbcf-ad726e8c5f41" SourceId="1" SourceUrl="http://localhost:50723/S_Localizaciones.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="S_Localizaciones1.xsd" MetadataType="Schema" ID="d86d2720-8451-40b6-8538-9a7b3dc69bc6" SourceId="1" SourceUrl="http://localhost:50723/S_Localizaciones.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

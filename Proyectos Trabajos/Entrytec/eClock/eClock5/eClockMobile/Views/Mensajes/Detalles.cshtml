@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "Mensajes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Header
+{
+    @Html.Partial("_LoginPartial")
+    <h1>@ViewBag.Title</h1>
+
+    <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right ui-btn-inline ui-mini ">
+        <a href="#" onclick="BorrarMsgs();return false;" data-icon="delete" data-iconpos="notext" data-inline="true" data-rel="back" data-role="button" data-transition="slide">Borrar todos los mensajes</a>
+    </div>
+}
+@{
+    <ul data-role="listview" id="Lbx_Conversacion">
+    </ul>
+}
+
+
+<div data-role="popup" id="BorrarM" data-overlay-theme="b" class="ui-content" style="max-width: 340px; padding-bottom: 2em;">
+    <h3>Todos los mensajes fueron eliminados</h3>
+    <a href="#" class="ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-shadow ui-btn-icon-right ui-icon-check" data-rel="back">Ok</a>
+</div>
+
+
+
+<div data-role="footer" data-position="fixed">
+
+    <div>
+        <input type="text" name="Texto" id="Texto" value="" placeholder="Escribe Mensaje..." data-wrapper-class="controlgroup-textinput ui-btn">
+        <a href="#" id="Enviar" class="ui-btn ui-btn-a ui-corner-all ">Enviar</a>
+    </div>
+
+
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        function BorrarMsgs() {
+            $.ajax({
+                url: '@Url.Action("BorrarMensajes", "Mensajes")',
+                type: 'POST',
+                data: {
+                    'id': "@ViewBag.id"
+                },
+                success: function (Resultado) {
+                    $("#BorrarM").popup("open");
+                    Recargar();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+
+                    alert("Error: " + xhr.status + thrownError);
+
+                }
+            });
+        }
+
+        $('#Enviar').click(function (e) {
+            $.ajax({
+                url: '@Url.Action("EnviarMensaje", "Mensajes")',
+                type: 'POST',
+                data: {
+                    'id': "@ViewBag.id",
+                    'Texto': $('#Texto').val()
+                },
+                success: function (Resultado) {
+                    $('#Texto').val("");
+                }
+            });
+        });
+
+        $('#Borrar').click(function (e) {
+            BorrarMsgs();
+
+        });
+
+        var MailID = 0;
+        function Recargar() {
+            $.ajax({
+                type: "POST",
+                data: {
+                    'UsuarioIDCon': "@ViewBag.id",
+                    'MailID': MailID
+                },
+                url: '@Url.Action("ObtenChatsConDesde", "Mensajes")',
+                success: function (response) {
+                    var Listado = jQuery.parseJSON(response);
+                    for (var Cont = 0; Cont < Listado.length; Cont++) {
+                        $('#Lbx_Conversacion').append('<li><h2>' + Listado[Cont].Nombre + '</h2><p id="Normal">' + Listado[Cont].Descripcion + '</p></li>');
+                        MailID = Listado[Cont].Llave;
+                    }
+                    if (Listado.length > 0) {
+                        $('ul').listview('refresh');
+                        var $elem = $('#content');
+                        $('html, body').animate({ scrollTop: $('ul').height() }, 800);
+
+                    }
+                    var Contador = setTimeout(function () {
+                        Recargar();
+                    }, 5000);
+                },
+                error: function (xhr, status, error) {
+                    alert(status + " : " + error);
+                }
+            });
+        }
+        Recargar();
+    </script>
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="-1138" viewPortTop="950" zoom="100">
+    <EC_PERSONAS_DIARIOE_XmlElement left="-1958" top="265" width="9842" height="9736" selected="0" zOrder="0" index="0" expanded="1" />
+    <EC_ACCESOSE_XmlElement left="158" top="10981" width="7990" height="4656" selected="0" zOrder="1" index="1" expanded="1" />
+    <EC_TIPO_INCIDENCIAS_XmlElement left="8599" top="2699" width="10159" height="5080" selected="0" zOrder="2" index="2" expanded="1" />
+</XSDDesignerLayout>

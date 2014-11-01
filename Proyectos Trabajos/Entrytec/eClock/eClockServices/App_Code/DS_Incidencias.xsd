@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Incidencias" targetNamespace="http://www.tempuri.org/DS_Incidencias.xsd" xmlns:mstns="http://www.tempuri.org/DS_Incidencias.xsd" xmlns="http://www.tempuri.org/DS_Incidencias.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EC_TIPO_INCIDENCIAS_CETableAdapter" GeneratorDataComponentClassName="EC_TIPO_INCIDENCIAS_CETableAdapter" Name="EC_TIPO_INCIDENCIAS_CE" UserDataComponentName="EC_TIPO_INCIDENCIAS_CETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_TIPO_INCIDENCIAS.TIPO_INCIDENCIA_ID, EC_TIPO_INCIDENCIAS.TIPO_INCIDENCIA_NOMBRE, EC_TIPO_INCIDENCIAS.TIPO_INCIDENCIA_ABR, 
+                         EC_TIPO_INCIDENCIAS_EX.TIPO_INCIDENCIAS_EX_PARAM, EC_TIPO_INCIDENCIAS_EX.TIPO_FALTA_EX_ID
+FROM            EC_TIPO_INCIDENCIAS_EX INNER JOIN
+                         EC_TIPO_INCIDENCIAS_EX_INC ON 
+                         EC_TIPO_INCIDENCIAS_EX.TIPO_INCIDENCIAS_EX_ID = EC_TIPO_INCIDENCIAS_EX_INC.TIPO_INCIDENCIAS_EX_ID RIGHT OUTER JOIN
+                         EC_TIPO_INCIDENCIAS ON EC_TIPO_INCIDENCIAS_EX_INC.TIPO_INCIDENCIA_ID = EC_TIPO_INCIDENCIAS.TIPO_INCIDENCIA_ID
+WHERE        (EC_TIPO_INCIDENCIAS.TIPO_INCIDENCIA_BORRADO = 0)</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TIPO_INCIDENCIA_ID" DataSetColumn="TIPO_INCIDENCIA_ID" />
+              <Mapping SourceColumn="TIPO_INCIDENCIA_NOMBRE" DataSetColumn="TIPO_INCIDENCIA_NOMBRE" />
+              <Mapping SourceColumn="TIPO_INCIDENCIA_ABR" DataSetColumn="TIPO_INCIDENCIA_ABR" />
+              <Mapping SourceColumn="TIPO_INCIDENCIAS_EX_PARAM" DataSetColumn="TIPO_INCIDENCIAS_EX_PARAM" />
+              <Mapping SourceColumn="TIPO_FALTA_EX_ID" DataSetColumn="TIPO_FALTA_EX_ID" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Incidencias" msdata:IsDataSet="true" msdata:Locale="es-MX" msprop:Generator_UserDSName="DS_Incidencias" msprop:Generator_DataSetName="DS_Incidencias">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EC_PERSONASINCIDENCIASE" msprop:Generator_UserTableName="EC_PERSONASINCIDENCIASE" msprop:Generator_RowDeletedName="EC_PERSONASINCIDENCIASERowDeleted" msprop:Generator_TableClassName="EC_PERSONASINCIDENCIASEDataTable" msprop:Generator_RowChangedName="EC_PERSONASINCIDENCIASERowChanged" msprop:Generator_RowClassName="EC_PERSONASINCIDENCIASERow" msprop:Generator_RowChangingName="EC_PERSONASINCIDENCIASERowChanging" msprop:Generator_RowEvArgName="EC_PERSONASINCIDENCIASERowChangeEvent" msprop:Generator_RowEvHandlerName="EC_PERSONASINCIDENCIASERowChangeEventHandler" msprop:Generator_TablePropName="EC_PERSONASINCIDENCIASE" msprop:Generator_TableVarName="tableEC_PERSONASINCIDENCIASE" msprop:Generator_RowDeletingName="EC_PERSONASINCIDENCIASERowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_ID" msprop:Generator_UserColumnName="PERSONA_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_IDColumn" type="xs:decimal" />
+              <xs:element name="TRANOM" msprop:Generator_UserColumnName="TRANOM" msprop:Generator_ColumnPropNameInRow="TRANOM" msprop:Generator_ColumnVarNameInTable="columnTRANOM" msprop:Generator_ColumnPropNameInTable="TRANOMColumn" type="xs:string" />
+              <xs:element name="DATARE" msprop:Generator_UserColumnName="DATARE" msprop:Generator_ColumnPropNameInRow="DATARE" msprop:Generator_ColumnVarNameInTable="columnDATARE" msprop:Generator_ColumnPropNameInTable="DATAREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DATDEP" msprop:Generator_UserColumnName="DATDEP" msprop:Generator_ColumnPropNameInRow="DATDEP" msprop:Generator_ColumnVarNameInTable="columnDATDEP" msprop:Generator_ColumnPropNameInTable="DATDEPColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DATCCT" msprop:Generator_UserColumnName="DATCCT" msprop:Generator_ColumnPropNameInRow="DATCCT" msprop:Generator_ColumnVarNameInTable="columnDATCCT" msprop:Generator_ColumnPropNameInTable="DATCCTColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CNOCVE" msprop:Generator_UserColumnName="CNOCVE" msprop:Generator_ColumnPropNameInRow="CNOCVE" msprop:Generator_ColumnVarNameInTable="columnCNOCVE" msprop:Generator_ColumnPropNameInTable="CNOCVEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CIACVE" msprop:Generator_UserColumnName="CIACVE" msprop:Generator_ColumnPropNameInRow="CIACVE" msprop:Generator_ColumnVarNameInTable="columnCIACVE" msprop:Generator_ColumnPropNameInTable="CIACVEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PERSONA_BORRADO" msprop:Generator_UserColumnName="PERSONA_BORRADO" msprop:Generator_ColumnPropNameInRow="PERSONA_BORRADO" msprop:Generator_ColumnVarNameInTable="columnPERSONA_BORRADO" msprop:Generator_ColumnPropNameInTable="PERSONA_BORRADOColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_INCIDENCIAS" msprop:Generator_UserTableName="EC_INCIDENCIAS" msprop:Generator_RowDeletedName="EC_INCIDENCIASRowDeleted" msprop:Generator_TableClassName="EC_INCIDENCIASDataTable" msprop:Generator_RowChangedName="EC_INCIDENCIASRowChanged" msprop:Generator_RowClassName="EC_INCIDENCIASRow" msprop:Generator_RowChangingName="EC_INCIDENCIASRowChanging" msprop:Generator_RowEvArgName="EC_INCIDENCIASRowChangeEvent" msprop:Generator_RowEvHandlerName="EC_INCIDENCIASRowChangeEventHandler" msprop:Generator_TablePropName="EC_INCIDENCIAS" msprop:Generator_TableVarName="tableEC_INCIDENCIAS" msprop:Generator_RowDeletingName="EC_INCIDENCIASRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="INCIDENCIA_ID" msprop:Generator_UserColumnName="INCIDENCIA_ID" msprop:Generator_ColumnPropNameInRow="INCIDENCIA_ID" msprop:Generator_ColumnVarNameInTable="columnINCIDENCIA_ID" msprop:Generator_ColumnPropNameInTable="INCIDENCIA_IDColumn" type="xs:decimal" />
+              <xs:element name="TIPO_INCIDENCIA_ID" msprop:Generator_UserColumnName="TIPO_INCIDENCIA_ID" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIA_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIA_ID" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIA_IDColumn" type="xs:decimal" />
+              <xs:element name="INCIDENCIA_COMENTARIO" msprop:Generator_UserColumnName="INCIDENCIA_COMENTARIO" msprop:Generator_ColumnPropNameInRow="INCIDENCIA_COMENTARIO" msprop:Generator_ColumnVarNameInTable="columnINCIDENCIA_COMENTARIO" msprop:Generator_ColumnPropNameInTable="INCIDENCIA_COMENTARIOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SESION_ID" msprop:Generator_UserColumnName="SESION_ID" msprop:Generator_ColumnPropNameInRow="SESION_ID" msprop:Generator_ColumnVarNameInTable="columnSESION_ID" msprop:Generator_ColumnPropNameInTable="SESION_IDColumn" type="xs:decimal" />
+              <xs:element name="INCIDENCIA_FECHAHORA" msdata:ReadOnly="true" msprop:Generator_UserColumnName="INCIDENCIA_FECHAHORA" msprop:Generator_ColumnPropNameInRow="INCIDENCIA_FECHAHORA" msprop:Generator_ColumnVarNameInTable="columnINCIDENCIA_FECHAHORA" msprop:Generator_ColumnPropNameInTable="INCIDENCIA_FECHAHORAColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_TIPO_INCIDENCIAS" msprop:Generator_UserTableName="EC_TIPO_INCIDENCIAS" msprop:Generator_RowDeletedName="EC_TIPO_INCIDENCIASRowDeleted" msprop:Generator_TableClassName="EC_TIPO_INCIDENCIASDataTable" msprop:Generator_RowChangedName="EC_TIPO_INCIDENCIASRowChanged" msprop:Generator_RowClassName="EC_TIPO_INCIDENCIASRow" msprop:Generator_RowChangingName="EC_TIPO_INCIDENCIASRowChanging" msprop:Generator_RowEvArgName="EC_TIPO_INCIDENCIASRowChangeEvent" msprop:Generator_RowEvHandlerName="EC_TIPO_INCIDENCIASRowChangeEventHandler" msprop:Generator_TablePropName="EC_TIPO_INCIDENCIAS" msprop:Generator_TableVarName="tableEC_TIPO_INCIDENCIAS" msprop:Generator_RowDeletingName="EC_TIPO_INCIDENCIASRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPO_INCIDENCIA_ID" msprop:Generator_UserColumnName="TIPO_INCIDENCIA_ID" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIA_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIA_ID" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIA_IDColumn" type="xs:decimal" />
+              <xs:element name="TIPO_INCIDENCIA_NOMBRE" msprop:Generator_UserColumnName="TIPO_INCIDENCIA_NOMBRE" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIA_NOMBRE" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIA_NOMBREColumn" type="xs:string" />
+              <xs:element name="TIPO_INCIDENCIA_ABR" msprop:Generator_UserColumnName="TIPO_INCIDENCIA_ABR" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIA_ABR" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIA_ABR" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIA_ABRColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIPO_INCIDENCIA_BORRADO" msprop:Generator_UserColumnName="TIPO_INCIDENCIA_BORRADO" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIA_BORRADO" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIA_BORRADO" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIA_BORRADOColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_PERSONAS_DIARIO_Update" msprop:Generator_UserTableName="EC_PERSONAS_DIARIO_Update" msprop:Generator_RowDeletedName="EC_PERSONAS_DIARIO_UpdateRowDeleted" msprop:Generator_TableClassName="EC_PERSONAS_DIARIO_UpdateDataTable" msprop:Generator_RowChangedName="EC_PERSONAS_DIARIO_UpdateRowChanged" msprop:Generator_RowClassName="EC_PERSONAS_DIARIO_UpdateRow" msprop:Generator_RowChangingName="EC_PERSONAS_DIARIO_UpdateRowChanging" msprop:Generator_RowEvArgName="EC_PERSONAS_DIARIO_UpdateRowChangeEvent" msprop:Generator_RowEvHandlerName="EC_PERSONAS_DIARIO_UpdateRowChangeEventHandler" msprop:Generator_TablePropName="EC_PERSONAS_DIARIO_Update" msprop:Generator_TableVarName="tableEC_PERSONAS_DIARIO_Update" msprop:Generator_RowDeletingName="EC_PERSONAS_DIARIO_UpdateRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_DIARIO_ID" msprop:Generator_UserColumnName="PERSONA_DIARIO_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_DIARIO_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_DIARIO_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_DIARIO_IDColumn" type="xs:decimal" />
+              <xs:element name="PERSONA_ID" msprop:Generator_UserColumnName="PERSONA_ID" msprop:Generator_ColumnPropNameInRow="PERSONA_ID" msprop:Generator_ColumnVarNameInTable="columnPERSONA_ID" msprop:Generator_ColumnPropNameInTable="PERSONA_IDColumn" type="xs:decimal" />
+              <xs:element name="PERSONA_DIARIO_FECHA" msprop:Generator_UserColumnName="PERSONA_DIARIO_FECHA" msprop:Generator_ColumnPropNameInRow="PERSONA_DIARIO_FECHA" msprop:Generator_ColumnVarNameInTable="columnPERSONA_DIARIO_FECHA" msprop:Generator_ColumnPropNameInTable="PERSONA_DIARIO_FECHAColumn" type="xs:dateTime" />
+              <xs:element name="INCIDENCIA_ID" msprop:Generator_UserColumnName="INCIDENCIA_ID" msprop:Generator_ColumnPropNameInRow="INCIDENCIA_ID" msprop:Generator_ColumnVarNameInTable="columnINCIDENCIA_ID" msprop:Generator_ColumnPropNameInTable="INCIDENCIA_IDColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EC_TIPO_INCIDENCIAS_CE" msprop:Generator_UserTableName="EC_TIPO_INCIDENCIAS_CE" msprop:Generator_RowDeletedName="EC_TIPO_INCIDENCIAS_CERowDeleted" msprop:Generator_TableClassName="EC_TIPO_INCIDENCIAS_CEDataTable" msprop:Generator_RowChangedName="EC_TIPO_INCIDENCIAS_CERowChanged" msprop:Generator_RowClassName="EC_TIPO_INCIDENCIAS_CERow" msprop:Generator_RowChangingName="EC_TIPO_INCIDENCIAS_CERowChanging" msprop:Generator_RowEvArgName="EC_TIPO_INCIDENCIAS_CERowChangeEvent" msprop:Generator_RowEvHandlerName="EC_TIPO_INCIDENCIAS_CERowChangeEventHandler" msprop:Generator_TablePropName="EC_TIPO_INCIDENCIAS_CE" msprop:Generator_TableVarName="tableEC_TIPO_INCIDENCIAS_CE" msprop:Generator_RowDeletingName="EC_TIPO_INCIDENCIAS_CERowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPO_INCIDENCIA_ID" msprop:Generator_UserColumnName="TIPO_INCIDENCIA_ID" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIA_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIA_ID" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIA_IDColumn" type="xs:decimal" />
+              <xs:element name="TIPO_INCIDENCIA_NOMBRE" msprop:Generator_UserColumnName="TIPO_INCIDENCIA_NOMBRE" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIA_NOMBRE" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIA_NOMBREColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_INCIDENCIA_ABR" msprop:Generator_UserColumnName="TIPO_INCIDENCIA_ABR" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIA_ABR" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIA_ABR" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIA_ABRColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_INCIDENCIAS_EX_PARAM" msprop:Generator_UserColumnName="TIPO_INCIDENCIAS_EX_PARAM" msprop:Generator_ColumnPropNameInRow="TIPO_INCIDENCIAS_EX_PARAM" msprop:Generator_ColumnVarNameInTable="columnTIPO_INCIDENCIAS_EX_PARAM" msprop:Generator_ColumnPropNameInTable="TIPO_INCIDENCIAS_EX_PARAMColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_FALTA_EX_ID" msprop:Generator_UserColumnName="TIPO_FALTA_EX_ID" msprop:Generator_ColumnPropNameInRow="TIPO_FALTA_EX_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_FALTA_EX_ID" msprop:Generator_ColumnPropNameInTable="TIPO_FALTA_EX_IDColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_PERSONAS_DIARIO_Update" />
+      <xs:field xpath="mstns:PERSONA_DIARIO_ID" />
+    </xs:unique>
+    <xs:unique name="EC_TIPO_INCIDENCIAS_CE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EC_TIPO_INCIDENCIAS_CE" />
+      <xs:field xpath="mstns:TIPO_INCIDENCIA_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

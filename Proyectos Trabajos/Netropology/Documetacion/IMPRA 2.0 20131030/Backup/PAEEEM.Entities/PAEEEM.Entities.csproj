@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4ABD974D-C681-44BD-8A2B-88133BC5C082}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PAEEEM.Entities</RootNamespace>
+    <AssemblyName>PAEEEM.Entities</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CentralModule\CAT_PRODUCTOModel.cs" />
+    <Compile Include="CentralModule\K_TARIFA_COSTOEntity.cs" />
+    <Compile Include="DisposalModule\K_ACTA_CIRCUNSTANCIADAEntity.cs" />
+    <Compile Include="DisposalModule\K_ACTA_INHABILITACIONEntity.cs" />
+    <Compile Include="DisposalModule\K_ACTA_RECUPERACIONEntity.cs" />
+    <Compile Include="DisposalModule\K_CORTE_PARCIALEntity.cs" />
+    <Compile Include="DisposalModule\K_INHABILITACIONEntity.cs" />
+    <Compile Include="DisposalModule\K_PRODUCTO_CHARACTERSEntity.cs" />
+    <Compile Include="DisposalModule\K_RECUPERACIONEntity.cs" />
+    <Compile Include="DisposalModule\K_RECUP_RESIDUOSEntity.cs" />
+    <Compile Include="DisposalModule\K_RELACION_ACTA_CORTESEntity.cs" />
+    <Compile Include="DisposalModule\ScheduledNotificationEntity.cs" />
+    <Compile Include="RegionalModule\CAT_CENTRO_DISPEntity.cs" />
+    <Compile Include="RegionalModule\CAT_CENTRO_DISP_SUCURSALEntity.cs" />
+    <Compile Include="RegionalModule\K_CAT_PROVEEDOR_CAT_CENTRO_DISPEntity.cs" />
+    <Compile Include="RegionalModule\K_CENTRO_DISP_TECNOLOGIAEntity.cs" />
+    <Compile Include="SupplierModule\CAT_AUXILIAREntity.cs" />
+    <Compile Include="SupplierModule\K_CREDITO_DESCUENTOEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionalModule\CAT_ESTATUS_CREDITOEntity.cs" />
+    <Compile Include="RegionalModule\CAT_PROVEEDOREntity.cs" />
+    <Compile Include="RegionalModule\CAT_TECNOLOGIAEntity.cs" />
+    <Compile Include="RegionalModule\RegionalEntity.cs" />
+    <Compile Include="SupplierModule\CreditEntity.cs" />
+    <Compile Include="SupplierModule\K_CREDITO_COSTOEntity.cs" />
+    <Compile Include="SupplierModule\K_CREDITO_PRODUCTOEntity.cs" />
+    <Compile Include="SupplierModule\K_CREDITO_SUSTITUCIONEntity.cs" />
+    <Compile Include="SupplierModule\K_CREDITO_TEMPEntity.cs" />
+    <Compile Include="SupplierModule\K_PROVEEDOR_PRODUCTOEntity.cs" />
+    <Compile Include="SupplierModule\ProductCapacityEntity.cs" />
+    <Compile Include="SupplierModule\ScheduleJobEntity.cs" />
+    <Compile Include="SupplierModule\SupplierBranchEntity.cs" />
+    <Compile Include="SupplierModule\SupplierEntity.cs" />
+    <Compile Include="SupplierModule\TechnologyTypeEntity.cs" />
+    <Compile Include="UserModule\US_NAVEGACIONEntity.cs" />
+    <Compile Include="UserModule\US_OPERACIONEntity.cs" />
+    <Compile Include="UserModule\US_PERMISOEntity.cs" />
+    <Compile Include="UserModule\US_ROLEntity.cs" />
+    <Compile Include="UserModule\US_ROL_PERMISOEntity.cs" />
+    <Compile Include="UserModule\US_USUARIOEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PAEEEM.Helpers\PAEEEM.Helpers.csproj">
+      <Project>{CC5C065F-75C1-40A7-821F-3B33D97C4BC8}</Project>
+      <Name>PAEEEM.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

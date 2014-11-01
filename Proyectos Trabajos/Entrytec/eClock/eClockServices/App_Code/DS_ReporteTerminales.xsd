@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_ReporteTerminales" targetNamespace="http://tempuri.org/DS_ReporteTerminales.xsd" xmlns:mstns="http://tempuri.org/DS_ReporteTerminales.xsd" xmlns="http://tempuri.org/DS_ReporteTerminales.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteTerminalesTableAdapter" GeneratorDataComponentClassName="ReporteTerminalesTableAdapter" Name="ReporteTerminales" UserDataComponentName="ReporteTerminalesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT        EC_TIPO_TECNOLOGIAS.TIPO_TECNOLOGIA_NOMBRE, EC_TERMINALES.TERMINAL_ID, EC_TERMINALES.TERMINAL_NOMBRE, 
+                         EC_MODELOS_TERMINALES.MODELO_TERMINAL_NOMBRE
+FROM            EC_TERMINALES INNER JOIN
+                         EC_TIPO_TECNOLOGIAS ON EC_TERMINALES.TIPO_TECNOLOGIA_ID = EC_TIPO_TECNOLOGIAS.TIPO_TECNOLOGIA_ID INNER JOIN
+                         EC_MODELOS_TERMINALES ON EC_TERMINALES.MODELO_TERMINAL_ID = EC_MODELOS_TERMINALES.MODELO_TERMINAL_ID WHERE EC_TERMINALES.TERMINAL_ID &gt; 0 AND EC_TERMINALES.TERMINAL_BORRADO = 0 </CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TIPO_TECNOLOGIA_NOMBRE" DataSetColumn="TIPO_TECNOLOGIA_NOMBRE" />
+              <Mapping SourceColumn="TERMINAL_ID" DataSetColumn="TERMINAL_ID" />
+              <Mapping SourceColumn="TERMINAL_NOMBRE" DataSetColumn="TERMINAL_NOMBRE" />
+              <Mapping SourceColumn="MODELO_TERMINAL_NOMBRE" DataSetColumn="MODELO_TERMINAL_NOMBRE" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="CeT_DataTable" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteTerminales2TableAdapter" GeneratorDataComponentClassName="ReporteTerminales2TableAdapter" Name="ReporteTerminales2" UserDataComponentName="ReporteTerminales2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillReporteTerminales" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetDataReporteTerminales" GeneratorSourceName="FillReporteTerminales" GetMethodModifier="Public" GetMethodName="GetDataReporteTerminales" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetDataReporteTerminales" UserSourceName="FillReporteTerminales">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT        EC_TERMINALES.TERMINAL_ID, EC_TERMINALES.TERMINAL_NOMBRE, EC_TERMINALES.TERMINAL_DIR, 
+                         EC_MODELOS_TERMINALES.MODELO_TERMINAL_NOMBRE, EC_TIPO_TECNOLOGIAS_1.TIPO_TECNOLOGIA_NOMBRE, 
+                         EC_TIPO_TECNOLOGIAS.TIPO_TECNOLOGIA_NOMBRE AS TIPO_TECNOLOGIA_NOMBRE_ADD
+FROM            EC_TIPO_TECNOLOGIAS RIGHT OUTER JOIN
+                         EC_TERMINALES ON EC_TIPO_TECNOLOGIAS.TIPO_TECNOLOGIA_ID = EC_TERMINALES.TIPO_TECNOLOGIA_ADD_ID LEFT OUTER JOIN
+                         EC_MODELOS_TERMINALES ON EC_TERMINALES.MODELO_TERMINAL_ID = EC_MODELOS_TERMINALES.MODELO_TERMINAL_ID LEFT OUTER JOIN
+                         EC_TIPO_TECNOLOGIAS AS EC_TIPO_TECNOLOGIAS_1 ON 
+                         EC_TERMINALES.TIPO_TECNOLOGIA_ID = EC_TIPO_TECNOLOGIAS_1.TIPO_TECNOLOGIA_ID
+WHERE        (EC_TERMINALES.TERMINAL_BORRADO = 0) AND (EC_TERMINALES.TERMINAL_ID &gt; 0)
+ORDER BY EC_TERMINALES.TERMINAL_ID</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TERMINAL_ID" DataSetColumn="TERMINAL_ID" />
+              <Mapping SourceColumn="TERMINAL_NOMBRE" DataSetColumn="TERMINAL_NOMBRE" />
+              <Mapping SourceColumn="TERMINAL_DIR" DataSetColumn="TERMINAL_DIR" />
+              <Mapping SourceColumn="MODELO_TERMINAL_NOMBRE" DataSetColumn="MODELO_TERMINAL_NOMBRE" />
+              <Mapping SourceColumn="TIPO_TECNOLOGIA_NOMBRE" DataSetColumn="TIPO_TECNOLOGIA_NOMBRE" />
+              <Mapping SourceColumn="TIPO_TECNOLOGIA_NOMBRE_ADD" DataSetColumn="TIPO_TECNOLOGIA_NOMBRE_ADD" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_ReporteTerminales" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_ReporteTerminales" msprop:Generator_DataSetName="DS_ReporteTerminales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteTerminales" msprop:Generator_UserTableName="ReporteTerminales" msprop:Generator_RowDeletedName="ReporteTerminalesRowDeleted" msprop:Generator_RowChangedName="ReporteTerminalesRowChanged" msprop:Generator_RowClassName="ReporteTerminalesRow" msprop:Generator_RowChangingName="ReporteTerminalesRowChanging" msprop:Generator_RowEvArgName="ReporteTerminalesRowChangeEvent" msprop:Generator_RowEvHandlerName="ReporteTerminalesRowChangeEventHandler" msprop:Generator_TableClassName="ReporteTerminalesDataTable" msprop:Generator_TableVarName="tableReporteTerminales" msprop:Generator_RowDeletingName="ReporteTerminalesRowDeleting" msprop:Generator_TablePropName="ReporteTerminales">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPO_TECNOLOGIA_NOMBRE" msprop:Generator_UserColumnName="TIPO_TECNOLOGIA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnTIPO_TECNOLOGIA_NOMBRE" msprop:Generator_ColumnPropNameInRow="TIPO_TECNOLOGIA_NOMBRE" msprop:Generator_ColumnPropNameInTable="TIPO_TECNOLOGIA_NOMBREColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TERMINAL_ID" msprop:Generator_UserColumnName="TERMINAL_ID" msprop:Generator_ColumnVarNameInTable="columnTERMINAL_ID" msprop:Generator_ColumnPropNameInRow="TERMINAL_ID" msprop:Generator_ColumnPropNameInTable="TERMINAL_IDColumn" type="xs:decimal" />
+              <xs:element name="TERMINAL_NOMBRE" msprop:Generator_UserColumnName="TERMINAL_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnTERMINAL_NOMBRE" msprop:Generator_ColumnPropNameInRow="TERMINAL_NOMBRE" msprop:Generator_ColumnPropNameInTable="TERMINAL_NOMBREColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODELO_TERMINAL_NOMBRE" msprop:Generator_UserColumnName="MODELO_TERMINAL_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnMODELO_TERMINAL_NOMBRE" msprop:Generator_ColumnPropNameInRow="MODELO_TERMINAL_NOMBRE" msprop:Generator_ColumnPropNameInTable="MODELO_TERMINAL_NOMBREColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReporteTerminales2" msprop:Generator_UserTableName="ReporteTerminales2" msprop:Generator_RowDeletedName="ReporteTerminales2RowDeleted" msprop:Generator_RowChangedName="ReporteTerminales2RowChanged" msprop:Generator_RowClassName="ReporteTerminales2Row" msprop:Generator_RowChangingName="ReporteTerminales2RowChanging" msprop:Generator_RowEvArgName="ReporteTerminales2RowChangeEvent" msprop:Generator_RowEvHandlerName="ReporteTerminales2RowChangeEventHandler" msprop:Generator_TableClassName="ReporteTerminales2DataTable" msprop:Generator_TableVarName="tableReporteTerminales2" msprop:Generator_RowDeletingName="ReporteTerminales2RowDeleting" msprop:Generator_TablePropName="ReporteTerminales2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TERMINAL_ID" msprop:Generator_UserColumnName="TERMINAL_ID" msprop:Generator_ColumnPropNameInRow="TERMINAL_ID" msprop:Generator_ColumnVarNameInTable="columnTERMINAL_ID" msprop:Generator_ColumnPropNameInTable="TERMINAL_IDColumn" type="xs:decimal" />
+              <xs:element name="TERMINAL_NOMBRE" msprop:Generator_UserColumnName="TERMINAL_NOMBRE" msprop:Generator_ColumnPropNameInRow="TERMINAL_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnTERMINAL_NOMBRE" msprop:Generator_ColumnPropNameInTable="TERMINAL_NOMBREColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TERMINAL_DIR" msprop:Generator_UserColumnName="TERMINAL_DIR" msprop:Generator_ColumnPropNameInRow="TERMINAL_DIR" msprop:Generator_ColumnVarNameInTable="columnTERMINAL_DIR" msprop:Generator_ColumnPropNameInTable="TERMINAL_DIRColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODELO_TERMINAL_NOMBRE" msprop:Generator_UserColumnName="MODELO_TERMINAL_NOMBRE" msprop:Generator_ColumnPropNameInRow="MODELO_TERMINAL_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnMODELO_TERMINAL_NOMBRE" msprop:Generator_ColumnPropNameInTable="MODELO_TERMINAL_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_TECNOLOGIA_NOMBRE" msprop:Generator_UserColumnName="TIPO_TECNOLOGIA_NOMBRE" msprop:Generator_ColumnPropNameInRow="TIPO_TECNOLOGIA_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnTIPO_TECNOLOGIA_NOMBRE" msprop:Generator_ColumnPropNameInTable="TIPO_TECNOLOGIA_NOMBREColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_TECNOLOGIA_NOMBRE_ADD" msprop:Generator_UserColumnName="TIPO_TECNOLOGIA_NOMBRE_ADD" msprop:Generator_ColumnVarNameInTable="columnTIPO_TECNOLOGIA_NOMBRE_ADD" msprop:Generator_ColumnPropNameInRow="TIPO_TECNOLOGIA_NOMBRE_ADD" msprop:Generator_ColumnPropNameInTable="TIPO_TECNOLOGIA_NOMBRE_ADDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ReporteTerminales" />
+      <xs:field xpath="mstns:TERMINAL_ID" />
+    </xs:unique>
+    <xs:unique name="ReporteTerminales2_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ReporteTerminales2" />
+      <xs:field xpath="mstns:TERMINAL_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

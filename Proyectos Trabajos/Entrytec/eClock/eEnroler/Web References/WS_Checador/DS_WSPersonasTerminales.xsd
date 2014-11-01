@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DS_WSChecador.xsd" xmlns="http://tempuri.org/DS_WSChecador.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DS_WSChecador.xsd" id="DS_WSPersonasTerminales" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DS_WSPersonasTerminales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_Personas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_T1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_T2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_T3">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PERSONA_NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONA_LINK_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERSONA_ID_S_HUELLA" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_PersonasTerminales">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_T1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_T2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_T3">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PERSONA_NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERSONA_LINK_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERSONA_ID_S_HUELLA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_1" type="xs:base64Binary" />
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_2" type="xs:base64Binary" />
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_3" type="xs:base64Binary" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ITW_TERMINALES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TERMINAL_ID" type="xs:decimal" />
+              <xs:element name="TERMINAL_NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ALMACEN_VEC_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SITIO_ID" type="xs:decimal" />
+              <xs:element name="MODELO_TERMINAL_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPO_TECNOLOGIA_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPO_TECNOLOGIA_ADD_ID" type="xs:decimal" />
+              <xs:element name="TERMINAL_SINCRONIZACION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TERMINAL_CAMPO_LLAVE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TERMINAL_CAMPO_ADICIONAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TERMINAL_ENROLA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TERMINAL_DIR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TERMINAL_ASISTENCIA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TERMINAL_COMIDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TERMINAL_MINUTOS_DIF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TERMINAL_VALIDAHORARIOE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TERMINAL_VALIDAHORARIOS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TERMINAL_BORRADO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ITW_SITIOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SITIO_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SITIO_NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SITIO_CONSULTA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SITIO_HDESDE_SVEC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SITIO_HHASTA_SVEC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SITIO_SEGUNDOS_SYNC" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_CHECADAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ID" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHAHORA" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TIPO_ACCESO_ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_Vectores">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONAS_A_VEC_T1" type="xs:string" />
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_T2" type="xs:string" />
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_1" type="xs:base64Binary" />
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_2" type="xs:base64Binary" />
+              <xs:element minOccurs="0" name="PERSONAS_A_VEC_3" type="xs:base64Binary" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:DT_PersonasTerminales" />
+      <xs:field xpath="mstns:PERSONA_ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="ITW_TERMINALES_Constraint1">
+      <xs:selector xpath=".//mstns:ITW_TERMINALES" />
+      <xs:field xpath="mstns:TERMINAL_ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="ITW_SITIOS_Constraint1">
+      <xs:selector xpath=".//mstns:ITW_SITIOS" />
+      <xs:field xpath="mstns:SITIO_ID" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DT_VectoresKey1">
+      <xs:selector xpath=".//mstns:DT_Vectores" />
+      <xs:field xpath="mstns:PERSONAS_A_VEC_T1" />
+    </xs:unique>
+  </xs:element>
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DS_WSChecador">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PERSONAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONA_ID" type="xs:decimal" />
+              <xs:element name="PERSONA_LINK_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERSONA_NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="GRUPO_1_NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

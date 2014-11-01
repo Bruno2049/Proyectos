@@ -1,0 +1,90 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:eClock5="clr-namespace:eClock5" xmlns:Controles="clr-namespace:eClock5.Controles" x:Class="eClock5.Vista.Campos.ListadoCamposEmpleados" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Foreground="{DynamicResource Negro_Brush}" FontFamily="{DynamicResource EntryTecFont}">
+    <Grid x:Name="xGrid_ListadoCamposEmpleados">
+
+        <eClock5:UC_ToolBar x:Name="ToolBar" VerticalAlignment="Top" Width="Auto" Height="{DynamicResource AltoToolBar}" >
+            <eClock5:UC_ToolBar.Controles>
+                <eClock5:UC_ToolBar_Control Etiqueta="" Imagen="pack://siteoforigin:,,,/Resources/Seleccionados_64.png" Mostrar="SoloSeleccionados" Nombre="Btn_DeSeleccionar"/>
+                <eClock5:UC_ToolBar_Control Etiqueta="{}{0} Seleccionados" Mostrar="SoloSeleccionados" Nombre="Btn_DeSeleccionar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Subir" Imagen="pack://siteoforigin:,,,/Resources/Arriba_64.png" Mostrar="SoloSeleccionados" Nombre="Btn_Subir"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Bajar" Imagen="pack://siteoforigin:,,,/Resources/Abajo_64.png" Mostrar="SoloSeleccionados" Nombre="Btn_Bajar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Nuevo" Imagen="pack://siteoforigin:,,,/Resources/Nuevo_64.png" Nombre="Btn_Nuevo"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Actualizar" Imagen="pack://siteoforigin:,,,/Resources/Actualizar_64.png" Mostrar="NoSeleccionados" Nombre="Btn_Actualizar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Guardar" Imagen="pack://siteoforigin:,,,/Resources/Guardar_64.png" Nombre="Btn_Guardar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="Borrar" Imagen="pack://siteoforigin:,,,/Resources/Borrar_64.png" Mostrar="SoloSeleccionados" Nombre="Btn_Borrar"/>
+                <eClock5:UC_ToolBar_Control Alineacion="Derecha" Etiqueta="" Imagen="pack://siteoforigin:,,,/Resources/MenuEscondido_64.png" Nombre="Btn_MenuEscondido">
+                    <eClock5:UC_ToolBar_Control.Controles>
+                        <eClock5:UC_ToolBar_Control Etiqueta="Seleccionar Todos" Nombre="SeleccionarTodos"/>
+                        <eClock5:UC_ToolBar_Control Etiqueta="Importar" Mostrar="NoSeleccionados" Nombre="Btn_Importar"/>
+                    </eClock5:UC_ToolBar_Control.Controles>
+                </eClock5:UC_ToolBar_Control>
+                
+            </eClock5:UC_ToolBar.Controles>
+            
+          
+            
+        </eClock5:UC_ToolBar>
+        <ListBox Width="Auto" Height="Auto" x:Name="Lst_Datos" BorderThickness="0"  HorizontalContentAlignment="Stretch" Margin="{DynamicResource MargenAltoToolBar}"  LayoutUpdated="Lst_Datos_LayoutUpdated" SelectionChanged="Lst_Datos_SelectionChanged"  >
+            <ListBox.ItemTemplate>
+                <DataTemplate >
+                    <Grid Background="{DynamicResource AzulMuyClaro_Brush}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel VirtualizingStackPanel.IsVirtualizing="False" Margin="0,0,0,0" Grid.Column="1" >
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Vertical" Margin="0,0,7,0">
+                                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top"   FontSize="{DynamicResource FontSizeSubTitulo}"/>
+                                    <TextBox HorizontalAlignment="Left" Name="Tbx_CAMPO_DATO_NOMBRE" TextWrapping="Wrap" Text="{Binding CAMPO_DATO_NOMBRE}" VerticalAlignment="Top"   FontSize="{DynamicResource FontSizeSubTitulo}" Width="155"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="0,0,7,0">
+                                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Tipo Dato" VerticalAlignment="Top"   FontSize="{DynamicResource FontSizeSubTitulo}"/>
+                                    <Controles:UC_Combo Tabla="EC_TIPO_DATOS" Name="Cbx_TIPO_DATO_ID" Seleccionado="{Binding TIPO_DATO_ID}" CampoLlave="TIPO_DATO_ID" CampoNombre="TIPO_DATO_NOMBRE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155"/>
+                                </StackPanel>                                
+                                <StackPanel Orientation="Vertical" Margin="0,0,7,0">
+                                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Etiquieta" VerticalAlignment="Top"   FontSize="{DynamicResource FontSizeSubTitulo}"/>
+                                    <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding CAMPO_DATO_ETIQUETA}" VerticalAlignment="Top"   FontSize="{DynamicResource FontSizeSubTitulo}" Width="155"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="0,0,7,0">
+                                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ayuda" VerticalAlignment="Top"   FontSize="{DynamicResource FontSizeSubTitulo}"/>
+                                    <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding CAMPO_DATO_AYUDA}" VerticalAlignment="Top"   FontSize="{DynamicResource FontSizeSubTitulo}" Width="155"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="0,0,7,0">
+                                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Usabilidad" VerticalAlignment="Top"   FontSize="{DynamicResource FontSizeSubTitulo}" />
+                                    <ComboBox Width="100" SelectedIndex="{Binding CAMPO_DATO_USABILIDAD}">                                                                                
+                                        <ListBoxItem Content="Opcional" />
+                                        <ListBoxItem Content="Opcional y Oculto"/>
+                                        <ListBoxItem Content="Requerido"/>
+                                        <ListBoxItem Content="Oculto y no se mostrara"/>
+                                    </ComboBox>
+                                    
+                                </StackPanel>
+                                <!--
+                                <StackPanel Orientation="Vertical" Margin="0,0,7,0">
+                                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Orden" VerticalAlignment="Top"   FontSize="{DynamicResource FontSizeSubTitulo}" />
+                                    <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding CAMPO_DATO_ORDEN}" VerticalAlignment="Top"   FontSize="{DynamicResource FontSizeSubTitulo}" Width="100"/>
+                                </StackPanel>
+                                -->
+                                <StackPanel Orientation="Vertical" Margin="0,0,7,0">
+                                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Default" VerticalAlignment="Top"   FontSize="{DynamicResource FontSizeSubTitulo}" />
+                                    <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding CAMPO_DATO_DEFAULT}" VerticalAlignment="Top"   FontSize="{DynamicResource FontSizeSubTitulo}" Width="155"/>
+                                </StackPanel>
+                                </StackPanel>
+                            
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+
+    </Grid>
+</UserControl>

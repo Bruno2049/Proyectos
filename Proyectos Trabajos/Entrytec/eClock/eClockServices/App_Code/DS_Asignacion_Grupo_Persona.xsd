@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DS_Asignacion_Grupo_Persona" targetNamespace="http://www.tempuri.org/DS_Asignacion_Grupo_Persona.xsd"
+	xmlns:mstns="http://www.tempuri.org/DS_Asignacion_Grupo_Persona.xsd" xmlns="http://www.tempuri.org/DS_Asignacion_Grupo_Persona.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DS_Asignacion_Grupo_Persona" msdata:IsDataSet="true" msdata:Locale="es-MX">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="EC_PERSONAS_1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SUSCRIPCION_ID" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PERSONA_ID" type="xs:decimal" />
+							<xs:element name="PERSONA_LINK_ID" type="xs:decimal" />
+							<xs:element name="PERSONA_BORRADO" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EC_SUSCRIPCION">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SUSCRIPCION_ID" type="xs:decimal" />
+							<xs:element name="SUSCRIPCION_NOMBRE" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="EC_SUSCRIPCION_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:EC_SUSCRIPCION" />
+			<xs:field xpath="mstns:SUSCRIPCION_ID" />
+		</xs:unique>
+		<xs:keyref name="EC_SUSCRIPCIONEC_PERSONAS_1" refer="mstns:EC_SUSCRIPCION_Constraint1">
+			<xs:selector xpath=".//mstns:EC_PERSONAS_1" />
+			<xs:field xpath="mstns:SUSCRIPCION_ID" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/tableLayout1">
+    <TableRow
+        p1:id="@+id/tableRow1"
+        p1:layout_width="match_parent">
+        <TextView
+            p1:text="Menu"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_column="1"
+            p1:id="@+id/Lbl_Menu" />
+        <Button
+            p1:text="vacaciones"
+            p1:layout_column="2"
+            p1:id="@+id/Btn_Vacaciones"
+            p1:layout_height="43.3dp"
+            p1:background="@android:color/darker_gray"
+            p1:layout_marginLeft="0.0dp"
+            p1:layout_width="98.7dp" />
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow2">
+        <Button
+            p1:text="Tramites"
+            p1:layout_column="0"
+            p1:id="@+id/Btn_Tramites" />
+        <Button
+            p1:text="Actividades"
+            p1:layout_column="1"
+            p1:id="@+id/Btn_Actividades" />
+        <Button
+            p1:text="Asistencia"
+            p1:layout_column="2"
+            p1:id="@+id/Btn_Asistencia"
+            p1:layout_height="60.0dp" />
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow3">
+        <Button
+            p1:text="Nomina"
+            p1:layout_column="0"
+            p1:id="@+id/Btn_Nomina" />
+        <Button
+            p1:text="Mensajes"
+            p1:layout_column="1"
+            p1:id="@+id/Btn_Mensaj"
+            p1:layout_width="102.6dp"
+            p1:layout_height="64.5dp"
+            p1:background="@android:drawable/ic_notification_overlay" />
+        <Button
+            p1:text="Permisos"
+            p1:layout_column="2"
+            p1:id="@+id/btn_Permisos"
+            p1:layout_height="88.5dp"
+            p1:background="@android:drawable/button_onoff_indicator_on" />
+    </TableRow>
+</TableLayout>
