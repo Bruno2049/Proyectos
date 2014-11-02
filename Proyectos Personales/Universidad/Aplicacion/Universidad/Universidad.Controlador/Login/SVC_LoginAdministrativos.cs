@@ -41,11 +41,5 @@ namespace Universidad.Controlador.Login
 
             return login;
         }
-
-
-
-
-        //public event System.EventHandler Logeo_Finalizado = null;
-        //public event EventArgs 
     }
 }
