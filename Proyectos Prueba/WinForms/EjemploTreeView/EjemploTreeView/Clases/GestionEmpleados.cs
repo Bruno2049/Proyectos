@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Reflection;
 using EjemploTreeView.Modelos;
 
@@ -7,6 +8,9 @@ namespace EjemploTreeView.Clases
 {
     public class GestionEmpleados
     {
+        public List<Empleados> ListaEmpleados {
+            get { return _listaEmpleados;  }
+        }
         private List<Empleados> _listaEmpleados;
         
         public GestionEmpleados()
@@ -23,17 +27,24 @@ namespace EjemploTreeView.Clases
                 new Empleados {IdEmpleados = 3, NombreEmpleado = "Sara Gutierrez", IdJeje = 0},
                 new Empleados {IdEmpleados = 4, NombreEmpleado = "Angelica Suarez", IdJeje = 2},
                 new Empleados {IdEmpleados = 5, NombreEmpleado = "Maria Juarez", IdJeje = 2},
-                new Empleados {IdEmpleados = 2, NombreEmpleado = "Martha Rosas", IdJeje = 5}
+                new Empleados {IdEmpleados = 6, NombreEmpleado = "Martha Rosas", IdJeje = 5},
+                new Empleados {IdEmpleados = 7, NombreEmpleado = "Antonio Dias", IdJeje = 6},
             };
         }
 
-        public DataTable RegresaEmpleados(int idJefe)
+        public DataTable Nodo()
         {
             var lista = ToDataTable(_listaEmpleados);
             return lista;
         }
 
-        private static DataTable ToDataTable<T>(List<T> items)
+        public List<Empleados> NodoHijos(int idJefe)
+        {
+            var listaJefes = _listaEmpleados.Where(r => r.IdJeje == idJefe).ToList();
+            return listaJefes;
+        }
+
+        private static DataTable ToDataTable<T>(IEnumerable<T> items)
         {
             var dataTable = new DataTable(typeof(T).Name);
 

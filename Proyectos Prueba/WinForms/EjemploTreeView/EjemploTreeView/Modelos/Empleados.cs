@@ -10,6 +10,6 @@ namespace EjemploTreeView.Modelos
     {
         public int IdEmpleados { get; set; }
         public string NombreEmpleado { get; set; }
-        public int? IdJeje { get; set; }
+        public int IdJeje { get; set; }
     }
 }
