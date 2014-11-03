@@ -3,11 +3,13 @@
 //using System.ComponentModel;
 //using System.Data;
 //using System.Drawing;
+using System.Drawing;
+using System.Globalization;
 using System.Linq;
 //using System.Text;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
+//using System.Windows.Forms.VisualStyles;
 using EjemploTreeView.Clases;
 using EjemploTreeView.Modelos;
 
@@ -36,12 +38,10 @@ namespace EjemploTreeView
                 //    padre = InsertaHijo(item, padre);
                 //    trvMostrarJefes.Nodes.Add(padre);
                 //}
-                foreach (var padre in from item in lista let padre = new TreeNode(item.NombreEmpleado) {Tag = item} select InsertaHijo(item, padre))
+                foreach (var padre in from item in lista let padre = new TreeNode(item.NombreEmpleado) { Tag = item } select InsertaHijo(item, padre))
                 {
                     trvMostrarJefes.Nodes.Add(padre);
                 }
-
-                
             }
             else
             {
@@ -50,10 +50,10 @@ namespace EjemploTreeView
 
         }
 
-        private static TreeNode InsertaHijo(Empleados item,TreeNode padre)
+        private static TreeNode InsertaHijo(Empleados item, TreeNode padre)
         {
             var gestionEmp = new GestionEmpleados();
-            
+
             var listaHijos = gestionEmp.NodoHijos(item.IdEmpleados);
 
             //Ejemplo sin linq
@@ -68,9 +68,9 @@ namespace EjemploTreeView
             //}
 
             foreach (var hijo in (from subItem in listaHijos
-                where subItem.IdJeje != 0
-                let hijo = new TreeNode(subItem.NombreEmpleado) {Tag = subItem}
-                select InsertaHijo(subItem, hijo)).Where(hijo => hijo != null))
+                                  where subItem.IdJeje != 0
+                                  let hijo = new TreeNode(subItem.NombreEmpleado) { Tag = subItem }
+                                  select InsertaHijo(subItem, hijo)).Where(hijo => hijo != null))
             {
                 padre.Nodes.Add(hijo);
             }
@@ -85,12 +85,32 @@ namespace EjemploTreeView
 
         private void trvMostrarJefes_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            var a = ((TreeView)sender).SelectedNode.Text;
-            var b = ((TreeView)sender).Name;
-            var c =((Empleados)((TreeView) sender).SelectedNode.Tag);
+            //var a = ((TreeView)sender).SelectedNode.Text;
+            //var b = ((TreeView)sender).Name;
+            var c = ((Empleados)((TreeView)sender).SelectedNode.Tag);
             textBox1.Text = c.NombreEmpleado;
-            textBox2.Text = c.IdEmpleados.ToString();
-            textBox3.Text = c.IdJeje.ToString();
+            textBox2.Text = c.IdEmpleados.ToString(CultureInfo.InvariantCulture);
+            textBox3.Text = c.IdJeje.ToString(CultureInfo.InvariantCulture);
+            textBox4.Text = ((TreeView)sender).SelectedNode.Tag.GetType().ToString();
+            textBox5.Text = ((TreeView)sender).SelectedNode.FullPath;
+        }
+
+        private void btnMuestraTab_Click(object sender, EventArgs e)
+        {
+            var tabPage = new TabPage("Nueva Pestaña") {BackColor = Color.White};
+            var contro1 = new UserControl1();
+            tabPage.Controls.Add(contro1);
+            tbcPrincipal.TabPages.Add(tabPage);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
