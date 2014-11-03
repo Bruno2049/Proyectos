@@ -29,12 +29,15 @@ namespace EjemploTreeView.Clases
                 new Empleados {IdEmpleados = 5, NombreEmpleado = "Maria Juarez", IdJeje = 2},
                 new Empleados {IdEmpleados = 6, NombreEmpleado = "Martha Rosas", IdJeje = 5},
                 new Empleados {IdEmpleados = 7, NombreEmpleado = "Antonio Dias", IdJeje = 6},
+                new Empleados {IdEmpleados = 8, NombreEmpleado = "Martin Lopes", IdJeje = 1},
+                new Empleados {IdEmpleados = 9, NombreEmpleado = "Perla Zarate", IdJeje = 3},
+                new Empleados {IdEmpleados = 10, NombreEmpleado = "Sarai Gonzales", IdJeje = 9}
             };
         }
 
         public DataTable Nodo()
         {
-            var lista = ToDataTable(_listaEmpleados);
+            var lista = ListToDataTable(_listaEmpleados);
             return lista;
         }
 
@@ -44,7 +47,7 @@ namespace EjemploTreeView.Clases
             return listaJefes;
         }
 
-        private static DataTable ToDataTable<T>(IEnumerable<T> items)
+        private static DataTable ListToDataTable<T>(IEnumerable<T> items)
         {
             var dataTable = new DataTable(typeof(T).Name);
 
