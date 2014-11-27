@@ -3,6 +3,7 @@
 //using System.ComponentModel;
 //using System.Data;
 //using System.Drawing;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -17,6 +18,8 @@ namespace EjemploTreeView
 {
     public partial class Form1 : Form
     {
+        private List<CatComboBox> listViews;
+
         public Form1()
         {
             InitializeComponent();
@@ -110,7 +113,46 @@ namespace EjemploTreeView
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            CargarListView();
+        }
 
+        private void CargarListView()
+        {
+            var gestionCatListView = new GestionComboBox();
+            listViews = gestionCatListView.ListaCatComboBox;
+            comboBox1.DisplayMember = "NombrePropiedad";
+            comboBox1.ValueMember = "IdItem";
+            comboBox1.DataSource = listViews;
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var valueMember = ((ComboBox)sender).SelectedValue;
+            var displayMember = ((ComboBox) sender).Text;
+
+            txbValueMember.Text = valueMember.ToString();
+            txbDisplayMember.Text = displayMember;
+            var gestionTabPages = new GestionTabPages();
+            var listaTabPages = gestionTabPages.ObtenTabPages((int)valueMember);
+
+        }
+
+        private void CreaTabPages(List<CatTabPages> listaTabPages)
+        {
+            var listaPages = new List<TabPage>();
+
+            foreach (var items in listaTabPages)
+            {
+                var tabPageitem = new TabPage(items.NombreTabPage) {BackColor = Color.Wheat};
+                var Control = new UserControl();
+            }
+            
+            
+            var tabPage = new TabPage() { BackColor = Color.White };
+            var contro1 = new UserControl1();
+            tabPage.Controls.Add(contro1);
+            tbcPrincipal.TabPages.Add(tabPage);
         }
     }
 }

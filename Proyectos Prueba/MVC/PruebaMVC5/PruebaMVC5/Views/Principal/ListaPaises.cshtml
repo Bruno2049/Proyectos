@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Lista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Lista ViewBag</h4>
+
+<lu>
+    @foreach (var item in ViewBag.Lista)
+    {
+        <li>
+            @item
+        </li>
+    }
+</lu>
+
+<h4>Lista ViewData</h4>
+
+<lu>
+    @foreach (var item in (List<string>) ViewData["ListaVD"])
+    {
+        <li>
+            @item
+        </li>
+    }
+</lu>
+

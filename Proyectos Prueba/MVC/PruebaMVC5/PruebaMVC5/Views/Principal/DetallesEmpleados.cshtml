@@ -1,0 +1,18 @@
+﻿@using PruebaMVC5.Models
+@model Empleados
+@{
+    ViewBag.Title = "Detalles de empleados Empleados";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<br/>
+
+<div class="list-group">
+    <h4 class="list-group-item-heading"> @Model.Nombre</h4>
+    <p class="list-group-item-text">  @Model.FechaNacimiento.ToString("yyyy-MM-dd")</p>
+    <p class="list-group-item-text">  @Model.Genero</p>
+    <p class="list-group-item-text">  @Model.Ciudad</p>
+</div>
+
+@Html.ActionLink("Regresar","ListaEmpleados",new {idDepartamento = Model.IdDepartamento})

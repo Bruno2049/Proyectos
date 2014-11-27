@@ -1,0 +1,19 @@
+﻿@model List<Empleados>
+
+@using PruebaMVC5.Models;
+
+@{
+    ViewBag.Title = "Lista de Empleados";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Lista de Empleados</h3>
+
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+        @Html.ActionLink(item.Nombre, "DetallesEmpleados", new { idEmpleado = item.IdEmpleado, idDepartamente = item.IdDepartamento }, new { @class = "list-group-item" })
+    }
+</div>
+
+@Html.ActionLink("Regresar","ListaDepartamentos","Principal")

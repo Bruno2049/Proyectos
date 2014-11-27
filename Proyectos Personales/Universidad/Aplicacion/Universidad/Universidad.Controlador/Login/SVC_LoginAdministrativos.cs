@@ -16,7 +16,10 @@ namespace Universidad.Controlador.Login
         /// <summary>
         /// Instancia de la clace SVC_GestionCatalogos
         /// </summary>
-       private static readonly SVC_LoginAdministrativos _classInstance = new SVC_LoginAdministrativos();
+        private static readonly SVC_LoginAdministrativos _classInstance = new SVC_LoginAdministrativos();
+
+        private S_LoginClient _servicio;
+        
 
         public static SVC_LoginAdministrativos ClassInstance
         {
@@ -25,21 +28,25 @@ namespace Universidad.Controlador.Login
 
         private SVC_LoginAdministrativos()
         {
+            _servicio = new S_LoginClient();
         }
 
         #endregion
 
-        public US_USUARIOS LoginAdministrativos(string usuario, string contrasena)
+        public delegate void LoginAdministrativosArgs(US_USUARIOS usuario);
+
+        public event LoginAdministrativosArgs LoginAdministrativosFinalizado;
+
+        public void LoginAdministrativos(string usuario, string contrasena)
         {
-            var servicio = new S_LoginClient();
 
-            
+            //var jLogin = _servicio.LoginAdministrador(usuario, contrasena);
 
-            var jLogin = servicio.LoginAdministrador(usuario, contrasena);
+            //var login = JsonConvert.DeserializeObject<US_USUARIOS>(jLogin);
 
-            var login = JsonConvert.DeserializeObject<US_USUARIOS>(jLogin);
-
-            return login;
+            //return login;
+            //_servicio.LoginAdministradorCompleted += LoginAdministrativosFinalizado;
+            //_servicio.LoginAdministradorAsync(usuario, contrasena);
         }
     }
 }

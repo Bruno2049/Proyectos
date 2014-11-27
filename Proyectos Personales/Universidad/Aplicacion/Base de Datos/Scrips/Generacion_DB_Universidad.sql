@@ -1,15 +1,8 @@
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2008                    */
-/* Created on:     14/10/2014 11:36:07 p.m.                     */
+/* Created on:     23/11/2014 06:34:49 p. m.                    */
 /*==============================================================*/
 
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('ALU_ALUMNOS') and o.name = 'FK_ALU_ALUM_REFERENCE_PER_PERS')
-alter table ALU_ALUMNOS
-   drop constraint FK_ALU_ALUM_REFERENCE_PER_PERS
-go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
@@ -128,13 +121,6 @@ if exists (select 1
    where r.fkeyid = object_id('PER_PERSONAS') and o.name = 'Reference_9')
 alter table PER_PERSONAS
    drop constraint Reference_9
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('PRO_PROFESORES') and o.name = 'FK_PRO_PROF_REFERENCE_PER_PERS')
-alter table PRO_PROFESORES
-   drop constraint FK_PRO_PROF_REFERENCE_PER_PERS
 go
 
 if exists (select 1
@@ -310,6 +296,13 @@ if exists (select 1
            where  id = object_id('SIS_AADM_MENUS')
             and   type = 'U')
    drop table SIS_AADM_MENUS
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('SIS_CAT_TABLAS')
+            and   type = 'U')
+   drop table SIS_CAT_TABLAS
 go
 
 if exists (select 1
@@ -500,7 +493,7 @@ go
 /* Table: PER_CAT_NACIONALIDAD                                  */
 /*==============================================================*/
 create table PER_CAT_NACIONALIDAD (
-   CVE_NACIONALIDAD     int                  identity,
+   CVE_NACIONALIDAD     int                  not null,
    NOMBRE_PAIS          varchar(50)          null,
    constraint PK_PER_CAT_NACIONALIDAD primary key (CVE_NACIONALIDAD)
 )
@@ -513,7 +506,7 @@ create table PER_CAT_TELEFONOS (
    ID_TELEFONOS         int                  identity,
    TELEFONO_FIJO_DOMICILIO varchar(20)          null,
    TELEFONO_FIJO_TRABAJO varchar(20)          null,
-   TELEFONO_CELULAR_DOMICILIO varchar(20)          null,
+   TELEFONO_CELULAR_PERSONAL varchar(20)          null,
    TELEFONO_CELULAR_TRABAJO varchar(20)          null,
    FAX                  varchar(20)          null,
    constraint PK_PER_CAT_TELEFONOS primary key (ID_TELEFONOS)
@@ -535,7 +528,7 @@ go
 /* Table: PER_MEDIOS_ELECTRONICOS                               */
 /*==============================================================*/
 create table PER_MEDIOS_ELECTRONICOS (
-   ID_MEDIOS_ELECTRONICOS int                  not null,
+   ID_MEDIOS_ELECTRONICOS int                  identity,
    CORREO_ELECTRONICO_UNIVERSIDAD varchar(100)         null,
    CORREO_ELECTRONICO_PERSONAL varchar(100)         null,
    FACEBOOK             varchar(50)          null,
@@ -548,7 +541,7 @@ go
 /* Table: PER_PERSONAS                                          */
 /*==============================================================*/
 create table PER_PERSONAS (
-   ID_PERSONA           int                  not null,
+   ID_PERSONA           int                  identity,
    ID_PER_LINKID        int                  not null,
    ID_DIRECCION         int                  null,
    CVE_NACIONALIDAD     int                  null,
@@ -584,10 +577,24 @@ go
 /* Table: SIS_AADM_MENUS                                        */
 /*==============================================================*/
 create table SIS_AADM_MENUS (
-   ID_MENU_PADRE        int                  not null,
-   ID_MENU_HIJO         int                  null,
-   MENU                 varchar(50)          null,
-   constraint PK_SIS_AADM_MENUS primary key (ID_MENU_PADRE)
+   ID_MENU              int                  not null,
+   ID_MENU_PADRE        int                  null,
+   TIPOSUSUARIOS        varchar(100)         null,
+   NIVELES              varchar(100)         null,
+   NOMBREPESTANA        varchar(100)         null,
+   RUTA                 varchar(MAX)         null,
+   constraint PK_SIS_AADM_MENUS primary key (ID_MENU)
+)
+go
+
+/*==============================================================*/
+/* Table: SIS_CAT_TABLAS                                        */
+/*==============================================================*/
+create table SIS_CAT_TABLAS (
+   ID_TABLA             int                  identity,
+   NOMBRE_TABLA         varchar(100)         null,
+   DESCRIPCION          varchar(200)         null,
+   constraint PK_SIS_CAT_TABLAS primary key (ID_TABLA)
 )
 go
 
@@ -652,11 +659,6 @@ create table US_USUARIOS (
    NOMBRE_COMPLETO      varchar(50)          null,
    constraint PK_US_USUARIOS primary key (ID_USUARIO)
 )
-go
-
-alter table ALU_ALUMNOS
-   add constraint FK_ALU_ALUM_REFERENCE_PER_PERS foreign key (ID_PERSONA, ID_PER_LINKID)
-      references PER_PERSONAS (ID_PERSONA, ID_PER_LINKID)
 go
 
 alter table CLA_CLASES
@@ -744,14 +746,9 @@ alter table PER_PERSONAS
       references PER_CAT_TELEFONOS (ID_TELEFONOS)
 go
 
-alter table PRO_PROFESORES
-   add constraint FK_PRO_PROF_REFERENCE_PER_PERS foreign key (ID_PERSONA, ID_PER_LINKID)
-      references PER_PERSONAS (ID_PERSONA, ID_PER_LINKID)
-go
-
 alter table SIS_AADM_MENUS
-   add constraint FK_SIS_AADM_REFERENCE_SIS_AADM foreign key (ID_MENU_HIJO)
-      references SIS_AADM_MENUS (ID_MENU_PADRE)
+   add constraint FK_SIS_AADM_REFERENCE_SIS_AADM foreign key (ID_MENU_PADRE)
+      references SIS_AADM_MENUS (ID_MENU)
 go
 
 alter table US_USUARIOS

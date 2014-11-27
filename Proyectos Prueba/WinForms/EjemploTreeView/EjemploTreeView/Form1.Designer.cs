@@ -38,6 +38,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.tbcPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.userControl11 = new EjemploTreeView.UserControl1();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnMuestraTab = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -47,12 +48,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.userControl11 = new EjemploTreeView.UserControl1();
+            this.gbPropiedades = new System.Windows.Forms.GroupBox();
+            this.txbValueMember = new System.Windows.Forms.TextBox();
+            this.txbDisplayMember = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnCargarInformacion = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tbcControles = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.tbcPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.gbPropiedades.SuspendLayout();
             this.SuspendLayout();
             // 
             // trvMostrarJefes
@@ -141,6 +152,15 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.userControl11.Location = new System.Drawing.Point(0, 0);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(400, 303);
+            this.userControl11.TabIndex = 0;
+            this.userControl11.Texto = null;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -216,26 +236,98 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(647, 18);
+            this.splitContainer1.Location = new System.Drawing.Point(647, 12);
             this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Size = new System.Drawing.Size(418, 324);
-            this.splitContainer1.SplitterDistance = 139;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.gbPropiedades);
+            this.splitContainer1.Panel1.Controls.Add(this.btnCargarInformacion);
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.tbcControles);
+            this.splitContainer1.Size = new System.Drawing.Size(631, 330);
+            this.splitContainer1.SplitterDistance = 209;
             this.splitContainer1.TabIndex = 17;
             // 
-            // userControl11
+            // gbPropiedades
             // 
-            this.userControl11.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.userControl11.Location = new System.Drawing.Point(0, 0);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(400, 303);
-            this.userControl11.TabIndex = 0;
-            this.userControl11.Texto = null;
+            this.gbPropiedades.Controls.Add(this.txbValueMember);
+            this.gbPropiedades.Controls.Add(this.txbDisplayMember);
+            this.gbPropiedades.Controls.Add(this.label7);
+            this.gbPropiedades.Controls.Add(this.label6);
+            this.gbPropiedades.Location = new System.Drawing.Point(3, 29);
+            this.gbPropiedades.Name = "gbPropiedades";
+            this.gbPropiedades.Size = new System.Drawing.Size(202, 96);
+            this.gbPropiedades.TabIndex = 2;
+            this.gbPropiedades.TabStop = false;
+            this.gbPropiedades.Text = "Propiedades";
+            // 
+            // txbValueMember
+            // 
+            this.txbValueMember.Location = new System.Drawing.Point(88, 58);
+            this.txbValueMember.Name = "txbValueMember";
+            this.txbValueMember.Size = new System.Drawing.Size(110, 20);
+            this.txbValueMember.TabIndex = 3;
+            // 
+            // txbDisplayMember
+            // 
+            this.txbDisplayMember.Location = new System.Drawing.Point(88, 23);
+            this.txbDisplayMember.Name = "txbDisplayMember";
+            this.txbDisplayMember.Size = new System.Drawing.Size(110, 20);
+            this.txbDisplayMember.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 61);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "ValueMember ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "DisplayMember";
+            // 
+            // btnCargarInformacion
+            // 
+            this.btnCargarInformacion.Location = new System.Drawing.Point(0, 300);
+            this.btnCargarInformacion.Name = "btnCargarInformacion";
+            this.btnCargarInformacion.Size = new System.Drawing.Size(107, 30);
+            this.btnCargarInformacion.TabIndex = 1;
+            this.btnCargarInformacion.Text = "Carga informacion";
+            this.btnCargarInformacion.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(0, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(206, 21);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // tbcControles
+            // 
+            this.tbcControles.Location = new System.Drawing.Point(4, 4);
+            this.tbcControles.Name = "tbcControles";
+            this.tbcControles.SelectedIndex = 0;
+            this.tbcControles.Size = new System.Drawing.Size(414, 326);
+            this.tbcControles.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 698);
+            this.ClientSize = new System.Drawing.Size(1284, 698);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -259,8 +351,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.tbcPrincipal.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.gbPropiedades.ResumeLayout(false);
+            this.gbPropiedades.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,6 +384,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Button btnCargarInformacion;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TabControl tbcControles;
+        private System.Windows.Forms.GroupBox gbPropiedades;
+        private System.Windows.Forms.TextBox txbValueMember;
+        private System.Windows.Forms.TextBox txbDisplayMember;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }
 
