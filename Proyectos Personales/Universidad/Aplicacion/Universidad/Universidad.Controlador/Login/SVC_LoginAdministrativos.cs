@@ -37,14 +37,14 @@ namespace Universidad.Controlador.Login
 
         public event LoginAdministrativosArgs LoginAdministrativosFinalizado;
 
-        public void LoginAdministrativos(string usuario, string contrasena)
+        public US_USUARIOS LoginAdministrativos(string usuario, string contrasena)
         {
 
-            //var jLogin = _servicio.LoginAdministrador(usuario, contrasena);
+            var jLogin = _servicio.LoginAdministrador(usuario, contrasena);
 
-            //var login = JsonConvert.DeserializeObject<US_USUARIOS>(jLogin);
+            var login = JsonConvert.DeserializeObject<US_USUARIOS>(jLogin);
 
-            //return login;
+            return login;
             //_servicio.LoginAdministradorCompleted += LoginAdministrativosFinalizado;
             //_servicio.LoginAdministradorAsync(usuario, contrasena);
         }

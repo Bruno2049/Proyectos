@@ -13,9 +13,9 @@ namespace Universidad.ServidorInterno.Login_S
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione S_Login.svc o S_Login.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class S_Login : IS_Login
     {
-        public string  LoginAdministrador(string Usuario, string Contrasena)
+        public string  LoginAdministrador(string usuario, string contrasena)
         {
-            var Login = LoginL.ClassInstance.LoginAdminitradorUsuarios(Usuario, Contrasena);
+            var Login = LoginL.ClassInstance.LoginAdminitradorUsuarios(usuario, contrasena);
             var JLogin = JsonConvert.SerializeObject(Login);
             return JLogin;
         }
