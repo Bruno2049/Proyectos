@@ -63,7 +63,6 @@ namespace Universidad.AplicacionAdministrativa
             else
             {
                 MessageBox.Show(text: @"El usuario o contraseña no son valido favor de verificar", caption: @"Error al verificar Login", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-
             }
         }
 

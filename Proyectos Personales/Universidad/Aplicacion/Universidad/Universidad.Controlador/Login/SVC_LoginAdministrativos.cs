@@ -23,6 +23,7 @@ namespace Universidad.Controlador.Login
         #endregion
 
         #region LoginAdministrativo
+
         public delegate void LoginAdministrativoArgs(US_USUARIOS usuario);
 
         public event LoginAdministrativoArgs LoginAdministrativosFinalizado;
@@ -40,8 +41,9 @@ namespace Universidad.Controlador.Login
             var resultado = e.Result;
             var usuario = JsonConvert.DeserializeObject<US_USUARIOS>(resultado);
 
-            LoginAdministrativosFinalizado(usuario ?? null);
+            LoginAdministrativosFinalizado(usuario);
         }
+
         #endregion
 
     }
