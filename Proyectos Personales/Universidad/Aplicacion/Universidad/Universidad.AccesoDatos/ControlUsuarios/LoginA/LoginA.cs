@@ -70,15 +70,12 @@ namespace Universidad.AccesoDatos.ControlUsuarios.LoginA
                     resultado = (from DataRow row in obj.Rows
                         select new US_USUARIOS
                         {
-                            NOMBRE_COMPLETO = (string)row["NOMBRE_COMPLETO"],
                             CONTRASENA = (string)row["CONTRASENA"],
-                            ID_ESTATUS_USUARIOS = (int)row["ID_ESTATUS_USUARIOS"],
+                            ID_ESTATUS_USUARIOS = (int?)row["ID_ESTATUS_USUARIOS"],
                             ID_USUARIO = (int)row["ID_USUARIO"],
-                            ID_HISTORIAL = (int)row["ID_HISTORIAL"],
-                            ID_NIVEL_USUARIO = (int)row["ID_NIVEL_USUARIO"],
-                            ID_PERSONA = (int)row["ID_PERSONA"],
-                            ID_PER_LINKID = (int)row["ID_PER_LINKID"],
-                            ID_TIPO_USUARIO = (int)row["ID_TIPO_USUARIO"]
+                            ID_HISTORIAL = (int?)row["ID_HISTORIAL"],
+                            ID_NIVEL_USUARIO = (int?)row["ID_NIVEL_USUARIO"],
+                            ID_TIPO_USUARIO = (int?)row["ID_TIPO_USUARIO"]
                                
                         }).ToList().FirstOrDefault();
                 }

@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2008                    */
-/* Created on:     23/11/2014 06:34:49 p. m.                    */
+/* Created on:     27/11/2014 09:15:51 p. m.                    */
 /*==============================================================*/
 
 
@@ -156,13 +156,6 @@ if exists (select 1
    where r.fkeyid = object_id('US_USUARIOS') and o.name = 'Reference_13')
 alter table US_USUARIOS
    drop constraint Reference_13
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('US_USUARIOS') and o.name = 'FK_US_USUAR_REFERENCE_PER_PERS')
-alter table US_USUARIOS
-   drop constraint FK_US_USUAR_REFERENCE_PER_PERS
 go
 
 if exists (select 1
@@ -652,11 +645,8 @@ create table US_USUARIOS (
    ID_ESTATUS_USUARIOS  int                  null,
    ID_NIVEL_USUARIO     int                  null,
    ID_HISTORIAL         int                  null,
-   ID_PERSONA           int                  null,
-   ID_PER_LINKID        int                  null,
    USUARIO              varchar(50)          null,
    CONTRASENA           varchar(30)          null,
-   NOMBRE_COMPLETO      varchar(50)          null,
    constraint PK_US_USUARIOS primary key (ID_USUARIO)
 )
 go
@@ -769,10 +759,5 @@ go
 alter table US_USUARIOS
    add constraint Reference_13 foreign key (ID_HISTORIAL)
       references US_HISTORIAL (ID_HISTORIAL)
-go
-
-alter table US_USUARIOS
-   add constraint FK_US_USUAR_REFERENCE_PER_PERS foreign key (ID_PERSONA, ID_PER_LINKID)
-      references PER_PERSONAS (ID_PERSONA, ID_PER_LINKID)
 go
 

@@ -107,6 +107,9 @@
     <Compile Include="SIS_AADM_MENUS.cs">
       <DependentUpon>UniversidadBDModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SIS_CAT_TABLAS.cs">
+      <DependentUpon>UniversidadBDModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="UniversidadBDModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

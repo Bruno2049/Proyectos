@@ -22,8 +22,8 @@ namespace Universidad.LogicaNegocios.LoginL
 
         public US_USUARIOS LoginAdminitradorUsuarios(string usuario, string contrasena)
         {
-            //var login = LoginA.ClassInstance.LoginAdministrador(usuario, contrasena);
-            var login = LoginA.ClassInstance.LoginAdministradoresTSQL(usuario, contrasena);
+            var login = LoginA.ClassInstance.LoginAdministrador(usuario, contrasena);
+            //var login = LoginA.ClassInstance.LoginAdministradoresTSQL(usuario, contrasena);
             return login;
         }
 

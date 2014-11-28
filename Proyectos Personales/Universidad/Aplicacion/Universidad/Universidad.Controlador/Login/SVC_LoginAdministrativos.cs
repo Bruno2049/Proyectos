@@ -13,40 +13,36 @@ namespace Universidad.Controlador.Login
     {
         #region Propiedades de la clase
 
-        /// <summary>
-        /// Instancia de la clace SVC_GestionCatalogos
-        /// </summary>
-        private static readonly SVC_LoginAdministrativos _classInstance = new SVC_LoginAdministrativos();
-
         private S_LoginClient _servicio;
-        
 
-        public static SVC_LoginAdministrativos ClassInstance
-        {
-            get { return _classInstance; }
-        }
-
-        private SVC_LoginAdministrativos()
+        public SVC_LoginAdministrativos()
         {
             _servicio = new S_LoginClient();
         }
 
         #endregion
 
-        public delegate void LoginAdministrativosArgs(US_USUARIOS usuario);
+        #region LoginAdministrativo
+        public delegate void LoginAdministrativoArgs(US_USUARIOS usuario);
 
-        public event LoginAdministrativosArgs LoginAdministrativosFinalizado;
+        public event LoginAdministrativoArgs LoginAdministrativosFinalizado;
 
-        public US_USUARIOS LoginAdministrativos(string usuario, string contrasena)
+        public void LoginAdministrativo(string usuario, string contrasena)
         {
-
-            var jLogin = _servicio.LoginAdministrador(usuario, contrasena);
-
-            var login = JsonConvert.DeserializeObject<US_USUARIOS>(jLogin);
-
-            return login;
-            //_servicio.LoginAdministradorCompleted += LoginAdministrativosFinalizado;
-            //_servicio.LoginAdministradorAsync(usuario, contrasena);
+            _servicio.LoginAdministradorCompleted += _servicio_LoginAdministradorCompleted;
+            _servicio.LoginAdministradorAsync(usuario,contrasena);
         }
+
+        void _servicio_LoginAdministradorCompleted(object sender, LoginAdministradorCompletedEventArgs e)
+        {
+            if (e.Result == null) return;
+
+            var resultado = e.Result;
+            var usuario = JsonConvert.DeserializeObject<US_USUARIOS>(resultado);
+
+            LoginAdministrativosFinalizado(usuario ?? null);
+        }
+        #endregion
+
     }
 }

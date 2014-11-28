@@ -37,7 +37,7 @@ namespace Universidad.AplicacionAdministrativa.Vistas
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            LBL_Nombre_Usuario.Text = @"Bienvenido " + _usuario.NOMBRE_COMPLETO;
+            LBL_Nombre_Usuario.Text = @"Bienvenido " + _usuario.USUARIO;
 
             if (_usuario.ID_TIPO_USUARIO == null) return;
             var tipoUsuario = SVC_GestionCatalogos.ClassInstance.ObtenTipoUsuario((int)_usuario.ID_TIPO_USUARIO);
