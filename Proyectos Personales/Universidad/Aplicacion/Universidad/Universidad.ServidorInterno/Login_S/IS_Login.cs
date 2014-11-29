@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.Security.Cryptography.X509Certificates;
 using System.ServiceModel;
 using System.Text;
+using Universidad.Entidades;
 
 namespace Universidad.ServidorInterno.Login_S
 {
@@ -14,5 +15,8 @@ namespace Universidad.ServidorInterno.Login_S
     {
         [OperationContract]
         string LoginAdministrador(string Usuario, string Contrasena);
+
+        [OperationContract]
+        string ObtenPersona(US_USUARIOS usuario);
     }
 }

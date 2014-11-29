@@ -17,7 +17,7 @@
         <EntityTypeShape EntityType="UniversidadDBModel.DIR_CAT_ESTADO" Width="1.5" PointX="0.75" PointY="4.375" />
         <EntityTypeShape EntityType="UniversidadDBModel.DIR_DIRECCIONES" Width="1.5" PointX="7.5" PointY="5.5" />
         <EntityTypeShape EntityType="UniversidadDBModel.MAT_CAT_MATERIAS" Width="1.5" PointX="12" PointY="17.25" />
-        <EntityTypeShape EntityType="UniversidadDBModel.PER_CAT_NACIONALIDAD" Width="1.5" PointX="7.5" PointY="18.875" />
+        <EntityTypeShape EntityType="UniversidadDBModel.PER_CAT_NACIONALIDAD" Width="1.5" PointX="7.5" PointY="29.25" />
         <EntityTypeShape EntityType="UniversidadDBModel.PER_CAT_TELEFONOS" Width="1.5" PointX="7.5" PointY="10.375" />
         <EntityTypeShape EntityType="UniversidadDBModel.PER_CAT_TIPO_PERSONA" Width="1.5" PointX="7.5" PointY="13.5" />
         <EntityTypeShape EntityType="UniversidadDBModel.PER_MEDIOS_ELECTRONICOS" Width="1.5" PointX="7.5" PointY="16" />
@@ -25,11 +25,11 @@
         <EntityTypeShape EntityType="UniversidadDBModel.PRO_PROFESORES" Width="1.5" PointX="12" PointY="20.625" />
         <EntityTypeShape EntityType="UniversidadDBModel.SIS_AADM_MENUS" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="UniversidadDBModel.SIS_CAT_TABLAS" Width="1.5" PointX="8.75" PointY="0.75" />
-        <EntityTypeShape EntityType="UniversidadDBModel.US_CAT_ESTATUS_USUARIO" Width="1.5" PointX="5.25" PointY="23.75" />
-        <EntityTypeShape EntityType="UniversidadDBModel.US_CAT_NIVEL_USUARIO" Width="1.5" PointX="5.25" PointY="21.25" />
-        <EntityTypeShape EntityType="UniversidadDBModel.US_CAT_TIPO_USUARIO" Width="1.5" PointX="5.25" PointY="29.125" />
-        <EntityTypeShape EntityType="UniversidadDBModel.US_HISTORIAL" Width="1.5" PointX="5.25" PointY="26.375" />
-        <EntityTypeShape EntityType="UniversidadDBModel.US_USUARIOS" Width="1.5" PointX="7.5" PointY="24.375" />
+        <EntityTypeShape EntityType="UniversidadDBModel.US_CAT_ESTATUS_USUARIO" Width="1.5" PointX="5.25" PointY="18.875" />
+        <EntityTypeShape EntityType="UniversidadDBModel.US_CAT_NIVEL_USUARIO" Width="1.5" PointX="5.25" PointY="26.75" />
+        <EntityTypeShape EntityType="UniversidadDBModel.US_CAT_TIPO_USUARIO" Width="1.5" PointX="5.25" PointY="24.125" />
+        <EntityTypeShape EntityType="UniversidadDBModel.US_HISTORIAL" Width="1.5" PointX="5.25" PointY="21.5" />
+        <EntityTypeShape EntityType="UniversidadDBModel.US_USUARIOS" Width="1.5" PointX="7.5" PointY="22" />
         <AssociationConnector Association="UniversidadDBModel.FK_CLA_CLAS_REFERENCE_CAR_CAT_" />
         <AssociationConnector Association="UniversidadDBModel.FK_MAT_CAT__REFERENCE_CAR_CAT_" />
         <AssociationConnector Association="UniversidadDBModel.FK_CLA_CLAS_REFERENCE_CLA_HOR_" />

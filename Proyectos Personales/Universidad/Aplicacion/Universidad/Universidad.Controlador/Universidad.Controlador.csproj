@@ -86,11 +86,14 @@
     <None Include="Service References\SRV_GestionCatalogos\S_GestionCatalogos2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SVR_Login\S_Login.wsdl" />
-    <None Include="Service References\SVR_Login\S_Login.xsd">
+    <None Include="Service References\SVR_Login\S_Login1.wsdl" />
+    <None Include="Service References\SVR_Login\S_Login3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SVR_Login\S_Login1.xsd">
+    <None Include="Service References\SVR_Login\S_Login31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SVR_Login\S_Login32.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SVR_Prueba\S_Prueba.wsdl" />
@@ -124,13 +127,13 @@
   <ItemGroup>
     <Content Include="Newtonsoft.Json.dll" />
     <Content Include="Newtonsoft.Json.pdb" />
+    <None Include="Service References\SVR_Login\S_Login1.disco" />
     <None Include="Service References\SVR_Login\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Service References\SVR_Login\configuration.svcinfo" />
     <None Include="Service References\SVR_Login\configuration91.svcinfo" />
-    <None Include="Service References\SVR_Login\S_Login.disco" />
     <None Include="Service References\SRV_GestionCatalogos\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

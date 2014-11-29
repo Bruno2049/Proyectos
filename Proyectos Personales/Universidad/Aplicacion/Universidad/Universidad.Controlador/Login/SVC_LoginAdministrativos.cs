@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -31,20 +32,46 @@ namespace Universidad.Controlador.Login
         public void LoginAdministrativo(string usuario, string contrasena)
         {
             _servicio.LoginAdministradorCompleted += _servicio_LoginAdministradorCompleted;
-            _servicio.LoginAdministradorAsync(usuario,contrasena);
+            _servicio.LoginAdministradorAsync(usuario, contrasena);
         }
 
         void _servicio_LoginAdministradorCompleted(object sender, LoginAdministradorCompletedEventArgs e)
         {
-            if (e.Result == null) return;
+            try
+            {
 
-            var resultado = e.Result;
-            var usuario = JsonConvert.DeserializeObject<US_USUARIOS>(resultado);
+                if (e.Result == null) return;
 
-            LoginAdministrativosFinalizado(usuario);
+                var resultado = e.Result;
+                var usuario = JsonConvert.DeserializeObject<US_USUARIOS>(resultado);
+
+                LoginAdministrativosFinalizado(usuario);
+            }
+            catch (Exception er)
+            {
+                throw;
+            }
         }
 
         #endregion
 
+        public delegate void ObtenNombreCompletoArgs(PER_PERSONAS persona);
+
+        public event ObtenNombreCompletoArgs ObtenNombreCompletoFinalizado;
+
+        public void ObtenNombreCompleto(US_USUARIOS usuario)
+        {
+            _servicio.ObtenPersonaCompleted += _servicio_ObtenPersonaCompleted;
+            _servicio.ObtenPersonaAsync(usuario);
+        }
+
+        void _servicio_ObtenPersonaCompleted(object sender, ObtenPersonaCompletedEventArgs e)
+        {
+            if (e.Result == null) return;
+
+            var resultado = e.Result;
+            var persona = JsonConvert.DeserializeObject<PER_PERSONAS>(resultado);
+            ObtenNombreCompletoFinalizado(persona);
+        }
     }
 }

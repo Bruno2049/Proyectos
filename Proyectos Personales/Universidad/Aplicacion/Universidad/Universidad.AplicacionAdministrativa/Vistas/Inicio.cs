@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Universidad.Controlador.GestionCatalogos;
+using Universidad.Controlador.Login;
 using Universidad.Entidades;
 
 namespace Universidad.AplicacionAdministrativa.Vistas
@@ -20,8 +21,7 @@ namespace Universidad.AplicacionAdministrativa.Vistas
 
         private void CargarArbol()
         {
-            TreeNode nodo;
-            nodo = TRV_Menu.Nodes.Add("Catalogos");
+            TRV_Menu.Nodes.Add("Catalogos");
 
             TRV_Menu.Nodes[0].Nodes.Add("Net-informations.com");
             TRV_Menu.Nodes[0].Nodes[0].Nodes.Add("CLR");
@@ -37,12 +37,21 @@ namespace Universidad.AplicacionAdministrativa.Vistas
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            LBL_Nombre_Usuario.Text = @"Bienvenido " + _usuario.USUARIO;
+            var persona = new SVC_LoginAdministrativos();
+
+
+            persona.ObtenNombreCompleto(_usuario);
+            persona.ObtenNombreCompletoFinalizado += Persona_ObtenNombreCompletoFinalizado; 
 
             if (_usuario.ID_TIPO_USUARIO == null) return;
             var tipoUsuario = SVC_GestionCatalogos.ClassInstance.ObtenTipoUsuario((int)_usuario.ID_TIPO_USUARIO);
 
             LBL_Tipo_Usuario.Text = tipoUsuario.TIPO_USUARIO;
+        }
+
+        private void Persona_ObtenNombreCompletoFinalizado(PER_PERSONAS usuario)
+        {
+            LBL_Nombre_Usuario.Text = usuario.NOMBRE_COMPLETO;
         }
 
         private void Inicio_FormClosing(object sender, FormClosingEventArgs e)

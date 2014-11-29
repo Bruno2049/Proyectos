@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Universidad.Entidades;
 using Universidad.LogicaNegocios.LoginL;
 using Newtonsoft.Json;
 
@@ -18,6 +19,13 @@ namespace Universidad.ServidorInterno.Login_S
             var Login = LoginL.ClassInstance.LoginAdminitradorUsuarios(usuario, contrasena);
             var JLogin = JsonConvert.SerializeObject(Login);
             return JLogin;
+        }
+
+        public string ObtenPersona(US_USUARIOS usuario)
+        {
+            var persona = LoginL.ClassInstance.ObtenPersona(usuario);
+            var jPersona = JsonConvert.SerializeObject(persona);
+            return jPersona;
         }
     }
 }

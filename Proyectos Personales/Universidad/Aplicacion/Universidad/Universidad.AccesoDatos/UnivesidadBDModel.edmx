@@ -197,7 +197,8 @@
           <Property Name="ID_MENU_PADRE" Type="int" />
           <Property Name="TIPOSUSUARIOS" Type="varchar" MaxLength="100" />
           <Property Name="NIVELES" Type="varchar" MaxLength="100" />
-          <Property Name="NOMBREPESTANA" Type="varchar" MaxLength="100" />
+          <Property Name="NOMBRENODO" Type="varchar" MaxLength="100" />
+          <Property Name="NOMBRETABPAGE" Type="varchar" MaxLength="100" />
           <Property Name="RUTA" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="SIS_CAT_TABLAS">
@@ -980,7 +981,8 @@
           <Property Name="ID_MENU_PADRE" Type="Int32" />
           <Property Name="TIPOSUSUARIOS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="NIVELES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="NOMBREPESTANA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRENODO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRETABPAGE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="RUTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="SIS_AADM_MENUS1" Relationship="UniversidadDBModel.FK_SIS_AADM_REFERENCE_SIS_AADM" FromRole="SIS_AADM_MENUS" ToRole="SIS_AADM_MENUS1" />
           <NavigationProperty Name="SIS_AADM_MENUS2" Relationship="UniversidadDBModel.FK_SIS_AADM_REFERENCE_SIS_AADM" FromRole="SIS_AADM_MENUS1" ToRole="SIS_AADM_MENUS" />
@@ -1522,7 +1524,8 @@
             <EntityTypeMapping TypeName="UniversidadDBModel.SIS_AADM_MENUS">
               <MappingFragment StoreEntitySet="SIS_AADM_MENUS">
                 <ScalarProperty Name="RUTA" ColumnName="RUTA" />
-                <ScalarProperty Name="NOMBREPESTANA" ColumnName="NOMBREPESTANA" />
+                <ScalarProperty Name="NOMBRETABPAGE" ColumnName="NOMBRETABPAGE" />
+                <ScalarProperty Name="NOMBRENODO" ColumnName="NOMBRENODO" />
                 <ScalarProperty Name="NIVELES" ColumnName="NIVELES" />
                 <ScalarProperty Name="TIPOSUSUARIOS" ColumnName="TIPOSUSUARIOS" />
                 <ScalarProperty Name="ID_MENU_PADRE" ColumnName="ID_MENU_PADRE" />

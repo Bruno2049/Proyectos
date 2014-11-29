@@ -23,7 +23,8 @@ namespace Universidad.Entidades
         public Nullable<int> ID_MENU_PADRE { get; set; }
         public string TIPOSUSUARIOS { get; set; }
         public string NIVELES { get; set; }
-        public string NOMBREPESTANA { get; set; }
+        public string NOMBRENODO { get; set; }
+        public string NOMBRETABPAGE { get; set; }
         public string RUTA { get; set; }
     
         public virtual ICollection<SIS_AADM_MENUS> SIS_AADM_MENUS1 { get; set; }

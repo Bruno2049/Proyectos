@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
@@ -71,20 +72,32 @@ namespace Universidad.AccesoDatos.ControlUsuarios.LoginA
                         select new US_USUARIOS
                         {
                             CONTRASENA = (string)row["CONTRASENA"],
-                            ID_ESTATUS_USUARIOS = (int?)row["ID_ESTATUS_USUARIOS"],
+                            USUARIO = (string)row["Usuario"],
+                            ID_ESTATUS_USUARIOS = Convert.IsDBNull(row["ID_ESTATUS_USUARIOS"]) ? null : (int?)row["ID_ESTATUS_USUARIOS"],
                             ID_USUARIO = (int)row["ID_USUARIO"],
-                            ID_HISTORIAL = (int?)row["ID_HISTORIAL"],
-                            ID_NIVEL_USUARIO = (int?)row["ID_NIVEL_USUARIO"],
-                            ID_TIPO_USUARIO = (int?)row["ID_TIPO_USUARIO"]
+                            ID_HISTORIAL = Convert.IsDBNull(row["ID_HISTORIAL"]) ? null : (int?)row["ID_HISTORIAL"],
+                            ID_NIVEL_USUARIO = Convert.IsDBNull(row["ID_NIVEL_USUARIO"]) ? null : (int?)row["ID_NIVEL_USUARIO"],
+                            ID_TIPO_USUARIO = Convert.IsDBNull(row["ID_TIPO_USUARIO"]) ? null : (int?)row["ID_TIPO_USUARIO"]
                                
                         }).ToList().FirstOrDefault();
                 }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 
             }
             return resultado;
+        }
+
+
+        public PER_PERSONAS ObtenPersonaLinq(US_USUARIOS usuario)
+        {
+            PER_PERSONAS persona;
+
+            using (var aux = new Repositorio<PER_PERSONAS>())
+            {
+                return aux.Extraer(per => per.ID_USUARIO == usuario.ID_USUARIO);
+            }
         }
 
         #endregion

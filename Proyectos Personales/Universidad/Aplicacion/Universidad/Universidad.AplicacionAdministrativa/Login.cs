@@ -27,8 +27,8 @@ namespace Universidad.AplicacionAdministrativa
         {
             try
             {
-                var usuario = /*"ecruzlagunes";*/TXB_Usuario.Text;
-                var contrasena = /*"A@1415161822";//*/TXB_Contrasena.Text;
+                var usuario = "ecruzlagunes";//TXB_Usuario.Text;
+                var contrasena = "A@141516182235";//TXB_Contrasena.Text;
 
                 var Login = new SVC_LoginAdministrativos();
 
@@ -46,23 +46,25 @@ namespace Universidad.AplicacionAdministrativa
         {
             _login = usuario;
 
-            if (_login != null)
+            if (_login != null && _login.ID_USUARIO != 0)
             {
                 switch (_login.ID_ESTATUS_USUARIOS)
                 {
                     case 1:
-                        {
-                            var fromInicio = new Inicio(this, _login);
-                            Hide();
-                            fromInicio.Show();
-                        }
+                    {
+                        var fromInicio = new Inicio(this, _login);
+                        Hide();
+                        fromInicio.Show();
+                    }
                         break;
                 }
             }
 
             else
             {
-                MessageBox.Show(text: @"El usuario o contraseña no son valido favor de verificar", caption: @"Error al verificar Login", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                MessageBox.Show(text: @"El usuario o contraseña no son valido favor de verificar",
+                    caption: @"Error al verificar Login", buttons: MessageBoxButtons.OK,
+                    icon: MessageBoxIcon.Information);
             }
         }
 
