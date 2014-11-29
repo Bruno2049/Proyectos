@@ -142,13 +142,19 @@ namespace Kiosko.Generales
 
         void Persona_ObtenFotoThumbnailEvent(byte[] Foto)
         {
+            try
+            {
+                System.IO.MemoryStream MS = new System.IO.MemoryStream(Foto);
+                BitmapImage bi = new BitmapImage();
+                bi.BeginInit();
+                bi.StreamSource = MS;
+                bi.EndInit();
+                Img_Foto.Source = bi;
+            }
+            catch (Exception e)
+            {
 
-            System.IO.MemoryStream MS = new System.IO.MemoryStream(Foto);
-            BitmapImage bi = new BitmapImage();
-            bi.BeginInit();
-            bi.StreamSource = MS;
-            bi.EndInit();
-            Img_Foto.Source = bi;
+            }
         }
 
         void SE_ObtenDatosPersonaEvent(eClockBase.Modelos.Sesion.Model_DatosPersona Datos)
