@@ -18,14 +18,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:7532/S_Report.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:51840/S_Report.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="S_Report1.disco" MetadataType="Disco" ID="33bdb8ad-1846-45ab-b9a6-2a53a7f77af1" SourceId="1" SourceUrl="http://localhost:7532/S_Report.svc?disco" />
-    <MetadataFile FileName="S_Report2.wsdl" MetadataType="Wsdl" ID="71b2d805-2e58-40ce-83c9-13b7ba873228" SourceId="1" SourceUrl="http://localhost:7532/S_Report.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="S_Report22.wsdl" MetadataType="Wsdl" ID="aefd6ebd-baf1-4b88-91c6-a239c632c1c6" SourceId="1" SourceUrl="http://localhost:7532/S_Report.svc?wsdl" />
-    <MetadataFile FileName="S_Report2.xsd" MetadataType="Schema" ID="8058130b-141c-498b-b7a0-a3c2c5e1a7f7" SourceId="1" SourceUrl="http://localhost:7532/S_Report.svc?xsd=xsd0" />
-    <MetadataFile FileName="S_Report22.xsd" MetadataType="Schema" ID="2812b46e-676f-42f2-b5f8-9c8248bd2aa9" SourceId="1" SourceUrl="http://localhost:7532/S_Report.svc?xsd=xsd1" />
+    <MetadataFile FileName="S_Report.xsd" MetadataType="Schema" ID="7f0399ad-ebe3-410e-af88-82fd243f7052" SourceId="1" SourceUrl="http://localhost:51840/S_Report.svc?xsd=xsd0" />
+    <MetadataFile FileName="S_Report.wsdl" MetadataType="Wsdl" ID="2793d76c-df1e-4bdf-848c-67086491a571" SourceId="1" SourceUrl="http://localhost:51840/S_Report.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="S_Report1.xsd" MetadataType="Schema" ID="effc1262-680e-4943-bd23-78e8246963e6" SourceId="1" SourceUrl="http://localhost:51840/S_Report.svc?xsd=xsd1" />
+    <MetadataFile FileName="S_Report.disco" MetadataType="Disco" ID="ff18797d-f03b-40ef-822c-839a6c18f8f6" SourceId="1" SourceUrl="http://localhost:51840/S_Report.svc?disco" />
+    <MetadataFile FileName="S_Report1.wsdl" MetadataType="Wsdl" ID="879c42d8-107e-476e-8676-6ebef181d44a" SourceId="1" SourceUrl="http://localhost:51840/S_Report.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

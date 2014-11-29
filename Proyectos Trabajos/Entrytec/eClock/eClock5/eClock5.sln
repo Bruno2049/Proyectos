@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eClock5", "eClock5\eClock5.csproj", "{8584535C-0380-41FD-865A-4A1D3ED1FC15}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eClockBase", "eClockBase\eClockBase.csproj", "{F3B19586-0F10-4D70-92D6-DA078964644E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eClock5WPhone", "eClock5WPhone\eClock5WPhone.csproj", "{8B530415-79D0-412C-83A8-8DF1C56882A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eClock5W8", "eClock5W8\eClock5W8.csproj", "{030FE36B-2F69-4E72-A721-5F23A819D9FA}"
+EndProject
 Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -39,12 +45,44 @@ Global
 		{F3B19586-0F10-4D70-92D6-DA078964644E}.Release|ARM.ActiveCfg = Release|Any CPU
 		{F3B19586-0F10-4D70-92D6-DA078964644E}.Release|x64.ActiveCfg = Release|Any CPU
 		{F3B19586-0F10-4D70-92D6-DA078964644E}.Release|x86.ActiveCfg = Release|Any CPU
+		{8B530415-79D0-412C-83A8-8DF1C56882A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B530415-79D0-412C-83A8-8DF1C56882A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B530415-79D0-412C-83A8-8DF1C56882A8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8B530415-79D0-412C-83A8-8DF1C56882A8}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{8B530415-79D0-412C-83A8-8DF1C56882A8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8B530415-79D0-412C-83A8-8DF1C56882A8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8B530415-79D0-412C-83A8-8DF1C56882A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B530415-79D0-412C-83A8-8DF1C56882A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B530415-79D0-412C-83A8-8DF1C56882A8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8B530415-79D0-412C-83A8-8DF1C56882A8}.Release|ARM.ActiveCfg = Release|Any CPU
+		{8B530415-79D0-412C-83A8-8DF1C56882A8}.Release|x64.ActiveCfg = Release|Any CPU
+		{8B530415-79D0-412C-83A8-8DF1C56882A8}.Release|x86.ActiveCfg = Release|Any CPU
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Debug|ARM.ActiveCfg = Debug|ARM
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Debug|ARM.Build.0 = Debug|ARM
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Debug|ARM.Deploy.0 = Debug|ARM
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Debug|x64.ActiveCfg = Debug|x64
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Debug|x64.Build.0 = Debug|x64
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Debug|x64.Deploy.0 = Debug|x64
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Debug|x86.ActiveCfg = Debug|x86
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Debug|x86.Build.0 = Debug|x86
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Debug|x86.Deploy.0 = Debug|x86
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Release|ARM.ActiveCfg = Release|ARM
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Release|ARM.Build.0 = Release|ARM
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Release|ARM.Deploy.0 = Release|ARM
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Release|x64.ActiveCfg = Release|x64
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Release|x64.Build.0 = Release|x64
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Release|x64.Deploy.0 = Release|x64
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Release|x86.ActiveCfg = Release|x86
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Release|x86.Build.0 = Release|x86
+		{030FE36B-2F69-4E72-A721-5F23A819D9FA}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal
