@@ -70,6 +70,7 @@
       <DependentUpon>UniversidadBDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ControlUsuario\MenuSistemaE.cs" />
+    <Compile Include="ControlUsuario\Sesion.cs" />
     <Compile Include="DIR_CAT_CODIGO_POSTAL.cs">
       <DependentUpon>UniversidadBDModel.tt</DependentUpon>
     </Compile>
